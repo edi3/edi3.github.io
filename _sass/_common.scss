@@ -1,0 +1,116 @@
+html, body{
+  height: 100%;
+}
+
+body{
+  font-family: $font-family;
+  color: $app-grey;
+  background: #fff;
+}
+
+img{
+  max-width: 100%;
+}
+
+.wrapper{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+}
+
+.wrapper:after{
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.main-content{
+  display: table;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+.docs-content{
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.page-sidebar,
+.page-content{
+  display: table-cell;
+  padding: 80px 0;
+}
+
+.page-sidebar{
+  border-right: 1px solid $app-light-grey;
+  width: 25%;
+
+  .sidebar-menu{
+    list-style: none;
+
+    li{
+      text-align: right;
+      padding: 6px 0;
+
+      &.menu-title{
+        padding: 6px 26px 8px 0;
+        color: $app-grey;
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+    }
+
+    a{
+      display: block;
+      padding: 0 22px 0 0;
+      border-right: 4px solid #fff;
+      color: #939393;
+      font-size: 16px;
+      text-decoration: none;
+
+      &:hover{
+        color: $app-red;
+      }
+
+      &.active{
+        border-color: $app-red;
+        color: $app-red;
+        font-weight: 600;
+      }
+
+    }
+  }
+}
+
+.page-content{
+  padding-left: 35px;
+  max-width: 835px;
+}
+
+@media screen and (max-width: 768px){
+  .page-sidebar{
+    display: none;
+    width: 100%;
+  }
+
+  .page-content{
+    width: 100%;
+    display: block;
+    padding: 50px 0 0 0;
+  }
+
+
+}
+
+.page-content .anchorjs-link:hover, .docs-content .anchorjs-link:hover{
+  text-decoration: none;
+}

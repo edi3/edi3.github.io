@@ -1,0 +1,242 @@
+---
+layout: default
+---
+
+<div class="swagger-content">
+
+    {% if page.data %}
+    {% assign swagger = site.data[page.data] %}
+    {% else %}
+    {% assign swagger = page %}
+    {% endif %}
+
+    <h1 class="no-anchor">{{ swagger.info.title }} <span class="api-version">{{ swagger.info.version }}</span></h1>
+    <div class="quick-description">
+        {{ content }}
+        {{ swagger.info.description | markdownify }}
+    </div>
+    <div class="swagger-base-url">[ Base url: <a href="//{{ swagger.host }}{{ swagger.basePath }}" target="_blank">{{ swagger.host }}{{ swagger.basePath }}</a> ]</div>
+
+    {% for route in swagger.paths %}
+    <div class="swagger-paths">
+        {% if route[1].get %}
+            <h2 class="swagger-path" id="{{ route[1].get.tags[0] | slugify }}">{{ route[1].get.tags }}</h2>
+        {% elsif route[1].post %}
+            <h2 class="swagger-path" id="{{ route[1].post.tags[0] | slugify }}">{{ route[1].post.tags }}</h2>
+        {% elsif route[1].delete %}
+            <h2 class="swagger-path" id="{{ route[1].delete.tags[0] | slugify }}">{{ route[1].delete.tags }}</h2>
+        {% elsif route[1].put %}
+            <h2 class="swagger-path" id="{{ route[1].put.tags[0] | slugify }}">{{ route[1].put.tags }}</h2>
+        {% elsif route[1].patch %}
+            <h2 class="swagger-path" id="{{ route[1].patch.tags[0] | slugify }}">{{ route[1].patch.tags }}</h2>
+        {% endif %}
+        <div class="swagger-path-route">{{ route[0] }}</div>
+        {% for method in route[1] %}
+        <div class="swagger-method swagger-method-{{ method[0] }}">
+            <h3 class="swagger-method-title">
+                <a href="#" class="swagger-method-link">
+                    <span class="swagger-method-name">{{ method[0] | upcase }}</span>{{ method[1].summary }}
+                </a>
+            </h3>
+            <div class="swagger-method-details">
+                <div class="swagger-method-description">{{ method[1].description  | markdownify }}</div>
+                {% if method[1].parameters %}
+                <div class="swagger-parameters">
+                    <h4>Parameters</h4>
+                    <table class="swagger-parameters-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Located in</th>
+                                <th>Description</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for parameter in method[1].parameters %}
+                            <tr>
+                                <td>
+                                    {% if parameter.required %}
+                                    <span class="swagger-parameter-required">
+                                    {% endif %}
+                                    {{ parameter.name }}
+                                    {% if parameter.required %}
+                                    </span>
+                                    {% endif %}
+                                </td>
+                                <td>{{ parameter.in }}</td>
+                                <td>
+                                    {{ parameter.description | markdownify }}
+                                    {% if parameter.schema.example %}
+                                        <span class="show-swagger-parameters-example">Example</span>
+                                        <div class="swagger-parameters-example">
+                                            {% for content_type in swagger.produces %}
+                                                {% if parameter.schema.example[content_type] %}
+                                                    {% assign example = parameter.schema.example[content_type] %}
+                                                    {% if content_type contains 'json' %}
+                                                        {% highlight json %}{{ example }}{% endhighlight %}
+                                                    {% elsif content_type contains 'xml' %}
+                                                        {% highlight xml %}{{ example }}{% endhighlight %}
+                                                    {% else %}
+                                                        {% highlight http %}{{ example }}{% endhighlight %}
+                                                    {% endif %}
+                                                {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if parameter.type %}
+                                    {{ parameter.type | capitalize }}
+                                    {% if parameter.items %}
+                                    of {{ parameter.items.type | capitalize }}
+                                    {% endif %}
+                                    {% else %}
+                                    String
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endif %}
+                {% if method[1].responses %}
+                <div class="swagger-response">
+                    <h4>Responses</h4>
+                    {% for response in method[1].responses %}
+                    <div class="swagger-responses-title">
+                        <div class="swagger-response-code">{{ response[0] }}</div>
+                        <div class="swagger-response-description">
+                            {{ response[1].description | markdownify }}
+                            {% if response[1].headers %}
+                                <div class="swagger-response-headers">
+                                <h5>Headers:</h5>
+                                <table>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Type</th>
+                                    </tr>
+                                    {% for header in response[1].headers %}
+                                        <tr>
+                                            <td>{{ header[0] }}</td>
+                                            <td>{{ header[1].description | markdownify }}</td>
+                                            <td>{{ header[1].type }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </table>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="swagger-response-example-wrapper">
+                            {% for content_type in swagger.produces %}
+                                {% if response[1].examples[content_type] %}
+                                    <span class="show-swagger-response-example">Example</span>
+                                    <div class="swagger-response-example">
+                                        {% assign example = response[1].examples[content_type] %}
+                                        {% if content_type contains 'json' %}
+                                            {% highlight json %}{{ example }}{% endhighlight %}
+                                        {% elsif content_type contains 'xml' %}
+                                            {% highlight xml %}{{ example }}{% endhighlight %}
+                                        {% else %}
+                                            {% highlight http %}{{ example }}{% endhighlight %}
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+<script type="text/javascript">
+// Helpers
+
+var slice = Array.prototype.slice;
+
+function $(expr, parent) {
+    return typeof expr === "string" ? (parent || document).querySelector(expr) : expr || null;
+}
+
+function $$(expr, parent) {
+    return slice.call((parent || document).querySelectorAll(expr));
+}
+
+$.bind = function(element, o) {
+    if (element) {
+        for (var event in o) {
+            var callback = o[event];
+
+            event.split(/\s+/).forEach(function (event) {
+                element.addEventListener(event, callback);
+            });
+        }
+    }
+};
+
+$.toggleDetails = function (element) {
+    if (element.classList.contains('open')) {
+        element.classList.remove('open');
+    }
+    else {
+        element.classList.add('open');
+    }
+}
+
+// Initialization
+
+function init() {
+    $$('.swagger-method-title').forEach(function (title) {
+        $.bind(title, {
+            'click': function (e) {
+                var details = $('.swagger-method-details', title.parentNode);
+                $.toggleDetails(details);
+                e.preventDefault();
+            }
+        });
+    });
+
+    $$('.show-swagger-parameters-example').forEach(function (title) {
+        $.bind(title, {
+            'click': function (e) {
+                var details = $('.swagger-parameters-example', title.parentNode);
+                $.toggleDetails(details);
+                e.preventDefault();
+            }
+        });
+    });
+
+    $$('.show-swagger-response-example').forEach(function (title) {
+        $.bind(title, {
+            'click': function (e) {
+                console.log('tets');
+                var details = $('.swagger-response-example', title.parentNode);
+                $.toggleDetails(details);
+                e.preventDefault();
+            }
+        });
+    });
+}
+
+
+// DOM already loaded?
+if (document.readyState !== "loading") {
+    init();
+}
+else {
+    // Wait for it
+    document.addEventListener("DOMContentLoaded", init);
+}
+</script>
+<script src="/js/anchor.min.js"></script>
+<script>
+    anchors.add('h1, h2, h3, h4, h5');
+    anchors.remove('.no-anchor, .page-content > h1:first-child');
+</script>

@@ -1,0 +1,59 @@
+<header class="header">
+    <div class="header-line">
+        <div class="wrapper">
+            <div id="mobile-menu-wrapper" class="mobile-menu">
+                <button id="hamburger-menu" class="hamburger-menu">
+                    <span>toggle menu</span>
+                </button>
+                <div id="mobile-menu" style="display: none;">
+                    {% include header-menu.html %}
+                    {% include sidebar-menu.html %}
+                </div>
+            </div>
+            <a href="/" class="logo"><img src="/images/logo.png" alt="edi3"><span>edi3.org</span></a>
+            <div class="header-search">
+                <script>
+                    (function() {
+                        var cx = '017892665596304004128:tj19kxwel_m';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
+                </script>
+                <gcse:search></gcse:search>
+            </div>
+            {% include header-menu.html %}
+        </div>
+    </div>
+    <div class="header-content">
+        <div class="wrapper">
+            <img src="/images/logo.png" alt="edi3">
+            <div class="header-text-box">
+                <div class="header-name">edi3 Standards</div>
+                <div class="header-tagline">Business to Business data exchange open standards community </div>
+            </div>
+        </div>
+    </div>
+</header>
+<script type="text/javascript">
+    document.getElementById('hamburger-menu').onclick = function() {
+        var nf = document.getElementById('mobile-menu');
+
+        // Show and hide menu items when toggle is clicked
+        if(nf.style.display==='none') {
+            nf.style.display = 'block';
+        }
+        else {
+            nf.style.display = 'none';
+        }
+    };
+
+    window.addEventListener('click', function(e){
+        if (!document.getElementById('mobile-menu-wrapper').contains(e.target)){
+            document.getElementById('mobile-menu').style.display= 'none';
+        }
+    });
+</script>

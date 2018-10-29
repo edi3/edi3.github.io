@@ -1,0 +1,137 @@
+.page-content, .docs-content{
+  color: $app-grey;
+  font-size: 18px;
+  line-height: 29px;
+
+  h1{
+    font-size: 33px;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    padding: 10px 0 0 0;
+  }
+
+  h2{
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+
+  h3{
+    font-size: 23px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    padding: 0;
+  }
+
+  h4{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    padding: 0;
+  }
+
+  p{
+    margin: 0 0 15px 0;
+    text-align: justify;
+  }
+
+  ul, ol{
+    margin: 0 0 15px 35px;
+    padding: 0;
+    color: $app-red;
+    text-align: justify;
+
+    li{
+      color: $app-grey;
+      padding: 5px 0;
+
+      &:first-child{
+        padding-top: 0;
+      }
+
+      p{
+        margin: 0;
+      }
+    }
+  }
+
+  a{
+    color: $app-red;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+
+  table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all;
+    margin: 0 0 29px 0;
+    font-size: 16px;
+
+    tr:nth-child(2n){
+      background-color: #f8f8f8;
+    }
+
+    th {
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+
+    th, td {
+      padding: 6px 8px;
+      border: 1px solid $app-light-grey;
+    }
+
+  }
+
+  code{
+    background: rgba(0,0,0,0.04);
+    border-radius: 3px;
+    display: inline-block;
+    padding: 5px;
+    font-size: 0.9em;
+  }
+
+  pre{
+    overflow: auto;
+  }
+
+  pre code{
+    padding: 15px;
+    margin: 0 0 10px 0;
+  }
+
+  code, pre{
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  }
+
+}
+
+.docs-content{
+  line-height: normal;
+  padding-bottom: 50px;
+  font-size: 16px;
+
+  p{
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  ul, ol {
+    margin: 0 0 5px 35px;
+    text-align: left;
+
+    li{
+      padding: 0;
+      line-height: normal;
+    }
+
+  }
+}

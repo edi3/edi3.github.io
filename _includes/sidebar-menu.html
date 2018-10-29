@@ -1,0 +1,14 @@
+<ul class="sidebar-menu">
+    {% assign current = page.url | downcase | split: '/' %}
+    <li class="menu-title">Specifications</li>
+    <li><a {% if current[1] == 'edi3-rdp' or current[2] == 'edi3-rdp' %}class="active"{% endif %} href="/edi3-rdp/">Resource Discovery Protocol (EDI3-RDP)</a></li>
+    <li><a {% if current[1] == 'edi3-rdm2api' or current[2] == 'edi3-rdm2api' %}class="active"{% endif %} href="/edi3-rdm2api/">RDM 2 API Methodology (EDI3-RDM2API)</a></li>
+    <li><a {% if current[1] == 'edi3-finance' or current[2] == 'edi3-finance' %}class="active"{% endif %} href="/edi3-finance/">API - Finance Domain (EDI3-FINANCE)</a></li>
+    <li><a {% if current[1] == 'edi3-trade' or current[2] == 'edi3-trade' %}class="active"{% endif %} href="/edi3-trade/">API - Trade Domain (EDI3-TRADE)</a></li>
+    <li><a {% if current[1] == 'edi3-transport' or current[2] == 'edi3-transport' %}class="active"{% endif %} href="/edi3-transport/">API - Transport Domain (EDI3-TRANSPORT)</a></li>
+    <li><a {% if current[1] == 'edi3-regulatory' or current[2] == 'edi3-regulatory' %}class="active"{% endif %} href="/edi3-regulatory/">API - Regulatory Domain (EDI3-REGULATORY)</a></li>
+    <li class="menu-title">Community</li>
+    <li><a href="" target="_blank">Newsletter (subscribe)</a></li>
+    <li><a href="http://chat.edi3.org" target="_blank">Chat (join team)</a></li>
+    <li><a href="https://github.com/edi3/" target="_blank">GitHub</a></li>
+</ul>

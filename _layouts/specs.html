@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+{% include header.html %}
+<div class="main-wrapper">
+    <div class="main-content">
+        <div class="page-sidebar">
+            {% include sidebar-menu.html %}
+        </div>
+        <div class="page-content docs-content">
+            <div class="spec-header">
+                {% assign page.specs_assets = page.specs_assets | append: page.url %}
+                <ul>
+                    <li>Spec ID: {{ page.specID | markdownify}}</li>
+                    <li>{{ page.status | markdownify}}</li>
+                    <li>Editor: {{ page.editors | markdownify}}</li>
+                    <li>Contributors: {{ page.contributors | markdownify}}</li>
+                </ul>
+            </div>
+            {% include toc.html %}
+            {{ content }}
+        </div>
+    </div>
+</div>
+{% include footer.html %}
+<script src="/js/anchor.min.js"></script>
+<script>
+    anchors.add('h1, h2, h3, h4, h5');
+    anchors.remove('.no-anchor, .page-content > h1:first-child');
+</script>
+</body>
+</html>
