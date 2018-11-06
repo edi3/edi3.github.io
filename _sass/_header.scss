@@ -15,7 +15,7 @@
     }
 
     img{
-      max-height: 29px;
+      max-height: 45px;
       vertical-align: middle;
     }
   }
@@ -90,6 +90,10 @@
       width: 33px;
       height: 25px;
       margin-top: 0;
+
+      svg{
+        display: none;
+      }
 
       &:hover{
         background-color: #939393;
@@ -218,7 +222,7 @@
       vertical-align: top;
 
       img{
-        max-height: 24px;
+        max-height: 40px;
       }
 
     }
