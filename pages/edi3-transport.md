@@ -9,7 +9,7 @@ permalink: /edi3-transport/
 The API - Transport Domain Specifications are based on ...
 
 * [EDI3-TRANSPORT GitHub repository](https://github.com/edi3/edi3-transport)
-* [EDI3-TRANSPORT Slack Channel](https://edi3.slack.com/messages/spec-edi3-transport/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
+* [EDI3-TRANSPORT Slack Channel](https://edi3.slack.com/messages/spec-transport/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |

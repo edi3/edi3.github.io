@@ -9,7 +9,7 @@ permalink: /edi3-finance/
 The API - Finance Domain Specifications are based on ...
 
 * [EDI3-FINANCE GitHub repository](https://github.com/edi3/edi3-finance)
-* [EDI3-FINANCE Slack Channel](https://edi3.slack.com/messages/spec-edi3-finance/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
+* [EDI3-FINANCE Slack Channel](https://edi3.slack.com/messages/spec-finance/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |

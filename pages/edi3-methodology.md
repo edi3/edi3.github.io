@@ -9,7 +9,7 @@ permalink: /edi3-methodology/
 The EDI3 Methodology Specifications are based on ...
 
 * [EDI3-METHODOLOGY GitHub repository](https://github.com/edi3/edi3-methodology)
-* [EDI3-METHODOLOGY Slack Channel](https://edi3.slack.com/messages/spec-edi3-methodology/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
+* [EDI3-METHODOLOGY Slack Channel](https://edi3.slack.com/messages/spec-methodology/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |

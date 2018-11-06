@@ -9,7 +9,7 @@ permalink: /edi3-regulatory/
 The API - Regulatory Domain Specifications are based on ...
 
 * [EDI3-REGULATORY GitHub repository](https://github.com/edi3/edi3-regulatory)
-* [EDI3-REGULATORY Slack Channel](https://edi3.slack.com/messages/spec-edi3-regulatory/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
+* [EDI3-REGULATORY Slack Channel](https://edi3.slack.com/messages/spec-regulatory/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |

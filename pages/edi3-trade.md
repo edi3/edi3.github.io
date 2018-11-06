@@ -1,15 +1,15 @@
 ---
 layout: page
-title: [A[BAPI - Trade Domain Specifications
+title: API - Trade Domain Specifications
 permalink: /edi3-trade/
 ---
 
-# [A[BAPI - Trade Domain Specifications
+# API - Trade Domain Specifications
 
-The [A[BAPI - Trade Domain Specifications are based on ...
+The API - Trade Domain Specifications are based on ...
 
 * [EDI3-TRADE GitHub repository](https://github.com/edi3/edi3-trade)
-* [EDI3-TRADE Slack Channel](https://edi3.slack.com/messages/spec-edi3-trade/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
+* [EDI3-TRADE Slack Channel](https://edi3.slack.com/messages/spec-trade/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
