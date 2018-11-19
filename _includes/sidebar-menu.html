@@ -1,12 +1,25 @@
 <ul class="sidebar-menu">
     {% assign current = page.url | downcase | split: '/' %}
-    <li class="menu-title">Specifications</li>
-    <li><a {% if current[1] == 'edi3-rdp' or current[2] == 'edi3-rdp' %}class="active"{% endif %} href="/edi3-rdp/">Resource Discovery Protocol (EDI3-RDP)</a></li>
-    <li><a {% if current[1] == 'edi3-methodology' or current[2] == 'edi3-methodology' %}class="active"{% endif %} href="/edi3-methodology/">EDI3 Methodology (EDI3-METHODOLOGY)</a></li>
-    <li><a {% if current[1] == 'edi3-finance' or current[2] == 'edi3-finance' %}class="active"{% endif %} href="/edi3-finance/">API - Finance Domain (EDI3-FINANCE)</a></li>
-    <li><a {% if current[1] == 'edi3-trade' or current[2] == 'edi3-trade' %}class="active"{% endif %} href="/edi3-trade/">API - Trade Domain (EDI3-TRADE)</a></li>
-    <li><a {% if current[1] == 'edi3-transport' or current[2] == 'edi3-transport' %}class="active"{% endif %} href="/edi3-transport/">API - Transport Domain (EDI3-TRANSPORT)</a></li>
-    <li><a {% if current[1] == 'edi3-regulatory' or current[2] == 'edi3-regulatory' %}class="active"{% endif %} href="/edi3-regulatory/">API - Regulatory Domain (EDI3-REGULATORY)</a></li>
+    <li class="menu-title">Overview</li>
+    <li><a {% if current[1] == 'governance' or current[2] == 'governance' %}class="active"{% endif %} href="/governance/">Governance</a></li>
+    <li><a {% if current[1] == 'business-case' or current[2] == 'business-case' %}class="active"{% endif %} href="/business-case/">Business Case</a></li>
+    <li class="menu-title">Semantic Specs</li>
+    <li><a {% if current[1] == 'edi3-trade' or current[2] == 'edi3-trade' %}class="active"{% endif %} href="/edi3-trade/">Trade Domain</a></li>
+    <li><a {% if current[1] == 'edi3-transport' or current[2] == 'edi3-transport' %}class="active"{% endif %} href="/edi3-transport/">Transport Domain</a></li>
+    <li><a {% if current[1] == 'edi3-regulatory' or current[2] == 'edi3-regulatory' %}class="active"{% endif %} href="/edi3-regulatory/">Regulatory Domain</a></li>
+    <li><a {% if current[1] == 'edi3-finance' or current[2] == 'edi3-finance' %}class="active"{% endif %} href="/edi3-finance/">Finance Domain</a></li>
+    <li><a {% if current[1] == 'edi3-unlocode' or current[2] == 'edi3-unlocode' %}class="active"{% endif %} href="/edi3-unlocode/">UN Locode</a></li>
+    <li class="menu-title">Technical Specs</li>
+    <li><a {% if current[1] == 'edi3-identity' or current[2] == 'edi3-identity' %}class="active"{% endif %} href="/edi3-identity/">Identity Provider</a></li>
+    <li><a {% if current[1] == 'edi3-discovery' or current[2] == 'edi3-discovery' %}class="active"{% endif %} href="/edi3-discovery/">Resource Discovery</a></li>
+    <li><a {% if current[1] == 'edi3-description' or current[2] == 'edi3-description' %}class="active"{% endif %} href="/edi3-description/">Resource Description</a></li>
+    <li><a {% if current[1] == 'edi3-events' or current[2] == 'edi3-events' %}class="active"{% endif %} href="/edi3-events/">Event Structure</a></li>
+    <li><a {% if current[1] == 'edi3-notary' or current[2] == 'edi3-notary' %}class="active"{% endif %} href="/edi3-notary/">Notary Service</a></li>
+    <li class="menu-title">Tools and Methods</li>
+    <li><a {% if current[1] == 'edi3-uml-profile' or current[2] == 'edi3-uml-profile' %}class="active"{% endif %} href="/edi3-uml-profile/">UML Profile</a></li>
+    <li><a {% if current[1] == 'edi3-api-ndr' or current[2] == 'edi3-api-ndr' %}class="active"{% endif %} href="/edi3-api-ndr/">OpenAPI NDR</a></li>
+    <li><a {% if current[1] == 'edi3-api-conformance' or current[2] == 'edi3-api-conformance' %}class="active"{% endif %} href="/edi3-api-conformance/">API Conformance</a></li>
+    <li><a {% if current[1] == 'edi3-model-interchange' or current[2] == 'edi3-model-interchange' %}class="active"{% endif %} href="/edi3-model-interchange/">Model Interchange</a></li>
     <li class="menu-title">Community</li>
     <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter (subscribe)</a></li>
     <li><a href="http://chat.edi3.org" target="_blank">Chat (join team)</a></li>
