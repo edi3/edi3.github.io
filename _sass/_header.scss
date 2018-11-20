@@ -245,17 +245,21 @@
 
 
           &.menu-title{
-            padding: 6px 19px 8px 19px;
+            padding: 0;
             color: #fff;
             font-weight: 600;
             font-size: 16px;
+
+            a{
+              padding: 6px 19px 8px 15px;
+            }
           }
 
         }
 
         a{
           display: block;
-          padding: 6px 20px 6px 30px;
+          padding: 6px 20px 6px 25px;
           color: #fff;
           font-size: 16px;
           text-decoration: none;

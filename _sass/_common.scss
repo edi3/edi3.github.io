@@ -75,7 +75,6 @@ img{
           color: $app-grey;
           font-weight: 600;
           font-size: 18px;
-          padding-right: 10px;
 
           &:hover{
             color: $app-red;
@@ -94,7 +93,7 @@ img{
 
     a{
       display: block;
-      padding: 6px 26px 6px 0;
+      padding: 5px 15px 5px 0;
       border-right: 4px solid #fff;
       color: #939393;
       font-size: 15px;
@@ -130,8 +129,6 @@ img{
     display: block;
     padding: 50px 0 0 0;
   }
-
-
 }
 
 .page-content .anchorjs-link:hover, .docs-content .anchorjs-link:hover{
