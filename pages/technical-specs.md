@@ -5,4 +5,4 @@ permalink: /technical-specs/
 ---
 # Technical Specs
 
-[Resource Discovery Diagram](images/edi3-rdf.png)
+[Resource Discovery Diagram](../images/edi3-rdf.png)
