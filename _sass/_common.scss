@@ -58,23 +58,46 @@ img{
 
     li{
       text-align: right;
-      padding: 6px 0;
+      padding: 0;
 
       &.menu-title{
-        padding: 6px 26px 8px 0;
+        padding: 0;
+        margin: 10px 0 0 0;
         color: $app-grey;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 18px;
+
+        &:first-child{
+          margin-top: 0;
+        }
+
+        a{
+          color: $app-grey;
+          font-weight: 600;
+          font-size: 18px;
+          padding-right: 10px;
+
+          &:hover{
+            color: $app-red;
+          }
+
+          &.active{
+            border-color: $app-red;
+            color: $app-red;
+            font-weight: 600;
+          }
+
+        }
       }
 
     }
 
     a{
       display: block;
-      padding: 0 22px 0 0;
+      padding: 6px 26px 6px 0;
       border-right: 4px solid #fff;
       color: #939393;
-      font-size: 16px;
+      font-size: 15px;
       text-decoration: none;
 
       &:hover{
