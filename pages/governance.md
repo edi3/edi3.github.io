@@ -16,11 +16,11 @@ All specifications will be tagged with a status that defines it's usability for 
 |![Stable](../images/stable.svg)|When a specification has a successful third party implementation (ie passes conformance test cases) then it becomes stable.|safe to implement in production systems|
 |![Deprecated](../images/deprecated.svg)|When a specification is superseded by a new major version then the previous major version is deprecated|may still be used in production but should not be used for new builds|
 |![Retired](../images/retired.svg)|when a specification is obsolete and should no longer be used in any production deployment then it becomes retired|remains on this site for historical reference puposes|
-|[Deleted](../images/deleted.svg)|Usually applies to unsuccessful specifications that never made it to stable status|Will be removed from this site|
+|![Deleted](../images/deleted.svg)|Usually applies to unsuccessful specifications that never made it to stable status|Will be removed from this site|
 
 ## Specification Version Management
 
-Specifications will follow semver conventions with a major.minor.patch version numbering system (eg version 1.5.3). The following rules apply to versioning
+Specifications will follow [semver conventions](https://semver.org/) with a major.minor.patch version numbering system (eg version 1.5.3). The following rules apply to versioning
 
 |Version level|definition|usage|
 |---|---|---|
