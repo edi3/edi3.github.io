@@ -38,9 +38,9 @@ We aim to support implementers through their development efforts and conformance
 
 ## IPR Policy and Contributions
 
-If you would like to contribute to the development of our specifications then you 
+If you would like to contribute to the development of our specifications;
 
-* must be a [registered UN/CEFACT expert](https://uncefact.unece.org/display/uncefactpublic/UNCEFACT+Expert+Registration). Registration will require that you agree to the [IPR Policy](https://www.unece.org/fileadmin/DAM/cefact/cf_plenary/plenary12/ECE_TRADE_C_CEFACT_2010_20_Rev2E_UpdatedIPRpolicy.pdf). This is essential in order to ensure continued royalty free availability of published UN/CEFACT standards. 
+* You must be a [registered UN/CEFACT expert](https://uncefact.unece.org/display/uncefactpublic/UNCEFACT+Expert+Registration). Registration will require that you agree to the [IPR Policy](https://www.unece.org/fileadmin/DAM/cefact/cf_plenary/plenary12/ECE_TRADE_C_CEFACT_2010_20_Rev2E_UpdatedIPRpolicy.pdf). This is essential in order to ensure continued royalty free availability of published UN/CEFACT standards. 
 * Once you have completed the registration process then please just [join our slack team](http://chat.edi3.org/) if you have not done so already and ping us on the general channel. 
 * We will add you to whichever Github teams are relevant for your contribution area.
 
