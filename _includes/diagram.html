@@ -1,0 +1,34 @@
+{%- if page.data -%}
+    {%- assign model = site.data[page.data].enterprise -%}
+{%- endif -%}
+{%- if model -%}
+<div class="diagram-content">
+    <div class="items-wrapper">
+        {%- for layer in model.layers %}
+        <div class="layer-item layer-items-{{layer.domains.size}}">
+            <div class="layer-name">{{ layer.name }}</div>
+            <div class="layer-content {{ layer.name | slugify }}-layer items-in-row-{{layer.domains.size}}">
+                {%- if layer.domains.size > 0 -%}
+                {%- for domain in layer.domains %}
+                <div class="item domain-item{% if domain.repositoryURL == '' %} no-link{% endif %}">
+                    <div class="domain-name">{{ domain.name }}</div>
+                    <div class="domain-content">
+                        {%- if domain.repositoryURL != '' %}<a href="{{site.url}}/{{ domain.name | slugify }}-api/index.html" title="{{ domain.description }}">{{ domain.name }}</a>{% endif -%}
+                        {% for resource in domain.resources %}
+                        <div class="item resource-item">
+                            {{ resource.name }}
+                            {%- if domain.apiDocsURL != '' and domain.repositoryURL != '' -%}<a href="{{ domain.apiDocsURL }}/#/{{ resource.name | slugify }}" target="_blank" title="{{ resource.description }}">{{ resource.name }}</a>{% endif %}
+                        </div>
+                        {%- endfor %}
+                    </div>
+                </div>
+                {%- endfor %}
+                {%- else -%}
+                    <div class="to-be-defined">To be defined</div>
+                {%- endif -%}
+            </div>
+        </div>
+        {%- endfor %}
+    </div>
+</div>
+{%- endif -%}
