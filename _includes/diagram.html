@@ -13,7 +13,7 @@
                 <div class="item domain-item{% if domain.repositoryURL == '' %} no-link{% endif %}">
                     <div class="domain-name">{{ domain.name }}</div>
                     <div class="domain-content">
-                        {%- if domain.repositoryURL != '' %}<a href="{{site.url}}/{{ domain.name | slugify }}-api/index.html" title="{{ domain.description }}">{{ domain.name }}</a>{% endif -%}
+                        {%- if domain.repositoryURL != '' %}<a href="{{site.url}}/{{ domain.name | slugify }}" title="{{ domain.description }}">{{ domain.name }}</a>{% endif -%}
                         {% for resource in domain.resources %}
                         <div class="item resource-item">
                             {{ resource.name }}
