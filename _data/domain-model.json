@@ -7,7 +7,7 @@
                 "name": "Semantic Specs",
                 "domains": [
                     {
-                        "name": "Trade Domain",
+                        "name": "Trade",
                         "description": "Trade Domain description.",
                         "repositoryURL": "https://edi3.org/trade/",
                         "apiDocsURL" : "",
@@ -23,7 +23,7 @@
                         ]
                     },
                     {
-                        "name": "Transport Domain",
+                        "name": "Transport",
                         "description": "Transport Domain description.",
                         "repositoryURL": "https://edi3.org/transport/",
                         "apiDocsURL" : "",
@@ -39,7 +39,7 @@
                         ]
                     },
                     {
-                        "name": "Regulatory Domain",
+                        "name": "Regulatory",
                         "description": "Regulatory Domain description.",
                         "repositoryURL": "https://edi3.org/regulatory/",
                         "apiDocsURL" : "",
@@ -55,7 +55,7 @@
                         ]
                     },
                     {
-                        "name": "Finance Domain",
+                        "name": "Finance",
                         "description": "Finance Domain description.",
                         "repositoryURL": "https://edi3.org/finance/",
                         "apiDocsURL" : "",
