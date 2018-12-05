@@ -6,7 +6,7 @@ permalink: /dictionary/
 
 # edi3 Dictionary Specifications
 
-The edi3 Dictionary Specifications are based on ...
+The edi3 Dictionary Specifications are based on UN/CEFACT Core Components.  In [Model form](http://edi3.org/iscrm/)
 
 * [Dictionary GitHub repository](https://github.com/edi3/edi3-dictionary)
 * [Dictionary Slack Channel](https://edi3.slack.com/messages/spec-dictionary/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
