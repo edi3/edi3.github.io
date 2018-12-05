@@ -6,4 +6,4 @@ permalink: /about/
 # About edi3
 
 
-hi@edi3.org
+Coming Soon
