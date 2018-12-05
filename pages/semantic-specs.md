@@ -17,7 +17,7 @@ The scope of semantic specifications on this site is the the full internaitonal 
 
 ## Dictionary and Codes
 
-All domain specific specifications are constructed from the UN/CEFACT core component dictionary and code lists. These are published as browsable models and as a JSON-LD linked data model. Independent of the domain specific reference API specifications, implementers may simply make use of JSON-LD contexts in the publisjhed dictionary.
+All domain specific specifications are constructed from the UN/CEFACT core component dictionary and code lists. These are published as browsable models and as a JSON-LD linked data model via the [dictionary](https://edi3.org/dictionary/) specification. Independent of the domain specific reference API specifications, implementers may simply make use of JSON-LD contexts in the published dictionary.
 
 ## Domains & Resource APIs
 

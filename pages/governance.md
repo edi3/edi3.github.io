@@ -44,5 +44,8 @@ If you would like to contribute to the development of our specifications;
 * Once you have completed the registration process then please just [join our slack team](http://chat.edi3.org/) if you have not done so already and ping us on the general channel. 
 * We will add you to whichever Github teams are relevant for your contribution area.
 
+## Current Team Membership
+
+Is visible simply by browsing the corresponding [GitHub team membership](https://github.com/orgs/edi3/teams)
 
 
