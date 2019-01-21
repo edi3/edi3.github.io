@@ -48,6 +48,7 @@
     <li><a  href="/regulatory/">Regulatory Domain</a></li>
     <li><a  href="/finance/">Finance Domain</a></li>
     <li><a  href="/unlocode/">UN Locode</a></li>
+    <li><a  href="/dictionary/">Dictionary</a></li>
     <li class="menu-title"><a href="/technical-specs/">Technical Specs</a></li>
     <li><a  href="/identity/">Identity Provider</a></li>
     <li><a  href="/discovery/">Resource Discovery</a></li>
@@ -129,6 +130,7 @@
     <li><a  href="/regulatory/">Regulatory Domain</a></li>
     <li><a  href="/finance/">Finance Domain</a></li>
     <li><a  href="/unlocode/">UN Locode</a></li>
+    <li><a  href="/dictionary/">Dictionary</a></li>
     <li class="menu-title"><a href="/technical-specs/">Technical Specs</a></li>
     <li><a  href="/identity/">Identity Provider</a></li>
     <li><a  href="/discovery/">Resource Discovery</a></li>
@@ -168,23 +170,54 @@
 <li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
 <li class="toc-entry toc-h2"><a href="#goals">Goals</a></li>
 <li class="toc-entry toc-h2"><a href="#status">Status</a></li>
+<li class="toc-entry toc-h2"><a href="#dependencies">Dependencies</a></li>
 <li class="toc-entry toc-h2"><a href="#glossary">Glossary</a></li>
 <li class="toc-entry toc-h2"><a href="#licence">Licence</a></li>
 <li class="toc-entry toc-h2"><a href="#change-process">Change Process</a></li>
 <li class="toc-entry toc-h2"><a href="#language">Language</a></li>
-<li class="toc-entry toc-h1"><a href="#billing-process">Billing Process</a>
-<ul>
-<li class="toc-entry toc-h2"><a href="#state-lifecycle">State Lifecycle</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h1"><a href="#related-material">Related Material</a></li>
+<li class="toc-entry toc-h1"><a href="#business-domains">Business domains</a></li>
+<li class="toc-entry toc-h1"><a href="#data-types">Data types</a></li>
+<li class="toc-entry toc-h1"><a href="#data-elements">Data elements</a></li>
+<li class="toc-entry toc-h1"><a href="#relationships">Relationships</a></li>
+<li class="toc-entry toc-h1"><a href="#web-resource">Web Resource</a></li>
+<li class="toc-entry toc-h1"><a href="#resource-state-lifecycle">Resource state lifecycle</a></li>
 </ul>
 </div>
             <h2 id="introduction">Introduction</h2>
 
+<p>edi3 semantic specifications are developed by business subject matter experts with deep experience in their relevant business domain. Graphical tools provide an effective means for non-technical modellers to express business semantics and communicate them to non-technical consumers.</p>
+
+<p>UML is the most ubiquitous graphical modelling notation and is the basis for all edi3 semantic modelling. However, without guidance, different modellers are likely to use UML differently for the same purpose. Therefore this specification provides recommendations for the consistent use of UML for the representation of the data model and state lifecycle of information entities that are at the core of all edi3 semantic specifications.</p>
+
 <h2 id="goals">Goals</h2>
 
+<p>This specification will have acheived its purpose when</p>
+
+<ul>
+  <li>All edi3 semantic specifications are consistently represented as UML class and state lifecycle diagrams.</li>
+  <li>Models can be successfully interchanged between different UML tools.</li>
+  <li>Open API 3.0 interface specifications and JSON-LD ontologies can be generated from the UML models.</li>
+</ul>
+
+<p>Like all edi3 specifications, the editors have aimed for simplicity and ease of use buy the target audience (business modellers in this case).  Therefore we</p>
+
+<ul>
+  <li>focus on only two UML diagram types (class diagrams and statechart diagrams), and</li>
+  <li>use a limited set of standard UML constructs (avoiding un-necessary use of stereotypes), and</li>
+  <li>provide plentiful examples.</li>
+</ul>
+
+<p>It is NOT a goal of this specification to provide guidance on best practices of information mnodelling. We assume that the reader is a capable infomration modeller that wishes to use the edi3 UML profile so that models are consistent and interchangeable.</p>
+
 <h2 id="status">Status</h2>
+
+<p>This specification is at <img src="http://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" /> status.  It will move to <img src="http://rfc.unprotocols.org/spec:2/COSS/draft.svg" alt="draft" /> when at least one UML tool supports the specification as an alpha prototype.</p>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<p>Users of this specification will typically leverage existing semantic libraries such as the UN/CEFACT Core Component Library (CCL) or other data dictionaries based on ISO-11179. Therefore this specification maps UML constructs to both ISO-11179 and UN/CEFACT CCL.</p>
+
+<p>Although this specification is inteneded to be independent of specific deployment technologies, the eid3 suite is generally targeted at REST API implementation by web developers.  Therefore, where necessary, we introduce concepts into the UML profile that will be necessary for the generation of complete OPEN API 3.0 specifications and JSON-LD ontologies.</p>
 
 <h2 id="glossary">Glossary</h2>
 
@@ -197,30 +230,29 @@
   </thead>
   <tbody>
     <tr>
-      <td> </td>
-      <td> </td>
+      <td>CCL</td>
+      <td>UN/CEFACT Core Compomnent Library</td>
+    </tr>
+    <tr>
+      <td>UML</td>
+      <td>Unified Modelling Language</td>
+    </tr>
+    <tr>
+      <td>UOM</td>
+      <td>Unit of Measure</td>
     </tr>
   </tbody>
 </table>
 
-<p>This service depends on - TBA.</p>
-
-<p>The TBA specification depends on this document. Note, TBA.</p>
-
 <h2 id="licence">Licence</h2>
 
-<p>Copyright (c) 2018 the Editor and Contributors. All rights reserved.</p>
-
 <p>This Specification is free software; you can redistribute it and/or modify it under the
-terms of the GNU General Public License as published by the Free Software Foundation; 
+terms of the <a href="http://www.gnu.org/licenses">GNU General Public License</a> as published by the Free Software Foundation; 
 either version 3 of the License, or (at your option) any later version.</p>
 
 <p>This Specification is distributed in the hope that it will be useful, but WITHOUT ANY
 WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
-PURPOSE. See the GNU General Public License for more details.</p>
-
-<p>You should have received a copy of the GNU General Public License along with this program;
-if not, see <a href="http://www.gnu.org/licenses">http://www.gnu.org/licenses</a>.</p>
+PURPOSE.</p>
 
 <h2 id="change-process">Change Process</h2>
 
@@ -229,18 +261,196 @@ if not, see <a href="http://www.gnu.org/licenses">http://www.gnu.org/licenses</a
 <h2 id="language">Language</h2>
 
 <p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” 
-in this document are to be interpreted as described in RFC 2119.</p>
+in this document are to be interpreted as described in IETF RFC 2119.</p>
 
-<h1 id="billing-process">Billing Process</h1>
+<h1 id="business-domains">Business domains</h1>
 
-<h2 id="state-lifecycle">State Lifecycle</h2>
-
-<h1 id="related-material">Related Material</h1>
+<p>The highest level construct in edi3 modelling is the business domain.  A domain is a business subject area that groups a number of related information resources.</p>
 
 <ul>
-  <li></li>
-  <li></li>
+  <li>Domains are represented as a UML Package</li>
+  <li>Domain names must be unique across edi3.org</li>
+  <li>Domains may contain subdomains and, if so, subdomain names musg be iunique within the parent doamin.</li>
+  <li>Subdomains are related to the parent domain using a UML package conmtainment relationship.</li>
+  <li>Domains and subdomains must have a description</li>
 </ul>
+
+<p>Sample</p>
+
+<p><img src="transport domain diagram" alt="Transport Domain" /></p>
+
+<h1 id="data-types">Data types</h1>
+
+<p>Data types are represented as the “type” of a UML attribute.  There are only 8 possible types:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data Type</th>
+      <th>Usage Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Text</td>
+      <td>Any string of unicode characters</td>
+    </tr>
+    <tr>
+      <td>Numeric</td>
+      <td>Any integer or floating point number</td>
+    </tr>
+    <tr>
+      <td>Binary</td>
+      <td>A binary file URL.  File type is indicated by file extension which must be a valid MIME type</td>
+    </tr>
+    <tr>
+      <td>DateTime</td>
+      <td>an ISO-8601 date/time string</td>
+    </tr>
+    <tr>
+      <td>Identifier</td>
+      <td>a controlled public identifier type such as a business registration number</td>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td>a code from a controlled list such as ISO-3166 country code</td>
+    </tr>
+    <tr>
+      <td>Indicator</td>
+      <td>a yes/no, true/faule, 1/0 boolean</td>
+    </tr>
+    <tr>
+      <td>Measure</td>
+      <td>A measured value with defined UOM from UNECE-Rec-20</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Sample</em></p>
+
+<p><img src="data types diagram" alt="Data Types" /></p>
+
+<p><em>Implementation Note</em></p>
+
+<p>Although simply represented at model layer, the code and identifier types MUST resolve to unambiguous values at runtime. The means by which that is achieved is described in the relevant NDR (Naming &amp; Design Rules) specifications but will typically mean that the data element value is represented as a SchemeURI and code/identifier value tuple.</p>
+
+<h1 id="data-elements">Data elements</h1>
+
+<p>Every data element has globally unique name called the “dictionary entry name” of the form domain::class.property.type - for example “transport::consignment.number.identifier”</p>
+
+<p>Simple data elements are represented as UML classes and properties (attributes) - eg “transport::consignment.number.identifier”
+Complex data elements are represented as containment relationships between UML classes - eh “transport::consignment.consignee.party”</p>
+
+<ul>
+  <li>Class names MUST be unique within a domain.</li>
+  <li>Attribute names MUST be unique within a class.</li>
+  <li>Containment relationship names MUST be unique within the parent class.</li>
+  <li>All classes, attributes, and containment relationships MUST include a description which provides a meaningful definition of the data element.</li>
+  <li>All attributes and containment relationships MUST have a cardinality.</li>
+</ul>
+
+<p><em>Sample</em></p>
+
+<p><img src="consignment" alt="Consignment" /></p>
+
+<h1 id="relationships">Relationships</h1>
+
+<p>The edi3 UML profile includes four standard UML class diagram relationship types, all of which have the standard UML meaning.</p>
+
+<ul>
+  <li>The UML generalisation relationship is used to inicate sub-types or specialisations of an information resource.  For example, a “Vessel” is a type of “Transport Means”.</li>
+  <li>The UML aggregation relationship is used to indicate a containment relationship between two classes where the contained class may be re-used by other classes. For example “Address” is a frequently encountered structure and may be contained in several different parent structures.</li>
+  <li>The UML composition relationship is used to indicate a containment relationship between two classes where the contained class is not re-used by any other class.  For example the “consignment” class may contain the “consignment item” class - which is unlikely to be re-used by any class other than “consignment”.</li>
+  <li>The UML directed relationship is used to indicate a (non containment) relationship between two classes within or across domains. The relationship is used to indicate discoverable links between separate web resources (eg a consignment resource might reference the bill of lading document as a link URL)</li>
+</ul>
+
+<p><em>Sample</em></p>
+
+<p><img src="copnsignmentitem" alt="copnsignment item" /></p>
+
+<p><em>Implementation note</em></p>
+
+<p>Although the modelling activity should be largely independent of implementation technology, it is helpful for the modeller to understand the implementation impact of modelling choices - particularly with regard to the choice of relationship type between classes.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Relationship type</th>
+      <th>Open API 3.0 implementation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>generalisation</td>
+      <td>will be “flattened” at implementation layer so that the JSON schema for the sub-type contains all properties of the parent type.  In effect, the generalisation is a model layer concept only and has no equivalent at schema layer</td>
+    </tr>
+    <tr>
+      <td>aggregation</td>
+      <td>re-usable schema definition that is referenced by the containing schema</td>
+    </tr>
+    <tr>
+      <td>composition</td>
+      <td>single tree structure at schema layer with no separate referenceable schema object for the contained class</td>
+    </tr>
+    <tr>
+      <td>directed relationship</td>
+      <td>URL link to a separarate web resource. Note that, unlike other relationship types, the directed relationship operates at instance level not schema level - aty schema level it is just a string type that, at instance level contains the URL of the related web resource</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="web-resource">Web Resource</h1>
+
+<p>A web resource represents a URL addressable object that has a defined information model and a state lifecyle. In tradtional EDI modelling, a resource correlates most closely to a business document or message.</p>
+
+<p>A web resource is modelled most like a UML interface. A web resource</p>
+
+<ul>
+  <li>MUST be modelled as a UML class with stereotype <code class="highlighter-rouge">&lt;&lt;resource&gt;&gt;</code></li>
+  <li>MUST be named using a noun, not a verb.</li>
+  <li>MUST be the target of a UML <code class="highlighter-rouge">&lt;&lt;realisation&gt;&gt;</code> relationship where the source is a UML class hierarchy that represents the resource information model.</li>
+  <li>MUST include a styate machine model that defines the behaviour of the reource object (see more on this in the next section)</li>
+  <li>MUST include two mandatory UML attributes
+    <ul>
+      <li>id:string - represnting the unique identifier of the resource instance (usually a GUID)</li>
+      <li>status:code - representing the current state of the resource instance</li>
+    </ul>
+  </li>
+  <li>MUST include one or more UML operations that define the allowed actions on the resource which SHOULD be named as http verbe (GET / POST / PATCH etc).</li>
+  <li>MAY be the target of one or more UML aggregation relationships where the sources MUST be another <code class="highlighter-rouge">&lt;&lt;resource&gt;&gt;</code> class. This is used to define sub-resource relationships.</li>
+  <li>MAY be the source of one of UML association relationshoips where the targets MUST be other <code class="highlighter-rouge">&lt;&lt;resource&gt;&gt; </code>class. This is used to represent links to independent but related resources such as the invoice for a shipment or the bill of lading for a consignment.</li>
+</ul>
+
+<p><em>sample</em></p>
+
+<p><em>implementation notes</em></p>
+
+<ul>
+  <li>The UML <code class="highlighter-rouge">&lt;&lt;resource&gt;&gt;</code> type will map to a RESTful API web resource such as <code class="highlighter-rouge">https://api.acme.com/v1/consignments/{123456789}</code>.  The mapping rules for Open API 3.0 specification generation are defined in the Open API 3.0 NDR specification.</li>
+  <li>Resopurce models are deliberately kept simple and so do not attempt to model things like different structures for different types of PATCH operations or a list of filters allowed in GET collection actions. These things are likely to vary by implementation.  Models and generated OpenAPI specifications published by edi3.org represent only the minimum conformant behaviour for an implemention.</li>
+</ul>
+
+<h1 id="resource-state-lifecycle">Resource state lifecycle</h1>
+
+<p>Each <code class="highlighter-rouge">&lt;&lt;resource&gt;&gt;</code> class MUST have an embedded UML state machine model that describes the state lifecycle of a resource. Resource state lifecvycles are important because</p>
+
+<ul>
+  <li>They describe the set of allowed states and allowed transitions between states. For example an <code class="highlighter-rouge">invoice</code> resource may transition through <code class="highlighter-rouge">received</code>, <code class="highlighter-rouge">approved</code>, <code class="highlighter-rouge">disputed</code>, <code class="highlighter-rouge">amended</code>, and <code class="highlighter-rouge">paid</code>.  The precise meanings of each state can have signifcant legal or commercial significance (eg financing an <code class="highlighter-rouge">approved</code> invoice will have less risk and hence lower cost than financing a <code class="highlighter-rouge">received</code> invoice)</li>
+  <li>Under edi3 technical specification guidelines, every resource owner SHOULD publish an event to all authorised subscribers whenever a resource transitions from one state to another. So the state lifecycle model tells susbsriber what they can listen for.</li>
+</ul>
+
+<p>The UML profile for state lifecycles is very simple as it is just a minimal UML state machine</p>
+
+<ul>
+  <li>MUST iunclude an initial and final state and at least one simple state.</li>
+  <li>MUST include at least one state transition into and out of each state.</li>
+  <li>state names MUST be unique within one state lifecycle and represent the list of allowed values for the “status” attribute of the parent resource.</li>
+  <li>All transitions MUST have a UML trigger that describes the business event that triggered the transition.</li>
+  <li>triggers SHOULD include a target operation that links to the operation (POST/PATCH etc) of the resource action that triggered the event.</li>
+</ul>
+
+<p><em>sample</em></p>
+
 
         </div>
     </div>
