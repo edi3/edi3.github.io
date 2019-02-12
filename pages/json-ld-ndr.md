@@ -8,12 +8,12 @@ permalink: /json-ld-ndr/
 
 The edi3 JSON-LD NDR Specifications are based on ...
 
-* [JSON-LD NDR GitHub repository](https://github.com/edi3/edi3-json-ld-ndr)
-* [JSON-LD NDR Slack Channel](https://edi3.slack.com/messages/spec-json-ld-ndr/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
+* [JSON-LD NDR GitHub repository](https://github.com/edi3/edi3-json-ld-ndr){:target="_blank"}
+* [JSON-LD NDR Slack Channel](https://edi3.slack.com/messages/spec-json-ld-ndr/){:target="_blank"} ([you must signup to edi3 slack first](https://chat.edi3.org/){:target="_blank"})
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [JSON-LD NDR 1.0 spec](http://edi3.org/specs/edi3-json-ld-ndr/1.0/) | 1.0 | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) |  |  [JSON-LD NDR 1.0 Issues](https://github.com/edi3/edi3-json-ld-ndr/issues)  |
+| [JSON-LD NDR spec](http://edi3.org/specs/edi3-json-ld-ndr/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-json-ld-ndr/master/redoc-static.html){:target="_blank"} |  [JSON-LD NDR Issues](https://github.com/edi3/edi3-json-ld-ndr/issues){:target="_blank"}  |
 
 ## Known Implementations
 

@@ -8,12 +8,12 @@ permalink: /transport/
 
 The edi3 Transport Domain Specifications are based on ...
 
-* [Transport Domain GitHub repository](https://github.com/edi3/edi3-transport)
-* [Transport Domain Slack Channel](https://edi3.slack.com/messages/spec-transport/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
+* [Transport Domain GitHub repository](https://github.com/edi3/edi3-transport){:target="_blank"}
+* [Transport Domain Slack Channel](https://edi3.slack.com/messages/spec-transport/){:target="_blank"} ([you must signup to edi3 slack first](https://chat.edi3.org/){:target="_blank"})
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Transport Domain 1.0 spec](http://edi3.org/specs/edi3-transport/1.0/) | 1.0 | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) |  |  [Transport Domain 1.0 Issues](https://github.com/edi3/edi3-transport/issues)  |
+| [Transport Domain spec](http://edi3.org/specs/edi3-transport/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-transport/master/redoc-static.html){:target="_blank"} |  [Transport Domain Issues](https://github.com/edi3/edi3-transport/issues){:target="_blank"}  |
 
 ## Known Implementations
 

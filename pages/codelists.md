@@ -8,12 +8,12 @@ permalink: /codelists/
 
 The edi3 Code Lists Specifications are based on ...
 
-* [Code Lists GitHub repository](https://github.com/edi3/edi3-codelists)
-* [Code Lists Slack Channel](https://edi3.slack.com/messages/spec-codelists/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
+* [Code Lists GitHub repository](https://github.com/edi3/edi3-codelists){:target="_blank"}
+* [Code Lists Slack Channel](https://edi3.slack.com/messages/spec-codelists/){:target="_blank"} ([you must signup to edi3 slack first](https://chat.edi3.org/){:target="_blank"})
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Code Lists 1.0 spec](http://edi3.org/specs/edi3-codelists/1.0/) | 1.0 | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) |  |  [Code Lists 1.0 Issues](https://github.com/edi3/edi3-codelists/issues)  |
+| [Code Lists spec](http://edi3.org/specs/edi3-codelists/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-codelists/master/redoc-static.html){:target="_blank"} |  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
 
 ## Known Implementations
 

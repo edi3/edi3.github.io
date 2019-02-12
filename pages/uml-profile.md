@@ -8,12 +8,12 @@ permalink: /uml-profile/
 
 The edi3 UML Profile Specifications are based on ...
 
-* [UML Profile GitHub repository](https://github.com/edi3/edi3-uml-profile)
-* [UML Profile Slack Channel](https://edi3.slack.com/messages/spec-uml-profile/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
+* [UML Profile GitHub repository](https://github.com/edi3/edi3-uml-profile){:target="_blank"}
+* [UML Profile Slack Channel](https://edi3.slack.com/messages/spec-uml-profile/){:target="_blank"} ([you must signup to edi3 slack first](https://chat.edi3.org/){:target="_blank"})
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [UML Profile 1.0 spec](http://edi3.org/specs/edi3-uml-profile/1.0/) | 1.0 | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) |  |  [UML Profile 1.0 Issues](https://github.com/edi3/edi3-uml-profile/issues)  |
+| [UML Profile spec](http://edi3.org/specs/edi3-uml-profile/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-uml-profile/master/redoc-static.html){:target="_blank"} |  [UML Profile Issues](https://github.com/edi3/edi3-uml-profile/issues){:target="_blank"}  |
 
 ## Known Implementations
 

@@ -8,12 +8,12 @@ permalink: /events/
 
 The edi3 Event Structure Specifications are based on ...
 
-* [Event Structure GitHub repository](https://github.com/edi3/edi3-events)
-* [Event Structure Slack Channel](https://edi3.slack.com/messages/spec-events/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
+* [Event Structure GitHub repository](https://github.com/edi3/edi3-events){:target="_blank"}
+* [Event Structure Slack Channel](https://edi3.slack.com/messages/spec-events/){:target="_blank"} ([you must signup to edi3 slack first](https://chat.edi3.org/){:target="_blank"})
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Event Structure 1.0 spec](http://edi3.org/specs/edi3-events/1.0/) | 1.0 | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) |  |  [Event Structure 1.0 Issues](https://github.com/edi3/edi3-events/issues)  |
+| [Event Structure spec](http://edi3.org/specs/edi3-events/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-events/master/redoc-static.html){:target="_blank"} |  [Event Structure Issues](https://github.com/edi3/edi3-events/issues){:target="_blank"}  |
 
 ## Known Implementations
 

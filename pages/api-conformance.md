@@ -8,12 +8,12 @@ permalink: /api-conformance/
 
 The edi3 API Conformance Specifications are based on ...
 
-* [API Conformance GitHub repository](https://github.com/edi3/edi3-api-conformance)
-* [API Conformance Slack Channel](https://edi3.slack.com/messages/spec-api-conformance/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
+* [API Conformance GitHub repository](https://github.com/edi3/edi3-api-conformance){:target="_blank"}
+* [API Conformance Slack Channel](https://edi3.slack.com/messages/spec-api-conformance/){:target="_blank"} ([you must signup to edi3 slack first](https://chat.edi3.org/){:target="_blank"})
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [API Conformance 1.0 spec](http://edi3.org/specs/edi3-api-conformance/1.0/) | 1.0 | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) |  |  [API Conformance 1.0 Issues](https://github.com/edi3/edi3-api-conformance/issues)  |
+| [API Conformance spec](http://edi3.org/specs/edi3-api-conformance/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-api-conformance/master/redoc-static.html){:target="_blank"} |  [API Conformance Issues](https://github.com/edi3/edi3-api-conformance/issues){:target="_blank"}  |
 
 ## Known Implementations
 

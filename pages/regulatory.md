@@ -8,12 +8,12 @@ permalink: /regulatory/
 
 The edi3 Regulatory Domain Specifications are based on ...
 
-* [Regulatory Domain GitHub repository](https://github.com/edi3/edi3-regulatory)
-* [Regulatory Domain Slack Channel](https://edi3.slack.com/messages/spec-regulatory/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
+* [Regulatory Domain GitHub repository](https://github.com/edi3/edi3-regulatory){:target="_blank"}
+* [Regulatory Domain Slack Channel](https://edi3.slack.com/messages/spec-regulatory/){:target="_blank"} ([you must signup to edi3 slack first](https://chat.edi3.org/){:target="_blank"})
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Regulatory Domain 1.0 spec](http://edi3.org/specs/edi3-regulatory/1.0/) | 1.0 | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) |  |  [Regulatory Domain 1.0 Issues](https://github.com/edi3/edi3-regulatory/issues)  |
+| [Regulatory Domain spec](http://edi3.org/specs/edi3-regulatory/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-regulatory/master/redoc-static.html){:target="_blank"} |  [Regulatory Domain Issues](https://github.com/edi3/edi3-regulatory/issues){:target="_blank"}  |
 
 ## Known Implementations
 

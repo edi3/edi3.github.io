@@ -8,12 +8,12 @@ permalink: /description/
 
 The edi3 Resource Description Specifications are based on ...
 
-* [Resource Description GitHub repository](https://github.com/edi3/edi3-description)
-* [Resource Description Slack Channel](https://edi3.slack.com/messages/spec-description/) ([you must signup to edi3 slack first](https://chat.edi3.org/))
+* [Resource Description GitHub repository](https://github.com/edi3/edi3-description){:target="_blank"}
+* [Resource Description Slack Channel](https://edi3.slack.com/messages/spec-description/){:target="_blank"} ([you must signup to edi3 slack first](https://chat.edi3.org/){:target="_blank"})
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Resource Description 1.0 spec](http://edi3.org/specs/edi3-description/1.0/) | 1.0 | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) |  |  [Resource Description 1.0 Issues](https://github.com/edi3/edi3-description/issues)  |
+| [Resource Description spec](http://edi3.org/specs/edi3-description/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-description/master/redoc-static.html){:target="_blank"} |  [Resource Description Issues](https://github.com/edi3/edi3-description/issues){:target="_blank"}  |
 
 ## Known Implementations
 
