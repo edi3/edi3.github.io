@@ -1,6 +1,6 @@
 ---
-title: "edi3 Invoice 1.0 Specification"
-specID: "invoice/1"
+title: "edi3 Dictionary 1.0 Specification"
+specID: "dictionary/1"
 status: "![raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg)"
 editors: "[Steven Capell](mailto:steven.capell@edi3.org)"
 contributors: 
