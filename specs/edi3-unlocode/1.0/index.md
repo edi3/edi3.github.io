@@ -30,7 +30,7 @@ The TBA specification depends on this document. Note, TBA.
  
 ## Licence
 
-All material published on edi3.org including all parts of this specification are the intellectual property of the UN as per the [UN/CEFACT IPR Policy](https://www.unece.org/fileadmin/DAM/cefact/cf_plenary/plenary12/ECE_TRADE_C_CEFACT_2010_20_Rev2E_UpdatedIPRpolicy.pdf).
+Copyright (c) 2018 the Editor and Contributors. All rights reserved.
 
 This Specification is free software; you can redistribute it and/or modify it under the
 terms of the GNU General Public License as published by the Free Software Foundation; 
