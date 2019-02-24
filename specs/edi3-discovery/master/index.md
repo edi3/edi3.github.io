@@ -1,8 +1,8 @@
 ---
-title: "edi3 Trade Domain 1.0 Specification"
-specID: "trade/1"
+title: "edi3 Resource Discovery 1.0 Specification"
+specID: "discovery/1"
 status: "![raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg)"
-editors: "[Steven Capell](mailto:steven.capell@edi3.org)"
+editors: "[Chris Gough](https://github.com/monkeypants)"
 contributors: 
 ---
 
