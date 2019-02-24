@@ -1,6 +1,6 @@
 ---
-title: "edi3 Code Lists 1.0 Specification"
-specID: "codelists/1"
+title: "edi3 API Conformance 1.0 Specification"
+specID: "api-conformance/1"
 status: "![raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg)"
 editors: "[Steven Capell](mailto:steven.capell@edi3.org)"
 contributors: 
