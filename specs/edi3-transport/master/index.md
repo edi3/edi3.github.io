@@ -1,8 +1,8 @@
 ---
-title: "edi3 Notary Service 1.0 Specification"
-specID: "notary/1"
+title: "edi3 Transport Domain 1.0 Specification"
+specID: "transport/1"
 status: "![raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg)"
-editors: "[Chris Gough](https://github.com/monkeypants)"
+editors: "[Steven Capell](mailto:steven.capell@edi3.org)"
 contributors: 
 ---
 
