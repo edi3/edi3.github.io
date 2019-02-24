@@ -1,8 +1,8 @@
 ---
-title: "edi3 Resource Discovery 1.0 Specification"
-specID: "discovery/1"
+title: "edi3 Order 1.0 Specification"
+specID: "order/1"
 status: "![raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg)"
-editors: "[Chris Gough](https://github.com/monkeypants)"
+editors: "[Steven Capell](mailto:steven.capell@edi3.org)"
 contributors: 
 ---
 
