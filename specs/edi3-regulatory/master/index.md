@@ -1,6 +1,6 @@
 ---
-title: "edi3 Finance Domain 1.0 Specification"
-specID: "finance/1"
+title: "edi3 [A[BRegulatory Domain 1.0 Specification"
+specID: "regulatory/1"
 status: "![raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg)"
 editors: "[Steven Capell](mailto:steven.capell@edi3.org)"
 contributors: 

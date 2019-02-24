@@ -1,6 +1,6 @@
 ---
-title: "edi3 Dictionary 1.0 Specification"
-specID: "dictionary/1"
+title: "edi3 Transport Domain 1.0 Specification"
+specID: "transport/1"
 status: "![raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg)"
 editors: "[Steven Capell](mailto:steven.capell@edi3.org)"
 contributors: 
@@ -30,7 +30,7 @@ The TBA specification depends on this document. Note, TBA.
  
 ## Licence
 
-Copyright (c) 2018 the Editor and Contributors. All rights reserved.
+All material published on edi3.org including all parts of this specification are the intellectual property of the UN as per the [UN/CEFACT IPR Policy](https://www.unece.org/fileadmin/DAM/cefact/cf_plenary/plenary12/ECE_TRADE_C_CEFACT_2010_20_Rev2E_UpdatedIPRpolicy.pdf).
 
 This Specification is free software; you can redistribute it and/or modify it under the
 terms of the GNU General Public License as published by the Free Software Foundation; 
