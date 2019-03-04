@@ -1,0 +1,78 @@
+openapi: 3.0.0
+servers: []
+info:
+  description: This is edi3 Trade Domain API
+  version: 1.0
+  title: edi3 Trade Domain API
+  contact:
+    email: info@edi3.org
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: info
+    description: Information
+paths:
+  /info:
+    get:
+      tags:
+        - info
+      summary: provides base information
+      operationId: getInfo
+      description: |
+        Get some base information about edi3 Trade Domain API
+      parameters:
+        - in: query
+          name: searchString
+          description: pass an optional search string for looking up information
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: base information matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Information'
+        '400':
+          description: bad input parameter
+    patch:
+      tags:
+        - info
+      summary: updates base information
+      operationId: updateInfo
+      description: |
+        Update base information about edi3 Trade Domain API
+      responses:
+        '200':
+          description: information updated
+        '400':
+          description: 'invalid input, object invalid'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Information'
+        description: Base information
+components:
+  schemas:
+    Information:
+      type: object
+      required:
+        - alias
+        - title
+        - version
+        - releaseDate
+      properties:
+        alias:
+          type: string
+          example: edi3-trade
+        title:
+          type: string
+          example: edi3 Trade Domain
+        version:
+          type: string
+          example: 1.0
