@@ -1,25 +1,26 @@
 ---
 layout: page
-title: edi3 Community Specifications
+title: Community
 permalink: /community/
 ---
+# Community
 
-# edi3 Community Specifications
+edi3.org is designed to support a wide range of stakeholders. Anyone with an interest in standards associated with international trade. Whether you are just want to be kept informed, or need support for conformant implementations or want to actively contribute to our work.
 
-The edi3 Community Specifications are based on ...
+## Keep Informed
 
-* [Community GitHub repository](https://github.com/edi3/edi3-community){:target="_blank"}
-* [Community Slack Channel](https://edi3.slack.com/messages/spec-community/){:target="_blank"} ([you must signup to edi3 slack first](https://chat.edi3.org/){:target="_blank"})
+For those that just want to stay informed. [Subscribe](http://eepurl.com/dMLfdU) to the regular edi3 newsletter.  We'll update you about the latest developments and opportunities at most once per week and you can un-subscribe anytime.
 
-| Specification URL | Version | Status | API Definition | Issues List |
-| ----------------- | ------  | ------ | -------------- | ----------- |
-| [Community spec](http://edi3.org/specs/edi3-community/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-community/master/redoc-static.html){:target="_blank"} |  [Community Issues](https://github.com/edi3/edi3-community/issues){:target="_blank"}  |
+To Do:  add link to archives and metrics about number of subscribers, impressions, etc
 
-## Known Implementations
+## Join the Conversation
 
-Known implementations (open source or otherwise) are listed here.  Please modify this page and make a pull request to add your own.
+For those that want to chat to some experts. [Join](http://chat.edi3.org/) the edi3 Slack team and subscribe to as many channels as you wish (there's one for each spec and a general channel).  You can join the conversation, make suggestions, or ask questions and get help.
 
-|Provider|Implementation URL|Comments|
-|--------|------------------|--------|
-|  |  |  |
+To Do :  add links to slack and add metrics about teams, channels, members, conversations, etc
 
+## Help with Development
+
+For those that want to contribute to our work. [Github](https://github.com/edi3) is our main tool for development of the edi3 specifications and reference implementations. It's all in the open and all open source.  Feel free to leave us comments or report a bug in the relevant GitHub issue list. However if you'd like to make some substantive contribution to our work then you must first register as a UN/CEFACT expert as described on the governance page
+
+To Do : add links to github teams and add metrics about team membership, commit volumes, etc
