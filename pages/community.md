@@ -23,4 +23,6 @@ To Do :  add links to slack and add metrics about teams, channels, members, conv
 
 For those that want to contribute to our work. [Github](https://github.com/edi3) is our main tool for development of the edi3 specifications and reference implementations. It's all in the open and all open source.  Feel free to leave us comments or report a bug in the relevant GitHub issue list. However if you'd like to make some substantive contribution to our work then you must first register as a UN/CEFACT expert as described on the governance page
 
-To Do : add links to github teams and add metrics about team membership, commit volumes, etc
+## Site Metrics
+
+Put some cool numbers, trends & links here
