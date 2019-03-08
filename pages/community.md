@@ -11,13 +11,9 @@ edi3.org is designed to support a wide range of stakeholders. Anyone with an int
 
 For those that just want to stay informed. [Subscribe](http://eepurl.com/dMLfdU) to the regular edi3 newsletter.  We'll update you about the latest developments and opportunities at most once per week and you can un-subscribe anytime.
 
-To Do:  add link to archives and metrics about number of subscribers, impressions, etc
-
 ## Join the Conversation
 
 For those that want to chat to some experts. [Join](http://chat.edi3.org/) the edi3 Slack team and subscribe to as many channels as you wish (there's one for each spec and a general channel).  You can join the conversation, make suggestions, or ask questions and get help.
-
-To Do :  add links to slack and add metrics about teams, channels, members, conversations, etc
 
 ## Help with Development
 
