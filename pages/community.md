@@ -21,4 +21,4 @@ For those that want to contribute to our work. [Github](https://github.com/edi3)
 
 ## Site Metrics
 
-Put some cool numbers, trends & links here
+{% include metrics.html %}

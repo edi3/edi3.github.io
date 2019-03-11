@@ -1,0 +1,55 @@
+{
+  "metrics": [
+    {
+      "name": "unique visitors",
+      "lastWeek": 90,
+      "total": 245
+    },
+    {
+      "name": "registered members",
+      "lastWeek": 4,
+      "total": 34
+    },
+    {
+      "name": "chat message count",
+      "lastWeek": 655,
+      "total": 2345
+    },
+    {
+      "name": "site updates",
+      "lastWeek": 63,
+      "total": 334
+    },
+    {
+      "name": "issues",
+      "lastWeek": 12,
+      "total": 452
+    }
+  ],
+  "mostActive": [
+    {
+      "type": "repository",
+      "value": "Inter Customs Ledger",
+      "url": "https://github.com/edi3/edi3-icl"
+    },
+    {
+      "type": "contributor",
+      "value": "monkeypants",
+      "url": "https://github.com/onthebreeze"
+    }
+  ],
+  "links": [
+    {
+      "text": "Google site metrics",
+      "url": ""
+    },
+    {
+      "text": "Slack team metrics",
+      "url": ""
+    },
+    {
+      "text": "Github project metrics",
+      "url": ""
+    }
+  ]
+}

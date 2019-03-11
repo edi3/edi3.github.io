@@ -1,0 +1,35 @@
+<h4>Metrics</h4>
+{%- assign metrics = site.data.metrics -%}
+<table>
+    <thead>
+        <tr>
+            <th>Metric</th>
+            <th>last week</th>
+            <th>total</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for metric in metrics.metrics %}
+        <tr>
+            <td>{{ metric.name }}</td>
+            <td>{{ metric.lastWeek }}</td>
+            <td>{{ metric.total }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+<h4>Activity</h4>
+<ul>
+    {% for activity in metrics.mostActive %}
+        <li>Most active {{ activity.type }}: <a href="{{ activity.url }}" target="_blank">{{ activity.value }}</a></li>
+    {% endfor %}
+</ul>
+
+<h4>Detailed analytics links</h4>
+<ul>
+    {% for link in metrics.links %}
+        <li><a href="{{ link.url }}" target="_blank">{{ link.text }}</a></li>
+    {% endfor %}
+</ul>
