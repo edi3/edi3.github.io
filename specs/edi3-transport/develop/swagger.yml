@@ -1,78 +1,2728 @@
+components:
+  schemas:
+    Address:
+      properties:
+        AttentionOf: {type: string}
+        BarCode: {type: string}
+        BlockName: {type: string}
+        BuildingName: {type: string}
+        BuildingNumber: {type: string}
+        CareOf: {type: string}
+        City: {type: string}
+        CityName: {type: string}
+        CitySubDivisionName:
+          items: {type: string}
+          type: array
+        Country: {type: string}
+        CountryIdentificationCountry: {$ref: '#/components/schemas/Country'}
+        CountryName:
+          items: {type: string}
+          type: array
+        CountrySubDivision:
+          items: {type: string}
+          type: array
+        CountrySubDivisionName:
+          items: {type: string}
+          type: array
+        DepartmentName: {type: string}
+        Description:
+          items: {type: string}
+          type: array
+        FloorIdentification: {type: string}
+        Format: {type: string}
+        FreeForm:
+          items: {type: string}
+          type: array
+        Identification:
+          items: {type: string}
+          type: array
+        InHouseMail:
+          items: {type: string}
+          type: array
+        LegalAddress: {type: string}
+        LineFive: {type: string}
+        LineFour: {type: string}
+        LineOne: {type: string}
+        LineSix: {type: string}
+        LineThree: {type: string}
+        LineTwo: {type: string}
+        OperationCentre: {type: string}
+        PlotIdentification: {type: string}
+        PostOfficeBox: {type: string}
+        PostalArea:
+          items: {type: string}
+          type: array
+        Postcode:
+          items: {type: string}
+          type: array
+        PreventOverride: {type: string}
+        ReturnedMail:
+          items: {type: string}
+          type: array
+        RoomIdentification: {type: string}
+        StaircaseNumber: {type: string}
+        StreetName:
+          items: {type: string}
+          type: array
+        StreetPrefix: {type: string}
+        StreetSuffix: {type: string}
+        StreetType: {type: string}
+        TownshipName:
+          items: {type: string}
+          type: array
+        Type:
+          items: {type: string}
+          type: array
+    ArchiveParameter:
+      properties:
+        AgentAuthentication:
+          items: {$ref: '#/components/schemas/Authentication'}
+          type: array
+        DestructionAuthorizationLevel: {type: string}
+        DestructionResponsibleParty: {$ref: '#/components/schemas/Party'}
+        Input: {type: string}
+        InputResponsibleParty: {$ref: '#/components/schemas/Party'}
+        Prescription: {type: string}
+        ScheduledDestruction: {type: string}
+        TrustedThirdPartyAuthentication:
+          items: {$ref: '#/components/schemas/Authentication'}
+          type: array
+    BinaryFile:
+      properties:
+        Access:
+          items: {type: string}
+          type: array
+        AccessAvailabilityPeriod:
+          items: {$ref: '#/components/schemas/Period'}
+          type: array
+        AuthorName:
+          items: {type: string}
+          type: array
+        CharacterSet:
+          items: {type: string}
+          type: array
+        Description:
+          items: {type: string}
+          type: array
+        Embedded:
+          items: {type: string}
+          type: array
+        Encoding:
+          items: {type: string}
+          type: array
+        FileName:
+          items: {type: string}
+          type: array
+        Identification:
+          items: {type: string}
+          type: array
+        Included:
+          items: {type: string}
+          type: array
+        Licence:
+          items: {type: string}
+          type: array
+        MIME:
+          items: {type: string}
+          type: array
+        Name:
+          items: {type: string}
+          type: array
+        Size:
+          items: {type: string}
+          type: array
+        Title:
+          items: {type: string}
+          type: array
+        Type: {type: string}
+        URI:
+          items: {type: string}
+          type: array
+        Version:
+          items: {type: string}
+          type: array
+    Cargo:
+      properties:
+        Identification:
+          items: {type: string}
+          type: array
+        Name:
+          items: {type: string}
+          type: array
+        OperationalCategory:
+          items: {type: string}
+          type: array
+        StatisticalClassification:
+          items: {type: string}
+          type: array
+        Type:
+          items: {type: string}
+          type: array
+    Consignment:
+      properties:
+        ApplicableAllowanceCharge:
+          items: {$ref: '#/components/schemas/AllowanceCharge'}
+          type: array
+        ApplicableCargoInsurance:
+          items: {$ref: '#/components/schemas/CargoInsurance'}
+          type: array
+        ApplicableCurrencyExchange:
+          items: {$ref: '#/components/schemas/CurrencyExchange'}
+          type: array
+        ApplicableCustomsValuation:
+          items: {$ref: '#/components/schemas/CustomsValuation'}
+          type: array
+        ApplicableDangerousGoods: {$ref: '#/components/schemas/DangerousGoods'}
+        ApplicableRegulatoryControl:
+          items: {$ref: '#/components/schemas/RegulatoryControl'}
+          type: array
+        ApplicableRegulatoryProcedure:
+          items: {$ref: '#/components/schemas/RegulatoryProcedure'}
+          type: array
+        ApplicableServiceCharge:
+          items: {$ref: '#/components/schemas/ServiceCharge'}
+          type: array
+        AssociatedCustomsProcedure:
+          items: {$ref: '#/components/schemas/CustomsProcedure'}
+          type: array
+        AssociatedDocument:
+          items: {$ref: '#/components/schemas/Document'}
+          type: array
+        AssociatedInvoice:
+          items: {type: string}
+          type: array
+        AssociatedInvoiceDiscount:
+          items: {type: string}
+          type: array
+        AssociatedInvoiceDiscountPercent:
+          items: {type: string}
+          type: array
+        AssociatedParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        AvailabilityDue:
+          items: {type: string}
+          type: array
+        BorderClearanceInstructions:
+          items: {$ref: '#/components/schemas/Instructions'}
+          type: array
+        COD: {type: string}
+        CarrierAcceptance:
+          items: {type: string}
+          type: array
+        CarrierAcceptanceLocation: {$ref: '#/components/schemas/Location'}
+        CarrierAgentParty: {$ref: '#/components/schemas/Party'}
+        CarrierAssigned: {type: string}
+        CarrierParty: {$ref: '#/components/schemas/Party'}
+        ChargeableTransportationStage: {type: string}
+        ChargeableWeight:
+          items: {type: string}
+          type: array
+        ConnectingCarrierParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        ConsigneeAgentParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        ConsigneeAssigned: {type: string}
+        ConsigneeParty: {$ref: '#/components/schemas/Party'}
+        ConsigneeReceiptLocation: {$ref: '#/components/schemas/Location'}
+        ConsignmentItem: {type: string}
+        ConsignorAgentParty: {$ref: '#/components/schemas/Party'}
+        ConsignorAssigned: {type: string}
+        ConsignorParty: {$ref: '#/components/schemas/Party'}
+        ConsolidatorParty: {$ref: '#/components/schemas/Party'}
+        Containerization: {type: string}
+        ContentsOwnerParty: {$ref: '#/components/schemas/Party'}
+        CustomsExportAgentParty: {$ref: '#/components/schemas/Party'}
+        CustomsImportAgentParty: {$ref: '#/components/schemas/Party'}
+        CustomsRequiredInvoiceDocument:
+          items: {$ref: '#/components/schemas/Document'}
+          type: array
+        CustomsTransitAgentParty: {$ref: '#/components/schemas/Party'}
+        DangerousGoodsNotifierParty: {$ref: '#/components/schemas/Party'}
+        DeclaredForCustomsLocation: {$ref: '#/components/schemas/Location'}
+        DeclaredValueForCarriage: {type: string}
+        DeclaredValueForCustoms: {type: string}
+        DeconsolidatorParty: {$ref: '#/components/schemas/Party'}
+        DeliveryEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        DeliveryInstructions:
+          items: {$ref: '#/components/schemas/Instructions'}
+          type: array
+        DeliveryParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        DespatchParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        DestinationCountry:
+          items: {$ref: '#/components/schemas/Country'}
+          type: array
+        ExaminationEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        ExportCountry: {$ref: '#/components/schemas/Country'}
+        ExportExit:
+          items: {type: string}
+          type: array
+        ExportGeopoliticalRegion:
+          items: {$ref: '#/components/schemas/GeopoliticalRegion'}
+          type: array
+        ExporterParty: {$ref: '#/components/schemas/Party'}
+        FOB: {type: string}
+        FinalDestinationLocation: {$ref: '#/components/schemas/Location'}
+        FreeTradeZoneLocation:
+          items: {$ref: '#/components/schemas/Location'}
+          type: array
+        FreightForwarderAssigned: {type: string}
+        FreightForwarderParty: {$ref: '#/components/schemas/Party'}
+        GoodsReleaseRestriction:
+          items: {type: string}
+          type: array
+        GrossVolume:
+          items: {type: string}
+          type: array
+        GrossWeight:
+          items: {type: string}
+          type: array
+        GroupingCentreParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        HandlingInstructions:
+          items: {$ref: '#/components/schemas/Instructions'}
+          type: array
+        HaulageInstructions:
+          items: {$ref: '#/components/schemas/Instructions'}
+          type: array
+        Identification:
+          items: {type: string}
+          type: array
+        ImportCountry:
+          items: {$ref: '#/components/schemas/Country'}
+          type: array
+        ImporterParty: {$ref: '#/components/schemas/Party'}
+        IncludedConsignment:
+          items: {$ref: '#/components/schemas/Consignment'}
+          type: array
+        IncludedConsignmentItems:
+          items:
+            properties:
+              ApplicableCustomsProcedure:
+                items: {$ref: '#/components/schemas/CustomsProcedure'}
+                type: array
+              ApplicableCustomsValuation:
+                items: {$ref: '#/components/schemas/CustomsValuation'}
+                type: array
+              ApplicableDangerousGoods:
+                items: {$ref: '#/components/schemas/DangerousGoods'}
+                type: array
+              ApplicableNote:
+                items: {$ref: '#/components/schemas/Note'}
+                type: array
+              ApplicableRegulatoryProcedure:
+                items: {$ref: '#/components/schemas/RegulatoryProcedure'}
+                type: array
+              ApplicableServiceCharge:
+                items: {$ref: '#/components/schemas/ServiceCharge'}
+                type: array
+              AssociatedDocument:
+                items: {$ref: '#/components/schemas/Document'}
+                type: array
+              AssociatedTradeDelivery:
+                items: {$ref: '#/components/schemas/TradeDelivery'}
+                type: array
+              AssociatedTransportEquipment:
+                items: {$ref: '#/components/schemas/TransportEquipment'}
+                type: array
+              AuthorizedParty:
+                items: {$ref: '#/components/schemas/Party'}
+                type: array
+              BorderClearanceInstructions:
+                items: {$ref: '#/components/schemas/Instructions'}
+                type: array
+              ChargeableWeight:
+                items: {type: string}
+                type: array
+              DamageRemarks:
+                items: {type: string}
+                type: array
+              DeclaredForCustomsLocation: {$ref: '#/components/schemas/Location'}
+              DeclaredValueForCarriage: {type: string}
+              DeclaredValueForCustoms: {type: string}
+              DeclaredValueForStatistics: {type: string}
+              DeliveryEvent:
+                items: {$ref: '#/components/schemas/Event'}
+                type: array
+              DeliveryInstructions:
+                items: {type: string}
+                type: array
+              DeliveryParty:
+                items: {$ref: '#/components/schemas/Party'}
+                type: array
+              DespatchEvent:
+                items: {$ref: '#/components/schemas/Event'}
+                type: array
+              DespatchParty:
+                items: {$ref: '#/components/schemas/Party'}
+                type: array
+              DestinationCountry:
+                items: {$ref: '#/components/schemas/Country'}
+                type: array
+              ExaminationEvent:
+                items: {$ref: '#/components/schemas/Event'}
+                type: array
+              ExportCountry: {$ref: '#/components/schemas/Country'}
+              ExportGeopoliticalRegion:
+                items: {$ref: '#/components/schemas/GeopoliticalRegion'}
+                type: array
+              FOB: {type: string}
+              FlashpointTemperature: {$ref: '#/components/schemas/Temperature'}
+              GrossVolume:
+                items: {type: string}
+                type: array
+              GrossWeight:
+                items: {type: string}
+                type: array
+              HandlingInstructions:
+                items: {$ref: '#/components/schemas/Instructions'}
+                type: array
+              Identification:
+                items: {type: string}
+                type: array
+              ImportationCountry: {$ref: '#/components/schemas/Country'}
+              IncludedRegulatedGoods:
+                items: {$ref: '#/components/schemas/RegulatedGoods'}
+                type: array
+              IncludedTradeLineItem:
+                items: {$ref: '#/components/schemas/TradeLineItem'}
+                type: array
+              Information:
+                items: {type: string}
+                type: array
+              InsuranceValue: {type: string}
+              Invoice:
+                items: {type: string}
+                type: array
+              LinearDimension:
+                items: {$ref: '#/components/schemas/Dimension'}
+                type: array
+              LoadingLength: {type: string}
+              ManufacturerParty: {$ref: '#/components/schemas/Party'}
+              NatureIdentificationCargo:
+                items: {$ref: '#/components/schemas/Cargo'}
+                type: array
+              NetWeight:
+                items: {type: string}
+                type: array
+              OriginCountry:
+                items: {$ref: '#/components/schemas/Country'}
+                type: array
+              OriginGeopoliticalRegion:
+                items: {$ref: '#/components/schemas/GeopoliticalRegion'}
+                type: array
+              Package:
+                items: {type: string}
+                type: array
+              PackageType:
+                items: {type: string}
+                type: array
+              PhysicalShippingMarks:
+                items: {$ref: '#/components/schemas/ShippingMarks'}
+                type: array
+              PickUpEvent:
+                items: {$ref: '#/components/schemas/Event'}
+                type: array
+              PreviousAdministrativeDocument:
+                items: {$ref: '#/components/schemas/Document'}
+                type: array
+              Product:
+                items: {type: string}
+                type: array
+              ProductDateType:
+                items: {type: string}
+                type: array
+              ProvidedCertificate:
+                items: {$ref: '#/components/schemas/Certificate'}
+                type: array
+              QuarantineInstructions:
+                items: {$ref: '#/components/schemas/Instructions'}
+                type: array
+              RegulatoryService:
+                items: {$ref: '#/components/schemas/Service'}
+                type: array
+              ReportedStatus:
+                items: {$ref: '#/components/schemas/Status'}
+                type: array
+              Sequence: {type: string}
+              SpecialInstructions:
+                items: {type: string}
+                type: array
+              StatementNote:
+                items: {$ref: '#/components/schemas/Note'}
+                type: array
+              StorageTemperature: {$ref: '#/components/schemas/Temperature'}
+              Tariff:
+                items: {type: string}
+                type: array
+              TariffQuantity:
+                items: {type: string}
+                type: array
+              TotalCharge: {type: string}
+              TotalExportExitToImportEntryCharge: {type: string}
+              TradeLineItem: {type: string}
+              TransitCountry:
+                items: {$ref: '#/components/schemas/Country'}
+                type: array
+              TransportContractDocument:
+                items: {$ref: '#/components/schemas/Document'}
+                type: array
+              TransportPackage:
+                items: {$ref: '#/components/schemas/Package'}
+                type: array
+              TransportTemperature:
+                items: {$ref: '#/components/schemas/Temperature'}
+                type: array
+              Type:
+                items: {type: string}
+                type: array
+              TypeExtension:
+                items: {type: string}
+                type: array
+              VanningEvent: {$ref: '#/components/schemas/Event'}
+          type: array
+        IncludedRegulatedGoods:
+          items: {$ref: '#/components/schemas/RegulatedGoods'}
+          type: array
+        Information:
+          items: {type: string}
+          type: array
+        InsurancePremium:
+          items: {type: string}
+          type: array
+        InsuranceValue:
+          items: {type: string}
+          type: array
+        IntermediateConsigneeParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        LightermanParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        LoadingBaseportLocation: {$ref: '#/components/schemas/Location'}
+        LoadingEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        LoadingInstructions:
+          items: {$ref: '#/components/schemas/Instructions'}
+          type: array
+        LoadingLength:
+          items: {type: string}
+          type: array
+        LoadingList: {type: string}
+        LoadingSequence:
+          items: {type: string}
+          type: array
+        NatureIdentificationCargo: {$ref: '#/components/schemas/Cargo'}
+        NetVolume:
+          items: {type: string}
+          type: array
+        NetWeight:
+          items: {type: string}
+          type: array
+        NilCarriageValue: {type: string}
+        NilCustomsValue: {type: string}
+        NilInsuranceValue: {type: string}
+        NotifiedParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        OriginCountry:
+          items: {$ref: '#/components/schemas/Country'}
+          type: array
+        OriginGeopoliticalRegion:
+          items: {$ref: '#/components/schemas/GeopoliticalRegion'}
+          type: array
+        OriginalDespatchLocation: {$ref: '#/components/schemas/Location'}
+        Package: {type: string}
+        PackageType:
+          items: {type: string}
+          type: array
+        PaymentArrangement: {type: string}
+        PhysicalShippingMarks:
+          items: {$ref: '#/components/schemas/ShippingMarks'}
+          type: array
+        PickUpEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        PickUpParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        PlannedTransportMovement:
+          items: {$ref: '#/components/schemas/TransportMovement'}
+          type: array
+        PreviousAdministrativeDocument:
+          items: {$ref: '#/components/schemas/Document'}
+          type: array
+        PropertyOperatorParty: {$ref: '#/components/schemas/Party'}
+        ReExportCountry:
+          items: {$ref: '#/components/schemas/Country'}
+          type: array
+        RegulatoryService:
+          items: {$ref: '#/components/schemas/Service'}
+          type: array
+        RelatedParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        RelatedTradeTransaction:
+          items: {$ref: '#/components/schemas/TradeTransaction'}
+          type: array
+        ReportedStatus:
+          items: {$ref: '#/components/schemas/Status'}
+          type: array
+        RiskFactor:
+          items: {type: string}
+          type: array
+        Sequence:
+          items: {type: string}
+          type: array
+        ShipFromParty: {$ref: '#/components/schemas/Party'}
+        ShipStores: {type: string}
+        ShipToParty: {$ref: '#/components/schemas/Party'}
+        SpecifiedDeliveryTerms:
+          items: {$ref: '#/components/schemas/DeliveryTerms'}
+          type: array
+        SpecifiedRiskAnalysisResult:
+          items: {$ref: '#/components/schemas/RiskAnalysisResult'}
+          type: array
+        SpecifiedTemperature: {$ref: '#/components/schemas/Temperature'}
+        StatementNote:
+          items: {$ref: '#/components/schemas/Note'}
+          type: array
+        StorageEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        SummaryDescription:
+          items: {type: string}
+          type: array
+        SupportingDocument:
+          items: {$ref: '#/components/schemas/Document'}
+          type: array
+        TotalAllowanceCharge:
+          items: {type: string}
+          type: array
+        TotalCharge:
+          items: {type: string}
+          type: array
+        TotalCollectCharge:
+          items: {type: string}
+          type: array
+        TotalDisbursement:
+          items: {type: string}
+          type: array
+        TotalExportExitToImportEntryCharge:
+          items: {type: string}
+          type: array
+        TotalPrepaidCharge:
+          items: {type: string}
+          type: array
+        TotalTareWeight:
+          items: {type: string}
+          type: array
+        TradedParcel:
+          items: {type: string}
+          type: array
+        TransitCountry:
+          items: {$ref: '#/components/schemas/Country'}
+          type: array
+        TransitLocation:
+          items: {$ref: '#/components/schemas/Location'}
+          type: array
+        TransportContractDocument: {$ref: '#/components/schemas/Document'}
+        TransportEquipment:
+          items: {type: string}
+          type: array
+        TransportEquipmentSplitGoods: {type: string}
+        TransportEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        TransportPackage:
+          items: {$ref: '#/components/schemas/Package'}
+          type: array
+        TransportService:
+          items: {$ref: '#/components/schemas/Service'}
+          type: array
+        TransportServicesBuyerParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        TransportSplit: {type: string}
+        TransportSplitDescription:
+          items: {type: string}
+          type: array
+        TransshipmentLocation:
+          items: {$ref: '#/components/schemas/Location'}
+          type: array
+        TransshipmentPermission: {type: string}
+        UltimateConsigneeParty: {$ref: '#/components/schemas/Party'}
+        UnloadingBaseportLocation: {$ref: '#/components/schemas/Location'}
+        UnloadingSequence:
+          items: {type: string}
+          type: array
+        UtilizedTransportEquipment:
+          items: {$ref: '#/components/schemas/TransportEquipment'}
+          type: array
+        VanningEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        WarehouseArrival: {type: string}
+        WarehouseLocation:
+          items: {$ref: '#/components/schemas/Location'}
+          type: array
+    ConsignmentItem:
+      properties:
+        ApplicableCustomsProcedure:
+          items: {$ref: '#/components/schemas/CustomsProcedure'}
+          type: array
+        ApplicableCustomsValuation:
+          items: {$ref: '#/components/schemas/CustomsValuation'}
+          type: array
+        ApplicableDangerousGoods:
+          items: {$ref: '#/components/schemas/DangerousGoods'}
+          type: array
+        ApplicableNote:
+          items: {$ref: '#/components/schemas/Note'}
+          type: array
+        ApplicableRegulatoryProcedure:
+          items: {$ref: '#/components/schemas/RegulatoryProcedure'}
+          type: array
+        ApplicableServiceCharge:
+          items: {$ref: '#/components/schemas/ServiceCharge'}
+          type: array
+        AssociatedDocument:
+          items: {$ref: '#/components/schemas/Document'}
+          type: array
+        AssociatedTradeDelivery:
+          items: {$ref: '#/components/schemas/TradeDelivery'}
+          type: array
+        AssociatedTransportEquipment:
+          items: {$ref: '#/components/schemas/TransportEquipment'}
+          type: array
+        AuthorizedParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        BorderClearanceInstructions:
+          items: {$ref: '#/components/schemas/Instructions'}
+          type: array
+        ChargeableWeight:
+          items: {type: string}
+          type: array
+        DamageRemarks:
+          items: {type: string}
+          type: array
+        DeclaredForCustomsLocation: {$ref: '#/components/schemas/Location'}
+        DeclaredValueForCarriage: {type: string}
+        DeclaredValueForCustoms: {type: string}
+        DeclaredValueForStatistics: {type: string}
+        DeliveryEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        DeliveryInstructions:
+          items: {type: string}
+          type: array
+        DeliveryParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        DespatchEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        DespatchParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        DestinationCountry:
+          items: {$ref: '#/components/schemas/Country'}
+          type: array
+        ExaminationEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        ExportCountry: {$ref: '#/components/schemas/Country'}
+        ExportGeopoliticalRegion:
+          items: {$ref: '#/components/schemas/GeopoliticalRegion'}
+          type: array
+        FOB: {type: string}
+        FlashpointTemperature: {$ref: '#/components/schemas/Temperature'}
+        GrossVolume:
+          items: {type: string}
+          type: array
+        GrossWeight:
+          items: {type: string}
+          type: array
+        HandlingInstructions:
+          items: {$ref: '#/components/schemas/Instructions'}
+          type: array
+        Identification:
+          items: {type: string}
+          type: array
+        ImportationCountry: {$ref: '#/components/schemas/Country'}
+        IncludedRegulatedGoods:
+          items: {$ref: '#/components/schemas/RegulatedGoods'}
+          type: array
+        IncludedTradeLineItem:
+          items: {$ref: '#/components/schemas/TradeLineItem'}
+          type: array
+        Information:
+          items: {type: string}
+          type: array
+        InsuranceValue: {type: string}
+        Invoice:
+          items: {type: string}
+          type: array
+        LinearDimension:
+          items: {$ref: '#/components/schemas/Dimension'}
+          type: array
+        LoadingLength: {type: string}
+        ManufacturerParty: {$ref: '#/components/schemas/Party'}
+        NatureIdentificationCargo:
+          items: {$ref: '#/components/schemas/Cargo'}
+          type: array
+        NetWeight:
+          items: {type: string}
+          type: array
+        OriginCountry:
+          items: {$ref: '#/components/schemas/Country'}
+          type: array
+        OriginGeopoliticalRegion:
+          items: {$ref: '#/components/schemas/GeopoliticalRegion'}
+          type: array
+        Package:
+          items: {type: string}
+          type: array
+        PackageType:
+          items: {type: string}
+          type: array
+        PhysicalShippingMarks:
+          items: {$ref: '#/components/schemas/ShippingMarks'}
+          type: array
+        PickUpEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        PreviousAdministrativeDocument:
+          items: {$ref: '#/components/schemas/Document'}
+          type: array
+        Product:
+          items: {type: string}
+          type: array
+        ProductDateType:
+          items: {type: string}
+          type: array
+        ProvidedCertificate:
+          items: {$ref: '#/components/schemas/Certificate'}
+          type: array
+        QuarantineInstructions:
+          items: {$ref: '#/components/schemas/Instructions'}
+          type: array
+        RegulatoryService:
+          items: {$ref: '#/components/schemas/Service'}
+          type: array
+        ReportedStatus:
+          items: {$ref: '#/components/schemas/Status'}
+          type: array
+        Sequence: {type: string}
+        SpecialInstructions:
+          items: {type: string}
+          type: array
+        StatementNote:
+          items: {$ref: '#/components/schemas/Note'}
+          type: array
+        StorageTemperature: {$ref: '#/components/schemas/Temperature'}
+        Tariff:
+          items: {type: string}
+          type: array
+        TariffQuantity:
+          items: {type: string}
+          type: array
+        TotalCharge: {type: string}
+        TotalExportExitToImportEntryCharge: {type: string}
+        TradeLineItem: {type: string}
+        TransitCountry:
+          items: {$ref: '#/components/schemas/Country'}
+          type: array
+        TransportContractDocument:
+          items: {$ref: '#/components/schemas/Document'}
+          type: array
+        TransportPackage:
+          items: {$ref: '#/components/schemas/Package'}
+          type: array
+        TransportTemperature:
+          items: {$ref: '#/components/schemas/Temperature'}
+          type: array
+        Type:
+          items: {type: string}
+          type: array
+        TypeExtension:
+          items: {type: string}
+          type: array
+        VanningEvent: {$ref: '#/components/schemas/Event'}
+    Convoy:
+      properties:
+        Length:
+          items: {type: string}
+          type: array
+        PowerActiveTransportMeans:
+          items: {$ref: '#/components/schemas/TransportMeans'}
+          type: array
+        PowerInactiveTransportMeans:
+          items: {$ref: '#/components/schemas/TransportMeans'}
+          type: array
+        TransportMeans: {type: string}
+        Width:
+          items: {type: string}
+          type: array
+    Country:
+      properties:
+        Identification:
+          items: {type: string}
+          type: array
+        Name:
+          items: {type: string}
+          type: array
+        Specified:
+          items: {type: string}
+          type: array
+        SubordinateCountrySubDivision:
+          items:
+            properties:
+              Description:
+                items: {type: string}
+                type: array
+              HierarchicalLevel: {type: string}
+              Identification:
+                items: {type: string}
+                type: array
+              Name:
+                items: {type: string}
+                type: array
+              Type:
+                items: {type: string}
+                type: array
+          type: array
+    DangerousGoods:
+      properties:
+        AssociatedTransportEquipment:
+          items: {$ref: '#/components/schemas/TransportEquipment'}
+          type: array
+        Category: {type: string}
+        CompatibilityGroup: {type: string}
+        ControlTemperatureMeasurement:
+          items: {$ref: '#/components/schemas/Measurement'}
+          type: array
+        EMS: {type: string}
+        EmergencyContact:
+          items: {$ref: '#/components/schemas/Contact'}
+          type: array
+        EmergencyTemperatureMeasurement:
+          items: {$ref: '#/components/schemas/Measurement'}
+          type: array
+        FlashpointTemperatureMeasurement:
+          items: {$ref: '#/components/schemas/Measurement'}
+          type: array
+        GrossVolume:
+          items: {type: string}
+          type: array
+        GrossWeight:
+          items: {type: string}
+          type: array
+        HandlingInstructions:
+          items: {$ref: '#/components/schemas/Instructions'}
+          type: array
+        HazardClassVersion: {type: string}
+        HazardClassification:
+          items: {type: string}
+          type: array
+        HazardType:
+          items: {type: string}
+          type: array
+        IMDGSegregationGroup: {type: string}
+        Information:
+          items: {type: string}
+          type: array
+        LimitedQuantity:
+          items: {type: string}
+          type: array
+        LowerPartOrangeHazardPlacard: {type: string}
+        MFAG: {type: string}
+        Marking: {type: string}
+        MarkingText:
+          items: {type: string}
+          type: array
+        NetWeight:
+          items: {type: string}
+          type: array
+        PackageType: {type: string}
+        PackagingDangerLevel:
+          items: {type: string}
+          type: array
+        PackingInstructionType:
+          items: {type: string}
+          type: array
+        Pollutant:
+          items: {type: string}
+          type: array
+        PollutantLevel:
+          items: {type: string}
+          type: array
+        ProperShippingName: {type: string}
+        QValue: {type: string}
+        RadioactiveMaterial:
+          items: {$ref: '#/components/schemas/Material'}
+          type: array
+        Regulation:
+          items: {type: string}
+          type: array
+        RegulationName:
+          items: {type: string}
+          type: array
+        RegulatoryAuthorityName: {type: string}
+        Remark:
+          items: {type: string}
+          type: array
+        Reportable: {type: string}
+        SpecialProvision: {type: string}
+        SpecifiedPackage:
+          items: {$ref: '#/components/schemas/Package'}
+          type: array
+        SubsidiaryRisk: {type: string}
+        TREM: {type: string}
+        TechnicalName:
+          items: {type: string}
+          type: array
+        TransportExpertContact:
+          items: {$ref: '#/components/schemas/Contact'}
+          type: array
+        TransportedHazardousMaterial:
+          items: {$ref: '#/components/schemas/HazardousMaterial'}
+          type: array
+        TunnelRestriction: {type: string}
+        UNDGIdentification: {type: string}
+        UpperPartOrangeHazardPlacard: {type: string}
+    Document:
+      properties:
+        AcceptablePeriod: {$ref: '#/components/schemas/Period'}
+        Acceptance: {type: string}
+        AcknowledgingOrganization:
+          items: {$ref: '#/components/schemas/Organization'}
+          type: array
+        AgentParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        AmendmentChange:
+          items: {$ref: '#/components/schemas/Change'}
+          type: array
+        ApplicablePeriod:
+          items: {$ref: '#/components/schemas/Period'}
+          type: array
+        Application:
+          items: {type: string}
+          type: array
+        AttachedBinaryFile:
+          items: {$ref: '#/components/schemas/BinaryFile'}
+          type: array
+        Attachment:
+          items: {type: string}
+          type: array
+        AuthenticatedOriginal: {type: string}
+        Authorization: {type: string}
+        AuthorizedParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        Cancellation:
+          items: {type: string}
+          type: array
+        CancellationReason:
+          items: {type: string}
+          type: array
+        CancellationReasonText:
+          items: {type: string}
+          type: array
+        Category: {type: string}
+        ChangedStatus:
+          items: {$ref: '#/components/schemas/Status'}
+          type: array
+        Channel: {type: string}
+        Checksum: {type: string}
+        ContainingBinaryFile: {$ref: '#/components/schemas/BinaryFile'}
+        ContractualClause:
+          items: {$ref: '#/components/schemas/Clause'}
+          type: array
+        ControlRequirement: {type: string}
+        Copy: {type: string}
+        CopyIssued: {type: string}
+        CopyRequired: {type: string}
+        Creation:
+          items: {type: string}
+          type: array
+        Currency:
+          items: {type: string}
+          type: array
+        Decision:
+          items: {type: string}
+          type: array
+        Description:
+          items: {type: string}
+          type: array
+        Disposition:
+          items: {type: string}
+          type: array
+        EffectivePeriod: {$ref: '#/components/schemas/Period'}
+        ElectronicPresentation: {type: string}
+        EntryIntoForcePeriod:
+          items: {$ref: '#/components/schemas/Period'}
+          type: array
+        Examined: {type: string}
+        External: {type: string}
+        FirstVersionIssue: {type: string}
+        GeographicalSignatureLocation:
+          items: {type: string}
+          type: array
+        Handwritten: {type: string}
+        Identification:
+          items: {type: string}
+          type: array
+        Included:
+          items: {type: string}
+          type: array
+        IncludedNote:
+          items: {$ref: '#/components/schemas/Note'}
+          type: array
+        IncludedQuantity:
+          items: {type: string}
+          type: array
+        Information:
+          items: {type: string}
+          type: array
+        Issue:
+          items: {type: string}
+          type: array
+        IssueLocation:
+          items: {$ref: '#/components/schemas/Location'}
+          type: array
+        IssuerParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        Item:
+          items: {type: string}
+          type: array
+        ItemIdentification: {type: string}
+        JustifiedAccountingEntry:
+          items: {$ref: '#/components/schemas/AccountingEntry'}
+          type: array
+        Language:
+          items: {type: string}
+          type: array
+        Line:
+          items: {type: string}
+          type: array
+        LineCount:
+          items: {type: string}
+          type: array
+        LineStatus: {type: string}
+        LineStatusReason:
+          items: {type: string}
+          type: array
+        LineStatusReasonText:
+          items: {type: string}
+          type: array
+        LodgementLocation:
+          items: {$ref: '#/components/schemas/Location'}
+          type: array
+        Marker:
+          items: {type: string}
+          type: array
+        MultipleReferences: {type: string}
+        MultipleType:
+          items: {type: string}
+          type: array
+        Name:
+          items: {type: string}
+          type: array
+        NamedParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        OriginalIssued: {type: string}
+        OriginalRequired: {type: string}
+        OwnerParty: {$ref: '#/components/schemas/Party'}
+        Page:
+          items: {type: string}
+          type: array
+        Printed: {type: string}
+        ProcessingType: {type: string}
+        ProductionSoftware: {$ref: '#/components/schemas/Software'}
+        ProprietaryInformationType:
+          items: {type: string}
+          type: array
+        Publication:
+          items: {type: string}
+          type: array
+        Purpose:
+          items: {type: string}
+          type: array
+        PurposeCode:
+          items: {type: string}
+          type: array
+        Receipt: {type: string}
+        RecipientParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        ReferenceDocument:
+          items: {$ref: '#/components/schemas/Document'}
+          type: array
+        ReferencedAccountingVoucher:
+          items: {$ref: '#/components/schemas/AccountingVoucher'}
+          type: array
+        ReferencedBinaryFile:
+          items: {$ref: '#/components/schemas/BinaryFile'}
+          type: array
+        Rejection: {type: string}
+        RejectionReason:
+          items: {type: string}
+          type: array
+        RelatedCategory:
+          items: {$ref: '#/components/schemas/Category'}
+          type: array
+        RelatedDocument:
+          items: {$ref: '#/components/schemas/Document'}
+          type: array
+        RelatedQualityAnalysis:
+          items: {$ref: '#/components/schemas/QualityAnalysis'}
+          type: array
+        RelationshipType:
+          items: {type: string}
+          type: array
+        Remarks:
+          items: {type: string}
+          type: array
+        Report:
+          items: {type: string}
+          type: array
+        ReportCount:
+          items: {type: string}
+          type: array
+        Requested: {type: string}
+        RespondentParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        Response:
+          items: {type: string}
+          type: array
+        ResponseCode:
+          items: {type: string}
+          type: array
+        ResponseReason:
+          items: {type: string}
+          type: array
+        ResponseType:
+          items: {type: string}
+          type: array
+        Revision:
+          items: {type: string}
+          type: array
+        RevisionDateTime:
+          items: {type: string}
+          type: array
+        SectionName:
+          items: {type: string}
+          type: array
+        SenderParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        Sequence:
+          items: {type: string}
+          type: array
+        SequenceNumeric:
+          items: {type: string}
+          type: array
+        SignatoryAuthentication:
+          items: {$ref: '#/components/schemas/Authentication'}
+          type: array
+        SignatureLocation:
+          items: {type: string}
+          type: array
+        Signed: {type: string}
+        SignedDateTime: {type: string}
+        SpecifiedActivity:
+          items: {$ref: '#/components/schemas/Activity'}
+          type: array
+        SpecifiedArchiveParameter: {$ref: '#/components/schemas/ArchiveParameter'}
+        SpecifiedBatch:
+          items: {$ref: '#/components/schemas/Batch'}
+          type: array
+        SpecifiedCharacteristic:
+          items: {$ref: '#/components/schemas/Characteristic'}
+          type: array
+        SpecifiedCrew:
+          items: {$ref: '#/components/schemas/Crew'}
+          type: array
+        SpecifiedEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        SpecifiedExemption:
+          items: {$ref: '#/components/schemas/Exemption'}
+          type: array
+        SpecifiedLocation:
+          items: {$ref: '#/components/schemas/Location'}
+          type: array
+        SpecifiedParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        SpecifiedQuota:
+          items: {$ref: '#/components/schemas/Quota'}
+          type: array
+        SpecifiedStatus:
+          items: {$ref: '#/components/schemas/Status'}
+          type: array
+        SpecifiedTransportCharter:
+          items: {$ref: '#/components/schemas/TransportCharter'}
+          type: array
+        SpecifiedTransportMeans:
+          items: {$ref: '#/components/schemas/TransportMeans'}
+          type: array
+        Status:
+          items: {type: string}
+          type: array
+        StatusText:
+          items: {type: string}
+          type: array
+        Submission: {type: string}
+        SubmitterParty: {$ref: '#/components/schemas/Party'}
+        SubordinateLine:
+          items: {type: string}
+          type: array
+        TotalPage: {type: string}
+        TotalPrice:
+          items: {$ref: '#/components/schemas/Price'}
+          type: array
+        Type:
+          items: {type: string}
+          type: array
+        URI:
+          items: {type: string}
+          type: array
+        Urgency:
+          items: {type: string}
+          type: array
+        Verified: {type: string}
+        Version:
+          items: {type: string}
+          type: array
+    Event:
+      properties:
+        Action:
+          items: {type: string}
+          type: array
+        ActualStatus: {$ref: '#/components/schemas/Status'}
+        ApplicableClassification:
+          items: {$ref: '#/components/schemas/Classification'}
+          type: array
+        ApplicableNote:
+          items: {$ref: '#/components/schemas/Note'}
+          type: array
+        AppliedProcess:
+          items: {$ref: '#/components/schemas/Process'}
+          type: array
+        BusinessStep:
+          items: {type: string}
+          type: array
+        CertifyingParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        Description:
+          items: {type: string}
+          type: array
+        DescriptionBinaryObject:
+          items: {type: string}
+          type: array
+        DiscretePeriod:
+          items: {$ref: '#/components/schemas/Period'}
+          type: array
+        Disposition:
+          items: {type: string}
+          type: array
+        Frequency:
+          items: {type: string}
+          type: array
+        Identification:
+          items: {type: string}
+          type: array
+        Instance:
+          items: {type: string}
+          type: array
+        Location:
+          items: {type: string}
+          type: array
+        Name:
+          items: {type: string}
+          type: array
+        Occurrence:
+          items: {type: string}
+          type: array
+        OccurrenceLocation:
+          items: {$ref: '#/components/schemas/Location'}
+          type: array
+        OccurrencePeriod:
+          items: {$ref: '#/components/schemas/Period'}
+          type: array
+        Reason:
+          items: {type: string}
+          type: array
+        Recorded:
+          items: {type: string}
+          type: array
+        Related:
+          items: {type: string}
+          type: array
+        RelatedBatch:
+          items: {$ref: '#/components/schemas/Batch'}
+          type: array
+        RelatedCatch:
+          items: {$ref: '#/components/schemas/Catch'}
+          type: array
+        RelatedCharacteristic:
+          items: {$ref: '#/components/schemas/Characteristic'}
+          type: array
+        RelatedCountry:
+          items: {$ref: '#/components/schemas/Country'}
+          type: array
+        RelatedDocument:
+          items: {$ref: '#/components/schemas/Document'}
+          type: array
+        RelatedLocation:
+          items: {$ref: '#/components/schemas/Location'}
+          type: array
+        RelatedObservation:
+          items: {$ref: '#/components/schemas/Observation'}
+          type: array
+        RelatedParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        RelatedQualityAnalysis:
+          items: {$ref: '#/components/schemas/QualityAnalysis'}
+          type: array
+        RelatedRoute:
+          items: {$ref: '#/components/schemas/Route'}
+          type: array
+        RelatedService:
+          items: {$ref: '#/components/schemas/Service'}
+          type: array
+        RelatedTransportMeans:
+          items: {$ref: '#/components/schemas/TransportMeans'}
+          type: array
+        SpecifiedEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        SpecifiedEventElement:
+          items: {$ref: '#/components/schemas/EventElement'}
+          type: array
+        SpecifiedGeographicalCoordinate:
+          items: {$ref: '#/components/schemas/GeographicalCoordinate'}
+          type: array
+        SpecifiedInstructions:
+          items: {$ref: '#/components/schemas/Instructions'}
+          type: array
+        SpecifiedTradeTransaction:
+          items: {$ref: '#/components/schemas/TradeTransaction'}
+          type: array
+        Step:
+          items: {type: string}
+          type: array
+        SubordinateEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        Type:
+          items: {type: string}
+          type: array
+        Unit:
+          items: {type: string}
+          type: array
+        Value:
+          items: {type: string}
+          type: array
+        Version:
+          items: {type: string}
+          type: array
+    Flight:
+      allOf:
+      - {$ref: '#/components/schemas/TransportMovement'}
+      properties:
+        Closing:
+          items: {type: string}
+          type: array
+    GeographicalCoordinate:
+      properties:
+        AltimetricSystem: {type: string}
+        Altitude: {type: string}
+        Description:
+          items: {type: string}
+          type: array
+        Identification: {type: string}
+        Latitude: {type: string}
+        LatitudeDirection: {type: string}
+        Longitude: {type: string}
+        LongitudeDirection: {type: string}
+        System: {type: string}
+    Instructions:
+      properties:
+        Applicable:
+          items: {type: string}
+          type: array
+        ApplicableQuantity:
+          items: {type: string}
+          type: array
+        ApplicableTemperature:
+          items: {$ref: '#/components/schemas/Temperature'}
+          type: array
+        Description:
+          items: {type: string}
+          type: array
+        DescriptionCode:
+          items: {type: string}
+          type: array
+        ExclusiveUsage:
+          items: {type: string}
+          type: array
+        Handling:
+          items: {type: string}
+          type: array
+        HandlingText:
+          items: {type: string}
+          type: array
+        Identification:
+          items: {type: string}
+          type: array
+        Interpretation:
+          items: {type: string}
+          type: array
+        ItemName:
+          items: {type: string}
+          type: array
+        Material:
+          items: {type: string}
+          type: array
+        Procedure:
+          items: {type: string}
+          type: array
+        PropertyReference:
+          items: {type: string}
+          type: array
+        Requirement:
+          items: {type: string}
+          type: array
+        Sequence:
+          items: {type: string}
+          type: array
+        Specified:
+          items: {type: string}
+          type: array
+        Status:
+          items: {type: string}
+          type: array
+        Type:
+          items: {type: string}
+          type: array
+        Update:
+          items: {type: string}
+          type: array
+        ValidityPeriod:
+          items: {$ref: '#/components/schemas/Period'}
+          type: array
+    Location:
+      properties:
+        ApplicableCharacteristic:
+          items: {$ref: '#/components/schemas/Characteristic'}
+          type: array
+        ApplicableTax:
+          items: {$ref: '#/components/schemas/Tax'}
+          type: array
+        AppliedAgriculturalApplication:
+          items: {$ref: '#/components/schemas/AgriculturalApplication'}
+          type: array
+        AvailabilityPeriod:
+          items: {$ref: '#/components/schemas/Period'}
+          type: array
+        BoundaryPolygon:
+          items: {$ref: '#/components/schemas/Polygon'}
+          type: array
+        Condition:
+          items: {type: string}
+          type: array
+        Country:
+          items: {type: string}
+          type: array
+        CountryName:
+          items: {type: string}
+          type: array
+        CountrySubDivision: {type: string}
+        CountrySubDivisionName:
+          items: {type: string}
+          type: array
+        CountrySuperordinate: {type: string}
+        DefinedCoordinateReferenceSystem:
+          items: {$ref: '#/components/schemas/CoordinateReferenceSystem'}
+          type: array
+        Description:
+          items: {type: string}
+          type: array
+        Directions:
+          items: {type: string}
+          type: array
+        District:
+          items: {type: string}
+          type: array
+        GeopoliticalRegion: {type: string}
+        GeopoliticalRegionName: {type: string}
+        Identification:
+          items: {type: string}
+          type: array
+        IncludedPolygon:
+          items: {$ref: '#/components/schemas/Polygon'}
+          type: array
+        ManagementOrganization:
+          items: {type: string}
+          type: array
+        Name:
+          items: {type: string}
+          type: array
+        PhysicalAddress: {$ref: '#/components/schemas/Address'}
+        PhysicalGeographicalCoordinate:
+          items: {$ref: '#/components/schemas/GeographicalCoordinate'}
+          type: array
+        PhysicalGeographicalFeature:
+          items: {$ref: '#/components/schemas/GeographicalFeature'}
+          type: array
+        PhysicalGeographicalPoint:
+          items: {$ref: '#/components/schemas/GeographicalPoint'}
+          type: array
+        Possession:
+          items: {type: string}
+          type: array
+        PostalAddress:
+          items: {$ref: '#/components/schemas/Address'}
+          type: array
+        Reference:
+          items: {type: string}
+          type: array
+        Related:
+          items: {type: string}
+          type: array
+        RelatedLocation:
+          items: {$ref: '#/components/schemas/Location'}
+          type: array
+        ResponsibleParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        SpecifiedAddress:
+          items: {$ref: '#/components/schemas/Address'}
+          type: array
+        SpecifiedAnimal:
+          items: {$ref: '#/components/schemas/Animal'}
+          type: array
+        SpecifiedArea:
+          items: {$ref: '#/components/schemas/Area'}
+          type: array
+        SpecifiedCountrySubDivision:
+          items: {$ref: '#/components/schemas/CountrySubDivision'}
+          type: array
+        SpecifiedEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        SpecifiedFacility:
+          items: {$ref: '#/components/schemas/Facility'}
+          type: array
+        SpecifiedParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        SpecifiedPlot:
+          items: {$ref: '#/components/schemas/Plot'}
+          type: array
+        SpecifiedProduct:
+          items: {$ref: '#/components/schemas/Product'}
+          type: array
+        SpecifiedReference:
+          items: {$ref: '#/components/schemas/Reference'}
+          type: array
+        SubordinateLocation:
+          items: {$ref: '#/components/schemas/Location'}
+          type: array
+        Type:
+          items: {type: string}
+          type: array
+        TypeText:
+          items: {type: string}
+          type: array
+        UTCOffset: {type: string}
+        Version:
+          items: {type: string}
+          type: array
+    Organization:
+      properties:
+        AbbreviatedName:
+          items: {type: string}
+          type: array
+        Active: {type: string}
+        AuthorizedPerson:
+          items: {$ref: '#/components/schemas/Person'}
+          type: array
+        AuthorizedRegistration:
+          items: {$ref: '#/components/schemas/Registration'}
+          type: array
+        BrokerRelationship: {type: string}
+        BusinessDuration: {type: string}
+        BusinessType:
+          items: {type: string}
+          type: array
+        CapitalValue:
+          items: {type: string}
+          type: array
+        CompanyBranchOrganization:
+          items: {$ref: '#/components/schemas/Organization'}
+          type: array
+        CompanyMerger: {type: string}
+        CompanyNameChange: {type: string}
+        ContactRequired: {type: string}
+        DBAName: {type: string}
+        Description:
+          items: {type: string}
+          type: array
+        DesignatedContact:
+          items: {$ref: '#/components/schemas/Contact'}
+          type: array
+        DesignatedParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        Dissolved: {type: string}
+        District:
+          items: {type: string}
+          type: array
+        DivisionName: {type: string}
+        DomesticLocation: {type: string}
+        DomesticRegistered: {type: string}
+        Established: {type: string}
+        FieldOfficeOrganization:
+          items: {$ref: '#/components/schemas/Organization'}
+          type: array
+        ForeignLocation: {type: string}
+        Function:
+          items: {type: string}
+          type: array
+        Identification:
+          items: {type: string}
+          type: array
+        InternalUnitOrganization:
+          items: {$ref: '#/components/schemas/Organization'}
+          type: array
+        Language: {type: string}
+        LegalClassification: {type: string}
+        MembersAndManagers: {type: string}
+        MergedCompanyName: {type: string}
+        Name:
+          items: {type: string}
+          type: array
+        NameChange:
+          items: {type: string}
+          type: array
+        OperatingPeriod: {$ref: '#/components/schemas/Period'}
+        OperatingUnderPresentNamePeriod: {$ref: '#/components/schemas/Period'}
+        OperationsDescription: {type: string}
+        OperationsScope: {type: string}
+        OrganizationalUnit: {type: string}
+        OrganizationalUnitFunction: {type: string}
+        Owner: {type: string}
+        Parent: {type: string}
+        ParentIdentifier:
+          items: {type: string}
+          type: array
+        ParentOrganization:
+          items: {$ref: '#/components/schemas/Organization'}
+          type: array
+        PhysicalAddress:
+          items: {$ref: '#/components/schemas/Address'}
+          type: array
+        PhysicalLocation:
+          items: {$ref: '#/components/schemas/Location'}
+          type: array
+        PostalAddress:
+          items: {$ref: '#/components/schemas/Address'}
+          type: array
+        PreviousName: {type: string}
+        PrimaryContact:
+          items: {$ref: '#/components/schemas/Contact'}
+          type: array
+        PrimaryPerson: {$ref: '#/components/schemas/Person'}
+        ProfitObjective: {type: string}
+        PubliclyTraded: {type: string}
+        ResponsibleParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        SpecifiedEmployeeCount:
+          items: {$ref: '#/components/schemas/EmployeeCount'}
+          type: array
+        SpecifiedOwnership:
+          items: {$ref: '#/components/schemas/Ownership'}
+          type: array
+        SpecifiedVATRegistration: {$ref: '#/components/schemas/VATRegistration'}
+        SubordinateOrganization:
+          items: {$ref: '#/components/schemas/Organization'}
+          type: array
+        TaxExempt: {type: string}
+        TaxRegistration:
+          items: {type: string}
+          type: array
+        TradeMark:
+          items: {type: string}
+          type: array
+        TradingBusinessName: {type: string}
+        TrustType: {type: string}
+        Type:
+          items: {type: string}
+          type: array
+    Party:
+      properties:
+        AccessRights:
+          items: {type: string}
+          type: array
+        ActionEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        ApplicableMembership:
+          items: {$ref: '#/components/schemas/Membership'}
+          type: array
+        ApplicableServiceCharge:
+          items: {$ref: '#/components/schemas/ServiceCharge'}
+          type: array
+        AppointedPerson:
+          items: {$ref: '#/components/schemas/Person'}
+          type: array
+        AssignedToRole: {type: string}
+        AssociatedBinaryFile:
+          items: {$ref: '#/components/schemas/BinaryFile'}
+          type: array
+        AssociatedParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        Branch:
+          items: {type: string}
+          type: array
+        Classification:
+          items: {type: string}
+          type: array
+        ContractualArrangementExclusion: {type: string}
+        Country:
+          items: {type: string}
+          type: array
+        DefinedContact:
+          items: {$ref: '#/components/schemas/Contact'}
+          type: array
+        Description:
+          items: {type: string}
+          type: array
+        DesignatedParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        EstimatedMarginalTaxBracket: {type: string}
+        FaxCommunication:
+          items: {$ref: '#/components/schemas/Communication'}
+          type: array
+        HeldLicence:
+          items: {$ref: '#/components/schemas/Licence'}
+          type: array
+        Identification:
+          items: {type: string}
+          type: array
+        IdentificationText:
+          items: {type: string}
+          type: array
+        Language:
+          items: {type: string}
+          type: array
+        ManagedCharacteristic:
+          items: {$ref: '#/components/schemas/Characteristic'}
+          type: array
+        ManagedProductionUnit:
+          items: {$ref: '#/components/schemas/ProductionUnit'}
+          type: array
+        ManagedTransportMeans:
+          items: {$ref: '#/components/schemas/TransportMeans'}
+          type: array
+        Name:
+          items: {type: string}
+          type: array
+        NotPerformedBusinessProfile:
+          items: {$ref: '#/components/schemas/BusinessProfile'}
+          type: array
+        OfficeAddress:
+          items: {$ref: '#/components/schemas/Address'}
+          type: array
+        OwnedFinancialAccount:
+          items: {$ref: '#/components/schemas/FinancialAccount'}
+          type: array
+        ParentParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        PostalAddress:
+          items: {$ref: '#/components/schemas/Address'}
+          type: array
+        PrincipalPlaceOfBusinessOrganization: {$ref: '#/components/schemas/Organization'}
+        ProvidedService:
+          items: {$ref: '#/components/schemas/Service'}
+          type: array
+        QualityAssurance: {type: string}
+        Rating: {type: string}
+        ReferencedDocument:
+          items: {$ref: '#/components/schemas/Document'}
+          type: array
+        ResidenceAddress: {$ref: '#/components/schemas/Address'}
+        ResidenceCountry: {type: string}
+        Role:
+          items: {type: string}
+          type: array
+        SpecifiedAddress:
+          items: {$ref: '#/components/schemas/Address'}
+          type: array
+        SpecifiedAnimal:
+          items: {$ref: '#/components/schemas/Animal'}
+          type: array
+        SpecifiedBusinessAccount:
+          items: {$ref: '#/components/schemas/BusinessAccount'}
+          type: array
+        SpecifiedBusinessProfile:
+          items: {$ref: '#/components/schemas/BusinessProfile'}
+          type: array
+        SpecifiedCommunication:
+          items: {$ref: '#/components/schemas/Communication'}
+          type: array
+        SpecifiedConviction:
+          items: {$ref: '#/components/schemas/Conviction'}
+          type: array
+        SpecifiedCountry:
+          items: {$ref: '#/components/schemas/Country'}
+          type: array
+        SpecifiedIdentity:
+          items: {$ref: '#/components/schemas/Identity'}
+          type: array
+        SpecifiedLocation:
+          items: {$ref: '#/components/schemas/Location'}
+          type: array
+        SpecifiedOrganization: {$ref: '#/components/schemas/Organization'}
+        SpecifiedPartyGroup: {$ref: '#/components/schemas/PartyGroup'}
+        SpecifiedPerson:
+          items: {$ref: '#/components/schemas/Person'}
+          type: array
+        SpecifiedProduct:
+          items: {$ref: '#/components/schemas/Product'}
+          type: array
+        SpecifiedRegistration:
+          items: {$ref: '#/components/schemas/Registration'}
+          type: array
+        SpecifiedRiskAnalysisResult:
+          items: {$ref: '#/components/schemas/RiskAnalysisResult'}
+          type: array
+        TelephoneCommunication:
+          items: {$ref: '#/components/schemas/Communication'}
+          type: array
+        Type:
+          items: {type: string}
+          type: array
+        URICommunication:
+          items: {$ref: '#/components/schemas/Communication'}
+          type: array
+        UsedSoftware:
+          items: {$ref: '#/components/schemas/Software'}
+          type: array
+        Version:
+          items: {type: string}
+          type: array
+    PartyGroup:
+      properties:
+        Adult: {type: string}
+        Children: {type: string}
+        Couples: {type: string}
+        Description: {type: string}
+        Effective: {type: string}
+        End: {type: string}
+        Family: {type: string}
+        FullName: {type: string}
+        Infant: {type: string}
+        Member: {type: string}
+        OperatingStatus: {type: string}
+        Purpose: {type: string}
+        Seniors: {type: string}
+        SingleParentFamily: {type: string}
+        SourceDescription: {type: string}
+        SpecifiedPerson:
+          items: {$ref: '#/components/schemas/Person'}
+          type: array
+        Type: {type: string}
+    Period:
+      properties:
+        Complete: {type: string}
+        Continuous: {type: string}
+        DayOfWeek:
+          items: {type: string}
+          type: array
+        Description:
+          items: {type: string}
+          type: array
+        Duration:
+          items: {type: string}
+          type: array
+        DurationCode: {type: string}
+        End: {type: string}
+        Function:
+          items: {type: string}
+          type: array
+        Identification:
+          items: {type: string}
+          type: array
+        Inclusive: {type: string}
+        Name:
+          items: {type: string}
+          type: array
+        Open: {type: string}
+        Purpose: {type: string}
+        Season:
+          items: {type: string}
+          type: array
+        Sequence:
+          items: {type: string}
+          type: array
+        Start: {type: string}
+        StartDateFlexibility: {type: string}
+        Version:
+          items: {type: string}
+          type: array
+    Person:
+      properties:
+        AdditionalNote:
+          items: {$ref: '#/components/schemas/Note'}
+          type: array
+        AffiliatePrivacyResponse: {type: string}
+        Age:
+          items: {type: string}
+          type: array
+        AgeRange: {type: string}
+        Alias:
+          items: {type: string}
+          type: array
+        AliasPerson:
+          items: {$ref: '#/components/schemas/Person'}
+          type: array
+        AlternateLanguage: {type: string}
+        AlternateLanguageProficiency: {type: string}
+        ApplicablePersonFinancialSituation: {$ref: '#/components/schemas/PersonFinancialSituation'}
+        AssignedBySocialServices:
+          items: {type: string}
+          type: array
+        AttainedAccreditation:
+          items: {$ref: '#/components/schemas/Accreditation'}
+          type: array
+        AttainedQualification:
+          items: {$ref: '#/components/schemas/Qualification'}
+          type: array
+        AttendsSchool: {type: string}
+        Birth:
+          items: {type: string}
+          type: array
+        BirthCountry: {type: string}
+        BirthDateEstimated: {type: string}
+        BirthJurisdictionCountrySubDivision: {type: string}
+        BirthplaceName: {type: string}
+        BloodType: {type: string}
+        CauseOfDeath: {type: string}
+        Children: {type: string}
+        CollegeGradeAverage: {type: string}
+        CollegeGradeAverageValue: {type: string}
+        CurrentMaritalStatusEffective: {type: string}
+        Death:
+          items: {type: string}
+          type: array
+        Dependant: {type: string}
+        Description:
+          items: {type: string}
+          type: array
+        DirectorOfficer: {type: string}
+        DisablementRegistration: {type: string}
+        EmploymentStatus: {type: string}
+        Ethnicity: {type: string}
+        EyeColour: {type: string}
+        FamilyName:
+          items: {type: string}
+          type: array
+        FamilyNamePrefix:
+          items: {type: string}
+          type: array
+        FaxCommunication:
+          items: {$ref: '#/components/schemas/Communication'}
+          type: array
+        FiliationPerson:
+          items: {$ref: '#/components/schemas/Person'}
+          type: array
+        FinancialInstitution: {type: string}
+        Gender:
+          items: {type: string}
+          type: array
+        GivenName:
+          items: {type: string}
+          type: array
+        GovernmentImmigration: {type: string}
+        HairColour: {type: string}
+        Handicapped: {type: string}
+        HeadOfHouseholdRelationship: {type: string}
+        HealthStatus: {type: string}
+        Height: {type: string}
+        HeldMembership:
+          items: {$ref: '#/components/schemas/Membership'}
+          type: array
+        HighSchoolGradeAverage: {type: string}
+        HighestEducationLevel: {type: string}
+        HighestGradeCompleted: {type: string}
+        Hobby:
+          items: {type: string}
+          type: array
+        Identification:
+          items: {type: string}
+          type: array
+        ImmigrationStatus: {type: string}
+        InformationAddress: {$ref: '#/components/schemas/Address'}
+        InformationRestriction: {type: string}
+        InformationRestrictionReason: {type: string}
+        InformationSharingPermission: {type: string}
+        Initials: {type: string}
+        Language:
+          items: {type: string}
+          type: array
+        MaidenName:
+          items: {type: string}
+          type: array
+        MaritalStatus:
+          items: {type: string}
+          type: array
+        MarriageTerminationReason: {type: string}
+        MedicareQualified: {type: string}
+        MiddleName:
+          items: {type: string}
+          type: array
+        MissingNotification: {type: string}
+        Name:
+          items: {type: string}
+          type: array
+        NameSuffix:
+          items: {type: string}
+          type: array
+        NationalityCountry:
+          items: {$ref: '#/components/schemas/Country'}
+          type: array
+        OfficialGivenName: {type: string}
+        Passport: {type: string}
+        PreferredName:
+          items: {type: string}
+          type: array
+        PreviousName: {type: string}
+        ProofOfAge: {type: string}
+        ResidenceAddress:
+          items: {$ref: '#/components/schemas/Address'}
+          type: array
+        Retirement: {type: string}
+        Role:
+          items: {type: string}
+          type: array
+        Salutation:
+          items: {type: string}
+          type: array
+        SchoolDisciplinaryAction: {type: string}
+        SocialInsuranceContract: {type: string}
+        SocialInsuranceEligibility: {type: string}
+        SocialSecurityNumberReleaseAuthorizationOnFile: {type: string}
+        SpecificAccreditation:
+          items: {$ref: '#/components/schemas/Accreditation'}
+          type: array
+        SpecifiedCertificate:
+          items: {$ref: '#/components/schemas/Certificate'}
+          type: array
+        SpecifiedCommunication:
+          items: {$ref: '#/components/schemas/Communication'}
+          type: array
+        SpecifiedEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        SpecifiedManMachineSystem:
+          items: {$ref: '#/components/schemas/ManMachineSystem'}
+          type: array
+        SpecifiedNationalResidency:
+          items: {$ref: '#/components/schemas/NationalResidency'}
+          type: array
+        SpecifiedOccupation:
+          items: {$ref: '#/components/schemas/Occupation'}
+          type: array
+        SustainedInjury:
+          items: {$ref: '#/components/schemas/Injury'}
+          type: array
+        Tax:
+          items: {type: string}
+          type: array
+        TaxFilingStatus: {type: string}
+        TaxStatus: {type: string}
+        TelephoneCommunication:
+          items: {$ref: '#/components/schemas/Communication'}
+          type: array
+        ThirdPartyPrivacyResponse: {type: string}
+        Title:
+          items: {type: string}
+          type: array
+        URICommunication:
+          items: {$ref: '#/components/schemas/Communication'}
+          type: array
+        UnemploymentReason: {type: string}
+        UsedCommunication:
+          items: {$ref: '#/components/schemas/Communication'}
+          type: array
+        VisaExpiry: {type: string}
+        Weight:
+          items: {type: string}
+          type: array
+    PersonFinancialSituation:
+      properties:
+        DisposableIncome: {type: string}
+        EstimatedAnnualSalary: {type: string}
+        EstimatedGrossAnnualNonSalaryIncome: {type: string}
+        EstimatedNetWorth: {type: string}
+        EstimatedTotalLiabilities: {type: string}
+        FixedAsset: {type: string}
+        GrossAnnualIncomeRange: {type: string}
+        IncomeInformationFromPerson: {type: string}
+        LiquidAsset: {type: string}
+        LiquidNetWorth: {type: string}
+        NetIncome: {type: string}
+        NetSavings: {type: string}
+        TotalAnnualIncome: {type: string}
+    Software:
+      properties:
+        AppliedToSystem: {type: string}
+        AuthorName:
+          items: {type: string}
+          type: array
+        Identification:
+          items: {type: string}
+          type: array
+        Name:
+          items: {type: string}
+          type: array
+        ProvidedCertificate:
+          items: {$ref: '#/components/schemas/Certificate'}
+          type: array
+        Revision:
+          items: {type: string}
+          type: array
+        Type:
+          items: {type: string}
+          type: array
+        Update:
+          items: {type: string}
+          type: array
+        UserType: {type: string}
+        Version: {type: string}
+        VersionRelease: {type: string}
+    Status:
+      properties:
+        Changed: {type: string}
+        ChangerName:
+          items: {type: string}
+          type: array
+        Condition:
+          items: {type: string}
+          type: array
+        ConditionIndicator:
+          items: {type: string}
+          type: array
+        ConditionText:
+          items: {type: string}
+          type: array
+        ContactParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        Description:
+          items: {type: string}
+          type: array
+        Information: {type: string}
+        Reason:
+          items: {type: string}
+          type: array
+        ReasonText:
+          items: {type: string}
+          type: array
+        Reference:
+          items: {type: string}
+          type: array
+        Reported:
+          items: {type: string}
+          type: array
+        ReportedEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        Sequence:
+          items: {type: string}
+          type: array
+        SpecifiedLocation:
+          items: {$ref: '#/components/schemas/Location'}
+          type: array
+        ValidityPeriod:
+          items: {$ref: '#/components/schemas/Period'}
+          type: array
+    Temperature:
+      properties:
+        Description:
+          items: {type: string}
+          type: array
+        InformationInstructions: {$ref: '#/components/schemas/Instructions'}
+        Type: {type: string}
+        Value:
+          items: {type: string}
+          type: array
+    TransportMeans:
+      properties:
+        ActualGeographicalCoordinate: {$ref: '#/components/schemas/GeographicalCoordinate'}
+        ApplicableCharacteristic:
+          items: {$ref: '#/components/schemas/Characteristic'}
+          type: array
+        ApplicableServiceCharge:
+          items: {$ref: '#/components/schemas/ServiceCharge'}
+          type: array
+        ApplicableTransportCharter:
+          items: {$ref: '#/components/schemas/TransportCharter'}
+          type: array
+        AttachedEngine:
+          items: {$ref: '#/components/schemas/Engine'}
+          type: array
+        AttachedTransportEquipment:
+          items: {$ref: '#/components/schemas/TransportEquipment'}
+          type: array
+        CargoGrossWeight: {type: string}
+        CertifiedEmission:
+          items: {$ref: '#/components/schemas/Emission'}
+          type: array
+        Commissioning:
+          items: {type: string}
+          type: array
+        Conference: {type: string}
+        ConstructionEvent: {$ref: '#/components/schemas/Event'}
+        DeadWeight: {type: string}
+        Draught:
+          items: {type: string}
+          type: array
+        DraughtLevel:
+          items: {type: string}
+          type: array
+        DriverAccompanied:
+          items: {type: string}
+          type: array
+        ExaminationEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        GrantedDocument:
+          items: {$ref: '#/components/schemas/Document'}
+          type: array
+        GrossWeight:
+          items: {type: string}
+          type: array
+        Helipad: {type: string}
+        HullMaterial:
+          items: {type: string}
+          type: array
+        ISPSSecurityLevel:
+          items: {type: string}
+          type: array
+        ISSCIssuingAuthorityParty: {$ref: '#/components/schemas/Party'}
+        Identification:
+          items: {type: string}
+          type: array
+        IllustratePicture:
+          items: {$ref: '#/components/schemas/Picture'}
+          type: array
+        Length: {type: string}
+        LoadedCargo:
+          items: {type: string}
+          type: array
+        Name:
+          items: {type: string}
+          type: array
+        NetWeight:
+          items: {type: string}
+          type: array
+        OnBoardGear:
+          items: {$ref: '#/components/schemas/Gear'}
+          type: array
+        OperationalStatus:
+          items: {type: string}
+          type: array
+        OperatorNationalityCountry: {$ref: '#/components/schemas/Country'}
+        OperatorParty: {$ref: '#/components/schemas/Party'}
+        OwnerAgentParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        OwnerParty: {$ref: '#/components/schemas/Party'}
+        RegistrationCountry: {$ref: '#/components/schemas/Country'}
+        RegistrationEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        RequiredLaneLength: {type: string}
+        RequiredService:
+          items: {$ref: '#/components/schemas/Service'}
+          type: array
+        ResponsibleParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        Role:
+          items: {type: string}
+          type: array
+        SecurityStatus:
+          items: {$ref: '#/components/schemas/Status'}
+          type: array
+        Sequence:
+          items: {type: string}
+          type: array
+        ServiceProviderParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        SpecifiedArea:
+          items: {$ref: '#/components/schemas/Area'}
+          type: array
+        SpecifiedCatch:
+          items: {$ref: '#/components/schemas/Catch'}
+          type: array
+        SpecifiedCrew:
+          items: {$ref: '#/components/schemas/Crew'}
+          type: array
+        SpecifiedDimension:
+          items: {$ref: '#/components/schemas/Dimension'}
+          type: array
+        SpecifiedEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        SpecifiedFault:
+          items: {$ref: '#/components/schemas/Fault'}
+          type: array
+        SpecifiedInstructions:
+          items: {$ref: '#/components/schemas/Instructions'}
+          type: array
+        SpecifiedLocation:
+          items: {$ref: '#/components/schemas/Location'}
+          type: array
+        SpecifiedParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        SpecifiedPeriod:
+          items: {$ref: '#/components/schemas/Period'}
+          type: array
+        Speed:
+          items: {type: string}
+          type: array
+        Type:
+          items: {type: string}
+          type: array
+        TypeText:
+          items: {type: string}
+          type: array
+        WasteReportingExemption: {type: string}
+    TransportMovement:
+      properties:
+        AlternativeRoute:
+          items: {$ref: '#/components/schemas/Route'}
+          type: array
+        ApplicableRegulatoryProcedure:
+          items: {$ref: '#/components/schemas/RegulatoryProcedure'}
+          type: array
+        ApplicableServiceCharge:
+          items: {$ref: '#/components/schemas/ServiceCharge'}
+          type: array
+        ArrivalEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        AssociatedConvoy: {$ref: '#/components/schemas/Convoy'}
+        BorderCrossing:
+          items: {type: string}
+          type: array
+        BorderCrossingEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        CallEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        CallPurpose:
+          items: {type: string}
+          type: array
+        CargoDescription:
+          items: {type: string}
+          type: array
+        CarriedGoodsCharacteristic:
+          items: {$ref: '#/components/schemas/GoodsCharacteristic'}
+          type: array
+        CarrierAgentParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        CarrierParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        CommodityConsolidatorAgentParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        CommodityConsolidatorParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        Consignment:
+          items: {type: string}
+          type: array
+        Crew: {type: string}
+        CrewNationalityCountry:
+          items: {$ref: '#/components/schemas/Country'}
+          type: array
+        CrewPerson:
+          items: {$ref: '#/components/schemas/Person'}
+          type: array
+        Cycle:
+          items: {type: string}
+          type: array
+        DangerousGoods: {type: string}
+        DepartureEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        DockingEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        ExcessTransportService:
+          items: {$ref: '#/components/schemas/Service'}
+          type: array
+        Identification:
+          items: {type: string}
+          type: array
+        Information:
+          items: {type: string}
+          type: array
+        InspectionParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        IntermediateEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        ItineraryRoute:
+          items: {$ref: '#/components/schemas/Route'}
+          type: array
+        LoadingEvent: {$ref: '#/components/schemas/Event'}
+        ManifestOnboard: {type: string}
+        Mode:
+          items: {type: string}
+          type: array
+        ModeText:
+          items: {type: string}
+          type: array
+        Notification:
+          items: {type: string}
+          type: array
+        NotifiedParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        OnboardPackage:
+          items: {$ref: '#/components/schemas/Package'}
+          type: array
+        OperationalCategory: {type: string}
+        Package:
+          items: {type: string}
+          type: array
+        Passenger: {type: string}
+        PassengerNationalityCountry:
+          items: {$ref: '#/components/schemas/Country'}
+          type: array
+        PassengerPerson:
+          items: {$ref: '#/components/schemas/Person'}
+          type: array
+        PilotageExemption:
+          items: {type: string}
+          type: array
+        Reason:
+          items: {type: string}
+          type: array
+        RelatedCustomsProcedure:
+          items: {$ref: '#/components/schemas/CustomsProcedure'}
+          type: array
+        RelatedDocument:
+          items: {$ref: '#/components/schemas/Document'}
+          type: array
+        RelatedTransportMovement:
+          items: {$ref: '#/components/schemas/TransportMovement'}
+          type: array
+        ResponsiblePerson: {$ref: '#/components/schemas/Person'}
+        Sequence:
+          items: {type: string}
+          type: array
+        Service:
+          items: {type: string}
+          type: array
+        ServiceText:
+          items: {type: string}
+          type: array
+        ShipToShipEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        SpecifiedEmission:
+          items: {$ref: '#/components/schemas/Emission'}
+          type: array
+        SpecifiedEvent:
+          items: {$ref: '#/components/schemas/Event'}
+          type: array
+        SpecifiedInstructions:
+          items: {$ref: '#/components/schemas/Instructions'}
+          type: array
+        SpecifiedRiskAnalysisResult:
+          items: {$ref: '#/components/schemas/RiskAnalysisResult'}
+          type: array
+        Stage: {type: string}
+        Start:
+          items: {type: string}
+          type: array
+        Status:
+          items: {type: string}
+          type: array
+        Stay:
+          items: {type: string}
+          type: array
+        StevedoreParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        TerminalOperatorParty:
+          items: {$ref: '#/components/schemas/Party'}
+          type: array
+        Total:
+          items: {type: string}
+          type: array
+        TradedParcel: {type: string}
+        TransitDirection:
+          items: {type: string}
+          type: array
+        TransportEquipment: {type: string}
+        TransportMeansSecurityOfficerPerson: {$ref: '#/components/schemas/Person'}
+        Type:
+          items: {type: string}
+          type: array
+        TypeText:
+          items: {type: string}
+          type: array
+        UnloadingEvent: {$ref: '#/components/schemas/Event'}
+        UsedFuel:
+          items: {$ref: '#/components/schemas/Fuel'}
+          type: array
+        UsedTransportMeans: {$ref: '#/components/schemas/TransportMeans'}
+    VATRegistration:
+      properties:
+        Exemption: {type: string}
+        Liability: {type: string}
+        Status: {type: string}
+    Voyage:
+      allOf:
+      - {$ref: '#/components/schemas/TransportMovement'}
+      properties: {}
+info: {description: CC-Transport API - 1.0, title: CC-Transport API, version: '1.0'}
 openapi: 3.0.0
-servers: []
-info:
-  description: This is edi3 Transport Domain API
-  version: 1.0
-  title: edi3 Transport Domain API
-  contact:
-    email: info@edi3.org
-  license:
-    name: Apache 2.0
-    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
-tags:
-  - name: info
-    description: Information
 paths:
-  /info:
+  /Consignments:
     get:
-      tags:
-        - info
-      summary: provides base information
-      operationId: getInfo
-      description: |
-        Get some base information about edi3 Transport Domain API
       parameters:
-        - in: query
-          name: searchString
-          description: pass an optional search string for looking up information
-          required: false
-          schema:
-            type: string
+      - description: ''
+        in: query
+        name: status
+        required: false
+        schema: {type: string}
       responses:
         '200':
-          description: base information matching criteria
           content:
             application/json:
               schema:
+                items: {$ref: '#/components/schemas/Consignment'}
                 type: array
-                items:
-                  $ref: '#/components/schemas/Information'
-        '400':
-          description: bad input parameter
-    patch:
-      tags:
-        - info
-      summary: updates base information
-      operationId: updateInfo
-      description: |
-        Update base information about edi3 Transport Domain API
-      responses:
-        '200':
-          description: information updated
-        '400':
-          description: 'invalid input, object invalid'
+          description: ''
+    post:
       requestBody:
         content:
           application/json:
-            schema:
-              $ref: '#/components/schemas/Information'
-        description: Base information
-components:
-  schemas:
-    Information:
-      type: object
-      required:
-        - alias
-        - title
-        - version
-        - releaseDate
-      properties:
-        alias:
-          type: string
-          example: edi3-transport
-        title:
-          type: string
-          example: edi3 Transport Domain
-        version:
-          type: string
-          example: 1.0
+            schema: {$ref: '#/components/schemas/Consignment'}
+        description: ''
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Consignment'}
+          description: ''
+  /Consignments/{id}:
+    delete:
+      parameters:
+      - description: ''
+        in: path
+        name: id
+        required: true
+        schema: {type: string}
+      responses:
+        '204': {description: Consignment deleted}
+    get:
+      parameters:
+      - description: ''
+        in: path
+        name: id
+        required: true
+        schema: {type: string}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Consignment'}
+          description: ''
+    put:
+      parameters:
+      - description: ''
+        in: path
+        name: id
+        required: true
+        schema: {type: string}
+      requestBody:
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/Consignment'}
+        description: ''
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Consignment'}
+          description: ''
+  /Voyages:
+    get:
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items: {$ref: '#/components/schemas/Voyage'}
+                type: array
+          description: ''
+  /Voyages/{id}:
+    get:
+      parameters:
+      - description: ''
+        in: path
+        name: id
+        required: true
+        schema: {type: string}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Voyage'}
+          description: ''
+servers: []
