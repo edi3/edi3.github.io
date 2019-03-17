@@ -2,40 +2,40 @@
   "metrics": [
     {
       "name": "unique visitors",
-      "lastWeek": 90,
-      "total": 245
+      "lastWeek": 22,
+      "total": 33
     },
     {
       "name": "registered members",
-      "lastWeek": 4,
-      "total": 34
+      "lastWeek": 0,
+      "total": 25
     },
     {
       "name": "chat message count",
-      "lastWeek": 655,
-      "total": 2345
+      "lastWeek": 173,
+      "total": 1245
     },
     {
       "name": "site updates",
-      "lastWeek": 63,
-      "total": 334
+      "lastWeek": 53,
+      "total": 133
     },
     {
       "name": "issues",
-      "lastWeek": 12,
-      "total": 452
+      "lastWeek": 0,
+      "total": 3
     }
   ],
   "mostActive": [
     {
       "type": "repository",
-      "value": "Inter Customs Ledger",
-      "url": "https://github.com/edi3/edi3-icl"
+      "value": "Code Lists",
+      "url": "https://github.com/edi3/edi3-codelists"
     },
     {
       "type": "contributor",
-      "value": "monkeypants",
-      "url": "https://github.com/onthebreeze"
+      "value": "David Roff",
+      "url": "https://github.com/cmsdroff"
     }
   ],
   "links": [
