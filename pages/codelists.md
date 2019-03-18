@@ -13,7 +13,7 @@ The edi3 Code Lists Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Code Lists spec](http://edi3.org/specs/edi3-codelists/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-codelists/master/redoc-static.html){:target="_blank"} |  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
+| [Code Lists spec](//edi3.org/specs/edi3-codelists/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-codelists/master/redoc-static.html){:target="_blank"} |  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
 
 ## Known Implementations
 

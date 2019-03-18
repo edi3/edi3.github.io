@@ -13,7 +13,7 @@ The edi3 UML Profile Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [UML Profile spec](http://edi3.org/specs/edi3-uml-profile/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-uml-profile/master/redoc-static.html){:target="_blank"} |  [UML Profile Issues](https://github.com/edi3/edi3-uml-profile/issues){:target="_blank"}  |
+| [UML Profile spec](//edi3.org/specs/edi3-uml-profile/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-uml-profile/master/redoc-static.html){:target="_blank"} |  [UML Profile Issues](https://github.com/edi3/edi3-uml-profile/issues){:target="_blank"}  |
 
 ## Known Implementations
 

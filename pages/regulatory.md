@@ -13,7 +13,7 @@ The edi3 Regulatory Domain Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Regulatory Domain spec](http://edi3.org/specs/edi3-regulatory/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-regulatory/master/redoc-static.html){:target="_blank"} |  [Regulatory Domain Issues](https://github.com/edi3/edi3-regulatory/issues){:target="_blank"}  |
+| [Regulatory Domain spec](//edi3.org/specs/edi3-regulatory/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-regulatory/master/redoc-static.html){:target="_blank"} |  [Regulatory Domain Issues](https://github.com/edi3/edi3-regulatory/issues){:target="_blank"}  |
 
 ## Known Implementations
 

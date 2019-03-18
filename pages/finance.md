@@ -13,7 +13,7 @@ The edi3 Finance Domain Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Finance Domain spec](http://edi3.org/specs/edi3-finance/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-finance/master/redoc-static.html){:target="_blank"} |  [Finance Domain Issues](https://github.com/edi3/edi3-finance/issues){:target="_blank"}  |
+| [Finance Domain spec](//edi3.org/specs/edi3-finance/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-finance/master/redoc-static.html){:target="_blank"} |  [Finance Domain Issues](https://github.com/edi3/edi3-finance/issues){:target="_blank"}  |
 
 ## Known Implementations
 

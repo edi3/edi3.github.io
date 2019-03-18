@@ -13,7 +13,7 @@ The edi3 Identity Provider Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Identity Provider spec](http://edi3.org/specs/edi3-identity/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-identity/master/redoc-static.html){:target="_blank"} |  [Identity Provider Issues](https://github.com/edi3/edi3-identity/issues){:target="_blank"}  |
+| [Identity Provider spec](//edi3.org/specs/edi3-identity/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-identity/master/redoc-static.html){:target="_blank"} |  [Identity Provider Issues](https://github.com/edi3/edi3-identity/issues){:target="_blank"}  |
 
 ## Known Implementations
 

@@ -13,7 +13,7 @@ The edi3 Inter Customs Ledger Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Inter Customs Ledger spec](http://edi3.org/specs/edi3-icl/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-icl/master/redoc-static.html){:target="_blank"} |  [Inter Customs Ledger Issues](https://github.com/edi3/edi3-icl/issues){:target="_blank"}  |
+| [Inter Customs Ledger spec](//edi3.org/specs/edi3-icl/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-icl/master/redoc-static.html){:target="_blank"} |  [Inter Customs Ledger Issues](https://github.com/edi3/edi3-icl/issues){:target="_blank"}  |
 
 ## Known Implementations
 

@@ -13,7 +13,7 @@ The edi3 Dictionary Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Dictionary spec](http://edi3.org/specs/edi3-dictionary/master/) | Working Draft | ![Raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](http://edi3.org/specs/edi3-dictionary/master/redoc-static.html){:target="_blank"} |  [Dictionary Issues](https://github.com/edi3/edi3-dictionary/issues){:target="_blank"}  |
+| [Dictionary spec](//edi3.org/specs/edi3-dictionary/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-dictionary/master/redoc-static.html){:target="_blank"} |  [Dictionary Issues](https://github.com/edi3/edi3-dictionary/issues){:target="_blank"}  |
 
 ## Known Implementations
 

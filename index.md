@@ -32,7 +32,7 @@ Read more about edi3 quality controls on the [Governance](https://edi3.org/gover
 
 There are several levels of participation that you can choose from.  Pick any or all of the following:
 
-* **Keep Informed**.  [Subscribe](http://eepurl.com/dMLfdU) to the regular edi3 newsletter.  We'll update you about the latest developments and opportunities at most once per week and you can un-subscribe anytime.
-* **Join the conversation**,  [Join](http://chat.edi3.org/) the edi3 Slack team and subscribe to as many channels as you wish (there's one for each spec and a general channel).  You can join the conversation, make suggestions, or ask questions and get help.
+* **Keep Informed**.  [Subscribe](https://eepurl.com/dMLfdU) to the regular edi3 newsletter.  We'll update you about the latest developments and opportunities at most once per week and you can un-subscribe anytime.
+* **Join the conversation**,  [Join](https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg){:target="_blank"}) the edi3 Slack team and subscribe to as many channels as you wish (there's one for each spec and a general channel).  You can join the conversation, make suggestions, or ask questions and get help.
 * **Help with development**.  [Github](https://github.com/edi3) is our main tool for development of the edi3 specifications and reference implementations. It's all in the open and all open source.  Feel free to leave us comments or report a bug in the relevant GitHub issue list. However if you'd like to make some substantive contribution to our work then you must first register as a UN/CEFACT expert as described on the governance page. 
 

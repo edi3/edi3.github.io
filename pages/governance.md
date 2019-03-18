@@ -32,7 +32,7 @@ Specifications will follow [semver conventions](https://semver.org/) with a majo
 
 We aim to support implementers through their development efforts and conformance testing process.
 
-* [join our slack team](http://chat.edi3.org/) and subscribe to whichever channels match your implementation needs (we have one channel per specification). You'll be able to chat directly with the team that wrote the specification and we'll do our best to help you with any questions that might arise as you build your implementation.
+* [join our slack team](//chat.edi3.org/) and subscribe to whichever channels match your implementation needs (we have one channel per specification). You'll be able to chat directly with the team that wrote the specification and we'll do our best to help you with any questions that might arise as you build your implementation.
 * Every specification will follow  [IETF "MUST", "SHOULD" "MAY"](https://www.ietf.org/rfc/rfc2119.txt) language so that it's clear what a conforming implementation means.  We will also aim to provide free open source conformance testing tools in the same GitHub repository that is used for specification development. Test your implementation using these tools.
 * When you are confident that you have a conformant application then let us know by raising a ticket in the corresponding specification repository to request that your product ro service be listed on our "known implementations" list.  Attach the compliance report from the testing tool and, once verified, we'll add you to the list.
 
@@ -41,7 +41,7 @@ We aim to support implementers through their development efforts and conformance
 If you would like to contribute to the development of our specifications;
 
 * You must be a [registered UN/CEFACT expert](https://uncefact.unece.org/display/uncefactpublic/UNCEFACT+Expert+Registration). Registration will require that you agree to the [IPR Policy](https://www.unece.org/fileadmin/DAM/cefact/cf_plenary/plenary12/ECE_TRADE_C_CEFACT_2010_20_Rev2E_UpdatedIPRpolicy.pdf). This is essential in order to ensure continued royalty free availability of published UN/CEFACT standards. 
-* Once you have completed the registration process then please just [join our slack team](http://chat.edi3.org/) if you have not done so already and ping us on the general channel. 
+* Once you have completed the registration process then please just [join our slack team](//chat.edi3.org/) if you have not done so already and ping us on the general channel. 
 * We will add you to whichever Github teams are relevant for your contribution area.
 
 ## Current Team Membership
