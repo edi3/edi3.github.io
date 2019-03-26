@@ -1,0 +1,79 @@
+openapi: 3.0.1
+info:
+  title: UNECE Recommendation 21 - Codes for Passengers, Types of Cargo, Packages and Packaging Materials (with Complementary Codes for Package Names)
+  description: |
+    Recommendation 21 presents coded representations for the package type names used in international trade. The codes are intended for use in manual and/or automated systems for the exchange of information between participants in international trade.
+  contact:
+    name: UNECE Recommendations
+    url: https://www.unece.org/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/code-list-recommendations.html
+  version: 3.0.1
+servers:
+- url: "tbd"
+paths:
+  /packageTypes:
+    get:
+      tags:
+      - packageTypes
+      summary: Search for Codes for Passengers, Types of Cargo, Packages and Packaging Materials (with Complementary Codes for Package Names) as defined in rec 21
+      description: This api will return a (paged) list of codes for package types used in international trade.
+      operationId: searchPackageTypes
+      parameters:
+      - name: Code
+        in: query
+        description: "Two-character alphanumeric code value"
+        schema:
+          type: string
+      - name: Name
+        in: query
+        description: "Code value name"
+        schema:
+          type: string
+      - name: Description
+        in: query
+        description: "A plain text specification"
+        schema:
+          type: string
+      - name: Numeric Code
+        in: query
+        description: "Two digit numeric code value"
+        schema:
+          type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ''
+              example:
+              - Code: 1F
+                Name: Container, flexible
+                Description: A packaging container of flexible construction.
+                Numeric code: 93
+        400:
+          description: ' Bad request - Issue with parameter'
+          content:
+            application/json:
+              schema:
+                $ref: ''
+              example:
+                identifier: a710a2af-4f0d-458b-8792-23fe4f736d9d
+                error: pagesize needs to be between 1 and 1000.
+        404:
+          description: No data found
+          content:
+            application/json:
+              schema:
+                $ref: ''
+              example:
+                identifier: b1f1fef1-59ad-4978-bed8-3ff96d6d3587
+                error: No coded representation of package type names found
+        500:
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: ''
+              example:
+                identifier: 0407936e-d2ad-41e9-99e2-05a5919c3075
+                error: An unexpected exception occured
