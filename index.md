@@ -5,7 +5,7 @@ layout: default
 
 ## Purpose of this site
 
-[UN/CEFACT](https://www.unece.org/cefact/) has provided global leadership in electronic data interchange (EDI) standards for many decades through high quality UN/CEFACT standards such as [UN/EDIFACT](http://www.unece.org/cefact/edifact/welcome.html) and [XML Sschema](http://www.unece.org/cefact/xml_schemas/index). The vast majority of electronic international trade transations today are implemented to UN/CEFACT standards.
+[UN/CEFACT](https://www.unece.org/cefact/) has provided global leadership in electronic data interchange (EDI) standards for many decades through high quality UN/CEFACT standards such as [UN/EDIFACT](http://www.unece.org/cefact/edifact/welcome.html) and [XML Schema](http://www.unece.org/cefact/xml_schemas/index). The vast majority of electronic international trade transations today are implemented to UN/CEFACT standards.
 
 The rise of web platforms that exchange data via RESTful JSON APIs presents a new paradigm for B2B data exchange. But developers of web platforms rarely look to publishers like UN/CEFACT to guide the design of their APIs. The purpose of this site is make UN/CEFACT semantic standards accessible to web developers and to support interoperable implementations.
 
