@@ -13,7 +13,9 @@ The edi3 Code Lists Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Code Lists spec](//edi3.org/specs/edi3-codelists/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-codelists/master/redoc-static.html){:target="_blank"} |  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
+| [Code Lists spec Recommendation 20](//edi3.org/specs/edi3-codelists/develop/recommendation-20/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-codelists/develop/recommendation-20/redoc-static.html){:target="_blank"} |  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
+| [Code Lists spec Recommendation 21](//edi3.org/specs/edi3-codelists/develop/recommendation-21/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-codelists/develop/recommendation-21/redoc-static.html){:target="_blank"} |  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
+| [Code Lists spec Recommendation 24](//edi3.org/specs/edi3-codelists/develop/recommendation-24/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-codelists/develop/recommendation-24/redoc-static.html){:target="_blank"} |  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
 
 ## Known Implementations
 
