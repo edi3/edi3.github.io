@@ -13,7 +13,7 @@ The edi3 Transport Domain Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Transport Domain spec](//edi3.org/specs/edi3-transport/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-transport/master/redoc-static.html){:target="_blank"} |  [Transport Domain Issues](https://github.com/edi3/edi3-transport/issues){:target="_blank"}  |
+| [Transport Domain spec](//edi3.org/specs/edi3-transport/develop/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-transport/develop/redoc-static.html){:target="_blank"} |  [Transport Domain Issues](https://github.com/edi3/edi3-transport/issues){:target="_blank"}  |
 
 ## Known Implementations
 
