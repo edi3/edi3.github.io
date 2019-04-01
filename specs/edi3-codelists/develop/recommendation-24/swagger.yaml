@@ -8,7 +8,7 @@ info:
     url: https://www.unece.org/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/code-list-recommendations.html
   version: "3.0.1-oas3"
 servers:
-- url: "tbd"
+- url: "https://codelists.api.edi3.org/recommendation-24"
 paths:
   /transportStatus:
     get:
@@ -39,7 +39,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ''
+                $ref: '#/components/schemas/TransportStatuses'
               example:
               - Code: 1
                 Name: Arrival, completed
@@ -49,7 +49,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ''
+                $ref: '#/components/schemas/Error'
               example:
                 identifier: a710a2af-4f0d-458b-8792-23fe4f736d9d
                 error: pagesize needs to be between 1 and 1000.
@@ -58,7 +58,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ''
+                $ref: '#/components/schemas/Error'
               example:
                 identifier: b1f1fef1-59ad-4978-bed8-3ff96d6d3587
                 error: No trade and transport status code found
@@ -67,7 +67,32 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ''
+                $ref: '#/components/schemas/Error'
               example:
                 identifier: 0407936e-d2ad-41e9-99e2-05a5919c3075
                 error: An unexpected exception occured
+components:
+  schemas:
+    Error:
+      type: object
+      properties:
+        identifier:
+          type: string
+        error:
+          type: string
+    TransportStatuses:
+      type: array
+      items:
+        $ref: '#/components/schemas/TransportStatus'
+    TransportStatus:
+      type: object
+      properties:
+        Code:
+          description: "3 character alphanumeric code value"
+          type: string
+        Name:
+          description: "The name of the status code"
+          type: string
+        Description:
+          description: "A plain text specification of the named status code"
+          type: string

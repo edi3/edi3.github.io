@@ -8,7 +8,7 @@ info:
     url: https://www.unece.org/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/code-list-recommendations.html
   version: 3.0.1
 servers:
-- url: "tbd"
+- url: "https://codelists.api.edi3.org/recommendation-21"
 paths:
   /packageTypes:
     get:
@@ -33,7 +33,7 @@ paths:
         description: "A plain text specification"
         schema:
           type: string
-      - name: Numeric Code
+      - name: NumericCode
         in: query
         description: "Two digit numeric code value"
         schema:
@@ -44,7 +44,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ''
+                $ref: '#/components/schemas/PackageTypes'
               example:
               - Code: 1F
                 Name: Container, flexible
@@ -55,7 +55,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ''
+                $ref: '#/components/schemas/Error'
               example:
                 identifier: a710a2af-4f0d-458b-8792-23fe4f736d9d
                 error: pagesize needs to be between 1 and 1000.
@@ -64,7 +64,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ''
+                $ref: '#/components/schemas/Error'
               example:
                 identifier: b1f1fef1-59ad-4978-bed8-3ff96d6d3587
                 error: No coded representation of package type names found
@@ -73,7 +73,32 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ''
+                $ref: '#/components/schemas/Error'
               example:
                 identifier: 0407936e-d2ad-41e9-99e2-05a5919c3075
                 error: An unexpected exception occured
+components:
+  schemas:
+    Error:
+      type: object
+      properties:
+        identifier:
+          type: string
+        error:
+          type: string
+    PackageTypes:
+      type: array
+      items:
+        $ref: '#/components/schemas/PackageType'
+    PackageType:
+      type: object
+      properties:
+        Code:
+          description: "Two-character alphanumeric code value"
+          type: string
+        Name:
+          description: "Code value name"
+          type: string
+        Description:
+          description: "A plain text specification"
+          type: string
