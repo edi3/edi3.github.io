@@ -7,11 +7,11 @@ permalink: /tools-and-methods/
 
 UN/CEFACT semantic models such as the [Core Component Library](https://www.unece.org/cefact/codesfortrade/unccl/ccl_index.html) are essentially the semantic dictionary that is used to create standard EDIFACT documents and XML schema. Web platform APIs will have a different granularity than traditional EDIFACT documents but can nevertheless be built upon the same semantic dictionary (which is published as a CSV file).
 
-This suite of specifications defines a repeatable methodology to import UN/CEFACT semantics, model web API resources, then generate and publish consistent reference APIs and JSON-LD definitions. THis will allow business subject matter experts and/or information modellers to quickly and consistently generate high quality API specifications that leverage existing semantic libraries.
+This suite of specifications defines a repeatable methodology to import UN/CEFACT semantics, model web API resources, then generate and publish consistent reference APIs and JSON-LD definitions. This will allow business subject matter experts and/or information modellers to quickly and consistently generate high quality API specifications that leverage existing semantic libraries.
 
-We hope that the value of these specifications will not be limited to UN/CEFACT project teams. The specifications should be re-usable by any design team that needs to develop REST API specificaitons that leverage some existing library of definitions. 
+We hope that the value of these specifications will not be limited to UN/CEFACT project teams. The specifications should be re-usable by any design team that needs to develop REST API specifications that leverage some existing library of definitions. 
 
-## Overview of Methodology Specificaitons.
+## Overview of Methodology Specifications.
 
 The diagram below shows the relationships between the methodology specifications (dark blue), the semantic library inputs (light blue), the outputs (green) and implementer systems (grey).
 
