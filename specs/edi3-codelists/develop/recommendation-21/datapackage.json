@@ -32,7 +32,7 @@
 					"name": "Description",
 					"type": "string",
 					"description": "A plain text specification"
-				}
+				},
 				{
 					"name": "Numeric Code",
 					"type": "string",
