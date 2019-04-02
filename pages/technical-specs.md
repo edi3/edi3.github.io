@@ -26,7 +26,7 @@ Put simply, these specifciations allow an interested party that has a key identi
 
 One very valuable aspect of this web resource discovery framework is that it can bridge existing EDIFACT or XML based document exchange implementations and future web API frameworks.  For example, a regulator might receive a traditional CUSCAR EDIFACT cargo report that references a bill of lading.  The Authority could then use this framework to discover and access the actual BoL from a conformant web API provided by a trade data pipeline that holds the BoL.
 
-The techncial specifications also include events structure and notary service. These support two essential functions after a web resource has been successfully discovered;
+The technical specifications also include events structure and notary service. These support two essential functions after a web resource has been successfully discovered;
 
 1. "Tell me when there is a change" - using W3C WebSub plus some UN/CEFACT semantic standards
 2. "Give me a non-repudiable record of all changes" - using a notary API specifciation built on UN/CEFACT standards.
@@ -37,7 +37,7 @@ Each specification is described below.
 
 The Domain Name System (DNS) is one of the internet’s most fundamental protocols - defined by the IETF as RFC 1035.  It’s primary purpose is to map a domain name (eg www.unece.org) to an internet protocol (IP) address (eg  80.80.229.213). However, there are many different DNS record types that can be used for all kinds of different lookup purposes. For example, the European e-invoicing initiative (peppol.eu) uses DNS for the discovery of invoicing web service metadata.  A major advantage of using DNS for lookups is that it is ubiquitous, very scalable, and very durable (the working internet depends on it!). This deliverable will define some standard semantics for the use of DNS records for web resource location discovery.
 
-## Resource Desription
+## Resource Description
 
 JavaScript Object Notation (JSON) is the most ubiquitous syntax for the representation of web resources – overtaking XML some years ago.  JSON is managed by json-schema.org and is being contributed to IETF. Like XML, JSON is just a syntax and must be used together will well defined semantics for systems to successfully share data. Having discovered the location of a web resource using DNS, a consumer needs to know whether the discovered web resource conforms to standard semantics that the consumer system can understand. This deliverable will define a standard JSON API and associated semantics for the description of web resources.  
 
