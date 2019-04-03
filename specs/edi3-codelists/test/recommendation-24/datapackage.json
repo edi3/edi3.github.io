@@ -1,12 +1,12 @@
 {
-	"name": "unece-package-codes",
-	"title": "UNECE/CEFACT package codes",
+	"name": "unece-transport-status-codes",
+	"title": "UNECE/CEFACT Trade and Transport Status Codes",
 	"licensces": [{
 		"name": "ODC-PDDL-1.0",
 		"path": "http://opendatacommons.org/licenses/pddl/",
 		"title": "Open Data Commons Public Domain Dedication and License v1.0"
 	}],
-	"description": "Coded representations of the package type names used in International Trade (UNECE/CEFACT Trade Facilitation Recommendation No.21)",
+	"description": "Coded representations of the trade and transport codes used in International Trade (UNECE/CEFACT Trade Facilitation Recommendation No.24)",
 	"version": "9.0.0",
 	"sources": [{
 		"name": "UNECE",
@@ -26,17 +26,12 @@
 				{
 					"name": "Name",
 					"type": "string",
-					"description": "Code value name"
+					"description": "The name of the status code"
 				},
 				{
 					"name": "Description",
 					"type": "string",
-					"description": "A plain text specification"
-				},
-				{
-					"name": "Numeric Code",
-					"type": "string",
-					"description": "Two digit numeric code value"
+					"description": "A plain text specification of the named status code"
 				}
 			]
 		}

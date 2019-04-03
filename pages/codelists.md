@@ -23,5 +23,8 @@ Known implementations (open source or otherwise) are listed here.  Please modify
 
 |Provider|Implementation URL|Comments|
 |--------|------------------|--------|
-|  |  |  |
+| edi3 | [Recommendation 20](//codelists.api.edi3.org/recommendation-20/){:target="_blank"} | Working Draft |
+| edi3 | [Recommendation 21](//codelists.api.edi3.org/recommendation-21/){:target="_blank"} | Working Draft |
+| edi3 | [Recommendation 24](//codelists.api.edi3.org/recommendation-24/){:target="_blank"} | Working Draft |
+
 

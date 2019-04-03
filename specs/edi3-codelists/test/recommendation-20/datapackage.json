@@ -1,0 +1,125 @@
+{
+	"name": "units-of-measure",
+	"title": "UNECE/CEFACT Units of Measure",
+	"licensces": [{
+		"name": "ODC-PDDL-1.0",
+		"path": "http://opendatacommons.org/licenses/pddl/",
+		"title": "Open Data Commons Public Domain Dedication and License v1.0"
+	}],
+	"description": "Recommendation 20 Provides three character alphabetic and alphanumeric codes for representing units of measurement for length, area, volume/capacity, mass (weight), time, and other quantities used in international trade. The codes are intended for use in manual and/or automated systems for the exchange of information between participants in international trade.",
+	"version": "9.0.0",
+	"sources": [{
+		"name": "UNECE",
+		"path": "http://www.unece.org/ro/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/code-list-recommendations.html",
+		"title": "UNECE"
+	}],
+	"resources": [{
+		"path": "data/annexi.csv",
+		"name": "annexi",
+		"schema": {
+			"fields": [{
+					"name": "Group Number",
+					"type": "string",
+					"description": ""
+
+				},
+				{
+					"name": "Sector",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "Group ID",
+					"type": "string",
+					"description": ""
+
+				},
+				{
+					"name": "Quantity",
+					"type": "string",
+					"description": "The name of the physical phenomenon being measured. (a) In levels 1 and 2 (SI or SI equivalent), the phenomena pertaining to a certain category are listed under a heading giving the name of the relevant part in ISO 31; (b) In level 3 they are broken down into the 9 categories as defined below under level/category."
+				},
+				{
+					"name": "Level/Category",
+					"type": "string",
+					"description": "Identification of the normative or informative relevance of the unit: Level 1 - normative = SI normative units, standard and commonly used multiples. Level 2 – normative equivalent = SI normative equivalent units (UK, US, etc.) and commonly used multiples. Level 3 – informative = 9 categories of informative units (units of count and other. miscellaneous units), invariably with no comprehensive conversion factor to SI. These units are provided for information and to facilitate the assignment and usage of a common code value to represent such units."
+				},
+				{
+					"name": "Status",
+					"type": "string",
+					"description": "An indication of the maintenance status of individual units of measure."
+				},
+				{
+					"name": "Common Code",
+					"type": "string",
+					"description": "This is the recommended single list of standard codes which is based on the following conventions: The representation format for the code values shall be alphanumeric variable length 3 characters (an..3); wherever possible, existing code values are retained according to the following order of precedence for assigning values: (a) alphabetic code values for units of measure as in UN/ECE Recommendation No. 20, edition 1985; (b) alphanumeric code values for units of measure as in ANSI ASC X12 data element number 355;"
+				},
+				{
+					"name": "Name",
+					"type": "string",
+					"description": "The name of the unit of measure."
+				},
+				{
+					"name": "Conversion Factor",
+					"type": "string",
+					"description": "The value used to convert units to the equivalent SI unit when applicable."
+				},
+				{
+					"name": "Symbol",
+					"type": "string",
+					"description": "The symbol used to represent the unit of measure as in ISO 31 / 80000."
+				},
+				{
+					"name": "Description",
+					"type": "string",
+					"description": "A plain text specification of the named unit of measure, not exceeding 350 characters in length and in English. It should be noted that such descriptions shall be progressively introduced for existing entries and where possible, shall be taken from recognized sources. All new entries having no conversion factor to SI units shall be applied to the code list with a description. A description is optional for units provided with a conversion factor."
+
+				}
+			]
+		}
+	}, {
+		"path": "data/annexii.csv",
+		"name": "annexii",
+		"schema": {
+			"fields": [{
+					"name": "Status",
+					"type": "string",
+					"description": "An indication of the maintenance status of individual units of measure."
+
+				},
+				{
+					"name": "Common Code",
+					"type": "string",
+					"description": "This is the recommended single list of standard codes which is based on the following conventions: The representation format for the code values shall be alphanumeric variable length 3 characters (an..3); wherever possible, existing code values are retained according to the following order of precedence for assigning values: (a) alphabetic code values for units of measure as in UN/ECE Recommendation No. 20, edition 1985; (b) alphanumeric code values for units of measure as in ANSI ASC X12 data element number 355;"
+
+				},
+				{
+					"name": "Name",
+					"type": "string",
+					"description": "The name of the unit of measure."
+				},
+				{
+					"name": "Description",
+					"type": "string",
+					"description": "A plain text specification of the named unit of measure, not exceeding 350 characters in length and in English. It should be noted that such descriptions shall be progressively introduced for existing entries and where possible, shall be taken from recognized sources. All new entries having no conversion factor to SI units shall be applied to the code list with a description. A description is optional for units provided with a conversion factor."
+				},
+				{
+					"name": "Level/Category",
+					"type": "string",
+					"description": "Identification of the normative or informative relevance of the unit: Level 1 - normative = SI normative units, standard and commonly used multiples. Level 2 – normative equivalent = SI normative equivalent units (UK, US, etc.) and commonly used multiples. Level 3 – informative = 9 categories of informative units (units of count and other. miscellaneous units), invariably with no comprehensive conversion factor to SI. These units are provided for information and to facilitate the assignment and usage of a common code value to represent such units."
+				},
+				{
+					"name": "Symbol",
+					"type": "string",
+					"description": "The symbol used to represent the unit of measure as in ISO 31 / 80000."
+				},
+				{
+					"name": "Conversion Factor",
+					"type": "string",
+					"description": "The value used to convert units to the equivalent SI unit when applicable."
+				}
+
+			]
+		}
+	}]
+}
