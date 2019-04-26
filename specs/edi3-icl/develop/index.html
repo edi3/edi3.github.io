@@ -174,19 +174,33 @@
 <li class="toc-entry toc-h2"><a href="#abstract">Abstract</a></li>
 <li class="toc-entry toc-h2"><a href="#status">Status</a></li>
 <li class="toc-entry toc-h2"><a href="#glossary">Glossary</a></li>
-<li class="toc-entry toc-h2"><a href="#introduction">Introduction</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#background">Background</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
+<li class="toc-entry toc-h2"><a href="#other-projects">Other Projects</a></li>
 <li class="toc-entry toc-h2"><a href="#licence">Licence</a></li>
 <li class="toc-entry toc-h2"><a href="#change-process">Change Process</a></li>
 <li class="toc-entry toc-h2"><a href="#language">Language</a></li>
-<li class="toc-entry toc-h1"><a href="#high-level-requirements">High Level Requirements</a></li>
+<li class="toc-entry toc-h1"><a href="#high-level-requirements">High Level Requirements</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#architectural-principles">Architectural Principles</a></li>
+<li class="toc-entry toc-h2"><a href="#high-level-requirements-1">High Level Requirements</a></li>
+</ul>
+</li>
 </ul>
 </div>
             <h2 id="abstract">Abstract</h2>
-<p>This document proposes the use of a permissioned Inter Customs Ledger to facilitate the transfer of regulatory documents between customs agencies.</p>
+
+<p>This document describes a technical specification for the trusted transfer of cross-border regulatory documents between government agencies using distributed ledger technology. The use of a distributed ledger approach for G2G document sharing offers several advantages over alternative methods.</p>
+
+<ul>
+  <li>There is no centralised infrastructure - thereby avoiding the need for complex funding models and avoiding a single point of failure or security risk.</li>
+  <li>Each country can host trade documents within their jurisdiction, conforming to increasingly strict data soveriegnty rules.</li>
+  <li>Trade documents can be notarised and verified with very high integrity against tampering or forgery.</li>
+  <li>Where appropriate (eg single use certificates), documents as digital assets can be transfered and acquitted follwing the physical asset movement.</li>
+</ul>
+
+<p>There is no expectation that a single uber-ledger supports all G2G transactions. A apecific ledger may service as few as two countries and may be limited to a single process (eg certificates of origin) or may service multiple coujntries and multiple processes. Therefore this specification supports the use of multiple different distributed ledgers (both public and private) by defining a standrdised “Message API” that allows users within a jurisdiction to interact with multiple ledgers via a simple interface.</p>
+
+<p>This document uses Certificates of Origin as the guiding use case for the initial specification, however it is intended that the Inter Customs Ledger should be generic and allow for the transfer of any shipment related documentation between authorised agencies.</p>
 
 <h2 id="status">Status</h2>
 
@@ -215,6 +229,11 @@
     </tr>
     <tr>
       <td> </td>
+      <td>ICL</td>
+      <td>This “Intercustoms Ledger” specification</td>
+    </tr>
+    <tr>
+      <td> </td>
       <td>Node</td>
       <td>A device on the Inter Customs Ledger network which has full visibility of the entire ledger and contriibutes to the integrity of the ledger by implementing a Consensus Algorithm</td>
     </tr>
@@ -224,11 +243,24 @@
 <h2 id="introduction">Introduction</h2>
 <p>International trade clearance procedures require a number of documents to be presented to satisfy the requirements of a variety of agreements. For example, in order for an importer to gain preferential tariff treatment under a Free Trade Agreement, the importer must present a valid Certificate of Origin (issued to the exporter) which states that the goods being imported qualify as originating in the country which is party to the agreement. These processes are managed largely by the transfer of paper documents which are subject to loss, alteration and forgery.</p>
 
-<p>An Inter Customs Ledger is proposed as an apporach to the transfer of shipment related documents between customs agencies which is immediate, permanent and irrefutable.</p>
+<p><img src="DocumentFlows_AsIs.png" alt="paper flows" /></p>
 
-<p>This document uses Certificates of Origin as the guiding use case for the initial specification, however it is intended that the Inter Customs Ledger should be generic and allow for the transfer of any shipment related documentation between authorised agencies.</p>
+<p>In many jurisdictions, significant digitisation progress has been made for interactions between the national regulators (eg customs) and the local regulated community (eg importers, exporters, etc). In Australia for example, 99% of customs documents are already lodged electronically. However there still remains a very significant amout of paper documents that support cross border trade. The majority of the paper documents fit the same pattern; they are issued by a party in the exporting country but required by the regulator of the importing country for goods clearance. One significant reason that paper has been difficult to replace is that there is no direct trust relationshiop that allows in importing regulator to confirm the identity of the document issuer in the exporting jurisdiction.</p>
 
-<h4 id="background">Background</h4>
+<p>An Inter Customs Ledger (ICL) is proposed as an apporach to the transfer of shipment related documents between customs agencies which is immediate, permanent and irrefutable.  The intercustoms ledger is essentially a trust bridge between national identity schemes - basically the importing regulator trusts the identity of the document issuer because the exporting regulator confirms the issuer identity.</p>
+
+<p><img src="DocumentFlows_ToBe.png" alt="digital flows" /></p>
+
+<p>The future state diagram shows the relationship between the ICL and three other key components.</p>
+
+<ul>
+  <li>National single windows and port community systems provide a streamlined and automated means for local entities (traders, 3PL, agents, etc) to interact with their local regulators. Many nations now have some kind of single window system but implementations are varied and usually unique to the local regualatory environment. The ICL can be thought of as a cross-border integration framerwork <em>between</em> national single windows.  However, it is important that the varied and complex national rules do not bleed into the ICL so that integration remains simple. The ICL is essentially a high trust international “dumb pipe” between complex national systems.</li>
+  <li>National digital identity schemes are emerging in many jursdictions are provide a way for businesses and individuals in a country to prove their identity to any government agency and to any authorised non-government entity. Business identity schemes are typically linked to public tax registration numbers. Individual identities may be linked to a business identity and will normally include the idea of identity assurance levels which indicate the degree of identity integrity attached to the token holder. This means, for example, that a certificate of origin provided by an exporter to their local customs authority (possibly via a single window) can be passed to the importing authority together with a high integrity identity claim. In this way, the ICL is essentially an international “trust bridge” between national identity schemes.</li>
+  <li>Commercial trade data platforms/pipelines are an emerging capability that seek to provide their customers with and-to-end supply chain visibility and management. They are essentially multi-source data aggregators and their scope usually includes some or all of trade, transport, financial, and regulatory data. The data managed by commerciasl pipleines is not only traditional trade documents (invoices, bills of lading etc) but also IoT streams like data feeds from instrumented smart containers. These platforms can provide significant value to their stakeholders and have a scope much larger than G2G data sharing. The ICL complements these commercial services and does not compete with them.</li>
+</ul>
+
+<h2 id="other-projects">Other Projects</h2>
+
 <p>There have been a number of recent projects which use blockchain to implement a system which allows the validation of Certifiate of Origin issued under some Free Trade Agreement. Singapore and Kenya have both worked with industry parter vCargo Cloud to implement blockchain Certificate of Origin solutions. The first Certificate of Origin for a shipment from the UK was issued by {who?} in {month?} 2018 and in {when?} the United States were looking into the use of blockchain to validate Certificates of Origin for shipments made under {old agreements?}. These projects have highlighted the necessity for digital, blockchain based solutions to exist alongside paper based processes in the short term, requiring the continued existance of some mechanism for validating the authenticity of a paper certificate.</p>
 
 <p>Before the prevalence of distributed ledger technology, the common approach to providing for assurance as to the validity of a Document was largely achieved with the idea of a hub. there are a number of implementations of this approach which may be instructive: ICC Certificate of Origin verification website, EPIX, ePhyto thing, etc…</p>
@@ -253,20 +285,98 @@
 in this document are to be interpreted as described in RFC 2119.</p>
 
 <h1 id="high-level-requirements">High Level Requirements</h1>
-<blockquote>
-  <p>FIXME 
-seperate the list below into sections? (Ledger, Network, Transaction)</p>
-</blockquote>
 
-<ol>
-  <li>Any Customs Authority SHOULD be able to participate in the ICL by running a Node</li>
-  <li>Participating in the network by running a Node SHOULD NOT grant access to the content of a document</li>
-  <li>A message on the Inter Customs Ledger MAY provide a mechanism for discovering the full content of the document to which it relates</li>
-  <li>The Inter Customs Ledger MUST provide a mechanism for preventing an importer or exporter from re-using a document which is intended to have a single use</li>
-  <li>The Inter Customs Ledger MUST provide some mechanism for asserting the validity of a document presented by an importer or exporter</li>
-  <li>The Inter Customs Ledger MUST provide some mechanism for invalidating a Document</li>
-  <li>The Inter Customs Ledger MUST provide some mechanism for specifying who can perform certain actions with respect to a Document</li>
-</ol>
+<h2 id="architectural-principles">Architectural Principles</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>ID</td>
+      <td> </td>
+      <td>Principle</td>
+      <td>Rationale</td>
+    </tr>
+    <tr>
+      <td>–</td>
+      <td>——_—</td>
+      <td>———</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P1</td>
+      <td>The ICL should avoid bleeding any local regulatory complexities into cross-border processes</td>
+      <td>A strong separation between local complexity and cross border document exchange is essential for scalability. The ICL specification must be as simple as possible in order for updake to scale. The ICL metamodel is likely to be little more than a list of notarised documents.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P2</td>
+      <td>The specification must support implementations over multiple different distributed ledger types &amp; networks</td>
+      <td>A single global uber-ledger would need to pick a technology winner, would restrict the ability to intruduce non breaking extensions, would present a high value attack target, and is unlilkely to be supported by every nation. The ICL will need to specify an abstract “message API” that can interact with multiple ledgers. A “routing API” will also be needed so that implementations can lookup which ledger &amp; protocol to apply for a given interacition</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P3</td>
+      <td>The ICL should leverage the unique position of national regulators to complement rather than compete with commercial platforms</td>
+      <td>Customs authorities enjoy a unique postion as the single convergence point for all imports to and exports from a country. That allows an intercustomes ledger to easily achieve complete coverage of a bilateral or multilateral trading relationship. However regulators are not natural innovators. The ideal ICL will provide a non-comptetitive platform that leverages the position to regualators to the benefit of their constituents whilst allowing comemrcial innovation to flourish</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>P4</td>
+      <td>The ICL should not <em>require</em> a business to provide anything more than their local regulatory obligations demand. Any extra data should be provided by business only if there is a sufficient incentive to do so.</td>
+      <td>Regulators cannot, and should not, demand more than the local regulations require. ICL implementations should define the value propisition for every document that exceeds the regulatory minimum.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="high-level-requirements-1">High Level Requirements</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Requirement</th>
+      <th>Solution Links</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>R1</td>
+      <td>Any Customs Authority SHOULD be able to participate in the ICL by running a Node</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>R2</td>
+      <td>Participating in the network by running a node SHOULD NOT automatically grant access to the content of a document</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>R3</td>
+      <td>A message on the ICL SHOULD provide a mechanism for discovering the full content of the document to which it relates</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>R4</td>
+      <td>The ICL MUST provide a mechanism for preventing an importer or exporter from re-using a document which is intended to have a single use</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>R5</td>
+      <td>The ICL MUST provide some mechanism for asserting the validity of a document presented by an importer or exporter</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>R6</td>
+      <td>The ICL MUST provide some mechanism for invalidating a Document</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>R7</td>
+      <td>The ICL MUST provide some mechanism for specifying who can perform certain actions with respect to a Document</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
 
         </div>
