@@ -4,6 +4,10 @@ title: GitHub
 permalink: /github/
 ---
 
+# GitHub
+
+[GitHub EDI3](https://github.com/edi3){:target="_blank"}
+
 # Versioning
 
 For versioning the standard git flow is used:
@@ -47,6 +51,7 @@ If a specification repository includes more than one specification, sub-director
 - LICENSE.txt           X         (ignored)
 - README.md             X         (ignored)
 - buildspec.yml         X         (ignored, a technical file for builds in AWS CodeBuild)
+```
 
 # Publishing process
 
