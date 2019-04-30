@@ -27,5 +27,5 @@
     <li class="menu-title"><a href="/community/"{% if current[1] == 'community' or current[2] == 'community' %} class="active"{% endif %}>Community</a></li>
     <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter (subscribe)</a></li>
     <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg" target="_blank">Chat (join team)</a></li>
-    <li><a href="https://github.com/edi3/" target="_blank">GitHub</a></li>
+    <li><a {% if current[1] == 'github' or current[2] == 'github' %}class="active"{% endif %} href="/github/">GitHub</a></li>
 </ul>
