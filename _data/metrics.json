@@ -2,23 +2,23 @@
   "metrics": [
     {
       "name": "unique visitors",
-      "lastWeek": 22,
-      "total": 33
+      "lastWeek": 29,
+      "total": 226
     },
     {
       "name": "registered members",
-      "lastWeek": 0,
-      "total": 25
+      "lastWeek": 3,
+      "total": 37
     },
     {
       "name": "chat message count",
-      "lastWeek": 173,
-      "total": 1245
+      "lastWeek": 75,
+      "total": 1801
     },
     {
       "name": "site updates",
-      "lastWeek": 53,
-      "total": 133
+      "lastWeek": 1,
+      "total": 215
     },
     {
       "name": "issues",
@@ -41,11 +41,11 @@
   "links": [
     {
       "text": "Google site metrics",
-      "url": ""
+      "url": "https://s3-ap-southeast-2.amazonaws.com/edi3-metrics/Analytics+All+Web+Site+Data+Audience+Overview+20190301-20190505.pdf"
     },
     {
       "text": "Slack team metrics",
-      "url": ""
+      "url": "https://s3-ap-southeast-2.amazonaws.com/edi3-metrics/edi3+Enterprise+Analytics+All+time+-+May+06+2019.csv"
     },
     {
       "text": "Github project metrics",
