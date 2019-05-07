@@ -66,7 +66,7 @@
     <li class="menu-title"><a href="/community/">Community</a></li>
     <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter (subscribe)</a></li>
     <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg" target="_blank">Chat (join team)</a></li>
-    <li><a href="https://github.com/edi3/" target="_blank">GitHub</a></li>
+    <li><a  href="/github/">GitHub</a></li>
 </ul>
 
                 </div>
@@ -150,7 +150,7 @@
     <li class="menu-title"><a href="/community/">Community</a></li>
     <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter (subscribe)</a></li>
     <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg" target="_blank">Chat (join team)</a></li>
-    <li><a href="https://github.com/edi3/" target="_blank">GitHub</a></li>
+    <li><a  href="/github/">GitHub</a></li>
 </ul>
 
         </div>
@@ -172,7 +172,13 @@
     <!--<div class="specs-toc-title">Table of contents</div>-->
     <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
-<li class="toc-entry toc-h2"><a href="#goals">Goals</a></li>
+<li class="toc-entry toc-h2"><a href="#linked-data-example">Linked Data Example</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#api-payload">API Payload</a></li>
+<li class="toc-entry toc-h3"><a href="#semantic-context">Semantic Context</a></li>
+<li class="toc-entry toc-h3"><a href="#semantic-referencing">Semantic Referencing</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#status">Status</a></li>
 <li class="toc-entry toc-h2"><a href="#glossary">Glossary</a></li>
 <li class="toc-entry toc-h2"><a href="#licence">Licence</a></li>
@@ -188,7 +194,117 @@
 </div>
             <h2 id="introduction">Introduction</h2>
 
-<h2 id="goals">Goals</h2>
+<h2 id="linked-data-example">Linked Data Example</h2>
+<p>This sections illustrates an example of how data is linked via</p>
+
+<h3 id="api-payload">API Payload</h3>
+<p>The below is a data object which could be passed in the request or reply of an API call.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	{
+		"@context": "http://edi3.org/cefact-bsp.jsonld",
+		"consignment": {
+			"identification": "https://www.maersk.com/tracking/#tracking/123456789",
+			"includedConsignmentItem": [
+				"consignmentItem": {
+					"information": "Mangos and bananas",
+					"grossWeight": {
+						"Value": "12000",
+						"Unit": "Kgs"
+					}
+				}
+			],
+			"utilizedTransportEquipment": [
+				"transportEquipment": {
+					"identification": "https://app.bic-boxtech.org/container/MSKU0134962",
+					"affixedSeal": {
+						"identification": "54234398"
+					}
+				}
+			]
+		}
+	}
+</code></pre></div></div>
+
+<p>This JSON object specifies a Consignment and its ConsignmentItem and TransportEquipment. The Consignment is identified by a bookingnumber via linkage to Maersk, who in the role of carrier has issued the booking number. The TransportEquipment number is governed by BIC, available through their boxtech API.</p>
+
+<p>It also defines a context hosted under edi3.org. The <code class="highlighter-rouge">@context</code> is json-ld’s way of linking payload elements to defined semantics.</p>
+
+<h3 id="semantic-context">Semantic Context</h3>
+<p>The json-ld context file defines the semantics of the elements of the payload json file. Below is an example of how the <code class="highlighter-rouge">cefact-bsp.jsonld</code> might look.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+	"@context": {
+		"consignment": { 
+			"@id": "http://edi3.org/contexts/Consignment",  
+			"@type": "@id" 
+		},
+		"consignmentItem": "edi3.org/contexts/ConsignmentItem",
+		"transportEquipment": {
+			"@id": "http://edi3.org/contexts/TransportEquipment", 
+			"@type": "@id" 
+		}
+	}
+}
+</code></pre></div></div>
+<p>What this means is that the semantic meaning of <code class="highlighter-rouge">consignment</code> in the payload file is based on the definition available at <code class="highlighter-rouge">http://edi3.org/contexts/Consignment</code>. It also indicates that the value of <code class="highlighter-rouge">Identification</code> is to be considered the identifer of the Consignment resource (TODO: link @id to Identifier attribute).</p>
+
+<p>Note that the <code class="highlighter-rouge">@context</code> can be defined elsewhere too. In fact, it might fit better to have contexts specific to particular API use cases. Also, the context can be defined within the payload json data.</p>
+
+<h3 id="semantic-referencing">Semantic Referencing</h3>
+<p>The most important role of edi3.org in supporting linked data is to govern and expose the semantics, to be referenced by such contexts. This is documentation which can be generated straight out of the SCRDM, for example:</p>
+
+<p><code class="highlighter-rouge">GET edi3.org/contexts/Consignment</code> would return:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Consignment</strong></th>
+      <th>A separately identifiable collection of goods items to be transported or available to be transported from one consignor to one consignee via one or more modes of transport where each consignment is the subject of one single transport contract.</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>ConsignmentItem</em></td>
+      <td>A consignment item included in this consignment of goods.</td>
+      <td><code class="highlighter-rouge">edi3.org/contexts/ConsignmentItem</code></td>
+    </tr>
+    <tr>
+      <td><em>TransportEquipment</em></td>
+      <td>A number of pieces of transport equipment, such as containers or similar unit load devices, in this consignment.</td>
+      <td><code class="highlighter-rouge">edi3.org/contexts/TransportEquipment</code></td>
+    </tr>
+    <tr>
+      <td>Identification</td>
+      <td>A unique identifier for this piece of the consignment.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="highlighter-rouge">GET edi3.org/contexts/TransportEquipment</code> would return:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>TransportEquipment</strong></th>
+      <th>A piece of equipment used to hold, protect or secure cargo for transportation purposes.</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Identification</td>
+      <td>A unique identifier for this piece of transport equipment.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><em>Contained</em></td>
+      <td>A consignment contained in this piece of transport equipment.</td>
+      <td><code class="highlighter-rouge">edi3.org/contexts/Consignment</code></td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="status">Status</h2>
 
