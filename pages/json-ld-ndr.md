@@ -78,17 +78,19 @@ Note that the `@context` can be defined elsewhere too. In fact, it might fit bet
 The most important role of edi3.org in supporting linked data is to govern and expose the semantics, to be referenced by such contexts. This is documentation which can be generated straight out of the SCRDM, for example:
 
 `GET edi3.org/contexts/Consignment` would return:
-|**Consignment**|A separately identifiable collection of goods items to be transported or available to be transported from one consignor to one consignee via one or more modes of transport where each consignment is the subject of one single transport contract.||
-|--------|---------|--------|
-|*ConsignmentItem*|A consignment item included in this consignment of goods.|`edi3.org/contexts/ConsignmentItem`|
-|*TransportEquipment*|A number of pieces of transport equipment, such as containers or similar unit load devices, in this consignment.|`edi3.org/contexts/TransportEquipment`|
-|Identification|A unique identifier for this piece of the consignment.||
+
+| **Consignment** | A separately identifiable collection of goods items to be transported or available to be transported from one consignor to one consignee via one or more modes of transport where each consignment is the subject of one single transport contract. | |
+| -------- | --------- | -------- |
+| *ConsignmentItem* | A consignment item included in this consignment of goods. | `edi3.org/contexts/ConsignmentItem` |
+| *TransportEquipment* | A number of pieces of transport equipment, such as containers or similar unit load devices, in this consignment.|`edi3.org/contexts/TransportEquipment` |
+| Identification | A unique identifier for this piece of the consignment. | |
 
 `GET edi3.org/contexts/TransportEquipment` would return:
-|**TransportEquipment**|A piece of equipment used to hold, protect or secure cargo for transportation purposes.||
-|--------|---------|--------|
-|Identification|A unique identifier for this piece of transport equipment.||
-|*Contained*|A consignment contained in this piece of transport equipment.|`edi3.org/contexts/Consignment`|
+
+| **TransportEquipment** | A piece of equipment used to hold, protect or secure cargo for transportation purposes. | |
+| -------- | --------- | -------- |
+| Identification | A unique identifier for this piece of transport equipment. | |
+| *Contained* | A consignment contained in this piece of transport equipment. | `edi3.org/contexts/Consignment` |
 
 
 ## Known Implementations
