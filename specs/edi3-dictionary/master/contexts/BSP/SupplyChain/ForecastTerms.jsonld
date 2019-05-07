@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "CommitmentLevel": "schema:Text",
+    "DateType": "schema:Text",
+    "ForecastType": "schema:Text",
+    "Frequency": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "@context": {
+    "Basis": "schema:Text",
+    "ChangeReason": "schema:Text",
+    "Charge": "schema:amount",
+    "Maximum": "schema:Text",
+    "Minimum": "schema:Text",
+    "OrderUnitConversionFactor": "schema.org:Number",
+    "Type": "schema:Text",
+    "Unit": "schema:amount",
+    "AppliedTradeAllowanceCharge": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/AllowanceCharge",
+      "@type": "@id"
+    },
+    "AssociatedReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "ComparisonReferencePrice": {
+      "@id": "https://edi3.org/contexts/BSP/Reference/Price",
+      "@type": "@id"
+    },
+    "DeliveryTradeLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Location",
+      "@type": "@id"
+    },
+    "IncludedTradeTax": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Tax",
+      "@type": "@id"
+    },
+    "ValiditySpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

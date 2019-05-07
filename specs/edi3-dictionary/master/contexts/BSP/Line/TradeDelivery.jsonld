@@ -1,0 +1,221 @@
+{
+  "@context": {
+    "Agreed": "schema:Text",
+    "Billed": "schema:Text",
+    "BuyerOrder": "schema.org:Time",
+    "ChargeFree": "schema:Text",
+    "ChargeableWeight": "schema:Text",
+    "Despatched": "schema:Text",
+    "Destroyed": "schema:Text",
+    "DueInAvailable": "schema:Text",
+    "DueInForecasted": "schema:Text",
+    "DueInRequested": "schema:Text",
+    "DueInReturned": "schema:Text",
+    "EconomicOrder": "schema:Text",
+    "FinalDelivery": "schema.org:Boolean",
+    "FormattedPickUpAvailability": "schema.org:Time",
+    "FormattedUltimateShipToDelivery": "schema.org:Time",
+    "FullyDelivered": "schema.org:Boolean",
+    "GFMTransferRejected": "schema:Text",
+    "GoodsOwnershipChange": "schema.org:Time",
+    "GrossVolume": "schema:Text",
+    "GrossWeight": "schema:Text",
+    "IndividualPackage": "schema:Text",
+    "LatestDespatched": "schema:Text",
+    "ModificationForecasted": "schema:Text",
+    "NetVolume": "schema:Text",
+    "NetWeight": "schema:Text",
+    "Ordered": "schema:Text",
+    "OverDeliveryAllowed": "schema.org:Boolean",
+    "Package": "schema:Text",
+    "PartialDeliveryAllowed": "schema.org:Boolean",
+    "PerPackageUnit": "schema:Text",
+    "ProductUnit": "schema:Text",
+    "Received": "schema:Text",
+    "Rejected": "schema:Text",
+    "RemainingRequested": "schema:Text",
+    "Requested": "schema:Text",
+    "Returned": "schema:Text",
+    "ReverseBilled": "schema:Text",
+    "Status": "schema:Text",
+    "TheoreticalWeight": "schema:Text",
+    "TurnInReceived": "schema:Text",
+    "AdditionalReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "ApplicableTransportDangerousGoods": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/DangerousGoods",
+      "@type": "@id"
+    },
+    "AvailableSupplyChainInventory": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Inventory",
+      "@type": "@id"
+    },
+    "ConsignmentSupplyChainInventory": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Inventory",
+      "@type": "@id"
+    },
+    "ConsumptionReportReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "ConsumptionSupplyChainSchedule": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Schedule",
+      "@type": "@id"
+    },
+    "CustomerSupplyChainInventory": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Inventory",
+      "@type": "@id"
+    },
+    "DeliveryNoteReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "DeliverySupplyChainEvent": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Event",
+      "@type": "@id"
+    },
+    "DeliverySupplyChainSchedule": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Schedule",
+      "@type": "@id"
+    },
+    "DespatchAdviceReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "DespatchSupplyChainEvent": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Event",
+      "@type": "@id"
+    },
+    "DespatchSupplyChainSchedule": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Schedule",
+      "@type": "@id"
+    },
+    "DisposalTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "FinalDestinationTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "GoodsReceiptNoteReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "IncludedSupplyChainPackaging": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Packaging",
+      "@type": "@id"
+    },
+    "InformationNote": {
+      "@id": "https://edi3.org/contexts/BSP//Note",
+      "@type": "@id"
+    },
+    "InventoryManagerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "LoadingSupplyChainEvent": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Event",
+      "@type": "@id"
+    },
+    "LogisticsServiceProviderTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "OrderSupplyChainSchedule": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Schedule",
+      "@type": "@id"
+    },
+    "PackingListReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "PickUpSupplyChainEvent": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Event",
+      "@type": "@id"
+    },
+    "PlannedSupplyChainConsignment": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Consignment",
+      "@type": "@id"
+    },
+    "ProjectedSupplyChainSupplyPlan": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/SupplyPlan",
+      "@type": "@id"
+    },
+    "ReceiptSupplyChainEvent": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Event",
+      "@type": "@id"
+    },
+    "ReceiptSupplyChainSchedule": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Schedule",
+      "@type": "@id"
+    },
+    "ReceivingAdviceReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "RelatedSupplyChainConsignment": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Consignment",
+      "@type": "@id"
+    },
+    "ReleaseSupplyChainEvent": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Event",
+      "@type": "@id"
+    },
+    "ShipFromTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "ShipToTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "ShipmentScheduleReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "SpecifiedDeliveryAdjustment": {
+      "@id": "https://edi3.org/contexts/BSP/Delivery/Adjustment",
+      "@type": "@id"
+    },
+    "SpecifiedDeliveryInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Delivery/Instructions",
+      "@type": "@id"
+    },
+    "SpecifiedGoodsPhysicalState": {
+      "@id": "https://edi3.org/contexts/BSP/Goods/PhysicalState",
+      "@type": "@id"
+    },
+    "SpecifiedHandlingInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Handling/Instructions",
+      "@type": "@id"
+    },
+    "SpecifiedLogisticsPackage": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Package",
+      "@type": "@id"
+    },
+    "SpecifiedQuantityVariation": {
+      "@id": "https://edi3.org/contexts/BSP/Quantity/Variation",
+      "@type": "@id"
+    },
+    "SpecifiedSupplyChainSchedule": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Schedule",
+      "@type": "@id"
+    },
+    "UnloadingSupplyChainEvent": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Event",
+      "@type": "@id"
+    },
+    "UsedLogisticsLabel": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Label",
+      "@type": "@id"
+    },
+    "UtilizedReferencedLogisticsTransportEquipment": {
+      "@id": "https://edi3.org/contexts/BSP/ReferencedLogistics/TransportEquipment",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

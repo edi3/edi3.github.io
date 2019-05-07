@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "Name": "schema:Text",
+    "SalesMethod": "schema:Text",
+    "Virtual": "schema.org:Boolean",
+    "WebsiteURI": "schema:Text",
+    "OrderingAvailablePeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Available/Period",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "Category": "schema:Text",
+    "ConsignmentRiskRelated": "schema:Text",
+    "Description": "schema:Text",
+    "Level": "schema:Text",
+    "PartyRiskRelated": "schema:Text",
+    "TransportEquipmentRiskRelated": "schema:Text",
+    "TransportMovementRiskRelated": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

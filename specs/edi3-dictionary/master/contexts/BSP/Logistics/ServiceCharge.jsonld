@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "AllowanceCharge": "schema:Text",
+    "Applied": "schema:amount",
+    "CalculationBasis": "schema:Text",
+    "CalculationBasisText": "schema:Text",
+    "Category": "schema:Text",
+    "ChargeCategory": "schema:Text",
+    "Description": "schema:Text",
+    "Disbursement": "schema:amount",
+    "FreightInvoiceType": "schema:Text",
+    "Identification": "schema:Text",
+    "PayingPartyRole": "schema:Text",
+    "PaymentArrangement": "schema:Text",
+    "ServiceCategory": "schema:Text",
+    "TariffClass": "schema:Text",
+    "TransportPaymentMethod": "schema:Text",
+    "AppliedFromLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "AppliedToLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "AppliedTradeTax": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Tax",
+      "@type": "@id"
+    },
+    "PaymentPlaceLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "SpecifiedTradeSettlementPaymentMeans": {
+      "@id": "https://edi3.org/contexts/BSP/TradeSettlement/PaymentMeans",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

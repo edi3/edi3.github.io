@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "Description": "schema:Text",
+    "Identification": "schema:Text",
+    "ApplicableNote": {
+      "@id": "https://edi3.org/contexts/BSP//Note",
+      "@type": "@id"
+    },
+    "RelatedSpecifiedBinaryFile": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/BinaryFile",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

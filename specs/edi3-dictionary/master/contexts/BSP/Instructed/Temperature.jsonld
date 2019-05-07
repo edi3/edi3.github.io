@@ -1,0 +1,7 @@
+{
+  "@context": {
+    "MaximumValue": "schema:Text",
+    "MinimumValue": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

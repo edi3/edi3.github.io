@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "Access": "schema:Text",
+    "AuthorName": "schema:Text",
+    "CharacterSet": "schema:Text",
+    "Description": "schema:Text",
+    "Encoding": "schema:Text",
+    "FileName": "schema:Text",
+    "Identification": "schema:Text",
+    "Included": "schema:Text",
+    "MIME": "schema:Text",
+    "Size": "schema:Text",
+    "Title": "schema:Text",
+    "URI": "schema:Text",
+    "Version": "schema:Text",
+    "AccessAvailabilitySpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

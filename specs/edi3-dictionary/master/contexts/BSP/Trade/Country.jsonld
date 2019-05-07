@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "Name": "schema:Text",
+    "SubordinateTradeCountrySubDivision": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/CountrySubDivision",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "Conversion": "schema.org:Number",
+    "ConversionRate": "schema.org:Time",
+    "Market": "schema:Text",
+    "SourceCurrency": "schema:Text",
+    "SourceUnitBasis": "schema.org:Number",
+    "TargetCurrency": "schema:Text",
+    "TargetUnitBase": "schema.org:Number",
+    "AssociatedReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

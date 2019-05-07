@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "CommonName": "schema:Text",
+    "FamilyName": "schema:Text",
+    "FormulaDescription": "schema:Text",
+    "MolecularWeight": "schema:Text",
+    "ScientificName": "schema:Text",
+    "SynonymName": "schema:Text",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

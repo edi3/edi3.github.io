@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "CategoryType": "schema:Text",
+    "Charge": "schema:amount",
+    "ConditionType": "schema:Text",
+    "Description": "schema:Text",
+    "Identification": "schema:Text",
+    "Information": "schema:Text",
+    "Name": "schema:Text",
+    "PaymentArrangement": "schema:Text",
+    "Priority": "schema:Text",
+    "ServiceRequirement": "schema:Text",
+    "EffectiveSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "RequesterTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "ResponsibleTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "SpecifiedTransportRoute": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Route",
+      "@type": "@id"
+    },
+    "URIUniversalCommunication": {
+      "@id": "https://edi3.org/contexts/BSP/Universal/Communication",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

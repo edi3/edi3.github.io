@@ -1,0 +1,52 @@
+{
+  "@context": {
+    "AlternativeClassification": "schema:Text",
+    "Comment": "schema:Text",
+    "ContractualLanguage": "schema:Text",
+    "Identification": "schema:Text",
+    "Index": "schema:Text",
+    "IndexText": "schema:Text",
+    "PriceListItemIdentification": "schema:Text",
+    "PrimaryClassification": "schema:Text",
+    "ReferenceFile": "schema:Text",
+    "ReferenceIdentification": "schema:Text",
+    "RequestedAction": "schema:Text",
+    "Status": "schema:Text",
+    "Total": "schema:Text",
+    "TotalQuantityClassification": "schema:Text",
+    "Type": "schema:Text",
+    "ActualWorkItemComplexDescription": {
+      "@id": "https://edi3.org/contexts/BSP/WorkItem/ComplexDescription",
+      "@type": "@id"
+    },
+    "ChangedRecordedStatus": {
+      "@id": "https://edi3.org/contexts/BSP/Recorded/Status",
+      "@type": "@id"
+    },
+    "ItemBasicWorkItem": {
+      "@id": "https://edi3.org/contexts/BSP/Basic/WorkItem",
+      "@type": "@id"
+    },
+    "ReferencedSpecifiedBinaryFile": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/BinaryFile",
+      "@type": "@id"
+    },
+    "SubordinateBasicWorkItem": {
+      "@id": "https://edi3.org/contexts/BSP/Basic/WorkItem",
+      "@type": "@id"
+    },
+    "TotalCalculatedPrice": {
+      "@id": "https://edi3.org/contexts/BSP/Calculated/Price",
+      "@type": "@id"
+    },
+    "TotalQuantityWorkItemQuantityAnalysis": {
+      "@id": "https://edi3.org/contexts/BSP/WorkItem/QuantityAnalysis",
+      "@type": "@id"
+    },
+    "UnitCalculatedPrice": {
+      "@id": "https://edi3.org/contexts/BSP/Calculated/Price",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

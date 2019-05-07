@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "AbsolutePresenceVolume": "schema:Text",
+    "AbsolutePresenceWeight": "schema:Text",
+    "Description": "schema:Text",
+    "ProportionalConstituent": "schema:Text",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

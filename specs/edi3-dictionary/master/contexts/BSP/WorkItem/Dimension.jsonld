@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "ContractualLanguage": "schema:Text",
+    "Description": "schema:Text",
+    "Identification": "schema:Text",
+    "Type": "schema:Text",
+    "Value": "schema:Text",
+    "ComponentWorkItemDimension": {
+      "@id": "https://edi3.org/contexts/BSP/WorkItem/Dimension",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

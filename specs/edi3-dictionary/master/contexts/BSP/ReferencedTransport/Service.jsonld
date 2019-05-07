@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "CategoryType": "schema:Text",
+    "ContractIdentification": "schema:Text",
+    "Identification": "schema:Text",
+    "RequesterTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

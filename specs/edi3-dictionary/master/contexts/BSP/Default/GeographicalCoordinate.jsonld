@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "AltimetricSystem": "schema:Text",
+    "Altitude": "schema:Text",
+    "Identification": "schema:Text",
+    "Latitude": "schema:Text",
+    "LatitudeDirection": "schema.org:Boolean",
+    "Longitude": "schema:Text",
+    "LongitudeDirection": "schema.org:Boolean",
+    "System": "schema:Text",
+    "TimeZone": "schema:Text",
+    "TimeZoneCode": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

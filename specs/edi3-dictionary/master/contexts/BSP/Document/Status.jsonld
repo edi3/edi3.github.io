@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "Condition": "schema:Text",
+    "Description": "schema:Text",
+    "Information": "schema:Text",
+    "Reason": "schema:Text",
+    "ReasonText": "schema:Text",
+    "Reference": "schema.org:Time",
+    "ValiditySpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "ReasonType": "schema:Text",
+    "ScheduledArrivalRelated": "schema.org:Time",
+    "ScheduledDepartureRelated": "schema.org:Time",
+    "OccurrenceSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

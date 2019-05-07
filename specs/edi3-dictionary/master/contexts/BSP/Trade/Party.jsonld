@@ -1,0 +1,72 @@
+{
+  "@context": {
+    "DUNSIdentification": "schema:Text",
+    "Description": "schema:Text",
+    "GlobalIdentification": "schema:Text",
+    "Identification": "schema:Text",
+    "Language": "schema:Text",
+    "Name": "schema:Text",
+    "QualityAssurance": "schema.org:Boolean",
+    "RegisteredIdentification": "schema:Text",
+    "Role": "schema:Text",
+    "RoleText": "schema:Text",
+    "Type": "schema:Text",
+    "ApplicableLogisticsServiceCharge": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/ServiceCharge",
+      "@type": "@id"
+    },
+    "AssociatedSpecifiedBinaryFile": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/BinaryFile",
+      "@type": "@id"
+    },
+    "AssociatedTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "DefinedTradeContact": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Contact",
+      "@type": "@id"
+    },
+    "PostalTradeAddress": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Address",
+      "@type": "@id"
+    },
+    "ProvidedTransportService": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Service",
+      "@type": "@id"
+    },
+    "SpecifiedAuthoritativeSignatoryPerson": {
+      "@id": "https://edi3.org/contexts/BSP/AuthoritativeSignatory/Person",
+      "@type": "@id"
+    },
+    "SpecifiedGovernmentRegistration": {
+      "@id": "https://edi3.org/contexts/BSP/Government/Registration",
+      "@type": "@id"
+    },
+    "SpecifiedLegalOrganization": {
+      "@id": "https://edi3.org/contexts/BSP/Legal/Organization",
+      "@type": "@id"
+    },
+    "SpecifiedLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "SpecifiedLogisticsRiskAnalysisResult": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/RiskAnalysisResult",
+      "@type": "@id"
+    },
+    "SpecifiedTaxRegistration": {
+      "@id": "https://edi3.org/contexts/BSP/Tax/Registration",
+      "@type": "@id"
+    },
+    "TelephoneUniversalCommunication": {
+      "@id": "https://edi3.org/contexts/BSP/Universal/Communication",
+      "@type": "@id"
+    },
+    "URIUniversalCommunication": {
+      "@id": "https://edi3.org/contexts/BSP/Universal/Communication",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

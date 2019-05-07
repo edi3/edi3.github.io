@@ -1,0 +1,7 @@
+{
+  "@context": {
+    "AbbreviatedName": "schema:Text",
+    "Name": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

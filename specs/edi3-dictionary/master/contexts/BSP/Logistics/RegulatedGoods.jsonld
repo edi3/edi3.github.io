@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "ApplicableTransportDangerousGoods": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/DangerousGoods",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

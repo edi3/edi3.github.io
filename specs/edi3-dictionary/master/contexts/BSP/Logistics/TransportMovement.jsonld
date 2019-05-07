@@ -1,0 +1,191 @@
+{
+  "@context": {
+    "BorderCrossing": "schema.org:Time",
+    "CallPurpose": "schema:Text",
+    "CargoDescription": "schema:Text",
+    "Closing": "schema.org:Time",
+    "Consignment": "schema:Text",
+    "Crew": "schema:Text",
+    "Cycle": "schema:Text",
+    "DangerousGoods": "schema.org:Boolean",
+    "Identification": "schema:Text",
+    "Information": "schema:Text",
+    "ManifestOnboard": "schema.org:Boolean",
+    "Mode": "schema:Text",
+    "ModeText": "schema:Text",
+    "Package": "schema:Text",
+    "Passenger": "schema:Text",
+    "PilotageExemption": "schema:Text",
+    "ReportedSecurityInformation": "schema:Text",
+    "SailingAdviceNotificationInformation": "schema:Text",
+    "ScheduledIdentification": "schema:Text",
+    "Service": "schema:Text",
+    "ServiceText": "schema:Text",
+    "Stage": "schema:Text",
+    "Status": "schema:Text",
+    "Stay": "schema:Text",
+    "TerminalOperatorAssignedIdentification": "schema:Text",
+    "TradedParcel": "schema:Text",
+    "TradingConsolidatorAssignedIdentification": "schema:Text",
+    "TransitDirection": "schema:Text",
+    "TransportEquipment": "schema:Text",
+    "Type": "schema:Text",
+    "ApplicableCrossBorderRegulatoryProcedure": {
+      "@id": "https://edi3.org/contexts/BSP/CrossBorder/RegulatoryProcedure",
+      "@type": "@id"
+    },
+    "ApplicableLogisticsServiceCharge": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/ServiceCharge",
+      "@type": "@id"
+    },
+    "ArrivalTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "AssociatedLogisticsConvoy": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Convoy",
+      "@type": "@id"
+    },
+    "BorderCrossingTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "CallTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "CarriedInactiveReferencedTransportMeans": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/TransportMeans",
+      "@type": "@id"
+    },
+    "CarriedMaterialGoodsCharacteristic": {
+      "@id": "https://edi3.org/contexts/BSP/Material/GoodsCharacteristic",
+      "@type": "@id"
+    },
+    "CarrierAgentTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "CarrierTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "CommodityConsolidatorAgentTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "CommodityConsolidatorTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "CrewNationalityTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "CrewSpecifiedPersonalEffects": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/PersonalEffects",
+      "@type": "@id"
+    },
+    "CrewTransportPerson": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Person",
+      "@type": "@id"
+    },
+    "DepartureTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "ExcessTransportTransportService": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Service",
+      "@type": "@id"
+    },
+    "InspectionTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "IntermediateTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "ItineraryTransportRoute": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Route",
+      "@type": "@id"
+    },
+    "LoadingTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "NotifiedTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "OnboardStoresItemInventory": {
+      "@id": "https://edi3.org/contexts/BSP/StoresItem/Inventory",
+      "@type": "@id"
+    },
+    "OnboardTransportPerson": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Person",
+      "@type": "@id"
+    },
+    "PassengerNationalityTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "RelatedReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "ReportedTransportWasteMaterial": {
+      "@id": "https://edi3.org/contexts/BSP/TransportWaste/Material",
+      "@type": "@id"
+    },
+    "ResponsibleTransportPerson": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Person",
+      "@type": "@id"
+    },
+    "ShipToShipTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "SpecifiedCalculatedEmission": {
+      "@id": "https://edi3.org/contexts/BSP/Calculated/Emission",
+      "@type": "@id"
+    },
+    "SpecifiedHandlingInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Handling/Instructions",
+      "@type": "@id"
+    },
+    "SpecifiedLogisticsRiskAnalysisResult": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/RiskAnalysisResult",
+      "@type": "@id"
+    },
+    "SpecifiedTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "SpecifiedTransportInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Instructions",
+      "@type": "@id"
+    },
+    "StevedoreTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "TerminalOperatorTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "TransportMeansSecurityOfficerTransportPerson": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Person",
+      "@type": "@id"
+    },
+    "UnloadingTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "UsedLogisticsTransportMeans": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/TransportMeans",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

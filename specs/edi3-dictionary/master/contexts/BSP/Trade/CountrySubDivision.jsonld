@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "FunctionType": "schema:Text",
+    "HierarchicalLevel": "schema:Text",
+    "Identification": "schema:Text",
+    "Name": "schema:Text",
+    "Type": "schema:Text",
+    "AuthorizedTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "SubordinateTradeCountrySubDivision": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/CountrySubDivision",
+      "@type": "@id"
+    },
+    "SuperordinateTradeCountrySubDivision": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/CountrySubDivision",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

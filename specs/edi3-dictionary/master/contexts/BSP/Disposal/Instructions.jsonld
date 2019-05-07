@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "Description": "schema:Text",
+    "Material": "schema:Text",
+    "RecyclingDescription": "schema:Text",
+    "RecyclingProcedure": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

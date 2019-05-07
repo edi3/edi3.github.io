@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "AffectedDistance": "schema:Text",
+    "Pollution": "schema:Text",
+    "Type": "schema:Text",
+    "Weight": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

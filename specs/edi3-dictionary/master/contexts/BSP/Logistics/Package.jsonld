@@ -1,0 +1,45 @@
+{
+  "@context": {
+    "Colour": "schema:Text",
+    "Description": "schema:Text",
+    "GlobalIdentification": "schema:Text",
+    "GrossVolume": "schema:Text",
+    "GrossWeight": "schema:Text",
+    "Identification": "schema:Text",
+    "Information": "schema:Text",
+    "Item": "schema:Text",
+    "Level": "schema:Text",
+    "NetWeight": "schema:Text",
+    "NominalGrossVolume": "schema:Text",
+    "NominalGrossWeight": "schema:Text",
+    "ParentIdentification": "schema:Text",
+    "PerPackageUnit": "schema:Text",
+    "Returnable": "schema.org:Boolean",
+    "Sequence": "schema.org:Number",
+    "SeriesEndIdentification": "schema:Text",
+    "SeriesStartIdentification": "schema:Text",
+    "Type": "schema:Text",
+    "TypeText": "schema:Text",
+    "AssociatedReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "IncludedSupplyChainTradeLineItem": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/TradeLineItem",
+      "@type": "@id"
+    },
+    "LinearSpatialDimension": {
+      "@id": "https://edi3.org/contexts/BSP/Spatial/Dimension",
+      "@type": "@id"
+    },
+    "PhysicalLogisticsShippingMarks": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/ShippingMarks",
+      "@type": "@id"
+    },
+    "UsedSupplyChainPackaging": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Packaging",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

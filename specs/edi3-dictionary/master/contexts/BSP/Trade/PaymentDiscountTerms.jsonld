@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "ActualDiscount": "schema:amount",
+    "Basis": "schema.org:Time",
+    "BasisAmount": "schema:amount",
+    "BasisPeriod": "schema:Text",
+    "Calculation": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

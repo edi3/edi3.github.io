@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "Package": "schema:Text",
+    "PerPackageUnit": "schema:Text",
+    "ProductUnit": "schema:Text",
+    "IncludedSupplyChainPackaging": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Packaging",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

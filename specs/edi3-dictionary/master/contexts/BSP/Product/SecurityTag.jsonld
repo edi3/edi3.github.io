@@ -1,0 +1,7 @@
+{
+  "@context": {
+    "Location": "schema:Text",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

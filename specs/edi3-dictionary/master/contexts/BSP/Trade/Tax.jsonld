@@ -1,0 +1,57 @@
+{
+  "@context": {
+    "AllowanceChargeBasis": "schema:amount",
+    "Applicable": "schema:Text",
+    "Basis": "schema:Text",
+    "BasisAmount": "schema:amount",
+    "Calculated": "schema:amount",
+    "CalculatedRate": "schema.org:Number",
+    "CalculationMethod": "schema:Text",
+    "CalculationSequence": "schema.org:Number",
+    "Category": "schema:Text",
+    "CategoryName": "schema:Text",
+    "Currency": "schema:Text",
+    "CustomsDuty": "schema.org:Boolean",
+    "Deduction": "schema:amount",
+    "DueDateType": "schema:Text",
+    "Exemption": "schema.org:Boolean",
+    "ExemptionAuthorizationIdentification": "schema:Text",
+    "ExemptionReason": "schema:Text",
+    "ExemptionReasonCode": "schema:Text",
+    "GrandTotal": "schema:amount",
+    "Guarantee": "schema:Text",
+    "GuaranteeText": "schema:Text",
+    "Information": "schema:amount",
+    "Jurisdiction": "schema:Text",
+    "LineTotalBasis": "schema:amount",
+    "Payment": "schema:Text",
+    "PaymentMethod": "schema:Text",
+    "Rate": "schema:Text",
+    "RateApplicable": "schema:Text",
+    "Refund": "schema:amount",
+    "RegimeType": "schema:Text",
+    "SelfAssessedBasis": "schema:Text",
+    "SelfAssessedBasisAmount": "schema:amount",
+    "SelfAssessedCalculated": "schema:amount",
+    "TariffDeduction": "schema:Text",
+    "TaxBasisAllowance": "schema.org:Number",
+    "TaxExemptionAuthorityIdentification": "schema:Text",
+    "TaxPoint": "schema:Date",
+    "Type": "schema:Text",
+    "TypeText": "schema:Text",
+    "UnitBasis": "schema:amount",
+    "ApplicableTradeLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Location",
+      "@type": "@id"
+    },
+    "ServiceSupplyTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "SpecifiedTradeAccountingAccount": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/AccountingAccount",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

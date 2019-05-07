@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "Actual": "schema:amount",
+    "Basis": "schema:amount",
+    "Calculation": "schema:Text",
+    "Charge": "schema.org:Boolean",
+    "Description": "schema:Text",
+    "Reason": "schema:Text",
+    "CategoryAppliedTax": {
+      "@id": "https://edi3.org/contexts/BSP/Applied/Tax",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

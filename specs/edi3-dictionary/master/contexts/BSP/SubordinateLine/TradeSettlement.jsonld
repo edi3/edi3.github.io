@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "ApplicableTradeTax": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Tax",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

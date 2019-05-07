@@ -1,0 +1,7 @@
+{
+  "@context": {
+    "Description": "schema:Text",
+    "Identification": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

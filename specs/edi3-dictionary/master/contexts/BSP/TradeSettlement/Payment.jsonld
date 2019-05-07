@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "ClosingBookDue": "schema.org:Time",
+    "EndToEndIdentification": "schema:Text",
+    "Instruction": "schema:Text",
+    "RequestedExecution": "schema.org:Time",
+    "SpecifiedPaymentTradeSettlement": {
+      "@id": "https://edi3.org/contexts/BSP/Payment/TradeSettlement",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

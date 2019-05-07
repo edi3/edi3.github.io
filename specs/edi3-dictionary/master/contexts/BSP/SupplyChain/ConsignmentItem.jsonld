@@ -1,0 +1,177 @@
+{
+  "@context": {
+    "CargoToleranceInformation": "schema:Text",
+    "ChargeableWeight": "schema:Text",
+    "DamageRemarks": "schema:Text",
+    "DeclaredValueForCarriage": "schema:amount",
+    "DeclaredValueForCustoms": "schema:amount",
+    "DeclaredValueForStatistics": "schema:amount",
+    "DeliveryInstructions": "schema:Text",
+    "ExportType": "schema:Text",
+    "FOB": "schema:amount",
+    "FirstTypeExtension": "schema:Text",
+    "GlobalIdentification": "schema:Text",
+    "GrossVolume": "schema:Text",
+    "GrossWeight": "schema:Text",
+    "Identification": "schema:Text",
+    "ImportType": "schema:Text",
+    "Information": "schema:Text",
+    "InsuranceValue": "schema:amount",
+    "Invoice": "schema:amount",
+    "LoadingLength": "schema:Text",
+    "NationalTypeExtension": "schema:Text",
+    "NetWeight": "schema:Text",
+    "Package": "schema:Text",
+    "PackageType": "schema:Text",
+    "SecondTypeExtension": "schema:Text",
+    "Sequence": "schema.org:Number",
+    "SpecialInstructions": "schema:Text",
+    "Tariff": "schema:Text",
+    "TotalCharge": "schema:amount",
+    "TotalExportExitToImportEntryCharge": "schema:amount",
+    "TradeLineItem": "schema:Text",
+    "Type": "schema:Text",
+    "TypeExtension": "schema:Text",
+    "ApplicableCrossBorderCustomsValuation": {
+      "@id": "https://edi3.org/contexts/BSP/CrossBorder/CustomsValuation",
+      "@type": "@id"
+    },
+    "ApplicableCrossBorderRegulatoryProcedure": {
+      "@id": "https://edi3.org/contexts/BSP/CrossBorder/RegulatoryProcedure",
+      "@type": "@id"
+    },
+    "ApplicableLogisticsServiceCharge": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/ServiceCharge",
+      "@type": "@id"
+    },
+    "ApplicableLogisticsTransportMeans": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/TransportMeans",
+      "@type": "@id"
+    },
+    "ApplicableNote": {
+      "@id": "https://edi3.org/contexts/BSP//Note",
+      "@type": "@id"
+    },
+    "ApplicableTransportDangerousGoods": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/DangerousGoods",
+      "@type": "@id"
+    },
+    "AssociatedReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "AssociatedReferencedLogisticsTransportEquipment": {
+      "@id": "https://edi3.org/contexts/BSP/ReferencedLogistics/TransportEquipment",
+      "@type": "@id"
+    },
+    "BorderClearanceTransportInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Instructions",
+      "@type": "@id"
+    },
+    "DeclaredForCustomsLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "DeliveryTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "DeliveryTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "DespatchTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "DestinationTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "ExaminationTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "ExportTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "ExportTradeGeopoliticalRegion": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/GeopoliticalRegion",
+      "@type": "@id"
+    },
+    "HandlingHandlingInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Handling/Instructions",
+      "@type": "@id"
+    },
+    "ImportationTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "IncludedSupplyChainTradeLineItem": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/TradeLineItem",
+      "@type": "@id"
+    },
+    "LinearSpatialDimension": {
+      "@id": "https://edi3.org/contexts/BSP/Spatial/Dimension",
+      "@type": "@id"
+    },
+    "ManufacturerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "NatureIdentificationTransportCargo": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Cargo",
+      "@type": "@id"
+    },
+    "OriginTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "OriginTradeGeopoliticalRegion": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/GeopoliticalRegion",
+      "@type": "@id"
+    },
+    "PhysicalLogisticsShippingMarks": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/ShippingMarks",
+      "@type": "@id"
+    },
+    "PickUpTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "PreviousAdministrativeReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "QuarantineQuarantineInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Quarantine/Instructions",
+      "@type": "@id"
+    },
+    "ReportedLogisticsStatus": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Status",
+      "@type": "@id"
+    },
+    "TransitTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "TransportContractReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "TransportLogisticsPackage": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Package",
+      "@type": "@id"
+    },
+    "TransportTransportSettingTemperature": {
+      "@id": "https://edi3.org/contexts/BSP/TransportSetting/Temperature",
+      "@type": "@id"
+    },
+    "VanningTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

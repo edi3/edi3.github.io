@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "Description": "schema:Text",
+    "DescriptionCode": "schema:Text",
+    "Handling": "schema:Text",
+    "Identification": "schema:Text",
+    "MaximumStackabilityApplicable": "schema:Text",
+    "MaximumStackabilityWeightApplicable": "schema:Text",
+    "MaximumStorageHumidityApplicable": "schema:Text",
+    "MinimumStorageHumidityApplicable": "schema:Text",
+    "Procedure": "schema:Text",
+    "ApplicableInstructedTemperature": {
+      "@id": "https://edi3.org/contexts/BSP/Instructed/Temperature",
+      "@type": "@id"
+    },
+    "ApplicableTransportSettingTemperature": {
+      "@id": "https://edi3.org/contexts/BSP/TransportSetting/Temperature",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

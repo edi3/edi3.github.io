@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "AmountType": "schema:Text",
+    "CostReferenceDimensionPattern": "schema:Text",
+    "Identification": "schema:Text",
+    "Name": "schema:Text",
+    "SetTrigger": "schema:Text",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

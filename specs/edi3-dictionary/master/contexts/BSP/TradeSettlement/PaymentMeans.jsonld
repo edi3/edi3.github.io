@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "GuaranteeMethod": "schema:Text",
+    "Identification": "schema:Text",
+    "Information": "schema:Text",
+    "PaymentChannel": "schema:Text",
+    "PaymentMethod": "schema:Text",
+    "Type": "schema:Text",
+    "ApplicableTradeSettlementFinancialCard": {
+      "@id": "https://edi3.org/contexts/BSP/TradeSettlement/FinancialCard",
+      "@type": "@id"
+    },
+    "PartyCreditorFinancialAccount": {
+      "@id": "https://edi3.org/contexts/BSP/Creditor/FinancialAccount",
+      "@type": "@id"
+    },
+    "PartyDebtorFinancialAccount": {
+      "@id": "https://edi3.org/contexts/BSP/Debtor/FinancialAccount",
+      "@type": "@id"
+    },
+    "SpecifiedCreditorFinancialInstitution": {
+      "@id": "https://edi3.org/contexts/BSP/Creditor/FinancialInstitution",
+      "@type": "@id"
+    },
+    "SpecifiedDebtorFinancialInstitution": {
+      "@id": "https://edi3.org/contexts/BSP/Debtor/FinancialInstitution",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

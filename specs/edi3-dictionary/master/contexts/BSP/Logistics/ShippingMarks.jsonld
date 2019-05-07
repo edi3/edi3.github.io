@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "Marking": "schema:Text",
+    "MarkingInstruction": "schema:Text",
+    "BarcodeLogisticsLabel": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Label",
+      "@type": "@id"
+    },
+    "RFIDLogisticsLabel": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Label",
+      "@type": "@id"
+    },
+    "VINLogisticsLabel": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Label",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

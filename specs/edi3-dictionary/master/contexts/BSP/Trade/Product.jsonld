@@ -1,0 +1,173 @@
+{
+  "@context": {
+    "AdditionalDescription": "schema:Text",
+    "AreaDensity": "schema:Text",
+    "BatchIdentification": "schema:Text",
+    "BrandName": "schema:Text",
+    "BrandRangeName": "schema:Text",
+    "BuyerAssignedIdentification": "schema:Text",
+    "Colour": "schema:Text",
+    "ColourDescription": "schema:Text",
+    "CommonName": "schema:Text",
+    "ConciseDescription": "schema:Text",
+    "Configurable": "schema.org:Boolean",
+    "ConsumerAgeDescription": "schema:Text",
+    "ConsumerGenderDescription": "schema:Text",
+    "ContentUnit": "schema:Text",
+    "ContentVariableMeasure": "schema.org:Boolean",
+    "CustomerAssignedIdentification": "schema:Text",
+    "Description": "schema:Text",
+    "Designation": "schema:Text",
+    "DrainedNetWeight": "schema:Text",
+    "EndItemName": "schema:Text",
+    "EndItemType": "schema:Text",
+    "FormattedCancellationAnnouncedLaunch": "schema.org:Time",
+    "FormattedLatestProductDataChange": "schema.org:Time",
+    "FromDeliveryLifeSpan": "schema:Text",
+    "FromOpeningLifeSpan": "schema:Text",
+    "FromProductionLifeSpan": "schema:Text",
+    "FunctionDescription": "schema:Text",
+    "GeneticModificationExtent": "schema:Text",
+    "GlobalExtensionIdentification": "schema:Text",
+    "GlobalIdentification": "schema:Text",
+    "GrossVolume": "schema:Text",
+    "GrossWeight": "schema:Text",
+    "Identification": "schema:Text",
+    "IncludedProductContentUnit": "schema:Text",
+    "IncludedProductType": "schema:Text",
+    "IndustryAssignedIdentification": "schema:Text",
+    "InnerPack": "schema:Text",
+    "InnerPackContentUnit": "schema:Text",
+    "IntendedUse": "schema:Text",
+    "ManufacturerAssignedIdentification": "schema:Text",
+    "MarkedSerialNumber": "schema.org:Boolean",
+    "MarketingDescription": "schema:Text",
+    "ModelIdentification": "schema:Text",
+    "ModelName": "schema:Text",
+    "Name": "schema:Text",
+    "NetVolume": "schema:Text",
+    "NetWeight": "schema:Text",
+    "PhysicalFormDescription": "schema:Text",
+    "PrePackaged": "schema.org:Boolean",
+    "ProductGroup": "schema:Text",
+    "ProductionDiscontinued": "schema.org:Time",
+    "PromotionalVariantIdentification": "schema:Text",
+    "RecyclingType": "schema:Text",
+    "RegulationConformity": "schema:Text",
+    "ScientificName": "schema:Text",
+    "Season": "schema:Text",
+    "SeasonDescription": "schema:Text",
+    "SellerAssignedIdentification": "schema:Text",
+    "SizeDescription": "schema:Text",
+    "Status": "schema:Text",
+    "SubBrandName": "schema:Text",
+    "TrackingSystem": "schema:Text",
+    "TradeName": "schema:Text",
+    "Type": "schema:Text",
+    "UnitType": "schema:Text",
+    "UseDescription": "schema:Text",
+    "VariableMeasure": "schema.org:Boolean",
+    "VariantDescription": "schema:Text",
+    "ApplicableDisposalInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Disposal/Instructions",
+      "@type": "@id"
+    },
+    "ApplicableKeyword": {
+      "@id": "https://edi3.org/contexts/BSP//Keyword",
+      "@type": "@id"
+    },
+    "ApplicableMaterialGoodsCharacteristic": {
+      "@id": "https://edi3.org/contexts/BSP/Material/GoodsCharacteristic",
+      "@type": "@id"
+    },
+    "ApplicableProductCharacteristic": {
+      "@id": "https://edi3.org/contexts/BSP/Product/Characteristic",
+      "@type": "@id"
+    },
+    "ApplicableSupplyChainPackaging": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Packaging",
+      "@type": "@id"
+    },
+    "ApplicableTradeProductCertification": {
+      "@id": "https://edi3.org/contexts/BSP/TradeProduct/Certification",
+      "@type": "@id"
+    },
+    "ApplicableTransportDangerousGoods": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/DangerousGoods",
+      "@type": "@id"
+    },
+    "AssemblyTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "AttachedProductSecurityTag": {
+      "@id": "https://edi3.org/contexts/BSP/Product/SecurityTag",
+      "@type": "@id"
+    },
+    "BrandOwnerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "DesignatedProductClassification": {
+      "@id": "https://edi3.org/contexts/BSP/Product/Classification",
+      "@type": "@id"
+    },
+    "IncludedReferencedProduct": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Product",
+      "@type": "@id"
+    },
+    "IndividualTradeProductInstance": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/ProductInstance",
+      "@type": "@id"
+    },
+    "InformationNote": {
+      "@id": "https://edi3.org/contexts/BSP//Note",
+      "@type": "@id"
+    },
+    "LegalRightsOwnerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "LinearSpatialDimension": {
+      "@id": "https://edi3.org/contexts/BSP/Spatial/Dimension",
+      "@type": "@id"
+    },
+    "ManufactureTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "ManufacturerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "MarketingTradeProductFeature": {
+      "@id": "https://edi3.org/contexts/BSP/TradeProduct/Feature",
+      "@type": "@id"
+    },
+    "OriginLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "OriginTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "PresentationSpecifiedBinaryFile": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/BinaryFile",
+      "@type": "@id"
+    },
+    "ReferenceReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "SpecifiedProductCertificate": {
+      "@id": "https://edi3.org/contexts/BSP/Product/Certificate",
+      "@type": "@id"
+    },
+    "SuppliedFromTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "Country": "schema:Text",
+    "Identification": "schema:Text",
+    "LastRegisteredYear": "schema.org:Time",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "AccountName": "schema:Text",
+    "IBANIdentification": "schema:Text",
+    "ProprietaryIdentification": "schema:Text",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

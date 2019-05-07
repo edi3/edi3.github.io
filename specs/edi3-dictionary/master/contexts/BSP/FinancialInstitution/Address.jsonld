@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "BuildingNumber": "schema:Text",
+    "City": "schema:Text",
+    "CityName": "schema:Text",
+    "Country": "schema:Text",
+    "CountryName": "schema:Text",
+    "CountrySubDivision": "schema:Text",
+    "CountrySubDivisionName": "schema:Text",
+    "DepartmentName": "schema:Text",
+    "LineFive": "schema:Text",
+    "LineFour": "schema:Text",
+    "LineOne": "schema:Text",
+    "LineThree": "schema:Text",
+    "LineTwo": "schema:Text",
+    "PostOfficeBox": "schema:Text",
+    "Postcode": "schema:Text",
+    "StreetName": "schema:Text",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

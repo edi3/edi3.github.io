@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "AdditionalReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "OrderReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "ProductTradePrice": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Price",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "Description": "schema:Text",
+    "Onboard": "schema:Text",
+    "Sequence": "schema.org:Number",
+    "Type": "schema:Text",
+    "SpecifiedLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

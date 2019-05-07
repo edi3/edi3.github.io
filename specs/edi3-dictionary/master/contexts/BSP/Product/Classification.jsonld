@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "Class": "schema:Text",
+    "ClassName": "schema:Text",
+    "SubClass": "schema:Text",
+    "System": "schema:Text",
+    "SystemName": "schema:Text",
+    "ApplicableReferencedStandard": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Standard",
+      "@type": "@id"
+    },
+    "ClassProductCharacteristic": {
+      "@id": "https://edi3.org/contexts/BSP/Product/Characteristic",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "@context": {
+    "Acceptance": "schema.org:Time",
+    "Attachment": "schema:Text",
+    "AuthenticatedOriginal": "schema.org:Boolean",
+    "Category": "schema:Text",
+    "Copy": "schema.org:Boolean",
+    "ElectronicPresentation": "schema.org:Boolean",
+    "FormattedIssue": "schema.org:Time",
+    "GlobalIdentification": "schema:Text",
+    "Identification": "schema:Text",
+    "Information": "schema:Text",
+    "IssuerAssignedIdentification": "schema:Text",
+    "Language": "schema:Text",
+    "Line": "schema:Text",
+    "Name": "schema:Text",
+    "Page": "schema:Text",
+    "PreviousRevisionIdentification": "schema:Text",
+    "Receipt": "schema.org:Time",
+    "ReferenceType": "schema:Text",
+    "RelationshipType": "schema:Text",
+    "Remarks": "schema:Text",
+    "RevisionIdentification": "schema:Text",
+    "SectionName": "schema:Text",
+    "Status": "schema:Text",
+    "SubordinateLine": "schema:Text",
+    "Type": "schema:Text",
+    "URIIdentification": "schema:Text",
+    "AcceptableSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "AttachedSpecifiedBinaryFile": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/BinaryFile",
+      "@type": "@id"
+    },
+    "ContractualDocumentClause": {
+      "@id": "https://edi3.org/contexts/BSP/Document/Clause",
+      "@type": "@id"
+    },
+    "EffectiveSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "IncludedNote": {
+      "@id": "https://edi3.org/contexts/BSP//Note",
+      "@type": "@id"
+    },
+    "IssueLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "IssuerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "LodgementLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "RecipientTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "SenderTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "SignatoryDocumentAuthentication": {
+      "@id": "https://edi3.org/contexts/BSP/Document/Authentication",
+      "@type": "@id"
+    },
+    "SpecifiedDocumentStatus": {
+      "@id": "https://edi3.org/contexts/BSP/Document/Status",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

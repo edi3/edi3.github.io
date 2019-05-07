@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "ProcessingTransaction": "schema.org:Time",
+    "SpecifiedTransaction": "schema:Text",
+    "Test": "schema.org:Boolean",
+    "SpecifiedDocumentContextParameter": {
+      "@id": "https://edi3.org/contexts/BSP/DocumentContext/Parameter",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

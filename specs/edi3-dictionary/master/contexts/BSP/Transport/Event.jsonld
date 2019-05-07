@@ -1,0 +1,68 @@
+{
+  "@context": {
+    "ActualArrivalRelated": "schema.org:Time",
+    "ActualDepartureRelated": "schema.org:Time",
+    "ActualOccurrence": "schema.org:Time",
+    "ArrivalRelated": "schema.org:Time",
+    "DepartureRelated": "schema.org:Time",
+    "Description": "schema:Text",
+    "EstimatedOccurrence": "schema.org:Time",
+    "EstimatedTransportMeansArrivalOccurrence": "schema.org:Time",
+    "Identification": "schema:Text",
+    "Recorded": "schema.org:Time",
+    "ReportedConditionType": "schema:Text",
+    "RequestedOccurrence": "schema.org:Time",
+    "ScheduledArrivalRelated": "schema.org:Time",
+    "ScheduledDepartureRelated": "schema.org:Time",
+    "ScheduledOccurrence": "schema.org:Time",
+    "SecurityLevel": "schema:Text",
+    "Type": "schema:Text",
+    "Unit": "schema:Text",
+    "Value": "schema:Text",
+    "ApplicableNote": {
+      "@id": "https://edi3.org/contexts/BSP//Note",
+      "@type": "@id"
+    },
+    "CertifyingTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "OccurrenceLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "OccurrenceSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "RelatedLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "RelatedReferencedTransportService": {
+      "@id": "https://edi3.org/contexts/BSP/ReferencedTransport/Service",
+      "@type": "@id"
+    },
+    "RelatedSpecifiedObservation": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Observation",
+      "@type": "@id"
+    },
+    "RelatedTransportRoute": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Route",
+      "@type": "@id"
+    },
+    "ReportingTransportMonitoringIOTDevice": {
+      "@id": "https://edi3.org/contexts/BSP/TransportMonitoring/IOTDevice",
+      "@type": "@id"
+    },
+    "SpecifiedReferencedTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/ReferencedTransport/Event",
+      "@type": "@id"
+    },
+    "SpecifiedTransportInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Instructions",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "ManufacturingProcessDescription": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

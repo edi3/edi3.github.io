@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "Actual": "schema:amount",
+    "Basis": "schema:amount",
+    "BasisQuantity": "schema:Text",
+    "Calculation": "schema:Text",
+    "Charge": "schema.org:Boolean",
+    "Identification": "schema:Text",
+    "Prepaid": "schema.org:Boolean",
+    "Reason": "schema:Text",
+    "ReasonText": "schema:Text",
+    "Sequence": "schema.org:Number",
+    "Type": "schema:Text",
+    "UnitBasis": "schema:amount",
+    "ActualTradeCurrencyExchange": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/CurrencyExchange",
+      "@type": "@id"
+    },
+    "CategoryTradeTax": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Tax",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "Category": "schema:Text",
+    "Country": "schema:Text",
+    "CountrySubDivision": "schema:Text",
+    "Identification": "schema:Text",
+    "LastRegisteredYear": "schema.org:Time",
+    "Licence": "schema:Text",
+    "Recorded": "schema:Date",
+    "Type": "schema:Text",
+    "Version": "schema:Text",
+    "ValiditySpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

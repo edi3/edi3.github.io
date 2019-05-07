@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "IOSSIdentification": "schema:Text",
+    "Identification": "schema:Text",
+    "AssociatedRegisteredTax": {
+      "@id": "https://edi3.org/contexts/BSP/Registered/Tax",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

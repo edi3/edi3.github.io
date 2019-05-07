@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "CompleteDelivery": "schema.org:Boolean",
+    "DeliveryTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "FacilityTradeContact": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Contact",
+      "@type": "@id"
+    },
+    "IncludedTransportWasteMaterialComponent": {
+      "@id": "https://edi3.org/contexts/BSP/TransportWaste/MaterialComponent",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}
