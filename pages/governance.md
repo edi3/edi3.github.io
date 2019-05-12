@@ -32,7 +32,7 @@ Specifications will follow [semver conventions](https://semver.org/) with a majo
 
 We aim to support implementers through their development efforts and conformance testing process.
 
-* [join our slack team](//chat.edi3.org/) and subscribe to whichever channels match your implementation needs (we have one channel per specification). You'll be able to chat directly with the team that wrote the specification and we'll do our best to help you with any questions that might arise as you build your implementation.
+* [join our slack team](https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg) and subscribe to whichever channels match your implementation needs (we have one channel per specification). You'll be able to chat directly with the team that wrote the specification and we'll do our best to help you with any questions that might arise as you build your implementation.
 * Every specification will follow  [IETF "MUST", "SHOULD" "MAY"](https://www.ietf.org/rfc/rfc2119.txt) language so that it's clear what a conforming implementation means.  We will also aim to provide free open source conformance testing tools in the same GitHub repository that is used for specification development. Test your implementation using these tools.
 * When you are confident that you have a conformant application then let us know by raising a ticket in the corresponding specification repository to request that your product ro service be listed on our "known implementations" list.  Attach the compliance report from the testing tool and, once verified, we'll add you to the list.
 
