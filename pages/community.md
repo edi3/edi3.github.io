@@ -13,7 +13,7 @@ For those that just want to stay informed. [Subscribe](//eepurl.com/dMLfdU) to t
 
 ## Join the Conversation
 
-For those that want to chat to some experts. [Join](//chat.edi3.org/) the edi3 Slack team and subscribe to as many channels as you wish (there's one for each spec and a general channel).  You can join the conversation, make suggestions, or ask questions and get help.
+For those that want to chat to some experts. [Join](https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg) the edi3 Slack team and subscribe to as many channels as you wish (there's one for each spec and a general channel).  You can join the conversation, make suggestions, or ask questions and get help.
 
 ## Help with Development
 
