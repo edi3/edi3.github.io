@@ -2,50 +2,50 @@
   "metrics": [
     {
       "name": "unique visitors",
-      "lastWeek": 64,
-      "total": 265
+      "lastWeek": 46,
+      "total": 291
     },
     {
       "name": "registered members",
-      "lastWeek": 5,
-      "total": 42
+      "lastWeek": 6,
+      "total": 48
     },
     {
       "name": "chat message count",
-      "lastWeek": 675,
-      "total": 2476
+      "lastWeek": 340,
+      "total": 2816
     },
     {
       "name": "site updates",
-      "lastWeek": 5,
-      "total": 221
+      "lastWeek": 1,
+      "total": 223
     },
     {
       "name": "issues",
       "lastWeek": 0,
-      "total": 3
+      "total": 23
     }
   ],
   "mostActive": [
     {
       "type": "repository",
       "value": "Code Lists",
-      "url": "https://github.com/edi3/edi3-model-interchange"
+      "url": "https://github.com/edi3/edi3-codelists"
     },
     {
       "type": "contributor",
-      "value": "Steven Capell",
-      "url": "https://github.com/onthebreeze"
+      "value": "Romain Genoulaz",
+      "url": "https://github.com/rgenoulaz"
     }
   ],
   "links": [
     {
       "text": "Google site metrics",
-      "url": "https://s3-ap-southeast-2.amazonaws.com/edi3-metrics/Analytics+All+Web+Site+Data+Audience+Overview+20190301-20190512.pdf"
+      "url": "https://s3-ap-southeast-2.amazonaws.com/edi3-metrics/Analytics+All+Web+Site+Data+Audience+Overview+20190301-20190519.pdf"
     },
     {
       "text": "Slack team metrics",
-      "url": "https://s3-ap-southeast-2.amazonaws.com/edi3-metrics/edi3+Enterprise+Analytics+All+time+-+May+13+2019.csv"
+      "url": "https://s3-ap-southeast-2.amazonaws.com/edi3-metrics/edi3+Enterprise+Analytics+All+time+-+May+20+2019.csv"
     },
     {
       "text": "Github project metrics",
