@@ -10,30 +10,81 @@ info:
 servers:
 - url: "https://codelists.api.edi3.org/recommendation-21"
 paths:
-  /packageTypes:
+  /packageTypes/{code}:
     get:
       tags:
       - packageTypes
       summary: Search for Codes for Passengers, Types of Cargo, Packages and Packaging Materials (with Complementary Codes for Package Names) as defined in rec 21
       description: This api will return a (paged) list of codes for package types used in international trade.
-      operationId: searchPackageTypes
       parameters:
-      - name: Code
+      - name: code
+        in: path
+        required: true
+        description: "Two-character alphanumeric code value"
+        schema:
+          type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                  $ref: '#/components/schemas/PackageType'
+              example:
+              - Code: 1F
+                Name: Container, flexible
+                Description: A packaging container of flexible construction.
+                Numeric code: 93
+        400:
+          description: ' Bad request - Issue with parameter'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                identifier: a710a2af-4f0d-458b-8792-23fe4f736d9d
+                error: pagesize needs to be between 1 and 1000.
+        404:
+          description: No data found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                identifier: b1f1fef1-59ad-4978-bed8-3ff96d6d3587
+                error: No coded representation of package type names found
+        500:
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                identifier: 0407936e-d2ad-41e9-99e2-05a5919c3075
+                error: An unexpected exception occured
+  /packageTypes:
+    get:
+      tags:
+      - packageTypes
+      summary: Get one single package Type for Codes for Passengers, Types of Cargo, Packages and Packaging Materials as defined in rec 21
+      description: This api will return a single package type used in international trade.
+      parameters:
+      - name: code
         in: query
         description: "Two-character alphanumeric code value"
         schema:
           type: string
-      - name: Name
+      - name: name
         in: query
         description: "Code value name"
         schema:
           type: string
-      - name: Description
+      - name: description
         in: query
         description: "A plain text specification"
         schema:
           type: string
-      - name: NumericCode
+      - name: numericCode
         in: query
         description: "Two digit numeric code value"
         schema:
@@ -44,7 +95,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PackageTypes'
+                type: array
+                items:
+                  $ref: '#/components/schemas/PackageType'
               example:
               - Code: 1F
                 Name: Container, flexible
@@ -86,19 +139,15 @@ components:
           type: string
         error:
           type: string
-    PackageTypes:
-      type: array
-      items:
-        $ref: '#/components/schemas/PackageType'
     PackageType:
       type: object
       properties:
-        Code:
+        code:
           description: "Two-character alphanumeric code value"
           type: string
-        Name:
+        name:
           description: "Code value name"
           type: string
-        Description:
+        description:
           description: "A plain text specification"
           type: string
