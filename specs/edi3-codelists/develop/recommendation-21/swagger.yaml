@@ -31,10 +31,10 @@ paths:
               schema:
                   $ref: '#/components/schemas/PackageType'
               example:
-              - Code: 1F
-                Name: Container, flexible
-                Description: A packaging container of flexible construction.
-                Numeric code: 93
+              - code: 1F
+                name: Container, flexible
+                description: A packaging container of flexible construction.
+                numericCode: [93, 94]
         400:
           description: ' Bad request - Issue with parameter'
           content:
@@ -84,11 +84,6 @@ paths:
         description: "A plain text specification"
         schema:
           type: string
-      - name: numericCode
-        in: query
-        description: "Two digit numeric code value"
-        schema:
-          type: string
       responses:
         200:
           description: OK
@@ -99,10 +94,10 @@ paths:
                 items:
                   $ref: '#/components/schemas/PackageType'
               example:
-              - Code: 1F
-                Name: Container, flexible
-                Description: A packaging container of flexible construction.
-                Numeric code: 93
+              - code: 1F
+                name: Container, flexible
+                description: A packaging container of flexible construction.
+                numericCode: [93, 94]
         400:
           description: ' Bad request - Issue with parameter'
           content:
@@ -151,3 +146,8 @@ components:
         description:
           description: "A plain text specification"
           type: string
+        numericCode:
+          description: "Numeric coding for package types"
+          type: array
+          items:
+            type: integer
