@@ -178,33 +178,32 @@
 <li class="toc-entry toc-h2"><a href="#glossary">Glossary</a></li>
 <li class="toc-entry toc-h2"><a href="#other-projects">Other Projects</a></li>
 <li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
-<li class="toc-entry toc-h1"><a href="#high-level-requirements">High Level Requirements</a>
-<ul>
 <li class="toc-entry toc-h2"><a href="#architectural-principles">Architectural Principles</a></li>
-<li class="toc-entry toc-h2"><a href="#high-level-requirements-1">High Level Requirements</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#high-level-requirements">High Level Requirements</a></li>
 <li class="toc-entry toc-h1"><a href="#the-icl-specifications">The ICL Specifications</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#architecture-overview">Architecture Overview</a></li>
 <li class="toc-entry toc-h2"><a href="#message-api">Message API</a></li>
+<li class="toc-entry toc-h2"><a href="#subscriptions-api">Subscriptions API</a></li>
+<li class="toc-entry toc-h2"><a href="#channel-api">Channel API</a></li>
+<li class="toc-entry toc-h2"><a href="#document-api">Document API</a></li>
 <li class="toc-entry toc-h2"><a href="#routing-api">Routing API</a></li>
-<li class="toc-entry toc-h2"><a href="#repository-api">Repository API</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#the-icl-semantic-layer">The ICL Semantic Layer</a>
+<li class="toc-entry toc-h1"><a href="#icl-business-applications">ICL Business Applications</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#semantic-overview">Semantic Overview</a></li>
 <li class="toc-entry toc-h2"><a href="#origin-data-example">Origin Data Example</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#the-icl-technology-abstraction">The ICL Technology Abstraction</a>
+<li class="toc-entry toc-h1"><a href="#icl-distributed-ledger-channels">ICL Distributed Ledger Channels</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#ethereum-mapping">Ethereum Mapping</a></li>
 <li class="toc-entry toc-h2"><a href="#hyperledger-fabric-mapping">Hyperledger Fabric Mapping</a></li>
 <li class="toc-entry toc-h2"><a href="#hyperledger-sawtooth-mapping">Hyperledger Sawtooth Mapping</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h1"><a href="#icl-security-architecture">ICL Security Architecture</a></li>
 </ul>
 </div>
             <h2 id="licence">Licence</h2>
@@ -266,6 +265,10 @@ in this document are to be interpreted as described in RFC 2119.</p>
       <td>An organisation that has been accredited to issue one or more certificate types - such as a chamber of commerce that may issue Certificates of Origin</td>
     </tr>
     <tr>
+      <td>DLT</td>
+      <td>Distributed Ledger Technology, of which Blockchain is the most common example.</td>
+    </tr>
+    <tr>
       <td>Document</td>
       <td>When capitalised in this document, this term refers to any document which gives authorisation for an importer or exporter to take some action (or be granted some further authority) with respect to an international shipment of goods. e.g. a Certificate of Origin, a Phytosanitary Certificate, an Export Declaration, etc</td>
     </tr>
@@ -322,8 +325,6 @@ in this document are to be interpreted as described in RFC 2119.</p>
   <li>Commercial trade data platforms/pipelines are an emerging capability that seek to provide their customers with and-to-end supply chain visibility and management. They are essentially multi-source data aggregators and their scope usually includes some or all of trade, transport, financial, and regulatory data. The data managed by commerciasl pipleines is not only traditional trade documents (invoices, bills of lading etc) but also IoT streams like data feeds from instrumented smart containers. These platforms can provide significant value to their stakeholders and have a scope much larger than G2G data sharing. The ICL complements these commercial services and does not compete with them.</li>
 </ul>
 
-<h1 id="high-level-requirements">High Level Requirements</h1>
-
 <h2 id="architectural-principles">Architectural Principles</h2>
 
 <table>
@@ -373,7 +374,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
   </tbody>
 </table>
 
-<h2 id="high-level-requirements-1">High Level Requirements</h2>
+<h2 id="high-level-requirements">High Level Requirements</h2>
 
 <table>
   <thead>
@@ -466,25 +467,43 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <h2 id="architecture-overview">Architecture Overview</h2>
 
+<p>The ICL Specification comprises 5 standard APIs as shown (in yellow) in the conceptual architecture diagram below. The APIs are organised into three layers</p>
+
+<ul>
+  <li>The Channels layer represents the collection of compliant DLT solutions that can be used for cross-border document exchange. As an increasing number of DLT vendors support the channel API specification, so there will be an increasing number of channel options for ICL nodes.</li>
+  <li>The ICL node layer represents the compomnents deployed by any country that wishes to participate in the inter-customs ledger. It provides an abstraction above specific DLT channels but remains agnoistic of specific cross-border business processes such as origin data exchange. This layer provides one or more secure document repositories (Document API) and implements the routing logic for recording channel transactions (Message API) and listening for relevant channel events (Subscriptions API).</li>
+  <li>The applications layer represents any platform that will make use of the ICL for cross border exchange. THis is the business process specific layer and will typically be represented by single window applications or other trade &amp; logistics applications. The diagramn shows a CoO (Certifcate of Origin) API as an example but this lay coiuld support any trade document (invoice, Vill of Lading, etc).</li>
+</ul>
+
+<p><img src="ICL_API_Architecture.png" alt="API Architecture" /></p>
+
+<p>ICL node implementations need access to routing information such as “to send document type X from Country A to Country B, use DLT channel 2”.  Although this could be hard-coded in each node, as the number of countries, channels, and document types increases, it is likely that a centralised channel directory will emerge (perhaps operated by the UN) that maintains routing rules in one place for any ICL node to access via a standard API.</p>
+
 <h2 id="message-api">Message API</h2>
+
+<h2 id="subscriptions-api">Subscriptions API</h2>
+
+<h2 id="channel-api">Channel API</h2>
+
+<h2 id="document-api">Document API</h2>
 
 <h2 id="routing-api">Routing API</h2>
 
-<h2 id="repository-api">Repository API</h2>
-
-<h1 id="the-icl-semantic-layer">The ICL Semantic Layer</h1>
+<h1 id="icl-business-applications">ICL Business Applications</h1>
 
 <h2 id="semantic-overview">Semantic Overview</h2>
 
 <h2 id="origin-data-example">Origin Data Example</h2>
 
-<h1 id="the-icl-technology-abstraction">The ICL Technology Abstraction</h1>
+<h1 id="icl-distributed-ledger-channels">ICL Distributed Ledger Channels</h1>
 
 <h2 id="ethereum-mapping">Ethereum Mapping</h2>
 
 <h2 id="hyperledger-fabric-mapping">Hyperledger Fabric Mapping</h2>
 
 <h2 id="hyperledger-sawtooth-mapping">Hyperledger Sawtooth Mapping</h2>
+
+<h1 id="icl-security-architecture">ICL Security Architecture</h1>
 
 
         </div>
