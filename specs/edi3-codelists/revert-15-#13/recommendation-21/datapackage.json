@@ -1,0 +1,44 @@
+{
+	"name": "unece-package-codes",
+	"title": "UNECE/CEFACT package codes",
+	"licensces": [{
+		"name": "ODC-PDDL-1.0",
+		"path": "http://opendatacommons.org/licenses/pddl/",
+		"title": "Open Data Commons Public Domain Dedication and License v1.0"
+	}],
+	"description": "Coded representations of the package type names used in International Trade (UNECE/CEFACT Trade Facilitation Recommendation No.21)",
+	"version": "9.0.0",
+	"sources": [{
+		"name": "UNECE",
+		"path": "http://www.unece.org/ro/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/code-list-recommendations.html",
+		"title": "UNECE"
+	}],
+	"resources": [{
+		"path": "data/data.csv",
+		"name": "data",
+		"schema": {
+			"fields": [{
+					"name": "Code",
+					"type": "string",
+					"description": "A 2 character alpha numeric code value agreed by the UN/CEFACT content management group",
+					"pattern": "[A-Z]{2}"
+				},
+				{
+					"name": "Name",
+					"type": "string",
+					"description": "Code value name"
+				},
+				{
+					"name": "Description",
+					"type": "string",
+					"description": "A plain text specification"
+				},
+				{
+					"name": "Numeric Code",
+					"type": "string",
+					"description": "Two digit numeric code value"
+				}
+			]
+		}
+	}]
+}

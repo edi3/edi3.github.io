@@ -1,0 +1,153 @@
+openapi: 3.0.1
+info:
+  title: UNECE Recommendation 21 - Codes for Passengers, Types of Cargo, Packages and Packaging Materials (with Complementary Codes for Package Names)
+  description: |
+    Recommendation 21 presents coded representations for the package type names used in international trade. The codes are intended for use in manual and/or automated systems for the exchange of information between participants in international trade.
+  contact:
+    name: UNECE Recommendations
+    url: https://www.unece.org/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/code-list-recommendations.html
+  version: 3.0.1
+servers:
+- url: "https://codelists.api.edi3.org/recommendation-21"
+paths:
+  /packageTypes/{code}:
+    get:
+      tags:
+      - packageTypes
+      summary: Search for Codes for Passengers, Types of Cargo, Packages and Packaging Materials (with Complementary Codes for Package Names) as defined in rec 21
+      description: This api will return a (paged) list of codes for package types used in international trade.
+      parameters:
+      - name: code
+        in: path
+        required: true
+        description: "Two-character alphanumeric code value"
+        schema:
+          type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                  $ref: '#/components/schemas/PackageType'
+              example:
+              - code: 1F
+                name: Container, flexible
+                description: A packaging container of flexible construction.
+                numericCode: [93, 94]
+        400:
+          description: ' Bad request - Issue with parameter'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                identifier: a710a2af-4f0d-458b-8792-23fe4f736d9d
+                error: pagesize needs to be between 1 and 1000.
+        404:
+          description: No data found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                identifier: b1f1fef1-59ad-4978-bed8-3ff96d6d3587
+                error: No coded representation of package type names found
+        500:
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                identifier: 0407936e-d2ad-41e9-99e2-05a5919c3075
+                error: An unexpected exception occured
+  /packageTypes:
+    get:
+      tags:
+      - packageTypes
+      summary: Get one single package Type for Codes for Passengers, Types of Cargo, Packages and Packaging Materials as defined in rec 21
+      description: This api will return a single package type used in international trade.
+      parameters:
+      - name: code
+        in: query
+        description: "Two-character alphanumeric code value"
+        schema:
+          type: string
+      - name: name
+        in: query
+        description: "Code value name"
+        schema:
+          type: string
+      - name: description
+        in: query
+        description: "A plain text specification"
+        schema:
+          type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PackageType'
+              example:
+              - code: 1F
+                name: Container, flexible
+                description: A packaging container of flexible construction.
+                numericCode: [93, 94]
+        400:
+          description: ' Bad request - Issue with parameter'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                identifier: a710a2af-4f0d-458b-8792-23fe4f736d9d
+                error: pagesize needs to be between 1 and 1000.
+        404:
+          description: No data found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                identifier: b1f1fef1-59ad-4978-bed8-3ff96d6d3587
+                error: No coded representation of package type names found
+        500:
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                identifier: 0407936e-d2ad-41e9-99e2-05a5919c3075
+                error: An unexpected exception occured
+components:
+  schemas:
+    Error:
+      type: object
+      properties:
+        identifier:
+          type: string
+        error:
+          type: string
+    PackageType:
+      type: object
+      properties:
+        code:
+          description: "Two-character alphanumeric code value"
+          type: string
+        name:
+          description: "Code value name"
+          type: string
+        description:
+          description: "A plain text specification"
+          type: string
+        numericCode:
+          description: "Numeric coding for package types"
+          type: array
+          items:
+            type: integer
