@@ -24,6 +24,21 @@ paths:
       description: This api will return a (paged) list of units of measure codes
       operationId: searchQuantityCategory
       parameters:
+      - name: GroupNumber
+        in: query
+        description: ""
+        schema:
+          type: string
+      - name: Sector
+        in: query
+        description: ""
+        schema:
+          type: string
+      - name: GroupID
+        in: query
+        description: ""
+        schema:
+          type: string
       - name: Quantity
         in: query
         description: "The name of the physical phenomenon being measured"
@@ -32,6 +47,11 @@ paths:
       - name: Level/Category
         in: query
         description: "Identification of the normative or informative relevance of the unit"
+        schema:
+          type: string
+      - name: Status
+        in: query
+        description: "An indication of the maintenance status of individual units of measure"
         schema:
           type: string
       - name: CommonCode
@@ -57,8 +77,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/QuantityCategories'
               example:
-              - Quantity: solid angle
+              - GroupNumber: 01
+                Sector: Space and Time
+                GroupID: 17
+                Quantity: solid angle
                 Level/Category: 1S
+                Status: ""
                 CommonCode: M55
                 Name: metre per radiant
                 Description: Unit of the translation factor for implementation from rotation to linear movement.
@@ -172,11 +196,23 @@ components:
     QuantityCategory:
       type: object
       properties:
+        GroupNumber:
+          description: ""
+          type: string
+        Sector:
+          description: ""
+          type: string
+        GroupID:
+          description: ""
+          type: string
         Quantity:
           description: "The name of the physical phenomenon being measured"
           type: string
         Level/Category:
           description: "Identification of the normative or informative relevance of the unit"
+          type: string
+        Status:
+          description: "An indication of the maintenance status of individual units of measure"
           type: string
         CommonCode:
           description: "This is the recommended single list of standard codes"
@@ -206,3 +242,4 @@ components:
         Level/Category:
           description: "Identification of the normative or informative relevance of the unit"
           type: string
+      
