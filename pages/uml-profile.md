@@ -21,5 +21,5 @@ Known implementations (open source or otherwise) are listed here.  Please modify
 
 |Provider|Implementation URL|Comments|
 |--------|------------------|--------|
-| StarUML | https://github.com/gs-gs/staruml-cefact | First release - not yet including state lifecycle callbackj events |
+| StarUML | [OpenAPI3.0 Generator](https://github.com/gs-gs/staruml-cefact) | First release - not yet including state lifecycle callback events |
 
