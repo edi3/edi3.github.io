@@ -143,16 +143,10 @@ components:
           items: {$ref: '#/components/schemas/TransportEvent'}
           type: array
         TransportMeansParty:
-          properties:
-            Role:
-              description: 'missing description'
-              type: string
-            Identification:
-              description: 'A unique identifier of this trade party.'
-              type: string
-            Name:
-              description: 'The name, expressed as text, for this trade party.'
-              type: string
+          allOf:
+            - $ref: '#/components/schemas/TransportPartyIds'
+            - $ref: '#/components/schemas/TransportMeansParty'
+            - type: object
     TransportMeansParty:
       properties:
         Role:
@@ -235,16 +229,10 @@ components:
           items: {$ref: '#/components/schemas/TransportEvent'}
           type: array
         TransportMovementParty:
-          properties:
-            Role:
-              description: 'missing description'
-              type: string
-            Identification:
-              description: 'A unique identifier of this trade party.'
-              type: string
-            Name:
-              description: 'The name, expressed as text, for this trade party.'
-              type: string
+          allOf:
+            - $ref: '#/components/schemas/TransportPartyIds'
+            - $ref: '#/components/schemas/TransportMovementParty'
+            - type: object
       required: [Identification]
     TransportMovementParty:
       properties:
@@ -252,7 +240,7 @@ components:
           description: 'missing description'
           type: string
       required: [Role]
-    TransportParty:
+    TransportPartyIds:
       properties:
         Identification:
           items: {description: 'A unique identifier of this trade party.', type: string }
@@ -260,11 +248,16 @@ components:
         Name:
           items: {description: 'The name, expressed as text, for this trade party.', type: string }
           type: array
+      required: [Identification,Name]
+    TransportParty:
+      properties:
         QualityAssurance:
           description: 'The indication of whether or not this trade party is quality assured.'
           type: boolean
         PostalTradeAddress: {$ref: '#/components/schemas/TradeAddress'}
-      required: [Identification,Name]
+      allOf:
+        - $ref: '#/components/schemas/TransportPartyIds'
+        - type: object
     TransportRoute:
       properties:
         Identification:
