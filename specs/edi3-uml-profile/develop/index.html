@@ -179,12 +179,90 @@
 <li class="toc-entry toc-h2"><a href="#licence">Licence</a></li>
 <li class="toc-entry toc-h2"><a href="#change-process">Change Process</a></li>
 <li class="toc-entry toc-h2"><a href="#language">Language</a></li>
-<li class="toc-entry toc-h1"><a href="#business-domains">Business domains</a></li>
-<li class="toc-entry toc-h1"><a href="#data-types">Data types</a></li>
-<li class="toc-entry toc-h1"><a href="#data-elements">Data elements</a></li>
-<li class="toc-entry toc-h1"><a href="#relationships">Relationships</a></li>
-<li class="toc-entry toc-h1"><a href="#web-resource">Web Resource</a></li>
-<li class="toc-entry toc-h1"><a href="#resource-state-lifecycle">Resource state lifecycle</a></li>
+<li class="toc-entry toc-h1"><a href="#business-domains">Business domains</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example">Example</a></li>
+<li class="toc-entry toc-h3"><a href="#api-serialisation-note">API Serialisation Note</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#data-types">Data types</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#core-data-types">Core Data Types</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-1">Example</a></li>
+<li class="toc-entry toc-h3"><a href="#api-serialisation-note-1">API Serialisation Note</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#qualified-types--enumerations">Qualified Types &amp; Enumerations</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-2">Example</a></li>
+<li class="toc-entry toc-h3"><a href="#api-serialisation-note-2">API Serialisation Note</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#data-elements">Data elements</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-3">Example</a></li>
+<li class="toc-entry toc-h3"><a href="#api-serialisation-note-3">API Serialisation Note</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#relationships">Relationships</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#generalisation-relationship">Generalisation Relationship</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-4">Example</a></li>
+<li class="toc-entry toc-h3"><a href="#api-serialisation-note-4">API Serialisation Note</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#composition-relationship">Composition Relationship</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-5">Example</a></li>
+<li class="toc-entry toc-h3"><a href="#api-serialisation-note-5">API Serialisation Note</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#aggregation-relationship">Aggregation Relationship</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-6">Example</a></li>
+<li class="toc-entry toc-h3"><a href="#api-serialisation-note-6">API Serialisation Note</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#relationship-class">Relationship Class</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-7">Example</a></li>
+<li class="toc-entry toc-h3"><a href="#api-serialisation-note-7">API Serialisation Note</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#directed-association-relationship">Directed Association Relationship</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-8">Example</a></li>
+<li class="toc-entry toc-h3"><a href="#api-serialisation-note-8">API Serialisation Note</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#interfaces">Interfaces</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#interface-data-model">Interface Data Model</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-9">Example</a></li>
+<li class="toc-entry toc-h3"><a href="#api-serialisation-note-9">API Serialisation Note</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#interface-behaviour-model">Interface behaviour Model</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-10">Example</a></li>
+<li class="toc-entry toc-h3"><a href="#api-serialisation-note-10">API Serialisation Note</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#complete-example">Complete Example</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#model">Model</a></li>
+<li class="toc-entry toc-h2"><a href="#serialisation">Serialisation</a></li>
+</ul>
+</li>
 </ul>
 </div>
             <h2 id="introduction">Introduction</h2>
@@ -270,18 +348,26 @@ in this document are to be interpreted as described in IETF RFC 2119.</p>
 <ul>
   <li>Domains are represented as a UML Package</li>
   <li>Domain names must be unique across edi3.org</li>
-  <li>Domains may contain subdomains and, if so, subdomain names musg be iunique within the parent doamin.</li>
+  <li>Domains may contain subdomains and, if so, subdomain names must be iunique within the parent doamin.</li>
   <li>Subdomains are related to the parent domain using a UML package conmtainment relationship.</li>
   <li>Domains and subdomains must have a description</li>
 </ul>
 
-<p>Sample</p>
+<h3 id="example">Example</h3>
 
-<p><img src="transport domain diagram" alt="Transport Domain" /></p>
+<p><img src="Domains.png" alt="Domains" /></p>
+
+<h3 id="api-serialisation-note">API Serialisation Note</h3>
+
+<p>Subdomains are implemented as API definitions.  One OpenAPI3 file per lowest level domain.</p>
 
 <h1 id="data-types">Data types</h1>
 
-<p>Data types are represented as the “type” of a UML attribute.  There are only 8 possible types:</p>
+<p>Data types are represented as the “type” of a UML attribute.</p>
+
+<h2 id="core-data-types">Core Data Types</h2>
+
+<p>There are only 8 possible core types:</p>
 
 <table>
   <thead>
@@ -317,96 +403,139 @@ in this document are to be interpreted as described in IETF RFC 2119.</p>
     </tr>
     <tr>
       <td>Indicator</td>
-      <td>a yes/no, true/faule, 1/0 boolean</td>
+      <td>a yes/no, true/false, 1/0 boolean</td>
     </tr>
     <tr>
       <td>Measure</td>
       <td>A measured value with defined UOM from UNECE-Rec-20</td>
     </tr>
+    <tr>
+      <td>Amount</td>
+      <td>A financial amoiunt with defined currency from ISO-4217</td>
+    </tr>
   </tbody>
 </table>
 
-<p><em>Sample</em></p>
+<h3 id="example-1">Example</h3>
 
-<p><img src="data types diagram" alt="Data Types" /></p>
+<p><img src="CoreTypes.png" alt="CoreTypes" /></p>
 
-<p><em>Implementation Note</em></p>
+<h3 id="api-serialisation-note-1">API Serialisation Note</h3>
 
-<p>Although simply represented at model layer, the code and identifier types MUST resolve to unambiguous values at runtime. The means by which that is achieved is described in the relevant NDR (Naming &amp; Design Rules) specifications but will typically mean that the data element value is represented as a SchemeURI and code/identifier value tuple.</p>
+<p>Types will map to corresponding JSON Schema types as defined in relevant NDR specifications (<a href="https://edi3.org/api-ndr/">OpenAPI</a> or <a href="https://edi3.org/json-ld-ndr/">JSON-LD</a>. Note that code and identifier types MUST resolve to unambiguous values at runtime and so MUST include the scheme URI.  For example a party <code class="highlighter-rouge">identification</code> element (with <code class="highlighter-rouge">identfier</code> type) for an Australian business would be serialised as<code class="highlighter-rouge">{"identification":"ato.gov.au/abn:123456789"}</code> where <code class="highlighter-rouge">ato.gov.au/abn</code> is the schemeURI and <code class="highlighter-rouge">123456789</code> is the ABN identifier value. The SchemeURI value SHOULD be compatible with the edi3 <a href="https://edi3.org/discovery/">resource discovery</a> specification so that consumers can validate indentifier or code values at runtime.</p>
+
+<h2 id="qualified-types--enumerations">Qualified Types &amp; Enumerations</h2>
+
+<p>In most cases, the core data types are sufficient for any use. However, in some cases it is useful to define restrictions as part of the model. The most common use is where a small numnber of stable code values are enumerated in the data model (as opposed to discuvered and validated at runtime). Common examples are entity status lifecycle values and party role enumerations. Qualified types are named using the convention {qualifier term}_{core type name}. The example shows the use of a qualified data type <code class="highlighter-rouge">TransportEventType_Code</code> to restrict the allowed values of the <code class="highlighter-rouge">Type</code> attribute of the <code class="highlighter-rouge">TransprotEvent</code> class.</p>
+
+<h3 id="example-2">Example</h3>
+
+<p><img src="QualifiedTypes.png" alt="QualifiedTypes" /></p>
+
+<h3 id="api-serialisation-note-2">API Serialisation Note</h3>
+
+<p>Qualified types are implemented as JSON objects with specific proerties an/or enumerated values.</p>
 
 <h1 id="data-elements">Data elements</h1>
 
-<p>Every data element has globally unique name called the “dictionary entry name” of the form domain::class.property.type - for example “transport::consignment.number.identifier”</p>
+<p>Every data element has globally unique name called the “dictionary entry name” of the form urn:org.unece:domain.class.property - for example “urn:org.unece:transport.transportevent.occurrencetime”</p>
 
-<p>Simple data elements are represented as UML classes and properties (attributes) - eg “transport::consignment.number.identifier”
-Complex data elements are represented as containment relationships between UML classes - eh “transport::consignment.consignee.party”</p>
+<p>Simple data elements are represented as attributes of UML classes - for example <code class="highlighter-rouge">OccurrenceTime</code> in <code class="highlighter-rouge">TransportEvent</code> class 
+Complex data elements are represented as containment relationships (UML aggregation or composition) from source UML classes - for example <code class="highlighter-rouge">EventLocation</code> from <code class="highlighter-rouge">TransportEvent</code> class.</p>
 
 <ul>
   <li>Class names MUST be unique within a domain.</li>
   <li>Attribute names MUST be unique within a class.</li>
-  <li>Containment relationship names MUST be unique within the parent class.</li>
+  <li>Containment relationship names MUST be unique within the source class.</li>
   <li>All classes, attributes, and containment relationships MUST include a description which provides a meaningful definition of the data element.</li>
-  <li>All attributes and containment relationships MUST have a cardinality.</li>
+  <li>All attributes and containment relationship (target end) MUST have a cardinality.</li>
 </ul>
 
-<p><em>Sample</em></p>
+<h3 id="example-3">Example</h3>
 
-<p><img src="consignment" alt="Consignment" /></p>
+<p><img src="Elements.png" alt="Elements" /></p>
+
+<h3 id="api-serialisation-note-3">API Serialisation Note</h3>
+
+<p>UML Classes map to JSON Scherma objects and UML attributes become properties of the JSON Schema object. [1] cardinalitied map the the <code class="highlighter-rouge">required</code> shema property. UML cardinalities [0..<em>] or [1..</em>] map to a JSON array.</p>
 
 <h1 id="relationships">Relationships</h1>
 
-<p>The edi3 UML profile includes four standard UML class diagram relationship types, all of which have the standard UML meaning.</p>
+<p>The edi3 UML profile includes four standard UML class diagram relationship types, all of which have the standard UML meaning but have specific treatment when serialising models to JSON.</p>
+
+<h2 id="generalisation-relationship">Generalisation Relationship</h2>
+
+<p>The UML generalisation relationship is used to inicate sub-types or specialisations of an information resource.  For example, a <code class="highlighter-rouge">Vessel</code> is a type of <code class="highlighter-rouge">TransportMeans</code>.  The specialised class (ie <code class="highlighter-rouge">Vessel</code>) inherits all the properties of the general class (ie <code class="highlighter-rouge">TransportMeans</code>).  This modelling approach permits the separation of specific proerties such as <code class="highlighter-rouge">Helipad</code> (only for vessels) and <code class="highlighter-rouge">AxleLoad</code> (only for vehicles)</p>
+
+<h3 id="example-4">Example</h3>
+
+<p><img src="Generalisation.png" alt="Generalisation" /></p>
+
+<h3 id="api-serialisation-note-4">API Serialisation Note</h3>
+
+<p>The concrete class contains all propertiers of the abstract - so for example, the API user will just see a <code class="highlighter-rouge">Vessel</code> resource will the combined properties of Vessel and TransportMeans.</p>
+
+<h2 id="composition-relationship">Composition Relationship</h2>
+
+<p>The UML composition relationship is used to indicate a containment relationship between two classes where the contained class is part of the containing class.  It is essentially a complex property of the parent class that has no meaning without the parent context.  For example the 1TransportEvent1 class describes the sequence of scheduled, estimated, or actual events that consititute the movement record of a <code class="highlighter-rouge">TransportMovement</code>.</p>
+
+<h3 id="example-5">Example</h3>
+
+<p><img src="Composition.png" alt="Composition" /></p>
+
+<h3 id="api-serialisation-note-5">API Serialisation Note</h3>
+
+<p>The target class and all it’s attributes becomne part of the schema of the parent - ie $ref to a nested data structure. So, in the example above, <code class="highlighter-rouge">GET /TransportMovement</code> would return all properties of the <code class="highlighter-rouge">TransportMovement</code> class AND all properties of the contained <code class="highlighter-rouge">TransportEvent</code> as a nested array structure.</p>
+
+<h2 id="aggregation-relationship">Aggregation Relationship</h2>
+
+<p>The UML aggregation relationship is used to indicate a containment relationship between two classes where the contained class may be re-used by other classes and has meaning independent of the relationship. It is essentially a link to a relevant but independent entity. For example a <code class="highlighter-rouge">TransportMeans</code> (such as a Vessel) is an independent concept from from a <code class="highlighter-rouge">TransportMovement</code> (such as a <code class="highlighter-rouge">Voyage</code>).  Both can exist and be meningful in isolation but clearly the the vessel identity is an important aspect of a voyage.</p>
+
+<h3 id="example-6">Example</h3>
+
+<p><img src="Aggregation.png" alt="Aggregation" /></p>
+
+<h3 id="api-serialisation-note-6">API Serialisation Note</h3>
+
+<p>Only the <code class="highlighter-rouge">{id}</code> properties of the target class are embedded into the source schema. So, in the example above, <code class="highlighter-rouge">GET /TransportMovement</code> would return all properties of <code class="highlighter-rouge">TransportMovement</code> and only the <code class="highlighter-rouge">Identification</code> and <code class="highlighter-rouge">Name</code> of the associated <code class="highlighter-rouge">TransportMeans</code> - because those are the properties with the UML ‘isID’ flag set. The JSON API header would also carry a {link} element that holds the URL of the <code class="highlighter-rouge">Transportmeans</code> resource. Consumers that also want to know additional properties of the <code class="highlighter-rouge">TransportMeans</code> such as <code class="highlighter-rouge">GrossWeight</code> would simply follow the link with a <code class="highlighter-rouge">GET /TrannsportMeans/{id}</code></p>
+
+<h2 id="relationship-class">Relationship Class</h2>
+
+<p>A UML relationship class is used when the relationship itself requires extra properties. The relatiionship class can be added to either the composition or aggregation relationship. For example, there are a number of different <code class="highlighter-rouge">Party</code> types that may participate in a <code class="highlighter-rouge">TransportMovement</code>. These can be distinguished via a <code class="highlighter-rouge">Role</code> property of the relationship as shown in the example below.</p>
+
+<h3 id="example-7">Example</h3>
+
+<p><img src="RelationshipClass.png" alt="RelationshipClass" /></p>
+
+<h3 id="api-serialisation-note-7">API Serialisation Note</h3>
+
+<p>The properties of association classes are added as extra properties of the target class during serialisation. So, in the example above, the JSAON schema would define an object <code class="highlighter-rouge">TransportMovementParty</code> as an arraye property of <code class="highlighter-rouge">TransportMovement</code> and the properties of the array object would be <code class="highlighter-rouge">Role</code> (from the relationship class) and <code class="highlighter-rouge">Identification</code>, <code class="highlighter-rouge">Name</code> (from <code class="highlighter-rouge">Party</code> class).</p>
+
+<h2 id="directed-association-relationship">Directed Association Relationship</h2>
+
+<p>The UML directed association relationship is used to indicate a (non containment) relationship between two classes. For the purposes of this specification it is ued for two purposes</p>
 
 <ul>
-  <li>The UML generalisation relationship is used to inicate sub-types or specialisations of an information resource.  For example, a “Vessel” is a type of “Transport Means”.</li>
-  <li>The UML aggregation relationship is used to indicate a containment relationship between two classes where the contained class may be re-used by other classes. For example “Address” is a frequently encountered structure and may be contained in several different parent structures.</li>
-  <li>The UML composition relationship is used to indicate a containment relationship between two classes where the contained class is not re-used by any other class.  For example the “consignment” class may contain the “consignment item” class - which is unlikely to be re-used by any class other than “consignment”.</li>
-  <li>The UML directed relationship is used to indicate a (non containment) relationship between two classes within or across domains. The relationship is used to indicate discoverable links between separate web resources (eg a consignment resource might reference the bill of lading document as a link URL)</li>
+  <li>When used between any two UML Interfaces, it indicates a URL to a linked web resource</li>
+  <li>When used between any two UML classes, it indiates a semantic relationship</li>
 </ul>
 
-<p><em>Sample</em></p>
+<h3 id="example-8">Example</h3>
 
-<p><img src="copnsignmentitem" alt="copnsignment item" /></p>
+<p><img src="DirectedAssociation.png" alt="DirectedAssocaition" /></p>
 
-<p><em>Implementation note</em></p>
+<h3 id="api-serialisation-note-8">API Serialisation Note</h3>
 
-<p>Although the modelling activity should be largely independent of implementation technology, it is helpful for the modeller to understand the implementation impact of modelling choices - particularly with regard to the choice of relationship type between classes.</p>
+<p>When used between two interfaces, indicates that the source API MAY include a HATEOAS style URL link to the target resource, implemented using <a href="https://jsonapi.org/">JSON-API</a> <code class="highlighter-rouge">"links"</code> element. When used between two classes, the association is ignored for API serialisation (but is included in the JSON-LD ontology serialisation)</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Relationship type</th>
-      <th>Open API 3.0 implementation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>generalisation</td>
-      <td>will be “flattened” at implementation layer so that the JSON schema for the sub-type contains all properties of the parent type.  In effect, the generalisation is a model layer concept only and has no equivalent at schema layer</td>
-    </tr>
-    <tr>
-      <td>aggregation</td>
-      <td>re-usable schema definition that is referenced by the containing schema</td>
-    </tr>
-    <tr>
-      <td>composition</td>
-      <td>single tree structure at schema layer with no separate referenceable schema object for the contained class</td>
-    </tr>
-    <tr>
-      <td>directed relationship</td>
-      <td>URL link to a separarate web resource. Note that, unlike other relationship types, the directed relationship operates at instance level not schema level - aty schema level it is just a string type that, at instance level contains the URL of the related web resource</td>
-    </tr>
-  </tbody>
-</table>
+<h1 id="interfaces">Interfaces</h1>
 
-<h1 id="web-resource">Web Resource</h1>
+<p>An interface is a standard UML stereotype which is based on a UML class. It is normally used to indicate the behaviour of external interfaces and so is a good fit to represent a RESTful API. An interface:</p>
 
-<p>A web resource represents a URL addressable object that has a defined information model and a state lifecyle. In tradtional EDI modelling, a resource correlates most closely to a business document or message.</p>
-
-<p>A web resource is modelled most like a UML interface. A web resource</p>
+<h2 id="interface-data-model">Interface Data Model</h2>
 
 <ul>
-  <li>MUST be modelled as a UML class with stereotype <code class="highlighter-rouge">&lt;&lt;resource&gt;&gt;</code></li>
+  <li>MUST be modelled as a UML class with stereotype <code class="highlighter-rouge">&lt;&lt;interface&gt;&gt;</code></li>
   <li>MUST be named using a noun, not a verb.</li>
   <li>MUST be the target of a UML <code class="highlighter-rouge">&lt;&lt;realisation&gt;&gt;</code> relationship where the source is a UML class hierarchy that represents the resource information model.</li>
   <li>MUST include a styate machine model that defines the behaviour of the reource object (see more on this in the next section)</li>
@@ -417,27 +546,24 @@ Complex data elements are represented as containment relationships between UML c
     </ul>
   </li>
   <li>MUST include one or more UML operations that define the allowed actions on the resource which SHOULD be named as http verbe (GET / POST / PATCH etc).</li>
-  <li>MAY be the target of one or more UML aggregation relationships where the sources MUST be another <code class="highlighter-rouge">&lt;&lt;resource&gt;&gt;</code> class. This is used to define sub-resource relationships.</li>
-  <li>MAY be the source of one of UML association relationshoips where the targets MUST be other <code class="highlighter-rouge">&lt;&lt;resource&gt;&gt; </code>class. This is used to represent links to independent but related resources such as the invoice for a shipment or the bill of lading for a consignment.</li>
+  <li>MAY be the target of one or more UML composition relationships where the sources MUST be another <code class="highlighter-rouge">&lt;&lt;interface&gt;</code> class. This is used to define sub-resource relationships.</li>
+  <li>MAY be the target of one of or more UML directed association relationshoips where the source MUST be other <code class="highlighter-rouge">&lt;&lt;interface&gt; </code>class. This is used to represent URL links to independent but related resources such as the invoice for a shipment or the bill of lading for a consignment.</li>
 </ul>
 
-<p><em>sample</em></p>
+<h3 id="example-9">Example</h3>
 
-<p><em>implementation notes</em></p>
+<p><img src="Interfaces.png" alt="Interfaces" /></p>
+
+<h3 id="api-serialisation-note-9">API Serialisation Note</h3>
 
 <ul>
-  <li>The UML <code class="highlighter-rouge">&lt;&lt;resource&gt;&gt;</code> type will map to a RESTful API web resource such as <code class="highlighter-rouge">https://api.acme.com/v1/consignments/{123456789}</code>.  The mapping rules for Open API 3.0 specification generation are defined in the Open API 3.0 NDR specification.</li>
+  <li>The UML <code class="highlighter-rouge">&lt;&lt;interface&gt;&gt;</code> type will map to a RESTful API web resource such as <code class="highlighter-rouge">https://api.acme.com/v1/transportmovements/{123456789}</code>.  The mapping rules for Open API 3.0 specification generation are defined in the Open API 3.0 NDR specification.</li>
   <li>Resopurce models are deliberately kept simple and so do not attempt to model things like different structures for different types of PATCH operations or a list of filters allowed in GET collection actions. These things are likely to vary by implementation.  Models and generated OpenAPI specifications published by edi3.org represent only the minimum conformant behaviour for an implemention.</li>
 </ul>
 
-<h1 id="resource-state-lifecycle">Resource state lifecycle</h1>
+<h2 id="interface-behaviour-model">Interface behaviour Model</h2>
 
-<p>Each <code class="highlighter-rouge">&lt;&lt;resource&gt;&gt;</code> class MUST have an embedded UML state machine model that describes the state lifecycle of a resource. Resource state lifecvycles are important because</p>
-
-<ul>
-  <li>They describe the set of allowed states and allowed transitions between states. For example an <code class="highlighter-rouge">invoice</code> resource may transition through <code class="highlighter-rouge">received</code>, <code class="highlighter-rouge">approved</code>, <code class="highlighter-rouge">disputed</code>, <code class="highlighter-rouge">amended</code>, and <code class="highlighter-rouge">paid</code>.  The precise meanings of each state can have signifcant legal or commercial significance (eg financing an <code class="highlighter-rouge">approved</code> invoice will have less risk and hence lower cost than financing a <code class="highlighter-rouge">received</code> invoice)</li>
-  <li>Under edi3 technical specification guidelines, every resource owner SHOULD publish an event to all authorised subscribers whenever a resource transitions from one state to another. So the state lifecycle model tells susbsriber what they can listen for.</li>
-</ul>
+<p>Each <code class="highlighter-rouge">&lt;&lt;interface&gt;&gt;</code> UML class MUST have an embedded UML state machine model that describes the state lifecycle of a resource. Resource state lifecvycles are important because they describe the set of allowed states and allowed transitions between states. For example an <code class="highlighter-rouge">invoice</code> resource may transition through <code class="highlighter-rouge">received</code>, <code class="highlighter-rouge">approved</code>, <code class="highlighter-rouge">disputed</code>, <code class="highlighter-rouge">amended</code>, and <code class="highlighter-rouge">paid</code>.  The precise meanings of each state can have signifcant legal or commercial significance (eg financing an <code class="highlighter-rouge">approved</code> invoice will have less risk and hence lower cost than financing a <code class="highlighter-rouge">received</code> invoice)</p>
 
 <p>The UML profile for state lifecycles is very simple as it is just a minimal UML state machine</p>
 
@@ -449,7 +575,27 @@ Complex data elements are represented as containment relationships between UML c
   <li>triggers SHOULD include a target operation that links to the operation (POST/PATCH etc) of the resource action that triggered the event.</li>
 </ul>
 
-<p><em>sample</em></p>
+<h3 id="example-10">Example</h3>
+
+<p><img src="StateLifecycle.png" alt="StateLifecycle" /></p>
+
+<h3 id="api-serialisation-note-10">API Serialisation Note</h3>
+
+<p>The state lifecycle is implemented as OpenAPI3 callbacks and subscriptions. A subscription to the resource should result in a callback to the subscriber for every transition in the state lifecycle.  The callbacks are implemented as “light ping” messages that simply advise the resource URL and the from/to state and trigger event. Subscribers may then decide whehther to GET the resource /subresource that has changed.</p>
+
+<h1 id="complete-example">Complete Example</h1>
+
+<h2 id="model">Model</h2>
+
+<p>The trasnsport movements example model provided below incorporates all the UML constructs covered in this specification.</p>
+
+<p><img src="CompleteExample.png" alt="Complete Example" /></p>
+
+<p>The starUML source file for this model is <a href="SampleModel.mdj">here</a></p>
+
+<h2 id="serialisation">Serialisation</h2>
+
+<p>When the generator works - put a link to the generated API spec here.</p>
 
 
         </div>
