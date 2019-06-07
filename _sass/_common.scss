@@ -134,3 +134,14 @@ img{
 .page-content .anchorjs-link:hover, .docs-content .anchorjs-link:hover{
   text-decoration: none;
 }
+
+.page-content .swagger-ui table{
+  width: 100%;
+  display: table;
+}
+
+.swagger-ui table thead tr th,
+.swagger-ui table thead tr td,
+.swagger-ui table tbody tr td{
+  border: 0;
+}

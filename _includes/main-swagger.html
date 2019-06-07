@@ -7,15 +7,13 @@
             {% include sidebar-menu.html %}
         </div>
         <div class="page-content">
-            {%- assign swagger_url =  -%}
-
-                <div id="swagger-ui"></div>
-                <script>
-                    const api_id = SwaggerUIBundle({
-                        url: "{{page.api_url}}",
-                        dom_id: '#swagger-ui'
-                    })
-                </script>
+            <div id="swagger-ui"></div>
+            <script>
+                const api_id = SwaggerUIBundle({
+                    url: "{{page.api_url}}",
+                    dom_id: '#swagger-ui'
+                })
+            </script>
         </div>
     </div>
 </div>
