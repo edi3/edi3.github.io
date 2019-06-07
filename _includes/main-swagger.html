@@ -1,0 +1,21 @@
+<script src="//unpkg.com/swagger-ui-dist@3/swagger-ui-bundle.js"></script>
+<link rel="stylesheet" href="//unpkg.com/swagger-ui-dist@3/swagger-ui.css">
+
+<div class="main-wrapper">
+    <div class="main-content">
+        <div class="page-sidebar">
+            {% include sidebar-menu.html %}
+        </div>
+        <div class="page-content">
+            {%- assign swagger_url =  -%}
+
+                <div id="swagger-ui"></div>
+                <script>
+                    const api_id = SwaggerUIBundle({
+                        url: "{{page.api_url}}",
+                        dom_id: '#swagger-ui'
+                    })
+                </script>
+        </div>
+    </div>
+</div>
