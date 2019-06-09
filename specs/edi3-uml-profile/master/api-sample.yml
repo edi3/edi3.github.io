@@ -1,17 +1,21 @@
 components:
   schemas:
     Journey:
+      type: object
       properties: {}
       allOf:
         - $ref: '#/components/schemas/TransportMovement'
         - type: object
     LogisticsLocation:
+      type: object
       properties:
         unlocode:
           description: 'missing description'
           type: string
         OtherIdentification:
-          items: {description: 'A unique identifier for this logistics related location, such as a United Nations Location Code (UNLOCODE) or GS1 Global Location Number (GLN).', type: string }
+          items:
+            description: 'A unique identifier for this logistics related location, such as a United Nations Location Code (UNLOCODE) or GS1 Global Location Number (GLN).'
+            type: string
           type: array
         Name:
           description: 'A name, expressed as text, of this logistics related location.'
@@ -34,6 +38,7 @@ components:
         PostalTradeAddress: {$ref: '#/components/schemas/TradeAddress'}
       required: [unlocode]
     TradeAddress:
+      type: object
       properties:
         CityName:
           description: 'The name, expressed as text, of the city, town or village of this trade address.'
@@ -48,7 +53,9 @@ components:
           description: 'A name, expressed as text, of the sub-division of a country for this trade address.'
           type: string
         Identification:
-          items: {description: 'A unique identifier for this trade address.', type: string }
+          items:
+            description: 'A unique identifier for this trade address.'
+            type: string
           type: array
         Postcode:
           description: 'A code specifying the postcode of this trade address.'
@@ -57,6 +64,7 @@ components:
           description: 'A name, expressed as text, of a street or thoroughfare for this trade address.'
           type: string
     TransportEvent:
+      type: object
       properties:
         Type:
           description: 'The code specifying the type of transport event.'
@@ -71,28 +79,50 @@ components:
         Description:
           description: 'The textual description of this transport event.'
           type: string
-        CertifyingTradeParty:
-          properties:
-            Identification:
-              description: 'A unique identifier of this trade party.'
-              type: string
-            Name:
-              description: 'The name, expressed as text, for this trade party.'
-              type: string
+        TransportParty:
+          items:
+            allOf:
+              - $ref: '#/components/schemas/TransportPartyIds'
+              - type: object
+          type: array
         RelatedLocation:
           items: {$ref: '#/components/schemas/LogisticsLocation'}
           type: array
         EventLocation: {$ref: '#/components/schemas/LogisticsLocation'}
-        RelatedTransportRoute:
-          properties:
-            Identification:
-              description: 'The unique identifier of this transport route.'
-              type: string
+        TransportRoute:
+          allOf:
+            - $ref: '#/components/schemas/TransportRouteIds'
+            - type: object
       required: [Type,OccurrenceTime]
-    TransportMeans:
+    TransportPartyIds:
+      type: object
       properties:
         Identification:
-          items: {description: 'An identifier of this logistics means of transport, such as the International Maritime Organization number of a vessel.', type: string }
+          items:
+            description: 'A unique identifier of this trade party.'
+            type: string
+          type: array
+          minItems: 1
+        Name:
+          items:
+            description: 'The name, expressed as text, for this trade party.'
+            type: string
+          type: array
+          minItems: 1
+      required: [Identification,Name]
+    TransportRouteIds:
+      type: object
+      properties:
+        Identification:
+          description: 'The unique identifier of this transport route.'
+          type: string
+    TransportMeans:
+      type: object
+      properties:
+        Identification:
+          items:
+            description: 'An identifier of this logistics means of transport, such as the International Maritime Organization number of a vessel.'
+            type: string
           type: array
         Name:
           description: 'The name, expressed as text, of this logistics means of transport.'
@@ -143,28 +173,31 @@ components:
           items: {$ref: '#/components/schemas/TransportEvent'}
           type: array
         TransportMeansParty:
-          properties:
-            Role:
-              description: 'missing description'
-              type: string
-            Identification:
-              description: 'A unique identifier of this trade party.'
-              type: string
-            Name:
-              description: 'The name, expressed as text, for this trade party.'
-              type: string
+          items:
+            allOf:
+              - $ref: '#/components/schemas/TransportPartyIds'
+              - $ref: '#/components/schemas/TransportMeansParty'
+              - type: object
+          type: array
     TransportMeansParty:
+      type: object
       properties:
         Role:
           description: 'missing description'
           type: string
     TransportMovement:
+      type: object
       properties:
         Identification:
-          items: {description: 'The unique identifier for this logistics transport movement, such as a voyage number, flight number, or trip number.', type: string }
+          items:
+            description: 'The unique identifier for this logistics transport movement, such as a voyage number, flight number, or trip number.'
+            type: string
           type: array
+          minItems: 1
         TerminalOperatorAssignedIdentification:
-          items: {description: 'A unique identifier for this logistics transport movement as assigned by a terminal operator.', type: string }
+          items:
+            description: 'A unique identifier for this logistics transport movement as assigned by a terminal operator.'
+            type: string
           type: array
         Stay:
           description: 'The unique identifier of a stay in a port, airport or other place of service for this logistics transport movement.'
@@ -209,25 +242,25 @@ components:
           description: 'The number of crew members for this logistics transport movement.'
           type: string
         Crewnationality:
-          items: {description: 'missing description', type: string }
+          items:
+            description: 'missing description'
+            type: string
           type: array
         Passenger:
           description: 'The number of passengers for this logistics transport movement.'
           type: string
         PassengerNationality:
-          items: {description: 'missing description', type: string }
+          items:
+            description: 'missing description'
+            type: string
           type: array
         ActualEvent:
           items: {$ref: '#/components/schemas/TransportEvent'}
           type: array
-        UsedTransportMeans:
-          properties:
-            Identification:
-              description: 'An identifier of this logistics means of transport, such as the International Maritime Organization number of a vessel.'
-              type: string
-            Name:
-              description: 'The name, expressed as text, of this logistics means of transport.'
-              type: string
+        TransportMeans:
+          allOf:
+            - $ref: '#/components/schemas/TransportMeansIds'
+            - type: object
         ScheduledEvent:
           items: {$ref: '#/components/schemas/TransportEvent'}
           type: array
@@ -235,37 +268,41 @@ components:
           items: {$ref: '#/components/schemas/TransportEvent'}
           type: array
         TransportMovementParty:
-          properties:
-            Role:
-              description: 'missing description'
-              type: string
-            Identification:
-              description: 'A unique identifier of this trade party.'
-              type: string
-            Name:
-              description: 'The name, expressed as text, for this trade party.'
-              type: string
+          items:
+            allOf:
+              - $ref: '#/components/schemas/TransportPartyIds'
+              - $ref: '#/components/schemas/TransportMovementParty'
+              - type: object
+          type: array
       required: [Identification]
+    TransportMeansIds:
+      type: object
+      properties:
+        Identification:
+          items:
+            description: 'An identifier of this logistics means of transport, such as the International Maritime Organization number of a vessel.'
+            type: string
+          type: array
+        Name:
+          description: 'The name, expressed as text, of this logistics means of transport.'
+          type: string
     TransportMovementParty:
+      type: object
       properties:
         Role:
           description: 'missing description'
           type: string
       required: [Role]
     TransportParty:
+      type: object
       properties:
-        Identification:
-          items: {description: 'A unique identifier of this trade party.', type: string }
-          type: array
-        Name:
-          items: {description: 'The name, expressed as text, for this trade party.', type: string }
-          type: array
         QualityAssurance:
           description: 'The indication of whether or not this trade party is quality assured.'
           type: boolean
         PostalTradeAddress: {$ref: '#/components/schemas/TradeAddress'}
       required: [Identification,Name]
     TransportRoute:
+      type: object
       properties:
         Identification:
           description: 'The unique identifier of this transport route.'
@@ -292,6 +329,7 @@ components:
           items: {$ref: '#/components/schemas/LogisticsLocation'}
           type: array
     Vehicle:
+      type: object
       properties:
         DriverAccompanied:
           description: 'The indication of whether or not this logistics means of transport is accompanied by a driver.'
@@ -303,6 +341,7 @@ components:
         - $ref: '#/components/schemas/TransportMeans'
         - type: object
     Vessel:
+      type: object
       properties:
         DraughtLevel:
           description: 'The measure of the draught level of this logistics means of transport.'
@@ -323,6 +362,7 @@ components:
         - $ref: '#/components/schemas/TransportMeans'
         - type: object
     Voyage:
+      type: object
       properties:
         PilotageExemption:
           description: 'The identifier of a pilotage exemption for this logistics transport movement.'
@@ -361,22 +401,10 @@ paths:
         name: id
         required: true
         schema: {type: string}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema: {$ref: '#/components/schemas/Vessel'}
-          description: OK
-  /Vessels/{Status}:
-    get:
-      tags:
-        - Vessels
-      description: Get single Vessel by Status
-      parameters:
       - description: missing description
-        in: path
+        in: query
         name: Status
-        required: true
+        required: false
         schema: {type: string}
       responses:
         '200':
@@ -425,6 +453,11 @@ paths:
         name: id
         required: true
         schema: {type: string}
+      - description: missing description
+        in: query
+        name: Status
+        required: false
+        schema: {type: string}
       responses:
         '200':
           content:
@@ -441,40 +474,10 @@ paths:
         name: id
         required: true
         schema: {type: string}
-      requestBody:
-        content:
-          application/json:
-            schema: {$ref: '#/components/schemas/Voyage'}
-        description: ''
-        required: true
-      responses:
-        '204': {description: No Content}
-  /Voyages/{Status}:
-    get:
-      tags:
-        - Voyages
-      description: Get single Voyage by Status
-      parameters:
       - description: missing description
-        in: path
+        in: query
         name: Status
-        required: true
-        schema: {type: string}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema: {$ref: '#/components/schemas/Voyage'}
-          description: OK
-    patch:
-      tags:
-        - Voyages
-      description:  Update Voyage
-      parameters:
-      - description: missing description
-        in: path
-        name: Status
-        required: true
+        required: false
         schema: {type: string}
       requestBody:
         content:
@@ -551,6 +554,52 @@ paths:
       tags:
         - TransportEvents
       description:  Create a new TransportEvent
+      requestBody:
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/TransportEvent'}
+        description: ''
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/TransportEvent'}
+          description: Created
+  /Journeys/{id}/TransportEvents:
+    post:
+      tags:
+        - TransportEvents
+      description:  Create a new TransportEvent
+      parameters:
+      - description: missing description
+        in: path
+        name: id
+        required: true
+        schema: {type: string}
+      requestBody:
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/TransportEvent'}
+        description: ''
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/TransportEvent'}
+          description: Created
+  /Voyages/{id}/TransportEvents:
+    post:
+      tags:
+        - TransportEvents
+      description:  Create a new TransportEvent
+      parameters:
+      - description: missing description
+        in: path
+        name: id
+        required: true
+        schema: {type: string}
       requestBody:
         content:
           application/json:
