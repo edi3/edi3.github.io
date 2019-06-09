@@ -612,4 +612,6 @@ paths:
             application/json:
               schema: {$ref: '#/components/schemas/TransportEvent'}
           description: Created
-servers: []
+servers:
+  - url: https://codelists.api.edi3.org/movements
+  
