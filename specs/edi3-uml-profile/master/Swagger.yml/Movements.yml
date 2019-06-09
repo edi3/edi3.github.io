@@ -1,0 +1,282 @@
+components:
+  schemas:
+    Journey:
+      properties: {}
+    LogisticsLocation:
+      properties:
+        unlocode: {description: 'missing description', type: string }
+        OtherIdentification:
+          items: {description: 'A unique identifier for this logistics related location, such as a United Nations Location Code (UNLOCODE) or GS1 Global Location Number (GLN).', type: string }
+          type: array
+        Name: {description: 'A name, expressed as text, of this logistics related location.', type: string }
+        Description: {description: 'A textual description of this logistics related location.', type: string }
+        Country: {description: 'The unique identifier of a country for this logistics location.', type: string }
+        Type: {description: 'A code specifying the type of this logistics related location.', type: string }
+        Latitude: {description: 'missing description', type: string }
+        Longditude: {description: 'missing description', type: string }
+        PostalTradeAddress: {$ref: '#/components/schemas/TradeAddress'}
+    TradeAddress:
+      properties:
+        CityName: {description: 'The name, expressed as text, of the city, town or village of this trade address.', type: string }
+        Country: {description: 'The unique identifier of a country for this trade address.', type: string }
+        CountryName: {description: 'A name, expressed as text, of the country for this trade address.', type: string }
+        CountrySubDivisionName: {description: 'A name, expressed as text, of the sub-division of a country for this trade address.', type: string }
+        Identification:
+          items: {description: 'A unique identifier for this trade address.', type: string }
+          type: array
+        Postcode: {description: 'A code specifying the postcode of this trade address.', type: string }
+        StreetName: {description: 'A name, expressed as text, of a street or thoroughfare for this trade address.', type: string }
+    TransportEvent:
+      properties:
+        Type: {description: 'The code specifying the type of transport event.', type: string }
+        OccurrenceTime: {description: 'The actual date, time, date time, or other date time value of the occurrence of this transport event.', type: string }
+        ReportedTime: {description: 'The date, time, date time or other date time value of the actual arrival related to this transport event.', type: string }
+        Description: {description: 'The textual description of this transport event.', type: string }
+        CertifyingTradeParty:
+          items: {$ref: '#/components/schemas/TransportParty'}
+          type: array
+        RelatedLocation:
+          items: {$ref: '#/components/schemas/LogisticsLocation'}
+          type: array
+        EventLocation: {$ref: '#/components/schemas/LogisticsLocation'}
+        RelatedTransportRoute: {$ref: '#/components/schemas/TransportRoute'}
+    TransportMeans:
+      properties:
+        Identification:
+          items: {description: 'An identifier of this logistics means of transport, such as the International Maritime Organization number of a vessel.', type: string }
+          type: array
+        Name: {description: 'The name, expressed as text, of this logistics means of transport.', type: string }
+        CargoGrossWeight: {description: 'The measure of the total gross weight (mass) of all cargo loaded onto this logistics means of transport, including packaging but excluding any associated transport equipment.', type: string }
+        Conference: {description: 'The code specifying the conference for this logistics means of transport.', type: string }
+        GrossWeight: {description: 'The measure of the gross weight (mass) of this logistics means of transport including cargo, such as the measure of the overall size of a vessel determined in accordance with the provisions of the International Convention on Tonnage Measurement of Ships, 1969.', type: string }
+        ISPSSecurityLevel: {description: 'The code specifying the International Ship and Port facility Security (ISPS) level assigned to this logistics means of transport.', type: string }
+        Length: {description: 'The measure of the length of this logistics means of transport.', type: string }
+        LoadedCargo: {description: 'The measure of the cargo loaded onto this logistics means of transport, such as the number of barrels of oil or other quantity of breakbulk cargo.', type: string }
+        NetWeight: {description: 'The measure of the net weight (mass) of this logistics means of transport, such as the net tonnage of a vessel determined in accordance with the provisions of the International Convention on Tonnage Measurement of Ships, 1969.', type: string }
+        RequiredLaneLength: {description: 'The measure of the external length required in a lane for this logistics transport means.', type: string }
+        Sequence: {description: 'The sequence number differentiating this logistics transport means from others.', type: string }
+        Type: {description: 'The code specifying the type of logistics means of transport (Reference UNECE Recommendation 28).', type: string }
+        TypeText: {description: 'The type, expressed as text, of this logistics means of transport.', type: string }
+        WasteReportingExemption: {description: 'The indication of whether or not there is a waste reporting exemption for this logistics means of transport.', type: string }
+        RegistrationCountry: {description: 'missing description', type: string }
+        OperatorNationality: {description: 'missing description', type: string }
+        RegistrationTransportEvent:
+          items: {$ref: '#/components/schemas/TransportEvent'}
+          type: array
+    TransportMeansParty:
+      properties:
+        Role: {description: 'missing description', type: string }
+    TransportMovement:
+      properties:
+        Identification: {description: 'The unique identifier for this logistics transport movement, such as a voyage number, flight number, or trip number.', type: string }
+        TerminalOperatorAssignedIdentification:
+          items: {description: 'A unique identifier for this logistics transport movement as assigned by a terminal operator.', type: string }
+          type: array
+        Stay: {description: 'The unique identifier of a stay in a port, airport or other place of service for this logistics transport movement.', type: string }
+        Status: {description: 'The code specifying a status for the logistics transport movement, such as estimated or final.', type: string }
+        Mode: {description: 'The code specifying the mode, such as by air, sea, rail, road or inland waterway, for this logistics transport movement.', type: string }
+        Stage: {description: 'The code specifying the stage of this logistics transport movement.', type: string }
+        CargoDescription: {description: 'The textual description of the cargo for this logistics transport movement.', type: string }
+        Closing: {description: 'The date, time, date time, or other date time value by which cargo should be loaded onto the means of transport for the departure of this logistics transport movement.', type: string }
+        Information: {description: 'Information, expressed as text, for this logistics transport movement.', type: string }
+        DangerousGoods: {description: 'The indication of whether or not dangerous goods are carried for this logistics transport movement.', type: string }
+        ManifestOnboard: {description: 'The indication of whether or not the manifest for this logistics transport movement is onboard.', type: string }
+        TransitDirection: {description: 'The code specifying the transit direction of this logistics transport movement.', type: string }
+        TransportEquipment: {description: 'The number of pieces of transport equipment for this logistics transport movement.', type: string }
+        Package: {description: 'The number of packages in this logistics transport movement.', type: string }
+        Consignment: {description: 'The number of consignments in this logistics transport movement.', type: string }
+        Crew: {description: 'The number of crew members for this logistics transport movement.', type: string }
+        Crewnationality:
+          items: {description: 'missing description', type: string }
+          type: array
+        Passenger: {description: 'The number of passengers for this logistics transport movement.', type: string }
+        PassengerNationality:
+          items: {description: 'missing description', type: string }
+          type: array
+        ActualEvent:
+          items: {$ref: '#/components/schemas/TransportEvent'}
+          type: array
+        UsedTransportMeans: {$ref: '#/components/schemas/TransportMeans'}
+        ScheduledEvent:
+          items: {$ref: '#/components/schemas/TransportEvent'}
+          type: array
+        EstimatedEvent:
+          items: {$ref: '#/components/schemas/TransportEvent'}
+          type: array
+    TransportMovementParty:
+      properties:
+        Role: {description: 'missing description', type: string }
+    TransportParty:
+      properties:
+        Identification: {description: 'A unique identifier of this trade party.', type: string }
+        Name: {description: 'The name, expressed as text, for this trade party.', type: string }
+        QualityAssurance: {description: 'The indication of whether or not this trade party is quality assured.', type: string }
+        PostalTradeAddress: {$ref: '#/components/schemas/TradeAddress'}
+    TransportRoute:
+      properties:
+        Identification: {description: 'The unique identifier of this transport route.', type: string }
+        DeparturePoint: {description: 'A departure point, expressed as text, for this transport route.', type: string }
+        Description: {description: 'The textual description of this transport route.', type: string }
+        FrequencyType: {description: 'The code specifying the type of frequency for this transport route, such as weekly, bi-monthly or daily.', type: string }
+        Map: {description: 'Binary object data that is the map of this transport route.', type: string }
+        Status: {description: 'The code specifying a status for a transport route, such as planned or actual.', type: string }
+        TransportMeans: {description: 'A means of transport, expressed as text, for this transport route.', type: string }
+        ItineraryStopLocation:
+          items: {$ref: '#/components/schemas/LogisticsLocation'}
+          type: array
+    Vehicle:
+      properties:
+        DriverAccompanied: {description: 'The indication of whether or not this logistics means of transport is accompanied by a driver.', type: string }
+        AxleLoad: {description: 'missing description', type: string }
+    Vessel:
+      properties:
+        DraughtLevel: {description: 'The measure of the draught level of this logistics means of transport.', type: string }
+        ForwardDraughtLevel: {description: 'The draught level measured at the fore end of this transport means.', type: string }
+        AftDraughtLevel: {description: 'The draught level measured at the aft end of this transport means.', type: string }
+        Helipad: {description: 'The indication of whether or not there is a helipad on this logistics means of transport.', type: string }
+        ManoeuvringSpeed: {description: 'The manoeuvring speed measured for this logistics means of transport.', type: string }
+    Voyage:
+      properties:
+        PilotageExemption: {description: 'The identifier of a pilotage exemption for this logistics transport movement.', type: string }
+        SailingAdviceNotificationInformation: {description: 'Sailing advice notification information, expressed as text, for this logistics transport movement.', type: string }
+info: {description: Movements API - 1.0.0, title: Movements API, version: '1.0.0'}
+openapi: 3.0.0
+paths:
+  /Vessels:
+    get:
+      description: Get a list of Vessel
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items: {$ref: '#/components/schemas/Vessel'}
+                type: array
+          description: OK
+  /Vessels/{id}:
+    get:
+      description: Get single Vessel by Id
+      parameters:
+      - description: missing description
+        in: path
+        name: id
+        required: true
+        schema: {type: string}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Vessel'}
+          description: OK
+  /Voyages:
+    get:
+      description: Get a list of Voyage
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items: {$ref: '#/components/schemas/Voyage'}
+                type: array
+          description: OK
+    post:
+      description:  Create a new Voyage
+      requestBody:
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/Voyage'}
+        description: ''
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Voyage'}
+          description: Created
+  /Voyages/{id}:
+    get:
+      description: Get single Voyage by Id
+      parameters:
+      - description: missing description
+        in: path
+        name: id
+        required: true
+        schema: {type: string}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Voyage'}
+          description: OK
+  /Journeys:
+    get:
+      description: Get a list of Journey
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items: {$ref: '#/components/schemas/Journey'}
+                type: array
+          description: OK
+  /Journeys/{id}:
+    get:
+      description: Get single Journey by Id
+      parameters:
+      - description: missing description
+        in: path
+        name: id
+        required: true
+        schema: {type: string}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Journey'}
+          description: OK
+  /Vehicles:
+    get:
+      description: Get a list of Vehicle
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items: {$ref: '#/components/schemas/Vehicle'}
+                type: array
+          description: OK
+  /Vehicles/{id}:
+    get:
+      description: Get single Vehicle by Id
+      parameters:
+      - description: missing description
+        in: path
+        name: id
+        required: true
+        schema: {type: string}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Vehicle'}
+          description: OK
+  /TransportEvents:
+    post:
+      description:  Create a new TransportEvent
+      requestBody:
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/TransportEvent'}
+        description: ''
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/TransportEvent'}
+          description: Created
+servers: []

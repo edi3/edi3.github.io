@@ -850,7 +850,7 @@
 													"top": 592,
 													"width": 375,
 													"height": 13,
-													"text": "+Stage: Code[0..1]",
+													"text": "+Stage: Code[0..1] {OpenAPI=\"query\"}",
 													"horizontalAlignment": 0
 												},
 												{
@@ -13487,6 +13487,16 @@
 											"name": "UID",
 											"kind": "hidden",
 											"value": "UDT000007\nUN01003838"
+										},
+										{
+											"_type": "Tag",
+											"_id": "AAAAAAFrMIHOe1jYAxA=",
+											"_parent": {
+												"$ref": "bbac017f-7a83-4ec4-ae19-5d394e06bde6"
+											},
+											"name": "OpenAPI",
+											"kind": "string",
+											"value": "query"
 										}
 									],
 									"type": "Code",
