@@ -46,7 +46,7 @@ img{
 .page-sidebar,
 .page-content{
   display: table-cell;
-  padding: 80px 0;
+  padding: 30px 0;
 }
 
 .page-sidebar{
@@ -155,4 +155,8 @@ img{
 .swagger-ui .model .renderedMarkdown{
   padding-right: 15px;
   line-height: normal;
+}
+
+.back-link{
+  font-weight: bold;
 }

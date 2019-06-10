@@ -7,6 +7,11 @@
             {% include sidebar-menu.html %}
         </div>
         <div class="page-content">
+            {% if page.back_link %}
+            <div class="back-link">
+                <a href="{{page.back_link}}">&lt; Back</a>
+            </div>
+            {% endif %}
             <div id="swagger-ui"></div>
             <script>
                 const api_id = SwaggerUIBundle({
@@ -14,6 +19,11 @@
                     dom_id: '#swagger-ui'
                 })
             </script>
+            {% if page.back_link %}
+            <div class="back-link">
+                <a href="{{page.back_link}}">&lt; Back</a>
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>

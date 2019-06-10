@@ -4,7 +4,17 @@
             {% include sidebar-menu.html %}
         </div>
         <div class="page-content">
+            {% if page.back_link %}
+            <div class="back-link">
+                <a href="{{page.back_link}}">&lt; Back</a>
+            </div>
+            {% endif %}
             {{ content }}
+            {% if page.back_link %}
+            <div class="back-link">
+                <a href="{{page.back_link}}">&lt; Back</a>
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>
