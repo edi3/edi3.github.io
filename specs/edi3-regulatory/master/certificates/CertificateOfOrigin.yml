@@ -51,6 +51,9 @@ components:
         ImportCountry:
           description: 'missing description'
           type: string
+        ConsignmentItem:
+          items: {$ref: '#/components/schemas/ConsignmentItem'}
+          type: array
         ConsignmentLocation:
           properties:
             Role:
@@ -96,8 +99,13 @@ components:
         Type:
           description: 'The code specifying the type of supply chain consignment item.'
           type: string
+        RelatedInvoice:
+          properties:
     COO:
       properties:
+        Consignment:
+          items: {$ref: '#/components/schemas/Consignment'}
+          type: array
         OriginRule:
           properties:
             OriginCriterion:
@@ -143,7 +151,7 @@ components:
             Name:
               description: 'The name, expressed as text, for this trade party.'
               type: string
-    LogisticsLocation:
+    Location:
       properties:
         Identification:
           description: 'A unique identifier for this logistics related location, such as a United Nations Location Code (UNLOCODE) or GS1 Global Location Number (GLN).'
@@ -180,6 +188,7 @@ components:
         Type:
           items: {description: 'A code specifying the type of trade party that is independent of its role.', type: string }
           type: array
+        Address: {$ref: '#/components/schemas/Address'}
     TransportEvent:
       properties:
         Description:
@@ -192,6 +201,14 @@ components:
           description: 'The code specifying the type of transport event.'
           type: string
           enum: [Call,Arrival,Departure,Loading,UnLoading,BorderCrossing,TransShipment,Stop]
+        EventLocation:
+          properties:
+            Identification:
+              description: 'A unique identifier for this logistics related location, such as a United Nations Location Code (UNLOCODE) or GS1 Global Location Number (GLN).'
+              type: string
+            Name:
+              description: 'A name, expressed as text, of this logistics related location.'
+              type: string
     TransportMeans:
       properties:
         Identification:
