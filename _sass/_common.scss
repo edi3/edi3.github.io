@@ -145,3 +145,14 @@ img{
 .swagger-ui table tbody tr td{
   border: 0;
 }
+
+.swagger-layout{
+  .main-content{
+    max-width: 100%;
+  }
+}
+
+.swagger-ui .model .renderedMarkdown{
+  padding-right: 15px;
+  line-height: normal;
+}
