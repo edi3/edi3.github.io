@@ -278,17 +278,24 @@
           },
           "DocumentParty": {
             "items": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/PartyIds"
+              "type": "object",
+              "properties": {
+                "Role": {
+                  "description": "missing description",
+                  "type": "string"
                 },
-                {
-                  "$ref": "#/components/schemas/DocumentParty"
+                "Identification": {
+                  "items": {
+                    "description": "A unique identifier of this trade party.",
+                    "type": "string"
+                  },
+                  "type": "array"
                 },
-                {
-                  "type": "object"
+                "Name": {
+                  "description": "The name, expressed as text, for this trade party.",
+                  "type": "string"
                 }
-              ]
+              }
             },
             "type": "array"
           }
