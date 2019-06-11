@@ -183,6 +183,7 @@
 <ul>
 <li class="toc-entry toc-h2"><a href="#data-model">Data Model</a></li>
 <li class="toc-entry toc-h2"><a href="#state-lifecycle">State Lifecycle</a></li>
+<li class="toc-entry toc-h2"><a href="#api-specification">API SPecification</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#related-material">Related Material</a></li>
@@ -190,9 +191,28 @@
 </div>
             <h2 id="introduction">Introduction</h2>
 
+<p>Regulatory processes often involve certificates that assert compliance of a shipment with some specification or legislative framework.  FOr example</p>
+
+<ul>
+  <li>A Certificate of Origin (CoO) is issued by an accredited body on behalf of an exporter and is required by the importing regulator.  It asserts that the goods in a consignment conform to the terms of a Free Trade Agreement (FTA) and so may attract concenssional duty terms.</li>
+  <li>A Certifictae of Non Manipulation (CoNM) is issued by an accredited body on behalf of a transhipment port/country and it asserts that goods in a consignment were not altered during transhipment.</li>
+  <li>A PhtoSanitary certificate is issued by an accredity authority on behalf of an exporter of food products and is required to meet the food safety standards of the importing regulator.</li>
+  <li>And dozens of others.</li>
+</ul>
+
+<p>In most cases certificates are about a consignment of goods. Accordingly, the edi3 approach to defining the data model of certifictaes is to “attach” certificate data to the existing UN/CEFACT trade and transport data models.</p>
+
 <h2 id="goals">Goals</h2>
 
+<p>To publish a consistent suite of data models and state lifecycles for various certifictaes used to satisfy regulatory processes.</p>
+
 <h2 id="status">Status</h2>
+
+<p>Certificate types and status:</p>
+
+<ul>
+  <li>A <a href="//rfc.unprotocols.org/spec:2/COSS/raw.svg">raw</a> Certificate Of Origin has been defined.</li>
+</ul>
 
 <h2 id="glossary">Glossary</h2>
 
@@ -205,15 +225,23 @@
   </thead>
   <tbody>
     <tr>
-      <td> </td>
-      <td> </td>
+      <td>CoO</td>
+      <td>Certificate of Origin</td>
+    </tr>
+    <tr>
+      <td>CoNM</td>
+      <td>Certificate of Non Manipulation</td>
+    </tr>
+    <tr>
+      <td>FTA</td>
+      <td>Free Trade Agreement</td>
+    </tr>
+    <tr>
+      <td>RDM</td>
+      <td>Reference Data Model</td>
     </tr>
   </tbody>
 </table>
-
-<p>This service depends on - TBA.</p>
-
-<p>The TBA specification depends on this document. Note, TBA.</p>
 
 <h2 id="licence">Licence</h2>
 
@@ -234,15 +262,29 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <h2 id="data-model">Data Model</h2>
 
+<p>The Certificate of Origin (CoO) Data model is drawn from the UN/CEFACT Buy-Ship-Pay reference data model and conforms to the edi3 <a href="https://edi3.org/specs/edi3-uml-profile/master/">UML profile specification</a></p>
+
+<ul>
+  <li>Yellow elements are specific to the CoO. These are very simple - essentially a CoO decorates a standard consignment with a set of origin criteria and adds a document header.</li>
+  <li>Green elements are standard UN/CEFACT RDM elements.</li>
+  <li>Blue elements are standard enumerations.</li>
+</ul>
+
 <p><img src="CertificateOfOrigin.png" alt="CoO" /></p>
 
 <h2 id="state-lifecycle">State Lifecycle</h2>
 
+<p>To be completed</p>
+
+<h2 id="api-specification">API SPecification</h2>
+
+<p>The Data Model has been used to generate a <a href="https://edi3.org/specs/edi3-regulatory/master/certificates/CertificateOfOrigin.html">CoO REST API specifcication</a> in accordance with the <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md">Open API3.0</a> standard.</p>
+
 <h1 id="related-material">Related Material</h1>
 
 <ul>
-  <li></li>
-  <li></li>
+  <li><img src="chafta-coo-template.pdf" alt="CHAFTA CoO Template PDF" /></li>
+  <li><img src="CertificateOfOriginDataElementMapping.xlsx" alt="CoO data mapping UN / WCO Excel" /></li>
 </ul>
 
             
