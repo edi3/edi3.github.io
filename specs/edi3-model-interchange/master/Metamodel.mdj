@@ -9,7 +9,7 @@
 			"_parent": {
 				"$ref": "AAAAAAFF+h6SjaM2Hec="
 			},
-			"name": "edi3 model interchange",
+			"name": "edi3 Metamodel",
 			"ownedElements": [
 				{
 					"_type": "UMLClassDiagram",
@@ -6103,7 +6103,7 @@
 											"top": 256,
 											"width": 173.41796875,
 											"height": 13,
-											"text": "(from edi3 model interchange)"
+											"text": "(from Domain MetaModel)"
 										},
 										{
 											"_type": "LabelView",
@@ -6553,7 +6553,7 @@
 											"top": -384,
 											"width": 173.41796875,
 											"height": 13,
-											"text": "(from edi3 model interchange)"
+											"text": "(from CodeList MetaModel)"
 										},
 										{
 											"_type": "LabelView",
@@ -8665,6 +8665,45 @@
 									}
 								}
 							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAFqkQS/ZMzJTww=",
+							"_parent": {
+								"$ref": "AAAAAAFqjL/4u1/N78U="
+							},
+							"name": "Identity",
+							"ownedElements": [
+								{
+									"_type": "UMLAssociation",
+									"_id": "AAAAAAFqkQV9INSvLXQ=",
+									"_parent": {
+										"$ref": "AAAAAAFqkQS/ZMzJTww="
+									},
+									"end1": {
+										"_type": "UMLAssociationEnd",
+										"_id": "AAAAAAFqkQV9INSw/jg=",
+										"_parent": {
+											"$ref": "AAAAAAFqkQV9INSvLXQ="
+										},
+										"reference": {
+											"$ref": "AAAAAAFqkQS/ZMzJTww="
+										},
+										"multiplicity": "1..*"
+									},
+									"end2": {
+										"_type": "UMLAssociationEnd",
+										"_id": "AAAAAAFqkQV9INSxAzc=",
+										"_parent": {
+											"$ref": "AAAAAAFqkQV9INSvLXQ="
+										},
+										"reference": {
+											"$ref": "AAAAAAFqjK+NsxgNkHU="
+										},
+										"aggregation": "composite"
+									}
+								}
+							]
 						}
 					]
 				},
@@ -9012,6 +9051,45 @@
 						},
 						{
 							"_type": "UMLClass",
+							"_id": "AAAAAAFqkRH4Fe2O2ZI=",
+							"_parent": {
+								"$ref": "AAAAAAFqjMGIcmblym0="
+							},
+							"name": "Representation",
+							"ownedElements": [
+								{
+									"_type": "UMLAssociation",
+									"_id": "AAAAAAFqkRV3//a3luE=",
+									"_parent": {
+										"$ref": "AAAAAAFqkRH4Fe2O2ZI="
+									},
+									"end1": {
+										"_type": "UMLAssociationEnd",
+										"_id": "AAAAAAFqkRV3//a4ahk=",
+										"_parent": {
+											"$ref": "AAAAAAFqkRV3//a3luE="
+										},
+										"reference": {
+											"$ref": "AAAAAAFqkRH4Fe2O2ZI="
+										},
+										"multiplicity": "1..*"
+									},
+									"end2": {
+										"_type": "UMLAssociationEnd",
+										"_id": "AAAAAAFqkRV3//a54qM=",
+										"_parent": {
+											"$ref": "AAAAAAFqkRV3//a3luE="
+										},
+										"reference": {
+											"$ref": "AAAAAAFqjLfMDia06b4="
+										},
+										"aggregation": "composite"
+									}
+								}
+							]
+						},
+						{
+							"_type": "UMLClass",
 							"_id": "AAAAAAFqjLfMDia06b4=",
 							"_parent": {
 								"$ref": "AAAAAAFqjMGIcmblym0="
@@ -9077,84 +9155,6 @@
 									}
 								}
 							]
-						}
-					]
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFqkQS/ZMzJTww=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Identity",
-					"ownedElements": [
-						{
-							"_type": "UMLAssociation",
-							"_id": "AAAAAAFqkQV9INSvLXQ=",
-							"_parent": {
-								"$ref": "AAAAAAFqkQS/ZMzJTww="
-							},
-							"end1": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFqkQV9INSw/jg=",
-								"_parent": {
-									"$ref": "AAAAAAFqkQV9INSvLXQ="
-								},
-								"reference": {
-									"$ref": "AAAAAAFqkQS/ZMzJTww="
-								},
-								"multiplicity": "1..*"
-							},
-							"end2": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFqkQV9INSxAzc=",
-								"_parent": {
-									"$ref": "AAAAAAFqkQV9INSvLXQ="
-								},
-								"reference": {
-									"$ref": "AAAAAAFqjK+NsxgNkHU="
-								},
-								"aggregation": "composite"
-							}
-						}
-					]
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAFqkRH4Fe2O2ZI=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Representation",
-					"ownedElements": [
-						{
-							"_type": "UMLAssociation",
-							"_id": "AAAAAAFqkRV3//a3luE=",
-							"_parent": {
-								"$ref": "AAAAAAFqkRH4Fe2O2ZI="
-							},
-							"end1": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFqkRV3//a4ahk=",
-								"_parent": {
-									"$ref": "AAAAAAFqkRV3//a3luE="
-								},
-								"reference": {
-									"$ref": "AAAAAAFqkRH4Fe2O2ZI="
-								},
-								"multiplicity": "1..*"
-							},
-							"end2": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAFqkRV3//a54qM=",
-								"_parent": {
-									"$ref": "AAAAAAFqkRV3//a3luE="
-								},
-								"reference": {
-									"$ref": "AAAAAAFqjLfMDia06b4="
-								},
-								"aggregation": "composite"
-							}
 						}
 					]
 				}
