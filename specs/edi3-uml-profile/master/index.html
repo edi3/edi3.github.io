@@ -562,7 +562,7 @@ Complex data elements are represented as containment relationships (UML aggregat
 <h3 id="api-serialisation-note-9">API Serialisation Note</h3>
 
 <ul>
-  <li>The UML <code class="highlighter-rouge">&lt;&lt;interface&gt;&gt;</code> type will map to a RESTful API web resource such as <code class="highlighter-rouge">https://api.acme.com/v1/transportmovements/{123456789}</code>.  The mapping rules for Open API 3.0 specification generation are defined in the Open API 3.0 NDR specification.</li>
+  <li>The UML <code class="highlighter-rouge">&lt;&lt;interface&gt;&gt;</code> type will map to a RESTful API web resource such as <code class="highlighter-rouge">/v1/transportmovements/123456789</code>. Targets of composition relationships are implemented as sub-resources only eg /voyages/12456789/transportEvents. The mapping rules for Open API 3.0 specification generation are defined in the Open API 3.0 NDR specification.</li>
   <li>Resopurce models are deliberately kept simple and so do not attempt to model things like different structures for different types of PATCH operations or a list of filters allowed in GET collection actions. These things are likely to vary by implementation.  Models and generated OpenAPI specifications published by edi3.org represent only the minimum conformant behaviour for an implemention.</li>
 </ul>
 
