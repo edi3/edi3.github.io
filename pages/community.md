@@ -17,7 +17,7 @@ For those that want to chat to some experts. [Join](https://join.slack.com/t/edi
 
 ## Provide your Feedback
 
-If you have an improvement suggestion or just spot a typo that we should fix then you can either just raise a ticket in the relevasnt repository (every specification home page has an ```issue list``` link). Or, if you are a little more experienced with github, you can [fork the repository](https://help.github.com/en/articles/fork-a-repo), make you proposed changes, and send us a [pull request](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork.  You need your own personal Github account to do that - but it's easy and free to create one.
+If you have an improvement suggestion or just spot a typo that we should fix then you can either just raise a ticket in the relevasnt repository (every specification home page has an "issues list" link). Or, if you are a little more experienced with github, you can [fork the repository](https://help.github.com/en/articles/fork-a-repo), make you proposed changes, and send us a [pull request](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork).  You need your own personal Github account to do that - but it's easy and free to create one.
 
 ## Help with Development
 
