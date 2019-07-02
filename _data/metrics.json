@@ -23,7 +23,7 @@
     {
       "name": "issues",
       "lastWeek": 0,
-      "total": 23
+      "total": 36
     }
   ],
   "mostActive": [
@@ -41,11 +41,11 @@
   "links": [
     {
       "text": "Google site metrics",
-      "url": "https://s3-ap-southeast-2.amazonaws.com/edi3-metrics/Analytics+All+Web+Site+Data+Audience+Overview+20190301-20190602.pdf"
+      "url": "https://edi3-metrics.s3-ap-southeast-2.amazonaws.com/Analytics+All+Web+Site+Data+Audience+Overview+20190301-20190701.pdf"
     },
     {
       "text": "Slack team metrics",
-      "url": "https://s3-ap-southeast-2.amazonaws.com/edi3-metrics/edi3+Enterprise+Analytics+All+time+-+June+03+2019.csv"
+      "url": " https://edi3-metrics.s3-ap-southeast-2.amazonaws.com/edi3+Enterprise+Analytics+All+time+-+May+20+2019.csv"
     },
     {
       "text": "Github project metrics",
