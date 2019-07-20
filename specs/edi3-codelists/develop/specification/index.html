@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>edi3 Code Lists 1.0 Specification - Recommendation 20 - Codes for Units of Measure Used in International Trade - edi3 Standards by edi3</title>
+    <title>edi3 Standards by edi3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/style.css">
 
@@ -159,11 +159,11 @@
             <div class="spec-header">
                 
                 <ul>
-                    <li>Spec ID: <p>codelists-recommendation-20/1</p>
+                    <li>Spec ID: 
 </li>
-                    <li><p><img src="http://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" /></p>
+                    <li>
 </li>
-                    <li>Editor: <p><a href="mailto:david@cif-consulting.co.uk">David Roff</a></p>
+                    <li>Editor: 
 </li>
                     <li>Contributors: 
 </li>
@@ -172,42 +172,205 @@
             <div class="specs-toc">
     <!--<div class="specs-toc-title">Table of contents</div>-->
     <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#introduction">Introduction</a>
+<ul>
 <li class="toc-entry toc-h2"><a href="#goals">Goals</a></li>
-<li class="toc-entry toc-h2"><a href="#data-source">Data Source</a></li>
-<li class="toc-entry toc-h2"><a href="#requesting-a-change-dmr---data-maintance-request">Requesting a Change (DMR - Data Maintance Request)</a></li>
-<li class="toc-entry toc-h2"><a href="#license">License</a></li>
-<li class="toc-entry toc-h2"><a href="#related-material">Related Material</a></li>
+<li class="toc-entry toc-h2"><a href="#status">Status</a></li>
+<li class="toc-entry toc-h2"><a href="#glossary">Glossary</a></li>
+<li class="toc-entry toc-h2"><a href="#licence">Licence</a></li>
+<li class="toc-entry toc-h2"><a href="#change-process">Change Process</a></li>
+<li class="toc-entry toc-h2"><a href="#language">Language</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#codelist-governance">CodeList Governance</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#metamodel">Metamodel</a></li>
+<li class="toc-entry toc-h2"><a href="#maintenance">Maintenance</a></li>
+<li class="toc-entry toc-h2"><a href="#canonical-representation">Canonical Representation</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#codelist-publishing">CodeList Publishing</a></li>
 </ul>
 </div>
-            <h2 id="goals">Goals</h2>
+            <h1 id="introduction">Introduction</h1>
 
-<p>Recommendation 20 Provides three character alphabetic and alphanumeric codes for representing units of measurement for length, area, volume/capacity, mass (weight), time, and other quantities used in international trade. The codes are intended for use in manual and/or automated systems for the exchange of information between participants in international trade.</p>
+<p>This specification defines a standard representation scheme for any codelist as well as transformation templates for publishing any codelist as CSV, HTML, JSON-LD, and as an Open API 3.0 end point.  It also defines a codelist maintenance model including version control and release mechanisms.</p>
 
-<p>Facilitates use of Recommendation 20. The code list is presented in three separate annexes:</p>
+<h2 id="goals">Goals</h2>
 
-<p>Annex I – Code elements listed by quantity category;
-Annex II – Code elements listed by unit of measure name; and
-Annex III – Code elements listed by common code.</p>
-
-<h2 id="data-source">Data Source</h2>
-
-<p>Source of information is from the UNECE website: http://www.unece.org/ro/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/code-list-recommendations.html</p>
-
-<h2 id="requesting-a-change-dmr---data-maintance-request">Requesting a Change (DMR - Data Maintance Request)</h2>
-
-<p>Change requests should be made by raising an issue in github and completing the template, these changes will then be considered and follow the below process.</p>
-
-<p>Recommendation No. 20 is maintained on behalf of UN/CEFACT by the UN/CEFACT Information Content Management Group (ICG). Proposals for updating this Recommendation should be addressed to the Global Trade Solutions Section, United Nations Economic Commission for Europe, Palais des Nations, CH-1211 Geneva 10, Switzerland or by email (cefact@unece.org).</p>
-
-<h2 id="license">License</h2>
-
-<p>This data is made available under the Public Domain Dedication and License version v1.0 whose full text can be found at http://opendatacommons.org/licenses/pddl/ - See more at: http://opendatacommons.org/guide/#sthash.97PSVxmh.dpuf</p>
-
-<h2 id="related-material">Related Material</h2>
+<p>The primary goal of this specification is to make all un/cefact codelists accessible to software developers</p>
 
 <ul>
-  <li>http://www.unece.org/ro/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/code-list-recommendations.html</li>
+  <li>as complete codelists (in multiple formats) that can be replicated to subscriber systems - or -</li>
+  <li>as a REST API that can be called from within subscriber systems.</li>
 </ul>
+
+<p>In both cases, codelists should be versioned and subscribers should be notified of new releases but should be able to use any current or historical release within their systems.</p>
+
+<h2 id="status">Status</h2>
+
+<p>This specification is <img src="http://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" />.  It will transition to <img src="http://rfc.unprotocols.org/spec:2/COSS/draft.svg" alt="draft" /> when there is at least one working implememntation.</p>
+
+<h2 id="glossary">Glossary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phrase</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="licence">Licence</h2>
+
+<p>All material published on edi3.org including all parts of this specification are the intellectual property of the UN as per the <a href="https://www.unece.org/fileadmin/DAM/cefact/cf_plenary/plenary12/ECE_TRADE_C_CEFACT_2010_20_Rev2E_UpdatedIPRpolicy.pdf">UN/CEFACT IPR Policy</a>.</p>
+
+<p>This Specification is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version. See http://www.gnu.org/licenses.</p>
+
+<h2 id="change-process">Change Process</h2>
+
+<p>This document is governed by the <a href="http://rfc.unprotocols.org/spec:2/COSS/">2/COSS</a> (COSS).</p>
+
+<h2 id="language">Language</h2>
+
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” 
+in this document are to be interpreted as described in RFC 2119.</p>
+
+<h1 id="codelist-governance">CodeList Governance</h1>
+
+<h2 id="metamodel">Metamodel</h2>
+
+<p>In their simplest form, codelists are just a flat list of code name (eg “KG”) and code description (eg “Kilogram”). However many codelists are not quite that simple.</p>
+
+<ul>
+  <li>Many codelists include a number of additonal properties of a code (eg “SI Unit Symbol” or “Conversion Factor”).</li>
+  <li>Some codelists are hierarchical (eg WTO harmonised tarriff codes) and so need to include the idea of a “level” and a link to a “parent”.</li>
+  <li>Many codes in a codelist include a lifecycle status (eg “deprecagted”) and date.</li>
+  <li>All code lists have an issuing authority, a unique identifier and a version.</li>
+</ul>
+
+<p>In order to meet these requirements, all code list serialisations shall conform to the metamodel shown below.</p>
+
+<p><img src="metamodel.png" alt="metamodel" /></p>
+
+<h2 id="maintenance">Maintenance</h2>
+
+<p>This section aplies only to codelists that are maintained by edi3.org. Codelists maintained by other authorities but re-published by edi3.org are transformed directly from the source format to the edi3.org canonical JSON-LD format.</p>
+
+<p>Codelists are essentailly tables of business information that must be maintainable by non-technical subject matter experts. Therefore a simple and user freindly maintenance model is essential.</p>
+
+<p>The maintenance format will be as two files maintained in an repository folder within https://github.com/edi3/edi3-codelists/tree/develop/docs</p>
+
+<ul>
+  <li>codes.csv file - with columns defined in</li>
+  <li>scheme.json file - including the standard columns defined below plus any additonal scheme specific columns.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Example</th>
+      <th>Optionality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Code</td>
+      <td>the code value</td>
+      <td>string</td>
+      <td>KGM</td>
+      <td>Mandatory</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>the meaning of the code</td>
+      <td>string</td>
+      <td>Kilogram</td>
+      <td>Mandatory</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>The lifcycle status of the code</td>
+      <td>code - allowed values are “proposed”, “stable”, “depracated”</td>
+      <td>optional, if not specificed the “stable” status is assumed.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>StatusDate</td>
+      <td>the date on which the current status became effective</td>
+      <td>date (ISO-8601 YYYY-MM-DD)</td>
+      <td>2008-10-15</td>
+      <td>optional.</td>
+    </tr>
+    <tr>
+      <td>Level</td>
+      <td>the level in the code hierarchy</td>
+      <td>integer from 1 (top level) incrementing for each level</td>
+      <td>1</td>
+      <td>mandatory for hierarchical code lists. not present otherwise</td>
+    </tr>
+    <tr>
+      <td>Parent</td>
+      <td>the parent code value</td>
+      <td>0710 (being the parent code for WTO tarif code for 171010, potatoes)</td>
+      <td>mandatory for hierarchical code lists. not present otherwise</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Any number of addiotnal columns can be added to represent additional properties of the code.  The only condition is that the column name must be defined in a scheme.json file that is maintained in the same repository folder as the codes.csv file and cannot have the same name as any of the reserved column names defined in the table above.  The scheme.json file must be the same format as the canonical representation defined in the next section.</p>
+
+<h2 id="canonical-representation">Canonical Representation</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+	"@Context":"https://edi3.org",
+	"@Type":"codelist",
+	"@id":"https://edi3.org/codelists/rec20",
+	"name":"rec20",
+	"description":"Units of measure",
+	"version":"1.0",
+	"levels":1,
+	"status":"stable",
+	"statusDate":"2018-06-01",
+
+	"codes":[
+		{
+			"name":"CMQ",
+			"description":"cubic centimetre,
+			"sector":"Space and time",
+			"quantity":"volume",
+			"symbol":"cm³",
+			"canonicalUnit":"MTQ",
+			"conversionFactor":10E-6
+		},
+		{
+			"name":"MTQ",
+			"description":"cubic metre,
+			"sector":"Space and time",
+			"quantity":"volume",
+			"symbol":"m³",
+			"canonicalUnit":"MTQ",
+			"conversionFactor":1
+		}
+	]
+ 
+}
+</code></pre></div></div>
+
+<p>To-Do : how to reference the JSON-LD extension of codelists @type to define the specific extra properties of the rec20 codelist (namely sector, quantity, symbol, etc)</p>
+
+<h1 id="codelist-publishing">CodeList Publishing</h1>
 
 
             
