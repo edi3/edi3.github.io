@@ -333,10 +333,12 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <h2 id="canonical-representation">Canonical Representation</h2>
 
+<p>Each code list is maintained in a seaprate folder of the same name under the docs folder in the edi3.org codelists repository https://github.com/edi3/edi3-codelists/tree/master/docs.  For example a file similar to the snippet below would be located at /rec20/codes.json</p>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
 	"@Context":"https://edi3.org",
 	"@Type":"codelist",
-	"@id":"https://edi3.org/codelists/rec20",
+	"@id":"https://edi3.org/codelists/rec20/1.0",
 	"name":"rec20",
 	"description":"Units of measure",
 	"version":"1.0",
@@ -371,6 +373,51 @@ in this document are to be interpreted as described in RFC 2119.</p>
 <p>To-Do : how to reference the JSON-LD extension of codelists @type to define the specific extra properties of the rec20 codelist (namely sector, quantity, symbol, etc)</p>
 
 <h1 id="codelist-publishing">CodeList Publishing</h1>
+
+<p>All edi3.org codelists are published as consumable APIs according to the following end-point structure</p>
+
+<p>Base URL <code class="highlighter-rouge">https://api.edi3.org/codelists</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>GET Path</th>
+      <th>Parameter Options</th>
+      <th>Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Base URL</td>
+      <td>versions=all/latest (default = latest)</td>
+      <td>list of available code lists and versions</td>
+    </tr>
+    <tr>
+      <td>/{codelist}/{version} if version not specified, latest list is returned</td>
+      <td>name__{operator}=value, {anyProperty}__{operator}=value, responseSet=minimal/full (default=minimal)</td>
+      <td>list of codes from the specified codelist that match query parameters.</td>
+    </tr>
+    <tr>
+      <td>/{codelist}/{version}/{code name}</td>
+      <td>none</td>
+      <td>returns full details of a specific code</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For example, the following query would return the structure shown in the canonical form snippet in the previous section</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://edi3.org/codelists/rec20/1.0?canonicalUnit=MTQ&amp;responseSet=full
+</code></pre></div></div>
+
+<p>Notes</p>
+
+<ul>
+  <li>The query respomnse format is always the canonical form described in the previous section.  Just the header part is returned when the query is about codelists. The full srtucture is returned when the query is for codes within a list.</li>
+  <li>HTTP header Accept value can be set to either text/html (returns a formatted web page) or application/json (returns the JSON data with JSON-LD context headers)</li>
+  <li>operators on query parameters are defined using “dunder” as per query parameters section of the edi3 <a href="https://edi3.org/api-ndr/">Open API design rules</a>.</li>
+  <li>list responses are paginated as defined in the pagination section of the edi3 <a href="https://edi3.org/api-ndr/">Open API design rules</a>.</li>
+</ul>
 
 
             
