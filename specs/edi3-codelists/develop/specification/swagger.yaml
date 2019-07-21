@@ -1,0 +1,98 @@
+openapi: 3.0.1
+info:
+  title: UNECE Recommendation 24 - Trade and Transport Status Codes
+  description: |
+    Recommendation 24 provides Transport Status Codes to satisfy requirements for exchanging coded information about the status of consignments, goods or means of transport at a certain time or place in the transport chain. Representation of Transport Status Codes can be given in plain language or in coded form. The codes provided for in the Recommendation are for use in manual and/or automated systems of information exchange in international trade.
+  contact:
+    name: UNECE Recommendations
+    url: https://www.unece.org/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/code-list-recommendations.html
+  version: "3.0.1-oas3"
+servers:
+- url: "https://codelists.api.edi3.org/recommendation-24"
+paths:
+  /transportStatus:
+    get:
+      tags:
+      - transportStatus
+      summary: Search for trade and transport status codes as defined in rec 24
+      description: This api will return a (paged) list of units of trade and transport status codes
+      operationId: searchTransportStatus
+      parameters:
+      - name: Code
+        in: query
+        description: "3 character alphanumeric code value"
+        schema:
+          type: string
+      - name: Name
+        in: query
+        description: "The name of the status code"
+        schema:
+          type: string
+      - name: Description
+        in: query
+        description: "A plain text specification of the named status code"
+        schema:
+          type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransportStatuses'
+              example:
+              - Code: 1
+                Name: Arrival, completed
+                Description: The goods/consignment/equipment/means of transport has arrived.
+        400:
+          description: ' Bad request - Issue with parameter'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                identifier: a710a2af-4f0d-458b-8792-23fe4f736d9d
+                error: pagesize needs to be between 1 and 1000.
+        404:
+          description: No data found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                identifier: b1f1fef1-59ad-4978-bed8-3ff96d6d3587
+                error: No trade and transport status code found
+        500:
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                identifier: 0407936e-d2ad-41e9-99e2-05a5919c3075
+                error: An unexpected exception occured
+components:
+  schemas:
+    Error:
+      type: object
+      properties:
+        identifier:
+          type: string
+        error:
+          type: string
+    TransportStatuses:
+      type: array
+      items:
+        $ref: '#/components/schemas/TransportStatus'
+    TransportStatus:
+      type: object
+      properties:
+        Code:
+          description: "3 character alphanumeric code value"
+          type: string
+        Name:
+          description: "The name of the status code"
+          type: string
+        Description:
+          description: "A plain text specification of the named status code"
+          type: string

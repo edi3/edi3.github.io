@@ -1,0 +1,346 @@
+Code,Name,Description
+1,"Arrival, completed",The goods/consignment/equipment/means of transport has arrived.
+2,"Loading, authorized",Authorisation to load has been given.
+3,"Arrival, in defective condition",The goods/consignment/equipment or a means of transport has arrived in a defective condition.
+4,"Defective equipment returned to service",The equipment previously the subject of a 'defective condition' status has been returned to service.
+5,"Process, begun",The process has begun.
+6,"Booking, completed",The goods/consignment/equipment or means of transport has been booked.
+7,"Booking, cancelled",The booking of goods/consignment/equipment or means of transport has been cancelled.
+8,"Cleared, import restrictions",The goods/consignment/equipment/means of transport held for import restriction purposes has been released for import.
+9,"Cleared, export restrictions",The goods/consignment/equipment/means of transport held for export restriction purposes has been released for export.
+10,"Cleared, by agriculture, food or fisheries authorities",The goods/consignment/equipment/means of transport has been cleared by agriculture food or fisheries authorities.
+11,"Cleared, by port authority",The goods/consignment/equipment/means of transport has been cleared by port authority.
+12,"Cleared, by customs",The goods/consignment/equipment/means of transport has been cleared by customs.
+13,"Collection/pick-up, completed",The goods/consignment/equipment has been collected/picked-up.
+14,"Process, completed",The process has been completed.
+15,"Consolidated",The goods/consignments have been consolidated.
+16,"Crossed border",The goods/consignments/equipment/means of transport has crossed a border. 
+17,"Customs clearance, refused",The goods/consignment/equipment/means of transport has been refused to be cleared by the customs authorities.
+18,"Damaged in the course of transportation",The goods/consignment/equipment has been damaged in the course of transportation.
+19,"Equipment, damage quoted for",Damaged equipment has been assessed and a repair quotation has been sent.
+20,"Delayed, in the course of transportation",The goods/consignment/equipment/means of transport has been delayed in the course of transportation.
+21,"Delivery, completed",The goods/consignment/equipment has been delivered.
+22,"Delivery, completed as per instruction",Delivery of the goods/consignment/equipment has been completed as per instruction.
+23,"Delivery, not completed",Delivery of the goods/consignment/equipment has not been completed.
+24,"Departure, completed",The means of transport has departed. 
+25,"Departure, delayed",The means of transport has been delayed in departure.
+26,"Deramped",The equipment has been removed from a position above another type of equipment and/or on a means of transport.
+27,"Despatch, completed",The goods/consignment/equipment has been despatched.
+28,"Stripped",The goods/consignment/equipment has been unloaded from a piece of equipment in which they were transported.
+29,"Unloaded",The goods/consignment/equipment has been unloaded from a means of transport.
+30,"Empty on inspection",The package/equipment has been found to be empty on inspection.
+31,"En route",The goods/consignment/equipment/means of transport is moving to destination.
+32,"Equipment, returned from repair",The equipment has been returned from repair.
+33,"Equipment, sent for repair",The equipment has been sent for repair.
+34,"Equipment, repaired",The equipment has been repaired.
+35,"Forwarded to destination",The goods/consignment/equipment has been forwarded to a destination.
+36,"Not found",The goods/consignment/equipment/means of transport has not been found.
+37,"Found",The goods/consignment/equipment/means of transport has been found.
+38,"Freight paid",The freight charges have been paid.
+39,"Released from bond",The goods/consignment/equipment has been released from bond.
+40,"Arrival, at port",The goods/consignment/equipment has arrived at the port.
+41,"Handed over under continued responsibility",The goods/consignment/equipment has been handed over under responsibility of the same transport operator.
+44,"Misrouted consignment corrected",The goods/consignment/equipment/means of transport has been re-routed to the correct destination.
+45,"Arrival, consignee informed",The consignee has been informed of the arrival of the goods/consignments/equipment/means of transport.
+46,"Moved, into bond",The goods/consignment/equipment has been moved into bond.
+47,"Moved, into packing depot",The goods/consignment/equipment has been moved into a packing depot.
+48,"Loading, completed onto a means of transport",The goods/consignment/equipment has been loaded onto a means of transport.
+49,"Lost",The goods/consignment/equipment/means of transport has been lost.
+50,"Manifested",The goods/consignment/equipment has been included on a manifest.
+51,"Onloaded from a means of transport",The consignment has been onloaded from a means of transport.
+53,"Collection/pick-up, not completed",The goods/consignment/equipment expected has not been collected/picked-up.
+54,"Unidentifiable",The goods/consignment/equipment/means of transport cannot be identified.
+57,"Not loaded onto a means of transport",The goods/consignment/equipment has not been loaded onto a means of transport.
+58,"Equipment, off hire",The equipment is no longer under lease.
+59,"Premature onloading",The goods/consignment/equipment has been onloaded prematurely from a means of transport.
+60,"Equipment, on hire",The equipment has been leased.
+61,"Outstanding claims settled",Outstanding claims in respect of the goods/consignment/equipment have been settled.
+62,"Overlanded",Unmanifested goods/consignments/equipment has been unloaded.
+63,"Not available for collection/pick-up",The goods/consignment/equipment is not available for collection/pick-up.
+64,"Collection/pick-up, awaited",The goods/consignment/equipment is awaiting collection/pick-up.
+65,"Equipment, plugged-in",The equipment has been plugged into a power source.
+66,"Plundered",The goods/consignment/equipment/means of transport has been plundered.
+67,"Positioned",The goods/consignment/equipment has been positioned.
+68,"Pre-informed",The party has been informed in advance.
+69,"Disposed of",The goods/consignment/equipment has been disposed of.
+70,"Ramped equipment",The equipment has been placed above another type of equipment and/or placed on a means of transport.
+71,"Ready for transportation",The goods/consignment/equipment is ready for transportation.
+72,"Receipt of goods fully acknowledged",The receipt of goods has been fully acknowledged.
+73,"Receipt of goods partially acknowledged",The receipt of goods has been partially acknowledged.
+74,"Received",The goods/consignment/equipment have been received.
+75,"Consignee changed",The consignee has been changed.
+76,"Transport re-arranged",The transport of the goods/consignment/equipment has been re-arranged.
+77,"Refused, action",The transport action has been refused.
+78,"Released",The goods/consignment/equipment has been released.
+79,"Reloaded onto a means of transport",The goods/consignment/equipment has been reloaded onto a means of transport.
+80,"Returned as instructed",The goods/consignment/equipment has been returned as instructed.
+81,"Returned wrecked",The goods/consignment/equipment/means of transport has been returned in a wrecked condition.
+82,"Returned",The goods/consignment/equipment has been returned.
+83,"Sealed equipment",The equipment has been sealed.
+84,"Service ordered",A service has been ordered.
+85,"Short landed",Goods/consignments/equipment manifested for unloading have not been unloaded.
+86,"Short shipped",The goods/consignment/equipment expected to be sent has not been fully loaded onto a means of transport.
+87,"Despatched, completed via a wrong route",The goods/consignment/equipment has been despatched via a wrong route.
+88,"Split consignment",The consignment of goods has been split. 
+89,"Steam cleaned",The goods/equipment has been steam cleaned.
+90,"Movement stopped",The movement of the goods/consignment/equipment has been stopped.
+91,"Stored",The goods/consignment/equipment has been placed into storage.
+92,"Stowed",The goods/consignment/equipment has been placed on a means of transport.
+93,"Stuffed",The goods/consignments have been loaded into a piece of equipment.
+94,"Stuffed and sealed",The goods/consignments have been loaded into a piece of equipment and the equipment has been sealed.
+95,"Sub-lease notice in",A sub-lease notice has been sent to the lessor.
+96,"Sub-lease notice out",A sub-lease notice has been sent by the lessee.
+97,"Damage surveyed",The goods/consignment/equipment has been surveyed to assess the damage.
+98,"Transferred in",The goods/consignment/equipment has been transferred in.
+99,"Transferred out",The goods/consignment/equipment has been transferred out.
+100,"Transshipment",The goods/consignment/equipment has been transferred to another means of transport.
+101,"Delayed in transit",The goods/consignment/equipment/means of transport has been delayed in transit.
+102,"Unknown",The goods/consignment/equipment/means of transport is not known.
+103,"Equipment, unplugged",The equipment has been removed from the power source.
+104,"Delivery refused, to be re-arranged",The delivery of the goods has been refused and is to be re-arranged.
+105,"Delivery, postponed",A part or the whole of the delivery is postponed.
+106,"Delivery refused",A part or the whole of the delivery is refused.
+107,"Anomaly on arrival",An anomaly has been found on arrival.
+108,"Delivery claim",A claim has been made at delivery.
+109,"Delivery, impossible, delivery notice left",Delivery has not been possible; a delivery notice has been left.
+110,"Delivery, impossible, no delivery notice left",Delivery has not been possible; no delivery notice has been left.
+111,"Transport terminated",The transport of the goods/consignment/equipment/means of transport has been terminated.
+112,"Held, at consignee's disposal",The goods/consignment is held at consignee's disposal.
+113,"Delivery, in progress",The delivery of the goods/consignment is in progress. 
+114,"Delivery, accepted subject to further inspection",Delivery accepted subject to further inspection of the good/consignment/equipment/means of transport.
+115,"Discrepancy",There is a discrepancy in the details.
+116,"Export inhibited",Export is inhibited.
+117,"Missing",The goods/consignment/equipment is missing.
+118,"Stowed on deck",The goods/consignment/equipment has been stowed on/above deck.
+119,"Unable to be located",The goods/consignment/equipment cannot be located.
+120,"Unacceptable condition",The goods/consignment/equipment/means of transport is in an unacceptable condition.
+121,"Stowed under deck",The goods/consignment/equipment has been stowed under/below deck.
+123,"Accompanying documents delivered",All documents accompanying the cargo have been delivered.
+124,"For transfer",The goods/consignment/equipment is to be transferred.
+125,"No status",No status information is available.
+126,"Customs clearance, in progress",Customs clearance is in progress.
+127,"Departed, completed on a means of transport",The goods/consignment/equipment has departed on a means of transport.
+128,"Awaiting customs import release",Awaiting customs release for import.
+129,"In-bond movement",The goods/consignment/equipment are moving under bond.
+130,"Consignment received from shipper",The consignment has been received from shipper.
+131,"For transfer, to another carrier",The goods/consignment/equipment is to be transferred to another carrier.
+132,"Loading, in progress",The goods/consignment/equipment is being loaded onto a means of transport.
+133,"Special loading operations",Operations related to special loading of goods/consignment/equipment. 
+134,"Embarking passengers",The embarkation of passengers.
+135,"Unloading, in progress",The goods/consignment/equipment is being unloaded from a means of transport.
+136,"Special unloading",Operations related to special unloading of goods/consignment/equipment.
+137,"Disembarking passengers",The disembarkation of passengers.
+138,"Relocation of a means of transport",Relocating of a means of transport.
+139,"Manoeuvring operations, entering port",Manoeuvring operations connected with entering the port.
+140,"Manoeuvring operations, leaving port",Manoeuvring operations connected with leaving the port.
+141,"Manoeuvring operations, within the port",Manoeuvring operations connected with movement within the port.
+142,"Means of transport, under preparation",Preparation for handling of the means of transport.
+143,"Ballast loading",Loading of ballast.
+144,"Ballast unloading",Unloading of ballast.
+145,"Cargo space under preparation",Preparation of the cargo space of the means of transport.
+146,"Provisioning",Provision of supplies for a means of transport. 
+147,"Provisioning, fuel",Provision of fuel for a means of transport.
+148,"Provisioning, water",Provision of water for a means of transport.
+149,"Provisioning, oil",Provision of oil for a means of transport.
+150,"Provisioning, food",Provision of food for a means of transport.
+151,"Sanitary operations",Operations related to sanitary conditions.
+152,"Fumigation operations",Operations related to fumigation of the equipment or the means of transport.
+153,"Desinfestation operations",Operations related to desinfestation of the equipment or the means of transport.
+154,"Deratization operations",Operations related to deratization of the means of transport.
+155,"Degasation operations",Operations related to the removal of unwanted gas.
+156,"Crew recruitment operation",Operation related to recruitment of crew.
+157,"Training operations",Operations related to training.
+158,"Salvage operations",Operations related to salvage work.
+159,"Loading, alongside",Loading the goods when the means of transport is alongside.
+161,"Loading, at anchor",Loading the goods when the means of transport is at anchor.
+162,"Unloading, at wharf",Unloading the goods when the means of transport is at the wharf.
+163,"Unloading on board",Unloading the goods from the vessel.
+164,"Unloading, at anchor",Unloading the goods when the means of transport is at anchor.
+165,"Loading and unloading",simultaneously	Loading and unloading operations simultaneously.
+166,"Idle time operations",Operations during idle time pending a scheduled event.
+167,"Technical operations",Operations of a technical nature.
+168,"Compass calibration",Operations related to calibration of a compass.
+169,"Document, clearance operation",Operation related to clearance of a document.
+170,"Customs formalities operation",Operation related to customs formalities.
+171,"Medical control operations",Medical control operations related to the crew.
+172,"Loading, preparation for",Preparation for the loading of the goods.
+174,"Unloading, preparation for",Preparation for the unloading of the goods.
+175,"Unloading, polluted ballast",Unloading of polluted ballast.
+176,"Obtaining documents from shipping register",Operations related to obtaining documents from the shipping register.
+177,"Obtaining wreckage documentation",Operations related to obtaining documents for a wrecked means of transport.
+178,"Waiting, to enter or leave",Waiting to enter or leave.
+179,"Waiting, for a pilot",Waiting for an available pilot.
+180,"Waiting, for a tug",Waiting for an available tug.
+181,"Waiting, for day light",Waiting for day light hours.
+182,"Waiting, due to meteorological circumstances",Waiting due to meteorological circumstances.
+183,"Waiting, to form a convoy",Waiting to form a convoy.
+184,"Waiting, for action by authorities",Waiting for action to be taken by authorities.
+185,"Waiting, due to a ban",Waiting due to a ban.
+186,"Waiting, for entry permission",Waiting for entry permission from the authorities.
+187,"Waiting, due to an action taken by authorities",Waiting due to an action taken by the authorities.
+188,"Waiting, due to the terms of charter",Waiting due to terms of the charter.
+189,"Waiting, for a location",Waiting for a location.
+190,"Waiting, for cargo",Waiting for cargo.
+191,"Waiting, for workers",Waiting for workers.
+192,"Waiting, for storage area",Waiting for a storage area.
+193,"Waiting, for equipment",Waiting for equipment.
+194,"Waiting, for other means of transport",Waiting for other means of transport.
+195,"Waiting, for handling equipment",Waiting for handling equipment.
+196,"Waiting, for on board handling equipment",Waiting for onboard handling equipment.
+197,"Waiting, for cargo to be ready for loading",Waiting due to the cargo not being ready to be loaded/handled.
+198,"Waiting, for means of transport to be ready",Waiting due to the means of transport not being ready. 
+199,"Waiting, due to damaged cargo",Waiting because cargo was damaged.
+200,"Waiting, for operational periods",Waiting due to being outside the period of operation.
+201,"Waiting, for repair and/or maintenance of the means of transport",Waiting due to repairs and/or maintenance to the means of transport.
+202,"Waiting, for repair and/or maintenance of handling equipment",Waiting due to repairs and/or maintenance of handling equipment.
+203,"Embarking passengers from tender",The embarkation of passengers from a tender.
+204,"Waiting, for a counter convoy to pass",Waiting due to passage of counter convoy. 
+205,"Delivery address outside delivery area",The address for delivery is outside the area of the carrier/transport operator.
+206,"Arrival, after means of transport departed",The goods/consignment/equipment has arrived after the means of transport has departed.
+207,"Delivery refused, agent",The agent refused to accept delivery.
+208,"Seals, replaced",The seals on the equipment have been replaced.
+209,"Delivery, scheduled",The delivery has been scheduled.
+210,"Delivery, unsuccessful attempt",An unsuccessful attempt has been made to deliver the goods/consignment/equipment.
+211,"Delivery not completed, business closed",The goods/consignment/equipment could not be delivered as the business was closed.
+212,"Delivery, changed schedule",The goods/consignment/equipment cannot be delivered at the arranged time because of a change of schedule.
+213,"Delivery, further address needed",A further address is needed to effect delivery of the goods/consignment/ equipment.
+214,"Computer system not in operation",The computer system is not in operation.
+215,"Delivery, awaiting credit approval",Delivery on a credit base is requested.
+216,"Delivery, awaiting customer arrangements",The goods/consignment/equipment require delivery arrangements by the customer.
+218,"Damaged",The goods/consignments/equipment have been damaged.
+219,"Delivery pending, awaiting specified dates/times/periods",Delivery of the goods/consignment/equipment is pending awaiting specified dates/times/periods.
+220,"Destination incorrect",The goods/consignment/equipment has been sent to an incorrect destination.
+222,"Derailment",The train has derailed.
+224,"Delivery, industrial dispute",The goods/consignment/equipment cannot be delivered due to an industrial dispute.
+225,"Operation affected by customer action",An operation has been affected by an action of the customer.
+227,"Delivery, equipment failure",The goods/consignment/equipment cannot be delivered due to a failure in the equipment.
+228,"Inspection required by authority",An inspection of the goods/equipment is required by an authority.
+229,"Export suspended",The goods/consignment/equipment has been suspended from export pending further investigation.
+231,"Missing, goods item",The goods item is missing.
+232,"Import suspended",The goods/consignment/equipment has been suspended from import pending further investigation.
+233,"Incorrect picklist",The goods/consignment/equipment was not collected/picked-up due to an incorrect picklist.
+234,"Incorrect address",The address is incorrect.
+235,"Industrial dispute",An industrial dispute has happened.
+236,"Waiting, for instructions",Further instructions are awaited.
+238,"Means of transport, damaged",The means of transport has been damaged.
+239,"Mechanical breakdown",There has been a mechanical breakdown of the means of transport/equipment.
+240,"Mechanical inspection required",A mechanical inspection of the means of transport/equipment is required.
+241,"Missing, document",The document for the goods/consignments/equipment is missing.
+242,"New delivery arrangements advised",New delivery arrangements have been advised. 
+243,"No recipient contact information",No contact information available concerning the recipient.
+247,"Collection/pick-up, package not available",The package is not available for collection/pick-up.
+248,"Tracking number unknown",The tracking number of the goods/consignment/equipment is unknown.
+250,"Transport payment not received",The transport payment has not been received.
+251,"Refused, non-payment by payer",Payer refused to make the payment.
+253,"Refused, no reason given",The transport action/documentation has been refused without a reason given.
+254,"Delivery, scheduled past cut-off time",The goods/consignment/equipment to be delivered has been scheduled past the cut-off time.
+255,"Shunted to siding",The means of transport has been shunted to a siding.
+256,"Signature not required",A signature is not required.
+258,"Special service required",A special service is required.
+260,"Tracking information unavailable",The tracking information is unavailable.
+265,"Reason unknown",The reason is unknown.
+266,"Delivery delayed, adverse weather conditions",Adverse weather conditions have delayed delivery.
+267,"Free storage time expired",The goods/consignment/equipment has been in a storage facility for longer than the permitted free time.
+269,"Delivery, consignee absent",The goods/consignment/equipment cannot be delivered as the consignee was absent.
+270,"Delayed operation, local circumstances",The operation is delayed due to local circumstances.
+271,"Delayed operation, consignee's instructions",The operation is delayed awaiting consignee's instructions.
+272,"Delayed operation, consignor's instructions",The operation is delayed awaiting consignor's instructions.
+273,"Delayed operation",The operation is delayed.
+274,"Incomplete address",The address is incomplete.
+275,"Delivery refused, purchase order cancelled",The delivery was refused as the purchase order has been cancelled.
+276,"Delivery refused, return to the consignor",The delivery was refused and the goods/consignment/equipment will be returned to the consignor.
+277,"Delivery refused, inconsistent with purchase order",The delivery was refused as an inconsistency with the purchase order was found.
+278,"Delivery refused, incorrect delivery date",The delivery was refused as the delivery date was incorrect.
+279,"Delivery refused, automatic return",The delivery was refused and the goods/consignment/equipment is automatically returned as instructed.
+280,"Delivery refused, duplicate delivery",The delivery was refused because of duplicate delivery.
+281,"Delivery refused, instructions requested",The delivery was refused and instructions are requested.
+282,"Delivery refused, consignee's condition",The delivery was refused due to the consignee's condition.
+283,"Delivery refused, delivery incomplete",The delivery was refused due to incomplete delivery.
+284,"Delivery refused, not ordered",The delivery was refused as the goods/consignment/equipment had not been ordered. 
+285,"Delivery refused, remainder not accepted",The delivery of the remaining goods was not accepted.
+286,"Delivery refused, spoilt state",The delivery was refused as the goods/consignment/equipment was in a spoilt state.
+287,"Missing, contents",The contents are missing.
+288,"Not on package list",The goods/consignment is not on the package list.
+291,"Delivery refused, collect freight charges not paid",The delivery was refused as the collect freight charges were not paid.
+292,"Delivery refused, reimbursement not paid",The delivery was refused as the reimbursement was not paid.
+295,"Delivery refused, opened",The delivery was refused as the goods/consignment was found to be opened.
+297,"Delivery refused, commercial dispute",The delivery was refused because of a commercial dispute. 
+298,"Delivery refused, error on product or packaging",The delivery was refused as an error was found on product or packaging.
+299,"Delivery refused, delivery date/time changed",The delivery was refused as the delivery date or time has been changed.
+300,"Document, received without goods",A document for a consignment has been received without the corresponding goods.
+301,"Goods, received without documentation",Goods/consignment has been received without the corresponding documentation.
+302,"Overcarried consignment",The consignment has been overcarried.
+306,"Document, found",The document has been found.
+307,"Damaged but deliverable",The goods/consignment/equipment has been damaged but delivery can be completed.
+308,"Spoilt",The goods/consignment/equipment is spoilt.
+309,"Packaging/equipment opened",The packaging/equipment has been opened.
+310,"Processed as contractually agreed",The goods/consignment/equipment has been processed as contractually agreed.
+311,"Claim folder opened",A claim folder has been opened.
+312,"Moved, completed",The goods/consignment/equipment has been moved.
+313,"Returned by recipient",The goods/consignment/equipment has been returned by the recipient.
+314,"Delayed, at origin",The goods/consignment/equipment/means of transport has been delayed at the origin.
+315,"Held, by logistic service provider",The goods/consignment/equipment has been held by the logistic service provider.
+316,"Incident occurred but accepted by ordering party",An incident has occurred but has been accepted by the ordering party.
+317,"Delivery party' premises closed during normal hours",The premises of the delivery party were closed during normal hours.
+318,"Delivery incomplete, time shortage",The delivery of the goods/consignment/equipment could not be completed due to a shortage of time to handle the delivery.
+319,"Despatch, preparation error",An error occurred during the preparation of the despatch.
+320,"Undefined incident attributed to logistic server provider",An undefined incident has occurred which has been attributed to the logistic service provider.
+321,"Instruction to despatch, received",The instruction to despatch has been received.
+322,"Despatch, under preparation",The despatch of the goods/consignment/equipment is in preparation.
+323,"Return in progress",The goods/consignment/equipment is being returned.
+324,"Instruction to despatch, cancelled",The instruction to despatch has been cancelled.
+325,"Delivery refused, by recipient",The delivery of the goods/consignment/equipment has been refused by the recipient.
+326,"Goods, held by third party on instruction from owner",Goods are held under control of a third party following an instruction from the owner of the goods.
+327,"Weight or volume loss",The goods have suffered a weight or volume loss.
+328,"Moved, internally",The goods/consignment/equipment has been moved internally.
+329,"Consignment partially stolen",The consignment has been partially stolen.
+330,"Consignment partially lost or missing",The consignment is partially lost or missing.
+331,"Destroyed ",The goods/consignment/equipment has been destroyed.
+332,"Action by logistics service provider",An action was taken by the logistics service provider. 
+333,"Action by logistics service provider on instruction by owner",An action was taken by the logistics service provider as instructed by owner of the goods. 
+334,"Document, refused",The document has been refused.
+335,"Seals, damaged",The seals on the equipment have been damaged.
+336,"Seals, broken",The seals on the equipment have been broken.
+337,"Seals, tampered",The seals on the equipment have been tampered.
+338,"Collection/pick-up, business closed",The goods/consignment/equipment could not be collected/picked-up as the business was closed.
+339,"Collection/pick-up, changed schedule",The goods/consignment/equipment cannot be collected/picked-up at the arranged time because of a change of schedule.
+340,"Collection/pick-up, further address needed",A further address is needed to effect collection/pick-up of the goods/consignment/ equipment.
+341,"Collection/pick-up, industrial dispute",The goods/consignment/equipment cannot be collected/picked-up due to an industrial dispute.
+342,"Collection/pick-up, equipment failure",The goods/consignment/equipment cannot be collected/picked-up due to a failure in the equipment.
+343,"Document, incorrect",The document for the goods/consignments/equipment is incorrect.
+344,"Collection/pick-up, scheduled past cut-off time",The goods/consignment/equipment to be collected/picked-up has been scheduled past the cut-off time.
+345,"Collection/pick-up, adverse weather conditions",Adverse weather conditions have affected collection/pick-up.
+346,"Unloading, completed from a means of transport",The goods/consignment/equipment has been unloaded from a means of transport.
+347,"Deliverable",The goods/consignment/equipment can be delivered.
+348,"Not deliverable",The goods/consignment/equipment cannot be delivered.
+349,"Handed over",The goods/consignment/equipment has been handed over to another party.
+350,"Signature required",A signature is required.
+351,"Defined incident attributed to logistic server provider",A defined incident has occurred which has been attributed to the logistic service provider.
+352,"Delivery not completed, business closed, inventory count",The goods/consignment/equipment could not be delivered as the business was closed due to inventory count.
+353,"Delivery not completed, business closed on Saturday",The goods/consignment/equipment could not be delivered as the business was closed on Saturday.
+354,"Delivery not completed, business closed on national holiday",The goods/consignment/equipment could not be delivered as the business was closed on a national holiday.
+355,"En route, via local route",The goods/consignment/equipment/means of transport is moving to destination via a local route.
+356,"En route, via national route",The goods/consignment/equipment/means of transport is moving to destination via a national route.
+357,"En route, via international route",The goods/consignment/equipment/means of transport is moving to destination via an international route.
+358,"Transport terminated, mail not received",The transport of the goods/consignment/equipment/means of transport has been terminated and the mail has not been received.
+359,"Bill of Lading issued",The Bill of Lading for the goods/consignment/equipment has been issued.
+360,"Cleared, by logistics service provider",The goods/consignment/equipment/means of transport has been cleared by logistics service provider.
+361,"Delivery, expected",The goods/consignment/equipment expected to be delivered.
+362,"Measured",The goods/consignment/equipment/means of transport has been measured.
+363,"Loading, ready",The goods/consignment/equipment is ready to be loaded onto a means of transport.
+364,"Arrival, at yard",The goods/consignment/equipment/means of transport has arrived at the yard.
+365,"Departure, from yard",The goods/consignment/equipment/means of transport has departed from the yard.
+366,"Accepted at interchange point",The goods/consignment/equipment/means of transport has been accepted at the interchange point.
+367,"Alerted, no action taken",No action taken after an alert in relation to the goods/consignment/equipment/means of transport.
+368,"Transshipment to another wagon",The goods/consignment has been transhipped to another wagon.
+369,"Trip plan revised manually",The transport route has been re-programmed manually.
+370,"Special wagon handling arranged",The handling of a special wagon has been arranged.
+371,"Equipment, emptied",The equipment has been emptied.
+372,"Equipment, loaded",The equipment has been loaded.
+373,"Equipment, held by transport operator",The equipment has been held by the transport operator.
+374,"Equipment, held by terminal operator",The equipment has been held by the terminal operator.
+375,"Equipment, storage period at terminal",exceeded	The equipment storage period at a transport terminal has been exceeded. 
+376,"Equipment, held by equipment operator",The equipment has been held by the equipment operator.
+377,"Equipment, not released by equipment operator",The equipment has not been released by the equipment operator.
+378,"Delivery Order Issued",Delivery Order for the goods/consignment/equipment/means has been issued.
+379,"Cleared for container release",The procedures of containers’ release from container yard have been cleared by all authorities and private sectors.
