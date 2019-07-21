@@ -16,7 +16,7 @@ The edi3 Code Lists Specifications include:
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Code Lists technical specification](//edi3.org/specs/edi3-codelists/develop/specification/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-codelists/develop/recommendation-20/redoc-static.html){:target="_blank"} |  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
+| [Code Lists technical specification](//edi3.org/specs/edi3-codelists/develop/specification/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | Coming Soon|  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
 
 ## Published Codelists
 
