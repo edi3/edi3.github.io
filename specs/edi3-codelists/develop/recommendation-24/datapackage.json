@@ -20,7 +20,7 @@
 			"fields": [{
 					"name": "Code",
 					"type": "string",
-					"description": "A 2 character alpha numeric code value agreed by the UN/CEFACT content management group",
+					"description": "3 character alphanumeric code value agreed by the UN/CEFACT content management group",
 					"pattern": "[A-Z]{2}"
 				},
 				{
