@@ -15,7 +15,7 @@ paths:
       tags:
       - packageTypes
       summary: Search for Codes for Passengers, Types of Cargo, Packages and Packaging Materials (with Complementary Codes for Package Names) as defined in rec 21
-      description: This api will return a (paged) list of codes for package types used in international trade.
+      description: Get one single package Type for Codes for Passengers, Types of Cargo, Packages and Packaging Materials as defined in rec 21
       parameters:
       - name: code
         in: path
@@ -66,7 +66,7 @@ paths:
     get:
       tags:
       - packageTypes
-      summary: Get one single package Type for Codes for Passengers, Types of Cargo, Packages and Packaging Materials as defined in rec 21
+      summary: This api will return a (paged) list of codes for package types used in international trade.
       description: This api will return a single package type used in international trade.
       parameters:
       - name: code
