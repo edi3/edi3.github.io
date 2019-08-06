@@ -2,28 +2,28 @@
   "metrics": [
     {
       "name": "unique visitors",
-      "lastWeek": 57,
-      "total": 693
+      "lastWeek": 51,
+      "total": 787
     },
     {
       "name": "registered members",
-      "lastWeek": 2,
-      "total": 65
+      "lastWeek": 0,
+      "total": 66
     },
     {
       "name": "chat message count",
-      "lastWeek": 188,
-      "total": 5304
+      "lastWeek": 43,
+      "total": 5393
     },
     {
       "name": "site updates",
-      "lastWeek": 6,
-      "total": 303
+      "lastWeek": 2,
+      "total": 307
     },
     {
       "name": "issues",
-      "lastWeek": 3,
-      "total": 39
+      "lastWeek": 0,
+      "total": 38
     }
   ],
   "mostActive": [
@@ -34,18 +34,18 @@
     },
     {
       "type": "contributor",
-      "value": "Steven Capell",
-      "url": "https://github.com/onthebreeze"
+      "value": "David Roff",
+      "url": "https://github.com/cmsdroff"
     }
   ],
   "links": [
     {
       "text": "Google site metrics",
-      "url": "https://edi3-metrics.s3-ap-southeast-2.amazonaws.com/Analytics+All+Web+Site+Data+Audience+Overview+20190301-20190721.pdf"
+      "url": "https://edi3-metrics.s3-ap-southeast-2.amazonaws.com/Analytics+All+Web+Site+Data+Audience+Overview+20190301-20190805.pdf"
     },
     {
       "text": "Slack team metrics",
-      "url": " https://edi3-metrics.s3-ap-southeast-2.amazonaws.com/edi3+Enterprise+Analytics+All+time+-+Jul+22+2019.csv"
+      "url": " https://edi3-metrics.s3-ap-southeast-2.amazonaws.com/edi3+Enterprise+Analytics+All+time+-+Aug+06+2019.csv"
     },
     {
       "text": "Github project metrics",
