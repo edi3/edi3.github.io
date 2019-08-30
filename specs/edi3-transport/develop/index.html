@@ -179,11 +179,13 @@
 <li class="toc-entry toc-h2"><a href="#licence">Licence</a></li>
 <li class="toc-entry toc-h2"><a href="#change-process">Change Process</a></li>
 <li class="toc-entry toc-h2"><a href="#language">Language</a></li>
-<li class="toc-entry toc-h1"><a href="#billing-process">Billing Process</a>
+<li class="toc-entry toc-h2"><a href="#contexts">Contexts</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#state-lifecycle">State Lifecycle</a></li>
+<li class="toc-entry toc-h3"><a href="#consignment">Consignment</a></li>
+<li class="toc-entry toc-h3"><a href="#transport-equipment">Transport Equipment</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#state-lifecycle">State Lifecycle</a></li>
 <li class="toc-entry toc-h1"><a href="#related-material">Related Material</a></li>
 </ul>
 </div>
@@ -229,7 +231,60 @@
 <p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” 
 in this document are to be interpreted as described in RFC 2119.</p>
 
-<h1 id="billing-process">Billing Process</h1>
+<h2 id="contexts">Contexts</h2>
+
+<h3 id="consignment">Consignment</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Consignment</strong></th>
+      <th>A separately identifiable collection of goods items to be transported or available to be transported from one consignor to one consignee via one or more modes of transport where each consignment is the subject of one single transport contract.</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>ConsignmentItem</em></td>
+      <td>A consignment item included in this consignment of goods.</td>
+      <td>edi3.org/transport/contexts/ConsignmentItem.md</td>
+    </tr>
+    <tr>
+      <td><em>TransportEquipment</em></td>
+      <td>A number of pieces of transport equipment, such as containers or similar unit load devices, in this consignment.</td>
+      <td>edi3.org/transport/contexts/TransportEquipment.md</td>
+    </tr>
+    <tr>
+      <td>Identification</td>
+      <td>A unique identifier for this piece of the consignment.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="transport-equipment">Transport Equipment</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>TransportEquipment</strong></th>
+      <th>A piece of equipment used to hold, protect or secure cargo for transportation purposes.</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Identification</td>
+      <td>A unique identifier for this piece of transport equipment.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><em>Contained</em></td>
+      <td>A consignment contained in this piece of transport equipment.</td>
+      <td>edi3.org/transport/contexts/Consignment.md</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="state-lifecycle">State Lifecycle</h2>
 
