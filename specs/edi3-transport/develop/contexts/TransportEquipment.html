@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="utf-8">
-    <title>edi3 Transport Domain 1.0 Specification - edi3 Standards by edi3</title>
+    <title>edi3 Standards by edi3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/style.css">
 
@@ -26,9 +26,9 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 
-<body>
+  <body id="outer-container">
 
-<header class="header">
+    <header class="header">
     <div class="header-line">
         <div class="wrapper">
             <div id="mobile-menu-wrapper" class="mobile-menu">
@@ -118,7 +118,8 @@
     });
 </script>
 
-<div class="main-wrapper">
+
+    <div class="main-wrapper">
     <div class="main-content">
         <div class="page-sidebar">
             <ul class="sidebar-menu">
@@ -154,91 +155,36 @@
 </ul>
 
         </div>
-        <div class="page-content docs-content">
+        <div class="page-content">
             
-            <div class="spec-header">
-                
-                <ul>
-                    <li>Spec ID: <p>transport/1</p>
-</li>
-                    <li><p><img src="http://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" /></p>
-</li>
-                    <li>Editor: <p><a href="mailto:steve.capell@gmail.com">Steven Capell</a></p>
-</li>
-                    <li>Contributors: 
-</li>
-                </ul>
-            </div>
-            <div class="specs-toc">
-    <!--<div class="specs-toc-title">Table of contents</div>-->
-    <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
-<li class="toc-entry toc-h2"><a href="#goals">Goals</a></li>
-<li class="toc-entry toc-h2"><a href="#status">Status</a></li>
-<li class="toc-entry toc-h2"><a href="#glossary">Glossary</a></li>
-<li class="toc-entry toc-h2"><a href="#licence">Licence</a></li>
-<li class="toc-entry toc-h2"><a href="#change-process">Change Process</a></li>
-<li class="toc-entry toc-h2"><a href="#language">Language</a></li>
-<li class="toc-entry toc-h2"><a href="#state-lifecycle">State Lifecycle</a></li>
-<li class="toc-entry toc-h1"><a href="#related-material">Related Material</a></li>
-</ul>
-</div>
-            <h2 id="introduction">Introduction</h2>
-
-<h2 id="goals">Goals</h2>
-
-<h2 id="status">Status</h2>
-
-<h2 id="glossary">Glossary</h2>
-
-<table>
+            <table>
   <thead>
     <tr>
-      <th>Phrase</th>
-      <th>Definition</th>
+      <th><strong>TransportEquipment</strong></th>
+      <th>A piece of equipment used to hold, protect or secure cargo for transportation purposes.</th>
+      <th> </th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td>Identification</td>
+      <td>A unique identifier for this piece of transport equipment.</td>
       <td> </td>
-      <td> </td>
+    </tr>
+    <tr>
+      <td><em>Contained</em></td>
+      <td>A consignment contained in this piece of transport equipment.</td>
+      <td><a href="#consignment">Consignment</a></td>
     </tr>
   </tbody>
 </table>
-
-<p>This service depends on - TBA.</p>
-
-<p>The TBA specification depends on this document. Note, TBA.</p>
-
-<h2 id="licence">Licence</h2>
-
-<p>All material published on edi3.org including all parts of this specification are the intellectual property of the UN as per the <a href="https://www.unece.org/fileadmin/DAM/cefact/cf_plenary/plenary12/ECE_TRADE_C_CEFACT_2010_20_Rev2E_UpdatedIPRpolicy.pdf">UN/CEFACT IPR Policy</a>.</p>
-
-<p>This Specification is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version. See http://www.gnu.org/licenses.</p>
-
-<h2 id="change-process">Change Process</h2>
-
-<p>This document is governed by the <a href="http://rfc.unprotocols.org/spec:2/COSS/">2/COSS</a> (COSS).</p>
-
-<h2 id="language">Language</h2>
-
-<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” 
-in this document are to be interpreted as described in RFC 2119.</p>
-
-<h2 id="state-lifecycle">State Lifecycle</h2>
-
-<h1 id="related-material">Related Material</h1>
-
-<ul>
-  <li></li>
-  <li></li>
-</ul>
 
             
         </div>
     </div>
 </div>
-<footer class="footer">
+
+    <footer class="footer">
     <a href="/" class="footer-logo"><img src="/images/logo-horisontal-white.svg" alt=""></a>
     <ul class="footer-menu">
         <li><a href="http://edi3.org/about">About edi3</a></li>
@@ -263,10 +209,6 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 </script>
 
-<script src="/js/anchor.min.js"></script>
-<script>
-    anchors.add('h1, h2, h3, h4, h5');
-    anchors.remove('.no-anchor, .page-content > h1:first-child');
-</script>
-</body>
+
+  </body>
 </html>
