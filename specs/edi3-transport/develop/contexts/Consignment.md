@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: specs/edi3-transport/develop/contexts/consignment
 ---
 | **Consignment** | A separately identifiable collection of goods items to be transported or available to be transported from one consignor to one consignee via one or more modes of transport where each consignment is the subject of one single transport contract. | |
 | -------- | --------- | -------- |
