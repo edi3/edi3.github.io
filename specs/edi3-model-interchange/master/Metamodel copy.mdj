@@ -20060,8 +20060,7 @@
 									"name": "name",
 									"documentation": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
 									"type": "string",
-									"multiplicity": "1",
-									"isID": true
+									"multiplicity": "1"
 								},
 								{
 									"_type": "UMLAttribute",
