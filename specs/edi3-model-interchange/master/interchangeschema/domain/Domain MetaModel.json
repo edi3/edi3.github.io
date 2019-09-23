@@ -1,0 +1,230 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "description": "",
+        "title": "Domain MetaModel",
+        "version": ""
+    },
+    "servers": [],
+    "paths": {},
+    "components": {
+        "schemas": {
+            "DataType": {
+                "type": "object",
+                "properties": {},
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/LibraryElement"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "Entity": {
+                "type": "object",
+                "properties": {
+                    "version": {
+                        "description": "missing description",
+                        "type": "string"
+                    }
+                },
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/LibraryElement"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "Event": {
+                "type": "object",
+                "properties": {
+                    "from": {
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/StateIds"
+                            },
+                            {
+                                "type": "object"
+                            }
+                        ]
+                    },
+                    "to": {
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/StateIds"
+                            },
+                            {
+                                "type": "object"
+                            }
+                        ]
+                    }
+                },
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/LibraryElement"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "StateIds": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "a globally unique (and semantically meaningless) ID for this library element - typically a UUID.  The ID provides an anchor so that name changes do not change the library element context and realtionship to other elements.",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "name"
+                ]
+            },
+            "LibraryElement": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "a globally unique (and semantically meaningless) ID for this library element - typically a UUID.  The ID provides an anchor so that name changes do not change the library element context and realtionship to other elements.",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "full description of the metadata element.",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "Status of the element from a library management perspective. \n using COSS lifecycle values (raw, draft, stable, deprecated, deleted).",
+                        "type": "string"
+                    },
+                    "statusdate": {
+                        "description": "the date of the last status change for this element.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "name"
+                ]
+            },
+            "Property": {
+                "type": "object",
+                "properties": {
+                    "minCardinality": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "maxCardinality": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "pattern": {
+                        "description": "missing description",
+                        "type": "string"
+                    }
+                },
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/LibraryElement"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "Relationship": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "minCardinality": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "maxCardinality": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "target": {
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/EntityIds"
+                            },
+                            {
+                                "type": "object"
+                            }
+                        ]
+                    }
+                },
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/LibraryElement"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ],
+                "required": [
+                    "type"
+                ]
+            },
+            "EntityIds": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "a globally unique (and semantically meaningless) ID for this library element - typically a UUID.  The ID provides an anchor so that name changes do not change the library element context and realtionship to other elements.",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "name"
+                ]
+            },
+            "Scheme": {
+                "type": "object",
+                "properties": {
+                    "version": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "levels": {
+                        "description": "missing description",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "version"
+                ]
+            },
+            "State": {
+                "type": "object",
+                "properties": {},
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/LibraryElement"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            }
+        }
+    }
+}

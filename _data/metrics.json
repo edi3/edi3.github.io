@@ -2,28 +2,28 @@
   "metrics": [
     {
       "name": "unique visitors",
-      "lastWeek": 56,
-      "total": 357
+      "lastWeek": 51,
+      "total": 787
     },
     {
       "name": "registered members",
-      "lastWeek": 1,
-      "total": 63
+      "lastWeek": 0,
+      "total": 66
     },
     {
       "name": "chat message count",
-      "lastWeek": 314,
-      "total": 4954
+      "lastWeek": 43,
+      "total": 5393
     },
     {
       "name": "site updates",
-      "lastWeek": 0,
-      "total": 293
+      "lastWeek": 2,
+      "total": 307
     },
     {
       "name": "issues",
       "lastWeek": 0,
-      "total": 36
+      "total": 38
     }
   ],
   "mostActive": [
@@ -34,18 +34,18 @@
     },
     {
       "type": "contributor",
-      "value": "Romain Genoulaz",
-      "url": "https://github.com/rgenoulaz"
+      "value": "David Roff",
+      "url": "https://github.com/cmsdroff"
     }
   ],
   "links": [
     {
       "text": "Google site metrics",
-      "url": "https://edi3-metrics.s3-ap-southeast-2.amazonaws.com/Analytics+All+Web+Site+Data+Audience+Overview+20190301-20190701.pdf"
+      "url": "https://edi3-metrics.s3-ap-southeast-2.amazonaws.com/Analytics+All+Web+Site+Data+Audience+Overview+20190301-20190805.pdf"
     },
     {
       "text": "Slack team metrics",
-      "url": " https://edi3-metrics.s3-ap-southeast-2.amazonaws.com/edi3+Enterprise+Analytics+All+time+-+May+20+2019.csv"
+      "url": " https://edi3-metrics.s3-ap-southeast-2.amazonaws.com/edi3+Enterprise+Analytics+All+time+-+Aug+06+2019.csv"
     },
     {
       "text": "Github project metrics",

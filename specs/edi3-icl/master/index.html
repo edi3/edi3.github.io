@@ -188,11 +188,12 @@
 <li class="toc-entry toc-h1"><a href="#icl-technical-specification">ICL Technical Specification</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#architecture-overview">Architecture Overview</a></li>
+<li class="toc-entry toc-h2"><a href="#information-and-security-architecture">Information and Security Architecture</a></li>
+<li class="toc-entry toc-h2"><a href="#generic-process-flow">Generic Process Flow</a></li>
 <li class="toc-entry toc-h2"><a href="#icl-api-specifications">ICL API Specifications</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#overall-sequence-diagram">Overall Sequence Diagram</a></li>
 <li class="toc-entry toc-h3"><a href="#document-api--acl">Document API &amp; ACL</a></li>
-<li class="toc-entry toc-h3"><a href="#message-txrx-api">Message Tx/Rx API</a></li>
+<li class="toc-entry toc-h3"><a href="#channel-txrx-api">Channel Tx/Rx API</a></li>
 <li class="toc-entry toc-h3"><a href="#subscriptions-api">Subscriptions API</a></li>
 <li class="toc-entry toc-h3"><a href="#channel-api">Channel API</a></li>
 </ul>
@@ -269,6 +270,10 @@ in this document are to be interpreted as described in RFC 2119.</p>
     <tr>
       <td>Agent</td>
       <td>Intermediaries such as customs agents</td>
+    </tr>
+    <tr>
+      <td>API</td>
+      <td>Application Programming Interface</td>
     </tr>
     <tr>
       <td>Carrier</td>
@@ -495,9 +500,13 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <p>ICL node implementations need access to routing information such as “to send document type X from Country A to Country B, use DLT channel 2”.  Initially it is expected that this information is managed independently in each node.  However as the number of countries, channels, and document types increases, there may be a requirement to manage routing information in a consistent way (which could be a centralised service or could be itself a decentralised ledger). Also, as countries make new arrangements (eg ceprecate one DLT channel in lieu of another) there will be a need to orchestrate the change without incurring downtime.</p>
 
-<h2 id="icl-api-specifications">ICL API Specifications</h2>
+<h2 id="information-and-security-architecture">Information and Security Architecture</h2>
 
-<h3 id="overall-sequence-diagram">Overall Sequence Diagram</h3>
+<p>To-Do : Add some words about this diagram</p>
+
+<p><img src="InformationAndSecurityArchitecture.png" alt="Information &amp; Security Architecture" /></p>
+
+<h2 id="generic-process-flow">Generic Process Flow</h2>
 
 <p>To-Do: Insert a sequence diagram here.  But the flow is something like:</p>
 
@@ -526,32 +535,47 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <p>A user of a business application in the receiving country completes a hiogher level business process that is specific to the document type.  For example a customs authority may acquit a certificate of origin once goods have been received. The acquittal is also an ICL message that is sent back to the originator country.  The ICL network is essentially a high integrioty trusted pipe that can exchange any document and is not aware of the specifics of higher level business processes.</p>
 
+<h2 id="icl-api-specifications">ICL API Specifications</h2>
+
 <h3 id="document-api--acl">Document API &amp; ACL</h3>
 
 <p>To-Do: Flesh this out.  But will be something like this:</p>
 
-<p>Initial document POST</p>
+<p>B2G Binary Document POST</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST api.repository.gov.xx/documents/{binary file} 
 
 returns 200 OK and multi-hash of file - eg "QmQtYtUS7K1AdKjbuMsmPmPGDLaKL38M5HYwqxW9RKW49n"
 </code></pre></div></div>
 
-<p>Update ACL after successful message send</p>
+<p>B2G JSON-LD Message POST</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST api.repository.gov.xx/documents/{multi-hash}/acl/{identifier of message recipient}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST api.repository.gov.xx/metadata/{json file} 
+
+returns 201 OK and multi-hash of file - eg "QEiCcvAfD+ZFyWDajqipYHKICkZiqQgudmbwOEx2fPiy+Rw"
+</code></pre></div></div>
+
+<p>B2G Message Status GET</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET api.repository.gov.xx/messages/{message Multi-hash} 
+
+Returns status of blockchain consensus / commit. Sender can also subscribe to be notified.
+</code></pre></div></div>
+
+<p>G2G Update ACL after successful message send</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST api.repository.gov.xx/messages/{multi-hash}/acl/{identifier of message recipient}
 
 returns 200 OK 
 </code></pre></div></div>
 
-<p>Sometime later the recipient country retreives the document</p>
+<p>G2G Sometime later the recipient country retreives the document</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET api.repository.gov.xx/documents/{multi-hash}
 
 returns 200 OK and the binary file identified by the multi-hash, assuming the requester is authenticated (ie presents a valid identity token) and authorised (ie the identity in the token is in the document API ACL for the specific document.)
 </code></pre></div></div>
 
-<h3 id="message-txrx-api">Message Tx/Rx API</h3>
+<h3 id="channel-txrx-api">Channel Tx/Rx API</h3>
 
 <p>Once a document has been POSTed to the document API and a multi-hash is returned then POSTing the message to the sender country Message Tx API might look like this:</p>
 

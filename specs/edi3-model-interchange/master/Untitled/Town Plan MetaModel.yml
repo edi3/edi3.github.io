@@ -1,0 +1,68 @@
+openapi: 3.0.0
+info:
+  description: ''
+  title: Town Plan MetaModel
+  version: ''
+servers: []
+paths: {}
+components:
+  schemas:
+    Domain:
+      type: object
+      properties:
+        repository:
+          description: >-
+            The authoritative location of the repository containing version
+            controlled domain information (eg 
+            https://github.com/edi3/edi3-regulatory)
+          type: string
+        Attribute1:
+          description: missing description
+          type: string
+      allOf:
+        - $ref: '#/components/schemas/LibraryElement'
+        - type: object
+    IdentityScheme:
+      type: object
+      properties: {}
+      allOf:
+        - $ref: '#/components/schemas/LibraryElement'
+        - type: object
+    Organisation:
+      type: object
+      properties:
+        baseURL:
+          description: the DNS domain name of the organisation (eg unece.org)
+          type: string
+      allOf:
+        - $ref: '#/components/schemas/LibraryElement'
+        - type: object
+      required:
+        - baseURL
+    Resource:
+      type: object
+      properties:
+        action:
+          items:
+            description: >-
+              A list of allowed actions on this resource (create, read, update,
+              delete).  
+            type: string
+          type: array
+        version:
+          description: >-
+            The public release version of the resource  in semver format
+            major.minor.patch (eg 0.2.3).
+          type: string
+        subResource:
+          items:
+            $ref: '#/components/schemas/Resource'
+          type: array
+      allOf:
+        - $ref: '#/components/schemas/LibraryElement'
+        - type: object
+      required:
+        - version
+    Service:
+      type: object
+      properties: {}
