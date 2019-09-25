@@ -48,7 +48,7 @@ The role of the regulator is to control the flow of goods accross their borders,
 * A **Cargo Report** is provided by one carrier (at master / ocean bill level) or by one freight forwarder (at house bill level) and includes the cargo manifest information.  It is provided to both the exporting and importing regulator and and maps to one **Consignment**.
 * A **Declaration** is provided by the importer or their agent for import processes and by the exporter or other agenct for export processes. It contains item level description and cost information and is used to compute duty obligations and permit requirements. It maps to one **Shipment**.
 
-# The "Town Plan" of dictionaries and reference APIs.
+# The API "Town Plan".
 
 The high level international supply chain reference model is detailed within each domain as described below. Click on any of the domains to get a business overview of the domain and view the data models and JSON-LD dictionaries - or click on a resource to go straight to the reference API specification. 
 
