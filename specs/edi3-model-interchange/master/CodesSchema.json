@@ -1,0 +1,122 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "description": "",
+        "title": "Codes MetaModel",
+        "version": ""
+    },
+    "servers": [],
+    "paths": {},
+    "components": {
+        "schemas": {
+            "Code": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "full description of the metadata element.",
+                        "type": "string"
+                    },
+                    "level": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "Status of the element from a library management perspective. \n using COSS lifecycle values (raw, draft, stable, deprecated, deleted).",
+                        "type": "string",
+                        "enum": [
+                            "proposed",
+                            "active",
+                            "deprecated",
+                            "deleted"
+                        ]
+                    },
+                    "parent": {
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/CodeIds"
+                            },
+                            {
+                                "type": "object"
+                            }
+                        ]
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            },
+            "CodeIds": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            },
+            "PropertyName": {
+                "type": "object",
+                "properties": {
+                    "name URI[1]": {
+                        "description": "missing description",
+                        "type": "string"
+                    }
+                }
+            },
+            "PropertyValue": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "description": "missing description",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "value"
+                ]
+            },
+            "Scheme": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "full description of the metadata element.",
+                        "type": "string"
+                    },
+                    "version": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "levels": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "Status of the element from a library management perspective. \n using COSS lifecycle values (raw, draft, stable, deprecated, deleted).",
+                        "type": "string",
+                        "enum": [
+                            "proposed",
+                            "active",
+                            "deprecated",
+                            "deleted"
+                        ]
+                    }
+                },
+                "required": [
+                    "name",
+                    "version"
+                ]
+            }
+        }
+    }
+}
