@@ -12,7 +12,7 @@ The edi3 ICL supports the [UN/CEFACT Cross Border Interledger](https://uncefact.
 
 * [Inter Customs Ledger GitHub repository](https://github.com/edi3/edi3-icl){:target="_blank"}
 * [Inter Customs Ledger Slack Channel](https://edi3.slack.com/messages/spec-icl/){:target="_blank"} ([you must signup to edi3 slack first](https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg){:target="_blank"})
-* [Inter Customs Ledger Mail](https://github.com/edi3/edi3-icl){:target="_blank"}
+* [Inter Customs Ledger Mailing List](https://groups.google.com/a/edi3.org/forum/#!forum/icl/join){:target="_blank"}
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
@@ -24,6 +24,6 @@ Known implementations (open source or otherwise) are listed here.  Please modify
 
 |Provider|Implementation URL|Comments|
 |--------|------------------|--------|
-| TrustBridge | https://trustbridge.github.io/ | open source |
+| TrustBridge | [https://trustbridge.github.io/](https://trustbridge.github.io/){:target="_blank"} | open source |
 |  |  |  |
 
