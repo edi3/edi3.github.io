@@ -160,21 +160,42 @@
             <table>
   <thead>
     <tr>
-      <th><strong>TransportEquipment</strong></th>
-      <th>A piece of equipment used to hold, protect or secure cargo for transportation purposes.</th>
+      <th><strong>ConsignmentItem</strong></th>
+      <th>An item within a consignment of goods separately identified for transport and customs purposes.</th>
+      <th> </th>
       <th> </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Identification</td>
-      <td>A unique identifier for this piece of transport equipment.</td>
+      <td><em>Identifier</em></td>
+      <td>A unique identifier for this consignment item</td>
       <td> </td>
     </tr>
     <tr>
-      <td><em>Contained</em></td>
-      <td>A consignment contained in this piece of transport equipment.</td>
-      <td><a href="Consignment">Consignment</a></td>
+      <td>Sequence</td>
+      <td><em>Numeric</em></td>
+      <td>The sequence number for this consignment item</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Gross Weight</td>
+      <td><em>Measure</em></td>
+      <td>A measure of the gross weight (mass) of this consignment item which includes packaging but excludes any transport equipment</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Net Weight</td>
+      <td><em>Measure</em></td>
+      <td>A measure of the net weight of this consignment item which excludes all packaging</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Associated</td>
+      <td><em>Transport Equipment</em></td>
+      <td>Transport equipment associated with this consignment item</td>
+      <td><a href="TransportEquipment">TransportEquipment</a></td>
     </tr>
   </tbody>
 </table>
