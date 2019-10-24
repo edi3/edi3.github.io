@@ -163,28 +163,31 @@
 </li>
                     <li><p><img src="http://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" /></p>
 </li>
-                    <li>Editor: <p><a href="mailto:steve.capell@gmail.com">Steven Capell</a></p>
+                    <li>Editor: <p><a href="mailto:nis.jespersen@maerskgtd.com">Nis Jespersen</a></p>
 </li>
-                    <li>Contributors: 
+                    <li>Contributors: <p><a href="mailto:steve.capell@gmail.com">Steven Capell</a></p>
 </li>
                 </ul>
             </div>
             <div class="specs-toc">
     <!--<div class="specs-toc-title">Table of contents</div>-->
     <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
-<li class="toc-entry toc-h2"><a href="#linked-data-example">Linked Data Example</a>
+<li class="toc-entry toc-h1"><a href="#introduction">Introduction</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#api-payload">API Payload</a></li>
-<li class="toc-entry toc-h3"><a href="#semantic-context">Semantic Context</a></li>
-<li class="toc-entry toc-h3"><a href="#semantic-referencing">Semantic Referencing</a></li>
+<li class="toc-entry toc-h2"><a href="#linked-data">Linked Data</a></li>
+<li class="toc-entry toc-h2"><a href="#json-ld">JSON-LD</a></li>
+<li class="toc-entry toc-h2"><a href="#non-breaking-retro-fitting">Non-Breaking Retro Fitting</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h1"><a href="#edi3-json-ld-project-output">EDI3 JSON-LD Project Output</a>
+<ul>
 <li class="toc-entry toc-h2"><a href="#status">Status</a></li>
 <li class="toc-entry toc-h2"><a href="#glossary">Glossary</a></li>
 <li class="toc-entry toc-h2"><a href="#licence">Licence</a></li>
 <li class="toc-entry toc-h2"><a href="#change-process">Change Process</a></li>
 <li class="toc-entry toc-h2"><a href="#language">Language</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h1"><a href="#billing-process">Billing Process</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#state-lifecycle">State Lifecycle</a></li>
@@ -193,119 +196,141 @@
 <li class="toc-entry toc-h1"><a href="#related-material">Related Material</a></li>
 </ul>
 </div>
-            <h2 id="introduction">Introduction</h2>
+            <h1 id="introduction">Introduction</h1>
+<p>The JSON-LD project aims to let not just humans, but also machines understand the semantics of CEFACT.</p>
 
-<h2 id="linked-data-example">Linked Data Example</h2>
-<p>This sections illustrates an example of how data is linked via</p>
+<h2 id="linked-data">Linked Data</h2>
+<p>Machines build “knowledge graphs” by linking data together. This is done by use of RDF (Resource Description Framework). RDF specifies expressing data as so-called triples, defining subject-predicate-object. A super simple example of a knowledge graph might be:</p>
+<ul>
+  <li>The author’s name is Nis.</li>
+  <li>Nis lives in Denmark.</li>
+</ul>
 
-<h3 id="api-payload">API Payload</h3>
-<p>The below is a data object which could be passed in the request or reply of an API call.</p>
+<p>From this, a machine would be able to build this kind of simple knowledge graph:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	{
-		"@context": "http://edi3.org/cefact-bsp.jsonld",
-		"consignment": {
-			"identification": "https://www.maersk.com/tracking/#tracking/123456789",
-			"includedConsignmentItem": [
+<p><img src="../resources/simple_knowledge_graph.png" width="232" height="36" /></p>
+
+<p>And by parsing it, determine for example that “the author lives in Denmark”.</p>
+
+<p>All subjects, predicates and (some) objects are identified on the web by a IRI (Uniform Resource Identifier). An IRI identifies <em>the thing</em>, as opposed to a URL which locates a page describing the <em>the thing</em>. While this is important to machines, there can be a bit of a clash here as to how humans best read data. For example <code class="highlighter-rouge">&lt;https://schema.org/author&gt; &lt;https://schema.org/givenName&gt; Nis.</code> is hardly as readable as ”Presenter’s name is Nis”.</p>
+
+<h2 id="json-ld">JSON-LD</h2>
+<p>Luckily, RDF comes in many flavors. The one which we will focus on here is JSON-LD, which among its advantages is that it is useful for both humans and machines. Also, JSON-LD is based on JSON, which practically is the grammar of any modern API.</p>
+
+<p>JSON-LD works by injecting a “context” and some other linked data aspects into a normal JSON. All injections are prefixed with an “@” indicating a JSON-LD keyword.</p>
+
+<p>Let’s consider an example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+	"@context": "https://edi3.org/specs/edi3-transport/develop/context.jsonld",
+	"consignment": {
+		"bookingNumber": "123456789",
+		"@id": "https://www.maersk.com/tracking/123456789",
+		"includedConsignmentItem": [
+			{
 				"consignmentItem": {
 					"information": "Mangos and bananas",
 					"grossWeight": {
-						"Value": "12000",
-						"Unit": "Kgs"
+						"Value": "12000", "Unit": "Kgs"
 					}
 				}
-			],
-			"utilizedTransportEquipment": [
+			}
+		],
+		"utilizedTransportEquipment": [
+			{
 				"transportEquipment": {
-					"identification": "https://app.bic-boxtech.org/container/MSKU0134962",
-					"affixedSeal": {
-						"identification": "54234398"
-					}
+					"identification": "MSKU0134962",
+        				"@id": "https://app.bic-boxtech.org/containers?search=MSKU0134962"
 				}
-			]
-		}
+			}
+		]
 	}
+}
 </code></pre></div></div>
 
-<p>This JSON object specifies a Consignment and its ConsignmentItem and TransportEquipment. The Consignment is identified by a bookingnumber via linkage to Maersk, who in the role of carrier has issued the booking number. The TransportEquipment number is governed by BIC, available through their boxtech API.</p>
+<p>Most of this is just a basic json: a consignment with some consignmentItems and a transportEquipment. All expressed in somewhat nice CEFACT lingo which is useful for humans, but just meaningless strings to a computer. The JSON-LD parts <code class="highlighter-rouge">@context</code> and <code class="highlighter-rouge">@id</code> changes that.</p>
 
-<p>It also defines a context hosted under edi3.org. The <code class="highlighter-rouge">@context</code> is json-ld’s way of linking payload elements to defined semantics.</p>
+<p>The <code class="highlighter-rouge">@id</code> tags inject IRIs to properly identify the consignment and transportEquipment, respectively referencing appropriate APIs from the carrier and BIC.</p>
 
-<h3 id="semantic-context">Semantic Context</h3>
-<p>The json-ld context file defines the semantics of the elements of the payload json file. Below is an example of how the <code class="highlighter-rouge">cefact-bsp.jsonld</code> might look.</p>
+<p>The <code class="highlighter-rouge">@context</code> links to a jsonld file, defining the semantic meaning of each element of the JSON (note that the context does not have to be externalized to a referenced file like this, but can also just be included directly within the json data file). Here’s what <code class="highlighter-rouge">https://edi3.org/specs/edi3-transport/develop/context.jsonld</code> might look like:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
 	"@context": {
-		"consignment": { 
-			"@id": "http://edi3.org/contexts/Consignment",  
-			"@type": "@id" 
+		"consignment": {
+			"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment",
+			"@type": "@id"
 		},
-		"consignmentItem": "edi3.org/contexts/ConsignmentItem",
+  	"includedConsignmentItem": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#ConsignmentItem",
+		"consignmentItem": "https://edi3.org/specs/edi3-transport/develop/vocab/ConsignmentItem",
+  	"utilizedTransportEquipment": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#utilizedTransportEquipment",
 		"transportEquipment": {
-			"@id": "http://edi3.org/contexts/TransportEquipment", 
-			"@type": "@id" 
+			"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment",
+			"@type": "@id"
 		}
 	}
 }
 </code></pre></div></div>
-<p>What this means is that the semantic meaning of <code class="highlighter-rouge">consignment</code> in the payload file is based on the definition available at <code class="highlighter-rouge">http://edi3.org/contexts/Consignment</code>. It also indicates that the value of <code class="highlighter-rouge">Identification</code> is to be considered the identifer of the Consignment resource (TODO: link @id to Identifier attribute).</p>
 
-<p>Note that the <code class="highlighter-rouge">@context</code> can be defined elsewhere too. In fact, it might fit better to have contexts specific to particular API use cases. Also, the context can be defined within the payload json data.</p>
+<p>Here, the @context adds mapping from the human terms in the JSON to IRIs formally defining the semantics used. For example, <code class="highlighter-rouge">https://edi3.org/specs/edi3-transport/develop/vocab/Consignment</code> is the IRI for Consignment.</p>
 
-<h3 id="semantic-referencing">Semantic Referencing</h3>
-<p>The most important role of edi3.org in supporting linked data is to govern and expose the semantics, to be referenced by such contexts. This is documentation which can be generated straight out of the SCRDM, for example:</p>
+<p>From this, a computer is able to build a model like this (here serialized as N-Quads):</p>
 
-<p><code class="highlighter-rouge">GET edi3.org/contexts/Consignment</code> would return:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;https://www.maersk.com/tracking/123456789&gt; &lt;https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#ConsignmentItem&gt; _:b1 .
+&lt;https://www.maersk.com/tracking/123456789&gt; &lt;https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#utilizedTransportEquipment&gt; _:b3 .
+_:b0 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/Consignment&gt; &lt;https://www.maersk.com/tracking/123456789&gt; .
+_:b1 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/ConsignmentItem&gt; _:b2 .
+_:b3 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment&gt; &lt;https://app.bic-boxtech.org/containers?search=MSKU0134962&gt; .
+</code></pre></div></div>
 
-<table>
-  <thead>
-    <tr>
-      <th><strong>Consignment</strong></th>
-      <th>A separately identifiable collection of goods items to be transported or available to be transported from one consignor to one consignee via one or more modes of transport where each consignment is the subject of one single transport contract.</th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><em>ConsignmentItem</em></td>
-      <td>A consignment item included in this consignment of goods.</td>
-      <td><code class="highlighter-rouge">edi3.org/contexts/ConsignmentItem</code></td>
-    </tr>
-    <tr>
-      <td><em>TransportEquipment</em></td>
-      <td>A number of pieces of transport equipment, such as containers or similar unit load devices, in this consignment.</td>
-      <td><code class="highlighter-rouge">edi3.org/contexts/TransportEquipment</code></td>
-    </tr>
-    <tr>
-      <td>Identification</td>
-      <td>A unique identifier for this piece of the consignment.</td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<h2 id="non-breaking-retro-fitting">Non-Breaking Retro Fitting</h2>
+<p>A clever aspect of JSON-LD is that it can be retrofitted “on top” of legacy JSONs. Adding the JSON-LD (<code class="highlighter-rouge">@</code>-prefixed) tags will not break your APIs.</p>
 
-<p><code class="highlighter-rouge">GET edi3.org/contexts/TransportEquipment</code> would return:</p>
+<p>For example, the following legacy JSON (which is much less aligned to CEFACT) will continue working, but generate the exact same machine model. Note that the <code class="highlighter-rouge">@context</code> in this example is embedded into the JSON itself:</p>
 
-<table>
-  <thead>
-    <tr>
-      <th><strong>TransportEquipment</strong></th>
-      <th>A piece of equipment used to hold, protect or secure cargo for transportation purposes.</th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Identification</td>
-      <td>A unique identifier for this piece of transport equipment.</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td><em>Contained</em></td>
-      <td>A consignment contained in this piece of transport equipment.</td>
-      <td><code class="highlighter-rouge">edi3.org/contexts/Consignment</code></td>
-    </tr>
-  </tbody>
-</table>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+	"@context": {
+		"shipment": {
+			"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment",
+			"@type": "@id"
+		},
+      	"goods": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#ConsignmentItem",
+		"goodsItem": "https://edi3.org/specs/edi3-transport/develop/vocab/ConsignmentItem",
+      	"containers": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#utilizedTransportEquipment",
+		"container": {
+			"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment",
+			"@type": "@id"
+		}
+	},
+	"shipment": {
+		"bookingNumber": "123456789",
+		"@id": "https://www.maersk.com/tracking/123456789",
+		"goods": [{
+				"goodsItem": {
+					"information": "Mangos and bananas",
+					"grossWeight": {"Value": "12000", "Unit": "Kgs"}
+				}
+			}],
+		"containers": [{
+				"container": {
+					"boxNb": "MSKU0134962",
+                  	"@id": "https://app.bic-boxtech.org/containers?search=MSKU0134962"
+				}
+			}]
+	}
+}
+</code></pre></div></div>
+
+<h1 id="edi3-json-ld-project-output">EDI3 JSON-LD Project Output</h1>
+<p>Common semantics are defined many places throughout the internet. A very relevant example is https://schema.org/ which is extensively used for common stuff like defining Person, Address, Name and many other such fundamental aspects. More specialized semantics typically require specialized governance. In the case of trade and transport, that governance is CEFACT. In order to enable the web developers of the world to utilize our semantics, part of the edi3 ambition is to expose our semantics in a referenceable way as a library of IRIs.</p>
+
+<p>These are some simple examples of how this could look for the three classes referenced in the above examples:</p>
+<ul>
+  <li>https://edi3.org/specs/edi3-transport/develop/vocab/Consignment</li>
+  <li>https://edi3.org/specs/edi3-transport/develop/vocab/ConsignmentItem</li>
+  <li>https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment</li>
+</ul>
+
+<p>This should obviously be generated from the SCRDM model, part of the output of the RDM2API methodology. Similarly, the governance of the various high level groupings (in these examples /edi3-transport) should follow the town plan approach.</p>
 
 <h2 id="status">Status</h2>
 
