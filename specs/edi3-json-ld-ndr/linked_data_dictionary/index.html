@@ -206,11 +206,7 @@
   <li>Nis lives in Denmark.</li>
 </ul>
 
-<p>From this, a machine would be able to build this kind of simple knowledge graph:</p>
-
-<p><img src="../resources/simple_knowledge_graph.png" width="232" height="36" /></p>
-
-<p>And by parsing it, determine for example that “the author lives in Denmark”.</p>
+<p>From this, a machine would be able to build this kind of simple knowledge graph: Author - name is - Nis - lives in - Denmark. And by parsing this graph, determine for example that “the author lives in Denmark”.</p>
 
 <p>All subjects, predicates and (some) objects are identified on the web by a IRI (Uniform Resource Identifier). An IRI identifies <em>the thing</em>, as opposed to a URL which locates a page describing the <em>the thing</em>. While this is important to machines, there can be a bit of a clash here as to how humans best read data. For example <code class="highlighter-rouge">&lt;https://schema.org/author&gt; &lt;https://schema.org/givenName&gt; Nis.</code> is hardly as readable as ”Presenter’s name is Nis”.</p>
 
@@ -260,9 +256,9 @@
 			"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment",
 			"@type": "@id"
 		},
-  	"includedConsignmentItem": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#ConsignmentItem",
+  		"includedConsignmentItem": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#ConsignmentItem",
 		"consignmentItem": "https://edi3.org/specs/edi3-transport/develop/vocab/ConsignmentItem",
-  	"utilizedTransportEquipment": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#utilizedTransportEquipment",
+  		"utilizedTransportEquipment": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#utilizedTransportEquipment",
 		"transportEquipment": {
 			"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment",
 			"@type": "@id"
