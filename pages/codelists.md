@@ -19,15 +19,17 @@ To participate in specification development or just provide your comments / ques
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
 | [Code Lists technical specification](//edi3.org/specs/edi3-codelists/develop/specification/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | Coming Soon|  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
+| [Recommendation 20](//edi3.org/specs/edi3-codelists/develop/recommendation-20/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [SwaggerUI](//edi3.org/specs/edi3-codelists/develop/recommendation-20/swagger)]|  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
+| [Recommendation 21](//edi3.org/specs/edi3-codelists/develop/recommendation-20/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [SwaggerUI](//edi3.org/specs/edi3-codelists/develop/recommendation-21/swagger)]|  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
+| [Recommendation 24](//edi3.org/specs/edi3-codelists/develop/recommendation-20/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [SwaggerUI](//edi3.org/specs/edi3-codelists/develop/recommendation-24/swagger)]|  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
 
 ## Published Codelists
 
-Note that the format of the codelists presented below do not yet match the codelist technical specification provided above.
+Note that the format of the codelists presented below do not yet match the codelist technical specification provided above. Please modify [this page](https://github.com/edi3/edi3.github.io/edit/master/pages/codelists.md) and make a pull request to add your own.
 
 |List Name|Codelist URL|Comments|
 |--------|------------------|--------|
 | Units of measure| [Recommendation 20](//codelists.api.edi3.org/recommendation-20/){:target="_blank"} | [About Rec20](https://edi3.org/specs/edi3-codelists/develop/recommendation-20/) |
-| Package types | [Recommendation 21](//codelists.api.edi3.org/recommendation-21/){:target="_blank"} | [About Rec21](https://edi3.org/specs/edi3-codelists/develop/recommendation-20/) |
-| transport status | [Recommendation 24](//codelists.api.edi3.org/recommendation-24/){:target="_blank"} | [About Rec22](https://edi3.org/specs/edi3-codelists/develop/recommendation-20/) |
-
+| Package types | [Recommendation 21](//codelists.api.edi3.org/recommendation-21/){:target="_blank"} | [About Rec21](https://edi3.org/specs/edi3-codelists/develop/recommendation-21/) |
+| transport status | [Recommendation 24](//codelists.api.edi3.org/recommendation-24/){:target="_blank"} | [About Rec24](https://edi3.org/specs/edi3-codelists/develop/recommendation-24/) |
 
