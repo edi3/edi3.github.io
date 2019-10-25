@@ -19,9 +19,9 @@ To participate in specification development or just provide your comments / ques
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
 | [Code Lists technical specification](//edi3.org/specs/edi3-codelists/develop/specification/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | Coming Soon|  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
-| [Recommendation 20](//edi3.org/specs/edi3-codelists/develop/recommendation-20/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [SwaggerUI](//edi3.org/specs/edi3-codelists/develop/recommendation-20/swagger)]|  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
-| [Recommendation 21](//edi3.org/specs/edi3-codelists/develop/recommendation-20/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [SwaggerUI](//edi3.org/specs/edi3-codelists/develop/recommendation-21/swagger)]|  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
-| [Recommendation 24](//edi3.org/specs/edi3-codelists/develop/recommendation-20/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [SwaggerUI](//edi3.org/specs/edi3-codelists/develop/recommendation-24/swagger)]|  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues){:target="_blank"}  |
+| [Recommendation 20](//edi3.org/specs/edi3-codelists/develop/recommendation-20/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [SwaggerUI](//edi3.org/specs/edi3-codelists/develop/recommendation-20/swagger)]|  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues?q=is:issue+is:open+label:rec20){:target="_blank"}  |
+| [Recommendation 21](//edi3.org/specs/edi3-codelists/develop/recommendation-20/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [SwaggerUI](//edi3.org/specs/edi3-codelists/develop/recommendation-21/swagger)]|  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues?q=is:issue+is:open+label:rec21){:target="_blank"}  |
+| [Recommendation 24](//edi3.org/specs/edi3-codelists/develop/recommendation-20/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [SwaggerUI](//edi3.org/specs/edi3-codelists/develop/recommendation-24/swagger)]|  [Code Lists Issues](https://github.com/edi3/edi3-codelists/issues?q=is:issue+is:open+label:rec24){:target="_blank"}  |
 
 ## Published Codelists
 
