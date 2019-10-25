@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>edi3 Code Lists 1.0 Specification - Recommendation 20 - Codes for Units of Measure Used in International Trade - edi3 Standards by edi3</title>
+    <title>edi3 Standards by edi3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/style.css">
 
@@ -25,9 +24,7 @@
     <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 </head>
-
-<body>
-
+<body class="swagger-layout">
 <header class="header">
     <div class="header-line">
         <div class="wrapper">
@@ -119,6 +116,10 @@
     });
 </script>
 
+
+<script src="//unpkg.com/swagger-ui-dist@3/swagger-ui-bundle.js"></script>
+<link rel="stylesheet" href="//unpkg.com/swagger-ui-dist@3/swagger-ui.css">
+
 <div class="main-wrapper">
     <div class="main-content">
         <div class="page-sidebar">
@@ -156,66 +157,20 @@
 </ul>
 
         </div>
-        <div class="page-content docs-content">
+        <div class="page-content">
             
-            <div class="spec-header">
-                
-                <ul>
-                    <li>Spec ID: <p>codelists-recommendation-20/1</p>
-</li>
-                    <li><p><img src="http://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" /></p>
-</li>
-                    <li>Editor: <p><a href="mailto:david@cif-consulting.co.uk">David Roff</a></p>
-</li>
-                    <li>Contributors: 
-</li>
-                </ul>
-            </div>
-            <div class="specs-toc">
-    <!--<div class="specs-toc-title">Table of contents</div>-->
-    <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#goals">Goals</a></li>
-<li class="toc-entry toc-h2"><a href="#data-source">Data Source</a></li>
-<li class="toc-entry toc-h2"><a href="#requesting-a-change-dmr---data-maintance-request">Requesting a Change (DMR - Data Maintance Request)</a></li>
-<li class="toc-entry toc-h2"><a href="#license">License</a></li>
-<li class="toc-entry toc-h2"><a href="#related-material">Related Material</a></li>
-</ul>
-</div>
-            <h2 id="goals">Goals</h2>
-
-<p>Recommendation 20 Provides three character alphabetic and alphanumeric codes for representing units of measurement for length, area, volume/capacity, mass (weight), time, and other quantities used in international trade. The codes are intended for use in manual and/or automated systems for the exchange of information between participants in international trade.</p>
-
-<p>Facilitates use of Recommendation 20. The code list is presented in three separate annexes:</p>
-
-<p>Annex I – Code elements listed by quantity category;
-Annex II – Code elements listed by unit of measure name; and
-Annex III – Code elements listed by common code.</p>
-
-<h2 id="data-source">Data Source</h2>
-
-<p>Source of information is from the UNECE website: http://www.unece.org/ro/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/code-list-recommendations.html</p>
-
-<h2 id="requesting-a-change-dmr---data-maintance-request">Requesting a Change (DMR - Data Maintance Request)</h2>
-
-<p>Change requests should be made by raising an issue in github and completing the template, these changes will then be considered and follow the below process.</p>
-
-<p>Recommendation No. 20 is maintained on behalf of UN/CEFACT by the UN/CEFACT Information Content Management Group (ICG). Proposals for updating this Recommendation should be addressed to the Global Trade Solutions Section, United Nations Economic Commission for Europe, Palais des Nations, CH-1211 Geneva 10, Switzerland or by email (cefact@unece.org).</p>
-
-<h2 id="license">License</h2>
-
-<p>This data is made available under the Public Domain Dedication and License version v1.0 whose full text can be found at http://opendatacommons.org/licenses/pddl/ - See more at: http://opendatacommons.org/guide/#sthash.97PSVxmh.dpuf</p>
-
-<h2 id="related-material">Related Material</h2>
-
-<ul>
-  <li>http://www.unece.org/ro/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/cefactrecommendationsrec-index/code-list-recommendations.html</li>
-</ul>
-
-
+            <div id="swagger-ui"></div>
+            <script>
+                const api_id = SwaggerUIBundle({
+                    url: "./swagger.yaml",
+                    dom_id: '#swagger-ui'
+                })
+            </script>
             
         </div>
     </div>
 </div>
+
 <footer class="footer">
     <a href="/" class="footer-logo"><img src="/images/logo-horisontal-white.svg" alt=""></a>
     <ul class="footer-menu">
@@ -241,10 +196,5 @@ Annex III – Code elements listed by common code.</p>
 
 </script>
 
-<script src="/js/anchor.min.js"></script>
-<script>
-    anchors.add('h1, h2, h3, h4, h5');
-    anchors.remove('.no-anchor, .page-content > h1:first-child');
-</script>
 </body>
 </html>
