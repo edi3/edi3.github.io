@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "Condition": "schema:Text",
+    "Identification": "schema:Text",
+    "MaximumIdentification": "schema:Text",
+    "SealingPartyRole": "schema:Text",
+    "Type": "schema:Text",
+    "IssuingTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

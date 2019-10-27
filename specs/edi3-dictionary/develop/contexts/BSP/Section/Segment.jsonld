@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "Image": "schema:Text",
+    "Information": "schema:Text",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

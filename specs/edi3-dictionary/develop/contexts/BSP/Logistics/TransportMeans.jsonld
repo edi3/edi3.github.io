@@ -1,0 +1,94 @@
+{
+  "@context": {
+    "AftDraughtLevel": "schema:Text",
+    "ApprovedSecurityPlanOnboard": "schema.org:Boolean",
+    "CargoGrossWeight": "schema:Text",
+    "Conference": "schema:Text",
+    "DraughtLevel": "schema:Text",
+    "DriverAccompanied": "schema.org:Boolean",
+    "ForwardDraughtLevel": "schema:Text",
+    "GrossWeight": "schema:Text",
+    "Helipad": "schema.org:Boolean",
+    "ISPSSecurityLevel": "schema:Text",
+    "Identification": "schema:Text",
+    "Length": "schema:Text",
+    "LoadedCargo": "schema:Text",
+    "ManoeuvringSpeed": "schema:Text",
+    "Name": "schema:Text",
+    "NetWeight": "schema:Text",
+    "RequiredLaneLength": "schema:Text",
+    "Sequence": "schema.org:Number",
+    "Type": "schema:Text",
+    "TypeText": "schema:Text",
+    "WasteReportingExemption": "schema.org:Boolean",
+    "ApplicableLogisticsServiceCharge": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/ServiceCharge",
+      "@type": "@id"
+    },
+    "AttachedLogisticsTransportEquipment": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/TransportEquipment",
+      "@type": "@id"
+    },
+    "CertifiedCalculatedEmission": {
+      "@id": "https://edi3.org/contexts/BSP/Calculated/Emission",
+      "@type": "@id"
+    },
+    "CompanySecurityOfficerTransportPerson": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Person",
+      "@type": "@id"
+    },
+    "ISSCIssuingAuthorityTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "ISSCReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "OperatorNationalityTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "OperatorTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "OwnerAgentTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "OwnerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "RegistrationTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "RegistrationTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "RequiredTransportService": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Service",
+      "@type": "@id"
+    },
+    "ServiceProviderTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "SpecifiedHandlingInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Handling/Instructions",
+      "@type": "@id"
+    },
+    "SpecifiedIdentifiedFault": {
+      "@id": "https://edi3.org/contexts/BSP/Identified/Fault",
+      "@type": "@id"
+    },
+    "SpecifiedSpatialDimension": {
+      "@id": "https://edi3.org/contexts/BSP/Spatial/Dimension",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "Name": "schema:Text",
+    "Type": "schema:Text",
+    "IncludedTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

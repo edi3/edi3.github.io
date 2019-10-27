@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "BusinessType": "schema:Text",
+    "Established": "schema.org:Time",
+    "Identification": "schema:Text",
+    "LegalClassification": "schema:Text",
+    "Name": "schema:Text",
+    "TradingBusinessName": "schema:Text",
+    "Type": "schema:Text",
+    "AuthorizedLegalRegistration": {
+      "@id": "https://edi3.org/contexts/BSP/Legal/Registration",
+      "@type": "@id"
+    },
+    "PostalTradeAddress": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Address",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "@context": {
+    "BuyerReference": "schema:Text",
+    "DeliveryOrderFulfilmentLeadTime": "schema:Text",
+    "DeliveryPriority": "schema:Text",
+    "EconomicOrder": "schema:Text",
+    "Impact": "schema:Text",
+    "IncrementalProductOrderable": "schema:Text",
+    "InformationUseRestriction": "schema.org:Boolean",
+    "MaximumProductOrderable": "schema:Text",
+    "MinimumProductOrderable": "schema:Text",
+    "OrderProductUnitMeasure": "schema:Text",
+    "PickUpOrderFulfilmentLeadTime": "schema:Text",
+    "Priority": "schema:Text",
+    "ProductAvailability": "schema:Text",
+    "ProductMadeToOrder": "schema.org:Boolean",
+    "ProductOrderable": "schema.org:Boolean",
+    "ProductReorderable": "schema.org:Boolean",
+    "Reference": "schema:Text",
+    "ResaleProductUnitMeasure": "schema:Text",
+    "SellerReference": "schema:Text",
+    "AdditionalReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "ApplicableSupplyChainForecastTerms": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/ForecastTerms",
+      "@type": "@id"
+    },
+    "ApplicableTradeDeliveryTerms": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/DeliveryTerms",
+      "@type": "@id"
+    },
+    "BlanketOrderReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "BuyerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "CarrierTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "CatalogueReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "ConditionsReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "ContractReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "DemandForecastReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "EngineeringChangeReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "ExclusivitySpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "ExportLicenceReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "GuaranteedProductLifeSpanSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "ImportLicenceReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "IncludedSpecifiedMarketplace": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Marketplace",
+      "@type": "@id"
+    },
+    "InformationProviderTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "LetterOfCreditReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "OrderReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "OrderingSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "PriceListReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "ProcurementTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "ProductEndUserTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "ProductTradePrice": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Price",
+      "@type": "@id"
+    },
+    "ProgramMissionProject": {
+      "@id": "https://edi3.org/contexts/BSP/Mission/Project",
+      "@type": "@id"
+    },
+    "PromotionalDealReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "QuotationProposalReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "QuotationProposalResponseReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "QuotationReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "QuotationRequestReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "QuotationRequestResponseReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "RequisitionReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "RequisitionerReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "RequisitionerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "ResaleSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "SalesReportReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "SellerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "SupplyInstructionReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "SupportCentreTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "TargetMarketTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

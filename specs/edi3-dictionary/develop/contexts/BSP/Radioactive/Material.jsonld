@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "CompositionDescription": "schema:Text",
+    "CriticalitySafetyIndex": "schema.org:Number",
+    "FissileException": "schema.org:Boolean",
+    "LowDispersibleInformation": "schema:Text",
+    "RadionuclideName": "schema:Text",
+    "SpecialFormInformation": "schema:Text",
+    "TransportIndex": "schema.org:Number",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

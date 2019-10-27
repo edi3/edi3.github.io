@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "OperationalCategory": "schema:Text",
+    "StatisticalClassification": "schema:Text",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

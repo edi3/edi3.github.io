@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "CarrierAssignedBookingIdentification": "schema:Text",
+    "Category": "schema:Text",
+    "Characteristic": "schema:Text",
+    "CharacteristicText": "schema:Text",
+    "GrossVolume": "schema:Text",
+    "GrossWeight": "schema:Text",
+    "Identification": "schema:Text",
+    "LoadedPackage": "schema:Text",
+    "NetWeight": "schema:Text",
+    "Unit": "schema:Text",
+    "AffixedLogisticsSeal": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Seal",
+      "@type": "@id"
+    },
+    "SettingTransportSettingTemperature": {
+      "@id": "https://edi3.org/contexts/BSP/TransportSetting/Temperature",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

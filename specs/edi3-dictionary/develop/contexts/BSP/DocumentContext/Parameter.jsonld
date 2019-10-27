@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "Value": "schema:Text",
+    "SpecifiedDocumentVersion": {
+      "@id": "https://edi3.org/contexts/BSP/Document/Version",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

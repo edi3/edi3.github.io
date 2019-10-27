@@ -1,0 +1,119 @@
+{
+  "@context": {
+    "Acquisition": "schema.org:Time",
+    "AmendmentReason": "schema:Text",
+    "AnnualQuota": "schema:Text",
+    "Category": "schema:Text",
+    "CertificationBasis": "schema:Text",
+    "ControlRequirement": "schema.org:Boolean",
+    "ControlResult": "schema:Text",
+    "ControlStartDateConfirmation": "schema.org:Boolean",
+    "DeclarantAssignedDeclaration": "schema:Text",
+    "DeferredPayableTotalCharge": "schema:amount",
+    "DeferredPaymentMethod": "schema.org:Boolean",
+    "ExportLicenceControlClassification": "schema:Text",
+    "GoodsStatus": "schema:Text",
+    "Guarantee": "schema:Text",
+    "GuaranteeText": "schema:Text",
+    "ImmediatePayableTotalCharge": "schema:amount",
+    "NonTariffCharge": "schema:amount",
+    "OriginCriteria": "schema:Text",
+    "PaymentMethod": "schema:Text",
+    "Performance": "schema.org:Time",
+    "PreviousProcedureType": "schema:Text",
+    "Quota": "schema:Text",
+    "RegisteredDeferredPaymentPayer": "schema:Text",
+    "Remark": "schema:Text",
+    "RequestOverride": "schema:Text",
+    "ResponsibleAgency": "schema:Text",
+    "ResponsibleAgencyAction": "schema:Text",
+    "ResponsibleAgencyInvolvement": "schema:Text",
+    "Tariff": "schema:Text",
+    "TariffAmount": "schema:amount",
+    "TariffDeduction": "schema:Text",
+    "TotalCharge": "schema:amount",
+    "TotalConsignmentValue": "schema:amount",
+    "TransactionNature": "schema:Text",
+    "TransportMovementType": "schema:Text",
+    "Type": "schema:Text",
+    "UsedToDateQuota": "schema:Text",
+    "ValuationBasis": "schema:amount",
+    "ApplicableSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "ApplicableTradeCurrencyExchange": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/CurrencyExchange",
+      "@type": "@id"
+    },
+    "ApplicableTradeTax": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Tax",
+      "@type": "@id"
+    },
+    "BorderClearanceTransportInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Instructions",
+      "@type": "@id"
+    },
+    "DeclarationLodgementLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "ExaminationTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "ExemptionClaimantTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "PaymentOfficeLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "PreviousReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "ReferencedReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "ReportedLogisticsStatus": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Status",
+      "@type": "@id"
+    },
+    "RequiredAppliedChemicalTreatment": {
+      "@id": "https://edi3.org/contexts/BSP/Applied/ChemicalTreatment",
+      "@type": "@id"
+    },
+    "RequiredCertificationTestSpecificationReport": {
+      "@id": "https://edi3.org/contexts/BSP/Certification/TestSpecificationReport",
+      "@type": "@id"
+    },
+    "RequiredLogisticsSeal": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Seal",
+      "@type": "@id"
+    },
+    "SpecifiedCrossBorderCustomsProcedure": {
+      "@id": "https://edi3.org/contexts/BSP/CrossBorder/CustomsProcedure",
+      "@type": "@id"
+    },
+    "SpecifiedDebtorFinancialAccount": {
+      "@id": "https://edi3.org/contexts/BSP/Debtor/FinancialAccount",
+      "@type": "@id"
+    },
+    "SpecifiedLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "StatementNote": {
+      "@id": "https://edi3.org/contexts/BSP//Note",
+      "@type": "@id"
+    },
+    "TreatmentTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

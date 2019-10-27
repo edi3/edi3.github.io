@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "MaximumWidth": "schema:Text",
+    "OverallLength": "schema:Text",
+    "TransportMeans": "schema:Text",
+    "PowerActiveLogisticsTransportMeans": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/TransportMeans",
+      "@type": "@id"
+    },
+    "PowerInactiveLogisticsTransportMeans": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/TransportMeans",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

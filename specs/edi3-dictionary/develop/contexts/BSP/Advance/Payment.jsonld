@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "FormattedReceived": "schema.org:Time",
+    "Paid": "schema:amount",
+    "IncludedTradeTax": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Tax",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

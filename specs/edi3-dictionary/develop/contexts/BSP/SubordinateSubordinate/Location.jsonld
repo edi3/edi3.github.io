@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "Name": "schema:Text",
+    "Type": "schema:Text",
+    "PhysicalGeographicalCoordinate": {
+      "@id": "https://edi3.org/contexts/BSP//GeographicalCoordinate",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

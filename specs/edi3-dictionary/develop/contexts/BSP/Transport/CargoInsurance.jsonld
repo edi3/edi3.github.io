@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "ContractGeneralConditions": "schema:Text",
+    "Coverage": "schema:Text",
+    "CoverageDescription": "schema:Text",
+    "CoverageTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

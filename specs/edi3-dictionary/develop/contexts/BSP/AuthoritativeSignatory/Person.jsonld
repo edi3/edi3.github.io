@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "Name": "schema:Text",
+    "AttainedAcademicQualification": {
+      "@id": "https://edi3.org/contexts/BSP/Academic/Qualification",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

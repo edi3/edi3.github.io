@@ -1,0 +1,83 @@
+{
+  "@context": {
+    "AdditionalHazardClassification": "schema:Text",
+    "AircraftLimitationInformation": "schema:Text",
+    "AllPackedInOneInformation": "schema:Text",
+    "AuthorizationInformation": "schema:Text",
+    "ComplianceDeclarationInformation": "schema:Text",
+    "EMS": "schema:Text",
+    "ExplosiveCargoNetWeight": "schema:Text",
+    "ExplosiveCompatibilityGroup": "schema:Text",
+    "GrossVolume": "schema:Text",
+    "GrossWeight": "schema:Text",
+    "HazardCategory": "schema:Text",
+    "HazardClassVersion": "schema:Text",
+    "HazardClassification": "schema:Text",
+    "HazardType": "schema:Text",
+    "IMDGSegregationGroup": "schema:Text",
+    "Information": "schema:Text",
+    "LimitedQuantity": "schema:Text",
+    "LowerPartOrangeHazardPlacard": "schema:Text",
+    "MFAG": "schema:Text",
+    "MarinePollutant": "schema.org:Boolean",
+    "Marking": "schema:Text",
+    "NetWeight": "schema:Text",
+    "OverpackInformation": "schema:Text",
+    "PackageType": "schema:Text",
+    "PackagingDangerLevel": "schema:Text",
+    "PackingInstructionType": "schema:Text",
+    "Pollutant": "schema.org:Boolean",
+    "PollutantLevel": "schema:Text",
+    "ProperShippingName": "schema:Text",
+    "QValue": "schema.org:Number",
+    "Regulation": "schema:Text",
+    "RegulationName": "schema:Text",
+    "RegulatoryAuthorityName": "schema:Text",
+    "Reportable": "schema:Text",
+    "ShipperDeclarationInformation": "schema:Text",
+    "SpecialProvision": "schema:Text",
+    "SupplementaryInformation": "schema:Text",
+    "TREM": "schema:Text",
+    "TechnicalName": "schema:Text",
+    "TunnelRestriction": "schema:Text",
+    "UNDGIdentification": "schema:Text",
+    "UpperPartOrangeHazardPlacard": "schema:Text",
+    "AssociatedReferencedLogisticsTransportEquipment": {
+      "@id": "https://edi3.org/contexts/BSP/ReferencedLogistics/TransportEquipment",
+      "@type": "@id"
+    },
+    "ControlTemperatureMeasurement": {
+      "@id": "https://edi3.org/contexts/BSP//Measurement",
+      "@type": "@id"
+    },
+    "EmergencyTemperatureMeasurement": {
+      "@id": "https://edi3.org/contexts/BSP//Measurement",
+      "@type": "@id"
+    },
+    "EmergencyTradeContact": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Contact",
+      "@type": "@id"
+    },
+    "FlashpointTemperatureMeasurement": {
+      "@id": "https://edi3.org/contexts/BSP//Measurement",
+      "@type": "@id"
+    },
+    "HandlingHandlingInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Handling/Instructions",
+      "@type": "@id"
+    },
+    "RadioactiveRadioactiveMaterial": {
+      "@id": "https://edi3.org/contexts/BSP/Radioactive/Material",
+      "@type": "@id"
+    },
+    "SpecifiedLogisticsPackage": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Package",
+      "@type": "@id"
+    },
+    "TransportExpertTradeContact": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Contact",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

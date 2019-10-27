@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "CardholderName": "schema:Text",
+    "CreditAvailable": "schema:amount",
+    "CreditLimit": "schema:amount",
+    "Description": "schema:Text",
+    "Expiry": "schema:Date",
+    "Identification": "schema:Text",
+    "InterestRate": "schema:Text",
+    "IssuingCompanyName": "schema:Text",
+    "Microchip": "schema.org:Boolean",
+    "Type": "schema:Text",
+    "ValidFrom": "schema.org:Time",
+    "Verification": "schema.org:Number",
+    "schema": "http://schema.org/"
+  }
+}

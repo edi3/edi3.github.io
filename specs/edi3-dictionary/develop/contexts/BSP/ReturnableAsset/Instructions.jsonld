@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "DepositValueSpecified": "schema:amount",
+    "Material": "schema:Text",
+    "TermsAndConditionsDescription": "schema:Text",
+    "TermsAndConditionsDescriptionCode": "schema:Text",
+    "ValiditySpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

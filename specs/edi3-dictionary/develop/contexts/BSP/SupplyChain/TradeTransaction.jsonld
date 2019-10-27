@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "Information": "schema:Text",
+    "LineItem": "schema:Text",
+    "SalesAgentAssignedIdentification": "schema:Text",
+    "ShipmentIdentification": "schema:Text",
+    "Type": "schema:Text",
+    "ApplicableHeaderTradeAgreement": {
+      "@id": "https://edi3.org/contexts/BSP/Header/TradeAgreement",
+      "@type": "@id"
+    },
+    "ApplicableHeaderTradeDelivery": {
+      "@id": "https://edi3.org/contexts/BSP/Header/TradeDelivery",
+      "@type": "@id"
+    },
+    "ApplicableHeaderTradeSettlement": {
+      "@id": "https://edi3.org/contexts/BSP/Header/TradeSettlement",
+      "@type": "@id"
+    },
+    "AssociatedDocumentLineDocument": {
+      "@id": "https://edi3.org/contexts/BSP/DocumentLine/Document",
+      "@type": "@id"
+    },
+    "AssociatedReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "IncludedSupplyChainTradeLineItem": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/TradeLineItem",
+      "@type": "@id"
+    },
+    "IncludedTradeProductGroup": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/ProductGroup",
+      "@type": "@id"
+    },
+    "SpecifiedLogisticsPackage": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Package",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "Actual": "schema.org:Time",
+    "Category": "schema:Text",
+    "Identification": "schema:Text",
+    "Information": "schema:Text",
+    "RepresentationType": "schema:Text",
+    "Signatory": "schema:Text",
+    "SignatoryImage": "schema:Text",
+    "Statement": "schema:Text",
+    "StatementCode": "schema:Text",
+    "Type": "schema:Text",
+    "IncludedDocumentClause": {
+      "@id": "https://edi3.org/contexts/BSP/Document/Clause",
+      "@type": "@id"
+    },
+    "IssueLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "LocationProviderTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "ProviderReferencedParty": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Party",
+      "@type": "@id"
+    },
+    "ProviderTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

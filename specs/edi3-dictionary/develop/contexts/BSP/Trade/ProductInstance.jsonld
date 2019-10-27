@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "Actual": "schema:Text",
+    "BatchIdentification": "schema:Text",
+    "BestBefore": "schema.org:Time",
+    "Expiry": "schema.org:Time",
+    "GlobalSerialIdentification": "schema:Text",
+    "KanbanIdentification": "schema:Text",
+    "LotIdentification": "schema:Text",
+    "RegistrationIdentification": "schema:Text",
+    "SellBy": "schema.org:Time",
+    "SerialIdentification": "schema:Text",
+    "SupplierAssignedSerialIdentification": "schema:Text",
+    "ApplicableMaterialGoodsCharacteristic": {
+      "@id": "https://edi3.org/contexts/BSP/Material/GoodsCharacteristic",
+      "@type": "@id"
+    },
+    "ApplicableProductCharacteristic": {
+      "@id": "https://edi3.org/contexts/BSP/Product/Characteristic",
+      "@type": "@id"
+    },
+    "AppliedProductHandlingProcess": {
+      "@id": "https://edi3.org/contexts/BSP/ProductHandling/Process",
+      "@type": "@id"
+    },
+    "InspectionSupplyChainEvent": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Event",
+      "@type": "@id"
+    },
+    "OriginLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "PackagingSupplyChainEvent": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Event",
+      "@type": "@id"
+    },
+    "ProductionSupplyChainEvent": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Event",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

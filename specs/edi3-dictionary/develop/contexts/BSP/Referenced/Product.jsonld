@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "BuyerAssignedIdentification": "schema:Text",
+    "Description": "schema:Text",
+    "GlobalIdentification": "schema:Text",
+    "Identification": "schema:Text",
+    "IndustryAssignedIdentification": "schema:Text",
+    "ManufacturerAssignedIdentification": "schema:Text",
+    "Name": "schema:Text",
+    "RelationshipType": "schema:Text",
+    "SellerAssignedIdentification": "schema:Text",
+    "Unit": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

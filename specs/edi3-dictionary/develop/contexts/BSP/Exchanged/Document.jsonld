@@ -1,0 +1,92 @@
+{
+  "@context": {
+    "Acceptance": "schema.org:Time",
+    "AmendmentPurpose": "schema:Text",
+    "Cancellation": "schema.org:Time",
+    "Category": "schema:Text",
+    "ControlRequirement": "schema.org:Boolean",
+    "Copy": "schema.org:Boolean",
+    "CopyIssued": "schema:Text",
+    "CopyRequired": "schema:Text",
+    "Creation": "schema.org:Time",
+    "CustomsIdentification": "schema:Text",
+    "Description": "schema:Text",
+    "GlobalIdentification": "schema:Text",
+    "Identification": "schema:Text",
+    "Information": "schema:Text",
+    "Issue": "schema.org:Time",
+    "Language": "schema:Text",
+    "LineCount": "schema.org:Number",
+    "LineItem": "schema:Text",
+    "Name": "schema:Text",
+    "OriginalIssued": "schema:Text",
+    "OriginalRequired": "schema:Text",
+    "PreviousRevisionIdentification": "schema:Text",
+    "Purpose": "schema:Text",
+    "PurposeCode": "schema:Text",
+    "RecipientAssignedIdentification": "schema:Text",
+    "RejectionResponse": "schema.org:Time",
+    "Remarks": "schema:Text",
+    "RequestedResponseType": "schema:Text",
+    "Response": "schema.org:Time",
+    "ResponseReason": "schema:Text",
+    "Revision": "schema.org:Time",
+    "RevisionIdentification": "schema:Text",
+    "SenderAssignedIdentification": "schema:Text",
+    "Status": "schema:Text",
+    "Submission": "schema.org:Time",
+    "TraderAssignedIdentification": "schema:Text",
+    "Type": "schema:Text",
+    "Urgency": "schema:Text",
+    "VersionIdentification": "schema:Text",
+    "AgentTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "AttachedSpecifiedBinaryFile": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/BinaryFile",
+      "@type": "@id"
+    },
+    "ContractualDocumentClause": {
+      "@id": "https://edi3.org/contexts/BSP/Document/Clause",
+      "@type": "@id"
+    },
+    "EffectiveSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "IncludedNote": {
+      "@id": "https://edi3.org/contexts/BSP//Note",
+      "@type": "@id"
+    },
+    "IssueLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "IssuerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "LodgementLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "RecipientTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "ReferenceReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "SenderTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "SignatoryDocumentAuthentication": {
+      "@id": "https://edi3.org/contexts/BSP/Document/Authentication",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

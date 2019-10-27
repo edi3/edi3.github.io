@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "ApplicableTradeProduct": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Product",
+      "@type": "@id"
+    },
+    "SpecifiedReferencedProduct": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Product",
+      "@type": "@id"
+    },
+    "SpecifiedSubordinateLineTradeAgreement": {
+      "@id": "https://edi3.org/contexts/BSP/SubordinateLine/TradeAgreement",
+      "@type": "@id"
+    },
+    "SpecifiedSubordinateLineTradeDelivery": {
+      "@id": "https://edi3.org/contexts/BSP/SubordinateLine/TradeDelivery",
+      "@type": "@id"
+    },
+    "SpecifiedSubordinateLineTradeSettlement": {
+      "@id": "https://edi3.org/contexts/BSP/SubordinateLine/TradeSettlement",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

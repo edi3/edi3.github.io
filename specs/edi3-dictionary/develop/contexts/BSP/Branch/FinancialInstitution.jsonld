@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "Name": "schema:Text",
+    "LocationFinancialInstitutionAddress": {
+      "@id": "https://edi3.org/contexts/BSP/FinancialInstitution/Address",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "Pattern": "schema:Text",
+    "IncludedSectionSegment": {
+      "@id": "https://edi3.org/contexts/BSP/Section/Segment",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

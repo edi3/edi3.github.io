@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "Charge": "schema:amount",
+    "Type": "schema:Text",
+    "RelatedAppliedAllowanceCharge": {
+      "@id": "https://edi3.org/contexts/BSP/Applied/AllowanceCharge",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

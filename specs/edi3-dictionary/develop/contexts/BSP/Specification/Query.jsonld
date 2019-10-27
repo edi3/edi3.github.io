@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "Content": "schema:Text",
+    "ContractualLanguage": "schema:Text",
+    "Identification": "schema:Text",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

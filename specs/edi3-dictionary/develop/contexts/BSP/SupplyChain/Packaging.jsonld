@@ -1,0 +1,41 @@
+{
+  "@context": {
+    "AdditionalInstruction": "schema:Text",
+    "AdditionalInstructionIndicator": "schema.org:Boolean",
+    "Condition": "schema:Text",
+    "ContentLayer": "schema:Text",
+    "CustomerFacingTotalUnit": "schema:Text",
+    "Description": "schema:Text",
+    "DisposalMethod": "schema:Text",
+    "Instruction": "schema:Text",
+    "LayerTotalUnit": "schema:Text",
+    "MaximumStackability": "schema:Text",
+    "MaximumStackabilityWeight": "schema:Text",
+    "Returnable": "schema.org:Boolean",
+    "TotalUnit": "schema:Text",
+    "Type": "schema:Text",
+    "TypeText": "schema:Text",
+    "Weight": "schema:Text",
+    "ApplicableDisposalInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Disposal/Instructions",
+      "@type": "@id"
+    },
+    "ApplicableMaterialGoodsCharacteristic": {
+      "@id": "https://edi3.org/contexts/BSP/Material/GoodsCharacteristic",
+      "@type": "@id"
+    },
+    "ApplicableReturnableAssetInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/ReturnableAsset/Instructions",
+      "@type": "@id"
+    },
+    "LinearSpatialDimension": {
+      "@id": "https://edi3.org/contexts/BSP/Spatial/Dimension",
+      "@type": "@id"
+    },
+    "SpecifiedPackagingMarking": {
+      "@id": "https://edi3.org/contexts/BSP/Packaging/Marking",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

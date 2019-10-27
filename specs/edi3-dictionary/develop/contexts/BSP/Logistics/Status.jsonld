@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "Condition": "schema:Text",
+    "Description": "schema:Text",
+    "Reason": "schema:Text",
+    "ReasonText": "schema:Text",
+    "Reference": "schema.org:Time",
+    "Sequence": "schema.org:Number",
+    "ReportedTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "SpecifiedLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "ValiditySpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

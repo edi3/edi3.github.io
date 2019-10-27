@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "Description": "schema:Text",
+    "Identification": "schema:Text",
+    "Marketing": "schema:Text",
+    "MarketingPhrase": "schema:Text",
+    "Name": "schema:Text",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

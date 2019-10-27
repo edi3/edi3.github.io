@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "DepartmentName": "schema:Text",
+    "Identification": "schema:Text",
+    "JobTitle": "schema:Text",
+    "PersonIdentification": "schema:Text",
+    "PersonName": "schema:Text",
+    "Responsibility": "schema:Text",
+    "Type": "schema:Text",
+    "FaxUniversalCommunication": {
+      "@id": "https://edi3.org/contexts/BSP/Universal/Communication",
+      "@type": "@id"
+    },
+    "InstantMessagingUniversalCommunication": {
+      "@id": "https://edi3.org/contexts/BSP/Universal/Communication",
+      "@type": "@id"
+    },
+    "SpecifiedContactPerson": {
+      "@id": "https://edi3.org/contexts/BSP/Contact/Person",
+      "@type": "@id"
+    },
+    "SpecifiedNote": {
+      "@id": "https://edi3.org/contexts/BSP//Note",
+      "@type": "@id"
+    },
+    "TelephoneUniversalCommunication": {
+      "@id": "https://edi3.org/contexts/BSP/Universal/Communication",
+      "@type": "@id"
+    },
+    "TelexUniversalCommunication": {
+      "@id": "https://edi3.org/contexts/BSP/Universal/Communication",
+      "@type": "@id"
+    },
+    "URIUniversalCommunication": {
+      "@id": "https://edi3.org/contexts/BSP/Universal/Communication",
+      "@type": "@id"
+    },
+    "VOIPUniversalCommunication": {
+      "@id": "https://edi3.org/contexts/BSP/Universal/Communication",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

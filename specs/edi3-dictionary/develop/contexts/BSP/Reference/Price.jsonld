@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "Basis": "schema:Text",
+    "Charge": "schema:amount",
+    "ComparisonMethod": "schema:Text",
+    "NetPrice": "schema.org:Boolean",
+    "schema": "http://schema.org/"
+  }
+}

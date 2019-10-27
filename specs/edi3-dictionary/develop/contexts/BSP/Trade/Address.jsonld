@@ -1,0 +1,32 @@
+{
+  "@context": {
+    "AdditionalStreetName": "schema:Text",
+    "AttentionOf": "schema:Text",
+    "BuildingName": "schema:Text",
+    "BuildingNumber": "schema:Text",
+    "CareOf": "schema:Text",
+    "City": "schema:Text",
+    "CityName": "schema:Text",
+    "CitySubDivisionName": "schema:Text",
+    "Country": "schema:Text",
+    "CountryName": "schema:Text",
+    "CountrySubDivision": "schema:Text",
+    "CountrySubDivisionName": "schema:Text",
+    "DepartmentName": "schema:Text",
+    "Identification": "schema:Text",
+    "LineFive": "schema:Text",
+    "LineFour": "schema:Text",
+    "LineOne": "schema:Text",
+    "LineThree": "schema:Text",
+    "LineTwo": "schema:Text",
+    "PostOfficeBox": "schema:Text",
+    "Postcode": "schema:Text",
+    "StreetName": "schema:Text",
+    "Type": "schema:Text",
+    "GeoCoordinateIdentificationGeographicalCoordinate": {
+      "@id": "https://edi3.org/contexts/BSP//GeographicalCoordinate",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

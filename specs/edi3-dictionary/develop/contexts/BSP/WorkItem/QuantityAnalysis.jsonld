@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "Actual": "schema:Text",
+    "ActualQuantity": "schema:Text",
+    "AlternativeClassification": "schema:Text",
+    "ContractualLanguage": "schema:Text",
+    "Description": "schema:Text",
+    "Identification": "schema:Text",
+    "PrimaryClassification": "schema:Text",
+    "Status": "schema:Text",
+    "Type": "schema:Text",
+    "ActualQuantityWorkItemDimension": {
+      "@id": "https://edi3.org/contexts/BSP/WorkItem/Dimension",
+      "@type": "@id"
+    },
+    "BreakdownWorkItemQuantityAnalysis": {
+      "@id": "https://edi3.org/contexts/BSP/WorkItem/QuantityAnalysis",
+      "@type": "@id"
+    },
+    "ChangedRecordedStatus": {
+      "@id": "https://edi3.org/contexts/BSP/Recorded/Status",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

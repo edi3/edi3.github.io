@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "DeparturePoint": "schema:Text",
+    "Description": "schema:Text",
+    "FrequencyType": "schema:Text",
+    "Identification": "schema:Text",
+    "Map": "schema:Text",
+    "SecurityLevel": "schema:Text",
+    "Status": "schema:Text",
+    "TransportMeans": "schema:Text",
+    "FrequencyEffectiveSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "ItineraryStopTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "ScheduledSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "@context": {
+    "Category": "schema:Text",
+    "CommunicationCapability": "schema:Text",
+    "Identification": "schema:Text",
+    "Position": "schema:Text",
+    "Powered": "schema.org:Boolean",
+    "RemainingChargeLevelStatus": "schema:Text",
+    "ServiceLevel": "schema:Text",
+    "Status": "schema:Text",
+    "Type": "schema:Text",
+    "EmbeddedTransportMonitoringSensor": {
+      "@id": "https://edi3.org/contexts/BSP/TransportMonitoring/Sensor",
+      "@type": "@id"
+    },
+    "GrantedProductCertificate": {
+      "@id": "https://edi3.org/contexts/BSP/Product/Certificate",
+      "@type": "@id"
+    },
+    "ManufacturerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "OwnerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "RemoteTransportMonitoringSensor": {
+      "@id": "https://edi3.org/contexts/BSP/TransportMonitoring/Sensor",
+      "@type": "@id"
+    },
+    "operatorTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

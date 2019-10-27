@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "Country": "schema:Text",
+    "CountryName": "schema:Text",
+    "Description": "schema:Text",
+    "Identification": "schema:Text",
+    "Name": "schema:Text",
+    "Type": "schema:Text",
+    "InspectionSupplyChainEvent": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Event",
+      "@type": "@id"
+    },
+    "PhysicalGeographicalCoordinate": {
+      "@id": "https://edi3.org/contexts/BSP//GeographicalCoordinate",
+      "@type": "@id"
+    },
+    "PostalTradeAddress": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Address",
+      "@type": "@id"
+    },
+    "SpecifiedLocationParty": {
+      "@id": "https://edi3.org/contexts/BSP/Location/Party",
+      "@type": "@id"
+    },
+    "StaySpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "SubordinateSubordinateLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Subordinate/Location",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

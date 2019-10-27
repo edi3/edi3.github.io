@@ -1,0 +1,90 @@
+{
+  "@context": {
+    "CarrierAcceptance": "schema.org:Time",
+    "CarrierAssigned": "schema:Text",
+    "ConsigneeAssigned": "schema:Text",
+    "ConsignmentItem": "schema:Text",
+    "ConsignorAssigned": "schema:Text",
+    "CustomsIdentification": "schema:Text",
+    "FreightForwarderAssigned": "schema:Text",
+    "GrossVolume": "schema:Text",
+    "GrossWeight": "schema:Text",
+    "Identification": "schema:Text",
+    "NetWeight": "schema:Text",
+    "Sequence": "schema.org:Number",
+    "TransportSplitDescription": "schema:Text",
+    "ApplicableCrossBorderRegulatoryProcedure": {
+      "@id": "https://edi3.org/contexts/BSP/CrossBorder/RegulatoryProcedure",
+      "@type": "@id"
+    },
+    "CarrierAcceptanceLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "CarrierTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "ConsigneeTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "ConsignorTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "DeliveryTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "DespatchTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "DevanningTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "IncludedReferencedSupplyChainConsignmentItem": {
+      "@id": "https://edi3.org/contexts/BSP/ReferencedSupplyChain/ConsignmentItem",
+      "@type": "@id"
+    },
+    "NotifiedTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "PreCarriageLogisticsTransportMovement": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/TransportMovement",
+      "@type": "@id"
+    },
+    "RelatedSupplyChainTradeTransaction": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/TradeTransaction",
+      "@type": "@id"
+    },
+    "SpecifiedLogisticsRiskAnalysisResult": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/RiskAnalysisResult",
+      "@type": "@id"
+    },
+    "StorageTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "TransportContractReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "TransportLogisticsPackage": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Package",
+      "@type": "@id"
+    },
+    "UtilizedLogisticsTransportEquipment": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/TransportEquipment",
+      "@type": "@id"
+    },
+    "VanningTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

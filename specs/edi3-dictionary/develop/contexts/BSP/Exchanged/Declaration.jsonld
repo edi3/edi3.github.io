@@ -1,0 +1,50 @@
+{
+  "@context": {
+    "CurrencyExchange": "schema.org:Number",
+    "CustomsValueSpecified": "schema:amount",
+    "GrossWeightSpecified": "schema:Text",
+    "Identification": "schema:Text",
+    "Issue": "schema.org:Time",
+    "JurisdictionEntry": "schema.org:Time",
+    "Procedure": "schema:Text",
+    "SpecificCircumstance": "schema:Text",
+    "StatisticalValueSpecified": "schema:amount",
+    "TotalInvoiceSpecified": "schema:amount",
+    "TotalPackageSpecified": "schema:Text",
+    "Type": "schema:Text",
+    "Version": "schema:Text",
+    "ApplicableCrossBorderCustomsValuation": {
+      "@id": "https://edi3.org/contexts/BSP/CrossBorder/CustomsValuation",
+      "@type": "@id"
+    },
+    "AssociatedReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "AssociatedTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "DeclarantAgentTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "DeclarantTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "PreviousReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "StatementNote": {
+      "@id": "https://edi3.org/contexts/BSP//Note",
+      "@type": "@id"
+    },
+    "SubmissionLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

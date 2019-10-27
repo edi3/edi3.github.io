@@ -1,0 +1,58 @@
+{
+  "@context": {
+    "Birth": "schema.org:Time",
+    "BirthCountry": "schema:Text",
+    "BirthplaceName": "schema:Text",
+    "Category": "schema:Text",
+    "FamilyName": "schema:Text",
+    "Gender": "schema:Text",
+    "GivenName": "schema:Text",
+    "Identification": "schema:Text",
+    "InTransit": "schema.org:Boolean",
+    "Language": "schema:Text",
+    "Name": "schema:Text",
+    "Role": "schema:Text",
+    "RoleCode": "schema:Text",
+    "AttainedAcademicQualification": {
+      "@id": "https://edi3.org/contexts/BSP/Academic/Qualification",
+      "@type": "@id"
+    },
+    "DeclaredSpecifiedPersonalEffects": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/PersonalEffects",
+      "@type": "@id"
+    },
+    "DisembarkationLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "EmbarkationLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "NationalityTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "SpecificCertifiedAccreditation": {
+      "@id": "https://edi3.org/contexts/BSP/Certified/Accreditation",
+      "@type": "@id"
+    },
+    "TelephoneUniversalCommunication": {
+      "@id": "https://edi3.org/contexts/BSP/Universal/Communication",
+      "@type": "@id"
+    },
+    "TravelIdentityReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "URIUniversalCommunication": {
+      "@id": "https://edi3.org/contexts/BSP/Universal/Communication",
+      "@type": "@id"
+    },
+    "VisaReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

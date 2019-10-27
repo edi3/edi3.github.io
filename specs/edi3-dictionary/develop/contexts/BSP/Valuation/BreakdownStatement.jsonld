@@ -1,0 +1,45 @@
+{
+  "@context": {
+    "Comment": "schema:Text",
+    "ContractualLanguage": "schema:Text",
+    "Creation": "schema.org:Time",
+    "DefaultCurrency": "schema:Text",
+    "DefaultLanguage": "schema:Text",
+    "Description": "schema:Text",
+    "Identification": "schema:Text",
+    "MeasurementMethodIdentification": "schema:Text",
+    "Name": "schema:Text",
+    "PriceListIdentification": "schema:Text",
+    "RequestedAction": "schema:Text",
+    "Type": "schema:Text",
+    "ChangedRecordedStatus": {
+      "@id": "https://edi3.org/contexts/BSP/Recorded/Status",
+      "@type": "@id"
+    },
+    "CreationSpecifiedBinaryFile": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/BinaryFile",
+      "@type": "@id"
+    },
+    "ItemBasicWorkItem": {
+      "@id": "https://edi3.org/contexts/BSP/Basic/WorkItem",
+      "@type": "@id"
+    },
+    "ItemGroupedWorkItem": {
+      "@id": "https://edi3.org/contexts/BSP/Grouped/WorkItem",
+      "@type": "@id"
+    },
+    "ReaderSpecifiedBinaryFile": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/BinaryFile",
+      "@type": "@id"
+    },
+    "ReferencedSpecifiedBinaryFile": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/BinaryFile",
+      "@type": "@id"
+    },
+    "TotalCalculatedPrice": {
+      "@id": "https://edi3.org/contexts/BSP/Calculated/Price",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

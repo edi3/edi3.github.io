@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "Description": "schema:Text",
+    "Diameter": "schema:Text",
+    "Height": "schema:Text",
+    "Identification": "schema:Text",
+    "Length": "schema:Text",
+    "Type": "schema:Text",
+    "Value": "schema:Text",
+    "Width": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

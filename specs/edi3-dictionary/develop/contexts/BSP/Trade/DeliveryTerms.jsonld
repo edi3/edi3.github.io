@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "DeliveryDiscontinuation": "schema:Text",
+    "DeliveryType": "schema:Text",
+    "Description": "schema:Text",
+    "Function": "schema:Text",
+    "PartialDeliveryAllowed": "schema.org:Boolean",
+    "RelevantTradeLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Location",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "AcknowledgementStatus": "schema:Text",
+    "ControlRequirement": "schema.org:Boolean",
+    "Creation": "schema.org:Time",
+    "Identification": "schema:Text",
+    "Issue": "schema.org:Time",
+    "ItemIdentification": "schema:Text",
+    "MultipleReferences": "schema.org:Boolean",
+    "Name": "schema:Text",
+    "ReasonInformation": "schema:Text",
+    "ReportReceipt": "schema.org:Time",
+    "ReportSubmission": "schema.org:Time",
+    "Status": "schema:Text",
+    "Type": "schema:Text",
+    "ReferenceReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "AccreditingBodyName": "schema:Text",
+    "AuthenticationMethod": "schema:Text",
+    "Category": "schema:Text",
+    "Description": "schema:Text",
+    "Expiry": "schema.org:Time",
+    "Identification": "schema:Text",
+    "Obtained": "schema.org:Time",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

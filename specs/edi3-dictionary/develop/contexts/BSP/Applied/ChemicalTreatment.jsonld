@@ -1,0 +1,29 @@
+{
+  "@context": {
+    "ChemicalConcentration": "schema:Text",
+    "MethodName": "schema:Text",
+    "Name": "schema:Text",
+    "Occurrence": "schema.org:Time",
+    "ApplicableSpecifiedTemperature": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Temperature",
+      "@type": "@id"
+    },
+    "AppliedSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "ResultDocumentAuthentication": {
+      "@id": "https://edi3.org/contexts/BSP/Document/Authentication",
+      "@type": "@id"
+    },
+    "ResultNote": {
+      "@id": "https://edi3.org/contexts/BSP//Note",
+      "@type": "@id"
+    },
+    "UsedDistinctChemical": {
+      "@id": "https://edi3.org/contexts/BSP/Distinct/Chemical",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

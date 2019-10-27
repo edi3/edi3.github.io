@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "Issue": "schema.org:Time",
+    "LatestRevision": "schema.org:Time",
+    "Line": "schema:Text",
+    "LineStatus": "schema:Text",
+    "LineStatusReason": "schema:Text",
+    "LineStatusReasonText": "schema:Text",
+    "ParentLine": "schema:Text",
+    "Publication": "schema.org:Time",
+    "UUIDLine": "schema:Text",
+    "EffectiveSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "IncludedNote": {
+      "@id": "https://edi3.org/contexts/BSP//Note",
+      "@type": "@id"
+    },
+    "ReferenceAcknowledgementDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Acknowledgement/Document",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

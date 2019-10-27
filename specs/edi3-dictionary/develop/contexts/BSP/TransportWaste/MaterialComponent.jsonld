@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "Description": "schema:Text",
+    "EstimatedGenerated": "schema:Text",
+    "MaximumDedicatedStorageCapacity": "schema:Text",
+    "PlannedDischarged": "schema:Text",
+    "Retained": "schema:Text",
+    "Type": "schema:Text",
+    "DeliveryTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

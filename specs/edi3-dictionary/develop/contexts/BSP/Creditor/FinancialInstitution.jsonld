@@ -1,0 +1,38 @@
+{
+  "@context": {
+    "AustralianBSBIdentification": "schema:Text",
+    "AustrianBankleitzahlIdentification": "schema:Text",
+    "BIC": "schema:Text",
+    "CHIPSParticipantIdentification": "schema:Text",
+    "CHIPSUniversalIdentification": "schema:Text",
+    "CanadianPaymentsAssociationIdentification": "schema:Text",
+    "ClearingSystemName": "schema:Text",
+    "FedwireRoutingNumberIdentification": "schema:Text",
+    "GermanBankleitzahlIdentification": "schema:Text",
+    "HellenicBankIdentification": "schema:Text",
+    "HongKongBankIdentification": "schema:Text",
+    "IndianFinancialSystemIdentification": "schema:Text",
+    "IrishNSCIdentification": "schema:Text",
+    "ItalianDomesticIdentification": "schema:Text",
+    "JapanFinancialInstitutionCommonIdentification": "schema:Text",
+    "Name": "schema:Text",
+    "NewZealandNCCIdentification": "schema:Text",
+    "PolishNationalClearingIdentification": "schema:Text",
+    "PortugueseNCCIdentification": "schema:Text",
+    "RussianCentralBankIdentification": "schema:Text",
+    "SICIdentification": "schema:Text",
+    "SouthAfricanNCCIdentification": "schema:Text",
+    "SpanishDomesticInterbankingIdentification": "schema:Text",
+    "SwissBCIdentification": "schema:Text",
+    "UKSortCodeIdentification": "schema:Text",
+    "LocationFinancialInstitutionAddress": {
+      "@id": "https://edi3.org/contexts/BSP/FinancialInstitution/Address",
+      "@type": "@id"
+    },
+    "SubDivisionBranchFinancialInstitution": {
+      "@id": "https://edi3.org/contexts/BSP/Branch/FinancialInstitution",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}
