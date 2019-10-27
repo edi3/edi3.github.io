@@ -17,7 +17,7 @@ For versioning the standard git flow is used:
 3. For release patches a hotfix branch from a tag in master branch is created. When the hotfix branch is ready, it is merged back to master and a patch version tag is added. The hotfix branch is merged to develop too to keep it up to date.
 4. Optional - release branches can be used, but it will make sense only if there are more then one version is under development, otherwise it is just an extra step. The release branches can be supported later when the level of activity is high enough.
 
-For more details about git flow - https://datasift.github.io/gitflow/IntroducingGitFlow.html
+For more details about git flow please check [Introducing Git Flow](https://datasift.github.io/gitflow/IntroducingGitFlow.html)
 
 # Specification repository structure
 
