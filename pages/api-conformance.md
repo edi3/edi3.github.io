@@ -13,7 +13,7 @@ The edi3 API Conformance Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [API Conformance spec](//edi3.org/specs/edi3-api-conformance/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-api-conformance/master/redoc-static.html){:target="_blank"} |  [API Conformance Issues](https://github.com/edi3/edi3-api-conformance/issues){:target="_blank"}  |
+| [API Conformance spec](//edi3.org/specs/edi3-api-conformance/develop/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-api-conformance/develop/swagger){:target="_blank"} |  [API Conformance Issues](https://github.com/edi3/edi3-api-conformance/issues){:target="_blank"}  |
 
 ## Known Implementations
 

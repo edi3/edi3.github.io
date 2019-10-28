@@ -13,7 +13,7 @@ The edi3 Regulatory Domain Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Certificates](//edi3.org/specs/edi3-regulatory/master/certificates/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-regulatory/master/certificates/CertificateOfOrigin.html){:target="_blank"} |  [Regulatory Domain Issues](https://github.com/edi3/edi3-regulatory/issues){:target="_blank"}  |
+| [Certificates](//edi3.org/specs/edi3-regulatory/develop/certificates/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-regulatory/develop/certificates/CertificateOfOrigin){:target="_blank"} |  [Regulatory Domain Issues](https://github.com/edi3/edi3-regulatory/issues){:target="_blank"}  |
 
 ## Known Implementations
 

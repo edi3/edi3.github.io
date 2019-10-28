@@ -13,7 +13,7 @@ The edi3 OpenAPI NDR Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [OpenAPI NDR spec](//edi3.org/specs/edi3-api-ndr/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-api-ndr/master/redoc-static.html){:target="_blank"} |  [OpenAPI NDR Issues](https://github.com/edi3/edi3-api-ndr/issues){:target="_blank"}  |
+| [OpenAPI NDR spec](//edi3.org/specs/edi3-api-ndr/develop/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-api-ndr/develop/swagger){:target="_blank"} |  [OpenAPI NDR Issues](https://github.com/edi3/edi3-api-ndr/issues){:target="_blank"}  |
 
 ## Known Implementations
 

@@ -25,7 +25,7 @@ To participate in specification development or just provide your comments / ques
 
 ## Published Codelists
 
-Note that the format of the codelists presented below do not yet match the codelist technical specification provided above. Please modify [this page](https://github.com/edi3/edi3.github.io/edit/master/pages/codelists.md) and make a pull request to add your own.
+Note that the format of the codelists presented below do not yet match the codelist technical specification provided above. Please modify this page and make a pull request to add your own.
 
 |List Name|Codelist URL|Comments|
 |--------|------------------|--------|

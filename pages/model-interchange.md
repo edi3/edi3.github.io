@@ -13,7 +13,7 @@ The edi3 Model Interchange Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Model Interchange spec](//edi3.org/specs/edi3-model-interchange/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-model-interchange/master/redoc-static.html){:target="_blank"} |  [Model Interchange Issues](https://github.com/edi3/edi3-model-interchange/issues){:target="_blank"}  |
+| [Model Interchange spec](//edi3.org/specs/edi3-model-interchange/develop/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) |  |  [Model Interchange Issues](https://github.com/edi3/edi3-model-interchange/issues){:target="_blank"}  |
 
 ## Known Implementations
 

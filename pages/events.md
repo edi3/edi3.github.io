@@ -13,7 +13,7 @@ The edi3 Event Structure Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Event Structure spec](//edi3.org/specs/edi3-events/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-events/master/redoc-static.html){:target="_blank"} |  [Event Structure Issues](https://github.com/edi3/edi3-events/issues){:target="_blank"}  |
+| [Event Structure spec](//edi3.org/specs/edi3-events/develop/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-events/develop/swagger){:target="_blank"} |  [Event Structure Issues](https://github.com/edi3/edi3-events/issues){:target="_blank"}  |
 
 ## Known Implementations
 

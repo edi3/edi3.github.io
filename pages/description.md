@@ -13,7 +13,7 @@ The edi3 Resource Description Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Resource Description spec](//edi3.org/specs/edi3-description/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-description/master/redoc-static.html){:target="_blank"} |  [Resource Description Issues](https://github.com/edi3/edi3-description/issues){:target="_blank"}  |
+| [Resource Description spec](//edi3.org/specs/edi3-description/develop/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-description/develop/swagger){:target="_blank"} |  [Resource Description Issues](https://github.com/edi3/edi3-description/issues){:target="_blank"}  |
 
 ## Known Implementations
 

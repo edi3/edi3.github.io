@@ -13,7 +13,7 @@ The edi3 UN Locode Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [UN Locode spec](//edi3.org/specs/edi3-unlocode/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-unlocode/master/redoc-static.html){:target="_blank"} |  [UN Locode Issues](https://github.com/edi3/edi3-unlocode/issues){:target="_blank"}  |
+| [UN Locode spec](//edi3.org/specs/edi3-unlocode/develop/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-unlocode/develop/swagger){:target="_blank"} |  [UN Locode Issues](https://github.com/edi3/edi3-unlocode/issues){:target="_blank"}  |
 
 ## Known Implementations
 

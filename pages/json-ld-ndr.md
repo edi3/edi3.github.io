@@ -13,7 +13,7 @@ The edi3 JSON-LD NDR Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [JSON-LD NDR spec](//edi3.org/specs/edi3-json-ld-ndr/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-json-ld-ndr/master/redoc-static.html){:target="_blank"} |  [JSON-LD NDR Issues](https://github.com/edi3/edi3-json-ld-ndr/issues){:target="_blank"}  |
+| [JSON-LD NDR spec](//edi3.org/specs/edi3-json-ld-ndr/develop/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | N/A |  [JSON-LD NDR Issues](https://github.com/edi3/edi3-json-ld-ndr/issues){:target="_blank"}  |
 
 ## Known Implementations
 

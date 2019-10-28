@@ -13,7 +13,7 @@ The edi3 Resource Discovery Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Resource Discovery spec](//edi3.org/specs/edi3-discovery/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-discovery/master/redoc-static.html){:target="_blank"} |  [Resource Discovery Issues](https://github.com/edi3/edi3-discovery/issues){:target="_blank"}  |
+| [Resource Discovery spec](//edi3.org/specs/edi3-discovery/develop/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-discovery/develop/swagger){:target="_blank"} |  [Resource Discovery Issues](https://github.com/edi3/edi3-discovery/issues){:target="_blank"}  |
 
 ## Known Implementations
 

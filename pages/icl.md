@@ -16,11 +16,11 @@ The edi3 ICL supports the [UN/CEFACT Cross Border Interledger](https://uncefact.
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Inter Customs Ledger spec](//edi3.org/specs/edi3-icl/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [SwaggerUI](//edi3.org/specs/edi3-icl/master/swagger){:target="_blank"} |  [Inter Customs Ledger Issues](https://github.com/edi3/edi3-icl/issues){:target="_blank"}  |
+| [Inter Customs Ledger spec](//edi3.org/specs/edi3-icl/develop/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-icl/develop/swagger){:target="_blank"} |  [Inter Customs Ledger Issues](https://github.com/edi3/edi3-icl/issues){:target="_blank"}  |
 
 ## Known Implementations
 
-Known implementations (open source or otherwise) are listed here.  Please modify [this page](https://github.com/edi3/edi3.github.io/edit/master/pages/icl.md) and make a pull request to add your own.
+Known implementations (open source or otherwise) are listed here.  Please modify this page and make a pull request to add your own.
 
 |Provider|Implementation URL|Comments|
 |--------|------------------|--------|
