@@ -6,14 +6,14 @@ data: domain-model
 ---
 # Semantic Specs
 
-The scope of semantic specifications on this site is the the full internaitonal supply chain as outlined in the diagram.
+The scope of semantic specifications on this site is the full international supply chain as outlined in the diagram.
 
 ![Supply Chain Model](../images/supply-chain.png)
 
-* Financial processes such as insiurances and letters of credit
-* Trade processes such as ordering, invoicing, and shipping notices.
-* Transport processes including consignments, house & master bills, and logistics movements.
-* Regulatory processes including declarations, certificates, and permits.
+* Financial processes such as insurances and letters of credit
+* Trade processes such as ordering, invoicing and shipping notices.
+* Transport processes including consignments, house & master bills and logistics movements.
+* Regulatory processes including declarations, certificates and permits.
 
 # Reference Model
 
@@ -56,13 +56,13 @@ The high level international supply chain reference model is detailed within eac
 
 ## JSON-LD Dictionaries
 
-All domain specific data dictionaries are constructed from the UN/CEFACT reference data mdoels and code lists. These are published as browsable models and as JSON-LD linked data models in accordance with the [dictionary](https://edi3.org/dictionary/) publishing rules. The "Javascript Object Notation" (JSON) is a web freindly and human readable syntax for the representation of structured data.  JSOMN-LD (the "LD" stands for "Linked Data") provides a way to attach consistent semantic meaning to data elements in any data exchange. Essentially, a consumer can understand a message because its elements refernece a definition in an online dictionary. It also provides a way to describe relationships between data elements so that consumers can follow a trail of linked data to gather aggregated data that meets their needs. 
+All domain specific data dictionaries are constructed from the UN/CEFACT reference data mdoels and code lists. These are published as browsable models and as JSON-LD linked data models in accordance with the [dictionary](https://edi3.org/dictionary/) publishing rules. The "Javascript Object Notation" (JSON) is a web freindly and human readable syntax for the representation of structured data.  JSON-LD (the "LD" stands for "Linked Data") provides a way to attach consistent semantic meaning to data elements in any data exchange. Essentially, a consumer can understand a message because its elements refernece a definition in an online dictionary. It also provides a way to describe relationships between data elements so that consumers can follow a trail of linked data to gather aggregated data that meets their needs. 
 
-Implementers are encouraged to tag data in their web pages or exchanged documents with the relevant JSON-LD context term in order to support semantic interoperability at dictionary level. Imnplementations that have mapped every element in their pages or messages that has an equivalent definition in a CEFACT JSON-LD context can claim **dictionary compliance**.
+Implementers are encouraged to tag data in their web pages or exchanged documents with the relevant JSON-LD context term in order to support semantic interoperability at dictionary level. Implementations that have mapped every element in their pages or messages that has an equivalent definition in a CEFACT JSON-LD context can claim **dictionary compliance**.
 
 ## Reference REST APIs
 
-An "Application Programming Interface" (API) is the machine readable equivalent of a web page and, in the web development world, is the logical equivalent of an EDI document (although APIs are usually more granular). "Representational State Transfer" (REST) is an API design style that breaks down complex domains into discrete business "resources" and then allows consumers to interact with them using simple web protocols. Each entity in the international supply chain reference data model can be modelled as a REST API "resource" that has a standard data model and state lifecycle. Although conceptually similar to an EDI message, the web API model has a fundamental difference. In stead of the same information being repeatedly re-ackaged and exchanged between two parties as lage document, consumers of APIs gather required information by going to the sources of truth. Web APIs are a "publish once, consume many times" model whilst EDI documents are more like a "create once and copy & paste many times" model.
+An "Application Programming Interface" (API) is the machine readable equivalent of a web page and, in the web development world, is the logical equivalent of an EDI document (although APIs are usually more granular). "Representational State Transfer" (REST) is an API design style that breaks down complex domains into discrete business "resources" and then allows consumers to interact with them using simple web protocols. Each entity in the international supply chain reference data model can be modelled as a REST API "resource" that has a standard data model and state lifecycle. Although conceptually similar to an EDI message, the web API model has a fundamental difference. Instead of the same information being repeatedly re-packaged and exchanged between two parties as lage document, consumers of APIs gather required information by going to the sources of truth. Web APIs are a "publish once, consume many times" model whilst EDI documents are more like a "create once and copy & paste many times" model.
 
 Implementers are encouraged to re-use the CEFACT reference API designs in their own web APIs. In most cases, implementers will extend the refererence APIs in order to provide additonal business value to their customers. However, so long as the extensions are non-breaking and their interfaces successfully pass the automated test cases provided with each reference API, implementers may claim **interface compliance**.
 
