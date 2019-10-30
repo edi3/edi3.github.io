@@ -31,5 +31,6 @@ permalink: /glossary/
 | W3C |  |  |
 | W3C/IETF |  |  |
 | W3C WebSub | Protocol for publishers to update multiple subscribers about state changes of a web resource | www.w3.org/TR/websub/ |
-| XMI |  | Interchange standard for UML tools |https://semver.org/|
+| XMI | XML Model Interchange, a standard for transfering data between UML modeling tools | https://www.omg.org/spec/XMI |
+| semver | "Semantic Versioning", a naming protocol that is widely used in software release management | https://semver.org |
 | 2/COSS |  |  |
