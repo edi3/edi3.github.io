@@ -44,7 +44,7 @@ IPR Policy for edi3.org is
 
 * All edi3.org specifications are available under [GPL3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) open source license.
 * edi3.org does not own any IP. Ownership of all contributions remains with the contributor. 
-* From time ot time, edi3.org specifications may be offered as nitial contributions to formal projects run by UN/CEFACT. In such cases, contributors are expected to grant ownership of their IP to the UN.
+* From time to time, edi3.org specifications may be offered as initial contributions to formal projects run by UN/CEFACT. In such cases, contributors are expected to grant ownership of their IP to the UN.
 
 
 ## Current Team Membership
