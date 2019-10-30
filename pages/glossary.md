@@ -8,10 +8,11 @@ permalink: /glossary/
 | Phrase       | Definition           | Notes  |
 |:------------:|:-------------:|:-----|
 | API      | Application Programming Interface | Machine readable equivalent of a web page and, in the web development world, the logical equivalent of an EDI document |
-| Conformant tools |  |
-| Core Component Library |  |
-| CUSCAR |  |
-| DSL | Domain specific language   |
+Business entitites | Basis of documents which are restricted by context to a specific domain | http://tfig.unece.org/contents/uncefact-ccl.htm
+| Conformant tools | Software tools that perform according to their specified standards |
+| Core Component Library | Collection of business entities, based on core components which can be reused in many scenarios.  | https://www.unece.org/cefact/codesfortrade/unccl/ccl_index.html
+| CUSCAR | Customs cargo report message | https://www.stylusstudio.com/edifact/D95B/CUSCAR.htm
+| DSL | Domain specific language - computer language specialized to a particular application domain. This is in contrast to a general-purpose language (GPL), which is broadly applicable across domains | https://en.wikipedia.org/wiki/Domain-specific_language
 | JSON     | JavaScript Object Notation | Most ubiquitous syntax for the representation of web resources – overtaking XML some years ago |
 | JSON-LD  | JSON-Linked Data | provides a way to attach consistent semantic meaning to data elements in any data exchange. |
 | NDR | Naming & Design Rules |  
