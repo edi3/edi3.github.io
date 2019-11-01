@@ -9,7 +9,7 @@ permalink: /transport/
 The edi3 Transport Domain Specifications are based on ...
 
 * [Transport Domain GitHub repository](https://github.com/edi3/edi3-transport){:target="_blank"}
-* [Transport Domain Slack Channel](https://edi3.slack.com/messages/spec-transport/){:target="_blank"} ([you must signup to edi3 slack first](https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg){:target="_blank"})
+* [Transport Domain Slack Channel](https://edi3.slack.com/messages/spec-transport/){:target="_blank"} ([you must signup to edi3 slack first](https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ){:target="_blank"})
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
