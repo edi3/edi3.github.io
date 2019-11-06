@@ -1,0 +1,720 @@
+components:
+  schemas:
+    Consignment:
+      properties:
+        AssociatedInvoice:
+          items: {description: A monetary value of an invoice associated with this
+              consignment., type: string}
+          type: array
+        AssociatedInvoiceDiscount:
+          items: {description: A monetary value of the discount on an invoice associated
+              with this consignment., type: string}
+          type: array
+        AssociatedInvoiceDiscountPercent:
+          items: {description: A percent of an invoice amount that is a discount on
+              an invoice associated with this consignment., type: string}
+          type: array
+        AvailabilityDue:
+          items: {description: 'A date, time, date time, or other date time value
+              when this consignment is due to be available.', type: string}
+          type: array
+        COD: {description: The monetary value of the COD (Cash On Delivery) amount
+            to be collected by the carrier upon delivery of this consignment., type: string}
+        CarrierAcceptance:
+          items: {description: 'A date, time, date time, or other date time value
+              when this consignment will be, or has been, accepted by the carrier.',
+            type: string}
+          type: array
+        CarrierAssigned: {description: The unique identifier assigned by the carrier
+            to this consignment such as a booking reference number when cargo space
+            is reserved prior to loading., type: string}
+        ChargeableTransportationStage: {description: The quantity of separately chargeable
+            transportation stages to be covered by this consignment., type: string}
+        ChargeableWeight:
+          items: {description: A measure of a chargeable weight of this consignment.,
+            type: string}
+          type: array
+        ConsigneeAssigned: {description: The unique identifier assigned by the consignee
+            to this consignment., type: string}
+        ConsignmentItem: {description: The number of consignment items separately
+            defined for transport or customs purposes within this consignment., type: string}
+        ConsignorAssigned: {description: The unique identifier assigned by the consignor
+            to this consignment., type: string}
+        Containerization: {description: The indication of whether or not this consignment
+            is to be transported in a container or containers., type: string}
+        DeclaredValueForCarriage: {description: 'The monetary value of this consignment
+            as declared by the shipper or his agent for the purpose of varying the
+            carrier''s level of liability from that provided in the contract of carriage,
+            in case of loss or damage to goods or delayed delivery.', type: string}
+        DeclaredValueForCustoms: {description: The monetary value declared for customs
+            purposes for this consignment., type: string}
+        ExportExit:
+          items: {description: 'A date, time, date time, or other date time value
+              when this consignment will exit, or has exited from the last port, airport,
+              or border post of the country of export.', type: string}
+          type: array
+        FOB: {description: 'The monetary value that has to be, or has been, paid for
+            this consignment as calculated under FOB (Free on Board) delivery terms.',
+          type: string}
+        FreightForwarderAssigned: {description: The unique identifier assigned by
+            the freight forwarder to this consignment., type: string}
+        GoodsReleaseRestriction:
+          items: {description: 'A goods release restriction, expressed as text, for
+              this consignment.', type: string}
+          type: array
+        GrossVolume:
+          items: {description: 'A measure of the gross volume, normally calculated
+              by multiplying the maximum length, width and height of this consignment.',
+            type: string}
+          type: array
+        GrossWeight:
+          items: {description: A measure of the gross weight (mass) of this consignment
+              which includes the weight of packaging but which excludes the weight
+              of any transport equipment., type: string}
+          type: array
+        Identification:
+          items: {description: A unique identifier for this consignment or part of
+              this consignment., type: string}
+          type: array
+        IncludedConsignment:
+          items: {$ref: '#/components/schemas/Consignment', description: missing description}
+          type: array
+        IncludedConsignmentItems:
+          properties:
+            ChargeableWeight:
+              items: {description: A measure of the consignment item weight on which
+                  charges are to be based., type: string}
+              type: array
+            DamageRemarks:
+              items: {description: 'Damage remarks, expressed as text, for this consignment
+                  item.', type: string}
+              type: array
+            DeclaredValueForCarriage: {description: 'The monetary value of this consignment
+                item as declared by the shipper or his agent for the purpose of varying
+                the carrier''s level of liability from that provided in the contract
+                of carriage, in case of loss or damage to goods or delayed delivery.',
+              type: string}
+            DeclaredValueForCustoms: {description: The monetary value of this consignment
+                item as declared for customs purposes., type: string}
+            DeclaredValueForStatistics: {description: The monetary value of this consignment
+                item as declared for statistical purposes., type: string}
+            DeliveryInstructions:
+              items: {description: 'Delivery instructions, expressed as text, for
+                  this consignment item.', type: string}
+              type: array
+            FOB: {description: The monetary value for this consignment item as calculated
+                under FOB (Free On Board) delivery terms., type: string}
+            GrossVolume:
+              items: {description: 'A measure of the gross volume, normally calculated
+                  by multiplying the maximum length, width and height of this consignment
+                  item.', type: string}
+              type: array
+            GrossWeight:
+              items: {description: A measure of the gross weight (mass) of this consignment
+                  item which includes packaging but excludes any transport equipment.,
+                type: string}
+              type: array
+            Identification:
+              items: {description: A unique identifier for this consignment item.,
+                type: string}
+              type: array
+            Information:
+              items: {description: 'Information, expressed as text, for this consignment
+                  item.', type: string}
+              type: array
+            InsuranceValue: {description: The monetary value of this consignment item
+                as covered by an insurance policy., type: string}
+            Invoice:
+              items: {description: A monetary value for an invoice for this consignment
+                  item., type: string}
+              type: array
+            LoadingLength: {description: The measure of the loading length of this
+                consignment item., type: string}
+            NetWeight:
+              items: {description: A measure of the net weight of this consignment
+                  item which excludes all packaging., type: string}
+              type: array
+            Package:
+              items: {description: A package quantity for this consignment item.,
+                type: string}
+              type: array
+            PackageType:
+              items: {description: 'A package type, expressed as text, for this consignment
+                  item.', type: string}
+              type: array
+            Product:
+              items: {description: 'A date, time, date time, or other date time value
+                  related to the product contained in this consignment item.', type: string}
+              type: array
+            ProductDateType:
+              items: {description: A code specifying a product date type for this
+                  consignment item., type: string}
+              type: array
+            Sequence: {description: The sequence number for this consignment item.,
+              type: string}
+            SpecialInstructions:
+              items: {description: 'Special instructions, expressed as text, for this
+                  consignment item.', type: string}
+              type: array
+            Tariff:
+              items: {description: A tariff quantity in this consignment item., type: string}
+              type: array
+            TariffQuantity:
+              items: {description: 'A monetary value of a tariff based on a tariff
+                  quantity, such as a first, second or third tariff quantity, for
+                  this consignment item.', type: string}
+              type: array
+            TotalCharge: {description: The monetary value of all freight and other
+                service charges for this consignment item., type: string}
+            TotalExportExitToImportEntryCharge: {description: 'The monetary value
+                of the total charge or charges of freight, insurance and other services
+                for this consignment item calculated from the export exit location
+                to the import entry location.', type: string}
+            TradeLineItem: {description: The number of trade line items in this consignment
+                item., type: string}
+            Type:
+              items: {description: A code specifying a type of consignment item.,
+                type: string}
+              type: array
+            TypeExtension:
+              items: {description: A code used as an extension to the type code for
+                  further specifying the type of consignment item., type: string}
+              type: array
+        Information:
+          items: {description: 'Information, expressed as text, for this consignment.',
+            type: string}
+          type: array
+        InsurancePremium:
+          items: {description: A monetary value of an insurance premium for this consignment.,
+            type: string}
+          type: array
+        InsuranceValue:
+          items: {description: A monetary value of this consignment as covered by
+              an insurance policy., type: string}
+          type: array
+        LoadingLength:
+          items: {description: A measure of the loading length which is the length
+              along a means of transport over which the complete width and height
+              is needed for loading all the goods items in this consignment., type: string}
+          type: array
+        LoadingList: {description: 'The number of loading lists, manifests or similar
+            documents for this consignment.', type: string}
+        LoadingSequence:
+          items: {description: A sequence number for the loading of this consignment.,
+            type: string}
+          type: array
+        NetVolume:
+          items: {description: A measure of the net volume of this consignment., type: string}
+          type: array
+        NetWeight:
+          items: {description: A measure of the net weight (mass) of this consignment
+              which excludes the weight of packaging of this consignment and that
+              of any transport equipment., type: string}
+          type: array
+        NilCarriageValue: {description: The indication of whether or not this consignment
+            has a nil value for carriage., type: string}
+        NilCustomsValue: {description: The indication of whether or not this consignment
+            has a nil value for customs., type: string}
+        NilInsuranceValue: {description: The indication of whether or not this consignment
+            has a nil value for insurance., type: string}
+        Package: {description: The number of packages within this consignment., type: string}
+        PackageType:
+          items: {description: 'A type of package, expressed as text, for this consignment.',
+            type: string}
+          type: array
+        PaymentArrangement: {description: The code specifying the payment arrangements
+            for this consignment., type: string}
+        PlannedTransportMovement:
+          items: {$ref: '#/components/schemas/TransportMovement', description: missing
+              description}
+          type: array
+        RiskFactor:
+          items: {description: A code specifying a risk factor for this consignment.,
+            type: string}
+          type: array
+        Sequence:
+          items: {description: A sequence number for this consignment., type: string}
+          type: array
+        ShipStores: {description: 'The indication of whether or not this consignment
+            is for ship stores, such as for consumption on the means of transport.',
+          type: string}
+        SummaryDescription:
+          items: {description: A textual summary description of this consignment.,
+            type: string}
+          type: array
+        TotalAllowanceCharge:
+          items: {description: A total monetary value of all allowances and charges
+              for this consignment., type: string}
+          type: array
+        TotalCharge:
+          items: {description: A total monetary value of all freight and other service
+              charges for this consignment., type: string}
+          type: array
+        TotalCollectCharge:
+          items: {description: A total monetary value of all freight and other service
+              charges which are to be collected from the consignee at or after delivery
+              for this consignment., type: string}
+          type: array
+        TotalDisbursement:
+          items: {description: 'A monetary value of total disbursement for this consignment,
+              such as the amount to be collected by the carrier according to the order
+              given by the consignor.', type: string}
+          type: array
+        TotalExportExitToImportEntryCharge:
+          items: {description: 'A monetary value of the total charge or charges of
+              freight, insurance and other services for this consignment calculated
+              from the export exit location to the import entry location.', type: string}
+          type: array
+        TotalPrepaidCharge:
+          items: {description: A total monetary value of all freight and other service
+              charges which have been paid in advance for this consignment., type: string}
+          type: array
+        TotalTareWeight:
+          items: {description: A measure of the total tare weight of this consignment.,
+            type: string}
+          type: array
+        TradedParcel:
+          items: {description: An identification of a traded parcel for this consignment.,
+            type: string}
+          type: array
+        TransportEquipment:
+          items: {description: 'A number of pieces of transport equipment, such as
+              containers or similar unit load devices, in this consignment.', type: string}
+          type: array
+        TransportEquipmentSplitGoods: {description: The indication of whether or not
+            the goods in this consignment are split across more than one piece of
+            transport equipment., type: string}
+        TransportSplit: {description: The indication of whether or not this consignment
+            is split across different transport means or transport equipment., type: string}
+        TransportSplitDescription:
+          items: {description: A textual description of the transport split of this
+              consignment across different transport means or transport equipment.,
+            type: string}
+          type: array
+        TransshipmentPermission: {description: The indication of whether or not transshipment
+            is permitted for this consignment., type: string}
+        UnloadingSequence:
+          items: {description: A sequence number for the unloading of this consignment.,
+            type: string}
+          type: array
+        WarehouseArrival: {description: 'The date, time, date time, or other date
+            time value of the arrival of this consignment at a warehouse.', type: string}
+    ConsignmentItem:
+      properties:
+        ChargeableWeight:
+          items: {description: A measure of the consignment item weight on which charges
+              are to be based., type: string}
+          type: array
+        DamageRemarks:
+          items: {description: 'Damage remarks, expressed as text, for this consignment
+              item.', type: string}
+          type: array
+        DeclaredValueForCarriage: {description: 'The monetary value of this consignment
+            item as declared by the shipper or his agent for the purpose of varying
+            the carrier''s level of liability from that provided in the contract of
+            carriage, in case of loss or damage to goods or delayed delivery.', type: string}
+        DeclaredValueForCustoms: {description: The monetary value of this consignment
+            item as declared for customs purposes., type: string}
+        DeclaredValueForStatistics: {description: The monetary value of this consignment
+            item as declared for statistical purposes., type: string}
+        DeliveryInstructions:
+          items: {description: 'Delivery instructions, expressed as text, for this
+              consignment item.', type: string}
+          type: array
+        FOB: {description: The monetary value for this consignment item as calculated
+            under FOB (Free On Board) delivery terms., type: string}
+        GrossVolume:
+          items: {description: 'A measure of the gross volume, normally calculated
+              by multiplying the maximum length, width and height of this consignment
+              item.', type: string}
+          type: array
+        GrossWeight:
+          items: {description: A measure of the gross weight (mass) of this consignment
+              item which includes packaging but excludes any transport equipment.,
+            type: string}
+          type: array
+        Identification:
+          items: {description: A unique identifier for this consignment item., type: string}
+          type: array
+        Information:
+          items: {description: 'Information, expressed as text, for this consignment
+              item.', type: string}
+          type: array
+        InsuranceValue: {description: The monetary value of this consignment item
+            as covered by an insurance policy., type: string}
+        Invoice:
+          items: {description: A monetary value for an invoice for this consignment
+              item., type: string}
+          type: array
+        LoadingLength: {description: The measure of the loading length of this consignment
+            item., type: string}
+        NetWeight:
+          items: {description: A measure of the net weight of this consignment item
+              which excludes all packaging., type: string}
+          type: array
+        Package:
+          items: {description: A package quantity for this consignment item., type: string}
+          type: array
+        PackageType:
+          items: {description: 'A package type, expressed as text, for this consignment
+              item.', type: string}
+          type: array
+        Product:
+          items: {description: 'A date, time, date time, or other date time value
+              related to the product contained in this consignment item.', type: string}
+          type: array
+        ProductDateType:
+          items: {description: A code specifying a product date type for this consignment
+              item., type: string}
+          type: array
+        Sequence: {description: The sequence number for this consignment item., type: string}
+        SpecialInstructions:
+          items: {description: 'Special instructions, expressed as text, for this
+              consignment item.', type: string}
+          type: array
+        Tariff:
+          items: {description: A tariff quantity in this consignment item., type: string}
+          type: array
+        TariffQuantity:
+          items: {description: 'A monetary value of a tariff based on a tariff quantity,
+              such as a first, second or third tariff quantity, for this consignment
+              item.', type: string}
+          type: array
+        TotalCharge: {description: The monetary value of all freight and other service
+            charges for this consignment item., type: string}
+        TotalExportExitToImportEntryCharge: {description: 'The monetary value of the
+            total charge or charges of freight, insurance and other services for this
+            consignment item calculated from the export exit location to the import
+            entry location.', type: string}
+        TradeLineItem: {description: The number of trade line items in this consignment
+            item., type: string}
+        Type:
+          items: {description: A code specifying a type of consignment item., type: string}
+          type: array
+        TypeExtension:
+          items: {description: A code used as an extension to the type code for further
+              specifying the type of consignment item., type: string}
+          type: array
+    Flight:
+      allOf:
+      - {$ref: '#/components/schemas/TransportMovement'}
+      properties:
+        Closing:
+          items: {description: missing description, type: string}
+          type: array
+    TransportMeans:
+      properties:
+        CargoGrossWeight: {description: 'The measure of the total gross weight (mass)
+            of all cargo loaded onto this means of transport, including packaging
+            but excluding any associated transport equipment.', type: string}
+        Commissioning:
+          items: {description: 'A date, time, date time or other date time value of
+              the commissioning of this transport means, such as the date of first
+              entry in an official register.', type: string}
+          type: array
+        Conference: {description: The code specifying the conference for this means
+            of transport., type: string}
+        DeadWeight: {description: 'The weight of cargo, fuel, passengers and crew
+            carried by a ship when loaded to its maximum load line.', type: string}
+        Draught:
+          items: {description: 'A measure of the vertical distance between the top
+              and the bottom for this transport means, such as the distance between
+              waterline and the bottom of the hull (keel) of a vessel.', type: string}
+          type: array
+        DraughtLevel:
+          items: {description: A measure of the draught level of this transport means.,
+            type: string}
+          type: array
+        DriverAccompanied:
+          items: {description: An indication of whether or not a means of transport
+              is accompanied by a driver., type: string}
+          type: array
+        GrossWeight:
+          items: {description: 'A measure of a gross weight (mass) of this means of
+              transport including cargo, such as the gross tonnage of a vessel in
+              accordance with the provisions of the International Convention on Tonnage
+              Measurement of Ships, 1969.', type: string}
+          type: array
+        Helipad: {description: The indication of whether or not there is a helipad
+            on this means of transport., type: string}
+        HullMaterial:
+          items: {description: A code indicating the material of the hull for this
+              transport means., type: string}
+          type: array
+        ISPSSecurityLevel:
+          items: {description: A code specifying the International Ship and Port facility
+              Security (ISPS) level assigned to this means of transport., type: string}
+          type: array
+        Identification:
+          items: {description: 'A unique identifier for this transport means, such
+              as the International Maritime Organization number for a vessel.', type: string}
+          type: array
+        Length: {description: The measure of the length of this transport means.,
+          type: string}
+        LoadedCargo:
+          items: {description: 'A measure of the cargo loaded onto this means of transport,
+              such as the quantity of oil or other quantity of breakbulk cargo.',
+            type: string}
+          type: array
+        Name:
+          items: {description: 'A name, expressed as text, of this means of transport,
+              such as the vessel name.', type: string}
+          type: array
+        NetWeight:
+          items: {description: 'A measure of the net weight (mass) of this means of
+              transport, such as the net tonnage of a vessel determined in accordance
+              with the provisions of the International Convention on Tonnage Measurement
+              of Ships, 1969.', type: string}
+          type: array
+        OperationalStatus:
+          items: {description: A code indicating an operational status for this transport
+              means., type: string}
+          type: array
+        RequiredLaneLength: {description: The measure of the length required in a
+            lane for this transport means., type: string}
+        Role:
+          items: {description: A code specifying the role of this transport means.,
+            type: string}
+          type: array
+        Sequence:
+          items: {description: A sequence number differentiating this transport means
+              from others., type: string}
+          type: array
+        Speed:
+          items: {description: A speed measured for this means of transport., type: string}
+          type: array
+        Type:
+          items: {description: A code specifying a type of transport means., type: string}
+          type: array
+        TypeText:
+          items: {description: A type of transport means expressed as text., type: string}
+          type: array
+        WasteReportingExemption: {description: The indication of whether or not there
+            is a waste reporting exemption for this means of transport., type: string}
+    TransportMovement:
+      properties:
+        BorderCrossing:
+          items: {description: 'A date, time, date time or other date time value when
+              this transport movement crosses a border.', type: string}
+          type: array
+        CallPurpose:
+          items: {description: A code specifying a call purpose for this transport
+              movement., type: string}
+          type: array
+        CargoDescription:
+          items: {description: A textual description of the cargo for this transport
+              movement., type: string}
+          type: array
+        Consignment:
+          items: {description: A number of consignments in this transport movement.,
+            type: string}
+          type: array
+        Crew: {description: The number of crew members in this transport movement.,
+          type: string}
+        Cycle:
+          items: {description: 'A cycle, expressed as text, of this transport movement,
+              such as twice a day or once an hour.', type: string}
+          type: array
+        DangerousGoods: {description: The indication of whether or not dangerous goods
+            are carried during this transport movement., type: string}
+        Identification:
+          items: {description: 'A unique identifier for this transport movement, such
+              as a voyage number, flight number, or trip number.', type: string}
+          type: array
+        Information:
+          items: {description: 'Information, expressed as text, for this transport
+              movement.', type: string}
+          type: array
+        ManifestOnboard: {description: The indication of whether or not the manifest
+            for this transport movement is carried onboard., type: string}
+        Mode:
+          items: {description: 'A code specifying a mode, such as by air, sea, rail,
+              road or inland waterway, for this transport movement.', type: string}
+          type: array
+        ModeText:
+          items: {description: 'A mode, expressed as text, of this transport movement,
+              such as by air, sea, rail, road or inland waterway.', type: string}
+          type: array
+        Notification:
+          items: {description: 'A unique identifier of a notification for this transport
+              movement, such as a notification of competent authorities about a planned
+              movement of waste.', type: string}
+          type: array
+        OperationalCategory: {description: 'The code specifying the operational category
+            for this transport movement, such as in ballast, with bulk cargo or general
+            cargo.', type: string}
+        Package:
+          items: {description: A number of packages onboard for this transport movement.,
+            type: string}
+          type: array
+        Passenger: {description: The number of passengers in this transport movement.,
+          type: string}
+        PilotageExemption:
+          items: {description: An identifier of a pilotage exemption for this transport
+              movement., type: string}
+          type: array
+        Reason:
+          items: {description: 'A reason, expressed as text, for this transport movement.',
+            type: string}
+          type: array
+        RelatedTransportMovement:
+          items: {$ref: '#/components/schemas/TransportMovement', description: missing
+              description}
+          type: array
+        Sequence:
+          items: {description: A sequence number for this transport movement., type: string}
+          type: array
+        Service:
+          items: {description: 'A code specifying a service of this transport movement,
+              such as regular, milk run or spot service.', type: string}
+          type: array
+        ServiceText:
+          items: {description: 'A service, expressed as text, of this transport movement.',
+            type: string}
+          type: array
+        Stage: {description: The code specifying the stage of this transport movement.,
+          type: string}
+        Start:
+          items: {description: 'A date, time, date time, or other date time value
+              for the start of this transport movement.', type: string}
+          type: array
+        Status:
+          items: {description: 'A code specifying a status for this transport movement,
+              such as planned or final.', type: string}
+          type: array
+        Stay:
+          items: {description: 'A unique identifier of a stay in a port, airport or
+              other place of service for this transport movement.', type: string}
+          type: array
+        Total:
+          items: {description: A total number of transport movements., type: string}
+          type: array
+        TradedParcel: {description: The number of traded parcels of cargo being transported
+            in this transport movement., type: string}
+        TransitDirection:
+          items: {description: A code specifying a transit direction of this transport
+              movement., type: string}
+          type: array
+        TransportEquipment: {description: The number of pieces of transport equipment
+            for this transport movement., type: string}
+        Type:
+          items: {description: A code specifying a type of this transport movement.,
+            type: string}
+          type: array
+        TypeText:
+          items: {description: 'A type, as expressed as text, of the transport movement.',
+            type: string}
+          type: array
+        UsedTransportMeans: {$ref: '#/components/schemas/TransportMeans', description: missing
+            description}
+    Voyage:
+      allOf:
+      - {$ref: '#/components/schemas/TransportMovement'}
+      properties: {}
+info: {description: CC-Transport API - 1.0, title: CC-Transport API, version: '1.0'}
+openapi: 3.0.0
+paths:
+  /Consignments:
+    get:
+      description: Get a list of Consignment
+      parameters:
+      - description: missing description
+        in: query
+        name: status
+        required: false
+        schema: {type: string}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items: {$ref: '#/components/schemas/Consignment'}
+                type: array
+          description: OK
+    post:
+      description: Create a new Consignment.
+      requestBody:
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/Consignment'}
+        description: Consignment
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Consignment'}
+          description: Created
+  /Consignments/{id}:
+    delete:
+      description: Delete an existing Consignment.
+      parameters:
+      - description: id parameter
+        in: path
+        name: id
+        required: true
+        schema: {type: string}
+      responses:
+        '204': {description: No Content}
+    get:
+      description: Get a single Consignment by Id.
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        schema: {type: string}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Consignment'}
+          description: OK
+    put:
+      description: Update an existing Consignment.
+      parameters:
+      - description: id parameter
+        in: path
+        name: id
+        required: true
+        schema: {type: string}
+      requestBody:
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/Consignment'}
+        description: Consignment
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Consignment'}
+          description: OK
+  /Voyages:
+    get:
+      description: Get a list of Voyage
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items: {$ref: '#/components/schemas/Voyage'}
+                type: array
+          description: OK
+  /Voyages/{id}:
+    get:
+      description: Get a single Voyage by Id.
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        schema: {type: string}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Voyage'}
+          description: OK
+servers: []

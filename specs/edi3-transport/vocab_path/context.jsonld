@@ -1,0 +1,15 @@
+{
+  	"@context": {
+	    "Consignment": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment"},
+	    "ConsignmentItem": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/ConsignmentItem"},
+	    "GrossWeight": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/GrossWeight"},
+	    "TransportEquipment": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment"},
+	    "Unit": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Unit"},
+	    "Value": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Value"},
+	    "grossWeight": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/grossWeight"},
+	    "hasConsignmentItem": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/hasConsignmentItem"},
+	    "identification": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Unit"},
+	    "information": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/information"},
+		"utilizedTransportEquipment": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/utilizedTransportEquipment"}
+	}
+}
