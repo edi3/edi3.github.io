@@ -5,7 +5,7 @@
         "HTML": { "@id": "rdf:HTML" },
 
         "@vocab": "https://edi3.org/specs/edi3-transport/develop/vocab/",
-        "@edi3": "https://edi3.org/specs/edi3-transport/develop/vocab/",
+        "edi3": "https://edi3.org/specs/edi3-transport/develop/vocab/",
 
 	    "Consignment": {"@id": "edi3:Consignment"},
 	    "ConsignmentItem": {"@id": "edi3:ConsignmentItem"},
