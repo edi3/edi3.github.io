@@ -1,22 +1,22 @@
 {
-  	"@context": {
-  	    "type": "@type",
-        "id": "@id",
-        "HTML": { "@id": "rdf:HTML" },
+	"@context": {
+		"type": "@type",
+		"id": "@id",
+		"HTML": { "@id": "rdf:HTML" },
 
-        "@vocab": "https://edi3.org/specs/edi3-transport/develop/vocab/",
-        "edi3": "https://edi3.org/specs/edi3-transport/develop/vocab/",
+		"@vocab": "https://edi3.org/specs/edi3-transport/develop/vocab/",
+		"edi3": "https://edi3.org/specs/edi3-transport/develop/vocab/",
 
-	    "Consignment": {"@id": "edi3:Consignment"},
-	    "ConsignmentItem": {"@id": "edi3:ConsignmentItem"},
-	    "GrossWeight": {"@id": "edi3:GrossWeight"},
-	    "TransportEquipment": {"@id": "edi3:TransportEquipment"},
-	    "Unit": {"@id": "edi3:Unit"},
-	    "Value": {"@id": "edi3:Value"},
-	    "grossWeight": {"@id": "edi3:grossWeight"},
-	    "hasConsignmentItem": {"@id": "edi3:hasConsignmentItem"},
-	    "identification": {"@id": "edi3:Unit"},
-	    "information": {"@id": "edi3:information"},
+		"Consignment": {"@id": "edi3:Consignment"},
+		"ConsignmentItem": {"@id": "edi3:ConsignmentItem"},
+		"GrossWeight": {"@id": "edi3:GrossWeight"},
+		"TransportEquipment": {"@id": "edi3:TransportEquipment"},
+		"Unit": {"@id": "edi3:Unit"},
+		"Value": {"@id": "edi3:Value"},
+		"grossWeight": {"@id": "edi3:grossWeight"},
+		"hasConsignmentItem": {"@id": "edi3:hasConsignmentItem"},
+		"identification": {"@id": "edi3:Unit"},
+		"information": {"@id": "edi3:information"},
 		"utilizedTransportEquipment": {"@id": "edi3:utilizedTransportEquipment"}
 	}
 }
