@@ -1,15 +1,22 @@
 {
   	"@context": {
-	    "Consignment": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment"},
-	    "ConsignmentItem": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/ConsignmentItem"},
-	    "GrossWeight": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/GrossWeight"},
-	    "TransportEquipment": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment"},
-	    "Unit": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Unit"},
-	    "Value": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Value"},
-	    "grossWeight": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/grossWeight"},
-	    "hasConsignmentItem": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/hasConsignmentItem"},
-	    "identification": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Unit"},
-	    "information": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/information"},
-		"utilizedTransportEquipment": {"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/utilizedTransportEquipment"}
+  	    "type": "@type",
+        "id": "@id",
+        "HTML": { "@id": "rdf:HTML" },
+
+        "@vocab": "https://edi3.org/specs/edi3-transport/develop/vocab/",
+        "@edi3": "https://edi3.org/specs/edi3-transport/develop/vocab/",
+
+	    "Consignment": {"@id": "edi3:Consignment"},
+	    "ConsignmentItem": {"@id": "edi3:ConsignmentItem"},
+	    "GrossWeight": {"@id": "edi3:GrossWeight"},
+	    "TransportEquipment": {"@id": "edi3:TransportEquipment"},
+	    "Unit": {"@id": "edi3:Unit"},
+	    "Value": {"@id": "edi3:Value"},
+	    "grossWeight": {"@id": "edi3:grossWeight"},
+	    "hasConsignmentItem": {"@id": "edi3:hasConsignmentItem"},
+	    "identification": {"@id": "edi3:Unit"},
+	    "information": {"@id": "edi3:information"},
+		"utilizedTransportEquipment": {"@id": "edi3:utilizedTransportEquipment"}
 	}
 }
