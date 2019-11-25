@@ -1,0 +1,184 @@
+{
+  "@context": {
+    "Accompanied": "schema.org:Boolean",
+    "AirFlow": "schema:Text",
+    "CarrierAssignedBookingIdentification": "schema:Text",
+    "Category": "schema:Text",
+    "Characteristic": "schema:Text",
+    "CharacteristicText": "schema:Text",
+    "ContainedConsignment": "schema:Text",
+    "DamageRemark": "schema:Text",
+    "GrossVolume": "schema:Text",
+    "GrossWeight": "schema:Text",
+    "HaulageArrangement": "schema:Text",
+    "Humidity": "schema:Text",
+    "Identification": "schema:Text",
+    "Information": "schema:Text",
+    "LegalStatus": "schema:Text",
+    "LoadedPackage": "schema:Text",
+    "LoadingLength": "schema:Text",
+    "LoadingRemark": "schema:Text",
+    "LoadingSequence": "schema.org:Number",
+    "NetWeight": "schema:Text",
+    "OperationalStatus": "schema:Text",
+    "PowerSupplyConnector": "schema:Text",
+    "PowerSupplyType": "schema:Text",
+    "PowerSupplyTypeText": "schema:Text",
+    "Release": "schema:Text",
+    "ReleaseRestriction": "schema:Text",
+    "RequiredLaneLength": "schema:Text",
+    "Returnable": "schema.org:Boolean",
+    "Seal": "schema:Text",
+    "Sealed": "schema.org:Boolean",
+    "Sequence": "schema.org:Number",
+    "ShipperReferenceInformation": "schema:Text",
+    "StowagePosition": "schema:Text",
+    "SupplierPartyRole": "schema:Text",
+    "TareWeight": "schema:Text",
+    "TransportMovementStatus": "schema:Text",
+    "Unit": "schema:Text",
+    "UnloadingSequence": "schema.org:Number",
+    "UsedCapacity": "schema:Text",
+    "AdditionalTransportInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Instructions",
+      "@type": "@id"
+    },
+    "AffixedLogisticsSeal": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Seal",
+      "@type": "@id"
+    },
+    "ApplicableLogisticsServiceCharge": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/ServiceCharge",
+      "@type": "@id"
+    },
+    "ApplicableNote": {
+      "@id": "https://edi3.org/contexts/BSP//Note",
+      "@type": "@id"
+    },
+    "AssociatedReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "AttachedAttachedTransportEquipment": {
+      "@id": "https://edi3.org/contexts/BSP/Attached/TransportEquipment",
+      "@type": "@id"
+    },
+    "CarriedAssociatedTransportEquipment": {
+      "@id": "https://edi3.org/contexts/BSP/Associated/TransportEquipment",
+      "@type": "@id"
+    },
+    "CarrierTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "ConsolidationTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "ContainedAssociatedTransportEquipment": {
+      "@id": "https://edi3.org/contexts/BSP/Associated/TransportEquipment",
+      "@type": "@id"
+    },
+    "ContainedSupplyChainConsignment": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Consignment",
+      "@type": "@id"
+    },
+    "DeliveryDeliveryInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Delivery/Instructions",
+      "@type": "@id"
+    },
+    "DeliveryTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "HandlingHandlingInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Handling/Instructions",
+      "@type": "@id"
+    },
+    "IOTDeviceReportingTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "LinearSpatialDimension": {
+      "@id": "https://edi3.org/contexts/BSP/Spatial/Dimension",
+      "@type": "@id"
+    },
+    "LoadedSupplyChainConsignmentItem": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/ConsignmentItem",
+      "@type": "@id"
+    },
+    "LoadedTransportDangerousGoods": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/DangerousGoods",
+      "@type": "@id"
+    },
+    "LoadingTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "LoadingTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "LoadingTransportInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Instructions",
+      "@type": "@id"
+    },
+    "NotifiedTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "OperatingTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "PickUpTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "PlannedTransportRoute": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Route",
+      "@type": "@id"
+    },
+    "PositioningTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "QuarantineQuarantineInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Quarantine/Instructions",
+      "@type": "@id"
+    },
+    "ReportedLogisticsStatus": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Status",
+      "@type": "@id"
+    },
+    "SettingTransportSettingTemperature": {
+      "@id": "https://edi3.org/contexts/BSP/TransportSetting/Temperature",
+      "@type": "@id"
+    },
+    "SpecifiedLogisticsRiskAnalysisResult": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/RiskAnalysisResult",
+      "@type": "@id"
+    },
+    "SpecifiedLogisticsTransportMeans": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/TransportMeans",
+      "@type": "@id"
+    },
+    "StorageTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "TransportServicesBuyerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "UnloadingTransportEvent": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Event",
+      "@type": "@id"
+    },
+    "UnloadingTransportInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Instructions",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

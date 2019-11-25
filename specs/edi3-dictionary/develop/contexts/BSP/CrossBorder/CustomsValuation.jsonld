@@ -1,0 +1,24 @@
+{
+  "@context": {
+    "AddedAdjustment": "schema:amount",
+    "AddedAdjustmentPercent": "schema:Text",
+    "BuyerSellerRelationship": "schema.org:Boolean",
+    "BuyerSellerRelationshipPriceInfluence": "schema.org:Boolean",
+    "ChargeApportionMethod": "schema:Text",
+    "DeductedAdjustment": "schema:amount",
+    "DeductedAdjustmentPercent": "schema:Text",
+    "Method": "schema:Text",
+    "OtherCharge": "schema:amount",
+    "RoyaltyLicenseFee": "schema.org:Boolean",
+    "SalePriceCondition": "schema.org:Boolean",
+    "SaleRestriction": "schema.org:Boolean",
+    "SaleRestrictionText": "schema:Text",
+    "Type": "schema:Text",
+    "WTOAddition": "schema:Text",
+    "ApplicableTradeCurrencyExchange": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/CurrencyExchange",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

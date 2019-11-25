@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "Name": "schema:Text",
+    "IncludedSupplyChainTradeLineItem": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/TradeLineItem",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

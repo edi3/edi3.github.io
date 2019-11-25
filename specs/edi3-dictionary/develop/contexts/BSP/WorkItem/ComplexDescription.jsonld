@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "Abstract": "schema:Text",
+    "Content": "schema:Text",
+    "ContractualLanguage": "schema:Text",
+    "RequestingSpecificationQuery": {
+      "@id": "https://edi3.org/contexts/BSP/Specification/Query",
+      "@type": "@id"
+    },
+    "RespondingSpecificationResponse": {
+      "@id": "https://edi3.org/contexts/BSP/Specification/Response",
+      "@type": "@id"
+    },
+    "SubsetWorkItemComplexDescription": {
+      "@id": "https://edi3.org/contexts/BSP/WorkItem/ComplexDescription",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

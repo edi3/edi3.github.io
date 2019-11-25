@@ -1,0 +1,37 @@
+{
+  "@context": {
+    "Actual": "schema:Text",
+    "CommitmentLevel": "schema:Text",
+    "MinusTolerance": "schema:Text",
+    "Planned": "schema:Text",
+    "PlusTolerance": "schema:Text",
+    "Synchronization": "schema.org:Time",
+    "SynchronizationQuantity": "schema:Text",
+    "Tolerance": "schema:Text",
+    "ApplicableSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "ContractReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "DeliveryNoteReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "DeliverySupplyChainEvent": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Event",
+      "@type": "@id"
+    },
+    "ShipToTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "SpecifiedLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

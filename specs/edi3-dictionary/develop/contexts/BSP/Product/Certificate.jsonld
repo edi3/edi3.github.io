@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "ActualEffective": "schema.org:Time",
+    "ApplicableObject": "schema:Text",
+    "Description": "schema:Text",
+    "Expiry": "schema.org:Time",
+    "Identification": "schema:Text",
+    "Issue": "schema.org:Time",
+    "IssueReason": "schema:Text",
+    "IssuingParty": "schema:Text",
+    "Purpose": "schema:Text",
+    "RequestedEffective": "schema.org:Time",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

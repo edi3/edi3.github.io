@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "MaximumValue": "schema:Text",
+    "MinimumValue": "schema:Text",
+    "Type": "schema:Text",
+    "Value": "schema:Text",
+    "InformationTemperatureSettingInstructions": {
+      "@id": "https://edi3.org/contexts/BSP/TemperatureSetting/Instructions",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

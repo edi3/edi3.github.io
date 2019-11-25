@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "Category": "schema:Text",
+    "Characteristic": "schema:Text",
+    "CharacteristicText": "schema:Text",
+    "Identification": "schema:Text",
+    "Unit": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

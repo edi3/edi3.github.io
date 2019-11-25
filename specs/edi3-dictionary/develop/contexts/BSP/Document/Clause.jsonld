@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "Content": "schema:Text",
+    "Identification": "schema:Text",
+    "AssociatedMeasurement": {
+      "@id": "https://edi3.org/contexts/BSP//Measurement",
+      "@type": "@id"
+    },
+    "AssociatedSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

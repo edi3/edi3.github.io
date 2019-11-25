@@ -9,11 +9,11 @@ permalink: /finance/
 The edi3 Finance Domain Specifications are based on ...
 
 * [Finance Domain GitHub repository](https://github.com/edi3/edi3-finance){:target="_blank"}
-* [Finance Domain Slack Channel](https://edi3.slack.com/messages/spec-finance/){:target="_blank"} ([you must signup to edi3 slack first](https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg){:target="_blank"})
+* [Finance Domain Slack Channel](https://edi3.slack.com/messages/spec-finance/){:target="_blank"} ([you must signup to edi3 slack first](https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ){:target="_blank"})
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Finance Domain spec](//edi3.org/specs/edi3-finance/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-finance/master/redoc-static.html){:target="_blank"} |  [Finance Domain Issues](https://github.com/edi3/edi3-finance/issues){:target="_blank"}  |
+| [Finance Domain spec](//edi3.org/specs/edi3-finance/develop/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-finance/develop/swagger){:target="_blank"} |  [Finance Domain Issues](https://github.com/edi3/edi3-finance/issues){:target="_blank"}  |
 
 ## Known Implementations
 

@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "Currency": "schema:Text",
+    "CustomsDuty": "schema.org:Boolean",
+    "Description": "schema:Text",
+    "ExemptionReason": "schema:Text",
+    "ExemptionReasonText": "schema:Text",
+    "Jurisdiction": "schema:Text",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

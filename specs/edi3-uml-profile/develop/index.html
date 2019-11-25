@@ -42,6 +42,7 @@
     <li class="menu-title"><a href="/">Overview</a></li>
     <li><a  href="/governance/">Governance</a></li>
     <li><a  href="/business-case/">Business Case</a></li>
+    <li><a  href="/glossary/">Glossary</a></li>
     <li class="menu-title"><a href="/semantic-specs/">Semantic Specs</a></li>
     <li><a  href="/trade/">Trade Domain</a></li>
     <li><a  href="/transport/">Transport Domain</a></li>
@@ -65,7 +66,7 @@
     <li><a  href="/model-interchange/">Model Interchange</a></li>
     <li class="menu-title"><a href="/community/">Community</a></li>
     <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter (subscribe)</a></li>
-    <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg" target="_blank">Chat (join team)</a></li>
+    <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ" target="_blank">Chat (join team)</a></li>
     <li><a  href="/github/">GitHub</a></li>
 </ul>
 
@@ -126,6 +127,7 @@
     <li class="menu-title"><a href="/">Overview</a></li>
     <li><a  href="/governance/">Governance</a></li>
     <li><a  href="/business-case/">Business Case</a></li>
+    <li><a  href="/glossary/">Glossary</a></li>
     <li class="menu-title"><a href="/semantic-specs/">Semantic Specs</a></li>
     <li><a  href="/trade/">Trade Domain</a></li>
     <li><a  href="/transport/">Transport Domain</a></li>
@@ -149,12 +151,16 @@
     <li><a  href="/model-interchange/">Model Interchange</a></li>
     <li class="menu-title"><a href="/community/">Community</a></li>
     <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter (subscribe)</a></li>
-    <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg" target="_blank">Chat (join team)</a></li>
+    <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ" target="_blank">Chat (join team)</a></li>
     <li><a  href="/github/">GitHub</a></li>
 </ul>
 
         </div>
         <div class="page-content docs-content">
+            
+            <div class="back-link">
+                <a href="/uml-profile/">&lt; Back</a>
+            </div>
             
             <div class="spec-header">
                 
@@ -282,7 +288,7 @@
   <li>Open API 3.0 interface specifications and JSON-LD ontologies can be generated from the UML models.</li>
 </ul>
 
-<p>Like all edi3 specifications, the editors have aimed for simplicity and ease of use buy the target audience (business modellers in this case).  Therefore we</p>
+<p>Like all edi3 specifications, the editors have aimed for simplicity and ease of use by the target audience (business modellers in this case).  Therefore we</p>
 
 <ul>
   <li>focus on only two UML diagram types (class diagrams and statechart diagrams), and</li>
@@ -290,7 +296,7 @@
   <li>provide plentiful examples.</li>
 </ul>
 
-<p>It is NOT a goal of this specification to provide guidance on best practices of information mnodelling. We assume that the reader is a capable infomration modeller that wishes to use the edi3 UML profile so that models are consistent and interchangeable.</p>
+<p>It is NOT a goal of this specification to provide guidance on best practices of information modelling. We assume that the reader is a capable information modeller that wishes to use the edi3 UML profile so that models are consistent and interchangeable.</p>
 
 <h2 id="status">Status</h2>
 
@@ -300,7 +306,7 @@
 
 <p>Users of this specification will typically leverage existing semantic libraries such as the UN/CEFACT Core Component Library (CCL) or other data dictionaries based on ISO-11179. Therefore this specification maps UML constructs to both ISO-11179 and UN/CEFACT CCL.</p>
 
-<p>Although this specification is inteneded to be independent of specific deployment technologies, the eid3 suite is generally targeted at REST API implementation by web developers.  Therefore, where necessary, we introduce concepts into the UML profile that will be necessary for the generation of complete OPEN API 3.0 specifications and JSON-LD ontologies.</p>
+<p>Although this specification is intended to be independent of specific deployment technologies, the edi3 suite is generally targeted at REST API implementation by web developers.  Therefore, where necessary, we introduce concepts into the UML profile that will be necessary for the generation of complete OPEN API 3.0 specifications and JSON-LD ontologies.</p>
 
 <h2 id="glossary">Glossary</h2>
 
@@ -314,7 +320,7 @@
   <tbody>
     <tr>
       <td>CCL</td>
-      <td>UN/CEFACT Core Compomnent Library</td>
+      <td>UN/CEFACT Core Component Library</td>
     </tr>
     <tr>
       <td>UML</td>
@@ -349,8 +355,8 @@ in this document are to be interpreted as described in IETF RFC 2119.</p>
 <ul>
   <li>Domains are represented as a UML Package</li>
   <li>Domain names must be unique across edi3.org</li>
-  <li>Domains may contain subdomains and, if so, subdomain names must be iunique within the parent doamin.</li>
-  <li>Subdomains are related to the parent domain using a UML package conmtainment relationship.</li>
+  <li>Domains may contain subdomains and, if so, subdomain names must be unique within the parent domain.</li>
+  <li>Subdomains are related to the parent domain using a UML package containment relationship.</li>
   <li>Domains and subdomains must have a description</li>
 </ul>
 
@@ -412,7 +418,7 @@ in this document are to be interpreted as described in IETF RFC 2119.</p>
     </tr>
     <tr>
       <td>Amount</td>
-      <td>A financial amoiunt with defined currency from ISO-4217</td>
+      <td>A financial amount with defined currency from ISO-4217</td>
     </tr>
   </tbody>
 </table>
@@ -423,11 +429,11 @@ in this document are to be interpreted as described in IETF RFC 2119.</p>
 
 <h3 id="api-serialisation-note-1">API Serialisation Note</h3>
 
-<p>Types will map to corresponding JSON Schema types as defined in relevant NDR specifications (<a href="https://edi3.org/api-ndr/">OpenAPI</a> or <a href="https://edi3.org/json-ld-ndr/">JSON-LD</a>. Note that code and identifier types MUST resolve to unambiguous values at runtime and so MUST include the scheme URI.  For example a party <code class="highlighter-rouge">identification</code> element (with <code class="highlighter-rouge">identfier</code> type) for an Australian business would be serialised as<code class="highlighter-rouge">{"identification":"ato.gov.au/abn:123456789"}</code> where <code class="highlighter-rouge">ato.gov.au/abn</code> is the schemeURI and <code class="highlighter-rouge">123456789</code> is the ABN identifier value. The SchemeURI value SHOULD be compatible with the edi3 <a href="https://edi3.org/discovery/">resource discovery</a> specification so that consumers can validate indentifier or code values at runtime.</p>
+<p>Types will map to corresponding JSON Schema types as defined in relevant NDR specifications (<a href="https://edi3.org/api-ndr/">OpenAPI</a> or <a href="https://edi3.org/json-ld-ndr/">JSON-LD</a>. Note that code and identifier types MUST resolve to unambiguous values at runtime and so MUST include the scheme URI.  For example a party <code class="highlighter-rouge">identification</code> element (with <code class="highlighter-rouge">identfier</code> type) for an Australian business would be serialised as<code class="highlighter-rouge">{"identification":"ato.gov.au/abn:123456789"}</code> where <code class="highlighter-rouge">ato.gov.au/abn</code> is the schemeURI and <code class="highlighter-rouge">123456789</code> is the ABN identifier value. The SchemeURI value SHOULD be compatible with the edi3 <a href="https://edi3.org/discovery/">resource discovery</a> specification so that consumers can validate identifier or code values at runtime.</p>
 
 <h2 id="qualified-types--enumerations">Qualified Types &amp; Enumerations</h2>
 
-<p>In most cases, the core data types are sufficient for any use. However, in some cases it is useful to define restrictions as part of the model. The most common use is where a small numnber of stable code values are enumerated in the data model (as opposed to discuvered and validated at runtime). Common examples are entity status lifecycle values and party role enumerations. Qualified types are named using the convention {qualifier term}_{core type name}. The example shows the use of a qualified data type <code class="highlighter-rouge">TransportEventType_Code</code> to restrict the allowed values of the <code class="highlighter-rouge">Type</code> attribute of the <code class="highlighter-rouge">TransprotEvent</code> class.</p>
+<p>In most cases, the core data types are sufficient for any use. However, in some cases it is useful to define restrictions as part of the model. The most common use is where a small number of stable code values are enumerated in the data model (as opposed to discovered and validated at runtime). Common examples are entity status lifecycle values and party role enumerations. Qualified types are named using the convention {qualifier term}_{core type name}. The example shows the use of a qualified data type <code class="highlighter-rouge">TransportEventType_Code</code> to restrict the allowed values of the <code class="highlighter-rouge">Type</code> attribute of the <code class="highlighter-rouge">TransportEvent</code> class.</p>
 
 <h3 id="example-2">Example</h3>
 
@@ -435,13 +441,13 @@ in this document are to be interpreted as described in IETF RFC 2119.</p>
 
 <h3 id="api-serialisation-note-2">API Serialisation Note</h3>
 
-<p>Qualified types are implemented as JSON objects with specific proerties an/or enumerated values.</p>
+<p>Qualified types are implemented as JSON objects with specific properties an/or enumerated values.</p>
 
 <h1 id="data-elements">Data elements</h1>
 
-<p>Every data element has globally unique name called the “dictionary entry name” of the form urn:org.unece:domain.class.property - for example “urn:org.unece:transport.transportevent.occurrencetime”</p>
+<p>Every data element has a globally unique name called the “dictionary entry name” of the form urn:org.unece:domain.class.property - for example “urn:org.unece:transport.transportevent.occurrencetime”</p>
 
-<p>Simple data elements are represented as attributes of UML classes - for example <code class="highlighter-rouge">OccurrenceTime</code> in <code class="highlighter-rouge">TransportEvent</code> class 
+<p>Simple data elements are represented as attributes of UML classes - for example <code class="highlighter-rouge">OccurrenceTime</code> in <code class="highlighter-rouge">TransportEvent</code> class. 
 Complex data elements are represented as containment relationships (UML aggregation or composition) from source UML classes - for example <code class="highlighter-rouge">EventLocation</code> from <code class="highlighter-rouge">TransportEvent</code> class.</p>
 
 <ul>
@@ -458,7 +464,7 @@ Complex data elements are represented as containment relationships (UML aggregat
 
 <h3 id="api-serialisation-note-3">API Serialisation Note</h3>
 
-<p>UML Classes map to JSON Scherma objects and UML attributes become properties of the JSON Schema object. [1] cardinalitied map the the <code class="highlighter-rouge">required</code> shema property. UML cardinalities [0..<em>] or [1..</em>] map to a JSON array.</p>
+<p>UML Classes map to JSON Scherma objects and UML attributes become properties of the JSON Schema object. [1] cardinalities map the the <code class="highlighter-rouge">required</code> schema property. UML cardinalities [0..<em>] or [1..</em>] map to a JSON array.</p>
 
 <h1 id="relationships">Relationships</h1>
 
@@ -466,7 +472,7 @@ Complex data elements are represented as containment relationships (UML aggregat
 
 <h2 id="generalisation-relationship">Generalisation Relationship</h2>
 
-<p>The UML generalisation relationship is used to inicate sub-types or specialisations of an information resource.  For example, a <code class="highlighter-rouge">Vessel</code> is a type of <code class="highlighter-rouge">TransportMeans</code>.  The specialised class (ie <code class="highlighter-rouge">Vessel</code>) inherits all the properties of the general class (ie <code class="highlighter-rouge">TransportMeans</code>).  This modelling approach permits the separation of specific proerties such as <code class="highlighter-rouge">Helipad</code> (only for vessels) and <code class="highlighter-rouge">AxleLoad</code> (only for vehicles)</p>
+<p>The UML generalisation relationship is used to indicate sub-types or specialisations of an information resource.  For example, a <code class="highlighter-rouge">Vessel</code> is a type of <code class="highlighter-rouge">TransportMeans</code>.  The specialised class (ie <code class="highlighter-rouge">Vessel</code>) inherits all the properties of the general class (ie <code class="highlighter-rouge">TransportMeans</code>).  This modelling approach permits the separation of specific properties such as <code class="highlighter-rouge">Helipad</code> (only for vessels) and <code class="highlighter-rouge">AxleLoad</code> (only for vehicles)</p>
 
 <h3 id="example-4">Example</h3>
 
@@ -474,7 +480,7 @@ Complex data elements are represented as containment relationships (UML aggregat
 
 <h3 id="api-serialisation-note-4">API Serialisation Note</h3>
 
-<p>The concrete class contains all propertiers of the abstract - so for example, the API user will just see a <code class="highlighter-rouge">Vessel</code> resource will the combined properties of Vessel and TransportMeans.</p>
+<p>The concrete class contains all propertiers of the abstract - so for example, the API user will just see a <code class="highlighter-rouge">Vessel</code> resource with the combined properties of Vessel and TransportMeans.</p>
 
 <h2 id="composition-relationship">Composition Relationship</h2>
 
@@ -486,11 +492,11 @@ Complex data elements are represented as containment relationships (UML aggregat
 
 <h3 id="api-serialisation-note-5">API Serialisation Note</h3>
 
-<p>The target class and all it’s attributes becomne part of the schema of the parent - ie $ref to a nested data structure. So, in the example above, <code class="highlighter-rouge">GET /TransportMovement</code> would return all properties of the <code class="highlighter-rouge">TransportMovement</code> class AND all properties of the contained <code class="highlighter-rouge">TransportEvent</code> as a nested array structure.</p>
+<p>The target class and all its attributes become part of the schema of the parent - ie $ref to a nested data structure. So, in the example above, <code class="highlighter-rouge">GET /TransportMovement</code> would return all properties of the <code class="highlighter-rouge">TransportMovement</code> class AND all properties of the contained <code class="highlighter-rouge">TransportEvent</code> as a nested array structure.</p>
 
 <h2 id="aggregation-relationship">Aggregation Relationship</h2>
 
-<p>The UML aggregation relationship is used to indicate a containment relationship between two classes where the contained class may be re-used by other classes and has meaning independent of the relationship. It is essentially a link to a relevant but independent entity. For example a <code class="highlighter-rouge">TransportMeans</code> (such as a Vessel) is an independent concept from from a <code class="highlighter-rouge">TransportMovement</code> (such as a <code class="highlighter-rouge">Voyage</code>).  Both can exist and be meningful in isolation but clearly the the vessel identity is an important aspect of a voyage.</p>
+<p>The UML aggregation relationship is used to indicate a containment relationship between two classes where the contained class may be re-used by other classes and has meaning independent of the relationship. It is essentially a link to a relevant but independent entity. For example a <code class="highlighter-rouge">TransportMeans</code> (such as a Vessel) is an independent concept from from a <code class="highlighter-rouge">TransportMovement</code> (such as a <code class="highlighter-rouge">Voyage</code>).  Both can exist and be meaningful in isolation but clearly the the vessel identity is an important aspect of a voyage.</p>
 
 <h3 id="example-6">Example</h3>
 
@@ -498,7 +504,7 @@ Complex data elements are represented as containment relationships (UML aggregat
 
 <h3 id="api-serialisation-note-6">API Serialisation Note</h3>
 
-<p>Only the <code class="highlighter-rouge">{id}</code> properties of the target class are embedded into the source schema. So, in the example above, <code class="highlighter-rouge">GET /TransportMovement</code> would return all properties of <code class="highlighter-rouge">TransportMovement</code> and only the <code class="highlighter-rouge">Identification</code> and <code class="highlighter-rouge">Name</code> of the associated <code class="highlighter-rouge">TransportMeans</code> - because those are the properties with the UML ‘isID’ flag set. The JSON API header would also carry a {link} element that holds the URL of the <code class="highlighter-rouge">Transportmeans</code> resource. Consumers that also want to know additional properties of the <code class="highlighter-rouge">TransportMeans</code> such as <code class="highlighter-rouge">GrossWeight</code> would simply follow the link with a <code class="highlighter-rouge">GET /TrannsportMeans/{id}</code></p>
+<p>Only the <code class="highlighter-rouge">{id}</code> properties of the target class are embedded into the source schema. So, in the example above, <code class="highlighter-rouge">GET /TransportMovement</code> would return all properties of <code class="highlighter-rouge">TransportMovement</code> and only the <code class="highlighter-rouge">Identification</code> and <code class="highlighter-rouge">Name</code> of the associated <code class="highlighter-rouge">TransportMeans</code> - because those are the properties with the UML ‘isID’ flag set. The JSON API header would also carry a {link} element that holds the URL of the <code class="highlighter-rouge">Transportmeans</code> resource. To retrieve the full properties of the <code class="highlighter-rouge">TransportMeans</code> element (eg to find <code class="highlighter-rouge">GrossWeight</code>), consumers would simply follow the link with a <code class="highlighter-rouge">GET /TransportMeans/{id}</code></p>
 
 <h2 id="relationship-class">Relationship Class</h2>
 
@@ -558,7 +564,7 @@ Complex data elements are represented as containment relationships (UML aggregat
 <h3 id="api-serialisation-note-9">API Serialisation Note</h3>
 
 <ul>
-  <li>The UML <code class="highlighter-rouge">&lt;&lt;interface&gt;&gt;</code> type will map to a RESTful API web resource such as <code class="highlighter-rouge">https://api.acme.com/v1/transportmovements/{123456789}</code>.  The mapping rules for Open API 3.0 specification generation are defined in the Open API 3.0 NDR specification.</li>
+  <li>The UML <code class="highlighter-rouge">&lt;&lt;interface&gt;&gt;</code> type will map to a RESTful API web resource such as <code class="highlighter-rouge">/v1/transportmovements/123456789</code>. Targets of composition relationships are implemented as sub-resources only eg /voyages/12456789/transportEvents. The mapping rules for Open API 3.0 specification generation are defined in the Open API 3.0 NDR specification.</li>
   <li>Resopurce models are deliberately kept simple and so do not attempt to model things like different structures for different types of PATCH operations or a list of filters allowed in GET collection actions. These things are likely to vary by implementation.  Models and generated OpenAPI specifications published by edi3.org represent only the minimum conformant behaviour for an implemention.</li>
 </ul>
 
@@ -596,9 +602,13 @@ Complex data elements are represented as containment relationships (UML aggregat
 
 <h2 id="serialisation">Serialisation</h2>
 
-<p>When the generator works - put a link to the generated API spec here.</p>
+<p>The sample model file generates <a href="https://edi3.org/specs/edi3-uml-profile/master/api-sample">this OpenAPI specification</a></p>
 
 
+            
+            <div class="back-link">
+                <a href="/uml-profile/">&lt; Back</a>
+            </div>
             
         </div>
     </div>
@@ -609,7 +619,7 @@ Complex data elements are represented as containment relationships (UML aggregat
         <li><a href="http://edi3.org/about">About edi3</a></li>
         <li><a href="https://github.com/edi3" target="_blank">Github</a></li>
         <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter</a></li>
-        <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg" target="_blank">Join</a> <a href="https://edi3.slack.com/messages/general/" target="_blank">team</a></li>
+        <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ" target="_blank">Join</a> <a href="https://edi3.slack.com/messages/general/" target="_blank">team</a></li>
     </ul>
     <div class="footer-credits">
         This page was generated by GitHub Pages.

@@ -1,0 +1,80 @@
+{
+  "@context": {
+    "Discount": "schema.org:Boolean",
+    "Invoice": "schema.org:Time",
+    "InvoiceIssuerReference": "schema:Text",
+    "PayerReference": "schema:Text",
+    "PaymentReference": "schema:Text",
+    "PriceCurrency": "schema:Text",
+    "TotalAdjustment": "schema:amount",
+    "AdditionalReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "ApplicableTradeTax": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Tax",
+      "@type": "@id"
+    },
+    "AssociatedDocumentLineDocument": {
+      "@id": "https://edi3.org/contexts/BSP/DocumentLine/Document",
+      "@type": "@id"
+    },
+    "AssociatedReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "BillingSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "CalculatedTradeTax": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Tax",
+      "@type": "@id"
+    },
+    "InvoiceReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "InvoiceeTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "PayerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "ReferencedLineTradeTransaction": {
+      "@id": "https://edi3.org/contexts/BSP/Line/TradeTransaction",
+      "@type": "@id"
+    },
+    "SpecifiedFinancialAdjustment": {
+      "@id": "https://edi3.org/contexts/BSP/Financial/Adjustment",
+      "@type": "@id"
+    },
+    "SpecifiedLogisticsServiceCharge": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/ServiceCharge",
+      "@type": "@id"
+    },
+    "SpecifiedTradeAccountingAccount": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/AccountingAccount",
+      "@type": "@id"
+    },
+    "SpecifiedTradeAllowanceCharge": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/AllowanceCharge",
+      "@type": "@id"
+    },
+    "SpecifiedTradePaymentTerms": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/PaymentTerms",
+      "@type": "@id"
+    },
+    "SpecifiedTradeSettlementFinancialCard": {
+      "@id": "https://edi3.org/contexts/BSP/TradeSettlement/FinancialCard",
+      "@type": "@id"
+    },
+    "SpecifiedTradeSettlementLineMonetarySummation": {
+      "@id": "https://edi3.org/contexts/BSP/TradeSettlementLine/MonetarySummation",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

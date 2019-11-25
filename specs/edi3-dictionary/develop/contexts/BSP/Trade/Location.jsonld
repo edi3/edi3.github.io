@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "Country": "schema:Text",
+    "CountryName": "schema:Text",
+    "Identification": "schema:Text",
+    "Name": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

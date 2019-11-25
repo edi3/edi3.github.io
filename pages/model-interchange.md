@@ -9,11 +9,11 @@ permalink: /model-interchange/
 The edi3 Model Interchange Specifications are based on ...
 
 * [Model Interchange GitHub repository](https://github.com/edi3/edi3-model-interchange){:target="_blank"}
-* [Model Interchange Slack Channel](https://edi3.slack.com/messages/spec-model-interchange/){:target="_blank"} ([you must signup to edi3 slack first](https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg){:target="_blank"})
+* [Model Interchange Slack Channel](https://edi3.slack.com/messages/spec-model-interchange/){:target="_blank"} ([you must signup to edi3 slack first](https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ){:target="_blank"})
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Model Interchange spec](//edi3.org/specs/edi3-model-interchange/master/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-model-interchange/master/redoc-static.html){:target="_blank"} |  [Model Interchange Issues](https://github.com/edi3/edi3-model-interchange/issues){:target="_blank"}  |
+| [Model Interchange spec](//edi3.org/specs/edi3-model-interchange/develop/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) |  |  [Model Interchange Issues](https://github.com/edi3/edi3-model-interchange/issues){:target="_blank"}  |
 
 ## Known Implementations
 

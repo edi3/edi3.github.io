@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "AdjustedBalanceOut": "schema:amount",
+    "AllowanceTotal": "schema:amount",
+    "BalanceOut": "schema:amount",
+    "ChargeTotal": "schema:amount",
+    "DuePayable": "schema:amount",
+    "ExcludingTaxesLineTotal": "schema:amount",
+    "GrandTotal": "schema:amount",
+    "GrossLineTotal": "schema:amount",
+    "IncludingTaxesLineTotal": "schema:amount",
+    "Information": "schema:amount",
+    "InsuranceChargeTotal": "schema:amount",
+    "LineTotal": "schema:amount",
+    "NetIncludingTaxesLineTotal": "schema:amount",
+    "NetLineTotal": "schema:amount",
+    "PaymentTotal": "schema:amount",
+    "ProductValueExcludingTobaccoTaxInformation": "schema:amount",
+    "RetailValueExcludingTaxInformation": "schema:amount",
+    "Rounding": "schema:amount",
+    "TaxBasisTotal": "schema:amount",
+    "TaxTotal": "schema:amount",
+    "TotalAllowanceCharge": "schema:amount",
+    "TotalDepositFeeInformation": "schema:amount",
+    "TotalDiscount": "schema:amount",
+    "TotalDiscountBasis": "schema:amount",
+    "TotalPrepaid": "schema:amount",
+    "TotalRetailValueInformation": "schema:amount",
+    "ApplicableHeaderBalanceOut": {
+      "@id": "https://edi3.org/contexts/BSP/Header/BalanceOut",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

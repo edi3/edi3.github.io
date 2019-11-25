@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "Changed": "schema.org:Time",
+    "ChangerName": "schema:Text",
+    "Condition": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

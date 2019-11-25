@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "Basis": "schema:amount",
+    "Calculated": "schema:amount",
+    "CalculatedRate": "schema.org:Number",
+    "TaxPoint": "schema:Date",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

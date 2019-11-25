@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "DriverAccompanied": "schema.org:Boolean",
+    "Identification": "schema:Text",
+    "Name": "schema:Text",
+    "Type": "schema:Text",
+    "TypeText": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

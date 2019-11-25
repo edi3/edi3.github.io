@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "Calculated": "schema:amount",
+    "Description": "schema:Text",
+    "Identification": "schema:Text",
+    "Occurrence": "schema.org:Time",
+    "Reason": "schema:Text",
+    "ReasonDescription": "schema:Text",
+    "BreakdownHeaderBalanceOut": {
+      "@id": "https://edi3.org/contexts/BSP/Header/BalanceOut",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

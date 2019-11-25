@@ -1,0 +1,32 @@
+{
+  "@context": {
+    "AverageDemand": "schema:Text",
+    "AverageDuration": "schema.org:Time",
+    "Calculation": "schema.org:Time",
+    "MaximumStock": "schema:Text",
+    "MaximumStockLevel": "schema:Text",
+    "MinimumStock": "schema:Text",
+    "MinimumStockLevel": "schema:Text",
+    "PlannedStock": "schema:Text",
+    "PlannedStockCalculation": "schema.org:Time",
+    "Status": "schema:Text",
+    "Stock": "schema:Text",
+    "DispositionReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "RemarkNote": {
+      "@id": "https://edi3.org/contexts/BSP//Note",
+      "@type": "@id"
+    },
+    "SpecifiedLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "SpecifiedSupplyChainEvent": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/Event",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

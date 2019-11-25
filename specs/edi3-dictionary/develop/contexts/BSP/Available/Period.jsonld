@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "Description": "schema:Text",
+    "End": "schema.org:Time",
+    "Start": "schema.org:Time",
+    "schema": "http://schema.org/"
+  }
+}

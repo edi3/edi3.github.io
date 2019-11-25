@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "ApplicableLineTradeAgreement": {
+      "@id": "https://edi3.org/contexts/BSP/Line/TradeAgreement",
+      "@type": "@id"
+    },
+    "ApplicableLineTradeDelivery": {
+      "@id": "https://edi3.org/contexts/BSP/Line/TradeDelivery",
+      "@type": "@id"
+    },
+    "IncludedTradeProduct": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Product",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

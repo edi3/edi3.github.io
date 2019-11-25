@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "AllowanceTotal": "schema:amount",
+    "ChargeTotal": "schema:amount",
+    "DuePayable": "schema:amount",
+    "GrandTotal": "schema:amount",
+    "GrossLineTotal": "schema:amount",
+    "IncludingTaxesLineTotal": "schema:amount",
+    "Information": "schema:amount",
+    "LineTotal": "schema:amount",
+    "NetIncludingTaxesLineTotal": "schema:amount",
+    "NetLineTotal": "schema:amount",
+    "PaymentTotal": "schema:amount",
+    "ProductWeightLossInformation": "schema:amount",
+    "TaxBasisTotal": "schema:amount",
+    "TaxTotal": "schema:amount",
+    "TotalAllowanceCharge": "schema:amount",
+    "TotalRetailValueInformation": "schema:amount",
+    "schema": "http://schema.org/"
+  }
+}

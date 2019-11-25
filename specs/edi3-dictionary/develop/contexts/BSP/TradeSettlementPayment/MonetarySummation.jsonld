@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "AdjustedBalanceOut": "schema:amount",
+    "BalanceOut": "schema:amount",
+    "EquivalentTransferTotal": "schema:amount",
+    "IncludingTaxesLineTotal": "schema:amount",
+    "PaymentTotal": "schema:amount",
+    "TaxTotal": "schema:amount",
+    "ApplicablePaymentBalanceOut": {
+      "@id": "https://edi3.org/contexts/BSP/Payment/BalanceOut",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

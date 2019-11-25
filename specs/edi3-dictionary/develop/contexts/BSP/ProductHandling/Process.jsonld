@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "Type": "schema:Text",
+    "ApplicableProcessCharacteristic": {
+      "@id": "https://edi3.org/contexts/BSP/Process/Characteristic",
+      "@type": "@id"
+    },
+    "CompletionSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "OperationTradeCountry": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Country",
+      "@type": "@id"
+    },
+    "OperatorTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "DiscrepancyNature": "schema:Text",
+    "QuantityType": "schema:Text",
+    "Reason": "schema:Text",
+    "ReasonText": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

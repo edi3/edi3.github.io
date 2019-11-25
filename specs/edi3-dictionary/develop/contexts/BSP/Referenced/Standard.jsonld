@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "Agency": "schema:Text",
+    "ElementVersion": "schema:Text",
+    "Identification": "schema:Text",
+    "PartIdentification": "schema:Text",
+    "URI": "schema:Text",
+    "Version": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

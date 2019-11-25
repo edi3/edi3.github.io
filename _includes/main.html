@@ -15,6 +15,12 @@
                 <a href="{{page.back_link}}">&lt; Back</a>
             </div>
             {% endif %}
+            {% if page.permalink %}
+            <hr>
+            <h6>
+                Please modify <a href="https://github.com/edi3/edi3.github.io/edit/master/{{page.path}}">this page</a> and make a pull request to propose any additions, changes or fixes.
+            </h6>
+            {% endif %}
         </div>
     </div>
 </div>

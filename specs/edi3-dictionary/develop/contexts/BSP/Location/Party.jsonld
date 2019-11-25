@@ -1,0 +1,37 @@
+{
+  "@context": {
+    "Country": "schema:Text",
+    "Identification": "schema:Text",
+    "Name": "schema:Text",
+    "Role": "schema:Text",
+    "DefinedTradeContact": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Contact",
+      "@type": "@id"
+    },
+    "FaxUniversalCommunication": {
+      "@id": "https://edi3.org/contexts/BSP/Universal/Communication",
+      "@type": "@id"
+    },
+    "PostalTradeAddress": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Address",
+      "@type": "@id"
+    },
+    "ProvidedTransportService": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Service",
+      "@type": "@id"
+    },
+    "SpecifiedTransportPerson": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Person",
+      "@type": "@id"
+    },
+    "TelephoneUniversalCommunication": {
+      "@id": "https://edi3.org/contexts/BSP/Universal/Communication",
+      "@type": "@id"
+    },
+    "URIUniversalCommunication": {
+      "@id": "https://edi3.org/contexts/BSP/Universal/Communication",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

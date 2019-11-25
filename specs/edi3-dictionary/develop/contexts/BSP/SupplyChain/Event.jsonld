@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "Description": "schema:Text",
+    "DescriptionBinaryObject": "schema:Text",
+    "EarliestOccurrence": "schema.org:Time",
+    "Frequency": "schema:Text",
+    "Identification": "schema:Text",
+    "LatestOccurrence": "schema.org:Time",
+    "Occurrence": "schema.org:Time",
+    "TimeOccurrence": "schema.org:Time",
+    "Type": "schema:Text",
+    "Unit": "schema:Text",
+    "ActualInspectionStatus": {
+      "@id": "https://edi3.org/contexts/BSP/Inspection/Status",
+      "@type": "@id"
+    },
+    "OccurrenceLogisticsLocation": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Location",
+      "@type": "@id"
+    },
+    "OccurrenceSpecifiedPeriod": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/Period",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

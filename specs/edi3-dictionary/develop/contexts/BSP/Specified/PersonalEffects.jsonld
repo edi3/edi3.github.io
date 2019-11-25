@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "Description": "schema:Text",
+    "Onboard": "schema:Text",
+    "Sequence": "schema.org:Number",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

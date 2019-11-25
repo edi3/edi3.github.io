@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "PreviousStatus": "schema:Text",
+    "Status": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

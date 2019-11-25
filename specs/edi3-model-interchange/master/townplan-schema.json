@@ -1,0 +1,172 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "description": "",
+        "title": "Town Plan MetaModel",
+        "version": ""
+    },
+    "servers": [],
+    "paths": {},
+    "components": {
+        "schemas": {
+            "Domain": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "full description of the metadata element.",
+                        "type": "string"
+                    },
+                    "repositoryURL": {
+                        "description": "The authoritative location of the repository containing version controlled domain information (eg  https://github.com/edi3/edi3-regulatory)",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            },
+            "IdentityScheme": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "full description of the metadata element.",
+                        "type": "string"
+                    },
+                    "scopes": {
+                        "items": {
+                            "description": "missing description",
+                            "type": "string"
+                        },
+                        "type": "array",
+                        "minItems": 1
+                    },
+                    "issuer": {
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/OrganisationIds"
+                            },
+                            {
+                                "type": "object"
+                            }
+                        ]
+                    }
+                },
+                "required": [
+                    "name",
+                    "scopes"
+                ]
+            },
+            "OrganisationIds": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "missing description",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            },
+            "Organisation": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "missing description",
+                        "type": "string"
+                    },
+                    "dnsDomain": {
+                        "description": "the DNS domain name of the organisation (eg unece.org)",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "dnsDomain"
+                ]
+            },
+            "Resource": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "full description of the metadata element.",
+                        "type": "string"
+                    },
+                    "action": {
+                        "items": {
+                            "description": "A list of allowed actions on this resource (create, read, update, delete).  ",
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "status": {
+                        "description": "Status of the element from a library management perspective. \n using COSS lifecycle values (raw, draft, stable, deprecated, deleted).",
+                        "type": "string",
+                        "enum": [
+                            "proposed",
+                            "active",
+                            "deprecated",
+                            "deleted"
+                        ]
+                    },
+                    "subResource": {
+                        "items": {
+                            "$ref": "#/components/schemas/Resource"
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            },
+            "Service": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "full description of the metadata element.",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "Status of the element from a library management perspective. \n using COSS lifecycle values (raw, draft, stable, deprecated, deleted).",
+                        "type": "string",
+                        "enum": [
+                            "proposed",
+                            "active",
+                            "deprecated",
+                            "deleted"
+                        ]
+                    },
+                    "version": {
+                        "description": "The public release version of the resource  in semver format major.minor.patch (eg 0.2.3).",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "version"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "Name": "schema:Text",
+    "Type": "schema:Text",
+    "Value": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

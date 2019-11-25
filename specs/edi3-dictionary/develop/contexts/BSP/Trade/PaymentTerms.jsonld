@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "Description": "schema:Text",
+    "DirectDebitMandateIdentification": "schema:Text",
+    "Due": "schema.org:Time",
+    "DueDate": "schema.org:Time",
+    "FromEvent": "schema:Text",
+    "Identification": "schema:Text",
+    "Instruction": "schema:Text",
+    "InstructionType": "schema:Text",
+    "PartialPayment": "schema:Text",
+    "PartialPaymentAmount": "schema:amount",
+    "PaymentMeansIdentification": "schema:Text",
+    "SettlementPeriod": "schema:Text",
+    "Type": "schema:Text",
+    "ApplicableTradePaymentDiscountTerms": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/PaymentDiscountTerms",
+      "@type": "@id"
+    },
+    "ApplicableTradePaymentPenaltyTerms": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/PaymentPenaltyTerms",
+      "@type": "@id"
+    },
+    "PayeeTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

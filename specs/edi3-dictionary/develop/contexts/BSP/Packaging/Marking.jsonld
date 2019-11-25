@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "AutomaticDataCaptureMethodType": "schema:Text",
+    "BarcodeType": "schema:Text",
+    "Content": "schema:Text",
+    "ContentAmount": "schema:amount",
+    "ContentCode": "schema:Text",
+    "ContentDateTime": "schema.org:Time",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

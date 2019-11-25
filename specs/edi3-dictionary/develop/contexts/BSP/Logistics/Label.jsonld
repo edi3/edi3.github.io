@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "LayoutType": "schema:Text",
+    "SeriesEnd": "schema:Text",
+    "SeriesStart": "schema:Text",
+    "Size": "schema:Text",
+    "IncludedLabelSection": {
+      "@id": "https://edi3.org/contexts/BSP/Label/Section",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

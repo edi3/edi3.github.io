@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "Actual": "schema:amount",
+    "ActualDateTime": "schema.org:Time",
+    "ActualQuantity": "schema:Text",
+    "Reason": "schema:Text",
+    "ReasonText": "schema:Text",
+    "ReferenceReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "RelatedTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

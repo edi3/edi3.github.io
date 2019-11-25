@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "Content": "schema:Text",
+    "ContentText": "schema:Text",
+    "Identification": "schema:Text",
+    "Subject": "schema:Text",
+    "SubjectCode": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "Assertion": "schema:Text",
+    "AssertionText": "schema:Text",
+    "ResponsibleAgency": "schema:Text",
+    "Standard": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

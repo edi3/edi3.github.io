@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "ContentType": "schema:Text",
+    "Description": "schema:Text",
+    "Identification": "schema:Text",
+    "MeasurementMethod": "schema:Text",
+    "Type": "schema:Text",
+    "Value": "schema:Text",
+    "ValueCode": "schema:Text",
+    "ValueDateTime": "schema.org:Time",
+    "ValueIndicator": "schema.org:Boolean",
+    "ValueText": "schema:Text",
+    "ApplicableProductCharacteristicCondition": {
+      "@id": "https://edi3.org/contexts/BSP/ProductCharacteristic/Condition",
+      "@type": "@id"
+    },
+    "ApplicableReferencedStandard": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Standard",
+      "@type": "@id"
+    },
+    "ValueSpecifiedBinaryFile": {
+      "@id": "https://edi3.org/contexts/BSP/Specified/BinaryFile",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

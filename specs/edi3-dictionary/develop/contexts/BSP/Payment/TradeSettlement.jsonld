@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "AdditionalDescription": "schema:Text",
+    "PaymentCurrency": "schema:Text",
+    "ApplicableTradeCurrencyExchange": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/CurrencyExchange",
+      "@type": "@id"
+    },
+    "ApplicableTradeTax": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Tax",
+      "@type": "@id"
+    },
+    "PayeeTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "PayerTradeParty": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Party",
+      "@type": "@id"
+    },
+    "SpecifiedTradeSettlementPaymentMeans": {
+      "@id": "https://edi3.org/contexts/BSP/TradeSettlement/PaymentMeans",
+      "@type": "@id"
+    },
+    "SpecifiedTradeSettlementPaymentMonetarySummation": {
+      "@id": "https://edi3.org/contexts/BSP/TradeSettlementPayment/MonetarySummation",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

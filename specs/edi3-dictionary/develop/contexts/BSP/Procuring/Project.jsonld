@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "Constraint": "schema.org:Boolean",
+    "Description": "schema:Text",
+    "Identification": "schema:Text",
+    "Name": "schema:Text",
+    "NetBudget": "schema:amount",
+    "SubWorksType": "schema:Text",
+    "TotalBudget": "schema:amount",
+    "Type": "schema:Text",
+    "WorksType": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "@context": {
+    "Sequence": "schema.org:Number",
+    "TradeLineItem": "schema:Text",
+    "Type": "schema:Text",
+    "TypeExtension": "schema:Text",
+    "ApplicableTransportDangerousGoods": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/DangerousGoods",
+      "@type": "@id"
+    },
+    "AssociatedReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "AssociatedReferencedLogisticsTransportEquipment": {
+      "@id": "https://edi3.org/contexts/BSP/ReferencedLogistics/TransportEquipment",
+      "@type": "@id"
+    },
+    "IncludedSupplyChainTradeLineItem": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/TradeLineItem",
+      "@type": "@id"
+    },
+    "NatureIdentificationTransportCargo": {
+      "@id": "https://edi3.org/contexts/BSP/Transport/Cargo",
+      "@type": "@id"
+    },
+    "PhysicalLogisticsShippingMarks": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/ShippingMarks",
+      "@type": "@id"
+    },
+    "TransportLogisticsPackage": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Package",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

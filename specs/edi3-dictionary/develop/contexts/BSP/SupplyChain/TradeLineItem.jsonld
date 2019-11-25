@@ -1,0 +1,80 @@
+{
+  "@context": {
+    "AdditionalIdentification": "schema:Text",
+    "BarcodeIdentification": "schema:Text",
+    "Description": "schema:Text",
+    "Identification": "schema:Text",
+    "Sequence": "schema.org:Number",
+    "Type": "schema:Text",
+    "TypeExtension": "schema:Text",
+    "AdditionalInformationNote": {
+      "@id": "https://edi3.org/contexts/BSP//Note",
+      "@type": "@id"
+    },
+    "ApplicableReferencedProduct": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Product",
+      "@type": "@id"
+    },
+    "AssertedDocumentAuthentication": {
+      "@id": "https://edi3.org/contexts/BSP/Document/Authentication",
+      "@type": "@id"
+    },
+    "AssociatedDocumentLineDocument": {
+      "@id": "https://edi3.org/contexts/BSP/DocumentLine/Document",
+      "@type": "@id"
+    },
+    "AssociatedLogisticsTransportEquipment": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/TransportEquipment",
+      "@type": "@id"
+    },
+    "IncludedSubordinateTradeLineItem": {
+      "@id": "https://edi3.org/contexts/BSP/Subordinate/TradeLineItem",
+      "@type": "@id"
+    },
+    "IncludedWithinSupplyChainConsignmentItem": {
+      "@id": "https://edi3.org/contexts/BSP/SupplyChain/ConsignmentItem",
+      "@type": "@id"
+    },
+    "PhysicalLogisticsPackage": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Package",
+      "@type": "@id"
+    },
+    "PhysicalReferencedLogisticsPackage": {
+      "@id": "https://edi3.org/contexts/BSP/ReferencedLogistics/Package",
+      "@type": "@id"
+    },
+    "ReferenceReferencedDocument": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Document",
+      "@type": "@id"
+    },
+    "ReferencedLogisticsPackage": {
+      "@id": "https://edi3.org/contexts/BSP/Logistics/Package",
+      "@type": "@id"
+    },
+    "SpecifiedGoodsProduction": {
+      "@id": "https://edi3.org/contexts/BSP/Goods/Production",
+      "@type": "@id"
+    },
+    "SpecifiedLineTradeAgreement": {
+      "@id": "https://edi3.org/contexts/BSP/Line/TradeAgreement",
+      "@type": "@id"
+    },
+    "SpecifiedLineTradeDelivery": {
+      "@id": "https://edi3.org/contexts/BSP/Line/TradeDelivery",
+      "@type": "@id"
+    },
+    "SpecifiedLineTradeSettlement": {
+      "@id": "https://edi3.org/contexts/BSP/Line/TradeSettlement",
+      "@type": "@id"
+    },
+    "SpecifiedTradeProduct": {
+      "@id": "https://edi3.org/contexts/BSP/Trade/Product",
+      "@type": "@id"
+    },
+    "SubstitutedReferencedProduct": {
+      "@id": "https://edi3.org/contexts/BSP/Referenced/Product",
+      "@type": "@id"
+    },
+    "schema": "http://schema.org/"
+  }
+}

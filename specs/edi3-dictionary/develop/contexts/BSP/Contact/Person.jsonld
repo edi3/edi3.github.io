@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "FamilyName": "schema:Text",
+    "GivenName": "schema:Text",
+    "MiddleName": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

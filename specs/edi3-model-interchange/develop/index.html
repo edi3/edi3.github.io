@@ -42,6 +42,7 @@
     <li class="menu-title"><a href="/">Overview</a></li>
     <li><a  href="/governance/">Governance</a></li>
     <li><a  href="/business-case/">Business Case</a></li>
+    <li><a  href="/glossary/">Glossary</a></li>
     <li class="menu-title"><a href="/semantic-specs/">Semantic Specs</a></li>
     <li><a  href="/trade/">Trade Domain</a></li>
     <li><a  href="/transport/">Transport Domain</a></li>
@@ -65,7 +66,7 @@
     <li><a  href="/model-interchange/">Model Interchange</a></li>
     <li class="menu-title"><a href="/community/">Community</a></li>
     <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter (subscribe)</a></li>
-    <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg" target="_blank">Chat (join team)</a></li>
+    <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ" target="_blank">Chat (join team)</a></li>
     <li><a  href="/github/">GitHub</a></li>
 </ul>
 
@@ -126,6 +127,7 @@
     <li class="menu-title"><a href="/">Overview</a></li>
     <li><a  href="/governance/">Governance</a></li>
     <li><a  href="/business-case/">Business Case</a></li>
+    <li><a  href="/glossary/">Glossary</a></li>
     <li class="menu-title"><a href="/semantic-specs/">Semantic Specs</a></li>
     <li><a  href="/trade/">Trade Domain</a></li>
     <li><a  href="/transport/">Transport Domain</a></li>
@@ -149,7 +151,7 @@
     <li><a  href="/model-interchange/">Model Interchange</a></li>
     <li class="menu-title"><a href="/community/">Community</a></li>
     <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter (subscribe)</a></li>
-    <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg" target="_blank">Chat (join team)</a></li>
+    <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ" target="_blank">Chat (join team)</a></li>
     <li><a  href="/github/">GitHub</a></li>
 </ul>
 
@@ -172,47 +174,38 @@
             <div class="specs-toc">
     <!--<div class="specs-toc-title">Table of contents</div>-->
     <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
-<li class="toc-entry toc-h2"><a href="#goals">Goals</a></li>
 <li class="toc-entry toc-h2"><a href="#status">Status</a></li>
-<li class="toc-entry toc-h2"><a href="#glossary">Glossary</a></li>
 <li class="toc-entry toc-h2"><a href="#licence">Licence</a></li>
 <li class="toc-entry toc-h2"><a href="#change-process">Change Process</a></li>
 <li class="toc-entry toc-h2"><a href="#language">Language</a></li>
-<li class="toc-entry toc-h1"><a href="#billing-process">Billing Process</a>
+<li class="toc-entry toc-h1"><a href="#introduction">Introduction</a></li>
+<li class="toc-entry toc-h1"><a href="#metamodel-overview">Metamodel Overview</a></li>
+<li class="toc-entry toc-h1"><a href="#town-plan-model-specification">Town Plan Model Specification</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#state-lifecycle">State Lifecycle</a></li>
+<li class="toc-entry toc-h2"><a href="#logical-model">Logical Model</a></li>
+<li class="toc-entry toc-h2"><a href="#json-schema">JSON Schema</a></li>
+<li class="toc-entry toc-h2"><a href="#sample">Sample</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#related-material">Related Material</a></li>
+<li class="toc-entry toc-h1"><a href="#domain-model-interchange-specification">Domain Model Interchange Specification</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#logical-model-1">Logical Model</a></li>
+<li class="toc-entry toc-h2"><a href="#json-schema-1">JSON Schema</a></li>
+<li class="toc-entry toc-h2"><a href="#sample-1">Sample</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#codelist-interchange-specification">CodeList Interchange Specification</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#logical-model-2">Logical Model</a></li>
+<li class="toc-entry toc-h2"><a href="#json-schema-2">JSON Schema</a></li>
+<li class="toc-entry toc-h2"><a href="#sample-2">Sample</a></li>
+</ul>
+</li>
 </ul>
 </div>
-            <h2 id="introduction">Introduction</h2>
+            <h2 id="status">Status</h2>
 
-<h2 id="goals">Goals</h2>
-
-<h2 id="status">Status</h2>
-
-<h2 id="glossary">Glossary</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Phrase</th>
-      <th>Definition</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>This service depends on - TBA.</p>
-
-<p>The TBA specification depends on this document. Note, TBA.</p>
+<p><img src="http://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" /></p>
 
 <h2 id="licence">Licence</h2>
 
@@ -229,16 +222,75 @@
 <p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” 
 in this document are to be interpreted as described in RFC 2119.</p>
 
-<h1 id="billing-process">Billing Process</h1>
+<h1 id="introduction">Introduction</h1>
 
-<h2 id="state-lifecycle">State Lifecycle</h2>
-
-<h1 id="related-material">Related Material</h1>
+<p>This specification provides a standard JSON structure/schema for the representation of semantic library content and API models. This is used to</p>
 
 <ul>
-  <li></li>
-  <li></li>
+  <li>import library content into any conformant modelling tool, and to</li>
+  <li>interchange API models between conformant modelling tools.</li>
 </ul>
+
+<p><img src="use-case.png" alt="use case" /></p>
+
+<p>This specification will have achieved its purpose when at least two different modelling tools (UML based or otherwise) can successfully interchange any of the three model types.</p>
+
+<h1 id="metamodel-overview">Metamodel Overview</h1>
+
+<p>A DSL (domain specific language) approach is preferred here because it will be simpler and more stable than XMI (interchange standard for UML tools) and will allow non-UML based tools to participate equally in the market.</p>
+
+<p>The interchange specification is broken into three parts, each with a dedicated metamodel and each representing models that can be interchanged independently.</p>
+
+<ul>
+  <li>The domain model is essentially the “towm plan” for all UN/CEFACT API resources.</li>
+  <li>The resource model details the state lifecycle and information model of a specific API resource.</li>
+  <li>the CodeList model represents code list schemes and the flat or hierarchical set of code values.</li>
+</ul>
+
+<p><img src="overview-metamodel.png" alt="metamodel" /></p>
+
+<h1 id="town-plan-model-specification">Town Plan Model Specification</h1>
+
+<h2 id="logical-model">Logical Model</h2>
+
+<p><img src="townplan-metamodel.png" alt="town plan" /></p>
+
+<h2 id="json-schema">JSON Schema</h2>
+
+<p><a href="townplan-schema.json">town plan schema</a></p>
+
+<h2 id="sample">Sample</h2>
+
+<p>coming soon</p>
+
+<h1 id="domain-model-interchange-specification">Domain Model Interchange Specification</h1>
+
+<h2 id="logical-model-1">Logical Model</h2>
+
+<p><img src="domain-metamodel.png" alt="domain model" /></p>
+
+<h2 id="json-schema-1">JSON Schema</h2>
+
+<p><a href="domain-schema.json">town plan schema</a></p>
+
+<h2 id="sample-1">Sample</h2>
+
+<p>coming soon</p>
+
+<h1 id="codelist-interchange-specification">CodeList Interchange Specification</h1>
+
+<h2 id="logical-model-2">Logical Model</h2>
+
+<p><img src="codes-metamodel.png" alt="codes model" /></p>
+
+<h2 id="json-schema-2">JSON Schema</h2>
+
+<p><a href="codes-schema.json">codes schema</a></p>
+
+<h2 id="sample-2">Sample</h2>
+
+<p>coming soon</p>
+
 
             
         </div>
@@ -250,7 +302,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
         <li><a href="http://edi3.org/about">About edi3</a></li>
         <li><a href="https://github.com/edi3" target="_blank">Github</a></li>
         <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter</a></li>
-        <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTM1MzYyNjg5M2RlMWIyZjUzMDBlNWQ3OWIyZTNhMDhhN2UzYjIyMjk4M2VhM2ViNzhhM2Y1OWE0Y2FhYTc1ZTg" target="_blank">Join</a> <a href="https://edi3.slack.com/messages/general/" target="_blank">team</a></li>
+        <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ" target="_blank">Join</a> <a href="https://edi3.slack.com/messages/general/" target="_blank">team</a></li>
     </ul>
     <div class="footer-credits">
         This page was generated by GitHub Pages.

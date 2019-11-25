@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "Actual": "schema:Text",
+    "ComparisonOperator": "schema:Text",
+    "Condition": "schema:Text",
+    "Description": "schema:Text",
+    "Method": "schema:Text",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

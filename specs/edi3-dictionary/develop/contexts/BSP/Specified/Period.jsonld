@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "Complete": "schema.org:Time",
+    "Continuous": "schema.org:Boolean",
+    "Description": "schema:Text",
+    "Duration": "schema:Text",
+    "End": "schema.org:Time",
+    "Identification": "schema:Text",
+    "Inclusive": "schema.org:Boolean",
+    "Name": "schema:Text",
+    "Open": "schema.org:Boolean",
+    "Purpose": "schema:Text",
+    "Season": "schema:Text",
+    "Sequence": "schema.org:Number",
+    "Start": "schema.org:Time",
+    "StartDateFlexibility": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

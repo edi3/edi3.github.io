@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "Description": "schema:Text",
+    "Identification": "schema:Text",
+    "Occurrence": "schema.org:Time",
+    "Status": "schema:Text",
+    "Type": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}

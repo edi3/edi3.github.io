@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "Identification": "schema:Text",
+    "Issue": "schema.org:Time",
+    "Name": "schema:Text",
+    "schema": "http://schema.org/"
+  }
+}
