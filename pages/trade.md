@@ -13,8 +13,8 @@ The edi3 Trade Domain Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Invoice Spec](//edi3.org/specs/edi3-trade/develop/edi3-invoice/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-trade/develop/edi3-invoice/redoc-static.html){:target="_blank"} |  [Invoice Issues](https://github.com/edi3/edi3-trade/develop/issues){:target="_blank"}  |
-| [Order Spec](//edi3.org/specs/edi3-trade/develop/edi3-order/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [ReDoc](//edi3.org/specs/edi3-trade/develop/edi3-order/redoc-static.html){:target="_blank"} |  [Order Issues](https://github.com/edi3/edi3-trade/develop/issues){:target="_blank"}  |
+| [Invoice Spec](//edi3.org/specs/edi3-trade/develop/edi3-invoice/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-trade/develop/edi3-invoice/swagger){:target="_blank"} |  [Invoice Issues](https://github.com/edi3/edi3-trade/develop/issues){:target="_blank"}  |
+| [Order Spec](//edi3.org/specs/edi3-trade/develop/edi3-order/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-trade/develop/edi3-order/swagger){:target="_blank"} |  [Order Issues](https://github.com/edi3/edi3-trade/develop/issues){:target="_blank"}  |
 
 ## Known Implementations
 
