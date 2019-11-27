@@ -1,0 +1,2836 @@
+openapi: 3.0.0
+info:
+  description: ''
+  title: Movements
+  version: ''
+servers: []
+paths:
+  /Aircraft:
+    get:
+      tags:
+        - Aircraft
+      description: Get a list of Aircraft
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Aircraft'
+                type: array
+    post:
+      tags:
+        - Aircraft
+      description: Create a new Aircraft
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Aircraft'
+        description: ''
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Aircraft'
+          description: Created
+  '/Aircraft/{id}':
+    get:
+      tags:
+        - Aircraft
+      description: Get single Aircraft by id
+      parameters:
+        - name: id
+          in: path
+          description: missing description
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Aircraft'
+    patch:
+      tags:
+        - Aircraft
+      description: Update Aircraft
+      parameters:
+        - name: id
+          in: path
+          description: missing description
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Aircraft'
+        description: ''
+        required: true
+      responses:
+        '204':
+          description: No Content
+  /Flights:
+    get:
+      tags:
+        - Flights
+      description: Get a list of Flight
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Flight'
+                type: array
+    post:
+      tags:
+        - Flights
+      description: Create a new Flight
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Flight'
+        description: ''
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Flight'
+          description: Created
+  '/Flights/{id}':
+    get:
+      tags:
+        - Flights
+      description: Get single Flight by id
+      parameters:
+        - name: id
+          in: path
+          description: missing description
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Flight'
+    patch:
+      tags:
+        - Flights
+      description: Update Flight
+      parameters:
+        - name: id
+          in: path
+          description: missing description
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Flight'
+        description: ''
+        required: true
+      responses:
+        '204':
+          description: No Content
+  /Journeys:
+    get:
+      tags:
+        - Journeys
+      description: Get a list of Journey
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Journey'
+                type: array
+    post:
+      tags:
+        - Journeys
+      description: Create a new Journey
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Journey'
+        description: ''
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Journey'
+          description: Created
+  '/Journeys/{id}':
+    get:
+      tags:
+        - Journeys
+      description: Get single Journey by id
+      parameters:
+        - name: id
+          in: path
+          description: missing description
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Journey'
+    patch:
+      tags:
+        - Journeys
+      description: Update Journey
+      parameters:
+        - name: id
+          in: path
+          description: missing description
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Journey'
+        description: ''
+        required: true
+      responses:
+        '204':
+          description: No Content
+  /Vehicles:
+    get:
+      tags:
+        - Vehicles
+      description: Get a list of Vehicle
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Vehicle'
+                type: array
+    post:
+      tags:
+        - Vehicles
+      description: Create a new Vehicle
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vehicle'
+        description: ''
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vehicle'
+          description: Created
+  '/Vehicles/{id}':
+    get:
+      tags:
+        - Vehicles
+      description: Get single Vehicle by id
+      parameters:
+        - name: id
+          in: path
+          description: missing description
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vehicle'
+    patch:
+      tags:
+        - Vehicles
+      description: Update Vehicle
+      parameters:
+        - name: id
+          in: path
+          description: missing description
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vehicle'
+        description: ''
+        required: true
+      responses:
+        '204':
+          description: No Content
+  /Vessels:
+    get:
+      tags:
+        - Vessels
+      description: Get a list of Vessel
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Vessel'
+                type: array
+    post:
+      tags:
+        - Vessels
+      description: Create a new Vessel
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vessel'
+        description: ''
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vessel'
+          description: Created
+  '/Vessels/{id}':
+    get:
+      tags:
+        - Vessels
+      description: Get single Vessel by id
+      parameters:
+        - name: id
+          in: path
+          description: missing description
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vessel'
+    patch:
+      tags:
+        - Vessels
+      description: Update Vessel
+      parameters:
+        - name: id
+          in: path
+          description: missing description
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vessel'
+        description: ''
+        required: true
+      responses:
+        '204':
+          description: No Content
+  /Voyages:
+    get:
+      tags:
+        - Voyages
+      description: Get a list of Voyage
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Voyage'
+                type: array
+    post:
+      tags:
+        - Voyages
+      description: Create a new Voyage
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Voyage'
+        description: ''
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Voyage'
+          description: Created
+  '/Voyages/{id}':
+    get:
+      tags:
+        - Voyages
+      description: Get single Voyage by id
+      parameters:
+        - name: id
+          in: path
+          description: missing description
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Voyage'
+    patch:
+      tags:
+        - Voyages
+      description: Update Voyage
+      parameters:
+        - name: id
+          in: path
+          description: missing description
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Voyage'
+        description: ''
+        required: true
+      responses:
+        '204':
+          description: No Content
+components:
+  schemas:
+    Aircraft:
+      type: object
+      properties: {}
+      allOf:
+        - $ref: '#/components/schemas/Logistics_TransportMeans'
+        - type: object
+    EventPeriod:
+      type: object
+      properties:
+        role:
+          description: missing description
+          type: string
+          enum:
+            - occurrencePeriod
+            - transportMeansStayPeriod
+            - delayPeriod
+            - laycanPeriod
+    Flight:
+      type: object
+      properties: {}
+      allOf:
+        - $ref: '#/components/schemas/Logistics_TransportMovement'
+        - type: object
+    Journey:
+      type: object
+      properties: {}
+      allOf:
+        - $ref: '#/components/schemas/Logistics_TransportMovement'
+        - type: object
+    Logistics_Location:
+      type: object
+      properties:
+        iD:
+          description: >-
+            A unique identifier for this logistics related location, such as a
+            United Nations Location Code (UNLOCODE) or GS1 Global Location
+            Number (GLN).
+          type: string
+        name:
+          description: 'A name, expressed as text, of this logistics related location.'
+          type: string
+        countryCode:
+          description: The unique identifier of a country for this logistics location.
+          type: string
+          enum:
+            - Andorra
+            - United Arab Emirates
+            - Afghanistan
+            - Antigua and Barbuda
+            - Anguilla
+            - Albania
+            - Armenia
+            - Angola
+            - Antarctica
+            - Argentina
+            - American Samoa
+            - Austria
+            - Australia
+            - Aruba
+            - Ă…land Islands
+            - Azerbaijan
+            - Bosnia and Herzegovina
+            - Barbados
+            - Bangladesh
+            - Belgium
+            - Burkina Faso
+            - Bulgaria
+            - Bahrain
+            - Burundi
+            - Benin
+            - Saint BarthĂ©lemy
+            - Bermuda
+            - Brunei Darussalam
+            - 'Bolivia, Plurinational State of'
+            - 'Bonaire, Sint Eustatius and Saba'
+            - Brazil
+            - Bahamas
+            - Bhutan
+            - Bouvet Island
+            - Botswana
+            - Belarus
+            - Belize
+            - Canada
+            - Cocos (Keeling) Islands
+            - 'Congo, the Democratic Republic of the'
+            - Central African Republic
+            - Congo
+            - Switzerland
+            - CĂ´te d'Ivoire
+            - Cook Islands
+            - Chile
+            - Cameroon
+            - China
+            - Colombia
+            - Costa Rica
+            - Cuba
+            - Cape Verde
+            - CuraĂ§ao
+            - Christmas Island
+            - Cyprus
+            - Czech Republic
+            - Germany
+            - Djibouti
+            - Denmark
+            - Dominica
+            - Dominican Republic
+            - Algeria
+            - Ecuador
+            - Estonia
+            - Egypt
+            - Western Sahara
+            - Eritrea
+            - Spain
+            - Ethiopia
+            - Finland
+            - Fiji
+            - Falkland Islands (Malvinas)
+            - 'Micronesia, Federated States of'
+            - Faroe Islands
+            - France
+            - Gabon
+            - United Kingdom
+            - Grenada
+            - Georgia
+            - French Guiana
+            - Guernsey
+            - Ghana
+            - Gibraltar
+            - Greenland
+            - Gambia
+            - Guinea
+            - Guadeloupe
+            - Equatorial Guinea
+            - Greece
+            - South Georgia and the South Sandwich Islands
+            - Guatemala
+            - Guam
+            - Guinea-Bissau
+            - Guyana
+            - Hong Kong
+            - Heard Island and McDonald Islands
+            - Honduras
+            - Croatia
+            - Haiti
+            - Hungary
+            - Indonesia
+            - Ireland
+            - Israel
+            - Isle of Man
+            - India
+            - British Indian Ocean Territory
+            - Iraq
+            - 'Iran, Islamic Republic of'
+            - Iceland
+            - Italy
+            - Jersey
+            - Jamaica
+            - Jordan
+            - Japan
+            - Kenya
+            - Kyrgyzstan
+            - Cambodia
+            - Kiribati
+            - Comoros
+            - Saint Kitts and Nevis
+            - 'Korea, Democratic People''s Republic of'
+            - 'Korea, Republic of'
+            - Kuwait
+            - Cayman Islands
+            - Kazakhstan
+            - Lao People's Democratic Republic
+            - Lebanon
+            - Saint Lucia
+            - Liechtenstein
+            - Sri Lanka
+            - Liberia
+            - Lesotho
+            - Lithuania
+            - Luxembourg
+            - Latvia
+            - Libya
+            - Morocco
+            - Monaco
+            - 'Moldova, Republic of'
+            - Montenegro
+            - Saint Martin (French part)
+            - Madagascar
+            - Marshall Islands
+            - 'Macedonia, the Former Yugoslav Republic of'
+            - Mali
+            - Myanmar
+            - Mongolia
+            - Macao
+            - Northern Mariana Islands
+            - Martinique
+            - Mauritania
+            - Montserrat
+            - Malta
+            - Mauritius
+            - Maldives
+            - Malawi
+            - Mexico
+            - Malaysia
+            - Mozambique
+            - Namibia
+            - New Caledonia
+            - Niger
+            - Norfolk Island
+            - Nigeria
+            - Nicaragua
+            - Netherlands
+            - Norway
+            - Nepal
+            - Nauru
+            - Niue
+            - New Zealand
+            - Oman
+            - Panama
+            - Peru
+            - French Polynesia
+            - Papua New Guinea
+            - Philippines
+            - Pakistan
+            - Poland
+            - Saint Pierre and Miquelon
+            - Pitcairn
+            - Puerto Rico
+            - 'Palestine, State of'
+            - Portugal
+            - Palau
+            - Paraguay
+            - Qatar
+            - RĂ©union
+            - Romania
+            - Serbia
+            - Russian Federation
+            - Rwanda
+            - Saudi Arabia
+            - Solomon Islands
+            - Seychelles
+            - Sudan
+            - Sweden
+            - Singapore
+            - 'Saint Helena, Ascension and Tristan da Cunha'
+            - Slovenia
+            - Svalbard and Jan Mayen
+            - Slovakia
+            - Sierra Leone
+            - San Marino
+            - Senegal
+            - Somalia
+            - Suriname
+            - South Sudan
+            - Sao Tome and Principe
+            - El Salvador
+            - Sint Maarten (Dutch part)
+            - Syrian Arab Republic
+            - Swaziland
+            - Turks and Caicos Islands
+            - Chad
+            - French Southern Territories
+            - Togo
+            - Thailand
+            - Tajikistan
+            - Tokelau
+            - Timor-Leste
+            - Turkmenistan
+            - Tunisia
+            - Tonga
+            - Turkey
+            - Trinidad and Tobago
+            - Tuvalu
+            - 'Taiwan, Province of China'
+            - 'Tanzania, United Republic of'
+            - Ukraine
+            - Uganda
+            - United States Minor Outlying Islands
+            - United States
+            - Uruguay
+            - Uzbekistan
+            - Holy See (Vatican City State)
+            - Saint Vincent and the Grenadines
+            - 'Venezuela, Bolivarian Republic of'
+            - 'Virgin Islands, British'
+            - 'Virgin Islands, U.S.'
+            - Viet Nam
+            - Vanuatu
+            - Wallis and Futuna
+            - Samoa
+            - Yemen
+            - Mayotte
+            - South Africa
+            - Zambia
+            - Zimbabwe
+        countryName:
+          description: 'The country name, expressed as text, of this logistics location.'
+          type: string
+        description:
+          items:
+            description: A textual description of this logistics related location.
+            type: string
+          type: array
+        typeCode:
+          description: A code specifying the type of this logistics related location.
+          type: string
+          enum:
+            - placeOfTermsOfDelivery
+            - paymentLocation
+            - tareCheckPlace
+            - goodsReceiptPlace
+            - placeOfDeparture
+            - wardBed
+            - placeOfDelivery
+            - placeOfDestination
+            - placeOfLoading
+            - placeOfAcceptance
+            - placeOfDischarge
+            - portOfDischarge
+            - placeOfTranshipment
+            - goodsItemStorageLocation
+            - placeOfTransferResponsibility
+            - placeOfTransferOfOwnership
+            - borderCrossingPlace
+            - warehouse
+            - factory/plant
+            - placeOfUltimateDestinationOfGoods
+            - termsOfSalePlace
+            - customsClearanceLocation
+            - portOfRelease
+            - portOfEntry
+            - country
+            - city
+            - countryOfOrigin
+            - countryOfDestinationOfGoods
+            - railwayStation
+            - countryOfSource
+            - building
+            - beginningOfChargeableSection
+            - baseportOfDischarge
+            - baseportOfLoading
+            - exportationCountry
+            - countryOfUltimateDestination
+            - consignmentFinalExportationCountry
+            - consignmentFirstDestinationCountry
+            - countryOfProduction
+            - countryOfTrading
+            - consignmentEntryCustomsOfficeLocation
+            - consignmentExitCustomsOfficeLocation
+            - placeOfCustomsExamination
+            - placeOfAuthenticationOfDocument
+            - customsOfficeOfDestination(transit)
+            - regionOfDespatch
+            - regionOfDestination
+            - regionOfProduction
+            - transitCountry
+            - transitCustomsOfficeLocation
+            - countryOfInvalidTransitGuarantee
+            - countryOfDestination(transit)
+            - chargeAndFreightDueFrom
+            - manufacturingDepartment
+            - freightChargePayableToLocation
+            - endOfChargeableSection
+            - placeOfPayment
+            - fullTrackLoadingOrUnloading
+            - placeOfLoss
+            - placeOfArrival
+            - nextPortOfCall
+            - on-carriagePort
+            - sub-projectLocation
+            - firstOptionalPlaceOfDischarge
+            - finalPortOrPlaceOfDischarge
+            - expressRailwayStation
+            - mixedCargoRailwayStation
+            - secondOptionalPlaceOfDischarge
+            - nextNon-dischargePortOfCall
+            - thirdOptionalPlaceOfDischarge
+            - reconsolidationPoint
+            - fourthOptionalPlaceOfDischarge
+            - billOfLadingReleaseOffice
+            - transhipmentExcludingThisPlace
+            - transhipmentLimitedToThisPlace
+            - originalPortOfLoading
+            - firstPortOfCall-Non-discharging
+            - firstPortOfCall-Discharging
+            - place/portOfFirstEntry
+            - placeOfDespatch
+            - fifthOptionalPlaceOfDischarge
+            - pre-carriagePort
+            - placeOfDelivery(byOnCarriage)
+            - transportContractPlaceOfAcceptance
+            - transportContractPlaceOfDestination
+            - countryOfValidTransitGuarantee
+            - place/portOfConveyanceInitialArrival
+            - placeOfReceipt
+            - placeOfRegistration
+            - specialTreatmentPlace
+            - placeOfDocumentIssue
+            - routing
+            - stationOfApplicationOfAdditionalCosts
+            - previousPortOfCall
+            - sailingDestinationArea
+            - placeOfLodgementOfDocuments
+            - optionalPlaceOfDischarge
+            - placeOfEmptyEquipmentDespatch
+            - placeOfEmptyEquipmentReturn
+            - place/portOfWarehouseEntry
+            - countryOfFirstSale
+            - placeOfTransfer
+            - placeOfDeconsolidation
+            - placeOfConsumption
+            - regionOfOrigin
+            - placeOfConsolidation
+            - rateCombinationPoint
+            - placeOfProlongationDecisionOfDeliveryDelay
+            - rechargingPlace/location
+            - customsOfficeOfDespatch
+            - regionOfEquipmentAvailability
+            - countryOfDespatch
+            - customsOfficeOfExport
+            - freeZoneOfExport
+            - regionOfExport/despatch
+            - placeOfCollection
+            - customsOfficeOfDeparture
+            - transitGuaranteeCustomsOfficeLocation
+            - countryOfTranshipment
+            - customsOfficeOfDestination
+            - wagon-loadRailwayStation
+            - siding
+            - lastPlace/portOfCallOfConveyance
+            - countryOfPreviousCustomsProcedure
+            - customsOfficeOfRegistrationOfPreviousCustomsDeclaration
+            - participantSenderLocation
+            - wageNegotiationDistrict
+            - placeOfUltimateDestinationOfConveyance
+            - placeOfLoadingOfEmptyEquipment
+            - placeOfDischargeOfEmptyEquipment
+            - regionOfDelivery
+            - petroleumWarehouse
+            - placeOfEntry(customs)
+            - livingAnimalsCarePlace
+            - re-icingPlace
+            - weightingPlace
+            - marshallingYard
+            - stoppingStation
+            - loadingDock
+            - portConnection
+            - placeOfExpiry
+            - placeOfNegotiation
+            - claimsPayablePlace
+            - documentaryCreditAvailableIn
+            - transportMeansStowageLocation
+            - forTransportationTo
+            - loadingOnBoard/despatch/takingInChargeAt/from
+            - containerStackPosition
+            - privateBox
+            - nextPortOfDischarge
+            - portOfCall
+            - place/locationOfOn-hire
+            - place/locationOfOff-hire
+            - otherCarriersTerminal
+            - countryOfValueAddedTax(vat)Jurisdiction
+            - contactLocation
+            - additionalInternalDestination
+            - foreignPortOfCall
+            - maintenanceLocation
+            - placeOrLocationOfSale
+            - directInvestmentCountry
+            - berth
+            - constructionCountry
+            - donationActingCountry
+            - paymentTransactionCountry
+            - physicalPlaceOfReturnOfItem
+            - relayPort
+            - finalPortOfDischarge
+            - placeOfDestinationForPre-stackingPriorToStowage
+            - reportingLocation
+            - transportContractPlaceOfDespatch
+            - placeOfResidence
+            - activityLocation
+            - pick-upLocation
+            - constructionSite
+            - placeOfEmbarkation
+            - placeOfDisembarkation
+            - personBirthLocation
+            - registeredOffice
+            - placeOfIncorporation
+            - placeOfBusiness
+            - physicalLocation
+            - locationToSendMail
+            - foreignRegistrationLocation
+            - taxFiledFromLocation
+            - filingLocation
+            - formerLocation
+            - headOffice
+            - property
+            - correctLocation
+            - branchLocation
+            - formerRegisteredLocation
+            - futureLocation
+            - changedToLocation
+            - placeOfInquiry
+            - originalLocation
+            - countryOfLastSource
+            - placeOfHandling
+            - countryOfOriginAsDefinedByTransportationAgency
+            - terminal
+            - sampleLocation
+            - hospitalAdvancedDependencyUnit(adu)
+            - hospitalNeonatalIntensiveCareUnit(nicu)
+            - hospitalPaediatricCareUnit(pcu)
+            - hospitalIntensiveCareUnit(icu)
+            - hospitalLuxuryRoom
+            - hospitalSharedRoom
+            - hospitalPrivateRoom
+            - biddingArea
+            - priceArea
+            - countryOfDestinationOfEquipment
+            - aircraftAirportStand
+            - airportPassengerTerminal
+            - previousBerth
+            - nextBerth
+            - entityLocation
+            - goodsDepot
+            - disinfectingPlace
+            - harbourRailStation
+            - placeOfLiveAnimalCare
+            - phytosanitaryControlPlace
+            - placeForRe-icingOrDe-icing
+            - placeOfRefuelling
+            - placeOfProvisionOfAnUnexpectedService
+            - privateContainerTerminal
+            - railwayContainerTerminal
+            - inspectionSite
+            - requestOnlyStop
+            - gridArea
+            - sourcePowerArea
+            - sinkPowerArea
+            - scheduledBerth
+            - 'scheduledBerth,Bow'
+            - 'scheduledBerth,Stern'
+            - balanceSettlementArea
+            - marketArea
+            - meteringGridArea
+            - climateZone
+            - countryOfBirth
+            - countryOfFattening
+            - countryOfSlaughter
+            - countryOfMeatCutting
+            - meatCuttingLocation
+            - slaughterhouse
+            - countryOfMeatMincing
+            - placeOfDischargeAndLoading
+            - cargoFacilityLocation
+            - touristPointOfInterest
+            - customsOfficeOfPayment
+            - conveyanceFacilityLocationAtDeparture
+            - conveyanceFacilityLocationAtArrival
+            - busStation
+            - ferryTerminal
+            - placeOfPacking
+            - countryOfAssembly
+            - townSalesOffice
+            - travelAgency
+            - inlandClearanceDepot
+            - placeOfFinalProduction
+            - placeOfGrowth
+            - placeOfIntermediateProduction
+            - placeOfNutrientOrigin
+            - placeOfPackageMaterialProduction
+            - placeOfProcessing
+            - placeOfSpeciesOrigin
+            - placeOfCatch
+            - governmentAppealOffice
+            - regulatoryOfficeOfCross-borderGoodsEntry
+            - regulatoryOfficeOfCross-borderGoodsExit
+            - governmentApprovedEstablishment
+            - freeTradeZone
+            - placeOfPhysicalExamination
+            - permittedLocation
+            - landingLocation
+            - placeOfLoadingOnFinalMeansOfTransport
+            - placeOfRegulatoryDeclarationReview
+            - travelDocumentIssuingCountryOrPoliticalEntity
+            - 'compliantFacility,Registered'
+            - bondedWarehouse
+            - 'goodsDestructionSite,Designated'
+            - 'goodsDisposalLocation,Designated'
+            - incinerationFacility
+            - laboratory
+            - placeOfAssembly
+            - processingSite
+            - quarantineFacility
+            - reclamationFacility
+            - refinery
+            - smelter
+            - prescribedTreatmentFacility
+            - embassy
+            - regionOfSource
+            - regionOfStorage
+            - shipSecurityIncidentLocation
+            - ship-to-shipActivityLocation
+            - countryOfLastProcessing
+            - fishingVessel
+            - locationOfStatus
+            - locationOfMeter
+            - countryOfProvenance
+            - meatMincingPlant
+            - placeOfFattening
+            - animalBirthPlace
+            - globalGoodAgriculturalPracticeNumber(ggn)
+            - mutuallyDefined
+    Logistics_TransportMeans:
+      type: object
+      properties:
+        iD:
+          items:
+            description: >-
+              An identifier of this logistics means of transport, such as the
+              International Maritime Organization number of a vessel.
+            type: string
+          type: array
+        name:
+          description: 'The name, expressed as text, of this logistics means of transport.'
+          type: string
+        aftDraughtLevelMeasure:
+          description: The draught level measured at the aft end of this transport means.
+          type: string
+        conferenceCode:
+          description: >-
+            The code specifying the conference for this logistics means of
+            transport.
+          type: string
+        draughtLevelMeasure:
+          description: >-
+            The measure of the draught level of this logistics means of
+            transport.
+          type: string
+        driverAccompaniedIndicator:
+          description: >-
+            The indication of whether or not this logistics means of transport
+            is accompanied by a driver.
+          type: string
+        forwardDraughtLevelMeasure:
+          description: The draught level measured at the fore end of this transport means.
+          type: string
+        helipadIndicator:
+          description: >-
+            The indication of whether or not there is a helipad on this
+            logistics means of transport.
+          type: string
+        iSPSSecurityLevelCode:
+          description: >-
+            The code specifying the International Ship and Port facility
+            Security (ISPS) level assigned to this logistics means of transport.
+          type: string
+        loadedCargoMeasure:
+          description: >-
+            The measure of the cargo loaded onto this logistics means of
+            transport, such as the number of barrels of oil or other quantity of
+            breakbulk cargo.
+          type: string
+        manoeuvringSpeed:
+          description: >-
+            The manoeuvring speed measured for this logistics means of
+            transport.
+          type: string
+        sequenceNumber:
+          description: >-
+            The sequence number differentiating this logistics transport means
+            from others.
+          type: string
+        typeCode:
+          description: >-
+            The code specifying the type of logistics means of transport
+            (Reference UNECE Recommendation 28).
+          type: string
+          enum:
+            - '1'
+            - truck
+            - 'truck,Tanker'
+            - tractor
+            - van
+            - tiptanker
+            - 'truck,DryBulk'
+            - 'truck,Container'
+            - 'carrier,Car'
+            - 'truck,Reefer'
+            - 'multimodal,TypeUnknown'
+            - 'fixedTransportInstallation,TypeUnknown'
+            - pipeline
+            - powerline
+            - 'vessel,TypeUnknown'
+            - motorFreighter
+            - 'motorFreighter,Tug'
+            - 'motorTanker,Tug'
+            - motorFreighterWithOneOrMoreShipsAlongside
+            - motorFreighterWithTanker
+            - motorFreighterPushingOneOrMoreFreighters
+            - generalCargoVessel
+            - unitCarrier
+            - bulkCarrier
+            - tanker
+            - liquefiedGasTanker
+            - otherSpecialTanker
+            - cargoAndPassengerVessel
+            - passengerShip
+            - assistanceVessel
+            - otherSea-goingVessel
+            - workShip
+            - pushBoat
+            - dredger
+            - fishingBoat
+            - researchAndEducationShip
+            - navyVessel
+            - 'structure,Floating'
+            - pleasureBoat
+            - speedboat
+            - sailingBoatWithAuxiliaryMotor
+            - sailingYacht
+            - boatForSportFishing
+            - 'craft,Pleasure,LongerThan20Metres'
+            - 'craft,Pleasure,SmallerThan20Metres'
+            - 'craft,Other,ExtraDefinitionsAndSpecifications'
+            - 'craft,Other,Recreational'
+            - fastShip
+            - hydrofoil
+            - 'catamaran,Fast'
+            - 'train,Railroad'
+            - 'train,Passenger'
+            - 'train,Freight'
+            - 'truck,Mail'
+            - truckDump
+            - 'truck,Forklift'
+            - 'loader,Shovel'
+            - 'truck,Platform,Fixed'
+            - 'carrier,Straddle'
+            - 'crane,Mobile'
+            - bus
+            - 'van,Delivery'
+            - 'van,Light'
+            - 'van,Furniture'
+            - 'tractor,Industrial'
+            - 'truck,FreezerWithIsothermicTrailer,'
+            - 'truck,IsothermicWithIsothermicTrailer'
+            - 'truck,RefrigeratedWithIsothermicTrailer'
+            - 'truck,FreezerWithRefrigeratedTrailer'
+            - 'truck,IsothermicWithRefrigeratedTrailer'
+            - 'truck,OpeningFloor,WithExtendableTrailer'
+            - 'truck,Rigid,WithTankAndTankTrailer'
+            - 'truck,BulkWithTankTrailer'
+            - 'truck,RigidWithTankAndBulkTrailer'
+            - 'truck,BulkWithBulkTrailer'
+            - '372'
+            - '373'
+            - '374'
+            - '375'
+            - '376'
+            - '377'
+            - 'truck,TautlinerWithFurnitureTrailer'
+            - '379'
+            - '380'
+            - '381'
+            - '382'
+            - 'truck,OpeningFloorWithGondolaTrailer'
+            - 'truck,BulkWithGondolaTrailer'
+            - 'truck,Tip-upWithExtendableGondolaTrailer'
+            - 'truck,TautlinerWithExtendableGondolaTrailer'
+            - 'truck,Tautliner,RemovableRoofWithExtendableGondolaTrailer'
+            - 'truck,OpeningFloorWithExtendableGondolaTrailer'
+            - 'truck,BulkWithExtendableGondolaTrailer'
+            - 'truck,Tip-upTruckWithOpeningFloorTrailer'
+            - 'truck,TautlinerWithOpeningFloorTrailer'
+            - 'truck,Tautliner,RemovableRoof,WithOpeningFloorTrailer'
+            - 'truck,Opening-floorWithOpening-floorTrailer'
+            - 'truck,BulkTruckWithOpening-FloorTrailer'
+            - 'truck,WithTrailer'
+            - 'truck,Tilt,WithTiltTrailer'
+            - 'truck,Refrigerated,WithRefrigeratedTrailer'
+            - 'truck,FreezerWithFreezerTrailer'
+            - 'truck,RemovalWithRemovalTrailer'
+            - motorTanker
+            - containerVessel
+            - gasTanker
+            - motorFreighterPushingAtLeastOneTank-ship
+            - 'tug,Freighter'
+            - 'tug,Tanker'
+            - 'tug,Freighter,Coupled'
+            - 'tug,Freighter/tanker,Coupled'
+            - freightBarge
+            - tankBarge
+            - freightBargeWithContainers
+            - 'tankBarge,Gas'
+            - 'pushtow,OneCargoBarge'
+            - 'pushtow,TwoCargoBarges'
+            - 'pushtow,ThreeCargoBarges'
+            - 'pushtow,FourCargoBarges'
+            - 'pushtow,FiveCargoBarges'
+            - 'pushtow,SixCargoBarges'
+            - 'pushtow,SevenCargoBarges'
+            - 'pushtow,EightCargoBarges'
+            - 'pushtow,NineCargoBarges'
+            - 'pushtow,OneGas/tankBarge'
+            - 'pushtow,TwoBargesAtLeastOneTankerOrGasBarge'
+            - 'pushtow,ThreeBargesAtLeastOneTankerOrGasbarge'
+            - 'pushtow,FourBargesAtLeastOneTankerOrGasbarge'
+            - 'pushtow,FiveBargesAtLeastOneTankerOrGasbarge'
+            - 'pushtow,SixBargesAtLeastOneTankerOrGasbarge'
+            - 'pushtow,SevenBargesAtLeastOneTankerOrGasbarge'
+            - 'pushtow,EightBargesAtLeastOneTankerOrGasbarge'
+            - 'pushtow,NineOrMoreBargesAtLeastOneTankerOrGasbarge'
+            - 'tug,Single'
+            - 'tug,OneOrMoreTows'
+            - 'tug,AssistingAVesselOrLinkedCombination'
+            - 'pushboat,Single'
+            - 'passengerShip,Ferry,RedCrossShip,CruiseShip'
+            - serviceVessel
+            - >-
+              vessel,WorkMaintenanceCraft,FloatingDerrick,Cable-ship,Buoy-ship,Dredge.
+            - 'object,Towed,NotOtherwiseSpecified.'
+            - fishingboat848
+            - bunkership
+            - 'barge,Tanker,Chemical'
+            - 'object,NotOtherwiseSpecified.'
+            - grainVessel
+            - timber/logCarrier
+            - woodChipsVessel
+            - steelProductsVessel
+            - 'carrier,GeneralCargo/container'
+            - temperatureControlledCargoVessels
+            - fullContainerShip/cellularVessel
+            - roroVessel
+            - carCarrier
+            - livestockCarrier
+            - bargeCarrier–LashShip
+            - chemicalCarrier
+            - irradiatedFuelCarrier
+            - heavyCargoVessel
+            - roro/containerVessel
+            - dryBulkCarrier
+            - oreCarrier
+            - cementCarrier
+            - gravelCarrier
+            - coalCarrier
+            - crudeOilTanker
+            - 'chemicalTanker,Coaster'
+            - 'chemicalTanker,DeepSea'
+            - oilAndOtherDerivativesTanker
+            - lpgTanker
+            - lngTanker
+            - lng/lpgTanker
+            - asphalt/bitumenTanker
+            - molassesTanker
+            - vegetableOilTanker
+            - cruiseShip
+            - ferry
+            - otherPassengerShip
+            - 'passengerShip,Sailing'
+            - 'tug,WithoutTow'
+            - 'tug,WithTow'
+            - salvageVessel
+            - rescueVessel
+            - oilCombatVessel
+            - oilRig
+            - hospitalVessel
+            - pilotBoat
+            - patrol/measureShip
+            - supplyVessel
+            - offshoreSupportVessel
+            - pontoon
+            - stoneDumpingVessel
+            - cableLayer
+            - buoyageVessel
+            - icebreaker
+            - pipelayingVessel
+            - trawler
+            - cutter
+            - factoryShip
+            - fisheryResearchVessel
+            - climateRegistrationVessel
+            - shipForEnvironmentalMeasurement
+            - scientificVessel
+            - sailingSchoolShip
+            - trainingVessel
+            - 'crane,Floating'
+            - 'dock,Floating'
+            - 'train,SuperExpress'
+            - 'train,Sleeper'
+            - 'train,Passenger,HiredGroup'
+            - blocktrain
+            - 'train,Container'
+            - 'train,WithOneWagon'
+            - 'train,WithMoreThanOneAndLessThan20Wagons'
+            - 'train,WithMoreThan20Wagons'
+            - 'truck,TautlinerWithRemovalTrailer'
+            - 'truck,TautlinerWithRemovableRoofAndRemovalTrailer'
+            - 'car,WithCaravan'
+            - 'truck,Tautliner,25Tonne'
+            - 'truck,Tautliner,25TonneWithRemovableRoof'
+            - 'lorry,Articulated,FlatBed,25Tonne'
+            - 'lorry,Articulated,FlatBed,24Tonne,With10MetreCrane'
+            - 'lorry,Articulated,FlatBed,24Tonne,With15MetreCrane'
+            - 'lorry,Articulated,FlatBed,24Tonne,With18MetreCrane'
+            - 'lorry,Articulated,FlatBed,10Tonne'
+            - 'truck,Tautliner,25Tonne,With90CubicMetreTrailer'
+            - 'truck,Tautliner,25Tonne,With120CubicMetreTrailer'
+            - 'lorry,FlatWithTrailerAnd10MetreCrane'
+            - 'lorry,ArticulatedWithTank'
+            - 'lorry,Flat,15Tonne'
+            - 'lorry,Flat,15TonneWithCrane'
+            - 'truck,Isothermic'
+            - 'truck,Refrigerated'
+            - 'van,Freezer'
+            - 'van,Isothermic'
+            - 'van,Refrigerated'
+            - 'truck,Bulk'
+            - 'truck,Tip-up'
+            - 'truck,Articulated,Tip-up'
+            - 'truck,Rigid,WithTank'
+            - 'truck,Tautliner'
+            - 'truck,Tautliner,WithRemovableRoof'
+            - 'truck,WithOpeningFloor'
+            - 'truck,Freezer'
+            - 'truck,WithCraneForMovingGoods,WithoutTrailer'
+            - 'truck,WithCraneForMovingGoods,WithTrailer'
+            - 'truck,WithCraneForLiftingGoods,WithoutTrailer'
+            - 'truck,WithCraneForLiftingGoods,WithTrailer'
+            - taxiCab
+            - 'truck,Furniture'
+            - 'truck,Hydrant'
+            - car
+            - 'truck,WithTail-lift'
+            - armouredVehicle
+            - 'car,Elevator'
+            - 'bus,WithTrailer'
+            - 'bus,Highway'
+            - 'bus,Sightseeing'
+            - 'bus,Airport/city'
+            - 'aircraft,TypeUnknown'
+            - 'mail,TypeUnknown'
+            - 'motorTanker,LiquidCargo,TypeN'
+            - 'motorTanker,LiquidCargo,TypeC'
+            - 'motorTanker,DryCargo'
+            - "tankBarge,LiquidCargo,Type\_n"
+            - "tankBarge,LiquidCargo,Type\_c"
+            - 'tankBarge,DryCargo'
+            - ferry8441
+            - redCrossShip
+            - cruiseship8443
+            - passengerShipWithoutAccommodation
+            - day-tripHighSpeedVessel
+            - day-tripHydrofoilVessel
+            - sailingCruiseShip
+            - sailingPassengerShipWithoutAccommodation
+            - servicevessel8451
+            - policePatrolVessel
+            - portServiceVessel
+            - navigationSurveillanceVessel
+        typeText:
+          description: 'The type, expressed as text, of this logistics means of transport.'
+          type: string
+        wasteReportingExemptionIndicator:
+          description: >-
+            The indication of whether or not there is a waste reporting
+            exemption for this logistics means of transport.
+          type: string
+        TransportMeansParty:
+          allOf:
+            - $ref: '#/components/schemas/Trade_PartyIds'
+            - $ref: '#/components/schemas/TransportMeansParty'
+            - type: object
+        Trade_Party:
+          allOf:
+            - $ref: '#/components/schemas/Trade_PartyIds'
+            - type: object
+        registrationEvent:
+          items:
+            allOf:
+              - $ref: '#/components/schemas/Transport_EventIds'
+              - type: object
+          type: array
+    Trade_PartyIds:
+      type: object
+      properties:
+        iD:
+          description: A unique identifier of this trade party.
+          type: string
+        name:
+          description: 'The name, expressed as text, for this trade party.'
+          type: string
+    Transport_EventIds:
+      type: object
+      properties:
+        iD:
+          description: The unique identifier for this transport event.
+          type: string
+    Logistics_TransportMovement:
+      type: object
+      properties:
+        iD:
+          description: >-
+            The unique identifier for this logistics transport movement, such as
+            a voyage number, flight number, or trip number.
+          type: string
+        borderCrossingDateTime:
+          items:
+            description: >-
+              A date, time, date time or other date time value when this
+              logistics transport movement crosses a border.
+            type: string
+          type: array
+        cargoDescription:
+          description: >-
+            The textual description of the cargo for this logistics transport
+            movement.
+          type: string
+        closingDateTime:
+          description: >-
+            The date, time, date time, or other date time value by which cargo
+            should be loaded onto the means of transport for the departure of
+            this logistics transport movement.
+          type: string
+        consignmentQuantity:
+          description: The number of consignments in this logistics transport movement.
+          type: string
+        crewQuantity:
+          description: The number of crew members for this logistics transport movement.
+          type: string
+        dangerousGoodsIndicator:
+          description: >-
+            The indication of whether or not dangerous goods are carried for
+            this logistics transport movement.
+          type: string
+        information:
+          description: >-
+            Information, expressed as text, for this logistics transport
+            movement.
+          type: string
+        manifestOnboardIndicator:
+          description: >-
+            The indication of whether or not the manifest for this logistics
+            transport movement is onboard.
+          type: string
+        modeCode:
+          description: >-
+            The code specifying the mode, such as by air, sea, rail, road or
+            inland waterway, for this logistics transport movement.
+          type: string
+          enum:
+            - transportModeNotSpecified
+            - maritimeTransport
+            - railTransport
+            - roadTransport
+            - airTransport
+            - mail
+            - multimodalTransport
+            - fixedTransportInstallation
+            - inlandWaterTransport
+            - transportModeNotApplicable
+        modeText:
+          description: 'The mode, expressed as text, of this logistics transport movement.'
+          type: string
+        packageQuantity:
+          description: The number of packages in this logistics transport movement.
+          type: string
+        passengerQuantity:
+          description: The number of passengers for this logistics transport movement.
+          type: string
+        pilotageExemptionID:
+          description: >-
+            The identifier of a pilotage exemption for this logistics transport
+            movement.
+          type: string
+        sailingAdviceNotificationInformation:
+          description: >-
+            Sailing advice notification information, expressed as text, for this
+            logistics transport movement.
+          type: string
+        scheduledID:
+          items:
+            description: >-
+              A unique identifier for this logistics transport movement, such as
+              a voyage number, flight number, or trip number, as stated in a
+              schedule.
+            type: string
+          type: array
+        stageCode:
+          description: The code specifying the stage of this logistics transport movement.
+          type: string
+          enum:
+            - inlandTransport
+            - atTheStatisticalTerritoryLimit
+            - atArrival
+            - meansOfTransportAtTransit
+            - meansOfTransportCrossingTheRegulatoryBorder
+            - meansOfTransportAtFirstPortOfArrivalIntoRegulatoryTerritory
+            - pre-carriageTransport
+            - atBorder
+            - atDeparture
+            - atDestination
+            - mainCarriage-FourthCarrier
+            - mainCarriage-FifthCarrier
+            - mainCarriage-SixthCarrier
+            - mainCarriage-SeventhCarrier
+            - mainCarriage-EighthCarrier
+            - main-carriageTransport
+            - mainCarriage-FirstCarrier
+            - mainCarriage-SecondCarrier
+            - mainCarriage-ThirdCarrier
+            - inlandWaterwayTransport
+            - deliveryCarrierAllTransport
+            - secondPre-carriageTransport
+            - pre-acceptanceTransport
+            - secondOn-carriageTransport
+            - mainCarriage-NinthCarrier
+            - on-carriageTransport
+            - mainCarriage-TenthCarrier
+            - mainCarriage-EleventhCarrier
+            - mainCarriage-TwelfthCarrier
+            - overflight
+        statusCode:
+          description: >-
+            The code specifying a status for the logistics transport movement,
+            such as estimated or final.
+          type: string
+          enum:
+            - toBeDone
+            - done
+            - passedOn
+            - final
+            - subjectToFinalPayment
+            - minimum
+            - fixed
+            - maximum
+            - information
+            - 0DayAvailable
+            - 1DayAvailable
+            - 2DaysAvailable
+            - 3DaysAvailable
+            - uncollectedFunds
+            - nil
+            - noneAdvised
+            - requested
+            - freeOfCharge
+            - rounded
+            - permanent
+            - temporary
+            - subjectToAgreedCondition
+            - added
+            - deducted
+            - included
+            - subjectToClearing
+            - subjectToBilaterallyAgreedCondition
+            - transactionExpectedToBeExecuted
+            - debit
+            - credit
+            - positiveDebit
+            - negativeDebit
+            - positiveCredit
+            - negativeCredit
+            - started
+            - revised
+            - stolen
+            - assigned
+            - approved
+            - withdrawn
+            - rejected
+            - approvalPending
+            - postponed
+            - replaced
+            - noStatus
+            - doesNotExist
+            - draftVersion
+            - liveVersion
+            - expiredVersion
+            - part-time
+            - full-time
+            - notAStudent
+            - toBeExtracted
+            - impactedTooth
+            - extracted
+            - estimated
+            - undefinedIncident
+            - quantityError
+            - monetaryAmountError
+            - productNotOrdered
+            - uncertain
+            - significant
+            - notAccepted
+            - orderOrRequestCancelled
+            - negative
+            - unsignedAmount
+            - preliminary
+            - split
+            - recommended
+            - issued
+            - availableForOrdering
+            - notAvailableForOrdering
+            - confirmed
+            - expiryDateExceeded
+            - prescribed
+            - allPublishedIssuesSinceSubscriptionStart
+            - allPublishedIssuesSinceIssueSpecifiedInClaim
+            - allPublishedIssuesFromAndIncludingIssueSpecifiedInClaim
+            - specifiedPublishedIssueOnly
+            - publicationIssueCancelled
+            - definitive
+            - supplementary
+            - underLegalAppeal
+            - legallyAssigned
+            - updated
+            - ratified
+            - underConsideration
+            - countersued
+            - legalItemDismissed
+            - disputed
+            - enforced
+            - legalDocumentationFiled
+            - judgementForDefendant
+            - judgementForPlaintiff
+            - unchanged
+            - legalDocumentationNotFiled
+            - pending
+            - debtReleased
+            - lawSuitFiled
+            - satisfied
+            - setAside
+            - settled
+            - settledOutOfCourt
+            - stayed
+            - terminated
+            - arranged
+            - notArranged
+            - instructedToStart
+            - instructedToStop
+            - stockQuantityCorrected
+            - inactive
+            - active
+            - incompleteData
+            - bookedWhenOverbooked
+            - provisional
+            - ticketed
+            - washed
+            - unwashed
+            - outOfDate
+            - alternative
+            - complete
+            - partial
+            - contracted
+            - technicallyLimited
+            - adjusted
+            - expectedDelivery
+            - measured
+            - readyForLoading
+            - notHeatTreated
+            - heatTreated
+            - fullyCooked
+            - notFullyCooked
+            - hothouseGrown
+            - knockedDown
+            - solid
+            - liquid
+            - gas
+            - sludge
+            - normalSecurityMeasuresRequired
+            - heightenedSecurityMeasuresRequired
+            - exceptionalSecurityMeasuresRequired
+            - shipSecurityProceduresNotMaintainedDuringShip-to-shipActivity
+            - shipSecurityProcedureMaintainedDuringShip-to-shipActivity
+            - specialOrAdditionalSecurityMeasuresTaken
+            - securityRelatedMatterToReport
+            - transhipped
+            - 'provisioning,Fuel'
+            - 'provisioning,Water'
+            - 'provisioning,Oil'
+            - 'provisioning,Food'
+            - sanitaryOperations
+            - fumigationOperations
+            - disinfestationOperations
+            - deratizationOperations
+            - degasationOperations
+            - crewRecruitmentOperation
+            - trainingOperations
+            - salvageOperations
+            - 'loading,Alongside'
+            - 'loading,AtAnchor'
+            - 'unloading,AtWharf'
+            - unloadingOnBoard
+            - 'unloading,AtAnchor'
+            - 'loadingAndUnloading,Simultaneously'
+            - idleTimeOperations
+            - technicalOperations
+            - compassCalibration
+            - 'document,ClearanceOperation'
+            - customsFormalitiesOperation
+            - medicalControlOperations
+            - 'loading,PreparationFor'
+            - 'unloading,PreparationFor'
+            - 'unloading,PollutedBallast'
+            - obtainingDocumentsFromShippingRegister
+            - obtainingWreckageDocumentation
+            - 'waiting,ToEnterOrLeave'
+            - 'waiting,ForAPilot'
+            - 'waiting,ForATug'
+            - 'waiting,ForDayLight'
+            - 'waiting,DueToMeteorologicalCircumstances'
+            - 'waiting,ToFormAConvoy'
+            - 'waiting,ForActionByAuthorities'
+            - 'waiting,DueToABan'
+            - 'waiting,ForEntryPermission'
+            - 'waiting,DueToAnActionTakenByAuthorities'
+            - 'waiting,DueToTheTermsOfCharter'
+            - 'waiting,ForALocation'
+            - 'waiting,ForCargo'
+            - 'waiting,ForWorkers'
+            - 'waiting,ForStorageArea'
+            - 'waiting,ForEquipment'
+            - 'waiting,ForOtherMeansOfTransport'
+            - 'waiting,ForHandlingEquipment'
+            - 'waiting,ForOnBoardHandlingEquipment'
+            - 'waiting,ForCargoToBeReadyForLoading'
+            - 'waiting,ForMeansOfTransportToBeReady'
+            - 'waiting,DueToDamagedCargo'
+            - 'waiting,ForOperationalPeriods'
+            - 'waiting,ForRepairAnd/orMaintenanceOfTheMeansOfTransport'
+            - 'waiting,ForRepairAnd/orMaintenanceOfHandlingEquipment'
+            - embarkingPassengersFromTender
+            - 'waiting,ForACounterConvoyToPass'
+            - deliveryAddressOutsideDeliveryArea
+            - 'arrival,AfterMeansOfTransportDeparted'
+            - 'deliveryRefused,Agent'
+            - 'seals,Replaced'
+            - 'delivery,Scheduled'
+            - 'delivery,UnsuccessfulAttempt'
+            - 'deliveryNotCompleted,BusinessClosed'
+            - 'delivery,ChangedSchedule'
+            - 'delivery,FurtherAddressNeeded'
+            - computerSystemNotInOperation
+            - 'delivery,AwaitingCreditApproval'
+            - 'delivery,AwaitingCustomerArrangements'
+            - damaged
+            - 'deliveryPending,AwaitingSpecifiedDates/times/periods'
+            - destinationIncorrect
+            - derailment
+            - 'delivery,IndustrialDispute'
+            - operationAffectedByCustomerAction
+            - 'delivery,EquipmentFailure'
+            - inspectionRequiredByAuthority
+            - exportSuspended
+            - 'missing,GoodsItem'
+            - importSuspended
+            - incorrectPicklist
+            - incorrectAddress
+            - industrialDispute
+            - 'waiting,ForInstructions'
+            - 'meansOfTransport,Damaged'
+            - mechanicalBreakdown
+            - mechanicalInspectionRequired
+            - 'missing,Document'
+            - newDeliveryArrangementsAdvised
+            - noRecipientContactInformation
+            - 'collection/pick-up,PackageNotAvailable'
+            - trackingNumberUnknown
+            - transportPaymentNotReceived
+            - 'refused,Non-paymentByPayer'
+            - 'refused,NoReasonGiven'
+            - 'delivery,ScheduledPastCut-offTime'
+            - shuntedToSiding
+            - signatureNotRequired
+            - specialServiceRequired
+            - trackingInformationUnavailable
+            - reasonUnknown
+            - 'deliveryDelayed,AdverseWeatherConditions'
+            - freeStorageTimeExpired
+            - 'delivery,ConsigneeAbsent'
+            - 'delayedOperation,LocalCircumstances'
+            - 'delayedOperation,Consignee''sInstructions'
+            - 'delayedOperation,Consignor''sInstructions'
+            - delayedOperation
+            - incompleteAddress
+            - 'deliveryRefused,PurchaseOrderCancelled'
+            - 'deliveryRefused,ReturnToTheConsignor'
+            - 'deliveryRefused,InconsistentWithPurchaseOrder'
+            - 'deliveryRefused,IncorrectDeliveryDate'
+            - 'deliveryRefused,AutomaticReturn'
+            - 'deliveryRefused,DuplicateDelivery'
+            - 'deliveryRefused,InstructionsRequested'
+            - 'deliveryRefused,Consignee''sCondition'
+            - 'deliveryRefused,DeliveryIncomplete'
+            - 'deliveryRefused,NotOrdered'
+            - 'deliveryRefused,RemainderNotAccepted'
+            - 'deliveryRefused,SpoiltState'
+            - 'missing,Contents'
+            - notOnPackageList
+            - 'deliveryRefused,CollectFreightChargesNotPaid'
+            - 'deliveryRefused,ReimbursementNotPaid'
+            - 'deliveryRefused,Opened'
+            - 'deliveryRefused,CommercialDispute'
+            - 'deliveryRefused,ErrorOnProductOrPackaging'
+            - 'deliveryRefused,DeliveryDate/timeChanged'
+            - 'document,ReceivedWithoutGoods'
+            - 'goods,ReceivedWithoutDocumentation'
+            - overcarriedConsignment
+            - 'document,Found'
+            - damagedButDeliverable
+            - spoilt
+            - packaging/equipmentOpened
+            - processedAsContractuallyAgreed
+            - claimFolderOpened
+            - 'moved,Completed'
+            - returnedByRecipient
+            - 'delayed,AtOrigin'
+            - 'held,ByLogisticServiceProvider'
+            - incidentOccurredButAcceptedByOrderingParty
+            - deliveryParty'PremisesClosedDuringNormalHours
+            - 'deliveryIncomplete,TimeShortage'
+            - 'despatch,PreparationError'
+            - undefinedIncidentAttributedToLogisticServerProvider
+            - 'instructionToDespatch,Received'
+            - 'despatch,UnderPreparation'
+            - returnInProgress
+            - 'instructionToDespatch,Cancelled'
+            - 'deliveryRefused,ByRecipient'
+            - 'goods,HeldByThirdPartyOnInstructionFromOwner'
+            - weightOrVolumeLoss
+            - 'moved,Internally'
+            - consignmentPartiallyStolen
+            - consignmentPartiallyLostOrMissing
+            - destroyed
+            - actionByLogisticsServiceProvider
+            - actionByLogisticsServiceProviderOnInstructionByOwner
+            - 'document,Refused'
+            - 'seals,Damaged'
+            - 'seals,Broken'
+            - 'seals,Tampered'
+            - 'collection/pick-up,BusinessClosed'
+            - 'collection/pick-up,ChangedSchedule'
+            - 'collection/pick-up,FurtherAddressNeeded'
+            - 'collection/pick-up,IndustrialDispute'
+            - 'collection/pick-up,EquipmentFailure'
+            - 'document,Incorrect'
+            - 'collection/pick-up,ScheduledPastCut-offTime'
+            - 'collection/pick-up,AdverseWeatherConditions'
+            - 'unloading,CompletedFromAMeansOfTransport'
+            - deliverable
+            - notDeliverable
+            - handedOver
+            - signatureRequired
+            - definedIncidentAttributedToLogisticServerProvider
+            - 'deliveryNotCompleted,BusinessClosed,InventoryCount'
+            - 'deliveryNotCompleted,BusinessClosedOnSaturday'
+            - 'deliveryNotCompleted,BusinessClosedOnNationalHoliday'
+            - 'enRoute,ViaLocalRoute'
+            - 'enRoute,ViaNationalRoute'
+            - 'enRoute,ViaInternationalRoute'
+            - 'transportTerminated,MailNotReceived'
+            - billOfLadingIssued
+            - 'cleared,ByLogisticsServiceProvider'
+            - 'delivery,Expected'
+            - measured362
+            - 'loading,Ready'
+            - 'arrival,AtYard'
+            - 'departure,FromYard'
+            - acceptedAtInterchangePoint
+            - 'alerted,NoActionTaken'
+            - transshipmentToAnotherWagon
+            - tripPlanRevisedManually
+            - specialWagonHandlingArranged
+            - 'equipment,Emptied'
+            - 'equipment,Loaded'
+            - 'equipment,HeldByTransportOperator'
+            - 'equipment,HeldByTerminalOperator'
+            - 'equipment,StoragePeriodAtTerminalExceeded'
+            - 'equipment,HeldByEquipmentOperator'
+            - 'equipment,NotReleasedByEquipmentOperator'
+            - deliveryOrderIssued
+            - clearedForContainerRelease
+        stayID:
+          description: >-
+            The unique identifier of a stay in a port, airport or other place of
+            service for this logistics transport movement.
+          type: string
+        terminalOperatorAssignedID:
+          items:
+            description: >-
+              A unique identifier for this logistics transport movement as
+              assigned by a terminal operator.
+            type: string
+          type: array
+        tradedParcelQuantity:
+          description: >-
+            The number of traded parcels of cargo being transported in this
+            logistics transport movement.
+          type: string
+        tradingConsolidatorAssignedID:
+          description: >-
+            The unique identifier for this logistics transport movement as
+            assigned by the trading consolidator.
+          type: string
+        transitDirectionCode:
+          description: >-
+            The code specifying the transit direction of this logistics
+            transport movement.
+          type: string
+          enum:
+            - buyerToSeller
+            - sellerToBuyer
+            - subcontractorToSeller
+            - sellerToDropShipDesignatedLocation
+            - sellerToFreightForwarder
+            - sellerToSubcontractor
+            - motherVesselToLighter
+            - lighterToMotherVessel
+            - mutuallyDefined
+        transportEquipmentQuantity:
+          description: >-
+            The number of pieces of transport equipment for this logistics
+            transport movement.
+          type: string
+        TransportMovementParty:
+          allOf:
+            - $ref: '#/components/schemas/Trade_PartyIds'
+            - $ref: '#/components/schemas/TransportMovementParty'
+            - type: object
+        TransportMovementEvent:
+          allOf:
+            - $ref: '#/components/schemas/Transport_Event'
+            - $ref: '#/components/schemas/TransportMovementEvent'
+            - type: object
+        Transport_Event:
+          $ref: '#/components/schemas/Transport_Event'
+        Trade_Party:
+          allOf:
+            - $ref: '#/components/schemas/Trade_PartyIds'
+            - type: object
+        itineraryRoute:
+          items:
+            allOf:
+              - $ref: '#/components/schemas/Transport_RouteIds'
+              - type: object
+          type: array
+        usedTransportMeans:
+          allOf:
+            - $ref: '#/components/schemas/Logistics_TransportMeansIds'
+            - type: object
+    Transport_RouteIds:
+      type: object
+      properties:
+        iD:
+          description: The unique identifier of this transport route.
+          type: string
+    Logistics_TransportMeansIds:
+      type: object
+      properties:
+        iD:
+          items:
+            description: >-
+              An identifier of this logistics means of transport, such as the
+              International Maritime Organization number of a vessel.
+            type: string
+          type: array
+        name:
+          description: 'The name, expressed as text, of this logistics means of transport.'
+          type: string
+    Specified_Period:
+      type: object
+      properties:
+        durationMeasure:
+          description: >-
+            A measure of the length of time for this specified time period such
+            as hours, days, weeks, months, years.
+          type: string
+        endDateTime:
+          description: >-
+            The date, time, date time or other date time value for the end of
+            this specified period of time.
+          type: string
+        startDateTime:
+          description: >-
+            The date, time, date time or other date time value for the start of
+            this specified period of time.
+          type: string
+    Trade_Party:
+      type: object
+      properties:
+        languageCode:
+          description: A code specifying a language for this trade party.
+          type: string
+          enum:
+            - Afar
+            - Abkhazian
+            - Avestan
+            - Afrikaans
+            - Akan
+            - Amharic
+            - Aragonese
+            - Arabic
+            - Assamese
+            - Avaric
+            - Aymara
+            - Azerbaijani
+            - Bashkir
+            - Belarusian
+            - Bulgarian
+            - Bihari languages
+            - Bislama
+            - Bambara
+            - Bengali
+            - Tibetan
+            - Breton
+            - Bosnian
+            - 'Catalan, Valencian'
+            - Chechen
+            - Chamorro
+            - Corsican
+            - Cree
+            - Czech
+            - >-
+              Church Slavic, Old Slavonic, Church Slavonic, Old Bulgarian, Old
+              Church Slavonic
+            - Chuvash
+            - Welsh
+            - Danish
+            - German
+            - 'Divehi, Dhivehi, Maldivian'
+            - Dzongkha
+            - Ewe
+            - 'Greek, Modern (1453-)'
+            - English
+            - Esperanto
+            - 'Spanish, Castilian'
+            - Estonian
+            - Basque
+            - Persian
+            - Fulah
+            - Finnish
+            - Fijian
+            - Faroese
+            - French
+            - Western Frisian
+            - Irish
+            - 'Gaelic, Scottish Gaelic'
+            - Galician
+            - Guarani
+            - Gujarati
+            - Manx
+            - Hausa
+            - Hebrew
+            - Hindi
+            - Hiri Motu
+            - Croatian
+            - 'Haitian, Haitian Creole'
+            - Hungarian
+            - Armenian
+            - Herero
+            - Interlingua (International Auxiliary Language Association)
+            - Indonesian
+            - 'Interlingue, Occidental'
+            - Igbo
+            - 'Sichuan Yi, Nuosu'
+            - Inupiaq
+            - Ido
+            - Icelandic
+            - Italian
+            - Inuktitut
+            - Japanese
+            - Javanese
+            - Georgian
+            - Kongo
+            - 'Kikuyu, Gikuyu'
+            - 'Kuanyama, Kwanyama'
+            - Kazakh
+            - 'Kalaallisut, Greenlandic'
+            - Central Khmer
+            - Kannada
+            - Korean
+            - Kanuri
+            - Kashmiri
+            - Kurdish
+            - Komi
+            - Cornish
+            - 'Kirghiz, Kyrgyz'
+            - Latin
+            - 'Luxembourgish, Letzeburgesch'
+            - Ganda
+            - 'Limburgan, Limburger, Limburgish'
+            - Lingala
+            - Lao
+            - Lithuanian
+            - Luba-Katanga
+            - Latvian
+            - Malagasy
+            - Marshallese
+            - Maori
+            - Macedonian
+            - Malayalam
+            - Mongolian
+            - MO
+            - Marathi
+            - Malay
+            - Maltese
+            - Burmese
+            - Nauru
+            - 'Bokmål, Norwegian; Norwegian Bokmål'
+            - 'Ndebele, North; North Ndebele'
+            - Nepali
+            - Ndonga
+            - 'Dutch, Flemish'
+            - 'Norwegian Nynorsk; Nynorsk, Norwegian'
+            - Norwegian
+            - 'Ndebele, South; South Ndebele'
+            - 'Navajo, Navaho'
+            - 'Chichewa, Chewa, Nyanja'
+            - 'Occitan (post 1500), Provençal'
+            - Ojibwa
+            - Oromo
+            - Oriya
+            - 'Ossetian, Ossetic'
+            - 'Panjabi, Punjabi'
+            - Pali
+            - Polish
+            - 'Pushto, Pashto'
+            - Portuguese
+            - Quechua
+            - Romansh
+            - Rundi
+            - 'Romanian, Moldavian, Moldovan'
+            - Russian
+            - Kinyarwanda
+            - Sanskrit
+            - Sardinian
+            - Sindhi
+            - Northern Sami
+            - Sango
+            - 'Sinhala, Sinhalese'
+            - Slovak
+            - Slovenian
+            - Samoan
+            - Shona
+            - Somali
+            - Albanian
+            - Serbian
+            - Swati
+            - 'Sotho, Southern'
+            - Sundanese
+            - Swedish
+            - Swahili
+            - Tamil
+            - Telugu
+            - Tajik
+            - Thai
+            - Tigrinya
+            - Turkmen
+            - Tagalog
+            - Tswana
+            - Tonga (Tonga Islands)
+            - Turkish
+            - Tsonga
+            - Tatar
+            - Twi
+            - Tahitian
+            - 'Uighur, Uyghur'
+            - Ukrainian
+            - Urdu
+            - Uzbek
+            - Venda
+            - Vietnamese
+            - Volapük
+            - Walloon
+            - Wolof
+            - Xhosa
+            - Yiddish
+            - Yoruba
+            - 'Zhuang, Chuang'
+            - Chinese
+            - Zulu
+            - mo
+        qualityAssuranceIndicator:
+          description: >-
+            The indication of whether or not this trade party is quality
+            assured.
+          type: string
+        roleCode:
+          items:
+            description: A code specifying the role of this trade party.
+            type: string
+          type: array
+      allOf:
+        - $ref: '#/components/schemas/Trade_PartyIds'
+        - type: object
+    Transport_Event:
+      type: object
+      properties:
+        actualArrivalDateTime:
+          description: >-
+            The date, time, date time or other date time value of the actual
+            arrival related to this transport event.
+          type: string
+        actualDepartureDateTime:
+          description: >-
+            The date, time, date time or other date time value of the actual
+            departure related to this transport event.
+          type: string
+        actualOccurrenceDateTime:
+          description: >-
+            The actual date, time, date time, or other date time value of the
+            occurrence of this transport event.
+          type: string
+        arrivalDateTime:
+          items:
+            description: >-
+              An arrival date, time, date time, or other date time value related
+              to this transport event.
+            type: string
+          type: array
+        departureDateTime:
+          items:
+            description: >-
+              A departure date, time, date time, or other date time value
+              related to this transport event.
+            type: string
+          type: array
+        description:
+          description: The textual description of this transport event.
+          type: string
+        estimatedOccurrenceDateTime:
+          description: >-
+            The estimated date, time, date time, or other date time value of the
+            occurrence of this transport event.
+          type: string
+        estimatedTransportMeansArrivalOccurrenceDateTime:
+          description: >-
+            The date, time, date time, or other date time value when the arrival
+            of a means of transport at the location of this transport event is
+            estimated to occur.
+          type: string
+        requestedOccurrenceDateTime:
+          description: >-
+            The requested date, time, date time, or other date time value of the
+            occurrence of this transport event.
+          type: string
+        scheduledArrivalDateTime:
+          description: >-
+            The date, time, date time or other date time value of the scheduled
+            arrival related to this transport event.
+          type: string
+        scheduledDepartureDateTime:
+          description: >-
+            The date, time, date time or other date time value of the scheduled
+            departure related to this transport event.
+          type: string
+        scheduledOccurrenceDateTime:
+          description: >-
+            The scheduled date, time, date time, or other date time value of the
+            occurrence of this transport event.
+          type: string
+        typeCode:
+          description: The code specifying the type of transport event.
+          type: string
+        unitQuantity:
+          description: The number of units for this transport event.
+          type: string
+        EventPeriod:
+          items:
+            allOf:
+              - $ref: '#/components/schemas/Specified_Period'
+              - $ref: '#/components/schemas/EventPeriod'
+              - type: object
+          type: array
+        Specified_Period:
+          items:
+            $ref: '#/components/schemas/Specified_Period'
+          type: array
+        cargoFacilityLocation:
+          allOf:
+            - $ref: '#/components/schemas/Logistics_LocationIds'
+            - type: object
+        certifyingParty:
+          items:
+            allOf:
+              - $ref: '#/components/schemas/Trade_PartyIds'
+              - type: object
+          type: array
+        conveyanceFacilityLocation:
+          allOf:
+            - $ref: '#/components/schemas/Logistics_LocationIds'
+            - type: object
+        occurrenceLocation:
+          allOf:
+            - $ref: '#/components/schemas/Logistics_LocationIds'
+            - type: object
+        relatedRoute:
+          allOf:
+            - $ref: '#/components/schemas/Transport_RouteIds'
+            - type: object
+      allOf:
+        - $ref: '#/components/schemas/Transport_EventIds'
+        - type: object
+    Logistics_LocationIds:
+      type: object
+      properties:
+        iD:
+          description: >-
+            A unique identifier for this logistics related location, such as a
+            United Nations Location Code (UNLOCODE) or GS1 Global Location
+            Number (GLN).
+          type: string
+        name:
+          description: 'A name, expressed as text, of this logistics related location.'
+          type: string
+    Transport_Route:
+      type: object
+      properties:
+        iD:
+          description: The unique identifier of this transport route.
+          type: string
+        departurePointText:
+          description: 'A departure point, expressed as text, for this transport route.'
+          type: string
+        description:
+          description: The textual description of this transport route.
+          type: string
+        frequencyTypeCode:
+          description: >-
+            The code specifying the type of frequency for this transport route,
+            such as weekly, bi-monthly or daily.
+          type: string
+        mapBinaryObject:
+          description: Binary object data that is the map of this transport route.
+          type: string
+        statusCode:
+          description: >-
+            The code specifying a status for a transport route, such as planned
+            or actual.
+          type: string
+          enum:
+            - toBeDone
+            - done
+            - passedOn
+            - final
+            - subjectToFinalPayment
+            - minimum
+            - fixed
+            - maximum
+            - information
+            - 0DayAvailable
+            - 1DayAvailable
+            - 2DaysAvailable
+            - 3DaysAvailable
+            - uncollectedFunds
+            - nil
+            - noneAdvised
+            - requested
+            - freeOfCharge
+            - rounded
+            - permanent
+            - temporary
+            - subjectToAgreedCondition
+            - added
+            - deducted
+            - included
+            - subjectToClearing
+            - subjectToBilaterallyAgreedCondition
+            - transactionExpectedToBeExecuted
+            - debit
+            - credit
+            - positiveDebit
+            - negativeDebit
+            - positiveCredit
+            - negativeCredit
+            - started
+            - revised
+            - stolen
+            - assigned
+            - approved
+            - withdrawn
+            - rejected
+            - approvalPending
+            - postponed
+            - replaced
+            - noStatus
+            - doesNotExist
+            - draftVersion
+            - liveVersion
+            - expiredVersion
+            - part-time
+            - full-time
+            - notAStudent
+            - toBeExtracted
+            - impactedTooth
+            - extracted
+            - estimated
+            - undefinedIncident
+            - quantityError
+            - monetaryAmountError
+            - productNotOrdered
+            - uncertain
+            - significant
+            - notAccepted
+            - orderOrRequestCancelled
+            - negative
+            - unsignedAmount
+            - preliminary
+            - split
+            - recommended
+            - issued
+            - availableForOrdering
+            - notAvailableForOrdering
+            - confirmed
+            - expiryDateExceeded
+            - prescribed
+            - allPublishedIssuesSinceSubscriptionStart
+            - allPublishedIssuesSinceIssueSpecifiedInClaim
+            - allPublishedIssuesFromAndIncludingIssueSpecifiedInClaim
+            - specifiedPublishedIssueOnly
+            - publicationIssueCancelled
+            - definitive
+            - supplementary
+            - underLegalAppeal
+            - legallyAssigned
+            - updated
+            - ratified
+            - underConsideration
+            - countersued
+            - legalItemDismissed
+            - disputed
+            - enforced
+            - legalDocumentationFiled
+            - judgementForDefendant
+            - judgementForPlaintiff
+            - unchanged
+            - legalDocumentationNotFiled
+            - pending
+            - debtReleased
+            - lawSuitFiled
+            - satisfied
+            - setAside
+            - settled
+            - settledOutOfCourt
+            - stayed
+            - terminated
+            - arranged
+            - notArranged
+            - instructedToStart
+            - instructedToStop
+            - stockQuantityCorrected
+            - inactive
+            - active
+            - incompleteData
+            - bookedWhenOverbooked
+            - provisional
+            - ticketed
+            - washed
+            - unwashed
+            - outOfDate
+            - alternative
+            - complete
+            - partial
+            - contracted
+            - technicallyLimited
+            - adjusted
+            - expectedDelivery
+            - measured
+            - readyForLoading
+            - notHeatTreated
+            - heatTreated
+            - fullyCooked
+            - notFullyCooked
+            - hothouseGrown
+            - knockedDown
+            - solid
+            - liquid
+            - gas
+            - sludge
+            - normalSecurityMeasuresRequired
+            - heightenedSecurityMeasuresRequired
+            - exceptionalSecurityMeasuresRequired
+            - shipSecurityProceduresNotMaintainedDuringShip-to-shipActivity
+            - shipSecurityProcedureMaintainedDuringShip-to-shipActivity
+            - specialOrAdditionalSecurityMeasuresTaken
+            - securityRelatedMatterToReport
+            - transhipped
+            - 'provisioning,Fuel'
+            - 'provisioning,Water'
+            - 'provisioning,Oil'
+            - 'provisioning,Food'
+            - sanitaryOperations
+            - fumigationOperations
+            - disinfestationOperations
+            - deratizationOperations
+            - degasationOperations
+            - crewRecruitmentOperation
+            - trainingOperations
+            - salvageOperations
+            - 'loading,Alongside'
+            - 'loading,AtAnchor'
+            - 'unloading,AtWharf'
+            - unloadingOnBoard
+            - 'unloading,AtAnchor'
+            - 'loadingAndUnloading,Simultaneously'
+            - idleTimeOperations
+            - technicalOperations
+            - compassCalibration
+            - 'document,ClearanceOperation'
+            - customsFormalitiesOperation
+            - medicalControlOperations
+            - 'loading,PreparationFor'
+            - 'unloading,PreparationFor'
+            - 'unloading,PollutedBallast'
+            - obtainingDocumentsFromShippingRegister
+            - obtainingWreckageDocumentation
+            - 'waiting,ToEnterOrLeave'
+            - 'waiting,ForAPilot'
+            - 'waiting,ForATug'
+            - 'waiting,ForDayLight'
+            - 'waiting,DueToMeteorologicalCircumstances'
+            - 'waiting,ToFormAConvoy'
+            - 'waiting,ForActionByAuthorities'
+            - 'waiting,DueToABan'
+            - 'waiting,ForEntryPermission'
+            - 'waiting,DueToAnActionTakenByAuthorities'
+            - 'waiting,DueToTheTermsOfCharter'
+            - 'waiting,ForALocation'
+            - 'waiting,ForCargo'
+            - 'waiting,ForWorkers'
+            - 'waiting,ForStorageArea'
+            - 'waiting,ForEquipment'
+            - 'waiting,ForOtherMeansOfTransport'
+            - 'waiting,ForHandlingEquipment'
+            - 'waiting,ForOnBoardHandlingEquipment'
+            - 'waiting,ForCargoToBeReadyForLoading'
+            - 'waiting,ForMeansOfTransportToBeReady'
+            - 'waiting,DueToDamagedCargo'
+            - 'waiting,ForOperationalPeriods'
+            - 'waiting,ForRepairAnd/orMaintenanceOfTheMeansOfTransport'
+            - 'waiting,ForRepairAnd/orMaintenanceOfHandlingEquipment'
+            - embarkingPassengersFromTender
+            - 'waiting,ForACounterConvoyToPass'
+            - deliveryAddressOutsideDeliveryArea
+            - 'arrival,AfterMeansOfTransportDeparted'
+            - 'deliveryRefused,Agent'
+            - 'seals,Replaced'
+            - 'delivery,Scheduled'
+            - 'delivery,UnsuccessfulAttempt'
+            - 'deliveryNotCompleted,BusinessClosed'
+            - 'delivery,ChangedSchedule'
+            - 'delivery,FurtherAddressNeeded'
+            - computerSystemNotInOperation
+            - 'delivery,AwaitingCreditApproval'
+            - 'delivery,AwaitingCustomerArrangements'
+            - damaged
+            - 'deliveryPending,AwaitingSpecifiedDates/times/periods'
+            - destinationIncorrect
+            - derailment
+            - 'delivery,IndustrialDispute'
+            - operationAffectedByCustomerAction
+            - 'delivery,EquipmentFailure'
+            - inspectionRequiredByAuthority
+            - exportSuspended
+            - 'missing,GoodsItem'
+            - importSuspended
+            - incorrectPicklist
+            - incorrectAddress
+            - industrialDispute
+            - 'waiting,ForInstructions'
+            - 'meansOfTransport,Damaged'
+            - mechanicalBreakdown
+            - mechanicalInspectionRequired
+            - 'missing,Document'
+            - newDeliveryArrangementsAdvised
+            - noRecipientContactInformation
+            - 'collection/pick-up,PackageNotAvailable'
+            - trackingNumberUnknown
+            - transportPaymentNotReceived
+            - 'refused,Non-paymentByPayer'
+            - 'refused,NoReasonGiven'
+            - 'delivery,ScheduledPastCut-offTime'
+            - shuntedToSiding
+            - signatureNotRequired
+            - specialServiceRequired
+            - trackingInformationUnavailable
+            - reasonUnknown
+            - 'deliveryDelayed,AdverseWeatherConditions'
+            - freeStorageTimeExpired
+            - 'delivery,ConsigneeAbsent'
+            - 'delayedOperation,LocalCircumstances'
+            - 'delayedOperation,Consignee''sInstructions'
+            - 'delayedOperation,Consignor''sInstructions'
+            - delayedOperation
+            - incompleteAddress
+            - 'deliveryRefused,PurchaseOrderCancelled'
+            - 'deliveryRefused,ReturnToTheConsignor'
+            - 'deliveryRefused,InconsistentWithPurchaseOrder'
+            - 'deliveryRefused,IncorrectDeliveryDate'
+            - 'deliveryRefused,AutomaticReturn'
+            - 'deliveryRefused,DuplicateDelivery'
+            - 'deliveryRefused,InstructionsRequested'
+            - 'deliveryRefused,Consignee''sCondition'
+            - 'deliveryRefused,DeliveryIncomplete'
+            - 'deliveryRefused,NotOrdered'
+            - 'deliveryRefused,RemainderNotAccepted'
+            - 'deliveryRefused,SpoiltState'
+            - 'missing,Contents'
+            - notOnPackageList
+            - 'deliveryRefused,CollectFreightChargesNotPaid'
+            - 'deliveryRefused,ReimbursementNotPaid'
+            - 'deliveryRefused,Opened'
+            - 'deliveryRefused,CommercialDispute'
+            - 'deliveryRefused,ErrorOnProductOrPackaging'
+            - 'deliveryRefused,DeliveryDate/timeChanged'
+            - 'document,ReceivedWithoutGoods'
+            - 'goods,ReceivedWithoutDocumentation'
+            - overcarriedConsignment
+            - 'document,Found'
+            - damagedButDeliverable
+            - spoilt
+            - packaging/equipmentOpened
+            - processedAsContractuallyAgreed
+            - claimFolderOpened
+            - 'moved,Completed'
+            - returnedByRecipient
+            - 'delayed,AtOrigin'
+            - 'held,ByLogisticServiceProvider'
+            - incidentOccurredButAcceptedByOrderingParty
+            - deliveryParty'PremisesClosedDuringNormalHours
+            - 'deliveryIncomplete,TimeShortage'
+            - 'despatch,PreparationError'
+            - undefinedIncidentAttributedToLogisticServerProvider
+            - 'instructionToDespatch,Received'
+            - 'despatch,UnderPreparation'
+            - returnInProgress
+            - 'instructionToDespatch,Cancelled'
+            - 'deliveryRefused,ByRecipient'
+            - 'goods,HeldByThirdPartyOnInstructionFromOwner'
+            - weightOrVolumeLoss
+            - 'moved,Internally'
+            - consignmentPartiallyStolen
+            - consignmentPartiallyLostOrMissing
+            - destroyed
+            - actionByLogisticsServiceProvider
+            - actionByLogisticsServiceProviderOnInstructionByOwner
+            - 'document,Refused'
+            - 'seals,Damaged'
+            - 'seals,Broken'
+            - 'seals,Tampered'
+            - 'collection/pick-up,BusinessClosed'
+            - 'collection/pick-up,ChangedSchedule'
+            - 'collection/pick-up,FurtherAddressNeeded'
+            - 'collection/pick-up,IndustrialDispute'
+            - 'collection/pick-up,EquipmentFailure'
+            - 'document,Incorrect'
+            - 'collection/pick-up,ScheduledPastCut-offTime'
+            - 'collection/pick-up,AdverseWeatherConditions'
+            - 'unloading,CompletedFromAMeansOfTransport'
+            - deliverable
+            - notDeliverable
+            - handedOver
+            - signatureRequired
+            - definedIncidentAttributedToLogisticServerProvider
+            - 'deliveryNotCompleted,BusinessClosed,InventoryCount'
+            - 'deliveryNotCompleted,BusinessClosedOnSaturday'
+            - 'deliveryNotCompleted,BusinessClosedOnNationalHoliday'
+            - 'enRoute,ViaLocalRoute'
+            - 'enRoute,ViaNationalRoute'
+            - 'enRoute,ViaInternationalRoute'
+            - 'transportTerminated,MailNotReceived'
+            - billOfLadingIssued
+            - 'cleared,ByLogisticsServiceProvider'
+            - 'delivery,Expected'
+            - measured362
+            - 'loading,Ready'
+            - 'arrival,AtYard'
+            - 'departure,FromYard'
+            - acceptedAtInterchangePoint
+            - 'alerted,NoActionTaken'
+            - transshipmentToAnotherWagon
+            - tripPlanRevisedManually
+            - specialWagonHandlingArranged
+            - 'equipment,Emptied'
+            - 'equipment,Loaded'
+            - 'equipment,HeldByTransportOperator'
+            - 'equipment,HeldByTerminalOperator'
+            - 'equipment,StoragePeriodAtTerminalExceeded'
+            - 'equipment,HeldByEquipmentOperator'
+            - 'equipment,NotReleasedByEquipmentOperator'
+            - deliveryOrderIssued
+            - clearedForContainerRelease
+        transportMeansText:
+          description: 'A means of transport, expressed as text, for this transport route.'
+          type: string
+        frequencyEffectivePeriod:
+          $ref: '#/components/schemas/Specified_Period'
+        itineraryStopEvent:
+          items:
+            $ref: '#/components/schemas/Transport_Event'
+          type: array
+        specifiedPeriod:
+          $ref: '#/components/schemas/Specified_Period'
+    TransportMeansParty:
+      type: object
+      properties:
+        role:
+          description: missing description
+          type: string
+          enum:
+            - operator
+            - owner
+            - serviceProvider
+            - ownerAgent
+            - iSSCIssuingAuthorityParty
+    TransportMovementEvent:
+      type: object
+      properties:
+        role:
+          description: missing description
+          type: string
+          enum:
+            - loadingEvent
+            - unloadingEvent
+            - arrivalEvent
+            - firstArrivalEvent
+            - departureEvent
+            - intermediateTransshipmentEvent
+            - callEvent
+            - borderCrossingEvent
+            - specifiedEvent
+    TransportMovementParty:
+      type: object
+      properties:
+        role:
+          description: missing description
+          type: string
+          enum:
+            - carrier
+            - consortiumCarrier
+            - nVOCCCarrier
+            - terminalOperator
+            - commodityConsolidator
+            - commodityConsolidatorAgent
+            - inspectionParty
+            - loadingInspectionParty
+            - unloadingInspectionParty
+            - stevedore
+            - notifiedParty
+            - documentaryInstructionsNotifiedParty
+            - sailingAdviceNotifiedParty
+            - carrierAgent
+    Vehicle:
+      type: object
+      properties: {}
+      allOf:
+        - $ref: '#/components/schemas/Logistics_TransportMeans'
+        - type: object
+    Vessel:
+      type: object
+      properties: {}
+      allOf:
+        - $ref: '#/components/schemas/Logistics_TransportMeans'
+        - type: object
+    Voyage:
+      type: object
+      properties: {}
+      allOf:
+        - $ref: '#/components/schemas/Logistics_TransportMovement'
+        - type: object
+    TransportEvents:
+      type: object
+      properties:
+        id:
+          description: missing description
+          type: string
+      allOf:
+        - $ref: '#/components/schemas/Transport_Event'
+        - type: object
+    Vehicles:
+      type: object
+      properties:
+        id:
+          description: missing description
+          type: string
+      required:
+        - id
+    Vessels:
+      type: object
+      properties:
+        id:
+          description: missing description
+          type: string
+      required:
+        - id
