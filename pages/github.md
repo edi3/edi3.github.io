@@ -27,7 +27,8 @@ The specification repository default structure:
 {edi3-reponame}/       -->        specs/{edi3-reponame}/{version}/
 - docs/                -->        - docs/
   - index.md           -->          - index.html
-  - swagger.yaml       -->          - swagger.yaml && redoc-static.html
+  - swagger.yaml       -->          - swagger.yaml
+  - swagger.md         -->          - swagger.html
 - resources/            X         (ignored, for files which doesn't need to be published - big reference files, for example)
 - .gitignore            X         (ignored)
 - LICENSE.txt           X         (ignored)
@@ -42,16 +43,30 @@ If a specification repository includes more than one specification, sub-director
 - docs/                -->        - docs/
   - {specname-1}/      -->          - {specname-1}/
     - index.md         -->            - index.html
-    - swagger.yaml     -->            - swagger.yaml && redoc-static.html
+    - swagger.yaml     -->            - swagger.yaml
+    - swagger.md       -->            - swagger.html
   - {specname-2}/      -->          - {specname-2}/
     - index.md         -->            - index.html
-    - swagger.yaml     -->            - swagger.yaml && redoc-static.html
+    - swagger.yaml     -->            - swagger.yaml
+    - swagger.md       -->            - swagger.html
 - resources/            X         (ignored, for files which doesn't need to be published - big reference files, for example)
 - .gitignore            X         (ignored)
 - LICENSE.txt           X         (ignored)
 - README.md             X         (ignored)
 - buildspec.yml         X         (ignored, a technical file for builds in AWS CodeBuild)
 ```
+
+# Open-API specifications publishing
+
+An Open-API specification can be easily published using SwaggerUI by adding a file with the `.md` extension and the following content:
+
+```
+---
+layout: swagger-ui
+api_url: ./swagger.yaml
+---
+```
+where `swagger.json` is the filename of the specification file and `./` is a relative path. Both YAML and JSON formats are supported. The path to the generated SwaggerUI page is the same to the `.md` filename. For example, if `swagger.md` page is added to `{edi3-reponame}/docs` next to `swagger.yaml` file, the rendered specification is available at `specs/{edi3-reponame}/{version}/swagger`. 
 
 # Publishing process
 
