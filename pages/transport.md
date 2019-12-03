@@ -18,7 +18,7 @@ The edi3 Transport Domain Specifications are based on the UN/CEFACT multi-modal 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
 | [Transport Domain Model](//edi3.org/specs/edi3-transport/develop/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-transport/develop/swagger){:target="_blank"} |  [Transport Domain Issues](https://github.com/edi3/edi3-transport/issues){:target="_blank"}  |
-| [Movements Specifications](//edi3.org/specs/edi3-transport/develop/edi3-movements) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-transport/develop/swagger){:target="_blank"} |  [Transport Domain Issues](https://github.com/edi3/edi3-transport/issues){:target="_blank"}  |
+| [Movements Specifications](//edi3.org/specs/edi3-transport/develop/edi3-movements) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-transport/develop/edi3-movements/Movements-baseline){:target="_blank"} |  [Transport Domain Issues](https://github.com/edi3/edi3-transport/issues){:target="_blank"}  |
 | [Consignments Specifications](//edi3.org/specs/edi3-transport/develop/edi3-consignments) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-transport/develop/swagger){:target="_blank"} |  [Transport Domain Issues](https://github.com/edi3/edi3-transport/issues){:target="_blank"}  |
 
 ## Known Implementations
