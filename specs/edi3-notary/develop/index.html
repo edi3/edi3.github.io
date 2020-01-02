@@ -218,9 +218,93 @@
 <ul>
 <li class="toc-entry toc-h2"><a href="#verification-method">Verification Method</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#overview-of-the-verification-methods">Overview of the verification methods</a></li>
+<li class="toc-entry toc-h3"><a href="#overview-of-the-verification-methods">Overview of the verification methods</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#testdocument-document-boolean">test(document: Document): boolean</a></li>
+<li class="toc-entry toc-h4"><a href="#skip-verificationfragment">skip(): VerificationFragment</a></li>
+<li class="toc-entry toc-h4"><a href="#verifydocument-document-verificationfragment">verify(document: Document): VerificationFragment</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h3"><a href="#verification-types">Verification Types</a></li>
+<li class="toc-entry toc-h3"><a href="#verifier">Verifier</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#default-verification-types-and-methods">Default Verification Types and Methods</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#document-integrity-document_integrity">Document Integrity (DOCUMENT_INTEGRITY)</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#openattestationhash">OpenAttestationHash</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#document-status-document_status">Document Status (DOCUMENT_STATUS)</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#openattestationethereumdocumentstoreissued">OpenAttestationEthereumDocumentStoreIssued</a></li>
+<li class="toc-entry toc-h4"><a href="#openattestationethereumdocumentstorerevoked">OpenAttestationEthereumDocumentStoreRevoked</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#issuer-identity-issuer_identity">Issuer Identity (ISSUER_IDENTITY)</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#openattestationdnstxt">OpenAttestationDnsTxt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#decentralised-document-rendering">Decentralised Document Rendering</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#status">Status</a></li>
+<li class="toc-entry toc-h2"><a href="#goal">Goal</a></li>
+<li class="toc-entry toc-h2"><a href="#frame-to-frame-communication">Frame-to-Frame Communication</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#from-host-to-frame-actions">From host to frame actions</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#render_document">RENDER_DOCUMENT</a></li>
+<li class="toc-entry toc-h4"><a href="#select_template">SELECT_TEMPLATE</a></li>
+<li class="toc-entry toc-h4"><a href="#print">PRINT</a></li>
+<li class="toc-entry toc-h4"><a href="#get_templates">GET_TEMPLATES</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#from-frame-to-host-actions">From frame to host actions</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#update_height">UPDATE_HEIGHT</a></li>
+<li class="toc-entry toc-h3"><a href="#obfuscate">OBFUSCATE</a></li>
+<li class="toc-entry toc-h3"><a href="#update_templates">UPDATE_TEMPLATES</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#selective-disclosure">Selective Disclosure</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#status-1">Status</a></li>
+<li class="toc-entry toc-h2"><a href="#goal-1">Goal</a></li>
+<li class="toc-entry toc-h2"><a href="#preparing-the-document">Preparing the document</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#salting-the-data">Salting the data</a></li>
+<li class="toc-entry toc-h3"><a href="#computing-individual-hashes">Computing individual hashes</a></li>
+<li class="toc-entry toc-h3"><a href="#computing-documents-targethash">Computing document’s targetHash</a></li>
+<li class="toc-entry toc-h3"><a href="#assembling-the-oa-document">Assembling the OA document</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#obfuscating-a-value">Obfuscating a value</a></li>
+<li class="toc-entry toc-h2"><a href="#check-integrity-of-the-document">Check integrity of the document</a></li>
+<li class="toc-entry toc-h2"><a href="#implementation">Implementation</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#references">References</a></li>
+<li class="toc-entry toc-h1"><a href="#annex">Annex</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#a-json-schema-definition">A: JSON Schema Definition</a></li>
+<li class="toc-entry toc-h2"><a href="#intellectual-property">Intellectual Property</a></li>
+<li class="toc-entry toc-h2"><a href="#license">License</a></li>
+<li class="toc-entry toc-h2"><a href="#change-process">Change Process</a></li>
+<li class="toc-entry toc-h2"><a href="#language">Language</a></li>
+<li class="toc-entry toc-h2"><a href="#glossary">Glossary</a></li>
+<li class="toc-entry toc-h2"><a href="#dependencies">Dependencies</a></li>
+<li class="toc-entry toc-h2"><a href="#related-information">Related Information</a></li>
 </ul>
 </li>
 </ul>
@@ -389,945 +473,944 @@
 
 <h3 id="overview-of-the-verification-methods">Overview of the verification methods</h3>
 
-<diagram>
+<p><img src="architecture.png" alt="docs" /></p>
 
-A verifier is made up of multiple `Verification Methods`. In the diagram above, `OpenAttestationDnsTxt, OpenAttestationEthereumDocumentStoreIssued` and `OpenAttestationHash` are examples of `Verification Methods` provided.
+<p>A verifier is made up of multiple <code class="highlighter-rouge">Verification Methods</code>. In the diagram above, <code class="highlighter-rouge">OpenAttestationDnsTxt, OpenAttestationEthereumDocumentStoreIssued</code> and <code class="highlighter-rouge">OpenAttestationHash</code> are examples of <code class="highlighter-rouge">Verification Methods</code> provided.</p>
 
-The role of a verification method is to verify the OA document is valid against specific criterias. Since there are many types and versions of OA document, not all test should run against all types of OA document. For that reason, a `test` method is also defined to test if a method should run against a document. If the method is incompatible with the document type, it should skip the method.
+<p>The role of a verification method is to verify the OA document is valid against specific criterias. Since there are many types and versions of OA document, not all test should run against all types of OA document. For that reason, a <code class="highlighter-rouge">test</code> method is also defined to test if a method should run against a document. If the method is incompatible with the document type, it should skip the method.</p>
 
-As a result, a verification method should implement 3 abstract methods: `verify, test and skip`.
+<p>As a result, a verification method should implement 3 abstract methods: <code class="highlighter-rouge">verify, test and skip</code>.</p>
 
-The verification method should return a `VerificationFragment` which states the status of the verification. The status key can have the following values:
+<p>The verification method should return a <code class="highlighter-rouge">VerificationFragment</code> which states the status of the verification. The status key can have the following values:</p>
 
-- `VALID`: when the verification is successful
-- `INVALID`: when the verification is unsuccessful
-- `ERROR`: when an unexpected error is met
-- `SKIPPED`: when the verification was skipped by the manager
+<ul>
+  <li><code class="highlighter-rouge">VALID</code>: when the verification is successful</li>
+  <li><code class="highlighter-rouge">INVALID</code>: when the verification is unsuccessful</li>
+  <li><code class="highlighter-rouge">ERROR</code>: when an unexpected error is met</li>
+  <li><code class="highlighter-rouge">SKIPPED</code>: when the verification was skipped by the manager</li>
+</ul>
 
-#### test(document: Document): boolean
-This function takes in an OA document and returns a boolean result that determines if this verification method is meant to be ran against the document.
+<h4 id="testdocument-document-boolean">test(document: Document): boolean</h4>
+<p>This function takes in an OA document and returns a boolean result that determines if this verification method is meant to be ran against the document.</p>
 
-In the case that the test passes, we should run the `verify` function. Otherwise, the `skip` function should be ran.
+<p>In the case that the test passes, we should run the <code class="highlighter-rouge">verify</code> function. Otherwise, the <code class="highlighter-rouge">skip</code> function should be ran.</p>
 
-#### skip(): VerificationFragment
-This function should be ran when the verification method is skipped for the given OA document. It will return the skipped `VerificationFragment` for the test.
+<h4 id="skip-verificationfragment">skip(): VerificationFragment</h4>
+<p>This function should be ran when the verification method is skipped for the given OA document. It will return the skipped <code class="highlighter-rouge">VerificationFragment</code> for the test.</p>
 
-An example of `VerificationFragment` that skips the DNS-TXT verification:
-{
-  ```json
-  "name": "OpenAttestationDnsTxt",
-  "type": "ISSUER_IDENTITY",
-  "status": "SKIPPED",
-  "message": "Document issuers doesn't have \"documentStore\" or \"token\" property"
+<p>An example of <code class="highlighter-rouge">VerificationFragment</code> that skips the DNS-TXT verification:
+{</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OpenAttestationDnsTxt"</span><span class="err">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ISSUER_IDENTITY"</span><span class="err">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SKIPPED"</span><span class="err">,</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Document issuers doesn't have </span><span class="se">\"</span><span class="s2">documentStore</span><span class="se">\"</span><span class="s2"> or </span><span class="se">\"</span><span class="s2">token</span><span class="se">\"</span><span class="s2"> property"</span><span class="w">
   
-  ```
-}
+</span></code></pre></div></div>
+<p>}</p>
 
-#### verify(document: Document): VerificationFragment
+<h4 id="verifydocument-document-verificationfragment">verify(document: Document): VerificationFragment</h4>
 
-This function should be ran when the test passes. Running this function will execute the necessary computation to determine if the document passes the verification method.
+<p>This function should be ran when the test passes. Running this function will execute the necessary computation to determine if the document passes the verification method.</p>
 
-An example `VerificationFragment` of a passing test:
+<p>An example <code class="highlighter-rouge">VerificationFragment</code> of a passing test:</p>
 
-```json
-{
-  "name": "OpenAttestationEthereumDocumentStoreIssued",
-  "type": "DOCUMENT_STATUS",
-  "status": "VALID",
-  "data": {
-    "details": [
-      {
-        "address": "0x007d40224f6562461633ccfbaffd359ebb2fc9ba",
-        "issued": true
-      }
-    ],
-    "issuedOnAll": true
-  }
-}
-```
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OpenAttestationEthereumDocumentStoreIssued"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DOCUMENT_STATUS"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VALID"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x007d40224f6562461633ccfbaffd359ebb2fc9ba"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"issued"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"issuedOnAll"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
-An example `VerificationFragment` of a failed test:
+<p>An example <code class="highlighter-rouge">VerificationFragment</code> of a failed test:</p>
 
-```json
-{
-  "name": "OpenAttestationEthereumDocumentStoreIssued",
-  "type": "DOCUMENT_STATUS",
-  "status": "INVALID",
-  "message": "Certificate has not been issued",
-  "data": {
-    "details": [
-      {
-        "address": "0x20bc9C354A18C8178A713B9BcCFFaC2152b53990",
-        "error": "call exception (address=\"0x20bc9C354A18C8178A713B9BcCFFaC2152b53990\", method=\"isIssued(bytes32)\", args=[\"0x85df2b4e905a82cf10c317df8f4b659b5cf38cc12bd5fbaffba5fc901ef0011b\"], version=4.0.40)",
-        "issued": false
-      }
-    ],
-    "issuedOnAll": false
-  }
-}
-```
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OpenAttestationEthereumDocumentStoreIssued"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DOCUMENT_STATUS"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Certificate has not been issued"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x20bc9C354A18C8178A713B9BcCFFaC2152b53990"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"call exception (address=</span><span class="se">\"</span><span class="s2">0x20bc9C354A18C8178A713B9BcCFFaC2152b53990</span><span class="se">\"</span><span class="s2">, method=</span><span class="se">\"</span><span class="s2">isIssued(bytes32)</span><span class="se">\"</span><span class="s2">, args=[</span><span class="se">\"</span><span class="s2">0x85df2b4e905a82cf10c317df8f4b659b5cf38cc12bd5fbaffba5fc901ef0011b</span><span class="se">\"</span><span class="s2">], version=4.0.40)"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"issued"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"issuedOnAll"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
-### Verification Types
+<h3 id="verification-types">Verification Types</h3>
 
-A `Verification Type` is a type label to a verification method. It specifies what type of verification the method is performing. The diagram above shows the 3 default verification types: `ISSUER_IDENTITY`, `DOCUMENT_INTEGRITY` and `DOCUMENT_STATUS`.
+<p>A <code class="highlighter-rouge">Verification Type</code> is a type label to a verification method. It specifies what type of verification the method is performing. The diagram above shows the 3 default verification types: <code class="highlighter-rouge">ISSUER_IDENTITY</code>, <code class="highlighter-rouge">DOCUMENT_INTEGRITY</code> and <code class="highlighter-rouge">DOCUMENT_STATUS</code>.</p>
 
-For the validity of the verification type to be true, the requirements must be met:
+<p>For the validity of the verification type to be true, the requirements must be met:</p>
 
-1. At least one method in that type should return `VALID` as the status.
-1. All methods in the type should return either `VALID` or `SKIPPED` as the status.
+<ol>
+  <li>At least one method in that type should return <code class="highlighter-rouge">VALID</code> as the status.</li>
+  <li>All methods in the type should return either <code class="highlighter-rouge">VALID</code> or <code class="highlighter-rouge">SKIPPED</code> as the status.</li>
+</ol>
 
-### Verifier
+<h3 id="verifier">Verifier</h3>
 
-The verifier is a function used to verify any OpenAttestation document. It returns a set of `VerificationFragment` from the different verification methods.
+<p>The verifier is a function used to verify any OpenAttestation document. It returns a set of <code class="highlighter-rouge">VerificationFragment</code> from the different verification methods.</p>
 
-From the `VerificationFragments` we can then determine if the OA document is valid. The OA document is valid when all `Verification Types` has valid statuses.
+<p>From the <code class="highlighter-rouge">VerificationFragments</code> we can then determine if the OA document is valid. The OA document is valid when all <code class="highlighter-rouge">Verification Types</code> has valid statuses.</p>
 
-## Default Verification Types and Methods
+<h2 id="default-verification-types-and-methods">Default Verification Types and Methods</h2>
 
-### Document Integrity (DOCUMENT_INTEGRITY)
+<h3 id="document-integrity-document_integrity">Document Integrity (DOCUMENT_INTEGRITY)</h3>
 
-The `DOCUMENT_INTEGRITY` type of verification methods ensure that the content of the issued document has not been modified since the document has been issued, with exception of data which has been removed using built-in obfuscation mechanism.
+<p>The <code class="highlighter-rouge">DOCUMENT_INTEGRITY</code> type of verification methods ensure that the content of the issued document has not been modified since the document has been issued, with exception of data which has been removed using built-in obfuscation mechanism.</p>
 
-#### OpenAttestationHash
+<h4 id="openattestationhash">OpenAttestationHash</h4>
 
-The `OpenAttestationHash` method checks the integrity of the document using the `OpenAttestationSignature2018` method by digesting the content of the OA document and comparing it with the document's `targetHash`.
+<p>The <code class="highlighter-rouge">OpenAttestationHash</code> method checks the integrity of the document using the <code class="highlighter-rouge">OpenAttestationSignature2018</code> method by digesting the content of the OA document and comparing it with the document’s <code class="highlighter-rouge">targetHash</code>.</p>
 
-In addition, if the `targetHash` does not match the `merkleRoot` of the document, the function also checks that the `targetHash` resolves to the `merkleRoot` using the given `proofs`.
+<p>In addition, if the <code class="highlighter-rouge">targetHash</code> does not match the <code class="highlighter-rouge">merkleRoot</code> of the document, the function also checks that the <code class="highlighter-rouge">targetHash</code> resolves to the <code class="highlighter-rouge">merkleRoot</code> using the given <code class="highlighter-rouge">proofs</code>.</p>
 
-### Document Status (DOCUMENT_STATUS)
+<h3 id="document-status-document_status">Document Status (DOCUMENT_STATUS)</h3>
 
-The `DOCUMENT_STATUS` type of verification methods checks that the document has been issued and that it's issuance status is in good standing. Methods of these types generally verifies the issuance status against a record maintained externally, ie Records on a Blockchain or API endpoints.
+<p>The <code class="highlighter-rouge">DOCUMENT_STATUS</code> type of verification methods checks that the document has been issued and that it’s issuance status is in good standing. Methods of these types generally verifies the issuance status against a record maintained externally, ie Records on a Blockchain or API endpoints.</p>
 
-#### OpenAttestationEthereumDocumentStoreIssued
+<h4 id="openattestationethereumdocumentstoreissued">OpenAttestationEthereumDocumentStoreIssued</h4>
 
-The `OpenAttestationEthereumDocumentStoreIssued` checks the issuance status of the document using `OpenAttestationSignature2018` with `DOCUMENT_STORE` or `TOKEN_REGISTRY` methods.
+<p>The <code class="highlighter-rouge">OpenAttestationEthereumDocumentStoreIssued</code> checks the issuance status of the document using <code class="highlighter-rouge">OpenAttestationSignature2018</code> with <code class="highlighter-rouge">DOCUMENT_STORE</code> or <code class="highlighter-rouge">TOKEN_REGISTRY</code> methods.</p>
 
-Signature of OA Document using this method:
+<p>Signature of OA Document using this method:</p>
 
-```json
-{
-  "proof": {
-    "type": "OpenAttestationSignature2018",
-    "method": "DOCUMENT_STORE",
-    "value": "0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d"
-  }
-}
-```
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"proof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OpenAttestationSignature2018"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DOCUMENT_STORE"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
-Such document uses a smart contract to store the issuance status of the document.
+<p>Such document uses a smart contract to store the issuance status of the document.</p>
 
-In the case of `DOCUMENT_STORE` smart contract, the check calls the method `isIssued(merkleRoot)` implemented on the Ethereum smart contract. It returns a valid `VerificationFragment` if the merkle root of the document has been marked as issued.
+<p>In the case of <code class="highlighter-rouge">DOCUMENT_STORE</code> smart contract, the check calls the method <code class="highlighter-rouge">isIssued(merkleRoot)</code> implemented on the Ethereum smart contract. It returns a valid <code class="highlighter-rouge">VerificationFragment</code> if the merkle root of the document has been marked as issued.</p>
 
-In the case of `TOKEN_REGISTRY` smart contract, the check calls the method `ownerOf(targetHash)` implemented on the Ethereum smart contract. It returns a valid `VerificationFragment` if the owner of the document is non-zero.
+<p>In the case of <code class="highlighter-rouge">TOKEN_REGISTRY</code> smart contract, the check calls the method <code class="highlighter-rouge">ownerOf(targetHash)</code> implemented on the Ethereum smart contract. It returns a valid <code class="highlighter-rouge">VerificationFragment</code> if the owner of the document is non-zero.</p>
 
-#### OpenAttestationEthereumDocumentStoreRevoked
+<h4 id="openattestationethereumdocumentstorerevoked">OpenAttestationEthereumDocumentStoreRevoked</h4>
 
-The `OpenAttestationEthereumDocumentStoreRevoked` checks the revocation status of the document using `OpenAttestationSignature2018` with `DOCUMENT_STORE` or `TOKEN_REGISTRY` methods, similar to `OpenAttestationEthereumDocumentStoreIssued`.
+<p>The <code class="highlighter-rouge">OpenAttestationEthereumDocumentStoreRevoked</code> checks the revocation status of the document using <code class="highlighter-rouge">OpenAttestationSignature2018</code> with <code class="highlighter-rouge">DOCUMENT_STORE</code> or <code class="highlighter-rouge">TOKEN_REGISTRY</code> methods, similar to <code class="highlighter-rouge">OpenAttestationEthereumDocumentStoreIssued</code>.</p>
 
-In the case of `DOCUMENT_STORE` smart contract, the check calls the method `isRevoked(merkleRoot)` implemented on the Ethereum smart contract. It returns a valid `VerificationFragment` if the merkle root of the document has not been marked as revoked.
+<p>In the case of <code class="highlighter-rouge">DOCUMENT_STORE</code> smart contract, the check calls the method <code class="highlighter-rouge">isRevoked(merkleRoot)</code> implemented on the Ethereum smart contract. It returns a valid <code class="highlighter-rouge">VerificationFragment</code> if the merkle root of the document has not been marked as revoked.</p>
 
-### Issuer Identity (ISSUER_IDENTITY)
+<h3 id="issuer-identity-issuer_identity">Issuer Identity (ISSUER_IDENTITY)</h3>
 
-The `ISSUER_IDENTITY` type of verification methods checks and return the identity of the issuer. Methods of these types generally verify the identity of the issuer against a decentralised identity provider (ie DID, DNS, etc) or some centrally managed identity registry (ie Singapore's OpenCerts Registry, Citizen Identity Registry, Business Identity Registry, etc).
+<p>The <code class="highlighter-rouge">ISSUER_IDENTITY</code> type of verification methods checks and return the identity of the issuer. Methods of these types generally verify the identity of the issuer against a decentralised identity provider (ie DID, DNS, etc) or some centrally managed identity registry (ie Singapore’s OpenCerts Registry, Citizen Identity Registry, Business Identity Registry, etc).</p>
 
-#### OpenAttestationDnsTxt
+<h4 id="openattestationdnstxt">OpenAttestationDnsTxt</h4>
 
-The `OpenAttestationDnsTxt` method checks the identity of a document issuer using the `DNS-TXT` identity proof mechanism. 
+<p>The <code class="highlighter-rouge">OpenAttestationDnsTxt</code> method checks the identity of a document issuer using the <code class="highlighter-rouge">DNS-TXT</code> identity proof mechanism.</p>
 
-The sample provided below shows a document which claims that `openattestation.com` is the owner of the smart contract `0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d`, which in turn issued the said document:
+<p>The sample provided below shows a document which claims that <code class="highlighter-rouge">openattestation.com</code> is the owner of the smart contract <code class="highlighter-rouge">0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d</code>, which in turn issued the said document:</p>
 
-```json
-{
-  "issuer": {
-    "id": "https://openattestation.com",
-    "name": "Open Attestation",
-    "identityProof": {
-      "type": "DNS-TXT",
-      "location": "openattestation.com"
-    }
-  },
-  "proof": {
-    "type": "OpenAttestationSignature2018",
-    "method": "DOCUMENT_STORE",
-    "value": "0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d"
-  }
-}
-```
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://openattestation.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Open Attestation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"identityProof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DNS-TXT"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"openattestation.com"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"proof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OpenAttestationSignature2018"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DOCUMENT_STORE"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
-The method checks against the DNS record of the domain to confirm the claimed relationship. A sample TXT record on `openattestation.com` to prove ownership of the contract `0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d` on Ethereum Ropsten network is provided below:
+<p>The method checks against the DNS record of the domain to confirm the claimed relationship. A sample TXT record on <code class="highlighter-rouge">openattestation.com</code> to prove ownership of the contract <code class="highlighter-rouge">0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d</code> on Ethereum Ropsten network is provided below:</p>
 
-```
-openatts net=ethereum netId=3 addr=0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d
-```
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openatts net=ethereum netId=3 addr=0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d
+</code></pre></div></div>
 
-Upon confirming that the matching DNS TXT record on the domain, the verification method returns a valid `VerificationFragment` as the result.
+<p>Upon confirming that the matching DNS TXT record on the domain, the verification method returns a valid <code class="highlighter-rouge">VerificationFragment</code> as the result.</p>
 
-In depth discussion of DNS-TXT method is described [in this blog post](https://blog.gds-gov.tech/opencerts-2-0-decentralised-issuer-identity-verification-fb7e2cae8295)
+<p>In depth discussion of DNS-TXT method is described <a href="https://blog.gds-gov.tech/opencerts-2-0-decentralised-issuer-identity-verification-fb7e2cae8295">in this blog post</a></p>
 
-## Usage
+<h2 id="usage">Usage</h2>
 
-To use the default verifier:
+<p>To use the default verifier:</p>
 
-```js
-const document = "OA-Document";
-const verificationFragments = verify(document);
-const verified = isVerified(verificationFragments);
-```
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nb">document</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">OA-Document</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">verificationFragments</span> <span class="o">=</span> <span class="nx">verify</span><span class="p">(</span><span class="nb">document</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">verified</span> <span class="o">=</span> <span class="nx">isVerified</span><span class="p">(</span><span class="nx">verificationFragments</span><span class="p">);</span>
+</code></pre></div></div>
 
-To extend the verifier with a custom name registry:
+<p>To extend the verifier with a custom name registry:</p>
 
-```js
-const document = "OA-Document-With-Custom-Identity-Proof";
-const customIdentityRegistry = "Custom-Verification-Method";
-const verificationFragments = verificationBuilder(document, [
-  ...defaultVerifiers,
-  customIdentityRegistry
-]);
-const verified = isVerified(verificationFragments);
-```
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nb">document</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">OA-Document-With-Custom-Identity-Proof</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">customIdentityRegistry</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Custom-Verification-Method</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">verificationFragments</span> <span class="o">=</span> <span class="nx">verificationBuilder</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span> <span class="p">[</span>
+  <span class="p">...</span><span class="nx">defaultVerifiers</span><span class="p">,</span>
+  <span class="nx">customIdentityRegistry</span>
+<span class="p">]);</span>
+<span class="kd">const</span> <span class="nx">verified</span> <span class="o">=</span> <span class="nx">isVerified</span><span class="p">(</span><span class="nx">verificationFragments</span><span class="p">);</span>
+</code></pre></div></div>
 
-# Decentralised Document Rendering
+<h1 id="decentralised-document-rendering">Decentralised Document Rendering</h1>
 
-## Status
+<h2 id="status">Status</h2>
 
-Accepted
+<p>Accepted</p>
 
-## Goal
+<h2 id="goal">Goal</h2>
 
+<p><img src="decentralised_rendered_overview.png" alt="docs" /></p>
 
-![docs](decentralised_rendered_overview.png)
+<p>The purpose of the decentralised document renderer is to allow OpenAttestation (OA) document issuers to style their documents without code change to the different implementations of the document viewer. It does so by embedding the website specified by the document issuers as an iframe or webview (for mobile apps) and sending the content of the OA document into the iframe.</p>
 
-The purpose of the decentralised document renderer is to allow OpenAttestation (OA) document issuers to style their documents without code change to the different implementations of the document viewer. It does so by embedding the website specified by the document issuers as an iframe or webview (for mobile apps) and sending the content of the OA document into the iframe.
+<h2 id="frame-to-frame-communication">Frame-to-Frame Communication</h2>
 
-## Frame-to-Frame Communication
+<p><img src="decentralised_rendered_api.png" alt="docs" /></p>
 
-![docs](decentralised_rendered_api.png)
+<p>Since the decentralised renderer is rendering a document dynamically, <code class="highlighter-rouge">Actions</code> are used to two-way communication between the parent frame (document-renderer.com) and the child frame (renderer.example.com).</p>
 
-Since the decentralised renderer is rendering a document dynamically, `Actions` are used to two-way communication between the parent frame (document-renderer.com) and the child frame (renderer.example.com).
+<p>All actions follow the same structure and are composed of type and payload</p>
 
-All actions follow the same structure and are composed of type and payload
+<ul>
+  <li><code class="highlighter-rouge">type</code> indicates the kind of action executed, for instance, RENDER_DOCUMENT to render a document. The type of action is mandatory</li>
+  <li><code class="highlighter-rouge">payload</code> indicates optional data associated with the type, for instance, the content of the document to render.</li>
+</ul>
 
-- `type` indicates the kind of action executed, for instance, RENDER_DOCUMENT to render a document. The type of action is mandatory
-- `payload` indicates optional data associated with the type, for instance, the content of the document to render.
+<p>Examples of actions used:</p>
 
-Examples of actions used:
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">renderDocumentAction</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">RENDER_DOCUMENT</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">payload</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">document</span><span class="p">:</span> <span class="nx">documentToRender</span>
+  <span class="p">}</span>
+<span class="p">};</span>
 
-```js
-const renderDocumentAction = {
-  type: "RENDER_DOCUMENT",
-  payload: {
-    document: documentToRender
-  }
-};
+<span class="kd">const</span> <span class="nx">printAction</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">PRINT</span><span class="dl">"</span>
+<span class="p">};</span>
+</code></pre></div></div>
 
-const printAction = {
-  type: "PRINT"
-};
-```
+<h3 id="from-host-to-frame-actions">From host to frame actions</h3>
 
-### From host to frame actions
+<p>The following list of actions are made for the host to communicate to the iframe (and thus must be handled by application embed in the iframe):</p>
 
-The following list of actions are made for the host to communicate to the iframe (and thus must be handled by application embed in the iframe):
+<h4 id="render_document">RENDER_DOCUMENT</h4>
 
-#### RENDER_DOCUMENT
+<p>This action sends the document data to the child frame to be rendered.</p>
 
-This action sends the document data to the child frame to be rendered.
+<p>The payload is an object with 2 properties:</p>
 
-The payload is an object with 2 properties:
+<ul>
+  <li>document: (mandatory) document data as returned by getData method from @govtechsg/open-attestation</li>
+  <li>rawDocument: (optional) Open Attestation document</li>
+</ul>
 
-- document: (mandatory) document data as returned by getData method from @govtechsg/open-attestation
-- rawDocument: (optional) Open Attestation document
+<p>Example:</p>
 
-Example:
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">action</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">RENDER_DOCUMENT</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">payload</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">document</span><span class="p">:</span> <span class="nx">getData</span><span class="p">(</span><span class="nb">document</span><span class="p">),</span>
+    <span class="na">rawDocument</span><span class="p">:</span> <span class="nb">document</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
 
-```js
-const action = {
-  type: "RENDER_DOCUMENT",
-  payload: {
-    document: getData(document),
-    rawDocument: document
-  }
-};
-```
+<h4 id="select_template">SELECT_TEMPLATE</h4>
 
-#### SELECT_TEMPLATE
+<p>This action selects a template amongst the one provided by the decentralized renderer (A renderer may provide 1 to many different templates to display a document).</p>
 
-This action selects a template amongst the one provided by the decentralized renderer (A renderer may provide 1 to many different templates to display a document).
+<p>The payload is the tab id to display.</p>
 
-The payload is the tab id to display.
+<p>Example:</p>
 
-Example:
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">action</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">SELECT_TEMPLATE</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">payload</span><span class="p">:</span> <span class="dl">"</span><span class="s2">CUSTOM_TEMPLATE</span><span class="dl">"</span>
+<span class="p">};</span>
+</code></pre></div></div>
 
-```js
-const action = {
-  type: "SELECT_TEMPLATE",
-  payload: "CUSTOM_TEMPLATE"
-};
-```
+<h4 id="print">PRINT</h4>
 
-#### PRINT
+<p>This action request for the template to process the print action by the browser.</p>
 
-This action request for the template to process the print action by the browser.
+<p>Example:</p>
 
-Example:
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">action</span> <span class="o">=</span> <span class="p">{</span>
+<span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">PRINT</span><span class="dl">"</span>
+<span class="kd">const</span> <span class="nx">action</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">PRINT</span><span class="dl">"</span>
+<span class="p">};</span>
+</code></pre></div></div>
 
-```js
-const action = {
-type: "PRINT"
-const action = {
-  type: "PRINT"
-};
-```
+<h4 id="get_templates">GET_TEMPLATES</h4>
 
-#### GET_TEMPLATES
+<p>This action returns the list of template tabs available on the document.</p>
 
-This action returns the list of template tabs available on the document.
+<p>The payload is the document data as returned by <code class="highlighter-rouge">getData</code> method from @govtechsg/open-attestation</p>
 
-The payload is the document data as returned by `getData` method from @govtechsg/open-attestation
+<p>Example:</p>
 
-Example:
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">action</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">GET_TEMPLATES</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">payload</span><span class="p">:</span> <span class="nx">getData</span><span class="p">(</span><span class="nb">document</span><span class="p">)</span>
+<span class="p">};</span>
+</code></pre></div></div>
 
-```js
-const action = {
-  type: "GET_TEMPLATES",
-  payload: getData(document)
-};
-```
+<h2 id="from-frame-to-host-actions">From frame to host actions</h2>
 
-## From frame to host actions
+<p>The following list of actions are made for iframe to communicate to the host (and thus must be handled by application embedding the iframe):</p>
 
-The following list of actions are made for iframe to communicate to the host (and thus must be handled by application embedding the iframe):
+<h3 id="update_height">UPDATE_HEIGHT</h3>
 
-### UPDATE_HEIGHT
+<p>This action provides the full content height of the iframe so that the host can adapt the automatically the size of the embedded iframe.</p>
 
-This action provides the full content height of the iframe so that the host can adapt the automatically the size of the embedded iframe.
+<p>The payload is the full content height of the child iframe.</p>
 
-The payload is the full content height of the child iframe.
+<p>Example:</p>
 
-Example:
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">action</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">UPDATE_HEIGHT</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">payload</span><span class="p">:</span> <span class="mi">150</span>
+<span class="p">};</span>
+</code></pre></div></div>
 
-```js
-const action = {
-  type: "UPDATE_HEIGHT",
-  payload: 150
-};
-```
+<h3 id="obfuscate">OBFUSCATE</h3>
 
-### OBFUSCATE
+<p>This action provides the name of a field on the document to obfuscate. The value must follow path property.</p>
 
-This action provides the name of a field on the document to obfuscate. The value must follow path property.
+<p>The payload is the path to the field to be obfuscated.</p>
 
-The payload is the path to the field to be obfuscated.
+<p>Example:</p>
 
-Example:
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">action</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OBFUSCATE</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">payload</span><span class="p">:</span> <span class="dl">"</span><span class="s2">a[0].b.c</span><span class="dl">"</span>
+<span class="p">};</span>
+</code></pre></div></div>
 
-```js
-const action = {
-  type: "OBFUSCATE",
-  payload: "a[0].b.c"
-};
-```
+<h3 id="update_templates">UPDATE_TEMPLATES</h3>
 
-### UPDATE_TEMPLATES
+<p>This action provides the list of templates that can be used to render a document. This is usually the response to the <code class="highlighter-rouge">GET_TEMPLATES</code> action.</p>
 
-This action provides the list of templates that can be used to render a document. This is usually the response to the `GET_TEMPLATES` action.
+<p>Example:</p>
 
-Example:
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">action</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">UPDATE_TEMPLATES</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">payload</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="na">id</span><span class="p">:</span> <span class="dl">"</span><span class="s2">certificate</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">label</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Certificate</span><span class="dl">"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="na">id</span><span class="p">:</span> <span class="dl">"</span><span class="s2">transcript</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">label</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Transcript</span><span class="dl">"</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<h1 id="selective-disclosure">Selective Disclosure</h1>
 
-```js
-const action = {
-  type: "UPDATE_TEMPLATES",
-  payload: [
-    {
-      id: "certificate",
-      label: "Certificate"
-    },
-    {
-      id: "transcript",
-      label: "Transcript"
-    }
-  ]
-};
-```
-# Selective Disclosure
+<h2 id="status-1">Status</h2>
 
-## Status
+<p>Accepted</p>
 
-Accepted
+<h2 id="goal-1">Goal</h2>
 
-## Goal
+<p>Selective disclosure allows for the holder of OA documents to present subsets of the document to be verified. It does so by allowing users to obfuscated data fields without compromising the integrity of the document.</p>
 
-Selective disclosure allows for the holder of OA documents to present subsets of the document to be verified. It does so by allowing users to obfuscated data fields without compromising the integrity of the document.
+<p>To achieve this, we compute a hash over individually hashed and salted key-value pairs. During obfuscation, we will hash the salted key-value pair and store the hash in another location of the document.</p>
 
-To achieve this, we compute a hash over individually hashed and salted key-value pairs. During obfuscation, we will hash the salted key-value pair and store the hash in another location of the document.
+<p><img src="selective_disclosure_overview.png" alt="docs" /></p>
 
-![docs](selective_disclosure_overview.png)
+<p>During integrity verification, we will recompute the hash of the document by:</p>
 
-During integrity verification, we will recompute the hash of the document by:
+<ol>
+  <li>Nomalising the document into individual key-value pairs</li>
+  <li>Hashing each of the individual key-value pairs</li>
+  <li>Compute the target hash of the document</li>
+</ol>
 
-1. Nomalising the document into individual key-value pairs
-2. Hashing each of the individual key-value pairs
-3. Compute the target hash of the document
+<p>In this document, we will describe the steps to:</p>
 
-In this document, we will describe the steps to:
+<ol>
+  <li>Prepare an OA document</li>
+  <li>Obfuscate a value on an issued OA document</li>
+  <li>Check the integrity of an issued OA document</li>
+</ol>
 
-1. Prepare an OA document
-2. Obfuscate a value on an issued OA document
-3. Check the integrity of an issued OA document
+<h2 id="preparing-the-document">Preparing the document</h2>
 
-## Preparing the document
+<h3 id="salting-the-data">Salting the data</h3>
 
-### Salting the data
+<p>To generate an OA document, through a process known as <code class="highlighter-rouge">document wrapping</code>, each value is converted from its primitive type to a string with a UUID, the data type and the original value.</p>
 
-To generate an OA document, through a process known as `document wrapping`, each value is converted from its primitive type to a string with a UUID, the data type and the original value.
+<p>The UUID prevents rainbow table attacks on the value after it has been obfuscated and the type will help disambiguate the original data type.</p>
 
-The UUID prevents rainbow table attacks on the value after it has been obfuscated and the type will help disambiguate the original data type.
+<p>Sample raw data input:</p>
 
-Sample raw data input:
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"document identifier"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"validFrom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2010-01-01T19:23:24Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"document owner name"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"template"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"any"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EMBEDDED_RENDERER"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://some.example.com"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://some.example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEMO STORE"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"identityProof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DNS-TXT"</span><span class="p">,</span><span class="w"> </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tradetrust.io"</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"proof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OpenAttestationSignature2018"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TOKEN_REGISTRY"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"key1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"key2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value2"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"key3"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"value3.1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"value3.2"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"key4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"key41"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value4.1"</span><span class="p">,</span><span class="w"> </span><span class="nl">"key42"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value4.2"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
-```json
-{
-  "reference": "document identifier",
-  "validFrom": "2010-01-01T19:23:24Z",
-  "name": "document owner name",
-  "template": {
-    "name": "any",
-    "type": "EMBEDDED_RENDERER",
-    "url": "http://some.example.com"
-  },
-  "issuer": {
-    "id": "http://some.example.com",
-    "name": "DEMO STORE",
-    "identityProof": { "type": "DNS-TXT", "location": "tradetrust.io" }
-  },
-  "proof": {
-    "type": "OpenAttestationSignature2018",
-    "value": "0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d",
-    "method": "TOKEN_REGISTRY"
-  },
-  "key1": "value1",
-  "key2": "value2",
-  "key3": ["value3.1", "value3.2"],
-  "key4": { "key41": "value4.1", "key42": "value4.2" }
-}
-```
+<p>Output after salt:</p>
 
-Output after salt:
-
-```json
-{
-  "reference": "2cc91073-3863-4db6-9f1a-b68665088caa:string:document identifier",
-  "validFrom": "ca425b5c-d25d-4a36-b0f7-e368fbbaf75d:string:2010-01-01T19:23:24Z",
-  "name": "c6864a9b-0367-4b8b-8cc5-f59cb6331f3d:string:document owner name",
-  "template": {
-    "name": "36a95964-fbe9-4c6d-ab6a-a5247c07f105:string:any",
-    "type": "45c266d0-3efe-4841-893c-96723cd7ddb5:string:EMBEDDED_RENDERER",
-    "url": "bbec168c-b9c3-4fb3-aa6f-3d1a1017f1e9:string:http://some.example.com"
-  },
-  "issuer": {
-    "id": "42b6991b-e4b5-444b-aba7-7ce97bbe8441:string:http://some.example.com",
-    "name": "da3fa13d-b0a9-4357-bd4c-4f3941304225:string:DEMO STORE",
-    "identityProof": {
-      "type": "e2039c5b-6cab-4679-9150-7266e34371a4:string:DNS-TXT",
-      "location": "684bb30d-a59e-4cc3-a8ed-44e6b72579d9:string:tradetrust.io"
-    }
-  },
-  "proof": {
-    "type": "bc64159e-90f3-4f0c-99bb-43818ff402e5:string:OpenAttestationSignature2018",
-    "value": "edd73480-3043-4cdc-aefd-f4ee21fc6a7f:string:0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d",
-    "method": "6ae5877f-be97-47df-99f7-7464a5ca1cde:string:TOKEN_REGISTRY"
-  },
-  "key1": "c1ba53a6-68b8-421e-ac80-7d4b71ca8e52:string:value1",
-  "key2": "0356d74e-10cd-4cc1-b1ba-eab23f8bea3d:string:value2",
-  "key3": [
-    "44faf2a4-d16f-4945-8784-d2b8a088edc5:string:value3.1",
-    "18eaf71f-3b4a-4064-b8f5-79092c2e04aa:string:value3.2"
-  ],
-  "key4": {
-    "key41": "7e3b72f8-e521-4892-a26c-b56d3e2ab5cf:string:value4.1",
-    "key42": "c4f96a54-dda6-4fe2-9f49-bc77e8e19d02:string:value4.2"
-  }
-}
-```
-
-### Computing individual hashes
-
-After the individual values have been salted, the entire data object is flattened, while preserving the hierarchical structure of the data within the individual keys.
-
-In our implementation the library [flatley](https://www.npmjs.com/package/flatley) is used to flatten the object and [js-sha3](https://www.npmjs.com/package/js-sha3) is used to compute the `keccak256` hash.
-
-Output after flattening:
-
-```json
-{
-  "reference": "2cc91073-3863-4db6-9f1a-b68665088caa:string:document identifier",
-  "validFrom": "ca425b5c-d25d-4a36-b0f7-e368fbbaf75d:string:2010-01-01T19:23:24Z",
-  "name": "c6864a9b-0367-4b8b-8cc5-f59cb6331f3d:string:document owner name",
-  "template.name": "36a95964-fbe9-4c6d-ab6a-a5247c07f105:string:any",
-  "template.type": "45c266d0-3efe-4841-893c-96723cd7ddb5:string:EMBEDDED_RENDERER",
-  "template.url": "bbec168c-b9c3-4fb3-aa6f-3d1a1017f1e9:string:http://some.example.com",
-  "issuer.id": "42b6991b-e4b5-444b-aba7-7ce97bbe8441:string:http://some.example.com",
-  "issuer.name": "da3fa13d-b0a9-4357-bd4c-4f3941304225:string:DEMO STORE",
-  "issuer.identityProof.type": "e2039c5b-6cab-4679-9150-7266e34371a4:string:DNS-TXT",
-  "issuer.identityProof.location": "684bb30d-a59e-4cc3-a8ed-44e6b72579d9:string:tradetrust.io",
-  "proof.type": "bc64159e-90f3-4f0c-99bb-43818ff402e5:string:OpenAttestationSignature2018",
-  "proof.value": "edd73480-3043-4cdc-aefd-f4ee21fc6a7f:string:0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d",
-  "proof.method": "6ae5877f-be97-47df-99f7-7464a5ca1cde:string:TOKEN_REGISTRY",
-  "key1": "c1ba53a6-68b8-421e-ac80-7d4b71ca8e52:string:value1",
-  "key2": "0356d74e-10cd-4cc1-b1ba-eab23f8bea3d:string:value2",
-  "key3.0": "44faf2a4-d16f-4945-8784-d2b8a088edc5:string:value3.1",
-  "key3.1": "18eaf71f-3b4a-4064-b8f5-79092c2e04aa:string:value3.2",
-  "key4.key41": "7e3b72f8-e521-4892-a26c-b56d3e2ab5cf:string:value4.1",
-  "key4.key42": "c4f96a54-dda6-4fe2-9f49-bc77e8e19d02:string:value4.2"
-}
-```
-
-Once the data object has been salted and flattened, each key-value pair will be hashed.
-
-In the example above, we will apply the `keccak256` hash on the object `{"key4.key41":"7e3b72f8-e521-4892-a26c-b56d3e2ab5cf:string:value4.1"}` which will yield `c3edad333f0829b92a82cd3c09b7795b0f00f07dfbbfc5ff8779272d1eaba3a8`.
-
-Once this function has been applied to all the keys, the output hashes will be sorted and stored in an array.
-
-Output after all hashing individual keys (sorted):
-
-```json
-[
-  "1b61eaed9b46a53c530ca7cbe1ed54621e9478b86efb445a932f3cb38d6a97da",
-  "28e72c3815a932b137f3dc0d9d9fa101d6d7477793acf5adcb5f34f0901c3811",
-  "2a73ae2d0e942748f632130c530e4d3eb0e91dcf8e560c52586ecf2cf84daefd",
-  "32559f7f05f498d2ffe89345a379fa6619cd20466474386b26ac8b328b28e03e",
-  "5464490fed778a23505a0da8cb8ffa8ebf47b85fa221f544d0757a96e5be315d",
-  "5c51bab9dda34200e24a5bf46ce39a82561515239f869d444cd7b458bb986483",
-  "6b19136bf4ff28c270b913786c329c6c1186857a5fb5b9897bc4bdf00f95041d",
-  "6ec1924f5f25afe82b01ed108775ab27125b0e7277687a1c1acef27ce34cb189",
-  "87da7c3a74118736144688664ffa621e7e39837c23719a0b4c88ee0fa0b08357",
-  "88c680973e4c58095b222aabfe2d62ffe8bf3a9dacccb6cea112805abdb2d475",
-  "91788b66ce30099e244d180bc18ce16b98de48598cd2ebf9f1cc7c508dc1b65e",
-  "9e029d96b11e4f4e4a37cb3bf03bf3af854b8ea059686945072f02c215e0aba6",
-  "a0b0a1e5992ad724ce101921001d9de2ff08a64c65d9e92b47142eb76fa03618",
-  "c04833e08f6a0d17cb8388db75dec3b07c603be118a1303f68332ae7eef26db5",
-  "c3edad333f0829b92a82cd3c09b7795b0f00f07dfbbfc5ff8779272d1eaba3a8",
-  "c6daa8acbd7b7591d6ea0055a6de3827b953ea3e295c024fc31c167cac1f112d",
-  "d8b26580983759e8cad2bcfd10dffdf375cd49b1e5d7b4424d7698216b683218",
-  "e3494dd41622c560a2df8cf9051f75a27ef651c46826e3eef6382187825794d5",
-  "f29d9f500d3843f547158fcd8b69b67406ad492621d9702a7903062f86ef97b0"
-]
-```
-
-### Computing document's targetHash
-
-Finally, with the array of sorted hashes, `keccak256` is applied again on the stringified array to obtain the `targetHash` of the document.
-
-```js
-keccak256(
-  JSON.stringify([
-    "1b61eaed9b46a53c530ca7cbe1ed54621e9478b86efb445a932f3cb38d6a97da",
-    "28e72c3815a932b137f3dc0d9d9fa101d6d7477793acf5adcb5f34f0901c3811",
-    "2a73ae2d0e942748f632130c530e4d3eb0e91dcf8e560c52586ecf2cf84daefd",
-    "32559f7f05f498d2ffe89345a379fa6619cd20466474386b26ac8b328b28e03e",
-    "5464490fed778a23505a0da8cb8ffa8ebf47b85fa221f544d0757a96e5be315d",
-    "5c51bab9dda34200e24a5bf46ce39a82561515239f869d444cd7b458bb986483",
-    "6b19136bf4ff28c270b913786c329c6c1186857a5fb5b9897bc4bdf00f95041d",
-    "6ec1924f5f25afe82b01ed108775ab27125b0e7277687a1c1acef27ce34cb189",
-    "87da7c3a74118736144688664ffa621e7e39837c23719a0b4c88ee0fa0b08357",
-    "88c680973e4c58095b222aabfe2d62ffe8bf3a9dacccb6cea112805abdb2d475",
-    "91788b66ce30099e244d180bc18ce16b98de48598cd2ebf9f1cc7c508dc1b65e",
-    "9e029d96b11e4f4e4a37cb3bf03bf3af854b8ea059686945072f02c215e0aba6",
-    "a0b0a1e5992ad724ce101921001d9de2ff08a64c65d9e92b47142eb76fa03618",
-    "c04833e08f6a0d17cb8388db75dec3b07c603be118a1303f68332ae7eef26db5",
-    "c3edad333f0829b92a82cd3c09b7795b0f00f07dfbbfc5ff8779272d1eaba3a8",
-    "c6daa8acbd7b7591d6ea0055a6de3827b953ea3e295c024fc31c167cac1f112d",
-    "d8b26580983759e8cad2bcfd10dffdf375cd49b1e5d7b4424d7698216b683218",
-    "e3494dd41622c560a2df8cf9051f75a27ef651c46826e3eef6382187825794d5",
-    "f29d9f500d3843f547158fcd8b69b67406ad492621d9702a7903062f86ef97b0"
-  ])
-);
-```
-
-Result:
-
-```json
-"51d6b872aae578d6a4b7decd4370f50b73b5729d8357f3057e240c10bae64ab2"
-```
-
-### Assembling the OA document
-
-Once the `targetHash` of the document is calculated, it can be appended to the document under the `signature` object.
-
-Example of wrapped OA Document:
-
-```json
-{
-  "version": "open-attestation/3.0",
-  "data": {
-    "reference": "2cc91073-3863-4db6-9f1a-b68665088caa:string:document identifier",
-    "validFrom": "ca425b5c-d25d-4a36-b0f7-e368fbbaf75d:string:2010-01-01T19:23:24Z",
-    "name": "c6864a9b-0367-4b8b-8cc5-f59cb6331f3d:string:document owner name",
-    "template": {
-      "name": "36a95964-fbe9-4c6d-ab6a-a5247c07f105:string:any",
-      "type": "45c266d0-3efe-4841-893c-96723cd7ddb5:string:EMBEDDED_RENDERER",
-      "url": "bbec168c-b9c3-4fb3-aa6f-3d1a1017f1e9:string:http://some.example.com"
-    },
-    "issuer": {
-      "id": "42b6991b-e4b5-444b-aba7-7ce97bbe8441:string:http://some.example.com",
-      "name": "da3fa13d-b0a9-4357-bd4c-4f3941304225:string:DEMO STORE",
-      "identityProof": {
-        "type": "e2039c5b-6cab-4679-9150-7266e34371a4:string:DNS-TXT",
-        "location": "684bb30d-a59e-4cc3-a8ed-44e6b72579d9:string:tradetrust.io"
-      }
-    },
-    "proof": {
-      "type": "bc64159e-90f3-4f0c-99bb-43818ff402e5:string:OpenAttestationSignature2018",
-      "value": "edd73480-3043-4cdc-aefd-f4ee21fc6a7f:string:0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d",
-      "method": "6ae5877f-be97-47df-99f7-7464a5ca1cde:string:TOKEN_REGISTRY"
-    },
-    "key1": "c1ba53a6-68b8-421e-ac80-7d4b71ca8e52:string:value1",
-    "key2": "0356d74e-10cd-4cc1-b1ba-eab23f8bea3d:string:value2",
-    "key3": [
-      "44faf2a4-d16f-4945-8784-d2b8a088edc5:string:value3.1",
-      "18eaf71f-3b4a-4064-b8f5-79092c2e04aa:string:value3.2"
-    ],
-    "key4": {
-      "key41": "7e3b72f8-e521-4892-a26c-b56d3e2ab5cf:string:value4.1",
-      "key42": "c4f96a54-dda6-4fe2-9f49-bc77e8e19d02:string:value4.2"
-    }
-  },
-  "privacy": {
-    "obfuscatedData": []
-  },
-  "signature": {
-    "type": "SHA3MerkleProof",
-    "targetHash": "51d6b872aae578d6a4b7decd4370f50b73b5729d8357f3057e240c10bae64ab2",
-    "proof": [],
-    "merkleRoot": "51d6b872aae578d6a4b7decd4370f50b73b5729d8357f3057e240c10bae64ab2"
-  }
-}
-```
-
-## Obfuscating a value
-
-To obfuscate a value in the OA document, one simply hash the key-value pair with `keccak256` and store the resulting hash in `privacy.obfuscatedData`. This method can be used to obfuscate multiple key-value pairs in the document data file.
-
-For example to obfuscated `key4.key41`:
-
-```js
-keccak256(
-  JSON.stringify({
-    "key4.key41": "7e3b72f8-e521-4892-a26c-b56d3e2ab5cf:string:value4.1"
-  })
-);
-```
-
-Resulting hash:
-
-```sh
-c3edad333f0829b92a82cd3c09b7795b0f00f07dfbbfc5ff8779272d1eaba3a8
-```
-
-This hash will then be appended to the original OA document and the object that has been obfuscated will be removed:
-
-```json
-{
-  "version": "open-attestation/3.0",
-  "data": {
-    "reference": "2cc91073-3863-4db6-9f1a-b68665088caa:string:document identifier",
-    "validFrom": "ca425b5c-d25d-4a36-b0f7-e368fbbaf75d:string:2010-01-01T19:23:24Z",
-    "name": "c6864a9b-0367-4b8b-8cc5-f59cb6331f3d:string:document owner name",
-    "template": {
-      "name": "36a95964-fbe9-4c6d-ab6a-a5247c07f105:string:any",
-      "type": "45c266d0-3efe-4841-893c-96723cd7ddb5:string:EMBEDDED_RENDERER",
-      "url": "bbec168c-b9c3-4fb3-aa6f-3d1a1017f1e9:string:http://some.example.com"
-    },
-    "issuer": {
-      "id": "42b6991b-e4b5-444b-aba7-7ce97bbe8441:string:http://some.example.com",
-      "name": "da3fa13d-b0a9-4357-bd4c-4f3941304225:string:DEMO STORE",
-      "identityProof": {
-        "type": "e2039c5b-6cab-4679-9150-7266e34371a4:string:DNS-TXT",
-        "location": "684bb30d-a59e-4cc3-a8ed-44e6b72579d9:string:tradetrust.io"
-      }
-    },
-    "proof": {
-      "type": "bc64159e-90f3-4f0c-99bb-43818ff402e5:string:OpenAttestationSignature2018",
-      "value": "edd73480-3043-4cdc-aefd-f4ee21fc6a7f:string:0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d",
-      "method": "6ae5877f-be97-47df-99f7-7464a5ca1cde:string:TOKEN_REGISTRY"
-    },
-    "key1": "c1ba53a6-68b8-421e-ac80-7d4b71ca8e52:string:value1",
-    "key2": "0356d74e-10cd-4cc1-b1ba-eab23f8bea3d:string:value2",
-    "key3": [
-      "44faf2a4-d16f-4945-8784-d2b8a088edc5:string:value3.1",
-      "18eaf71f-3b4a-4064-b8f5-79092c2e04aa:string:value3.2"
-    ],
-    "key4": { "key42": "c4f96a54-dda6-4fe2-9f49-bc77e8e19d02:string:value4.2" }
-  },
-  "privacy": {
-    "obfuscatedData": [
-      "c3edad333f0829b92a82cd3c09b7795b0f00f07dfbbfc5ff8779272d1eaba3a8"
-    ]
-  },
-  "signature": {
-    "type": "SHA3MerkleProof",
-    "targetHash": "51d6b872aae578d6a4b7decd4370f50b73b5729d8357f3057e240c10bae64ab2",
-    "proof": [],
-    "merkleRoot": "51d6b872aae578d6a4b7decd4370f50b73b5729d8357f3057e240c10bae64ab2"
-  }
-}
-```
-
-## Check integrity of the document
-
-To check the integrity of the document, we simply:
-
-1. Flatten the data object
-2. Hash individual key-value pairs
-3. Append and sort the hash from (2) with the hashes from `privacy.obfuscatedData`
-4. Compute the keccak256 hash for the results from (3)
-5. Check that the resulting hash from (4) matches the `targetHash`
-
-## Implementation
-
-[OpenAttestation](https://github.com/Open-Attestation/open-attestation)
-
- 
-# References
-
-OA Schema V3 - https://github.com/Open-Attestation/open-attestation/blob/56231b83b6bd0b6bb164bdd830fc02886b578ec1/src/schema/3.0/schema.json
-
-Verifier Manager Model - https://github.com/Open-Attestation/oa-verify/pull/74
-
-DNS Identity Proof - https://blog.gds-gov.tech/opencerts-2-0-decentralised-issuer-identity-verification-fb7e2cae8295
-
-W3C VC - https://www.w3.org/TR/vc-data-model/
-
-<sup id="f1">[1]</sup> 
-[UN/CEFACT White Paper on Data Pipeline](https://www.unece.org/fileadmin/DAM/cefact/GuidanceMaterials/WhitePaperDataPipeline_Eng.pdf) 
-[↩](#footnote1)
-
-<sup id="f2">[2]</sup> 
-[UN/CEFACT White Paper on Technical Application of Blockchain to UN/CEFACT deliverables](https://www.unece.org/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/guidance-material/doc.html) 
-[↩](#footnote2)
-
-# Annex
-
-## A: JSON Schema Definition
-
-```json
-
-{
- "title": "Open Attestation Schema v3",
- "$id": "open-attestation/3.0",
- "$schema": "http://json-schema.org/draft-07/schema#",
- "type": "object",
-
-
-
- "definitions": {
-   "issuer": {
-     "type": "object",
-     "properties": {
-       "id": {
-         "type": "string",
-         "format": "uri",
-         "description": "URI when dereferenced, results in a document containing machine-readable information about the issuer that can be used to verify the information expressed in the credential. More information in https://www.w3.org/TR/vc-data-model/#issuer"
-       },
-       "name": {
-         "type": "string",
-         "description": "Issuer's name"
-       },
-       "identityProof": {
-         "type": "object",
-         "properties": {
-           "type": {
-             "type": "string",
-             "enum": ["DNS-TXT"]
-           },
-           "location": {
-             "type": "string",
-             "description": "Url of the website referencing to document store"
-           }
-         },
-         "additionalProperties": false,
-         "required": ["type", "location"]
-       }
-     },
-     "required": ["id", "name", "identityProof"],
-     "additionalProperties": false
-   }
- },
-
-
-
- "properties": {
-   "@context": {
-     "type": "array",
-     "items": {
-       "type": "string",
-       "format": "uri"
-     },
-     "description": "List of URI to determine the terminology used in the verifiable credential as explained by https://www.w3.org/TR/vc-data-model/#contexts"
-   },
-   "id": {
-     "type": "string",
-     "format": "uri",
-     "description": "URI to the subject of the credential as explained by https://www.w3.org/TR/vc-data-model/#credential-subject"
-   },
-   "reference": {
-     "type": "string",
-     "description": "Internal reference, usually serial number, of this document"
-   },
-   "name": {
-     "type": "string",
-     "description": "Human readable name of the credential"
-   },
-   "type": {
-     "type": "array",
-     "items": {
-       "type": "string"
-     },
-     "description": "Specific verifiable credential type as explained by https://www.w3.org/TR/vc-data-model/#types"
-   },
-   "validFrom": {
-     "type": "string",
-     "format": "date-time",
-     "description": "Date and time when a credential becomes valid."
-   },
-   "validUntil": {
-     "type": "string",
-     "format": "date-time",
-     "description": "Date and time when a credential becomes valid."
-   },
-   "issuer": { "$ref": "#/definitions/issuer" },
-
-
-
-   "template": {
-     "type": "object",
-     "properties": {
-       "name": {
-         "type": "string",
-         "description": "Template name to be use by template renderer to determine the template to use"
-       },
-       "type": {
-         "type": "string",
-         "description": "Type of renderer template",
-         "enum": ["EMBEDDED_RENDERER"]
-       },
-       "url": {
-         "type": "string",
-         "description": "URL of a decentralised renderer to render this document",
-         "pattern": "^(https?)://"
-       }
-     },
-     "required": ["name", "type", "url"],
-     "additionalProperties": false
-   },
-   "proof": {
-     "type": "object",
-     "properties": {
-       "type": {
-         "type": "string",
-         "description": "Proof method name as explained by https://www.w3.org/TR/vc-data-model/#types",
-         "enum": ["OpenAttestationSignature2018"]
-       },
-       "method": {
-         "type": "string",
-         "description": "Proof open attestation method",
-         "enum": ["TOKEN_REGISTRY", "DOCUMENT_STORE"]
-       },
-       "value": {
-         "description": "Proof value for issuer(s)",
-         "type": "string"
-       }
-     },
-     "required": ["type", "method", "value"],
-     "additionalProperties": false
-   },
-   "recipient": {
-     "type": "object",
-     "properties": {
-       "name": {
-         "type": "string",
-         "description": "Recipient's name"
-       }
-     },
-     "additionalProperties": true
-   },
-   "attachments": {
-     "type": "array",
-     "items": {
-       "type": "object",
-       "properties": {
-         "filename": {
-           "type": "string",
-           "description": "Name of attachment, with appropriate extensions"
-         },
-         "type": {
-           "type": "string",
-           "description": "A valid evidence type as explained by https://www.w3.org/TR/vc-data-model/#types"
-         },
-         "mimeType": {
-           "type": "string",
-           "description": "Mime-type of attachment",
-           "enum": ["application/pdf", "image/png", "image/jpeg"]
-         },
-         "data": {
-           "type": "string",
-           "description": "Base64 encoding of attachment"
-         }
-       },
-       "required": ["filename", "mimeType", "data", "type"],
-       "additionalProperties": false
-     }
-   }
- },
-
-
-
- "required": ["reference", "issuer", "template", "proof", "name", "validFrom"],
- "additionalProperties": true
-}
-
-
-```
-
-## Intellectual Property
-
-All material published on edi3.org including all parts of this specification remain the intellectual property of the contributor.  However, contributors should participate on the basis that the specification IP may be incoprporated into a UN/CEFACT standard and, in that case, the IP rights will transfer to the UN as per the [UN/CEFACT IPR Policy](https://www.unece.org/fileadmin/DAM/cefact/cf_plenary/plenary12/ECE_TRADE_C_CEFACT_2010_20_Rev2E_UpdatedIPRpolicy.pdf).
-
-## License
-
-This Specification is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version. See http://www.gnu.org/licenses.
- 
-## Change Process
-
- This document is governed by the [2/COSS](http://rfc.unprotocols.org/spec:2/COSS/) (COSS).
-
-## Language
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" 
-in this document are to be interpreted as described in RFC 2119.
-
-## Glossary
-
-Phrase | Definition
------------- | -------------
-|
-
-## Dependencies
-
-This specification depends on the following specifications
-
-* spec 1
-* spec 2
-
-The following specifications depends on this specification
- 
-* spec 1
-* spec 2
-
-## Related Information
-
-_put a list of any relevant referneces here, and link to them from the appropriate part of the specification_
-</diagram>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2cc91073-3863-4db6-9f1a-b68665088caa:string:document identifier"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"validFrom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ca425b5c-d25d-4a36-b0f7-e368fbbaf75d:string:2010-01-01T19:23:24Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c6864a9b-0367-4b8b-8cc5-f59cb6331f3d:string:document owner name"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"template"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"36a95964-fbe9-4c6d-ab6a-a5247c07f105:string:any"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"45c266d0-3efe-4841-893c-96723cd7ddb5:string:EMBEDDED_RENDERER"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bbec168c-b9c3-4fb3-aa6f-3d1a1017f1e9:string:http://some.example.com"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"42b6991b-e4b5-444b-aba7-7ce97bbe8441:string:http://some.example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"da3fa13d-b0a9-4357-bd4c-4f3941304225:string:DEMO STORE"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"identityProof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e2039c5b-6cab-4679-9150-7266e34371a4:string:DNS-TXT"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"684bb30d-a59e-4cc3-a8ed-44e6b72579d9:string:tradetrust.io"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"proof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bc64159e-90f3-4f0c-99bb-43818ff402e5:string:OpenAttestationSignature2018"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edd73480-3043-4cdc-aefd-f4ee21fc6a7f:string:0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6ae5877f-be97-47df-99f7-7464a5ca1cde:string:TOKEN_REGISTRY"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"key1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c1ba53a6-68b8-421e-ac80-7d4b71ca8e52:string:value1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"key2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0356d74e-10cd-4cc1-b1ba-eab23f8bea3d:string:value2"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"key3"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"44faf2a4-d16f-4945-8784-d2b8a088edc5:string:value3.1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"18eaf71f-3b4a-4064-b8f5-79092c2e04aa:string:value3.2"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"key4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"key41"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7e3b72f8-e521-4892-a26c-b56d3e2ab5cf:string:value4.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"key42"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c4f96a54-dda6-4fe2-9f49-bc77e8e19d02:string:value4.2"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="computing-individual-hashes">Computing individual hashes</h3>
+
+<p>After the individual values have been salted, the entire data object is flattened, while preserving the hierarchical structure of the data within the individual keys.</p>
+
+<p>In our implementation the library <a href="https://www.npmjs.com/package/flatley">flatley</a> is used to flatten the object and <a href="https://www.npmjs.com/package/js-sha3">js-sha3</a> is used to compute the <code class="highlighter-rouge">keccak256</code> hash.</p>
+
+<p>Output after flattening:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2cc91073-3863-4db6-9f1a-b68665088caa:string:document identifier"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"validFrom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ca425b5c-d25d-4a36-b0f7-e368fbbaf75d:string:2010-01-01T19:23:24Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c6864a9b-0367-4b8b-8cc5-f59cb6331f3d:string:document owner name"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"template.name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"36a95964-fbe9-4c6d-ab6a-a5247c07f105:string:any"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"template.type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"45c266d0-3efe-4841-893c-96723cd7ddb5:string:EMBEDDED_RENDERER"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"template.url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bbec168c-b9c3-4fb3-aa6f-3d1a1017f1e9:string:http://some.example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"issuer.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"42b6991b-e4b5-444b-aba7-7ce97bbe8441:string:http://some.example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"issuer.name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"da3fa13d-b0a9-4357-bd4c-4f3941304225:string:DEMO STORE"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"issuer.identityProof.type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e2039c5b-6cab-4679-9150-7266e34371a4:string:DNS-TXT"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"issuer.identityProof.location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"684bb30d-a59e-4cc3-a8ed-44e6b72579d9:string:tradetrust.io"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"proof.type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bc64159e-90f3-4f0c-99bb-43818ff402e5:string:OpenAttestationSignature2018"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"proof.value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edd73480-3043-4cdc-aefd-f4ee21fc6a7f:string:0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"proof.method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6ae5877f-be97-47df-99f7-7464a5ca1cde:string:TOKEN_REGISTRY"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"key1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c1ba53a6-68b8-421e-ac80-7d4b71ca8e52:string:value1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"key2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0356d74e-10cd-4cc1-b1ba-eab23f8bea3d:string:value2"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"key3.0"</span><span class="p">:</span><span class="w"> </span><span class="s2">"44faf2a4-d16f-4945-8784-d2b8a088edc5:string:value3.1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"key3.1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18eaf71f-3b4a-4064-b8f5-79092c2e04aa:string:value3.2"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"key4.key41"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7e3b72f8-e521-4892-a26c-b56d3e2ab5cf:string:value4.1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"key4.key42"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c4f96a54-dda6-4fe2-9f49-bc77e8e19d02:string:value4.2"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Once the data object has been salted and flattened, each key-value pair will be hashed.</p>
+
+<p>In the example above, we will apply the <code class="highlighter-rouge">keccak256</code> hash on the object <code class="highlighter-rouge">{"key4.key41":"7e3b72f8-e521-4892-a26c-b56d3e2ab5cf:string:value4.1"}</code> which will yield <code class="highlighter-rouge">c3edad333f0829b92a82cd3c09b7795b0f00f07dfbbfc5ff8779272d1eaba3a8</code>.</p>
+
+<p>Once this function has been applied to all the keys, the output hashes will be sorted and stored in an array.</p>
+
+<p>Output after all hashing individual keys (sorted):</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="s2">"1b61eaed9b46a53c530ca7cbe1ed54621e9478b86efb445a932f3cb38d6a97da"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"28e72c3815a932b137f3dc0d9d9fa101d6d7477793acf5adcb5f34f0901c3811"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"2a73ae2d0e942748f632130c530e4d3eb0e91dcf8e560c52586ecf2cf84daefd"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"32559f7f05f498d2ffe89345a379fa6619cd20466474386b26ac8b328b28e03e"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"5464490fed778a23505a0da8cb8ffa8ebf47b85fa221f544d0757a96e5be315d"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"5c51bab9dda34200e24a5bf46ce39a82561515239f869d444cd7b458bb986483"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"6b19136bf4ff28c270b913786c329c6c1186857a5fb5b9897bc4bdf00f95041d"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"6ec1924f5f25afe82b01ed108775ab27125b0e7277687a1c1acef27ce34cb189"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"87da7c3a74118736144688664ffa621e7e39837c23719a0b4c88ee0fa0b08357"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"88c680973e4c58095b222aabfe2d62ffe8bf3a9dacccb6cea112805abdb2d475"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"91788b66ce30099e244d180bc18ce16b98de48598cd2ebf9f1cc7c508dc1b65e"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"9e029d96b11e4f4e4a37cb3bf03bf3af854b8ea059686945072f02c215e0aba6"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"a0b0a1e5992ad724ce101921001d9de2ff08a64c65d9e92b47142eb76fa03618"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"c04833e08f6a0d17cb8388db75dec3b07c603be118a1303f68332ae7eef26db5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"c3edad333f0829b92a82cd3c09b7795b0f00f07dfbbfc5ff8779272d1eaba3a8"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"c6daa8acbd7b7591d6ea0055a6de3827b953ea3e295c024fc31c167cac1f112d"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"d8b26580983759e8cad2bcfd10dffdf375cd49b1e5d7b4424d7698216b683218"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"e3494dd41622c560a2df8cf9051f75a27ef651c46826e3eef6382187825794d5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"f29d9f500d3843f547158fcd8b69b67406ad492621d9702a7903062f86ef97b0"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="computing-documents-targethash">Computing document’s targetHash</h3>
+
+<p>Finally, with the array of sorted hashes, <code class="highlighter-rouge">keccak256</code> is applied again on the stringified array to obtain the <code class="highlighter-rouge">targetHash</code> of the document.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">keccak256</span><span class="p">(</span>
+  <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">([</span>
+    <span class="dl">"</span><span class="s2">1b61eaed9b46a53c530ca7cbe1ed54621e9478b86efb445a932f3cb38d6a97da</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">28e72c3815a932b137f3dc0d9d9fa101d6d7477793acf5adcb5f34f0901c3811</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">2a73ae2d0e942748f632130c530e4d3eb0e91dcf8e560c52586ecf2cf84daefd</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">32559f7f05f498d2ffe89345a379fa6619cd20466474386b26ac8b328b28e03e</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">5464490fed778a23505a0da8cb8ffa8ebf47b85fa221f544d0757a96e5be315d</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">5c51bab9dda34200e24a5bf46ce39a82561515239f869d444cd7b458bb986483</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">6b19136bf4ff28c270b913786c329c6c1186857a5fb5b9897bc4bdf00f95041d</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">6ec1924f5f25afe82b01ed108775ab27125b0e7277687a1c1acef27ce34cb189</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">87da7c3a74118736144688664ffa621e7e39837c23719a0b4c88ee0fa0b08357</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">88c680973e4c58095b222aabfe2d62ffe8bf3a9dacccb6cea112805abdb2d475</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">91788b66ce30099e244d180bc18ce16b98de48598cd2ebf9f1cc7c508dc1b65e</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">9e029d96b11e4f4e4a37cb3bf03bf3af854b8ea059686945072f02c215e0aba6</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">a0b0a1e5992ad724ce101921001d9de2ff08a64c65d9e92b47142eb76fa03618</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">c04833e08f6a0d17cb8388db75dec3b07c603be118a1303f68332ae7eef26db5</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">c3edad333f0829b92a82cd3c09b7795b0f00f07dfbbfc5ff8779272d1eaba3a8</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">c6daa8acbd7b7591d6ea0055a6de3827b953ea3e295c024fc31c167cac1f112d</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">d8b26580983759e8cad2bcfd10dffdf375cd49b1e5d7b4424d7698216b683218</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">e3494dd41622c560a2df8cf9051f75a27ef651c46826e3eef6382187825794d5</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">f29d9f500d3843f547158fcd8b69b67406ad492621d9702a7903062f86ef97b0</span><span class="dl">"</span>
+  <span class="p">])</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>Result:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"51d6b872aae578d6a4b7decd4370f50b73b5729d8357f3057e240c10bae64ab2"</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="assembling-the-oa-document">Assembling the OA document</h3>
+
+<p>Once the <code class="highlighter-rouge">targetHash</code> of the document is calculated, it can be appended to the document under the <code class="highlighter-rouge">signature</code> object.</p>
+
+<p>Example of wrapped OA Document:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open-attestation/3.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2cc91073-3863-4db6-9f1a-b68665088caa:string:document identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"validFrom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ca425b5c-d25d-4a36-b0f7-e368fbbaf75d:string:2010-01-01T19:23:24Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c6864a9b-0367-4b8b-8cc5-f59cb6331f3d:string:document owner name"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"template"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"36a95964-fbe9-4c6d-ab6a-a5247c07f105:string:any"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"45c266d0-3efe-4841-893c-96723cd7ddb5:string:EMBEDDED_RENDERER"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bbec168c-b9c3-4fb3-aa6f-3d1a1017f1e9:string:http://some.example.com"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"42b6991b-e4b5-444b-aba7-7ce97bbe8441:string:http://some.example.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"da3fa13d-b0a9-4357-bd4c-4f3941304225:string:DEMO STORE"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"identityProof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e2039c5b-6cab-4679-9150-7266e34371a4:string:DNS-TXT"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"684bb30d-a59e-4cc3-a8ed-44e6b72579d9:string:tradetrust.io"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"proof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bc64159e-90f3-4f0c-99bb-43818ff402e5:string:OpenAttestationSignature2018"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edd73480-3043-4cdc-aefd-f4ee21fc6a7f:string:0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6ae5877f-be97-47df-99f7-7464a5ca1cde:string:TOKEN_REGISTRY"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"key1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c1ba53a6-68b8-421e-ac80-7d4b71ca8e52:string:value1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"key2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0356d74e-10cd-4cc1-b1ba-eab23f8bea3d:string:value2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"key3"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"44faf2a4-d16f-4945-8784-d2b8a088edc5:string:value3.1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"18eaf71f-3b4a-4064-b8f5-79092c2e04aa:string:value3.2"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"key4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"key41"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7e3b72f8-e521-4892-a26c-b56d3e2ab5cf:string:value4.1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"key42"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c4f96a54-dda6-4fe2-9f49-bc77e8e19d02:string:value4.2"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"privacy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"obfuscatedData"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"signature"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SHA3MerkleProof"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"targetHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51d6b872aae578d6a4b7decd4370f50b73b5729d8357f3057e240c10bae64ab2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"proof"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"merkleRoot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51d6b872aae578d6a4b7decd4370f50b73b5729d8357f3057e240c10bae64ab2"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="obfuscating-a-value">Obfuscating a value</h2>
+
+<p>To obfuscate a value in the OA document, one simply hash the key-value pair with <code class="highlighter-rouge">keccak256</code> and store the resulting hash in <code class="highlighter-rouge">privacy.obfuscatedData</code>. This method can be used to obfuscate multiple key-value pairs in the document data file.</p>
+
+<p>For example to obfuscated <code class="highlighter-rouge">key4.key41</code>:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">keccak256</span><span class="p">(</span>
+  <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+    <span class="dl">"</span><span class="s2">key4.key41</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">7e3b72f8-e521-4892-a26c-b56d3e2ab5cf:string:value4.1</span><span class="dl">"</span>
+  <span class="p">})</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>Resulting hash:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>c3edad333f0829b92a82cd3c09b7795b0f00f07dfbbfc5ff8779272d1eaba3a8
+</code></pre></div></div>
+
+<p>This hash will then be appended to the original OA document and the object that has been obfuscated will be removed:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open-attestation/3.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2cc91073-3863-4db6-9f1a-b68665088caa:string:document identifier"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"validFrom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ca425b5c-d25d-4a36-b0f7-e368fbbaf75d:string:2010-01-01T19:23:24Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c6864a9b-0367-4b8b-8cc5-f59cb6331f3d:string:document owner name"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"template"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"36a95964-fbe9-4c6d-ab6a-a5247c07f105:string:any"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"45c266d0-3efe-4841-893c-96723cd7ddb5:string:EMBEDDED_RENDERER"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bbec168c-b9c3-4fb3-aa6f-3d1a1017f1e9:string:http://some.example.com"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"42b6991b-e4b5-444b-aba7-7ce97bbe8441:string:http://some.example.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"da3fa13d-b0a9-4357-bd4c-4f3941304225:string:DEMO STORE"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"identityProof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e2039c5b-6cab-4679-9150-7266e34371a4:string:DNS-TXT"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"684bb30d-a59e-4cc3-a8ed-44e6b72579d9:string:tradetrust.io"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"proof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bc64159e-90f3-4f0c-99bb-43818ff402e5:string:OpenAttestationSignature2018"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edd73480-3043-4cdc-aefd-f4ee21fc6a7f:string:0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6ae5877f-be97-47df-99f7-7464a5ca1cde:string:TOKEN_REGISTRY"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"key1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c1ba53a6-68b8-421e-ac80-7d4b71ca8e52:string:value1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"key2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0356d74e-10cd-4cc1-b1ba-eab23f8bea3d:string:value2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"key3"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"44faf2a4-d16f-4945-8784-d2b8a088edc5:string:value3.1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"18eaf71f-3b4a-4064-b8f5-79092c2e04aa:string:value3.2"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"key4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"key42"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c4f96a54-dda6-4fe2-9f49-bc77e8e19d02:string:value4.2"</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"privacy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"obfuscatedData"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"c3edad333f0829b92a82cd3c09b7795b0f00f07dfbbfc5ff8779272d1eaba3a8"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"signature"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SHA3MerkleProof"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"targetHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51d6b872aae578d6a4b7decd4370f50b73b5729d8357f3057e240c10bae64ab2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"proof"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"merkleRoot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51d6b872aae578d6a4b7decd4370f50b73b5729d8357f3057e240c10bae64ab2"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="check-integrity-of-the-document">Check integrity of the document</h2>
+
+<p>To check the integrity of the document, we simply:</p>
+
+<ol>
+  <li>Flatten the data object</li>
+  <li>Hash individual key-value pairs</li>
+  <li>Append and sort the hash from (2) with the hashes from <code class="highlighter-rouge">privacy.obfuscatedData</code></li>
+  <li>Compute the keccak256 hash for the results from (3)</li>
+  <li>Check that the resulting hash from (4) matches the <code class="highlighter-rouge">targetHash</code></li>
+</ol>
+
+<h2 id="implementation">Implementation</h2>
+
+<p><a href="https://github.com/Open-Attestation/open-attestation">OpenAttestation</a></p>
+
+<h1 id="references">References</h1>
+
+<p>OA Schema V3 - https://github.com/Open-Attestation/open-attestation/blob/56231b83b6bd0b6bb164bdd830fc02886b578ec1/src/schema/3.0/schema.json</p>
+
+<p>Verifier Manager Model - https://github.com/Open-Attestation/oa-verify/pull/74</p>
+
+<p>DNS Identity Proof - https://blog.gds-gov.tech/opencerts-2-0-decentralised-issuer-identity-verification-fb7e2cae8295</p>
+
+<p>W3C VC - https://www.w3.org/TR/vc-data-model/</p>
+
+<p><sup id="f1">[1]</sup> 
+<a href="https://www.unece.org/fileadmin/DAM/cefact/GuidanceMaterials/WhitePaperDataPipeline_Eng.pdf">UN/CEFACT White Paper on Data Pipeline</a> 
+<a href="#footnote1">↩</a></p>
+
+<p><sup id="f2">[2]</sup> 
+<a href="https://www.unece.org/tradewelcome/un-centre-for-trade-facilitation-and-e-business-uncefact/outputs/guidance-material/doc.html">UN/CEFACT White Paper on Technical Application of Blockchain to UN/CEFACT deliverables</a> 
+<a href="#footnote2">↩</a></p>
+
+<h1 id="annex">Annex</h1>
+
+<h2 id="a-json-schema-definition">A: JSON Schema Definition</h2>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+ </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Open Attestation Schema v3"</span><span class="p">,</span><span class="w">
+ </span><span class="nl">"$id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"open-attestation/3.0"</span><span class="p">,</span><span class="w">
+ </span><span class="nl">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span><span class="w">
+ </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+
+
+
+ </span><span class="nl">"definitions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+   </span><span class="nl">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+       </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"URI when dereferenced, results in a document containing machine-readable information about the issuer that can be used to verify the information expressed in the credential. More information in https://www.w3.org/TR/vc-data-model/#issuer"</span><span class="w">
+       </span><span class="p">},</span><span class="w">
+       </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Issuer's name"</span><span class="w">
+       </span><span class="p">},</span><span class="w">
+       </span><span class="nl">"identityProof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+           </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+             </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+             </span><span class="nl">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"DNS-TXT"</span><span class="p">]</span><span class="w">
+           </span><span class="p">},</span><span class="w">
+           </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+             </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+             </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Url of the website referencing to document store"</span><span class="w">
+           </span><span class="p">}</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+         </span><span class="nl">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"location"</span><span class="p">]</span><span class="w">
+       </span><span class="p">}</span><span class="w">
+     </span><span class="p">},</span><span class="w">
+     </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"id"</span><span class="p">,</span><span class="w"> </span><span class="s2">"name"</span><span class="p">,</span><span class="w"> </span><span class="s2">"identityProof"</span><span class="p">],</span><span class="w">
+     </span><span class="nl">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+ </span><span class="p">},</span><span class="w">
+
+
+
+ </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+   </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+       </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+       </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="w">
+     </span><span class="p">},</span><span class="w">
+     </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"List of URI to determine the terminology used in the verifiable credential as explained by https://www.w3.org/TR/vc-data-model/#contexts"</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uri"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"URI to the subject of the credential as explained by https://www.w3.org/TR/vc-data-model/#credential-subject"</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Internal reference, usually serial number, of this document"</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Human readable name of the credential"</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+       </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+     </span><span class="p">},</span><span class="w">
+     </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Specific verifiable credential type as explained by https://www.w3.org/TR/vc-data-model/#types"</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"validFrom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"date-time"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Date and time when a credential becomes valid."</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"validUntil"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"date-time"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Date and time when a credential becomes valid."</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"$ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#/definitions/issuer"</span><span class="w"> </span><span class="p">},</span><span class="w">
+
+
+
+   </span><span class="nl">"template"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+       </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Template name to be use by template renderer to determine the template to use"</span><span class="w">
+       </span><span class="p">},</span><span class="w">
+       </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Type of renderer template"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"EMBEDDED_RENDERER"</span><span class="p">]</span><span class="w">
+       </span><span class="p">},</span><span class="w">
+       </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"URL of a decentralised renderer to render this document"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"pattern"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^(https?)://"</span><span class="w">
+       </span><span class="p">}</span><span class="w">
+     </span><span class="p">},</span><span class="w">
+     </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"name"</span><span class="p">,</span><span class="w"> </span><span class="s2">"type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"url"</span><span class="p">],</span><span class="w">
+     </span><span class="nl">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"proof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+       </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Proof method name as explained by https://www.w3.org/TR/vc-data-model/#types"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"OpenAttestationSignature2018"</span><span class="p">]</span><span class="w">
+       </span><span class="p">},</span><span class="w">
+       </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Proof open attestation method"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"TOKEN_REGISTRY"</span><span class="p">,</span><span class="w"> </span><span class="s2">"DOCUMENT_STORE"</span><span class="p">]</span><span class="w">
+       </span><span class="p">},</span><span class="w">
+       </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Proof value for issuer(s)"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+       </span><span class="p">}</span><span class="w">
+     </span><span class="p">},</span><span class="w">
+     </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"method"</span><span class="p">,</span><span class="w"> </span><span class="s2">"value"</span><span class="p">],</span><span class="w">
+     </span><span class="nl">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+       </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Recipient's name"</span><span class="w">
+       </span><span class="p">}</span><span class="w">
+     </span><span class="p">},</span><span class="w">
+     </span><span class="nl">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"attachments"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+       </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+       </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"filename"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+           </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name of attachment, with appropriate extensions"</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+         </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+           </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A valid evidence type as explained by https://www.w3.org/TR/vc-data-model/#types"</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+         </span><span class="nl">"mimeType"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+           </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mime-type of attachment"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"enum"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"application/pdf"</span><span class="p">,</span><span class="w"> </span><span class="s2">"image/png"</span><span class="p">,</span><span class="w"> </span><span class="s2">"image/jpeg"</span><span class="p">]</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+         </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+           </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Base64 encoding of attachment"</span><span class="w">
+         </span><span class="p">}</span><span class="w">
+       </span><span class="p">},</span><span class="w">
+       </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"filename"</span><span class="p">,</span><span class="w"> </span><span class="s2">"mimeType"</span><span class="p">,</span><span class="w"> </span><span class="s2">"data"</span><span class="p">,</span><span class="w"> </span><span class="s2">"type"</span><span class="p">],</span><span class="w">
+       </span><span class="nl">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+     </span><span class="p">}</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+ </span><span class="p">},</span><span class="w">
+
+
+
+ </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"reference"</span><span class="p">,</span><span class="w"> </span><span class="s2">"issuer"</span><span class="p">,</span><span class="w"> </span><span class="s2">"template"</span><span class="p">,</span><span class="w"> </span><span class="s2">"proof"</span><span class="p">,</span><span class="w"> </span><span class="s2">"name"</span><span class="p">,</span><span class="w"> </span><span class="s2">"validFrom"</span><span class="p">],</span><span class="w">
+ </span><span class="nl">"additionalProperties"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div></div>
+
+<h2 id="intellectual-property">Intellectual Property</h2>
+
+<p>All material published on edi3.org including all parts of this specification remain the intellectual property of the contributor.  However, contributors should participate on the basis that the specification IP may be incoprporated into a UN/CEFACT standard and, in that case, the IP rights will transfer to the UN as per the <a href="https://www.unece.org/fileadmin/DAM/cefact/cf_plenary/plenary12/ECE_TRADE_C_CEFACT_2010_20_Rev2E_UpdatedIPRpolicy.pdf">UN/CEFACT IPR Policy</a>.</p>
+
+<h2 id="license">License</h2>
+
+<p>This Specification is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version. See http://www.gnu.org/licenses.</p>
+
+<h2 id="change-process">Change Process</h2>
+
+<p>This document is governed by the <a href="http://rfc.unprotocols.org/spec:2/COSS/">2/COSS</a> (COSS).</p>
+
+<h2 id="language">Language</h2>
+
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” 
+in this document are to be interpreted as described in RFC 2119.</p>
+
+<h2 id="glossary">Glossary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phrase</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<p>This specification depends on the following specifications</p>
+
+<ul>
+  <li>spec 1</li>
+  <li>spec 2</li>
+</ul>
+
+<p>The following specifications depends on this specification</p>
+
+<ul>
+  <li>spec 1</li>
+  <li>spec 2</li>
+</ul>
+
+<h2 id="related-information">Related Information</h2>
+
+<p><em>put a list of any relevant referneces here, and link to them from the appropriate part of the specification</em></p>
 
             
         </div>
