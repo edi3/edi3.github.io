@@ -180,6 +180,9 @@
 <li class="toc-entry toc-h2"><a href="#goals">Goals</a></li>
 <li class="toc-entry toc-h2"><a href="#use-cases">Use Cases</a>
 <ul>
+<li class="toc-entry toc-h3"><a href="#domain-name-server-dns">Domain Name Server (DNS)</a></li>
+<li class="toc-entry toc-h3"><a href="#token-registry">Token Registry</a>
+<ul>
 <li class="toc-entry toc-h4"><a href="#non-transferable-document">Non-transferable Document</a>
 <ul>
 <li class="toc-entry toc-h5"><a href="#certificate-of-non-manipulation">Certificate of Non-Manipulation</a>
@@ -200,6 +203,8 @@
 <li class="toc-entry toc-h6"><a href="#prove-ownership-of-token-registry">Prove Ownership of Token Registry</a></li>
 <li class="toc-entry toc-h6"><a href="#prove-document-issuance-1">Prove Document Issuance</a></li>
 <li class="toc-entry toc-h6"><a href="#verification-1">Verification</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -254,7 +259,6 @@
 </li>
 <li class="toc-entry toc-h1"><a href="#decentralised-document-rendering">Decentralised Document Rendering</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#status">Status</a></li>
 <li class="toc-entry toc-h2"><a href="#goal">Goal</a></li>
 <li class="toc-entry toc-h2"><a href="#frame-to-frame-communication">Frame-to-Frame Communication</a>
 <ul>
@@ -279,7 +283,6 @@
 </li>
 <li class="toc-entry toc-h1"><a href="#selective-disclosure">Selective Disclosure</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#status-1">Status</a></li>
 <li class="toc-entry toc-h2"><a href="#goal-1">Goal</a></li>
 <li class="toc-entry toc-h2"><a href="#preparing-the-document">Preparing the document</a>
 <ul>
@@ -363,7 +366,7 @@
 
 <h2 id="use-cases">Use Cases</h2>
 
-<p>There are many trade documents in which we can categorise them into 2 main groups:</p>
+<p>Trade documentation plays a vital role in international trade as it facilitates the smooth flow of goods and payments thereof across national frontiers. There are many trade documents in which we can categorise them into 2 main groups:</p>
 <ul>
   <li>Non-transferable documents</li>
   <li>Transferable documents</li>
@@ -371,20 +374,22 @@
 
 <p>A non-transferable documents belongs to one person and cannot legally be given to another person and used by them. An example is an air ticket or Certificate of Non-Manipulation (CNM).</p>
 
-<p>However, for transferable documents, it can be transferred by one person to another, passing to the transferee the rights of the original holder. Transferable documents typically include bills of lading, and warehouse receipts.</p>
+<p>As for transferable documents, it can be transferred by one person to another, passing to the transferee the rights of the original holder. Transferable documents typically include bills of lading, and warehouse receipts.</p>
 
-<p>There are also many ways to verify the issuance of a document, and will discuss the following 2 mechanisms:</p>
+<p>With the abundance of trade documents involved in international trade, document verification is an essential process as it verifies the identity of the document signer to prevent fraud, and checks for awareness and volition. Thus we need a solution that can allows document verification to be executed digitally and safely.</p>
 
-<ul>
-  <li>
-    <p>Domain Name Server (DNS)
-DNS is the phonebook of the Internet, connecting web browsers with websites.
+<p>There are a couple of methods to digitalise notarisation such as electronic-signature, electronic notarisation, webcam notarisation and etc. Electronic notarisation will be discussed further to prove the verification mechanisam in a decentralised manner in which both Domain Name Server (DNS) and Token Registry are 2 unique blockchain solutions that can demostrate document verification for Non-Transferable Documents and Transferable Documents respectively.</p>
+
+<h3 id="domain-name-server-dns">Domain Name Server (DNS)</h3>
+
+<p>DNS is the phonebook of the Internet, connecting web browsers with websites.
 By allowing the DNS system to be used as an identity registry, we allow the domain name owners to claim ownership of a Document Store smart contract on the Blockchain.</p>
-  </li>
-  <li>
-    <p>Token Registry</p>
-  </li>
-</ul>
+
+<p>The DNS system is a key part of Internet infrastructure, and is a decentralised system - this means that there is a low barrier to entry and does not have a single point of failure. It allows issuers to simply tie their issuance to their domain name, (e.g example.openattestation.com). When a user views a certificate issued under this model, they will see “Document issued by example.openattestation.com”.</p>
+
+<h3 id="token-registry">Token Registry</h3>
+
+<p>Token Registry supports the construct of assets which can have ownership assigned to them. This is supported using Blockchain smart contracts to keep track of the owner of a particular asset. This solution will faciliate the title transfer requirements for Transferable Documents.</p>
 
 <h4 id="non-transferable-document">Non-transferable Document</h4>
 
@@ -433,6 +438,8 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <h4 id="transferable-document">Transferable Document</h4>
 <h5 id="bill-of-lading">Bill of Lading</h5>
+
+<p>Bill of Lading allows the transmission of ownership of the goods through a simple endorsement.</p>
 
 <p><img src="token_registry.png" alt="docs" /></p>
 
@@ -695,10 +702,6 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <h1 id="decentralised-document-rendering">Decentralised Document Rendering</h1>
 
-<h2 id="status">Status</h2>
-
-<p>Accepted</p>
-
 <h2 id="goal">Goal</h2>
 
 <p><img src="decentralised_rendered_overview.png" alt="docs" /></p>
@@ -852,10 +855,6 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 <span class="p">};</span>
 </code></pre></div></div>
 <h1 id="selective-disclosure">Selective Disclosure</h1>
-
-<h2 id="status-1">Status</h2>
-
-<p>Accepted</p>
 
 <h2 id="goal-1">Goal</h2>
 
