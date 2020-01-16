@@ -174,16 +174,16 @@
             <div class="specs-toc">
     <!--<div class="specs-toc-title">Table of contents</div>-->
     <ul class="section-nav">
-<li class="toc-entry toc-h1"><a href="#abstract">Abstract</a></li>
-<li class="toc-entry toc-h1"><a href="#introduction">Introduction</a>
+<li class="toc-entry toc-h1"><a href="#1-abstract">1. Abstract</a></li>
+<li class="toc-entry toc-h1"><a href="#2-introduction">2. Introduction</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#goals">Goals</a></li>
-<li class="toc-entry toc-h2"><a href="#use-cases">Use Cases</a>
+<li class="toc-entry toc-h2"><a href="#21-goals">2.1 Goals</a></li>
+<li class="toc-entry toc-h2"><a href="#22-use-cases">2.2 Use Cases</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#domain-name-server-dns">Domain Name Server (DNS)</a></li>
-<li class="toc-entry toc-h3"><a href="#token-registry">Token Registry</a>
+<li class="toc-entry toc-h3"><a href="#221-domain-name-server-dns">2.2.1 Domain Name Server (DNS)</a></li>
+<li class="toc-entry toc-h3"><a href="#222-token-registry">2.2.2 Token Registry</a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#non-transferable-document">Non-transferable Document</a>
+<li class="toc-entry toc-h4"><a href="#223-non-transferable-document">2.2.3 Non-transferable Document</a>
 <ul>
 <li class="toc-entry toc-h5"><a href="#certificate-of-non-manipulation">Certificate of Non-Manipulation</a>
 <ul>
@@ -195,7 +195,7 @@
 </li>
 </ul>
 </li>
-<li class="toc-entry toc-h4"><a href="#transferable-document">Transferable Document</a>
+<li class="toc-entry toc-h4"><a href="#224-transferable-document">2.2.4 Transferable Document</a>
 <ul>
 <li class="toc-entry toc-h5"><a href="#bill-of-lading">Bill of Lading</a>
 <ul>
@@ -213,77 +213,52 @@
 </li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#data-model">Data Model</a>
+<li class="toc-entry toc-h1"><a href="#3-data-model">3. Data Model</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#json-schema">JSON Schema</a></li>
-<li class="toc-entry toc-h2"><a href="#json-schema-validator">JSON Schema Validator</a></li>
+<li class="toc-entry toc-h2"><a href="#31-data-dictionary">3.1 Data Dictionary</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#basic-concept">Basic Concept</a>
+<li class="toc-entry toc-h1"><a href="#4-basic-concept">4. Basic Concept</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#verification-method">Verification Method</a>
+<li class="toc-entry toc-h2"><a href="#41-verification-method">4.1 Verification Method</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#overview-of-the-verification-methods">Overview of the verification methods</a>
+<li class="toc-entry toc-h3"><a href="#42-overview-of-the-verification-methods">4.2 Overview of the verification methods</a></li>
+<li class="toc-entry toc-h3"><a href="#43-api">4.3 API</a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#testdocument-document-boolean">test(document: Document): boolean</a></li>
-<li class="toc-entry toc-h4"><a href="#skip-verificationfragment">skip(): VerificationFragment</a></li>
-<li class="toc-entry toc-h4"><a href="#verifydocument-document-verificationfragment">verify(document: Document): VerificationFragment</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h3"><a href="#verification-types">Verification Types</a></li>
-<li class="toc-entry toc-h3"><a href="#verifier">Verifier</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#default-verification-types-and-methods">Default Verification Types and Methods</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#document-integrity-document_integrity">Document Integrity (DOCUMENT_INTEGRITY)</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#openattestationhash">OpenAttestationHash</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h3"><a href="#document-status-document_status">Document Status (DOCUMENT_STATUS)</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#openattestationethereumdocumentstoreissued">OpenAttestationEthereumDocumentStoreIssued</a></li>
-<li class="toc-entry toc-h4"><a href="#openattestationethereumdocumentstorerevoked">OpenAttestationEthereumDocumentStoreRevoked</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h3"><a href="#issuer-identity-issuer_identity">Issuer Identity (ISSUER_IDENTITY)</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#openattestationdnstxt">OpenAttestationDnsTxt</a></li>
+<li class="toc-entry toc-h4"><a href="#431-verify">4.3.1 verify</a></li>
+<li class="toc-entry toc-h4"><a href="#4311--verification-fragments">4.3.1.1  Verification Fragments</a></li>
+<li class="toc-entry toc-h4"><a href="#432-isvalid">4.3.2 isValid</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#usage">Usage</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#decentralised-document-rendering">Decentralised Document Rendering</a>
+<li class="toc-entry toc-h1"><a href="#5decentralised-document-rendering">5.Decentralised Document Rendering</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#goal">Goal</a></li>
-<li class="toc-entry toc-h2"><a href="#frame-to-frame-communication">Frame-to-Frame Communication</a>
+<li class="toc-entry toc-h2"><a href="#51-frame-to-frame-communication">5.1 Frame-to-Frame Communication</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#from-host-to-frame-actions">From host to frame actions</a>
+<li class="toc-entry toc-h3"><a href="#511-from-host-to-frame-actions">5.1.1 From host to frame actions</a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#render_document">RENDER_DOCUMENT</a></li>
-<li class="toc-entry toc-h4"><a href="#select_template">SELECT_TEMPLATE</a></li>
-<li class="toc-entry toc-h4"><a href="#print">PRINT</a></li>
-<li class="toc-entry toc-h4"><a href="#get_templates">GET_TEMPLATES</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#from-frame-to-host-actions">From frame to host actions</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#update_height">UPDATE_HEIGHT</a></li>
-<li class="toc-entry toc-h3"><a href="#obfuscate">OBFUSCATE</a></li>
-<li class="toc-entry toc-h3"><a href="#update_templates">UPDATE_TEMPLATES</a></li>
+<li class="toc-entry toc-h4"><a href="#5111-render_document">5.1.1.1 RENDER_DOCUMENT</a></li>
+<li class="toc-entry toc-h4"><a href="#5112-select_template">5.1.1.2 SELECT_TEMPLATE</a></li>
+<li class="toc-entry toc-h4"><a href="#5113-print">5.1.1.3 PRINT</a></li>
+<li class="toc-entry toc-h4"><a href="#5114-get_templates">5.1.1.4 GET_TEMPLATES</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#selective-disclosure">Selective Disclosure</a>
+<li class="toc-entry toc-h2"><a href="#52-from-frame-to-host-actions">5.2 From frame to host actions</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#goal-1">Goal</a></li>
+<li class="toc-entry toc-h3"><a href="#521-update_height">5.2.1 UPDATE_HEIGHT</a></li>
+<li class="toc-entry toc-h3"><a href="#522-obfuscate">5.2.2 OBFUSCATE</a></li>
+<li class="toc-entry toc-h3"><a href="#523-update_templates">5.2.3 UPDATE_TEMPLATES</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#6-selective-disclosure">6. Selective Disclosure</a>
+<ul>
 <li class="toc-entry toc-h2"><a href="#preparing-the-document">Preparing the document</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#salting-the-data">Salting the data</a></li>
@@ -312,7 +287,7 @@
 </li>
 </ul>
 </div>
-            <h1 id="abstract">Abstract</h1>
+            <h1 id="1-abstract">1. Abstract</h1>
 
 <p>This document describes the technical specifications for notarisation of trade documents using open-source solution leveraging on Distributed Ledger Technology (DLT). This allows end users receiving the document to verify the provenance and integrity of the document.</p>
 
@@ -333,7 +308,7 @@
   </li>
 </ul>
 
-<h1 id="introduction">Introduction</h1>
+<h1 id="2-introduction">2. Introduction</h1>
 
 <p>Before digital transformation transpired, trade documents require a lot of administrative burden resulting in an increase in time and cost of manual verification. With the emergence of digital technologies in the trade world, it has changed the way we work and helped to improve operational efficiency across supply chains.</p>
 
@@ -349,7 +324,7 @@
 
 <p>As we embark into the Blockchain to facilitate greater transparency, portability of information and greater operational efficiency, trade documents can now be notarised digitally and allowed tracing on the provenance and verification of digitally issued documents. This notarisation makes use of a framework to format data so that it can be fingerprinted, and then notarised on a trusted platform, such as the Ethereum blockchain.</p>
 
-<h2 id="goals">Goals</h2>
+<h2 id="21-goals">2.1 Goals</h2>
 
 <p>The following are features that would faciliate on the suggested notarisation method:</p>
 
@@ -364,7 +339,7 @@
   <li>Compatible with W3C Verifiable Claims</li>
 </ul>
 
-<h2 id="use-cases">Use Cases</h2>
+<h2 id="22-use-cases">2.2 Use Cases</h2>
 
 <p>Trade documentation plays a vital role in international trade as it facilitates the smooth flow of goods and payments thereof across national frontiers. There are many trade documents in which we can categorise them into 2 main groups:</p>
 <ul>
@@ -378,20 +353,20 @@
 
 <p>With numerous trade documents involved in international trade, document verification is an essential process as it verifies the identity of the document signer to prevent fraud, and checks for awareness and volition. Thus we need a solution that allows document verification to be executed digitally and safely.</p>
 
-<p>We also note that there are a couple of methods to digitalise notarisation such as electronic-signature, electronic notarisation, webcam notarisation and etc. Electronic notarisation will be discussed further to prove the verification mechanisam in a decentralised manner in which both Domain Name Server (DNS) and Token Registry are 2 unique blockchain solutions that can demostrate document verification for Non-Transferable Documents and Transferable Documents respectively.</p>
+<p>Electronic notarisation will be discussed further to prove the verification mechanisam in a decentralised manner in which both Domain Name Server (DNS) and Token Registry are 2 unique blockchain solutions that can demostrate document verification for Non-Transferable Documents and Transferable Documents respectively.</p>
 
-<h3 id="domain-name-server-dns">Domain Name Server (DNS)</h3>
+<h3 id="221-domain-name-server-dns">2.2.1 Domain Name Server (DNS)</h3>
 
 <p>DNS is the phonebook of the Internet, connecting web browsers with websites.
 By allowing the DNS system to be used as an identity registry, we allow the domain name owners to claim ownership of a Document Store smart contract on the Blockchain.</p>
 
 <p>The DNS system is a key part of Internet infrastructure, and is a decentralised system - this means that there is a low barrier to entry and does not have a single point of failure. It allows issuers to simply tie their issuance to their domain name, (e.g example.openattestation.com). When a user views a certificate issued under this model, they will see “Document issued by example.openattestation.com”.</p>
 
-<h3 id="token-registry">Token Registry</h3>
+<h3 id="222-token-registry">2.2.2 Token Registry</h3>
 
 <p>Token Registry supports the construct of assets which can have ownership assigned to them. This is supported using Blockchain smart contracts to keep track of the owner of a particular asset. This solution will faciliate the title transfer requirements for Transferable Documents.</p>
 
-<h4 id="non-transferable-document">Non-transferable Document</h4>
+<h4 id="223-non-transferable-document">2.2.3 Non-transferable Document</h4>
 
 <h5 id="certificate-of-non-manipulation">Certificate of Non-Manipulation</h5>
 
@@ -436,7 +411,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
   </li>
 </ul>
 
-<h4 id="transferable-document">Transferable Document</h4>
+<h4 id="224-transferable-document">2.2.4 Transferable Document</h4>
 <h5 id="bill-of-lading">Bill of Lading</h5>
 
 <p>Bill of Lading allows the transmission of ownership of the goods through a simple endorsement.</p>
@@ -480,15 +455,9 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
   </li>
 </ul>
 
-<h1 id="data-model">Data Model</h1>
+<h1 id="3-data-model">3. Data Model</h1>
 
-<h2 id="json-schema">JSON Schema</h2>
-
-<p>The document data model is defined using JSON Schema with the following definitions found in Annex A.</p>
-
-<h2 id="json-schema-validator">JSON Schema Validator</h2>
-
-<p>A useful online tool JSON Schema Validator that can help to validate whether the document data conforms to the schema: https://www.jsonschemavalidator.net/</p>
+<p>The document data model is defined using JSON Schema with the following definitions found in Annex A. There are a number of JSON Schema Validators that can help to validate whether the document data conforms to the schema. One example is https://www.jsonschemavalidator.net/</p>
 
 <p>Just paste the content of the schema document on the left panel and enter the document data on the right. The tool will instantly validate the document String/Object and notify any potential errors.</p>
 
@@ -500,22 +469,37 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <p><img src="json_failed.png" alt="docs" /></p>
 
-<h1 id="basic-concept">Basic Concept</h1>
-<h2 id="verification-method">Verification Method</h2>
+<h2 id="31-data-dictionary">3.1 Data Dictionary</h2>
+
+<p>The OA Data Dictionary can be found in the following <a href="https://github.com/Open-Attestation/schema-doc/blob/master/document/tradetrust-properties-attachments-to-the-document-attached-file.md">URL</a></p>
+
+<h1 id="4-basic-concept">4. Basic Concept</h1>
+<h2 id="41-verification-method">4.1 Verification Method</h2>
 
 <p>The purpose of the verifier is to provide a generic verification method to verify OpenAttestation(OA) documents. The verifier will provide default verification methods conforming to the standard verification process proposed in OpenAttestation yet providing opportunities for it to be extended.</p>
 
-<h3 id="overview-of-the-verification-methods">Overview of the verification methods</h3>
+<h3 id="42-overview-of-the-verification-methods">4.2 Overview of the verification methods</h3>
 
 <p><img src="architecture.png" alt="docs" /></p>
 
-<p>A verifier is made up of multiple <code class="highlighter-rouge">Verification Methods</code>. In the diagram above, <code class="highlighter-rouge">OpenAttestationDnsTxt, OpenAttestationEthereumDocumentStoreIssued</code> and <code class="highlighter-rouge">OpenAttestationHash</code> are examples of <code class="highlighter-rouge">Verification Methods</code> provided.</p>
+<p>A verifier is made up of multiple <code class="highlighter-rouge">Verification Methods</code>. In the diagram above, <code class="highlighter-rouge">OpenAttestationDnsTxt, OpenAttestationEthereumDocumentStoreIssued</code> and <code class="highlighter-rouge">OpenAttestationHash</code> are examples of <code class="highlighter-rouge">Verification Methods</code> provided.
+Depending on the type of document, a document can be executed using one or multiple <code class="highlighter-rouge">Verification Methods</code>. Each <code class="highlighter-rouge">Verification Method</code> will return a <code class="highlighter-rouge">VerificationFragment</code>which states the status of the verification.</p>
 
-<p>The role of a verification method is to verify the OA document is valid against specific criterias. Since there are many types and versions of OA document, not all test should run against all types of OA document. For that reason, a <code class="highlighter-rouge">test</code> method is also defined to test if a method should run against a document. If the method is incompatible with the document type, it should skip the method.</p>
+<h3 id="43-api">4.3 API</h3>
 
-<p>As a result, a verification method should implement 3 abstract methods: <code class="highlighter-rouge">verify, test and skip</code>.</p>
+<p><code class="highlighter-rouge">verify</code> and <code class="highlighter-rouge">isValid</code> will validate if the document’s verification is successful and if the document token is valid respectively.</p>
 
-<p>The verification method should return a <code class="highlighter-rouge">VerificationFragment</code> which states the status of the verification. The status key can have the following values:</p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">documentRopstenValidWithToken</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./test/fixtures/v2/documentRopstenValidWithToken</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">verify</span><span class="p">,</span> <span class="nx">isValid</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@govtechsg/oa-verify</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="nx">verify</span><span class="p">(</span><span class="nx">documentRopstenValidWithToken</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span> <span class="c1">// see below</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isValid</span><span class="p">(</span><span class="nx">results</span><span class="p">));</span> <span class="c1">// display true</span>
+</code></pre></div></div>
+
+<h4 id="431-verify">4.3.1 verify</h4>
+<p>The <code class="highlighter-rouge">verify</code> MUST return a array of verification fragments</p>
+<h4 id="4311--verification-fragments">4.3.1.1  Verification Fragments</h4>
+<p>Verification fragments return the status of the verification. The status key can have the following values:</p>
 
 <ul>
   <li><code class="highlighter-rouge">VALID</code>: when the verification is successful</li>
@@ -524,191 +508,33 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
   <li><code class="highlighter-rouge">SKIPPED</code>: when the verification was skipped by the manager</li>
 </ul>
 
-<h4 id="testdocument-document-boolean">test(document: Document): boolean</h4>
-<p>This function takes in an OA document and returns a boolean result that determines if this verification method is meant to be ran against the document.</p>
+<h4 id="432-isvalid">4.3.2 isValid</h4>
+<p>The <code class="highlighter-rouge">isValid</code> MUST take in results from <code class="highlighter-rouge">verify</code> method and return a status of either <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code>.</p>
 
-<p>In the case that the test passes, we should run the <code class="highlighter-rouge">verify</code> function. Otherwise, the <code class="highlighter-rouge">skip</code> function should be ran.</p>
+<p><code class="highlighter-rouge">isValid</code> checks the following before returning the validity status:</p>
+<ul>
+  <li>Status of a document: checks that the document has been issued and that it’s issuance status is in good standing.</li>
+  <li>Integrity of a document: ensure that the content of the issued document has not been modified since the document has been issued, with exception of data which has been removed using built-in obfuscation mechanism</li>
+  <li>Identity of Issuer: checks and return the identity of the issuer. Methods of these types generally verify the identity of the issuer against a decentralised identity provider (ie DID, DNS, etc) or some centrally managed identity registry (ie Singapore’s OpenCerts Registry, Citizen Identity Registry, Business Identity Registry, etc).</li>
+</ul>
 
-<h4 id="skip-verificationfragment">skip(): VerificationFragment</h4>
-<p>This function should be ran when the verification method is skipped for the given OA document. It will return the skipped <code class="highlighter-rouge">VerificationFragment</code> for the test.</p>
+<p>The function allow to specify as a second parameters the list of types on which to perform the checks</p>
 
-<p>An example of <code class="highlighter-rouge">VerificationFragment</code> that skips the DNS-TXT verification:
-{</p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OpenAttestationDnsTxt"</span><span class="err">,</span><span class="w">
-  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ISSUER_IDENTITY"</span><span class="err">,</span><span class="w">
-  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SKIPPED"</span><span class="err">,</span><span class="w">
-  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Document issuers doesn't have </span><span class="se">\"</span><span class="s2">documentStore</span><span class="se">\"</span><span class="s2"> or </span><span class="se">\"</span><span class="s2">token</span><span class="se">\"</span><span class="s2"> property"</span><span class="w">
-  
-</span></code></pre></div></div>
-<p>}</p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">documentRopstenValidWithCertificateStore</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./test/fixtures/v2/documentRopstenValidWithCertificateStore</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">verify</span><span class="p">,</span> <span class="nx">isValid</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@govtechsg/oa-verify</span><span class="dl">"</span><span class="p">;</span>
 
-<h4 id="verifydocument-document-verificationfragment">verify(document: Document): VerificationFragment</h4>
-
-<p>This function should be ran when the test passes. Running this function will execute the necessary computation to determine if the document passes the verification method.</p>
-
-<p>An example <code class="highlighter-rouge">VerificationFragment</code> of a passing test:</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OpenAttestationEthereumDocumentStoreIssued"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DOCUMENT_STATUS"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VALID"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x007d40224f6562461633ccfbaffd359ebb2fc9ba"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"issued"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"issuedOnAll"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<p>An example <code class="highlighter-rouge">VerificationFragment</code> of a failed test:</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OpenAttestationEthereumDocumentStoreIssued"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DOCUMENT_STATUS"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Certificate has not been issued"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x20bc9C354A18C8178A713B9BcCFFaC2152b53990"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"call exception (address=</span><span class="se">\"</span><span class="s2">0x20bc9C354A18C8178A713B9BcCFFaC2152b53990</span><span class="se">\"</span><span class="s2">, method=</span><span class="se">\"</span><span class="s2">isIssued(bytes32)</span><span class="se">\"</span><span class="s2">, args=[</span><span class="se">\"</span><span class="s2">0x85df2b4e905a82cf10c317df8f4b659b5cf38cc12bd5fbaffba5fc901ef0011b</span><span class="se">\"</span><span class="s2">], version=4.0.40)"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"issued"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"issuedOnAll"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<h3 id="verification-types">Verification Types</h3>
-
-<p>A <code class="highlighter-rouge">Verification Type</code> is a type label to a verification method. It specifies what type of verification the method is performing. The diagram above shows the 3 default verification types: <code class="highlighter-rouge">ISSUER_IDENTITY</code>, <code class="highlighter-rouge">DOCUMENT_INTEGRITY</code> and <code class="highlighter-rouge">DOCUMENT_STATUS</code>.</p>
-
-<p>For the validity of the verification type to be true, the requirements must be met:</p>
-
-<ol>
-  <li>At least one method in that type should return <code class="highlighter-rouge">VALID</code> as the status.</li>
-  <li>All methods in the type should return either <code class="highlighter-rouge">VALID</code> or <code class="highlighter-rouge">SKIPPED</code> as the status.</li>
-</ol>
-
-<h3 id="verifier">Verifier</h3>
-
-<p>The verifier is a function used to verify any OpenAttestation document. It returns a set of <code class="highlighter-rouge">VerificationFragment</code> from the different verification methods.</p>
-
-<p>From the <code class="highlighter-rouge">VerificationFragments</code> we can then determine if the OA document is valid. The OA document is valid when all <code class="highlighter-rouge">Verification Types</code> has valid statuses.</p>
-
-<h2 id="default-verification-types-and-methods">Default Verification Types and Methods</h2>
-
-<h3 id="document-integrity-document_integrity">Document Integrity (DOCUMENT_INTEGRITY)</h3>
-
-<p>The <code class="highlighter-rouge">DOCUMENT_INTEGRITY</code> type of verification methods ensure that the content of the issued document has not been modified since the document has been issued, with exception of data which has been removed using built-in obfuscation mechanism.</p>
-
-<h4 id="openattestationhash">OpenAttestationHash</h4>
-
-<p>The <code class="highlighter-rouge">OpenAttestationHash</code> method checks the integrity of the document using the <code class="highlighter-rouge">OpenAttestationSignature2018</code> method by digesting the content of the OA document and comparing it with the document’s <code class="highlighter-rouge">targetHash</code>.</p>
-
-<p>In addition, if the <code class="highlighter-rouge">targetHash</code> does not match the <code class="highlighter-rouge">merkleRoot</code> of the document, the function also checks that the <code class="highlighter-rouge">targetHash</code> resolves to the <code class="highlighter-rouge">merkleRoot</code> using the given <code class="highlighter-rouge">proofs</code>.</p>
-
-<h3 id="document-status-document_status">Document Status (DOCUMENT_STATUS)</h3>
-
-<p>The <code class="highlighter-rouge">DOCUMENT_STATUS</code> type of verification methods checks that the document has been issued and that it’s issuance status is in good standing. Methods of these types generally verifies the issuance status against a record maintained externally, ie Records on a Blockchain or API endpoints.</p>
-
-<h4 id="openattestationethereumdocumentstoreissued">OpenAttestationEthereumDocumentStoreIssued</h4>
-
-<p>The <code class="highlighter-rouge">OpenAttestationEthereumDocumentStoreIssued</code> checks the issuance status of the document using <code class="highlighter-rouge">OpenAttestationSignature2018</code> with <code class="highlighter-rouge">DOCUMENT_STORE</code> or <code class="highlighter-rouge">TOKEN_REGISTRY</code> methods.</p>
-
-<p>Signature of OA Document using this method:</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"proof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OpenAttestationSignature2018"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DOCUMENT_STORE"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<p>Such document uses a smart contract to store the issuance status of the document.</p>
-
-<p>In the case of <code class="highlighter-rouge">DOCUMENT_STORE</code> smart contract, the check calls the method <code class="highlighter-rouge">isIssued(merkleRoot)</code> implemented on the Ethereum smart contract. It returns a valid <code class="highlighter-rouge">VerificationFragment</code> if the merkle root of the document has been marked as issued.</p>
-
-<p>In the case of <code class="highlighter-rouge">TOKEN_REGISTRY</code> smart contract, the check calls the method <code class="highlighter-rouge">ownerOf(targetHash)</code> implemented on the Ethereum smart contract. It returns a valid <code class="highlighter-rouge">VerificationFragment</code> if the owner of the document is non-zero.</p>
-
-<h4 id="openattestationethereumdocumentstorerevoked">OpenAttestationEthereumDocumentStoreRevoked</h4>
-
-<p>The <code class="highlighter-rouge">OpenAttestationEthereumDocumentStoreRevoked</code> checks the revocation status of the document using <code class="highlighter-rouge">OpenAttestationSignature2018</code> with <code class="highlighter-rouge">DOCUMENT_STORE</code> or <code class="highlighter-rouge">TOKEN_REGISTRY</code> methods, similar to <code class="highlighter-rouge">OpenAttestationEthereumDocumentStoreIssued</code>.</p>
-
-<p>In the case of <code class="highlighter-rouge">DOCUMENT_STORE</code> smart contract, the check calls the method <code class="highlighter-rouge">isRevoked(merkleRoot)</code> implemented on the Ethereum smart contract. It returns a valid <code class="highlighter-rouge">VerificationFragment</code> if the merkle root of the document has not been marked as revoked.</p>
-
-<h3 id="issuer-identity-issuer_identity">Issuer Identity (ISSUER_IDENTITY)</h3>
-
-<p>The <code class="highlighter-rouge">ISSUER_IDENTITY</code> type of verification methods checks and return the identity of the issuer. Methods of these types generally verify the identity of the issuer against a decentralised identity provider (ie DID, DNS, etc) or some centrally managed identity registry (ie Singapore’s OpenCerts Registry, Citizen Identity Registry, Business Identity Registry, etc).</p>
-
-<h4 id="openattestationdnstxt">OpenAttestationDnsTxt</h4>
-
-<p>The <code class="highlighter-rouge">OpenAttestationDnsTxt</code> method checks the identity of a document issuer using the <code class="highlighter-rouge">DNS-TXT</code> identity proof mechanism.</p>
-
-<p>The sample provided below shows a document which claims that <code class="highlighter-rouge">openattestation.com</code> is the owner of the smart contract <code class="highlighter-rouge">0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d</code>, which in turn issued the said document:</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://openattestation.com"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Open Attestation"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"identityProof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DNS-TXT"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"openattestation.com"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"proof"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OpenAttestationSignature2018"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DOCUMENT_STORE"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<p>The method checks against the DNS record of the domain to confirm the claimed relationship. A sample TXT record on <code class="highlighter-rouge">openattestation.com</code> to prove ownership of the contract <code class="highlighter-rouge">0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d</code> on Ethereum Ropsten network is provided below:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openatts net=ethereum netId=3 addr=0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d
+<span class="kd">const</span> <span class="nx">fragments</span> <span class="o">=</span> <span class="nx">verify</span><span class="p">(</span><span class="nx">documentRopstenValidWithCertificateStore</span><span class="p">);</span>
+<span class="nx">isValid</span><span class="p">(</span><span class="nx">fragments</span><span class="p">);</span> <span class="c1">// display false because ISSUER_IDENTITY is INVALID</span>
+<span class="nx">isValid</span><span class="p">(</span><span class="nx">fragments</span><span class="p">,</span> <span class="p">[</span><span class="dl">"</span><span class="s2">DOCUMENT_INTEGRITY</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">DOCUMENT_STATUS</span><span class="dl">"</span><span class="p">]);</span> <span class="c1">// display true because those types are VALID</span>
 </code></pre></div></div>
 
-<p>Upon confirming that the matching DNS TXT record on the domain, the verification method returns a valid <code class="highlighter-rouge">VerificationFragment</code> as the result.</p>
-
-<p>In depth discussion of DNS-TXT method is described <a href="https://blog.gds-gov.tech/opencerts-2-0-decentralised-issuer-identity-verification-fb7e2cae8295">in this blog post</a></p>
-
-<h2 id="usage">Usage</h2>
-
-<p>To use the default verifier:</p>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nb">document</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">OA-Document</span><span class="dl">"</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">verificationFragments</span> <span class="o">=</span> <span class="nx">verify</span><span class="p">(</span><span class="nb">document</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">verified</span> <span class="o">=</span> <span class="nx">isVerified</span><span class="p">(</span><span class="nx">verificationFragments</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>To extend the verifier with a custom name registry:</p>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nb">document</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">OA-Document-With-Custom-Identity-Proof</span><span class="dl">"</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">customIdentityRegistry</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Custom-Verification-Method</span><span class="dl">"</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">verificationFragments</span> <span class="o">=</span> <span class="nx">verificationBuilder</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span> <span class="p">[</span>
-  <span class="p">...</span><span class="nx">defaultVerifiers</span><span class="p">,</span>
-  <span class="nx">customIdentityRegistry</span>
-<span class="p">]);</span>
-<span class="kd">const</span> <span class="nx">verified</span> <span class="o">=</span> <span class="nx">isVerified</span><span class="p">(</span><span class="nx">verificationFragments</span><span class="p">);</span>
-</code></pre></div></div>
-
-<h1 id="decentralised-document-rendering">Decentralised Document Rendering</h1>
-
-<h2 id="goal">Goal</h2>
+<h1 id="5decentralised-document-rendering">5.Decentralised Document Rendering</h1>
 
 <p><img src="decentralised_rendered_overview.png" alt="docs" /></p>
 
 <p>The purpose of the decentralised document renderer is to allow OpenAttestation (OA) document issuers to style their documents without code change to the different implementations of the document viewer. It does so by embedding the website specified by the document issuers as an iframe or webview (for mobile apps) and sending the content of the OA document into the iframe.</p>
 
-<h2 id="frame-to-frame-communication">Frame-to-Frame Communication</h2>
+<h2 id="51-frame-to-frame-communication">5.1 Frame-to-Frame Communication</h2>
 
 <p><img src="decentralised_rendered_api.png" alt="docs" /></p>
 
@@ -735,11 +561,11 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 <span class="p">};</span>
 </code></pre></div></div>
 
-<h3 id="from-host-to-frame-actions">From host to frame actions</h3>
+<h3 id="511-from-host-to-frame-actions">5.1.1 From host to frame actions</h3>
 
 <p>The following list of actions are made for the host to communicate to the iframe (and thus must be handled by application embed in the iframe):</p>
 
-<h4 id="render_document">RENDER_DOCUMENT</h4>
+<h4 id="5111-render_document">5.1.1.1 RENDER_DOCUMENT</h4>
 
 <p>This action sends the document data to the child frame to be rendered.</p>
 
@@ -761,7 +587,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 <span class="p">};</span>
 </code></pre></div></div>
 
-<h4 id="select_template">SELECT_TEMPLATE</h4>
+<h4 id="5112-select_template">5.1.1.2 SELECT_TEMPLATE</h4>
 
 <p>This action selects a template amongst the one provided by the decentralized renderer (A renderer may provide 1 to many different templates to display a document).</p>
 
@@ -775,7 +601,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 <span class="p">};</span>
 </code></pre></div></div>
 
-<h4 id="print">PRINT</h4>
+<h4 id="5113-print">5.1.1.3 PRINT</h4>
 
 <p>This action request for the template to process the print action by the browser.</p>
 
@@ -788,7 +614,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 <span class="p">};</span>
 </code></pre></div></div>
 
-<h4 id="get_templates">GET_TEMPLATES</h4>
+<h4 id="5114-get_templates">5.1.1.4 GET_TEMPLATES</h4>
 
 <p>This action returns the list of template tabs available on the document.</p>
 
@@ -802,11 +628,11 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 <span class="p">};</span>
 </code></pre></div></div>
 
-<h2 id="from-frame-to-host-actions">From frame to host actions</h2>
+<h2 id="52-from-frame-to-host-actions">5.2 From frame to host actions</h2>
 
 <p>The following list of actions are made for iframe to communicate to the host (and thus must be handled by application embedding the iframe):</p>
 
-<h3 id="update_height">UPDATE_HEIGHT</h3>
+<h3 id="521-update_height">5.2.1 UPDATE_HEIGHT</h3>
 
 <p>This action provides the full content height of the iframe so that the host can adapt the automatically the size of the embedded iframe.</p>
 
@@ -820,7 +646,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 <span class="p">};</span>
 </code></pre></div></div>
 
-<h3 id="obfuscate">OBFUSCATE</h3>
+<h3 id="522-obfuscate">5.2.2 OBFUSCATE</h3>
 
 <p>This action provides the name of a field on the document to obfuscate. The value must follow path property.</p>
 
@@ -834,7 +660,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 <span class="p">};</span>
 </code></pre></div></div>
 
-<h3 id="update_templates">UPDATE_TEMPLATES</h3>
+<h3 id="523-update_templates">5.2.3 UPDATE_TEMPLATES</h3>
 
 <p>This action provides the list of templates that can be used to render a document. This is usually the response to the <code class="highlighter-rouge">GET_TEMPLATES</code> action.</p>
 
@@ -854,9 +680,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
   <span class="p">]</span>
 <span class="p">};</span>
 </code></pre></div></div>
-<h1 id="selective-disclosure">Selective Disclosure</h1>
-
-<h2 id="goal-1">Goal</h2>
+<h1 id="6-selective-disclosure">6. Selective Disclosure</h1>
 
 <p>Selective disclosure allows for the holder of OA documents to present subsets of the document to be verified. It does so by allowing users to obfuscated data fields without compromising the integrity of the document.</p>
 
