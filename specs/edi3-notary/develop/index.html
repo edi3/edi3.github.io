@@ -213,11 +213,7 @@
 </li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#3-data-model">3. Data Model</a>
-<ul>
-<li class="toc-entry toc-h2"><a href="#31-data-dictionary">3.1 Data Dictionary</a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h1"><a href="#3-data-model">3. Data Model</a></li>
 <li class="toc-entry toc-h1"><a href="#4-basic-concept">4. Basic Concept</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#41-verification-method">4.1 Verification Method</a>
@@ -353,7 +349,7 @@
 
 <p>With numerous trade documents involved in international trade, document verification is an essential process as it verifies the identity of the document signer to prevent fraud, and checks for awareness and volition. Thus we need a solution that allows document verification to be executed digitally and safely.</p>
 
-<p>Electronic notarisation will be discussed further to prove the verification mechanisam in a decentralised manner in which both Domain Name Server (DNS) and Token Registry are 2 unique blockchain solutions that can demostrate document verification for Non-Transferable Documents and Transferable Documents respectively.</p>
+<p>Electronic notarisation will be discussed further to prove the verification mechanisam in a decentralised manner in which both Domain Name Server (DNS) and Token Registry are 2 unique blockchain solutions that can demostrate document verification for Non-Transferable Documents and Transferable Documents respectively. Using smart contract we can store evidences of document issuance, or in the case of transferable records, owner of these records. This allows documents to be verified in a decentralized manner.</p>
 
 <h3 id="221-domain-name-server-dns">2.2.1 Domain Name Server (DNS)</h3>
 
@@ -457,6 +453,8 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <h1 id="3-data-model">3. Data Model</h1>
 
+<p>The OA Data Model can be found in the following <a href="https://github.com/Open-Attestation/schema-doc/blob/master/document/tradetrust-properties-attachments-to-the-document-attached-file.md">URL</a></p>
+
 <p>The document data model is defined using JSON Schema with the following definitions found in Annex A. There are a number of JSON Schema Validators that can help to validate whether the document data conforms to the schema. One example is https://www.jsonschemavalidator.net/</p>
 
 <p>Just paste the content of the schema document on the left panel and enter the document data on the right. The tool will instantly validate the document String/Object and notify any potential errors.</p>
@@ -468,10 +466,6 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 <p>An example of a failed validation:</p>
 
 <p><img src="json_failed.png" alt="docs" /></p>
-
-<h2 id="31-data-dictionary">3.1 Data Dictionary</h2>
-
-<p>The OA Data Dictionary can be found in the following <a href="https://github.com/Open-Attestation/schema-doc/blob/master/document/tradetrust-properties-attachments-to-the-document-attached-file.md">URL</a></p>
 
 <h1 id="4-basic-concept">4. Basic Concept</h1>
 <h2 id="41-verification-method">4.1 Verification Method</h2>
@@ -487,7 +481,7 @@ Depending on the type of document, a document can be executed using one or multi
 
 <h3 id="43-api">4.3 API</h3>
 
-<p><code class="highlighter-rouge">verify</code> and <code class="highlighter-rouge">isValid</code> will validate if the document’s verification is successful and if the document token is valid respectively.</p>
+<p>‘verify’ checks the document against the different verification methods and returns the corresponding results of the verification, whereas <code class="highlighter-rouge">isValid</code> will check if the document is valid.</p>
 
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">documentRopstenValidWithToken</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./test/fixtures/v2/documentRopstenValidWithToken</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">verify</span><span class="p">,</span> <span class="nx">isValid</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@govtechsg/oa-verify</span><span class="dl">"</span><span class="p">;</span>
@@ -499,7 +493,7 @@ Depending on the type of document, a document can be executed using one or multi
 <h4 id="431-verify">4.3.1 verify</h4>
 <p>The <code class="highlighter-rouge">verify</code> MUST return a array of verification fragments</p>
 <h4 id="4311--verification-fragments">4.3.1.1  Verification Fragments</h4>
-<p>Verification fragments return the status of the verification. The status key can have the following values:</p>
+<p>Verification fragments return the status of the verification against a verification method. The status key can have the following values:</p>
 
 <ul>
   <li><code class="highlighter-rouge">VALID</code>: when the verification is successful</li>
@@ -508,8 +502,10 @@ Depending on the type of document, a document can be executed using one or multi
   <li><code class="highlighter-rouge">SKIPPED</code>: when the verification was skipped by the manager</li>
 </ul>
 
+<p>As well as any metadata returned from the verification method. Examples of metadata includes resolved identity from a identity verification method.</p>
+
 <h4 id="432-isvalid">4.3.2 isValid</h4>
-<p>The <code class="highlighter-rouge">isValid</code> MUST take in results from <code class="highlighter-rouge">verify</code> method and return a status of either <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code>.</p>
+<p>The ‘isValid’ MUST take in results from <code class="highlighter-rouge">verify</code> method and return a sumarised status of either true or false.</p>
 
 <p><code class="highlighter-rouge">isValid</code> checks the following before returning the validity status:</p>
 <ul>
@@ -517,8 +513,6 @@ Depending on the type of document, a document can be executed using one or multi
   <li>Integrity of a document: ensure that the content of the issued document has not been modified since the document has been issued, with exception of data which has been removed using built-in obfuscation mechanism</li>
   <li>Identity of Issuer: checks and return the identity of the issuer. Methods of these types generally verify the identity of the issuer against a decentralised identity provider (ie DID, DNS, etc) or some centrally managed identity registry (ie Singapore’s OpenCerts Registry, Citizen Identity Registry, Business Identity Registry, etc).</li>
 </ul>
-
-<p>The function allow to specify as a second parameters the list of types on which to perform the checks</p>
 
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">documentRopstenValidWithCertificateStore</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./test/fixtures/v2/documentRopstenValidWithCertificateStore</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">verify</span><span class="p">,</span> <span class="nx">isValid</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@govtechsg/oa-verify</span><span class="dl">"</span><span class="p">;</span>
