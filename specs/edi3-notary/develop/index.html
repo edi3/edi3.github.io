@@ -468,7 +468,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
   <li>Integrity Method
     <ul>
       <li>Check that the document data’s hash is the ‘targetHash’.</li>
-      <li>Check the targetHash resolves to the merkle root using the proof (if any).</li>
+      <li>Check that the targetHash exactly equals to the merklerRoot.</li>
     </ul>
   </li>
   <li>Issuer Identity
@@ -477,6 +477,8 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
     </ul>
   </li>
 </ul>
+
+<p><img src="token_registry_flow.png" alt="docs" /></p>
 
 <h1 id="3-data-model">3. Data Model</h1>
 
