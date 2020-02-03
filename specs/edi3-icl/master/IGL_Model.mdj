@@ -5806,12 +5806,12 @@
 												"$ref": "AAAAAAFvfRlajGKyC94="
 											},
 											"font": "Arial;13;0",
-											"left": 359,
-											"top": 95,
+											"left": 344,
+											"top": 168,
 											"width": 103.68896484375,
 											"height": 13,
-											"alpha": -1.3451951722172277,
-											"distance": 62.5859409132754,
+											"alpha": -1.7126926813989904,
+											"distance": 14.142135623730951,
 											"hostEdge": {
 												"$ref": "AAAAAAFvfRlajGK0ec8="
 											},
@@ -5829,8 +5829,8 @@
 											},
 											"visible": null,
 											"font": "Arial;13;0",
-											"left": 501,
-											"top": 81,
+											"left": 397,
+											"top": 124,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 30,
@@ -5850,8 +5850,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 457,
-											"top": 82,
+											"left": 397,
+											"top": 169,
 											"height": 13,
 											"alpha": -1.5707963267948966,
 											"distance": 15,
@@ -5866,9 +5866,9 @@
 										"$ref": "AAAAAAFvfRIvgGHlDEM="
 									},
 									"tail": {
-										"$ref": "AAAAAAFvfRkkQWKJUyk="
+										"$ref": "AAAAAAFveYBReGAHYIo="
 									},
-									"points": "346:88;472:88;472:168",
+									"points": "320:232;320:160;475:160;475:168",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "AAAAAAFvfRlajGK1z8Q="
@@ -7012,7 +7012,7 @@
 												"$ref": "AAAAAAFvfSr/vWPgqJ8="
 											},
 											"edgePosition": 1,
-											"text": "+Callback event"
+											"text": "+Subscriptions"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -8658,7 +8658,7 @@
 									},
 									"name": "POST document",
 									"source": {
-										"$ref": "AAAAAAFvfRkkQGKHfaA="
+										"$ref": "AAAAAAFveYBReGAFk0Y="
 									},
 									"target": {
 										"$ref": "AAAAAAFvfRIvf2Hjjeo="
@@ -8697,7 +8697,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFvfRkkQGKHfaA="
 									},
-									"name": "Callback event",
+									"name": "Subscriptions",
 									"source": {
 										"$ref": "AAAAAAFvfRkkQGKHfaA="
 									},
