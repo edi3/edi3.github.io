@@ -167,7 +167,7 @@
 </li>
                     <li>Editor: <p><a href="mailto:LIEW_Shujing@imda.gov.sg">Shujing Liew</a></p>
 </li>
-                    <li>Contributors: <p>Raymond, Rui Jie</p>
+                    <li>Contributors: <p>Raymond Yeh, Rui Jie Chow</p>
 </li>
                 </ul>
             </div>
@@ -178,12 +178,14 @@
 <li class="toc-entry toc-h1"><a href="#2-introduction">2. Introduction</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#21-goals">2.1 Goals</a></li>
-<li class="toc-entry toc-h2"><a href="#22-use-cases">2.2 Use Cases</a>
+<li class="toc-entry toc-h2"><a href="#22-architectural-principles">2.2 Architectural Principles</a></li>
+<li class="toc-entry toc-h2"><a href="#23-high-level-requirements">2.3 High Level Requirements</a></li>
+<li class="toc-entry toc-h2"><a href="#24-use-cases">2.4 Use Cases</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#221-domain-name-server-dns">2.2.1 Domain Name Server (DNS)</a></li>
-<li class="toc-entry toc-h3"><a href="#222-token-registry">2.2.2 Token Registry</a>
+<li class="toc-entry toc-h3"><a href="#241-domain-name-server-dns">2.4.1 Domain Name Server (DNS)</a></li>
+<li class="toc-entry toc-h3"><a href="#242-token-registry">2.4.2 Token Registry</a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#223-non-transferable-document">2.2.3 Non-transferable Document</a>
+<li class="toc-entry toc-h4"><a href="#243-non-transferable-document">2.4.3 Non-transferable Document</a>
 <ul>
 <li class="toc-entry toc-h5"><a href="#certificate-of-non-manipulation">Certificate of Non-Manipulation</a>
 <ul>
@@ -195,7 +197,7 @@
 </li>
 </ul>
 </li>
-<li class="toc-entry toc-h4"><a href="#224-transferable-document">2.2.4 Transferable Document</a>
+<li class="toc-entry toc-h4"><a href="#244-transferable-document">2.4.4 Transferable Document</a>
 <ul>
 <li class="toc-entry toc-h5"><a href="#bill-of-lading">Bill of Lading</a>
 <ul>
@@ -335,7 +337,240 @@
   <li>Compatible with W3C Verifiable Claims</li>
 </ul>
 
-<h2 id="22-use-cases">2.2 Use Cases</h2>
+<h2 id="22-architectural-principles">2.2 Architectural Principles</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Principle</th>
+      <th>Rationale</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P1</td>
+      <td>Achieves document provenance</td>
+      <td>A document SHOULD provide proof of its origin to allow the document viewer to know the source of the document (e.g. the issuer).</td>
+    </tr>
+    <tr>
+      <td>P2</td>
+      <td>Achieves document integrity</td>
+      <td>A document SHOULD be tamper-proof. In the case of a tampered document, it should be easy to indicate tampering.</td>
+    </tr>
+    <tr>
+      <td>P3</td>
+      <td>Allows decentralised creation</td>
+      <td>Anyone MAY create a document without permission of any other entity.</td>
+    </tr>
+    <tr>
+      <td>P4</td>
+      <td>Supports multiple distributed ledger types &amp; networks</td>
+      <td>A single global uber-ledger would need to pick a technology winner, would restrict the ability to introduce non breaking extensions, would present a high value attack target, and is unlikely to be supported by every nation.</td>
+    </tr>
+    <tr>
+      <td>P5</td>
+      <td>Coexist nicely with paper processes</td>
+      <td>A switch from paper processes to notarised digital documents will not happen overnight. Therefore the notarised digital document should add value to existing paper processes by allowing easy switching between the digital and paper documents.</td>
+    </tr>
+    <tr>
+      <td>P6</td>
+      <td>Allows decentralised identifier</td>
+      <td>Any document issuers can tie existing identifiers to themselves. Document verifiers can choose different ways to resolve that identifier.</td>
+    </tr>
+    <tr>
+      <td>P7</td>
+      <td>Allows payload agnostics</td>
+      <td>The document SHOULD allow for any payload or media to be part of the document.</td>
+    </tr>
+    <tr>
+      <td>P8</td>
+      <td>Assume on-chain data is public</td>
+      <td>The notarised document stores proof of document issuance status on public or private ledgers. In either case, it should be assumed that on-chain data is public as the privacy of on-chain data cannot be guaranteed with multiple participants on the network that may not be fully trusted.</td>
+    </tr>
+    <tr>
+      <td>P9</td>
+      <td>Supports human readable view</td>
+      <td>The document SHOULD be presented in ways that are familiar to humans who were processing the physical copies of that document. The creator of the document should be allowed to define how the document should be presented visually.</td>
+    </tr>
+    <tr>
+      <td>P10</td>
+      <td>Supports machine readable data</td>
+      <td>The document SHOULD separate the view and data layer to allow machines to read these data directly to allow for automatic processing of documents.</td>
+    </tr>
+    <tr>
+      <td>P11</td>
+      <td>Allows user controlled data disclosure</td>
+      <td>The presenter of a document SHOULD be allowed to redact parts of the document so as not to reveal all information to the recipient, without causing the integrity check to fail.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="23-high-level-requirements">2.3 High Level Requirements</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Requirement</th>
+      <th>Solution Links</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>R1</td>
+      <td>The on-chain notary data SHOULD NOT contain sensitive or private information. Encrypted data SHOULD NOT be on-chain either. Note: in case encrypted data can be decrypted in future. This will pose a security challenge if sensitive data is stored on-chain.</td>
+      <td>Link to notary service</td>
+    </tr>
+    <tr>
+      <td>R2</td>
+      <td>A document MAY be encrypted. The document verifier MAY implement a decryption mechanism to decrypt encrypted documents.</td>
+      <td>Link to notary service</td>
+    </tr>
+    <tr>
+      <td>R3</td>
+      <td>Notarised documents, if hosted, SHOULD be accessible via a consistent API.</td>
+      <td>Link to notary service</td>
+    </tr>
+    <tr>
+      <td>R4</td>
+      <td>The document verification platform SHOULD NOT require that the end-user have any knowledge of the specific backend technology used (e.g. Ethereum, Hyperledger, REST API, etc)</td>
+      <td>Link to notary service</td>
+    </tr>
+    <tr>
+      <td>R5</td>
+      <td>Anyone SHOULD be able to create a document.</td>
+      <td>Link to notary service</td>
+    </tr>
+    <tr>
+      <td>R6</td>
+      <td>Anyone SHOULD be able to verify the document by following the verification procedures to verify the document provenance and integrity.</td>
+      <td>Link to verification method</td>
+    </tr>
+    <tr>
+      <td>R7</td>
+      <td>Creation of notarised documents SHOULD NOT automatically grant access to the content of the document to anyone else. A document when created MAY have a method for revocation. Upon revocation, all copies of the document MUST show revoked status.</td>
+      <td>…</td>
+    </tr>
+    <tr>
+      <td>R8</td>
+      <td>The proof of document issuance status SHOULD allow any backend to be used. Examples are Ethereum blockchain, Hyperledger blockchain or REST APIs.</td>
+      <td>Link to verification method</td>
+    </tr>
+    <tr>
+      <td>R9</td>
+      <td>The creation of documents SHOULD support bulk document creation.</td>
+      <td>…</td>
+    </tr>
+    <tr>
+      <td>R10</td>
+      <td>The integrity of the document MUST be verified by checking the checksum of the document against the records on the backend (i.e. Etherum, Hyperledger, REST API etc).</td>
+      <td>Link to verification method - integrity</td>
+    </tr>
+    <tr>
+      <td>R11</td>
+      <td>The document verifier MAY implement different identifier resolvers to resolve and verify the identity claim of the issuer.</td>
+      <td>Link to verification method - identification</td>
+    </tr>
+    <tr>
+      <td>R12</td>
+      <td>The identifier resolver MUST use information from other sources to verify the relationship between the identifier owner and the backend.</td>
+      <td>Link to verification method - identification</td>
+    </tr>
+    <tr>
+      <td>R13</td>
+      <td>The document creator MAY create a document renderer to render the data in a human readable format</td>
+      <td>Link to Decentralised Document Rendering</td>
+    </tr>
+    <tr>
+      <td>R14</td>
+      <td>The document viewer MAY implement the different document renderer to render different types of document.</td>
+      <td>Link to Decentralised Document Rendering</td>
+    </tr>
+    <tr>
+      <td>R15</td>
+      <td>The document creator MAY structure the content of the document in machine readable format following a schema to allow recipients of the document to ingest the data automatically.</td>
+      <td>…</td>
+    </tr>
+    <tr>
+      <td>R16</td>
+      <td>Any document MUST allow the presenter of the document to redact parts of the document without compromising on the integrity of the document</td>
+      <td>Link to Selection Disclosure</td>
+    </tr>
+    <tr>
+      <td>R17</td>
+      <td>Should a document have redacted information, the document MUST have evidence that information was redacted without revealing the original information.</td>
+      <td>Link to Selection Disclosure</td>
+    </tr>
+    <tr>
+      <td>R18</td>
+      <td>The issuance of a document MUST be reflected by appending the document’s or batch of document’s checksum onto the backend’s issuance list (e.g. Etherum, Hyperledger, REST API etc).</td>
+      <td>Link to verification - issuance</td>
+    </tr>
+    <tr>
+      <td>R19</td>
+      <td>The revocation of a document MUST be reflected by appending the document’s checksum onto the backend’s revocation list (e.g. Etherum, Hyperledger, REST API etc).</td>
+      <td>Link to verification - issuance</td>
+    </tr>
+    <tr>
+      <td>R20</td>
+      <td>The issuance status of the document MUST be determined by the presence of the document’s checkum OR the document batch’s checksum on the backend. In the case of a document in a batch, there should be cryptographic proofs to show that the document exists in the set of documents issued.</td>
+      <td>Link to verification - issuance</td>
+    </tr>
+    <tr>
+      <td>R21</td>
+      <td>The revocation status of the document MUST be determined by the presence of the document’s checksum on the backend (e.g. Etherum, Hyperledger, REST API etc).</td>
+      <td>Link to verification - issuance</td>
+    </tr>
+    <tr>
+      <td>R22</td>
+      <td>Document raw data MUST be wrapped by the notary layer by computing its checksum.</td>
+      <td>Link to document issuance</td>
+    </tr>
+    <tr>
+      <td>R23</td>
+      <td>Notarised documents MUST NOT be stored on the notary backend. Only the checksum of the documents MAY be on the notary backend’s issuance list or revocation list (e.g. Etherum, Hyperledger, REST API etc).</td>
+      <td>Link to document issuance</td>
+    </tr>
+    <tr>
+      <td>R24</td>
+      <td>Notarised documents MAY be transmitted via any medium from a presenter or issuer to the recipient.</td>
+      <td>…</td>
+    </tr>
+    <tr>
+      <td>R25</td>
+      <td>The verifier MUST be modular to allow custom verifiers to be used for different categories.</td>
+      <td>Link to verification method</td>
+    </tr>
+    <tr>
+      <td>R26</td>
+      <td>The verifier MUST check the document against three main verification categories: document’s integrity, document issuer’s identity and document issuance status.</td>
+      <td>Link to verification method</td>
+    </tr>
+    <tr>
+      <td>R27</td>
+      <td>The verification for a given verification category MUST fail if: 1. All verifiers are skipped in that category 2. Any verifiers in the verification category has failed verification</td>
+      <td>Link to verification method</td>
+    </tr>
+    <tr>
+      <td>R28</td>
+      <td>The verifier (in a given verification category) MUST test the document if it should run against it. If not, it MUST be skipped.</td>
+      <td>Link to verification method</td>
+    </tr>
+    <tr>
+      <td>R29</td>
+      <td>The verifier SHOULD return the status of either skipped, pass or fail for a given document.</td>
+      <td>Link to verification method</td>
+    </tr>
+    <tr>
+      <td>R30</td>
+      <td>The overall verification status SHOULD fail if one or more verification categories fails.</td>
+      <td>Link to verification method</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="24-use-cases">2.4 Use Cases</h2>
 
 <p>Trade documentation plays a vital role in international trade as it facilitates the smooth flow of goods and payments thereof across national frontiers. There are many trade documents in which we can categorise them into 2 main groups:</p>
 <ul>
@@ -351,18 +586,18 @@
 
 <p>Electronic notarisation will be discussed further to prove the verification mechanisam in a decentralised manner in which both Domain Name Server (DNS) and Token Registry are 2 unique blockchain solutions that can demonstrate document verification for Non-Transferable Documents and Transferable Documents respectively. Using smart contract we can store evidences of document issuance, or in the case of transferable records, owner of these records. This allows documents to be verified in a decentralized manner.</p>
 
-<h3 id="221-domain-name-server-dns">2.2.1 Domain Name Server (DNS)</h3>
+<h3 id="241-domain-name-server-dns">2.4.1 Domain Name Server (DNS)</h3>
 
 <p>DNS is the phonebook of the Internet, connecting web browsers with websites.
 By allowing the DNS system to be used as an identity registry, we allow the domain name owners to claim ownership of a Document Store smart contract on the Blockchain.</p>
 
 <p>The DNS system is a key part of Internet infrastructure, and is a decentralised system - this means that there is a low barrier to entry and does not have a single point of failure. It allows issuers to simply tie their issuance to their domain name, (e.g example.openattestation.com). When a user views a certificate issued under this model, they will see “Document issued by example.openattestation.com”.</p>
 
-<h3 id="222-token-registry">2.2.2 Token Registry</h3>
+<h3 id="242-token-registry">2.4.2 Token Registry</h3>
 
 <p>Token Registry supports the construct of assets which can have ownership assigned to them. This is supported using Blockchain smart contracts to keep track of the owner of a particular asset. This solution will faciliate the title transfer requirements for Transferable Documents.</p>
 
-<h4 id="223-non-transferable-document">2.2.3 Non-transferable Document</h4>
+<h4 id="243-non-transferable-document">2.4.3 Non-transferable Document</h4>
 
 <h5 id="certificate-of-non-manipulation">Certificate of Non-Manipulation</h5>
 
@@ -421,7 +656,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <p><img src="document_store_flow.png" alt="docs" /></p>
 
-<h4 id="224-transferable-document">2.2.4 Transferable Document</h4>
+<h4 id="244-transferable-document">2.4.4 Transferable Document</h4>
 <h5 id="bill-of-lading">Bill of Lading</h5>
 
 <p>Bill of Lading (BL) allows the transmission of ownership of the goods through a simple endorsement as shown in the following diagram. The different points indicates the different functionalities of a BL:</p>
