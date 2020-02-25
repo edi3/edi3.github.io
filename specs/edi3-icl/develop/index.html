@@ -218,17 +218,25 @@
 <li class="toc-entry toc-h3"><a href="#client-identity">Client Identity</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#smart-contracts">Smart Contracts</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#abstract-model">Abstract Model</a></li>
+<li class="toc-entry toc-h3"><a href="#legal-stakeholders">Legal Stakeholders</a></li>
+<li class="toc-entry toc-h3"><a href="#legal-terms">Legal Terms</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#igl-distributed-ledger-channels">IGL Distributed Ledger Channels</a>
+<li class="toc-entry toc-h2"><a href="#performance--scalability">Performance &amp; Scalability</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#ethereum-mapping">Ethereum Mapping</a></li>
-<li class="toc-entry toc-h3"><a href="#hyperledger-sawtooth-mapping">Hyperledger Sawtooth Mapping</a></li>
+<li class="toc-entry toc-h3"><a href="#merkel-dag-trees">Merkel DAG Trees</a></li>
+<li class="toc-entry toc-h3"><a href="#side-chains">Side Chains</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#igl-business-applications">IGL Business Applications</a>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#igl-distributed-ledger-technology-implementations">IGL Distributed Ledger Technology Implementations</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#certificate-of-origin">Certificate of Origin</a></li>
+<li class="toc-entry toc-h2"><a href="#ethereum">Ethereum</a></li>
+<li class="toc-entry toc-h2"><a href="#hyperledger-sawtooth">Hyperledger Sawtooth</a></li>
 </ul>
 </li>
 </ul>
@@ -483,6 +491,11 @@ in this document are to be interpreted as described in RFC 2119.</p>
       <td>The IGL MUST provide a consistent means to support any G2G business process</td>
       <td>link to semantic layer architecture</td>
     </tr>
+    <tr>
+      <td>R16</td>
+      <td>The IGL architecture MUST provide a scalability mechanism to support the volumes that may be required for the world’s largest economies. Up to 1 billion transactions per day</td>
+      <td>link to scalability architecture</td>
+    </tr>
   </tbody>
 </table>
 
@@ -645,15 +658,55 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <p>to-do: more detrails about claims etc</p>
 
-<h1 id="igl-distributed-ledger-channels">IGL Distributed Ledger Channels</h1>
+<h2 id="smart-contracts">Smart Contracts</h2>
 
-<h3 id="ethereum-mapping">Ethereum Mapping</h3>
+<p>A “Smart Contract” allows the encoding of IGL channel specific business rules into the ledger that allows transactions to be verified aginst the rules. Smart cotnracts can facilitate automated and verifiable regulatory compliance.</p>
 
-<h3 id="hyperledger-sawtooth-mapping">Hyperledger Sawtooth Mapping</h3>
+<p>Although an IGL channel does not require a “smart contract” there are likely to be cases where there will be value in encoding compliance rules into the ledger transaction.</p>
 
-<h1 id="igl-business-applications">IGL Business Applications</h1>
+<p>Different ledgher technologies have different technical representations of these rules. Ethereum smart contracts are written in solidity code. Hyperledger Fabric smart contracts are written as chain code in the Go language.</p>
 
-<h2 id="certificate-of-origin">Certificate of Origin</h2>
+<h3 id="abstract-model">Abstract Model</h3>
+
+<p>In order to support re-use and consistency in the implmenentation of smart contracts, this specification defines an inheritance hierarchy for smart contracts.</p>
+
+<p><img src="ContractsArchitecture.png" alt="Smart Contracts" /></p>
+
+<h3 id="legal-stakeholders">Legal Stakeholders</h3>
+
+<p>The legal stakeholders in IGL smart contract code are identified using:</p>
+
+<ul>
+  <li>A type code - drawn from the UN/CEFACT semantic library and represented as a JSON-LD IRI</li>
+  <li>An entity identifier - which MUST be a verifiable identity from an accredited IDP in the country in which the entity is registered.</li>
+</ul>
+
+<h3 id="legal-terms">Legal Terms</h3>
+
+<p>Legal terms in IGL smart contracts should also be drawn from a standard dictionary such as the UN/CEFACT semantic library and MUST be represented as a JSON-LD IRI</p>
+
+<h2 id="performance--scalability">Performance &amp; Scalability</h2>
+
+<p>Blockchain technology can become prohibitively slow and/or expensive at very high volumes. An IGL node operating in a large economy may need to process a very high volume of transacitons. The IGL should be able to handle high volumes without significant perforamance degradation or cost increases. A benchmark colume target is one billion transactions per day. There are two approaches to increasing volumes on distributed ledegrs without significant performance loss.</p>
+
+<ul>
+  <li>The Side-tree is essentially a batch protocol where an arbitrary number of transactions are composed into a Merkel DAG (Directed Acyclic Graph) where each node in the tree contains the hash of transactions at lower levels. Only the top level root of the tree is written to the chain but all transactions inherit the integrity of the chain.</li>
+  <li>The side-chain is essentially an independent fork to create a new chain that can include an arbitrary number of new blocks before the fork re-joins the main chain. Side chains are more complex than side trees but allow more dynamic rules (transaction verifications) and can include new stakeholders as side chain node operators that are not part of the main chain.</li>
+</ul>
+
+<p>The combination of performacne requirements and channel specific rule/validation requirements leads to a decision tree</p>
+
+<p><img src="ScalabilityModel.png" alt="performance decision tree" /></p>
+
+<h3 id="merkel-dag-trees">Merkel DAG Trees</h3>
+
+<h3 id="side-chains">Side Chains</h3>
+
+<h1 id="igl-distributed-ledger-technology-implementations">IGL Distributed Ledger Technology Implementations</h1>
+
+<h2 id="ethereum">Ethereum</h2>
+
+<h2 id="hyperledger-sawtooth">Hyperledger Sawtooth</h2>
 
 
             
