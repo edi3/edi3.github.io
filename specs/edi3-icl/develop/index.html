@@ -94,7 +94,7 @@
         <div class="wrapper">
             <div class="header-text-box">
                 <div class="header-name">edi3 Standards</div>
-                <div class="header-tagline">UN/CEFACT Standards for Web Developers</div>
+                <div class="header-tagline">Supply Chain Standards and Tools for Web Developers</div>
             </div>
         </div>
     </div>
@@ -160,15 +160,16 @@
             
             <div class="spec-header">
                 
+                
                 <ul>
                     <li>Spec ID: <p>IGL/1</p>
-</li>
-                    <li><p><img src="http://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" /></p>
+</li><li><p><img src="http://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" /></p>
 </li>
                     <li>Editor: <p><a href="mailto:christopher.d.gough@gmail.com">Chris Gough</a></p>
 </li>
                     <li>Contributors: <p><a href="https://github.com/arpentnoir">Richard Spellman</a></p>
 </li>
+                    <li><a href="/specs/edi3-icl/develop/edi3-icl-develop.docx">Export to Doc</a></li>
                 </ul>
             </div>
             <div class="specs-toc">
@@ -262,12 +263,12 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <ul>
   <li>There is no centralised infrastructure - thereby avoiding the need for complex funding models and avoiding a single point of failure or security risk.</li>
-  <li>Each country can host trade documents within their jurisdiction, conforming to increasingly strict data soveriegnty rules.</li>
+  <li>Each country can host trade documents within their jurisdiction, conforming to increasingly strict data sovereignty rules.</li>
   <li>Trade documents can be notarised and verified with very high integrity against tampering or forgery.</li>
-  <li>Where appropriate (eg single use certificates), documents as digital assets can be transfered and acquitted follwing the physical asset movement.</li>
+  <li>Where appropriate (eg single use certificates), documents as digital assets can be transferred and acquitted following the physical asset movement.</li>
 </ul>
 
-<p>There is no expectation that a single uber-ledger supports all G2G transactions. A apecific ledger may service as few as two countries and may be limited to a single process (eg certificates of origin and certificates of non-manipulation) or may service multiple coujntries and multiple processes. Therefore this specification supports the use of multiple different distributed ledgers (both public and private) by defining a standrdised protocol that allows users within a jurisdiction to interact with multiple ledgers via a simple interface.</p>
+<p>There is no expectation that a single uber-ledger supports all G2G transactions. A specific ledger may service as few as two countries and may be limited to a single process (eg certificates of origin and certificates of non-manipulation) or may service multiple countries and multiple processes. Therefore this specification supports the use of multiple different distributed ledgers (both public and private) by defining a standardised protocol that allows users within a jurisdiction to interact with multiple ledgers via a simple interface.</p>
 
 <p>This document uses Certificates of Origin and Certificates of Non-Manipulation as the guiding use case for the initial specification, however it is intended that the Inter Customs Ledger should be generic and allow for the transfer of any shipment related documentation between authorised agencies.</p>
 
@@ -297,7 +298,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
     </tr>
     <tr>
       <td>Carrier</td>
-      <td>A provider of transport means/equiment such a shipping line or airline</td>
+      <td>A provider of transport means/equipment such a shipping line or airline</td>
     </tr>
     <tr>
       <td>Certifying Body</td>
@@ -317,7 +318,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
     </tr>
     <tr>
       <td>IGL Node</td>
-      <td>A device on an IGL network which has full visibility of the entire ledger and contriibutes to the integrity of the ledger by implementing a Consensus Algorithm. Typically operated by a national regulator</td>
+      <td>A device on an IGL network which has full visibility of the entire ledger and contributes to the integrity of the ledger by implementing a Consensus Algorithm. Typically operated by a national regulator</td>
     </tr>
     <tr>
       <td>IGL User</td>
@@ -329,7 +330,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
     </tr>
     <tr>
       <td>Regulator</td>
-      <td>A government agnecy such as a customs authority</td>
+      <td>A government agency such as a customs authority</td>
     </tr>
   </tbody>
 </table>
@@ -342,18 +343,18 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <p><img src="DocumentFlows_AsIs.png" alt="paper flows" /></p>
 
-<p>In many jurisdictions, significant digitisation progress has been made for interactions between the national regulators (eg customs) and the local regulated community (eg importers, exporters, etc). In Australia for example, 99% of customs documents are already lodged electronically. However there still remains a very significant amout of paper documents that support cross border trade. The majority of the paper documents fit the same pattern; they are issued by a party in the exporting country but required by the regulator of the importing country for goods clearance. One significant reason that paper has been difficult to replace is that there is no direct trust relationshiop that allows in importing regulator to confirm the identity of the document issuer in the exporting jurisdiction.</p>
+<p>In many jurisdictions, significant digitisation progress has been made for interactions between the national regulators (eg customs) and the local regulated community (eg importers, exporters, etc). In Australia for example, 99% of customs documents are already lodged electronically. However there still remains a very significant amount of paper documents that support cross border trade. The majority of the paper documents fit the same pattern; they are issued by a party in the exporting country but required by the regulator of the importing country for goods clearance. One significant reason that paper has been difficult to replace is that there is no direct trust relationship that allows in importing regulator to confirm the identity of the document issuer in the exporting jurisdiction.</p>
 
-<p>An Inter Customs Ledger (IGL) is proposed as an apporach to the transfer of shipment related documents between customs agencies which is immediate, permanent and irrefutable.  The intercustoms ledger is essentially a trust bridge between national identity schemes - basically the importing regulator trusts the identity of the document issuer because the exporting regulator confirms the issuer identity.</p>
+<p>An Inter Customs Ledger (IGL) is proposed as an approach to the transfer of shipment related documents between customs agencies which is immediate, permanent and irrefutable.  The intercustoms ledger is essentially a trust bridge between national identity schemes - basically the importing regulator trusts the identity of the document issuer because the exporting regulator confirms the issuer identity.</p>
 
 <p><img src="DocumentFlows_ToBe.png" alt="digital flows" /></p>
 
 <p>The future state diagram shows the relationship between the IGL and three other key components.</p>
 
 <ul>
-  <li>National single windows and port community systems provide a streamlined and automated means for local entities (traders, 3PL, agents, etc) to interact with their local regulators. Many nations now have some kind of single window system but implementations are varied and usually unique to the local regualatory environment. The IGL can be thought of as a cross-border integration framerwork <em>between</em> national single windows.  However, it is important that the varied and complex national rules do not bleed into the IGL so that integration remains simple.</li>
-  <li>National digital identity schemes are emerging in many jursdictions are provide a way for businesses and individuals in a country to prove their identity to any government agency and to any authorised non-government entity. Business identity schemes are typically linked to public tax registration numbers. Individual identities may be linked to a business identity and will normally include the idea of identity assurance levels which indicate the degree of identity integrity attached to the token holder. This means, for example, that a certificate of origin provided by an exporter to their local customs authority (possibly via a single window) can be passed to the importing authority together with a high integrity identity claim. In this way, the IGL is essentially an international “trust bridge” between national identity schemes.</li>
-  <li>Commercial trade data platforms/pipelines are an emerging capability that seek to provide their customers with and-to-end supply chain visibility and management. They are essentially multi-source data aggregators and their scope usually includes some or all of trade, transport, financial, and regulatory data. The data managed by commerciasl pipleines is not only traditional trade documents (invoices, bills of lading etc) but also IoT streams like data feeds from instrumented smart containers. These platforms can provide significant value to their stakeholders and have a scope much larger than G2G data sharing. The IGL complements these commercial services and does not compete with them.</li>
+  <li>National single windows and port community systems provide a streamlined and automated means for local entities (traders, 3PL, agents, etc) to interact with their local regulators. Many nations now have some kind of single window system but implementations are varied and usually unique to the local regulatory environment. The IGL can be thought of as a cross-border integration framework <em>between</em> national single windows.  However, it is important that the varied and complex national rules do not bleed into the IGL so that integration remains simple.</li>
+  <li>National digital identity schemes are emerging in many jurisdictions are provide a way for businesses and individuals in a country to prove their identity to any government agency and to any authorised non-government entity. Business identity schemes are typically linked to public tax registration numbers. Individual identities may be linked to a business identity and will normally include the idea of identity assurance levels which indicate the degree of identity integrity attached to the token holder. This means, for example, that a certificate of origin provided by an exporter to their local customs authority (possibly via a single window) can be passed to the importing authority together with a high integrity identity claim. In this way, the IGL is essentially an international “trust bridge” between national identity schemes.</li>
+  <li>Commercial trade data platforms/pipelines are an emerging capability that seek to provide their customers with and-to-end supply chain visibility and management. They are essentially multi-source data aggregators and their scope usually includes some or all of trade, transport, financial, and regulatory data. The data managed by commercial pipelines is not only traditional trade documents (invoices, bills of lading etc) but also IoT streams like data feeds from instrumented smart containers. These platforms can provide significant value to their stakeholders and have a scope much larger than G2G data sharing. The IGL complements these commercial services and does not compete with them.</li>
 </ul>
 
 <h2 id="architectural-principles">Architectural Principles</h2>
@@ -370,32 +371,32 @@ in this document are to be interpreted as described in RFC 2119.</p>
     <tr>
       <td>P1</td>
       <td>Avoid bleeding any local regulatory complexities into cross-border processes</td>
-      <td>A strong separation between local complexity and cross border document exchange is essential for scalability. The IGL specification must be as simple as possible in order for updake to scale.</td>
+      <td>A strong separation between local complexity and cross border document exchange is essential for scalability. The IGL specification must be as simple as possible in order for update to scale.</td>
     </tr>
     <tr>
       <td>P2</td>
       <td>Support multiple distributed ledger types &amp; networks</td>
-      <td>A single global uber-ledger would need to pick a technology winner, would restrict the ability to intruduce non breaking extensions, would present a high value attack target, and is unlilkely to be supported by every nation.</td>
+      <td>A single global uber-ledger would need to pick a technology winner, would restrict the ability to introduce non breaking extensions, would present a high value attack target, and is unlikely to be supported by every nation.</td>
     </tr>
     <tr>
       <td>P3</td>
       <td>Coexist nicely with paper processes</td>
-      <td>A switch from paper processes to native digital documents exchanged via IGL will not happen overnight. Therefore the IGL shoiuld add value to existing paper processes and should facilitate a simple and gradual transitoin from paper to native digital documents.</td>
+      <td>A switch from paper processes to native digital documents exchanged via IGL will not happen overnight. Therefore the IGL should add value to existing paper processes and should facilitate a simple and gradual transition from paper to native digital documents.</td>
     </tr>
     <tr>
       <td>P4</td>
       <td>Leverage the unique position of national regulators</td>
-      <td>Customs authorities enjoy a unique postion as the single convergence point for all imports to and exports from a country. That allows an intercustomes ledger to easily achieve complete coverage of bilateral or multilateral trading relationships.</td>
+      <td>Customs authorities enjoy a unique position as the single convergence point for all imports to and exports from a country. That allows an intercustoms ledger to easily achieve complete coverage of bilateral or multilateral trading relationships.</td>
     </tr>
     <tr>
       <td>P5</td>
       <td>Complement rather than compete with commercial platforms</td>
-      <td>Regulators are not natural innovators. The ideal IGL will provide a non-comptetitive platform that leverages the position to regualators to the benefit of their constituents whilst allowing comemrcial innovation to flourish.</td>
+      <td>Regulators are not natural innovators. The ideal IGL will provide a non-competitive platform that leverages the position to regulators to the benefit of their constituents whilst allowing commercial innovation to flourish.</td>
     </tr>
     <tr>
       <td>P6</td>
       <td>Do not <em>require</em> businesses to provide more than their local regulatory obligations demand.</td>
-      <td>There may be genuine value to business in using the IGL for cross border processes beyond the regulatory minimum but regulators cannot and should not demand it. Therefore, IGL implementations should define a clear value propisition for every document that exceeds the regulatory minimum.</td>
+      <td>There may be genuine value to business in using the IGL for cross border processes beyond the regulatory minimum but regulators cannot and should not demand it. Therefore, IGL implementations should define a clear value proposition for every document that exceeds the regulatory minimum.</td>
     </tr>
     <tr>
       <td>P7</td>
@@ -438,7 +439,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
     </tr>
     <tr>
       <td>R5</td>
-      <td>The IGL SHOULD NOT require that the user have any knowledge of the specific leger technology used (ehterium, hyperledger, etc)</td>
+      <td>The IGL SHOULD NOT require that the user have any knowledge of the specific ledger technology used (etherium, hyperledger, etc)</td>
       <td>link to Message API</td>
     </tr>
     <tr>
@@ -478,7 +479,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
     </tr>
     <tr>
       <td>R13</td>
-      <td>The IGL SHOULD allow any blockchgain technology to be used</td>
+      <td>The IGL SHOULD allow any blockchain technology to be used</td>
       <td>link to technology plug in architecture</td>
     </tr>
     <tr>
@@ -503,7 +504,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <h2 id="architecture-overview">Architecture Overview</h2>
 
-<p>The IGL specification provides a flexible framework for distributed transaction management between participating countries for the exchange of regulatory or trade documents. The architecture assumes that no single Distributed Ledger Technology or netowrk will be used for all purposes by all countries. The conceptual model is shown below.</p>
+<p>The IGL specification provides a flexible framework for distributed transaction management between participating countries for the exchange of regulatory or trade documents. The architecture assumes that no single Distributed Ledger Technology or network will be used for all purposes by all countries. The conceptual model is shown below.</p>
 
 <p><img src="IGL_API_Architecture.png" alt="API Architecture" /></p>
 
@@ -520,7 +521,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <h3 id="igl-nodes">IGL Nodes</h3>
 
-<p>The IGL node layer represents the compomnents deployed one or more node operators in any country that wishes to participate in the inter-government ledger. It provides an abstraction above specific DLT channels but remains agnoistic of specific cross-border business processes such as origin data exchange. This layer provides one or more secure document repositories and implements the routing logic for recording channel transactions. THe IGL Node offers 3 standard APIs to the client layer.</p>
+<p>The IGL node layer represents the components deployed one or more node operators in any country that wishes to participate in the inter-government ledger. It provides an abstraction above specific DLT channels but remains agnostic of specific cross-border business processes such as origin data exchange. This layer provides one or more secure document repositories and implements the routing logic for recording channel transactions. THe IGL Node offers 3 standard APIs to the client layer.</p>
 
 <ul>
   <li>The Message API is used to record messages that include structured data and binary files that represent ledger transactions (eg a Certificate of origin).</li>
@@ -530,19 +531,19 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <h3 id="client-applications">Client Applications</h3>
 
-<p>The applications layer represents any platform that will make use of the IGL for cross border exchange. THis is the business process specific layer and will typically be represented by single window applications or other trade &amp; logistics applications. The diagramn shows a CoO (Certifcate of Origin) API as an example but this layer could support any trade document (invoice, Bill of Lading, etc).</p>
+<p>The applications layer represents any platform that will make use of the IGL for cross border exchange. THis is the business process specific layer and will typically be represented by single window applications or other trade &amp; logistics applications. The diagram shows a CoO (Certificate of Origin) API as an example but this layer could support any trade document (invoice, Bill of Lading, etc).</p>
 
 <h2 id="governance-model">Governance Model</h2>
 
-<p>The IGL Specification assumes that any country may have several “authroised agencies” that have an existing authority to negotiate bilateral or multi-lateral exchanges with counterpart agencies in other countries.  For example</p>
+<p>The IGL Specification assumes that any country may have several “authorised agencies” that have an existing authority to negotiate bilateral or multi-lateral exchanges with counterpart agencies in other countries.  For example</p>
 
 <ul>
   <li>A Trade Agency may negotiate FTAs and the corresponding exchange of origin data.</li>
   <li>A Border Agency may negotiate secure trade lanes supported by exchange of Authorised Economic Operator (AEO) data and/or export declaration data.</li>
-  <li>An Agriculatiure agency may neotiate the exchange of phytosanitary and otehr certificates.</li>
+  <li>An Agriculture agency may negotiate the exchange of phytosanitary and other certificates.</li>
 </ul>
 
-<p>Similarly the IGL specification assumes that there may be more than one IGL nodes in any conuntry and that these may be operated internally by an authorised agency or may be operated by accredited third parties.  An authorised agency may delegate authority to exchange IGL messages on a channel to one or more node operators.</p>
+<p>Similarly the IGL specification assumes that there may be more than one IGL nodes in any country and that these may be operated internally by an authorised agency or may be operated by accredited third parties.  An authorised agency may delegate authority to exchange IGL messages on a channel to one or more node operators.</p>
 
 <p><img src="GovernanceModel.png" alt="IGL Node Governance" /></p>
 
@@ -555,25 +556,25 @@ in this document are to be interpreted as described in RFC 2119.</p>
   <li>Some kind of security accreditation framework for node operators - such as the AU government <a href="https://www.cyber.gov.au/programs/irap">IRAP</a></li>
 </ul>
 
-<p>Identity providers and node operators SHOULD reference the accrediation framework on their public websites.</p>
+<p>Identity providers and node operators SHOULD reference the accreditation framework on their public websites.</p>
 
 <h2 id="component-model">Component Model</h2>
 
-<p>A typical IGL node will comprise the high level componments illustrated in the diagram below.</p>
+<p>A typical IGL node will comprise the high level components illustrated in the diagram below.</p>
 
 <p><img src="IGLNodeComponents.png" alt="IGL Node Components" /></p>
 
 <ul>
-  <li>An IGL worker exposes the Message API and is reasponsible to process IGL messages including secure document storage, routing the the relevant IGL channel, and communicating events to the event manager.</li>
+  <li>An IGL worker exposes the Message API and is responsible to process IGL messages including secure document storage, routing the the relevant IGL channel, and communicating events to the event manager.</li>
   <li>A document manager exposes the document API and is responsible for the secure storage of documents (both structured data and binaries) that are referenced by a message on a channel.</li>
-  <li>An event manager exposes the susbcriptions API and allows client systems to subscribe to notifications about messages that they post.</li>
+  <li>An event manager exposes the subscriptions API and allows client systems to subscribe to notifications about messages that they post.</li>
 </ul>
 
 <h2 id="sequence-model">Sequence Model</h2>
 
 <h3 id="client-sequence">Client sequence</h3>
 
-<p>The high level sequence flow for clinet system interactions with IGL nodes is shown below. Detailed interactions between node components and with IGL channels are not shown.</p>
+<p>The high level sequence flow for client system interactions with IGL nodes is shown below. Detailed interactions between node components and with IGL channels are not shown.</p>
 
 <p><img src="IGLClientSequence.png" alt="IGL client sequence" /></p>
 
@@ -586,32 +587,32 @@ in this document are to be interpreted as described in RFC 2119.</p>
   <li>The IGL node requests a new transaction of the relevant distributed ledger channel and, once consensus is completed and a block is written, the client is notified via the event manager.</li>
   <li>The counter party on the network detects the new message, gets the document, and notifies any subscribed parties (eg a government agency in country B) of the new message.</li>
   <li>The message is processed by the receiving agency business systems.</li>
-  <li>The reverse flow (from country B back to coutnry A) follows exactluy the same pattern, except in the opposite direction.  A long running conversation is implemented as multiple independent messages correlated via a common subject-id.</li>
+  <li>The reverse flow (from country B back to country A) follows exactly the same pattern, except in the opposite direction.  A long running conversation is implemented as multiple independent messages correlated via a common subject-id.</li>
 </ul>
 
 <h2 id="node-sequence">Node Sequence</h2>
 
-<p>The sequence diagram below elaborates on the detailed interactions between IGL node components and IGL channels that are not shown on the client equence diagram.</p>
+<p>The sequence diagram below elaborates on the detailed interactions between IGL node components and IGL channels that are not shown on the client sequence diagram.</p>
 
 <p><img src="IGLNodeSequence.png" alt="IGL node sequence" /></p>
 
 <p>Assuming that public keys of authorised node operators have been exchanged and mapped to persistent identities then</p>
 
 <ul>
-  <li>A new message is received froma  client by the message API</li>
+  <li>A new message is received from a client by the message API</li>
   <li>The IGL worker will POST the contained or referenced document to the document API for secure storage. The IGL specification is not prescriptive of document format (see Semantic model section).</li>
   <li>The document API will return a unique fingerprint (multi-hash) of the stored document and will update it’s access control to allow read access by the recipient country authority.</li>
   <li>The IGL worker will determine the relevant IGL channel using “toCountry” and “messageType” fields from the message header and passes the message to the relevant (DLT technology specific) channel node</li>
   <li>The channel node requests a new ledger transaction comprising a semantic triple
     <ul>
-      <li>Subject is a unique business identifier for the long running conversation which could be a namespace qualified id suhc as <code class="highlighter-rouge">chamber.com.au:chafta-coo:123</code> or could be a GUID.</li>
-      <li>Object is the unique fingerprint (multihash) of the document that is attached to the message and stored in the documenbt repository.</li>
-      <li>Predicate is the semantic description of the message represented by the messageType.  This must be drawn from a controlled vocabularoy (see semantic model) - eg <code class="highlighter-rouge">unece.un.org:coo:created</code></li>
+      <li>Subject is a unique business identifier for the long running conversation which could be a namespace qualified id such as <code class="highlighter-rouge">chamber.com.au:chafta-coo:123</code> or could be a GUID.</li>
+      <li>Object is the unique fingerprint (multihash) of the document that is attached to the message and stored in the document repository.</li>
+      <li>Predicate is the semantic description of the message represented by the messageType.  This must be drawn from a controlled vocabulary (see semantic model) - eg <code class="highlighter-rouge">unece.un.org:coo:created</code></li>
     </ul>
   </li>
-  <li>The channel completes consensus and writes a new block - this process is specific to the particular DLT techology (eg ethereum or hyperledger).</li>
+  <li>The channel completes consensus and writes a new block - this process is specific to the particular DLT technology (eg ethereum or hyperledger).</li>
   <li>once the new block is successfully written the channel node notifies the IGL worker which will send a callback event to all subscribed clients via the event manager.</li>
-  <li>The new transaction is observed by the counter party IGL node which reads the transaction (ie the semntic triple)</li>
+  <li>The new transaction is observed by the counter party IGL node which reads the transaction (ie the semantic triple)</li>
   <li>The recipient country node GETs the document identified by the Object multihash from the sender country repository. Authentication is via mutual SSL.</li>
   <li>The recipient country IGL node notifies any subscribed clients of the new transaction via the event manager of the recipient IGL node.</li>
 </ul>
@@ -638,7 +639,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <h2 id="semantic-model">Semantic Model</h2>
 
-<p>This seciton is all about the predicate (ie message type IRI) and it’s relationship to supported document models/schema.</p>
+<p>This section is all about the predicate (ie message type IRI) and it’s relationship to supported document models/schema.</p>
 
 <p>to-do: more details</p>
 
@@ -656,19 +657,19 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <p>In country IDP</p>
 
-<p>to-do: more detrails about claims etc</p>
+<p>to-do: more details about claims etc</p>
 
 <h2 id="smart-contracts">Smart Contracts</h2>
 
-<p>A “Smart Contract” allows the encoding of IGL channel specific business rules into the ledger that allows transactions to be verified aginst the rules. Smart cotnracts can facilitate automated and verifiable regulatory compliance.</p>
+<p>A “Smart Contract” allows the encoding of IGL channel specific business rules into the ledger that allows transactions to be verified against the rules. Smart contracts can facilitate automated and verifiable regulatory compliance.</p>
 
 <p>Although an IGL channel does not require a “smart contract” there are likely to be cases where there will be value in encoding compliance rules into the ledger transaction.</p>
 
-<p>Different ledgher technologies have different technical representations of these rules. Ethereum smart contracts are written in solidity code. Hyperledger Fabric smart contracts are written as chain code in the Go language.</p>
+<p>Different ledger technologies have different technical representations of these rules. Ethereum smart contracts are written in solidity code. Hyperledger Fabric smart contracts are written as chain code in the Go language.</p>
 
 <h3 id="abstract-model">Abstract Model</h3>
 
-<p>In order to support re-use and consistency in the implmenentation of smart contracts, this specification defines an inheritance hierarchy for smart contracts.</p>
+<p>In order to support re-use and consistency in the implementation of smart contracts, this specification defines an inheritance hierarchy for smart contracts.</p>
 
 <p><img src="ContractsArchitecture.png" alt="Smart Contracts" /></p>
 
@@ -687,14 +688,14 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <h2 id="performance--scalability">Performance &amp; Scalability</h2>
 
-<p>Blockchain technology can become prohibitively slow and/or expensive at very high volumes. An IGL node operating in a large economy may need to process a very high volume of transacitons. The IGL should be able to handle high volumes without significant perforamance degradation or cost increases. A benchmark colume target is one billion transactions per day. There are two approaches to increasing volumes on distributed ledegrs without significant performance loss.</p>
+<p>Blockchain technology can become prohibitively slow and/or expensive at very high volumes. An IGL node operating in a large economy may need to process a very high volume of transactions. The IGL should be able to handle high volumes without significant performance degradation or cost increases. A benchmark volume target is one billion transactions per day. There are two approaches to increasing volumes on distributed ledgers without significant performance loss.</p>
 
 <ul>
   <li>The Side-tree is essentially a batch protocol where an arbitrary number of transactions are composed into a Merkel DAG (Directed Acyclic Graph) where each node in the tree contains the hash of transactions at lower levels. Only the top level root of the tree is written to the chain but all transactions inherit the integrity of the chain.</li>
   <li>The side-chain is essentially an independent fork to create a new chain that can include an arbitrary number of new blocks before the fork re-joins the main chain. Side chains are more complex than side trees but allow more dynamic rules (transaction verifications) and can include new stakeholders as side chain node operators that are not part of the main chain.</li>
 </ul>
 
-<p>The combination of performacne requirements and channel specific rule/validation requirements leads to a decision tree</p>
+<p>The combination of performance requirements and channel specific rule/validation requirements leads to a decision tree</p>
 
 <p><img src="ScalabilityModel.png" alt="performance decision tree" /></p>
 
