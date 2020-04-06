@@ -20,3 +20,5 @@ gem 'github-pages'
 group :jekyll_plugins do
    gem "jekyll-toc"
 end
+
+gem 'markdown_to_word'
