@@ -19,11 +19,13 @@
             {% endif %}
             <div class="spec-header">
                 {% assign page.specs_assets = page.specs_assets | append: page.url %}
+                {% assign url = page.url | split: "/"  %}
                 <ul>
                     <li>Spec ID: {{ page.specID | markdownify}}</li>
                     <li>{{ page.status | markdownify}}</li>
                     <li>Editor: {{ page.editors | markdownify}}</li>
                     <li>Contributors: {{ page.contributors | markdownify}}</li>
+                    <li><a href="{{page.url}}{{url[2]}}-{{url[3]}}.docx">Download</a></li>
                 </ul>
             </div>
             {% include toc.html %}
