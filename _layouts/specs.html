@@ -20,11 +20,16 @@
             <div class="spec-header">
                 {% assign page.specs_assets = page.specs_assets | append: page.url %}
                 {% assign url = page.url | split: "/"  %}
+                {% if url[4] %}
+                    {% assign spec_name = url[4]  %}
+                {% else %}
+                    {% assign spec_name = url[2]  %}
+                {% endif %}
                 <ul>
                     <li>Spec ID: {{ page.specID | markdownify}}</li><li>{{ page.status | markdownify}}</li>
                     <li>Editor: {{ page.editors | markdownify}}</li>
                     <li>Contributors: {{ page.contributors | markdownify}}</li>
-                    <li><a href="{{page.url}}{{url[2]}}-{{url[3]}}.docx">Export to Doc</a></li>
+                    <li><a href="{{page.url}}{{spec_name}}-{{url[3]}}.docx">Export to Doc</a></li>
                 </ul>
             </div>
             {% include toc.html %}
