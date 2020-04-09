@@ -161,6 +161,7 @@
             <div class="spec-header">
                 
                 
+                
                 <ul>
                     <li>Spec ID: <p>IGL/1</p>
 </li><li><p><img src="http://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" /></p>
@@ -626,6 +627,14 @@ in this document are to be interpreted as described in RFC 2119.</p>
 <p>to-do : document this</p>
 
 <h3 id="channel-registry-api">Channel Registry API</h3>
+
+<p>The channel registry supports the query of channels on an IGL node channel registry.</p>
+
+<ul>
+  <li>Query operations SHOULD be open to public unauthenticated clients.</li>
+  <li>A common public use case is for a client system to determine what message types may be sent to which countries using the node.</li>
+  <li>An IGL node MAY choose to hide the existence of some channel from pubkuc queries.</li>
+</ul>
 
 <p><img src="ChannelSpecification.png" alt="ChannelSpec" /></p>
 
