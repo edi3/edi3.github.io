@@ -4,11 +4,11 @@
   "description": "The json schema for edi3 domain model interchange format",
   "title": "DICF",
   "type": "object",
-  "required": ["contexts", "dataTypes"],
+  "required": ["resources", "dataTypes"],
   "properties": {
-    "entities": {
+    "resources": {
       "type": "array",
-      "items": { "$ref": "#/definitions/Context" },
+      "items": { "$ref": "#/definitions/Resource" },
       "minItems": 1
     },
     "dataTypes": {
@@ -33,9 +33,9 @@
         "description": "The general property."
       }
     },
-    "Context": {
+    "Resource": {
       "type": "object",
-      "description": "The context object",
+      "description": "The resource object",
       "required": [ "name", "entities" ],
       "properties": {
         "name" : {"$ref": "#/definitions/general/name"},
@@ -120,7 +120,7 @@
           "required": ["name"],
           "properties": {
             "name" : {"$ref": "#/definitions/general/name"},
-            "context" : {
+            "resource" : {
               "type": "string"
             }
           }
