@@ -1,273 +1,177 @@
 {
-    "openapi": "3.0.0",
-    "info": {
-        "description": "",
-        "title": "Domain MetaModel",
-        "version": ""
+  "$id": "https://edi3.org/specs/edi3-model-interchange/develop/domain-schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "The json schema for edi3 domain model interchange format",
+  "title": "DICF",
+  "type": "object",
+  "required": ["contexts", "dataTypes"],
+  "properties": {
+    "entities": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/Context" },
+      "minItems": 1
     },
-    "servers": [],
-    "paths": {},
-    "components": {
-        "schemas": {
-            "DataType": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
-                        "type": "string"
-                    },
-                    "description": {
-                        "description": "full description of the metadata element.",
-                        "type": "string"
-                    },
-                    "status": {
-                        "description": "Status of the element from a library management perspective. \n using COSS lifecycle values (raw, draft, stable, deprecated, deleted).",
-                        "type": "string",
-                        "enum": [
-                            "proposed",
-                            "active",
-                            "deprecated",
-                            "deleted"
-                        ]
-                    }
-                },
-                "required": [
-                    "name"
-                ]
-            },
-            "Entity": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
-                        "type": "string"
-                    },
-                    "description": {
-                        "description": "full description of the metadata element.",
-                        "type": "string"
-                    },
-                    "version": {
-                        "description": "missing description",
-                        "type": "string"
-                    },
-                    "status": {
-                        "description": "Status of the element from a library management perspective. \n using COSS lifecycle values (raw, draft, stable, deprecated, deleted).",
-                        "type": "string",
-                        "enum": [
-                            "proposed",
-                            "active",
-                            "deprecated",
-                            "deleted"
-                        ]
-                    }
-                },
-                "required": [
-                    "name"
-                ]
-            },
-            "Event": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
-                        "type": "string"
-                    },
-                    "description": {
-                        "description": "full description of the metadata element.",
-                        "type": "string"
-                    },
-                    "from": {
-                        "allOf": [
-                            {
-                                "$ref": "#/components/schemas/StateIds"
-                            },
-                            {
-                                "type": "object"
-                            }
-                        ]
-                    },
-                    "to": {
-                        "allOf": [
-                            {
-                                "$ref": "#/components/schemas/StateIds"
-                            },
-                            {
-                                "type": "object"
-                            }
-                        ]
-                    }
-                },
-                "required": [
-                    "name"
-                ]
-            },
-            "StateIds": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
-                        "type": "string"
-                    }
-                },
-                "required": [
-                    "name"
-                ]
-            },
-            "Property": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
-                        "type": "string"
-                    },
-                    "description": {
-                        "description": "full description of the metadata element.",
-                        "type": "string"
-                    },
-                    "status": {
-                        "description": "Status of the element from a library management perspective. \n using COSS lifecycle values (raw, draft, stable, deprecated, deleted).",
-                        "type": "string",
-                        "enum": [
-                            "proposed",
-                            "active",
-                            "deprecated",
-                            "deleted"
-                        ]
-                    },
-                    "minCardinality": {
-                        "description": "missing description",
-                        "type": "string"
-                    },
-                    "maxCardinality": {
-                        "description": "missing description",
-                        "type": "string"
-                    },
-                    "pattern": {
-                        "description": "missing description",
-                        "type": "string"
-                    }
-                },
-                "required": [
-                    "name"
-                ]
-            },
-            "Relationship": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
-                        "type": "string"
-                    },
-                    "description": {
-                        "description": "full description of the metadata element.",
-                        "type": "string"
-                    },
-                    "status": {
-                        "description": "Status of the element from a library management perspective. \n using COSS lifecycle values (raw, draft, stable, deprecated, deleted).",
-                        "type": "string",
-                        "enum": [
-                            "proposed",
-                            "active",
-                            "deprecated",
-                            "deleted"
-                        ]
-                    },
-                    "type": {
-                        "description": "missing description",
-                        "type": "string",
-                        "enum": [
-                            "typeOf",
-                            "contains",
-                            "references"
-                        ]
-                    },
-                    "minCardinality": {
-                        "description": "missing description",
-                        "type": "string"
-                    },
-                    "maxCardinality": {
-                        "description": "missing description",
-                        "type": "string"
-                    },
-                    "target": {
-                        "allOf": [
-                            {
-                                "$ref": "#/components/schemas/EntityIds"
-                            },
-                            {
-                                "type": "object"
-                            }
-                        ]
-                    }
-                },
-                "required": [
-                    "name",
-                    "type"
-                ]
-            },
-            "EntityIds": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
-                        "type": "string"
-                    }
-                },
-                "required": [
-                    "name"
-                ]
-            },
-            "Scheme": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
-                        "type": "string"
-                    },
-                    "description": {
-                        "description": "full description of the metadata element.",
-                        "type": "string"
-                    },
-                    "version": {
-                        "description": "missing description",
-                        "type": "string"
-                    },
-                    "levels": {
-                        "description": "missing description",
-                        "type": "string"
-                    },
-                    "status": {
-                        "description": "Status of the element from a library management perspective. \n using COSS lifecycle values (raw, draft, stable, deprecated, deleted).",
-                        "type": "string",
-                        "enum": [
-                            "proposed",
-                            "active",
-                            "deprecated",
-                            "deleted"
-                        ]
-                    }
-                },
-                "required": [
-                    "name",
-                    "version"
-                ]
-            },
-            "State": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
-                        "type": "string"
-                    },
-                    "description": {
-                        "description": "full description of the metadata element.",
-                        "type": "string"
-                    }
-                },
-                "required": [
-                    "name"
-                ]
-            }
-        }
+    "dataTypes": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/DataType" },
+      "minItems": 1
     }
+  },
+  "definitions": {
+    "general": {
+      "name": {
+        "type": "string",
+        "description": "The general name property."
+      },
+      "desc": {
+        "type": "string",
+        "description": "The general description property."
+      },
+      "statusCode": {
+        "type": "string",
+        "enum": ["active", "proposed", "deleted", "deprecated"],
+        "description": "The general property."
+      }
+    },
+    "Context": {
+      "type": "object",
+      "description": "The context object",
+      "required": [ "name", "entities" ],
+      "properties": {
+        "name" : {"$ref": "#/definitions/general/name"},
+        "description": {"$ref": "#/definitions/general/desc"},
+        "entities": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Entity" },
+          "minItems": 1
+        }
+      }
+    },
+    "Entity": {
+      "type": "object",
+      "description": "The entity object",
+      "required": [ "name", "properties" ],
+      "properties": {
+        "name" : {"$ref": "#/definitions/general/name"},
+        "description": {"$ref": "#/definitions/general/desc"},
+        "version": {
+          "type": "string",
+          "description": "The version property."
+        },
+        "status": {"$ref": "#/definitions/general/statusCode"},
+        "properties": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Property" }
+        },
+        "relationships": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Relationship" }
+        },
+        "states": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/State" }
+        },
+        "events": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Event" }
+        }
+      }
+    },
+    "Property": {
+      "type": "object",
+      "description": "The property object",
+      "required": [ "dataType", "name" ],
+      "properties": {
+        "name" : {"$ref": "#/definitions/general/name"},
+        "description": {"$ref": "#/definitions/general/desc"},
+        "status": {"$ref": "#/definitions/general/statusCode"},
+        "minCardinality": {
+          "type": "integer"
+        },
+        "maxCardinality": {
+          "type": "integer"
+        },
+        "pattern": {
+          "type": "string"
+        }
+      }
+    },
+    "Relationship": {
+      "type": "object",
+      "description": "The relationship object",
+      "required": ["name", "type", "target"],
+      "properties": {
+        "name" : {"$ref": "#/definitions/general/name"},
+        "description": {"$ref": "#/definitions/general/desc"},
+        "status": {"$ref": "#/definitions/general/statusCode"},
+        "type": {
+          "type": "string",
+          "enum": ["typeOf", "contains", "references"],
+          "description": "typeOf - generalisation, contains - composition, references - aggregation"
+        },
+        "minCardinality": {
+          "type": "integer"
+        },
+        "maxCardinality": {
+          "type": "integer"
+        },
+        "target": {
+          "type": "object",
+          "required": ["name"],
+          "properties": {
+            "name" : {"$ref": "#/definitions/general/name"},
+            "context" : {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "State": {
+      "type": "object",
+      "description": "The state object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/general/name"
+        },
+        "description": {
+          "$ref": "#/definitions/general/desc"
+        }
+      }
+    },
+    "Event": {
+      "type": "object",
+      "description": "The event object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/general/name"
+        },
+        "description": {
+          "$ref": "#/definitions/general/desc"
+        },
+        "from": {
+          "$ref": "#/definitions/State"
+        },
+        "to": {
+          "$ref": "#/definitions/State"
+        }
+      }
+    },
+    "DataType": {
+      "type": "object",
+      "description": "The dataType object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/general/name"
+        },
+        "description": {
+          "$ref": "#/definitions/general/desc"
+        },
+        "status": {"$ref": "#/definitions/general/statusCode"}
+      }
+    }
+  }
 }
