@@ -188,7 +188,7 @@
 </li>
 <li class="toc-entry toc-h1"><a href="#codelist-governance">CodeList Governance</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#metamodel">Metamodel</a></li>
+<li class="toc-entry toc-h2"><a href="#meta-model">Meta Model</a></li>
 <li class="toc-entry toc-h2"><a href="#maintenance">Maintenance</a></li>
 <li class="toc-entry toc-h2"><a href="#canonical-representation">Canonical Representation</a></li>
 </ul>
@@ -213,7 +213,7 @@
 
 <h2 id="status">Status</h2>
 
-<p>This specification is <img src="http://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" />.  It will transition to <img src="http://rfc.unprotocols.org/spec:2/COSS/draft.svg" alt="draft" /> when there is at least one working implememntation.</p>
+<p>This specification is <img src="http://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" />.  It will transition to <img src="http://rfc.unprotocols.org/spec:2/COSS/draft.svg" alt="draft" /> when there is at least one working implementation.</p>
 
 <h2 id="glossary">Glossary</h2>
 
@@ -244,37 +244,37 @@
 
 <h2 id="language">Language</h2>
 
-<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” 
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL”
 in this document are to be interpreted as described in RFC 2119.</p>
 
 <h1 id="codelist-governance">CodeList Governance</h1>
 
-<h2 id="metamodel">Metamodel</h2>
+<h2 id="meta-model">Meta Model</h2>
 
-<p>In their simplest form, codelists are just a flat list of code name (eg “KG”) and code description (eg “Kilogram”). However many codelists are not quite that simple.</p>
+<p>In their simplest form, codelists are just a flat list of code name (eg “KGM”) and code description (eg “Kilogram”). However many codelists are not quite that simple.</p>
 
 <ul>
-  <li>Many codelists include a number of additonal properties of a code (eg “SI Unit Symbol” or “Conversion Factor”).</li>
-  <li>Some codelists are hierarchical (eg WTO harmonised tarriff codes) and so need to include the idea of a “level” and a link to a “parent”.</li>
-  <li>Many codes in a codelist include a lifecycle status (eg “deprecagted”) and date.</li>
+  <li>Many codelists include a number of additional properties of a code (eg “SI Unit Symbol” or “Conversion Factor”).</li>
+  <li>Some codelists are hierarchical (eg WTO harmonised tariff codes) and so need to include the idea of a “level” and a link to a “parent”.</li>
+  <li>Many codes in a codelist include a lifecycle status (eg “deprecated”) and date.</li>
   <li>All code lists have an issuing authority, a unique identifier and a version.</li>
 </ul>
 
-<p>In order to meet these requirements, all code list serialisations shall conform to the metamodel shown below.</p>
+<p>In order to meet these requirements, all code list serialisations shall conform to the meta model shown below.</p>
 
 <p><img src="metamodel.png" alt="metamodel" /></p>
 
 <h2 id="maintenance">Maintenance</h2>
 
-<p>This section aplies only to codelists that are maintained by edi3.org. Codelists maintained by other authorities but re-published by edi3.org are transformed directly from the source format to the edi3.org canonical JSON-LD format.</p>
+<p>This section applies only to codelists that are maintained by edi3.org. Codelists maintained by other authorities but re-published by edi3.org are transformed directly from the source format to the edi3.org canonical JSON-LD format.</p>
 
-<p>Codelists are essentailly tables of business information that must be maintainable by non-technical subject matter experts. Therefore a simple and user freindly maintenance model is essential.</p>
+<p>Codelists are essentially tables of business information that must be maintainable by non-technical subject matter experts. Therefore a simple and user friendly maintenance model is essential.</p>
 
 <p>The maintenance format will be as two files maintained in an repository folder within https://github.com/edi3/edi3-codelists/tree/develop/docs</p>
 
 <ul>
   <li>codes.csv file - with columns defined in</li>
-  <li>scheme.json file - including the standard columns defined below plus any additonal scheme specific columns.</li>
+  <li>scheme.json file - including the standard columns defined below plus any additional scheme specific columns.</li>
 </ul>
 
 <table>
@@ -304,9 +304,9 @@ in this document are to be interpreted as described in RFC 2119.</p>
     </tr>
     <tr>
       <td>Status</td>
-      <td>The lifcycle status of the code</td>
-      <td>code - allowed values are “proposed”, “stable”, “depracated”</td>
-      <td>optional, if not specificed the “stable” status is assumed.</td>
+      <td>The lifecycle status of the code</td>
+      <td>code - allowed values are “proposed”, “stable”, “deprecated”</td>
+      <td>optional, if not specified the “stable” status is assumed.</td>
       <td> </td>
     </tr>
     <tr>
@@ -326,18 +326,18 @@ in this document are to be interpreted as described in RFC 2119.</p>
     <tr>
       <td>Parent</td>
       <td>the parent code value</td>
-      <td>0710 (being the parent code for WTO tarif code for 171010, potatoes)</td>
+      <td>0710 (being the parent code for WTO tariff code for 171010, potatoes)</td>
       <td>mandatory for hierarchical code lists. not present otherwise</td>
       <td> </td>
     </tr>
   </tbody>
 </table>
 
-<p>Any number of addiotnal columns can be added to represent additional properties of the code.  The only condition is that the column name must be defined in a scheme.json file that is maintained in the same repository folder as the codes.csv file and cannot have the same name as any of the reserved column names defined in the table above.  The scheme.json file must be the same format as the canonical representation defined in the next section.</p>
+<p>Any number of additional columns can be added to represent additional properties of the code.  The only condition is that the column name must be defined in a scheme.json file that is maintained in the same repository folder as the codes.csv file and cannot have the same name as any of the reserved column names defined in the table above.  The scheme.json file must be the same format as the canonical representation defined in the next section.</p>
 
 <h2 id="canonical-representation">Canonical Representation</h2>
 
-<p>Each code list is maintained in a seaprate folder of the same name under the docs folder in the edi3.org codelists repository https://github.com/edi3/edi3-codelists/tree/master/docs.  For example a file similar to the snippet below would be located at /rec20/codes.json</p>
+<p>Each code list is maintained in a separate folder of the same name under the docs folder in the edi3.org codelists repository https://github.com/edi3/edi3-codelists/tree/master/docs.  For example a file similar to the snippet below would be located at /rec20/codes.json</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
 	"@Context":"https://edi3.org",
@@ -370,7 +370,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
 			"conversionFactor":1
 		}
 	]
- 
+
 }
 </code></pre></div></div>
 
@@ -417,12 +417,11 @@ in this document are to be interpreted as described in RFC 2119.</p>
 <p>Notes</p>
 
 <ul>
-  <li>The query respomnse format is always the canonical form described in the previous section.  Just the header part is returned when the query is about codelists. The full srtucture is returned when the query is for codes within a list.</li>
+  <li>The query response format is always the canonical form described in the previous section.  Just the header part is returned when the query is about codelists. The full structure is returned when the query is for codes within a list.</li>
   <li>HTTP header Accept value can be set to either text/html (returns a formatted web page) or application/json (returns the JSON data with JSON-LD context headers)</li>
   <li>operators on query parameters are defined using “dunder” as per query parameters section of the edi3 <a href="https://edi3.org/api-ndr/">Open API design rules</a>.</li>
   <li>list responses are paginated as defined in the pagination section of the edi3 <a href="https://edi3.org/api-ndr/">Open API design rules</a>.</li>
 </ul>
-
 
             
         </div>
