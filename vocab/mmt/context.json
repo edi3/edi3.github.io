@@ -1,0 +1,4635 @@
+{
+  "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "@version": 1.1,
+    "@vocab": "http://edi3.org/vocab/mmt/",
+    "type": {
+      "@id": "@type",
+      "@type": "@vocab"
+    },
+    "Academic_Qualification": {
+      "@context": {
+        "@vocab": "Academic_Qualification#",
+        "abbreviatedName": {
+          "@type": "xsd:string"
+        },
+        "name": {
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "Applied_ChemicalTreatment": {
+      "@context": {
+        "@vocab": "Applied_ChemicalTreatment#",
+        "chemicalConcentrationMeasure": {
+          "@type": "xsd:decimal"
+        },
+        "methodName": {
+          "@type": "xsd:string"
+        },
+        "name": {
+          "@type": "xsd:string"
+        },
+        "occurrenceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "applicableTemperature": {
+          "@type": "Specified_Temperature"
+        },
+        "appliedPeriod": {
+          "@type": "Specified_Period"
+        },
+        "resultAuthentication": {
+          "@type": "Document_Authentication"
+        },
+        "resultNote": {
+          "@type": "Note"
+        },
+        "usedChemical": {
+          "@type": "Distinct_Chemical"
+        }
+      }
+    },
+    "Associated_TransportEquipment": {
+      "@context": {
+        "@vocab": "Associated_TransportEquipment#",
+        "characteristicText": {
+          "@type": "xsd:string"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        }
+      }
+    },
+    "Attached_TransportEquipment": {
+      "@context": {
+        "@vocab": "Attached_TransportEquipment#",
+        "characteristicText": {
+          "@type": "xsd:string"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "unitQuantity": {
+          "@type": "xsd:decimal"
+        }
+      }
+    },
+    "AuthoritativeSignatory_Person": {
+      "@context": {
+        "@vocab": "AuthoritativeSignatory_Person#",
+        "name": {
+          "@type": "xsd:string"
+        },
+        "attainedAcademicQualification": {
+          "@type": "Academic_Qualification"
+        }
+      }
+    },
+    "Calculated_Emission": {
+      "@context": {
+        "@vocab": "Calculated_Emission#",
+        "affectedDistanceMeasure": {
+          "@type": "xsd:decimal"
+        },
+        "pollutionMeasure": {
+          "@type": "xsd:decimal"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        },
+        "weight": {
+          "@type": "xsd:decimal"
+        }
+      }
+    },
+    "Certification_TestSpecificationReport": {
+      "@context": {
+        "@vocab": "Certification_TestSpecificationReport#",
+        "resultText": {
+          "@type": "xsd:string"
+        },
+        "standardName": {
+          "@type": "xsd:string"
+        },
+        "testName": {
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "Certified_Accreditation": {
+      "@context": {
+        "@vocab": "Certified_Accreditation#",
+        "accreditingBodyName": {
+          "@type": "xsd:string"
+        },
+        "authenticationMethodCode": {
+          "@type": "xsd:token"
+        },
+        "categoryCode": {
+          "@type": "xsd:token"
+        },
+        "description": {
+          "@type": "xsd:string"
+        },
+        "expiryDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "obtainedDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        }
+      }
+    },
+    "CrossBorder_CustomsValuation": {
+      "@context": {
+        "@vocab": "CrossBorder_CustomsValuation#",
+        "addedAdjustmentAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "addedAdjustmentPercent": {
+          "@type": "xsd:decimal"
+        },
+        "buyerSellerRelationshipIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "buyerSellerRelationshipPriceInfluenceIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "chargeApportionMethodCode": {
+          "@type": "xsd:token"
+        },
+        "deductedAdjustmentAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "deductedAdjustmentPercent": {
+          "@type": "xsd:decimal"
+        },
+        "methodCode": {
+          "@type": "xsd:token"
+        },
+        "otherChargeAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "royaltyLicenceFeeIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "salePriceConditionIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "saleRestrictionIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        },
+        "wTOAdditionCode": {
+          "@type": "xsd:token"
+        },
+        "applicableCurrencyExchange": {
+          "@type": "Trade_CurrencyExchange"
+        }
+      }
+    },
+    "CrossBorder_RegulatoryProcedure": {
+      "@context": {
+        "@vocab": "CrossBorder_RegulatoryProcedure#",
+        "acquisitionDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "amendmentReasonCode": {
+          "@type": "xsd:token"
+        },
+        "annualQuotaQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "categoryCode": {
+          "@type": "xsd:token"
+        },
+        "certificationBasisText": {
+          "@type": "xsd:string"
+        },
+        "controlRequirementIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "controlResultText": {
+          "@type": "xsd:string"
+        },
+        "controlStartDateConfirmationIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "declarantAssignedDeclarationID": {
+          "@type": "xsd:ID"
+        },
+        "deferredPaymentMethodIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "deferredTotalChargeAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "exportLicenceControlClassificationID": {
+          "@type": "xsd:ID"
+        },
+        "goodsStatusCode": {
+          "@type": "xsd:token"
+        },
+        "guaranteeCode": {
+          "@type": "xsd:token"
+        },
+        "guaranteeText": {
+          "@type": "xsd:string"
+        },
+        "immediatePayableTotalChargeAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "nonTariffChargeAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "originCriteriaText": {
+          "@type": "xsd:string"
+        },
+        "paymentMethodCode": {
+          "@type": "PaymentMethodType_Сode"
+        },
+        "performanceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "previousProcedureTypeCode": {
+          "@type": "xsd:token"
+        },
+        "quotaID": {
+          "@type": "xsd:ID"
+        },
+        "registeredDeferredPaymentPayerID": {
+          "@type": "xsd:ID"
+        },
+        "remark": {
+          "@type": "xsd:string"
+        },
+        "requestOverrideCode": {
+          "@type": "xsd:token"
+        },
+        "responsibleAgencyActionCode": {
+          "@type": "GovernmentActionType_Сode"
+        },
+        "responsibleAgencyCode": {
+          "@type": "ResponsibleAgencyType_Сode"
+        },
+        "responsibleAgencyInvolvementCode": {
+          "@type": "ResponsibleAgencyInvolvementType_Сode"
+        },
+        "tariffAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "tariffDeductionQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "tariffQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "totalChargeAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "totalConsignmentValueAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "transactionNatureCode": {
+          "@type": "xsd:token"
+        },
+        "transportMovementTypeCode": {
+          "@type": "TransportMovementType_Сode"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        },
+        "usedToDateQuotaQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "valuationBasisAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "applicableCurrencyExchange": {
+          "@type": "Trade_CurrencyExchange"
+        },
+        "applicablePeriod": {
+          "@type": "Specified_Period"
+        },
+        "appliedRequiredChemicalTreatment": {
+          "@type": "Applied_ChemicalTreatment"
+        },
+        "borderClearanceInstructions": {
+          "@type": "Transport_Instructions"
+        },
+        "consignmentDestinationLocation": {
+          "@type": "Logistics_Location"
+        },
+        "declarationLodgementLocation": {
+          "@type": "Logistics_Location"
+        },
+        "entryCustomsOfficeLocation": {
+          "@type": "Logistics_Location"
+        },
+        "examinationEvent": {
+          "@type": "Transport_Event"
+        },
+        "exemptionClaimant": {
+          "@type": "Trade_Party"
+        },
+        "exitCustomsOfficeLocation": {
+          "@type": "Logistics_Location"
+        },
+        "exportCustomsOfficeLocation": {
+          "@type": "Logistics_Location"
+        },
+        "importCustomsOfficeLocation": {
+          "@type": "Logistics_Location"
+        },
+        "paymentOfficeLocation": {
+          "@type": "Logistics_Location"
+        },
+        "previousReferencedDocument": {
+          "@type": "Referenced_Document"
+        },
+        "referencedDocument": {
+          "@type": "Referenced_Document"
+        },
+        "reportedLogisticsStatus": {
+          "@type": "Logistics_Status"
+        },
+        "requiredCertificationTestSpecificationReport": {
+          "@type": "Certification_TestSpecificationReport"
+        },
+        "requiredSeal": {
+          "@type": "Logistics_Seal"
+        },
+        "tradeTax": {
+          "@type": "Trade_Tax"
+        },
+        "transitCustomsOfficeLocation": {
+          "@type": "Logistics_Location"
+        },
+        "transitReleaseCustomsOfficeLocation": {
+          "@type": "Logistics_Location"
+        },
+        "treatmentEvent": {
+          "@type": "Transport_Event"
+        }
+      }
+    },
+    "Delivery_Instructions": {
+      "@context": {
+        "@vocab": "Delivery_Instructions#",
+        "description": {
+          "@type": "xsd:string"
+        },
+        "descriptionCode": {
+          "@type": "xsd:token"
+        }
+      }
+    },
+    "Disposal_Instructions": {
+      "@context": {
+        "@vocab": "Disposal_Instructions#",
+        "description": {
+          "@type": "xsd:string"
+        },
+        "materialID": {
+          "@type": "xsd:ID"
+        },
+        "recyclingDescriptionCode": {
+          "@type": "xsd:token"
+        },
+        "recyclingProcedureText": {
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "Distinct_Chemical": {
+      "@context": {
+        "@vocab": "Distinct_Chemical#",
+        "commonName": {
+          "@type": "xsd:string"
+        },
+        "familyName": {
+          "@type": "xsd:string"
+        },
+        "formulaDescription": {
+          "@type": "xsd:string"
+        },
+        "molecularWeight": {
+          "@type": "xsd:decimal"
+        },
+        "scientificName": {
+          "@type": "xsd:string"
+        },
+        "synonymName": {
+          "@type": "xsd:string"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        }
+      }
+    },
+    "DocumentContext_Parameter": {
+      "@context": {
+        "@vocab": "DocumentContext_Parameter#",
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "valueText": {
+          "@type": "xsd:string"
+        },
+        "version": {
+          "@type": "Document_Version"
+        }
+      }
+    },
+    "DocumentLine_Document": {
+      "@context": {
+        "@vocab": "DocumentLine_Document#",
+        "lineID": {
+          "@type": "xsd:ID"
+        },
+        "statusCode": {
+          "@type": "ActionType_Сode"
+        }
+      }
+    },
+    "Document_Authentication": {
+      "@context": {
+        "@vocab": "Document_Authentication#",
+        "actualDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "governmentActionTypeCode": {
+          "@type": "GovernmentActionType_Сode"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "representationTypeCode": {
+          "@type": "xsd:token"
+        },
+        "signatoryText": {
+          "@type": "xsd:string"
+        },
+        "statement": {
+          "@type": "xsd:string"
+        },
+        "statementCode": {
+          "@type": "xsd:token"
+        },
+        "issueLocation": {
+          "@type": "Logistics_Location"
+        },
+        "providingTradeParty": {
+          "@type": "Trade_Party"
+        }
+      }
+    },
+    "Document_Clause": {
+      "@context": {
+        "@vocab": "Document_Clause#",
+        "contentText": {
+          "@type": "xsd:string"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        }
+      }
+    },
+    "Document_Version": {
+      "@context": {
+        "@vocab": "Document_Version#",
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "issueDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "name": {
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "ExchangedDocument_Context": {
+      "@context": {
+        "@vocab": "ExchangedDocument_Context#",
+        "testIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "transactionID": {
+          "@type": "xsd:ID"
+        },
+        "application": {
+          "@type": "DocumentContext_Parameter"
+        },
+        "bIM": {
+          "@type": "DocumentContext_Parameter"
+        },
+        "businessProcess": {
+          "@type": "DocumentContext_Parameter"
+        },
+        "guideline": {
+          "@type": "DocumentContext_Parameter"
+        },
+        "messageStandard": {
+          "@type": "DocumentContext_Parameter"
+        },
+        "scenario": {
+          "@type": "DocumentContext_Parameter"
+        },
+        "subset": {
+          "@type": "DocumentContext_Parameter"
+        }
+      }
+    },
+    "Exchanged_Declaration": {
+      "@context": {
+        "@vocab": "Exchanged_Declaration#",
+        "currencyExchangeRate": {
+          "@type": "xsd:decimal"
+        },
+        "customsValueAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "formattedIssueDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "formattedJurisdictionEntryDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "grossWeight": {
+          "@type": "xsd:decimal"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "procedureCode": {
+          "@type": "xsd:token"
+        },
+        "specificCircumstanceCode": {
+          "@type": "xsd:token"
+        },
+        "statisticalValueAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "totalInvoiceAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "totalPackageQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "typeCode": {
+          "@type": "DocumentNameType_Сode"
+        },
+        "versionID": {
+          "@type": "xsd:ID"
+        },
+        "additionalStatement": {
+          "@type": "Note"
+        },
+        "associatedPrincipalParty": {
+          "@type": "Trade_Party"
+        },
+        "crossBorderCustomsValuation": {
+          "@type": "CrossBorder_CustomsValuation"
+        },
+        "declarant\nDeclarant": {
+          "@type": "Trade_Party"
+        },
+        "declarantAgent": {
+          "@type": "Trade_Party"
+        },
+        "previousReferencedDocument": {
+          "@type": "Referenced_Document"
+        },
+        "referencedDocument": {
+          "@type": "Referenced_Document"
+        },
+        "submissionLogisticsLocation": {
+          "@type": "Logistics_Location"
+        }
+      }
+    },
+    "Exchanged_Document": {
+      "@context": {
+        "@vocab": "Exchanged_Document#",
+        "acceptanceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "amendmentPurposeCode": {
+          "@type": "xsd:token"
+        },
+        "cancellationDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "categoryCode": {
+          "@type": "xsd:token"
+        },
+        "copyIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "copyIssuedQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "copyRequiredQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "creationDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "customsID": {
+          "@type": "xsd:ID"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "issueDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "languageCode": {
+          "@type": "xsd:ID"
+        },
+        "name": {
+          "@type": "xsd:string"
+        },
+        "originalIssuedQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "originalRequiredQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "purposeCode": {
+          "@type": "MessageFunctionType_Сode"
+        },
+        "recipientAssignedID": {
+          "@type": "xsd:ID"
+        },
+        "rejectionResponseDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "remark": {
+          "@type": "xsd:string"
+        },
+        "responseDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "responseRequestTypeCode": {
+          "@type": "xsd:token"
+        },
+        "revisionDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "senderAssignedID": {
+          "@type": "xsd:ID"
+        },
+        "statusCode": {
+          "@type": "DocumentStatusType_Сode"
+        },
+        "submissionDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "traderAssignedID": {
+          "@type": "xsd:ID"
+        },
+        "typeCode": {
+          "@type": "DocumentNameType_Сode"
+        },
+        "versionID": {
+          "@type": "xsd:ID"
+        },
+        "agent": {
+          "@type": "Trade_Party"
+        },
+        "attachedFile": {
+          "@type": "Specified_BinaryFile"
+        },
+        "contractualClause": {
+          "@type": "Document_Clause"
+        },
+        "effectivePeriod": {
+          "@type": "Specified_Period"
+        },
+        "firstSignatoryAuthentication": {
+          "@type": "Document_Authentication"
+        },
+        "fourthSignatoryAuthentication": {
+          "@type": "Document_Authentication"
+        },
+        "issueLocation": {
+          "@type": "Logistics_Location"
+        },
+        "issuer": {
+          "@type": "Trade_Party"
+        },
+        "lodgementLocation": {
+          "@type": "Logistics_Location"
+        },
+        "note": {
+          "@type": "Note"
+        },
+        "recipient": {
+          "@type": "Trade_Party"
+        },
+        "secondSignatoryAuthentication": {
+          "@type": "Document_Authentication"
+        },
+        "sender": {
+          "@type": "Trade_Party"
+        },
+        "thirdSignatoryAuthentication": {
+          "@type": "Document_Authentication"
+        }
+      }
+    },
+    "Financial_Adjustment": {
+      "@context": {
+        "@vocab": "Financial_Adjustment#",
+        "actualAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "actualDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "actualQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "reasonCode": {
+          "@type": "xsd:token"
+        },
+        "reasonText": {
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "GeographicalCoordinate": {
+      "@context": {
+        "@vocab": "GeographicalCoordinate#",
+        "altimetricSystemID": {
+          "@type": "xsd:ID"
+        },
+        "altitude": {
+          "@type": "xsd:decimal"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "latitude": {
+          "@type": "xsd:decimal"
+        },
+        "latitudeDirectionIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "longitude": {
+          "@type": "xsd:decimal"
+        },
+        "longitudeDirectionIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "systemID": {
+          "@type": "xsd:ID"
+        }
+      }
+    },
+    "Government_Registration": {
+      "@context": {
+        "@vocab": "Government_Registration#",
+        "categoryCode": {
+          "@type": "xsd:token"
+        },
+        "countryCode": {
+          "@type": "xsd:ID"
+        },
+        "countrySubDivisionCode": {
+          "@type": "xsd:ID"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "lastRegisteredYear": {
+          "@type": "xsd:datetime"
+        },
+        "licenceID": {
+          "@type": "xsd:ID"
+        },
+        "recordedDate": {
+          "@type": "xsd:date"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        },
+        "versionID": {
+          "@type": "xsd:ID"
+        },
+        "validityPeriod": {
+          "@type": "Specified_Period"
+        }
+      }
+    },
+    "Handling_Instructions": {
+      "@context": {
+        "@vocab": "Handling_Instructions#",
+        "description": {
+          "@type": "xsd:string"
+        },
+        "descriptionCode": {
+          "@type": "xsd:token"
+        },
+        "maximumStackabilityQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "maximumStackabilityWeight": {
+          "@type": "xsd:decimal"
+        },
+        "maximumStorageHumidity": {
+          "@type": "xsd:decimal"
+        },
+        "minimumStorageHumidity": {
+          "@type": "xsd:decimal"
+        },
+        "storageInstructedTemperature": {
+          "@type": "Instructed_Temperature"
+        },
+        "transportSettingTemperature": {
+          "@type": "TransportSetting_Temperature"
+        }
+      }
+    },
+    "Haulage_Instructions": {
+      "@context": {
+        "@vocab": "Haulage_Instructions#",
+        "description": {
+          "@type": "xsd:string"
+        },
+        "descriptionCode": {
+          "@type": "xsd:token"
+        }
+      }
+    },
+    "Header_TradeAgreement": {
+      "@context": {
+        "@vocab": "Header_TradeAgreement#",
+        "buyerReferenceText": {
+          "@type": "xsd:string"
+        },
+        "deliveryPriorityCode": {
+          "@type": "PriorityDescriptionType_Сode"
+        },
+        "referenceText": {
+          "@type": "xsd:string"
+        },
+        "additionalDocument": {
+          "@type": "Referenced_Document"
+        },
+        "buyer": {
+          "@type": "Trade_Party"
+        },
+        "contractDocument": {
+          "@type": "Referenced_Document"
+        },
+        "crossBorderRegulatoryProcedure": {
+          "@type": "CrossBorder_RegulatoryProcedure"
+        },
+        "exportLicenceDocument": {
+          "@type": "Referenced_Document"
+        },
+        "importLicenceDocument": {
+          "@type": "Referenced_Document"
+        },
+        "letterOfCreditDocument": {
+          "@type": "Referenced_Document"
+        },
+        "logisticsLocation": {
+          "@type": "Logistics_Location"
+        },
+        "paymentTerms": {
+          "@type": "Trade_PaymentTerms"
+        },
+        "seller": {
+          "@type": "Trade_Party"
+        },
+        "sellerOrderDocument": {
+          "@type": "Referenced_Document"
+        },
+        "shippingPeriod": {
+          "@type": "Specified_Period"
+        },
+        "tradeDeliveryTerms": {
+          "@type": "Trade_DeliveryTerms"
+        }
+      }
+    },
+    "Header_TradeDelivery": {
+      "@context": {
+        "@vocab": "Header_TradeDelivery#",
+        "agreedQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "despatchedQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "finalDeliveryIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "partialDeliveryAllowedIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "pickUpAvailabilityDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "remainingRequestedQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "requestedQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "actualDeliveryEvent": {
+          "@type": "SupplyChain_Event"
+        },
+        "actualDespatchEvent": {
+          "@type": "SupplyChain_Event"
+        },
+        "actualLoadingEvent": {
+          "@type": "SupplyChain_Event"
+        },
+        "actualPickUpEvent": {
+          "@type": "SupplyChain_Event"
+        },
+        "actualReceiptEvent": {
+          "@type": "SupplyChain_Event"
+        },
+        "additionalDocument": {
+          "@type": "Referenced_Document"
+        },
+        "confirmedReleaseEvent": {
+          "@type": "SupplyChain_Event"
+        },
+        "deliveryInstructions": {
+          "@type": "Delivery_Instructions"
+        },
+        "deliveryNoteDocument": {
+          "@type": "Referenced_Document"
+        },
+        "despatchAdviceDocument": {
+          "@type": "Referenced_Document"
+        },
+        "finalDestinationCountry": {
+          "@type": "Trade_Country"
+        },
+        "informationNote": {
+          "@type": "Note"
+        },
+        "packingListDocument": {
+          "@type": "Referenced_Document"
+        },
+        "plannedDeliveryEvent": {
+          "@type": "SupplyChain_Event"
+        },
+        "plannedDespatchEvent": {
+          "@type": "SupplyChain_Event"
+        },
+        "plannedReleaseEvent": {
+          "@type": "SupplyChain_Event"
+        },
+        "receivingAdviceDocument": {
+          "@type": "Referenced_Document"
+        },
+        "requestedDeliveryEvent": {
+          "@type": "SupplyChain_Event"
+        },
+        "shipFromParty": {
+          "@type": "Trade_Party"
+        },
+        "shipToParty": {
+          "@type": "Trade_Party"
+        },
+        "ultimateShipToDeliveryEvent": {
+          "@type": "SupplyChain_Event"
+        },
+        "ultimateShipToParty": {
+          "@type": "Trade_Party"
+        }
+      }
+    },
+    "Header_TradeSettlement": {
+      "@context": {
+        "@vocab": "Header_TradeSettlement#",
+        "creditReasonCode": {
+          "@type": "xsd:token"
+        },
+        "creditReasonText": {
+          "@type": "xsd:string"
+        },
+        "duePayableAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "invoiceCurrencyCode": {
+          "@type": "ISO4217_Code"
+        },
+        "invoiceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "invoiceIssuerReferenceText": {
+          "@type": "xsd:string"
+        },
+        "nextInvoiceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "priceCurrencyCode": {
+          "@type": "ISO4217_Code"
+        },
+        "taxCurrencyCode": {
+          "@type": "ISO4217_Code"
+        },
+        "allowanceCharge": {
+          "@type": "Trade_AllowanceCharge"
+        },
+        "financialAdjustment": {
+          "@type": "Financial_Adjustment"
+        },
+        "invoiceDocument": {
+          "@type": "Referenced_Document"
+        },
+        "letterOfCreditDocument": {
+          "@type": "Referenced_Document"
+        },
+        "logisticsServiceCharge": {
+          "@type": "Logistics_ServiceCharge"
+        },
+        "monetarySummation": {
+          "@type": "TradeSettlementHeader_MonetarySummation"
+        },
+        "paymentTerms": {
+          "@type": "Trade_PaymentTerms"
+        },
+        "proFormaInvoiceDocument": {
+          "@type": "Referenced_Document"
+        },
+        "subtotalCalculatedTax": {
+          "@type": "Trade_Tax"
+        },
+        "tradeTax": {
+          "@type": "Trade_Tax"
+        },
+        "ultimatePayee": {
+          "@type": "Trade_Party"
+        }
+      }
+    },
+    "Identified_Fault": {
+      "@context": {
+        "@vocab": "Identified_Fault#",
+        "description": {
+          "@type": "xsd:string"
+        },
+        "iDCode": {
+          "@type": "xsd:token"
+        }
+      }
+    },
+    "Instructed_Temperature": {
+      "@context": {
+        "@vocab": "Instructed_Temperature#",
+        "maximumValue": {
+          "@type": "xsd:decimal"
+        },
+        "minimumValue": {
+          "@type": "xsd:decimal"
+        }
+      }
+    },
+    "Legal_Organization": {
+      "@context": {
+        "@vocab": "Legal_Organization#",
+        "businessTypeCode": {
+          "@type": "xsd:token"
+        },
+        "establishedDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "legalClassificationCode": {
+          "@type": "xsd:token"
+        },
+        "name": {
+          "@type": "xsd:string"
+        },
+        "tradingName": {
+          "@type": "xsd:string"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        },
+        "authorizedRegistration": {
+          "@type": "Legal_Registration"
+        },
+        "postalAddress": {
+          "@type": "Trade_Address"
+        }
+      }
+    },
+    "Legal_Registration": {
+      "@context": {
+        "@vocab": "Legal_Registration#",
+        "countryCode": {
+          "@type": "xsd:ID"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "lastRegisteredYear": {
+          "@type": "xsd:datetime"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        }
+      }
+    },
+    "Line_TradeAgreement": {
+      "@context": {
+        "@vocab": "Line_TradeAgreement#",
+        "additionalDocument": {
+          "@type": "Referenced_Document"
+        },
+        "productGrossPrice": {
+          "@type": "Trade_Price"
+        },
+        "productNetPrice": {
+          "@type": "Trade_Price"
+        }
+      }
+    },
+    "Line_TradeDelivery": {
+      "@context": {
+        "@vocab": "Line_TradeDelivery#",
+        "despatchedQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "grossVolume": {
+          "@type": "xsd:decimal"
+        },
+        "grossWeight": {
+          "@type": "xsd:decimal"
+        },
+        "netWeight": {
+          "@type": "xsd:decimal"
+        },
+        "packageQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "ultimateShipToDeliveryDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "additionalDocument": {
+          "@type": "Referenced_Document"
+        },
+        "deliveryInstructions": {
+          "@type": "Delivery_Instructions"
+        },
+        "handlingInstructions": {
+          "@type": "Handling_Instructions"
+        },
+        "logisticsPackage": {
+          "@type": "Logistics_Package"
+        },
+        "transportDangerousGoods": {
+          "@type": "Transport_DangerousGoods"
+        },
+        "usedTransportEquipment": {
+          "@type": "Referenced_Logistics_TransportEquipment"
+        }
+      }
+    },
+    "Line_TradeSettlement": {
+      "@context": {
+        "@vocab": "Line_TradeSettlement#",
+        "additionalDocument": {
+          "@type": "Referenced_Document"
+        },
+        "allowanceCharge": {
+          "@type": "Trade_AllowanceCharge"
+        },
+        "logisticsServiceCharge": {
+          "@type": "Logistics_ServiceCharge"
+        },
+        "monetarySummation": {
+          "@type": "TradeSettlementLine_MonetarySummation"
+        },
+        "tradeTax": {
+          "@type": "Trade_Tax"
+        }
+      }
+    },
+    "Location_Party": {
+      "@context": {
+        "@vocab": "Location_Party#",
+        "countryCode": {
+          "@type": "xsd:ID"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "name": {
+          "@type": "xsd:string"
+        },
+        "roleCode": {
+          "@type": "xsd:token"
+        },
+        "definedContact": {
+          "@type": "Trade_Contact"
+        },
+        "fax": {
+          "@type": "Universal_Communication"
+        },
+        "postalAddress": {
+          "@type": "Trade_Address"
+        },
+        "providedTransportService": {
+          "@type": "Transport_Service"
+        },
+        "telephone": {
+          "@type": "Universal_Communication"
+        },
+        "transportPerson": {
+          "@type": "Transport_Person"
+        },
+        "uRI": {
+          "@type": "Universal_Communication"
+        }
+      }
+    },
+    "Logistics_Convoy": {
+      "@context": {
+        "@vocab": "Logistics_Convoy#",
+        "maximumWidth": {
+          "@type": "xsd:decimal"
+        },
+        "numberOfTransportMeans": {
+          "@type": "xsd:decimal"
+        },
+        "overallLength": {
+          "@type": "xsd:decimal"
+        },
+        "powerActiveTransportMeans": {
+          "@type": "Logistics_TransportMeans"
+        },
+        "powerInactiveTransportMeans": {
+          "@type": "Logistics_TransportMeans"
+        }
+      }
+    },
+    "Logistics_Label": {
+      "@context": {
+        "@vocab": "Logistics_Label#",
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "seriesEndID": {
+          "@type": "xsd:ID"
+        },
+        "seriesStartID": {
+          "@type": "xsd:ID"
+        }
+      }
+    },
+    "Logistics_Location": {
+      "@context": {
+        "@vocab": "Logistics_Location#",
+        "countryCode": {
+          "@type": "ISO3166_Code"
+        },
+        "countryName": {
+          "@type": "xsd:string"
+        },
+        "description": {
+          "@type": "xsd:string"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "name": {
+          "@type": "xsd:string"
+        },
+        "typeCode": {
+          "@type": "LocationFunctionType_Сode"
+        },
+        "geographicalCoordinates": {
+          "@type": "GeographicalCoordinate"
+        },
+        "postalAddress": {
+          "@type": "Trade_Address"
+        },
+        "servicingParty": {
+          "@type": "Location_Party"
+        },
+        "subordinateLocation": {
+          "@type": "Subordinate_Location"
+        }
+      }
+    },
+    "Logistics_Package": {
+      "@context": {
+        "@vocab": "Logistics_Package#",
+        "grossVolume": {
+          "@type": "xsd:decimal"
+        },
+        "grossWeight": {
+          "@type": "xsd:decimal"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "itemQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "levelCode": {
+          "@type": "PackagingLevelType_Сode"
+        },
+        "netWeight": {
+          "@type": "xsd:decimal"
+        },
+        "returnableIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "sequenceNumber": {
+          "@type": "xsd:decimal"
+        },
+        "seriesEndID": {
+          "@type": "xsd:ID"
+        },
+        "seriesStartID": {
+          "@type": "xsd:ID"
+        },
+        "typeCode": {
+          "@type": "PackageType_Сode"
+        },
+        "typeText": {
+          "@type": "xsd:string"
+        },
+        "dimensions": {
+          "@type": "Spatial_Dimension"
+        },
+        "shippingMarks": {
+          "@type": "Logistics_ShippingMarks"
+        },
+        "usedPackaging": {
+          "@type": "SupplyChain_Packaging"
+        }
+      }
+    },
+    "Logistics_RegulatedGoods": {
+      "@context": {
+        "@vocab": "Logistics_RegulatedGoods#",
+        "applicableTransportDangerousGoods": {
+          "@type": "Transport_DangerousGoods"
+        }
+      }
+    },
+    "Logistics_Seal": {
+      "@context": {
+        "@vocab": "Logistics_Seal#",
+        "conditionCode": {
+          "@type": "SealConditionType_Сode"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "sealingPartyRoleCode": {
+          "@type": "SealingPartyRoleType_Сode"
+        },
+        "typeCode": {
+          "@type": "SealType_Сode"
+        },
+        "issuingParty": {
+          "@type": "Trade_Party"
+        }
+      }
+    },
+    "Logistics_ServiceCharge": {
+      "@context": {
+        "@vocab": "Logistics_ServiceCharge#",
+        "appliedAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "calculationBasisCode": {
+          "@type": "FreightChargeQuantityUnitBasisType_Сode"
+        },
+        "categoryCode": {
+          "@type": "TransportServiceCategoryType_Сode"
+        },
+        "chargeCategoryCode": {
+          "@type": "xsd:token"
+        },
+        "description": {
+          "@type": "xsd:string"
+        },
+        "disbursementAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "freightInvoiceTypeCode": {
+          "@type": "xsd:token"
+        },
+        "iD": {
+          "@type": "FreightCostType_Сode"
+        },
+        "payingPartyRoleCode": {
+          "@type": "xsd:token"
+        },
+        "paymentArrangementCode": {
+          "@type": "TransportPaymentArrangementType_Сode"
+        },
+        "serviceCategoryCode": {
+          "@type": "xsd:token"
+        },
+        "tariffClassCode": {
+          "@type": "FreightChargeTariffType_Сode"
+        },
+        "transportPaymentMethodCode": {
+          "@type": "xsd:token"
+        },
+        "appliedFromLocation": {
+          "@type": "Logistics_Location"
+        },
+        "appliedToLocation": {
+          "@type": "Logistics_Location"
+        },
+        "paymentPlace": {
+          "@type": "Logistics_Location"
+        },
+        "specifiedPaymentMeans": {
+          "@type": "TradeSettlement_PaymentMeans"
+        },
+        "tradeTax": {
+          "@type": "Trade_Tax"
+        }
+      }
+    },
+    "Logistics_ShippingMarks": {
+      "@context": {
+        "@vocab": "Logistics_ShippingMarks#",
+        "markingInstructionCode": {
+          "@type": "MarkingInstructionType_Сode"
+        },
+        "markingText": {
+          "@type": "xsd:string"
+        },
+        "barcodeLabel": {
+          "@type": "Logistics_Label"
+        },
+        "rFIDLabel": {
+          "@type": "Logistics_Label"
+        },
+        "vINLabel": {
+          "@type": "Logistics_Label"
+        }
+      }
+    },
+    "Logistics_Status": {
+      "@context": {
+        "@vocab": "Logistics_Status#",
+        "conditionCode": {
+          "@type": "TransportStatusType_Сode"
+        },
+        "description": {
+          "@type": "xsd:string"
+        },
+        "reasonCode": {
+          "@type": "TransportStatusType_Сode"
+        },
+        "reasonText": {
+          "@type": "xsd:string"
+        },
+        "referenceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "sequenceNumber": {
+          "@type": "xsd:decimal"
+        },
+        "reportedArrivalEvent": {
+          "@type": "Transport_Event"
+        },
+        "reportedDepartureEvent": {
+          "@type": "Transport_Event"
+        },
+        "reportedLoadingEvent": {
+          "@type": "Transport_Event"
+        },
+        "reportedUnloadingEvent": {
+          "@type": "Transport_Event"
+        },
+        "specifiedLocation": {
+          "@type": "Logistics_Location"
+        },
+        "validityPeriod": {
+          "@type": "Specified_Period"
+        }
+      }
+    },
+    "Logistics_TransportEquipment": {
+      "@context": {
+        "@vocab": "Logistics_TransportEquipment#",
+        "accompaniedIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "airFlowMeasure": {
+          "@type": "xsd:decimal"
+        },
+        "carrierAssignedBookingID": {
+          "@type": "xsd:ID"
+        },
+        "categoryCode": {
+          "@type": "TransportEquipmentCategoryType_Сode"
+        },
+        "characteristicText": {
+          "@type": "xsd:string"
+        },
+        "containedConsignmentQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "damageRemark": {
+          "@type": "xsd:string"
+        },
+        "fullEmptyCode": {
+          "@type": "TransportEquipmentFullnessType_Сode"
+        },
+        "grossVolume": {
+          "@type": "xsd:decimal"
+        },
+        "grossWeight": {
+          "@type": "xsd:decimal"
+        },
+        "haulageArrangementCode": {
+          "@type": "TransportEquipmentHaulageArrangementsType_Сode"
+        },
+        "humidityPercent": {
+          "@type": "xsd:decimal"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "information": {
+          "@type": "xsd:string"
+        },
+        "legalStatusCode": {
+          "@type": "TransportEquipmentMovementLegalStatusType_Сode"
+        },
+        "loadedPackageQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "loadingLength": {
+          "@type": "xsd:decimal"
+        },
+        "loadingRemark": {
+          "@type": "xsd:string"
+        },
+        "loadingSequenceNumber": {
+          "@type": "xsd:decimal"
+        },
+        "netWeight": {
+          "@type": "xsd:decimal"
+        },
+        "operationalStatusCode": {
+          "@type": "TransportEquipmentOperationalStatusType_Сode"
+        },
+        "powerSupplyConnectorQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "powerSupplyTypeCode": {
+          "@type": "xsd:token"
+        },
+        "powerSupplyTypeText": {
+          "@type": "xsd:string"
+        },
+        "releaseID": {
+          "@type": "xsd:ID"
+        },
+        "releaseRestrictionText": {
+          "@type": "xsd:string"
+        },
+        "requiredLaneLength": {
+          "@type": "xsd:decimal"
+        },
+        "returnableIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "sealQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "sealedIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "sequenceNumber": {
+          "@type": "xsd:decimal"
+        },
+        "sizeTypeCode": {
+          "@type": "EquipmentSizeTypeDescriptionType_Сode"
+        },
+        "supplierPartyRoleCode": {
+          "@type": "EquipmentSupplierType_Сode"
+        },
+        "tareWeight": {
+          "@type": "xsd:decimal"
+        },
+        "transportMovementStatusCode": {
+          "@type": "TransportEquipmentMovementStatusType_Сode"
+        },
+        "unitQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "unloadingSequenceNumber": {
+          "@type": "xsd:decimal"
+        },
+        "additionalInstructions": {
+          "@type": "Transport_Instructions"
+        },
+        "affixedSeal": {
+          "@type": "Logistics_Seal"
+        },
+        "applicableNote": {
+          "@type": "Note"
+        },
+        "applicableServiceCharge": {
+          "@type": "Logistics_ServiceCharge"
+        },
+        "associatedDocument": {
+          "@type": "Referenced_Document"
+        },
+        "attachedTransportEquipment": {
+          "@type": "Attached_TransportEquipment"
+        },
+        "bondedWarehouseStorageEvent": {
+          "@type": "Transport_Event"
+        },
+        "carriedTransportEquipment": {
+          "@type": "Associated_TransportEquipment"
+        },
+        "carrier": {
+          "@type": "Trade_Party"
+        },
+        "consolidationEvent": {
+          "@type": "Transport_Event"
+        },
+        "containedConsignment": {
+          "@type": "SupplyChain_Consignment"
+        },
+        "containedTransportEquipment": {
+          "@type": "Associated_TransportEquipment"
+        },
+        "deliveryEvent": {
+          "@type": "Transport_Event"
+        },
+        "deliveryInstructions": {
+          "@type": "Delivery_Instructions"
+        },
+        "dimensions": {
+          "@type": "Spatial_Dimension"
+        },
+        "handlingInstructions": {
+          "@type": "Handling_Instructions"
+        },
+        "loadedConsignmentItem": {
+          "@type": "SupplyChain_ConsignmentItem"
+        },
+        "loadedDangerousGoods": {
+          "@type": "Transport_DangerousGoods"
+        },
+        "loadingEvent": {
+          "@type": "Transport_Event"
+        },
+        "loadingInstructions": {
+          "@type": "Transport_Instructions"
+        },
+        "loadingParty": {
+          "@type": "Trade_Party"
+        },
+        "notifiedParty": {
+          "@type": "Trade_Party"
+        },
+        "operatingParty": {
+          "@type": "Trade_Party"
+        },
+        "pickUpEvent": {
+          "@type": "Transport_Event"
+        },
+        "positioningEvent": {
+          "@type": "Transport_Event"
+        },
+        "quarantineInstructions": {
+          "@type": "Quarantine_Instructions"
+        },
+        "reportedStatus": {
+          "@type": "Logistics_Status"
+        },
+        "specifiedTransportMeans": {
+          "@type": "Logistics_TransportMeans"
+        },
+        "storageEvent": {
+          "@type": "Transport_Event"
+        },
+        "temperatureSetting": {
+          "@type": "TransportSetting_Temperature"
+        },
+        "transportServicesBuyer": {
+          "@type": "Trade_Party"
+        },
+        "unloadingEvent": {
+          "@type": "Transport_Event"
+        },
+        "unloadingInstructions": {
+          "@type": "Transport_Instructions"
+        }
+      }
+    },
+    "Logistics_TransportMeans": {
+      "@context": {
+        "@vocab": "Logistics_TransportMeans#",
+        "aftDraughtLevelMeasure": {
+          "@type": "xsd:decimal"
+        },
+        "cargoGrossWeight": {
+          "@type": "xsd:decimal"
+        },
+        "conferenceCode": {
+          "@type": "xsd:token"
+        },
+        "draughtLevelMeasure": {
+          "@type": "xsd:decimal"
+        },
+        "driverAccompaniedIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "forwardDraughtLevelMeasure": {
+          "@type": "xsd:decimal"
+        },
+        "grossWeight": {
+          "@type": "xsd:decimal"
+        },
+        "helipadIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "iSPSSecurityLevelCode": {
+          "@type": "xsd:token"
+        },
+        "length": {
+          "@type": "xsd:decimal"
+        },
+        "loadedCargoMeasure": {
+          "@type": "xsd:decimal"
+        },
+        "manoeuvringSpeed": {
+          "@type": "xsd:decimal"
+        },
+        "name": {
+          "@type": "xsd:string"
+        },
+        "netWeight": {
+          "@type": "xsd:decimal"
+        },
+        "requiredLaneLength": {
+          "@type": "xsd:decimal"
+        },
+        "sequenceNumber": {
+          "@type": "xsd:decimal"
+        },
+        "typeCode": {
+          "@type": "TransportMeansType_Сode"
+        },
+        "typeText": {
+          "@type": "xsd:string"
+        },
+        "wasteReportingExemptionIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "applicableServiceCharge": {
+          "@type": "Logistics_ServiceCharge"
+        },
+        "attachedTransportEquipment": {
+          "@type": "Logistics_TransportEquipment"
+        },
+        "certifiedCalculatedEmission": {
+          "@type": "Calculated_Emission"
+        },
+        "iSSCIssuingAuthorityParty": {
+          "@type": "Trade_Party"
+        },
+        "operator": {
+          "@type": "Trade_Party"
+        },
+        "operatorNationalityCountry": {
+          "@type": "Trade_Country"
+        },
+        "owner": {
+          "@type": "Trade_Party"
+        },
+        "ownerAgent": {
+          "@type": "Trade_Party"
+        },
+        "registrationCountry": {
+          "@type": "Trade_Country"
+        },
+        "registrationEvent": {
+          "@type": "Transport_Event"
+        },
+        "requiredTransportService": {
+          "@type": "Transport_Service"
+        },
+        "serviceProvider": {
+          "@type": "Trade_Party"
+        },
+        "specifiedFault": {
+          "@type": "Identified_Fault"
+        },
+        "specifiedHandlingInstructions": {
+          "@type": "Handling_Instructions"
+        },
+        "specifiedSpatialDimension": {
+          "@type": "Spatial_Dimension"
+        }
+      }
+    },
+    "Logistics_TransportMovement": {
+      "@context": {
+        "@vocab": "Logistics_TransportMovement#",
+        "borderCrossingDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "cargoDescription": {
+          "@type": "xsd:string"
+        },
+        "closingDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "consignmentQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "crewQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "dangerousGoodsIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "information": {
+          "@type": "xsd:string"
+        },
+        "manifestOnboardIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "modeCode": {
+          "@type": "TransportModeType_Сode"
+        },
+        "modeText": {
+          "@type": "xsd:string"
+        },
+        "packageQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "passengerQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "pilotageExemptionID": {
+          "@type": "xsd:ID"
+        },
+        "sailingAdviceNotificationInformation": {
+          "@type": "xsd:string"
+        },
+        "scheduledID": {
+          "@type": "xsd:ID"
+        },
+        "stageCode": {
+          "@type": "TransportMovementStageType_Сode"
+        },
+        "statusCode": {
+          "@type": "StatusType_Сode"
+        },
+        "stayID": {
+          "@type": "xsd:ID"
+        },
+        "terminalOperatorAssignedID": {
+          "@type": "xsd:ID"
+        },
+        "tradedParcelQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "tradingConsolidatorAssignedID": {
+          "@type": "xsd:ID"
+        },
+        "transitDirectionCode": {
+          "@type": "TransportMeansDirectionType_Сode"
+        },
+        "transportEquipmentQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "applicableRegulatoryProcedure": {
+          "@type": "CrossBorder_RegulatoryProcedure"
+        },
+        "applicableServiceCharge": {
+          "@type": "Logistics_ServiceCharge"
+        },
+        "arrivalEvent": {
+          "@type": "Transport_Event"
+        },
+        "associatedConvoy": {
+          "@type": "Logistics_Convoy"
+        },
+        "borderCrossingEvent": {
+          "@type": "Transport_Event"
+        },
+        "callEvent": {
+          "@type": "Transport_Event"
+        },
+        "carriedGoodsCharacteristic": {
+          "@type": "Material_GoodsCharacteristic"
+        },
+        "carriedInactiveTransportMeans": {
+          "@type": "Referenced_TransportMeans"
+        },
+        "carrier": {
+          "@type": "Trade_Party"
+        },
+        "carrierAgent": {
+          "@type": "Trade_Party"
+        },
+        "commodityConsolidator": {
+          "@type": "Trade_Party"
+        },
+        "commodityConsolidatorAgent": {
+          "@type": "Trade_Party"
+        },
+        "consortiumCarrier": {
+          "@type": "Trade_Party"
+        },
+        "crewListDocument": {
+          "@type": "Referenced_Document"
+        },
+        "crewNationalityCountry": {
+          "@type": "Trade_Country"
+        },
+        "crewPerson": {
+          "@type": "Transport_Person"
+        },
+        "departureEvent": {
+          "@type": "Transport_Event"
+        },
+        "documentaryInstructionsNotifiedParty": {
+          "@type": "Trade_Party"
+        },
+        "excessTransportService": {
+          "@type": "Transport_Service"
+        },
+        "firstArrivalEvent": {
+          "@type": "Transport_Event"
+        },
+        "iSPSDocument": {
+          "@type": "Referenced_Document"
+        },
+        "inspectionParty": {
+          "@type": "Trade_Party"
+        },
+        "intermediateTransshipmentEvent": {
+          "@type": "Transport_Event"
+        },
+        "itineraryRoute": {
+          "@type": "Transport_Route"
+        },
+        "liftingInstructions": {
+          "@type": "Referenced_Document"
+        },
+        "loadingEvent": {
+          "@type": "Transport_Event"
+        },
+        "loadingInspectionInstructions": {
+          "@type": "Transport_Instructions"
+        },
+        "loadingInspectionParty": {
+          "@type": "Trade_Party"
+        },
+        "manifestDocument": {
+          "@type": "Referenced_Document"
+        },
+        "master": {
+          "@type": "Transport_Person"
+        },
+        "nVOCCCarrier": {
+          "@type": "Trade_Party"
+        },
+        "notifiedParty": {
+          "@type": "Trade_Party"
+        },
+        "passengerListDocument": {
+          "@type": "Referenced_Document"
+        },
+        "passengerNationalityCountry": {
+          "@type": "Trade_Country"
+        },
+        "sailingAdviceNotifiedParty": {
+          "@type": "Trade_Party"
+        },
+        "specialInstructions": {
+          "@type": "Transport_Instructions"
+        },
+        "specifiedCalculatedEmission": {
+          "@type": "Calculated_Emission"
+        },
+        "specifiedEvent": {
+          "@type": "Transport_Event"
+        },
+        "specifiedInstructions": {
+          "@type": "Handling_Instructions"
+        },
+        "stevedore": {
+          "@type": "Trade_Party"
+        },
+        "terminalOperator": {
+          "@type": "Trade_Party"
+        },
+        "transportContractDocument": {
+          "@type": "Referenced_Document"
+        },
+        "transportMeansSecurityOfficerPerson": {
+          "@type": "Transport_Person"
+        },
+        "unloadingEvent": {
+          "@type": "Transport_Event"
+        },
+        "unloadingInspectionInstructions": {
+          "@type": "Transport_Instructions"
+        },
+        "unloadingInspectionParty": {
+          "@type": "Trade_Party"
+        },
+        "usedTransportMeans": {
+          "@type": "Logistics_TransportMeans"
+        }
+      }
+    },
+    "Material_GoodsCharacteristic": {
+      "@context": {
+        "@vocab": "Material_GoodsCharacteristic#",
+        "constituentPercent": {
+          "@type": "xsd:decimal"
+        },
+        "description": {
+          "@type": "xsd:string"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        }
+      }
+    },
+    "Measurement": {
+      "@context": {
+        "@vocab": "Measurement#",
+        "actualMeasure": {
+          "@type": "xsd:decimal"
+        },
+        "conditionMeasure": {
+          "@type": "xsd:decimal"
+        },
+        "methodText": {
+          "@type": "xsd:string"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        }
+      }
+    },
+    "Note": {
+      "@context": {
+        "@vocab": "Note#",
+        "contentCode": {
+          "@type": "xsd:token"
+        },
+        "contentText": {
+          "@type": "xsd:string"
+        },
+        "subjectCode": {
+          "@type": "xsd:token"
+        },
+        "subjectText": {
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "Product_Classification": {
+      "@context": {
+        "@vocab": "Product_Classification#",
+        "classCode": {
+          "@type": "xsd:token"
+        },
+        "className": {
+          "@type": "xsd:string"
+        },
+        "subClassCode": {
+          "@type": "xsd:token"
+        },
+        "systemID": {
+          "@type": "xsd:ID"
+        },
+        "systemName": {
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "Quarantine_Instructions": {
+      "@context": {
+        "@vocab": "Quarantine_Instructions#",
+        "description": {
+          "@type": "xsd:string"
+        },
+        "descriptionCode": {
+          "@type": "xsd:token"
+        }
+      }
+    },
+    "Radioactive_Material": {
+      "@context": {
+        "@vocab": "Radioactive_Material#",
+        "compositionDescription": {
+          "@type": "xsd:string"
+        },
+        "criticalitySafetyIndexNumber": {
+          "@type": "xsd:decimal"
+        },
+        "fissileExceptionIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "lowDispersibleInformation": {
+          "@type": "xsd:string"
+        },
+        "radionuclideName": {
+          "@type": "xsd:string"
+        },
+        "specialFormInformation": {
+          "@type": "xsd:string"
+        },
+        "transportIndexNumber": {
+          "@type": "xsd:decimal"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        }
+      }
+    },
+    "ReferencedTransport_Service": {
+      "@context": {
+        "@vocab": "ReferencedTransport_Service#",
+        "categoryTypeCode": {
+          "@type": "xsd:token"
+        },
+        "contractID": {
+          "@type": "xsd:ID"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "requester": {
+          "@type": "Trade_Party"
+        }
+      }
+    },
+    "Referenced_Document": {
+      "@context": {
+        "@vocab": "Referenced_Document#",
+        "authenticatedOriginalIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "categoryCode": {
+          "@type": "xsd:token"
+        },
+        "electronicPresentationIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "formattedIssueDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "languageCode": {
+          "@type": "ISO639_Code"
+        },
+        "referenceTypeCode": {
+          "@type": "ReferenceType_Сode"
+        },
+        "remark": {
+          "@type": "xsd:string"
+        },
+        "statusCode": {
+          "@type": "DocumentStatusType_Сode"
+        },
+        "typeCode": {
+          "@type": "DocumentNameType_Сode"
+        },
+        "attachedBinaryFile": {
+          "@type": "Specified_BinaryFile"
+        },
+        "effectivePeriod": {
+          "@type": "Specified_Period"
+        },
+        "issueLocation": {
+          "@type": "Logistics_Location"
+        },
+        "issuer": {
+          "@type": "Trade_Party"
+        },
+        "lodgementLocation": {
+          "@type": "Logistics_Location"
+        },
+        "signatoryAuthentication": {
+          "@type": "Document_Authentication"
+        }
+      }
+    },
+    "Referenced_Logistics_TransportEquipment": {
+      "@context": {
+        "@vocab": "Referenced_Logistics_TransportEquipment#",
+        "carrierAssignedBookingID": {
+          "@type": "xsd:ID"
+        },
+        "categoryCode": {
+          "@type": "TransportEquipmentCategoryType_Сode"
+        },
+        "characteristicText": {
+          "@type": "xsd:string"
+        },
+        "grossVolume": {
+          "@type": "xsd:decimal"
+        },
+        "grossWeight": {
+          "@type": "xsd:decimal"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "loadedPackageQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "netWeight": {
+          "@type": "xsd:decimal"
+        },
+        "sizeTypeCode": {
+          "@type": "EquipmentSizeTypeDescriptionType_Сode"
+        },
+        "unitQuantity": {
+          "@type": "xsd:decimal"
+        }
+      }
+    },
+    "Referenced_SupplyChain_Consignment": {
+      "@context": {
+        "@vocab": "Referenced_SupplyChain_Consignment#",
+        "carrierAcceptanceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "carrierAssignedID": {
+          "@type": "xsd:ID"
+        },
+        "consigneeAssignedID": {
+          "@type": "xsd:ID"
+        },
+        "consignmentItemQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "consignorAssignedID": {
+          "@type": "xsd:ID"
+        },
+        "customsID": {
+          "@type": "xsd:ID"
+        },
+        "freightForwarderAssignedID": {
+          "@type": "xsd:ID"
+        },
+        "grossVolume": {
+          "@type": "xsd:decimal"
+        },
+        "grossWeight": {
+          "@type": "xsd:decimal"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "netWeight": {
+          "@type": "xsd:decimal"
+        },
+        "sequenceNumber": {
+          "@type": "xsd:decimal"
+        },
+        "transportSplitDescription": {
+          "@type": "xsd:string"
+        },
+        "carrier": {
+          "@type": "Trade_Party"
+        },
+        "carrierAcceptanceLocation": {
+          "@type": "Logistics_Location"
+        },
+        "consignee": {
+          "@type": "Trade_Party"
+        },
+        "consignor": {
+          "@type": "Trade_Party"
+        },
+        "deliveryParty": {
+          "@type": "Trade_Party"
+        },
+        "despatchParty": {
+          "@type": "Trade_Party"
+        },
+        "includedConsignmentItem": {
+          "@type": "Referenced_SupplyChain_ConsignmentItem"
+        },
+        "notifiedParty": {
+          "@type": "Trade_Party"
+        },
+        "preCarriageTransportMovement": {
+          "@type": "Logistics_TransportMovement"
+        },
+        "regulatoryProcedure": {
+          "@type": "CrossBorder_RegulatoryProcedure"
+        },
+        "tradeTransaction": {
+          "@type": "SupplyChain_TradeTransaction"
+        },
+        "transportContractDocument": {
+          "@type": "Referenced_Document"
+        },
+        "transportPackage": {
+          "@type": "Logistics_Package"
+        },
+        "usedTransportEquipment": {
+          "@type": "Logistics_TransportEquipment"
+        },
+        "vanningEvent": {
+          "@type": "Transport_Event"
+        },
+        "warehouseStorageEvent": {
+          "@type": "Transport_Event"
+        }
+      }
+    },
+    "Referenced_SupplyChain_ConsignmentItem": {
+      "@context": {
+        "@vocab": "Referenced_SupplyChain_ConsignmentItem#",
+        "goodsTypeCode": {
+          "@type": "GoodsType_Сode"
+        },
+        "goodsTypeExtensionCode": {
+          "@type": "GoodsTypeExtensionType_Сode"
+        },
+        "sequenceNumber": {
+          "@type": "xsd:decimal"
+        },
+        "tradeLineItemQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "associatedDocument": {
+          "@type": "Referenced_Document"
+        },
+        "associatedTransportEquipment": {
+          "@type": "Referenced_Logistics_TransportEquipment"
+        },
+        "cargoNatureIdentification": {
+          "@type": "Transport_Cargo"
+        },
+        "shippingMarks": {
+          "@type": "Logistics_ShippingMarks"
+        },
+        "tradeLineItem": {
+          "@type": "SupplyChain_TradeLineItem"
+        },
+        "transportDangerousGoods": {
+          "@type": "Transport_DangerousGoods"
+        },
+        "transportPackage": {
+          "@type": "Logistics_Package"
+        }
+      }
+    },
+    "Referenced_TransportMeans": {
+      "@context": {
+        "@vocab": "Referenced_TransportMeans#",
+        "driverAccompaniedIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "name": {
+          "@type": "xsd:string"
+        },
+        "typeCode": {
+          "@type": "TransportMeansType_Сode"
+        },
+        "typeText": {
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "Referenced_Transport_Event": {
+      "@context": {
+        "@vocab": "Referenced_Transport_Event#",
+        "reasonTypeCode": {
+          "@type": "xsd:token"
+        },
+        "scheduledArrivalDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "scheduledDepartureDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "occurrencePeriod": {
+          "@type": "Specified_Period"
+        }
+      }
+    },
+    "Registered_Tax": {
+      "@context": {
+        "@vocab": "Registered_Tax#",
+        "currencyCode": {
+          "@type": "xsd:token"
+        },
+        "customsDutyIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "description": {
+          "@type": "xsd:string"
+        },
+        "exemptionReasonCode": {
+          "@type": "xsd:token"
+        },
+        "exemptionReasonText": {
+          "@type": "xsd:string"
+        },
+        "jurisdictionText": {
+          "@type": "xsd:string"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        }
+      }
+    },
+    "Spatial_Dimension": {
+      "@context": {
+        "@vocab": "Spatial_Dimension#",
+        "diameter": {
+          "@type": "xsd:decimal"
+        },
+        "height": {
+          "@type": "xsd:decimal"
+        },
+        "length": {
+          "@type": "xsd:decimal"
+        },
+        "typeCode": {
+          "@type": "DimensionType_Сode"
+        },
+        "width": {
+          "@type": "xsd:decimal"
+        }
+      }
+    },
+    "Specified_BinaryFile": {
+      "@context": {
+        "@vocab": "Specified_BinaryFile#",
+        "characterSetCode": {
+          "@type": "xsd:token"
+        },
+        "encodingCode": {
+          "@type": "xsd:token"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "mIMECode": {
+          "@type": "xsd:token"
+        },
+        "size": {
+          "@type": "xsd:decimal"
+        },
+        "uRI": {
+          "@type": "xsd:ID"
+        }
+      }
+    },
+    "Specified_Observation": {
+      "@context": {
+        "@vocab": "Specified_Observation#",
+        "description": {
+          "@type": "xsd:string"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "applicableNote": {
+          "@type": "Note"
+        },
+        "relatedBinaryFile": {
+          "@type": "Specified_BinaryFile"
+        }
+      }
+    },
+    "Specified_Period": {
+      "@context": {
+        "@vocab": "Specified_Period#",
+        "durationMeasure": {
+          "@type": "xsd:decimal"
+        },
+        "endDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "startDateTime": {
+          "@type": "xsd:datetime"
+        }
+      }
+    },
+    "Specified_Temperature": {
+      "@context": {
+        "@vocab": "Specified_Temperature#",
+        "maximumValue": {
+          "@type": "xsd:decimal"
+        },
+        "minimumValue": {
+          "@type": "xsd:decimal"
+        },
+        "value": {
+          "@type": "xsd:decimal"
+        }
+      }
+    },
+    "SubordinateSubordinate_Location": {
+      "@context": {
+        "@vocab": "SubordinateSubordinate_Location#",
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "name": {
+          "@type": "xsd:string"
+        },
+        "typeCode": {
+          "@type": "LocationFunctionType_Сode"
+        },
+        "physicalGeographicalCoordinate": {
+          "@type": "GeographicalCoordinate"
+        }
+      }
+    },
+    "Subordinate_Location": {
+      "@context": {
+        "@vocab": "Subordinate_Location#",
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "name": {
+          "@type": "xsd:string"
+        },
+        "typeCode": {
+          "@type": "LocationFunctionType_Сode"
+        },
+        "physicalGeographicalCoordinate": {
+          "@type": "GeographicalCoordinate"
+        },
+        "subordinateLocation": {
+          "@type": "SubordinateSubordinate_Location"
+        }
+      }
+    },
+    "SupplyChain_Consignment": {
+      "@context": {
+        "@vocab": "SupplyChain_Consignment#",
+        "associatedInvoiceAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "associatedInvoiceDiscountAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "associatedInvoiceDiscountPercent": {
+          "@type": "xsd:decimal"
+        },
+        "availabilityDueDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "cODAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "cargoInsuranceInstructions": {
+          "@type": "xsd:string"
+        },
+        "cargoToleranceInformation": {
+          "@type": "xsd:string"
+        },
+        "carrierAcceptanceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "carrierAssignedID": {
+          "@type": "xsd:ID"
+        },
+        "carrierProvidedInformation": {
+          "@type": "xsd:string"
+        },
+        "chargeableTransportationStageQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "chargeableWeight": {
+          "@type": "xsd:decimal"
+        },
+        "consigneeAssignedID": {
+          "@type": "xsd:ID"
+        },
+        "consignmentItemQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "consignorAssignedID": {
+          "@type": "xsd:ID"
+        },
+        "containerizationIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "customsID": {
+          "@type": "xsd:ID"
+        },
+        "declaredValueForCarriageAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "declaredValueForCustomsAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "deliveryInformation": {
+          "@type": "xsd:string"
+        },
+        "demurrageInformation": {
+          "@type": "xsd:string"
+        },
+        "exportExitDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "fOBAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "freightForwarderAssignedID": {
+          "@type": "xsd:ID"
+        },
+        "goodsReleaseRestrictionText": {
+          "@type": "xsd:string"
+        },
+        "grossVolume": {
+          "@type": "xsd:decimal"
+        },
+        "grossWeight": {
+          "@type": "xsd:decimal"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "information": {
+          "@type": "xsd:string"
+        },
+        "insurancePremiumAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "insuranceValueAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "loadingInformation": {
+          "@type": "xsd:string"
+        },
+        "loadingLength": {
+          "@type": "xsd:decimal"
+        },
+        "loadingListQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "loadingSequenceNumber": {
+          "@type": "xsd:decimal"
+        },
+        "netWeight": {
+          "@type": "xsd:decimal"
+        },
+        "nilCarriageValueIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "nilCustomsValueIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "nilInsuranceValueIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "numberOfPackages": {
+          "@type": "xsd:decimal"
+        },
+        "packageTypeText": {
+          "@type": "xsd:string"
+        },
+        "paymentArrangementCode": {
+          "@type": "TransportPaymentArrangementType_Сode"
+        },
+        "riskFactorCode": {
+          "@type": "xsd:token"
+        },
+        "sequenceNumber": {
+          "@type": "xsd:decimal"
+        },
+        "shipStoresIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "summaryDescription": {
+          "@type": "xsd:string"
+        },
+        "tareGrossWeight": {
+          "@type": "xsd:decimal"
+        },
+        "totalAllowanceChargeAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "totalChargeAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "totalCollectChargeAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "totalDisbursementAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "totalExportExitToImportEntryChargeAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "totalPrepaidChargeAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "totalTareWeight": {
+          "@type": "xsd:decimal"
+        },
+        "tradedParcelID": {
+          "@type": "xsd:ID"
+        },
+        "transportEquipmentQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "transportEquipmentSplitGoodsIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "transportSplitDescription": {
+          "@type": "xsd:string"
+        },
+        "transshipmentPermittedIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "unloadingSequenceNumber": {
+          "@type": "xsd:decimal"
+        },
+        "warehouseArrivalDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "applicableAllowanceCharge": {
+          "@type": "Trade_AllowanceCharge"
+        },
+        "applicableCurrencyExchange": {
+          "@type": "Trade_CurrencyExchange"
+        },
+        "applicableServiceCharge": {
+          "@type": "Logistics_ServiceCharge"
+        },
+        "associatedDocument": {
+          "@type": "Referenced_Document"
+        },
+        "associatedParty": {
+          "@type": "Trade_Party"
+        },
+        "atArrivalTransportMovement": {
+          "@type": "Logistics_TransportMovement"
+        },
+        "atDepartureTransportMovement": {
+          "@type": "Logistics_TransportMovement"
+        },
+        "bondedWarehouseStorageEvent": {
+          "@type": "Transport_Event"
+        },
+        "borderCrossingTransportMovement": {
+          "@type": "Logistics_TransportMovement"
+        },
+        "cargoInsurance": {
+          "@type": "Transport_CargoInsurance"
+        },
+        "carrier": {
+          "@type": "Trade_Party"
+        },
+        "carrierAcceptanceLocation": {
+          "@type": "Logistics_Location"
+        },
+        "carrierAgent": {
+          "@type": "Trade_Party"
+        },
+        "connectingCarrier": {
+          "@type": "Trade_Party"
+        },
+        "consignee": {
+          "@type": "Trade_Party"
+        },
+        "consigneeAgent": {
+          "@type": "Trade_Party"
+        },
+        "consigneeReceiptLocation": {
+          "@type": "Logistics_Location"
+        },
+        "consignor": {
+          "@type": "Trade_Party"
+        },
+        "consignorAgent": {
+          "@type": "Trade_Party"
+        },
+        "consignorProvidedBorderClearanceInstructions": {
+          "@type": "Transport_Instructions"
+        },
+        "consolidator": {
+          "@type": "Trade_Party"
+        },
+        "customsExportAgent": {
+          "@type": "Trade_Party"
+        },
+        "customsImportAgent": {
+          "@type": "Trade_Party"
+        },
+        "customsRequiredInvoiceDocument": {
+          "@type": "Referenced_Document"
+        },
+        "customsTransitAgent": {
+          "@type": "Trade_Party"
+        },
+        "customsValuation": {
+          "@type": "CrossBorder_CustomsValuation"
+        },
+        "dangerousGoods": {
+          "@type": "Transport_DangerousGoods"
+        },
+        "dangerousGoodsNotifier": {
+          "@type": "Trade_Party"
+        },
+        "declaredForCustomsLocation": {
+          "@type": "Logistics_Location"
+        },
+        "deconsolidator": {
+          "@type": "Trade_Party"
+        },
+        "deliveryEvent": {
+          "@type": "Transport_Event"
+        },
+        "deliveryInstructions": {
+          "@type": "Delivery_Instructions"
+        },
+        "deliveryParty": {
+          "@type": "Trade_Party"
+        },
+        "despatchParty": {
+          "@type": "Trade_Party"
+        },
+        "destinationCountry": {
+          "@type": "Trade_Country"
+        },
+        "estimatedServiceCharge": {
+          "@type": "Logistics_ServiceCharge"
+        },
+        "examinationEvent": {
+          "@type": "Transport_Event"
+        },
+        "exportCountry": {
+          "@type": "Trade_Country"
+        },
+        "exportGeopoliticalRegion": {
+          "@type": "Trade_GeopoliticalRegion"
+        },
+        "exporter": {
+          "@type": "Trade_Party"
+        },
+        "finalDestinationCountry": {
+          "@type": "Trade_Country"
+        },
+        "finalDestinationLocation": {
+          "@type": "Logistics_Location"
+        },
+        "freightForwarder": {
+          "@type": "Trade_Party"
+        },
+        "groupingCentre": {
+          "@type": "Trade_Party"
+        },
+        "handlingInstructions": {
+          "@type": "Handling_Instructions"
+        },
+        "haulageInstructions": {
+          "@type": "Haulage_Instructions"
+        },
+        "importCountry": {
+          "@type": "Trade_Country"
+        },
+        "importer": {
+          "@type": "Trade_Party"
+        },
+        "includedConsignment": {
+          "@type": "Referenced_SupplyChain_Consignment"
+        },
+        "includedConsignmentItem": {
+          "@type": "SupplyChain_ConsignmentItem"
+        },
+        "insuranceCurrencyExchange": {
+          "@type": "Trade_CurrencyExchange"
+        },
+        "intermediateConsignee": {
+          "@type": "Trade_Party"
+        },
+        "invoiceCurrencyExchange": {
+          "@type": "Trade_CurrencyExchange"
+        },
+        "invoicee": {
+          "@type": "Trade_Party"
+        },
+        "loadingBaseportLocation": {
+          "@type": "Logistics_Location"
+        },
+        "loadingInstructions": {
+          "@type": "Transport_Instructions"
+        },
+        "localConsigneeAgent": {
+          "@type": "Trade_Party"
+        },
+        "mainCarriageTransportMovement": {
+          "@type": "Logistics_TransportMovement"
+        },
+        "manifestDocument": {
+          "@type": "Referenced_Document"
+        },
+        "natureIdentificationCargo": {
+          "@type": "Transport_Cargo"
+        },
+        "notifiedParty": {
+          "@type": "Trade_Party"
+        },
+        "onCarriageTransportMovement": {
+          "@type": "Logistics_TransportMovement"
+        },
+        "originCountry": {
+          "@type": "Trade_Country"
+        },
+        "originGeopoliticalRegion": {
+          "@type": "Trade_GeopoliticalRegion"
+        },
+        "party": {
+          "@type": "Trade_Party"
+        },
+        "physicalShippingMarks": {
+          "@type": "Logistics_ShippingMarks"
+        },
+        "pickUpEvent": {
+          "@type": "Transport_Event"
+        },
+        "pickUpParty": {
+          "@type": "Trade_Party"
+        },
+        "preCarriageTransportMovement": {
+          "@type": "Logistics_TransportMovement"
+        },
+        "previousAdministrativeDocument": {
+          "@type": "Referenced_Document"
+        },
+        "reExportCountry": {
+          "@type": "Trade_Country"
+        },
+        "regulatoryProcedure": {
+          "@type": "CrossBorder_RegulatoryProcedure"
+        },
+        "reportedStatus": {
+          "@type": "Logistics_Status"
+        },
+        "serviceChargeCurrencyExchange": {
+          "@type": "Trade_CurrencyExchange"
+        },
+        "shipFromParty": {
+          "@type": "Trade_Party"
+        },
+        "shipToParty": {
+          "@type": "Trade_Party"
+        },
+        "specifiedDeliveryTerms": {
+          "@type": "Trade_DeliveryTerms"
+        },
+        "specifiedTransportMovement": {
+          "@type": "Logistics_TransportMovement"
+        },
+        "statement": {
+          "@type": "Note"
+        },
+        "storageEvent": {
+          "@type": "Transport_Event"
+        },
+        "tradeTransaction": {
+          "@type": "SupplyChain_TradeTransaction"
+        },
+        "transitCountry": {
+          "@type": "Trade_Country"
+        },
+        "transitLocation": {
+          "@type": "Logistics_Location"
+        },
+        "transportContractDocument": {
+          "@type": "Referenced_Document"
+        },
+        "transportEvent": {
+          "@type": "Transport_Event"
+        },
+        "transportPackage": {
+          "@type": "Logistics_Package"
+        },
+        "transportService": {
+          "@type": "Transport_Service"
+        },
+        "transshipmentLocation": {
+          "@type": "Logistics_Location"
+        },
+        "unloadingBaseportLocation": {
+          "@type": "Logistics_Location"
+        },
+        "usedTransportEquipment": {
+          "@type": "Logistics_TransportEquipment"
+        },
+        "vanningEvent": {
+          "@type": "Transport_Event"
+        }
+      }
+    },
+    "SupplyChain_ConsignmentItem": {
+      "@context": {
+        "@vocab": "SupplyChain_ConsignmentItem#",
+        "cargoToleranceInformation": {
+          "@type": "xsd:string"
+        },
+        "chargeableWeight": {
+          "@type": "xsd:decimal"
+        },
+        "damageRemark": {
+          "@type": "xsd:string"
+        },
+        "declaredValueForCarriageAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "declaredValueForCustomsAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "declaredValueForStatisticsAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "deliveryInstructions": {
+          "@type": "xsd:string"
+        },
+        "exportTypeCode": {
+          "@type": "xsd:token"
+        },
+        "fOBAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "firstTypeExtensionCode": {
+          "@type": "xsd:token"
+        },
+        "globalID": {
+          "@type": "xsd:ID"
+        },
+        "goodsTypeCode": {
+          "@type": "GoodsType_Сode"
+        },
+        "goodsTypeExtensionCode": {
+          "@type": "GoodsTypeExtensionType_Сode"
+        },
+        "grossVolume": {
+          "@type": "xsd:decimal"
+        },
+        "grossWeight": {
+          "@type": "xsd:decimal"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "importTypeCode": {
+          "@type": "xsd:token"
+        },
+        "information": {
+          "@type": "xsd:string"
+        },
+        "insuranceValueAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "invoiceAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "loadingLength": {
+          "@type": "xsd:decimal"
+        },
+        "nationalTypeExtensionCode": {
+          "@type": "xsd:token"
+        },
+        "netWeight": {
+          "@type": "xsd:decimal"
+        },
+        "packageQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "packageTypeText": {
+          "@type": "xsd:string"
+        },
+        "secondTypeExtensionCode": {
+          "@type": "xsd:token"
+        },
+        "sequenceNumber": {
+          "@type": "xsd:decimal"
+        },
+        "specialInstructions": {
+          "@type": "xsd:string"
+        },
+        "tariffQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "totalChargeAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "totalExportExitToImportEntryChargeAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "tradeLineItemQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "applicableNote": {
+          "@type": "Note"
+        },
+        "associatedDocument": {
+          "@type": "Referenced_Document"
+        },
+        "associatedTransportEquipment": {
+          "@type": "Referenced_Logistics_TransportEquipment"
+        },
+        "borderClearanceInstructions": {
+          "@type": "Transport_Instructions"
+        },
+        "cargoNatureIdentification": {
+          "@type": "Transport_Cargo"
+        },
+        "crossBorderRegulatoryProcedure": {
+          "@type": "CrossBorder_RegulatoryProcedure"
+        },
+        "customsValuation": {
+          "@type": "CrossBorder_CustomsValuation"
+        },
+        "declaredForCustomsLocation": {
+          "@type": "Logistics_Location"
+        },
+        "deliveryEvent": {
+          "@type": "Transport_Event"
+        },
+        "deliveryParty": {
+          "@type": "Trade_Party"
+        },
+        "despatchParty": {
+          "@type": "Trade_Party"
+        },
+        "destinationCountry": {
+          "@type": "Trade_Country"
+        },
+        "dimensions": {
+          "@type": "Spatial_Dimension"
+        },
+        "examinationEvent": {
+          "@type": "Transport_Event"
+        },
+        "exportCountry": {
+          "@type": "Trade_Country"
+        },
+        "exportGeopoliticalRegion": {
+          "@type": "Trade_GeopoliticalRegion"
+        },
+        "handlingInstructions": {
+          "@type": "Handling_Instructions"
+        },
+        "importationCountry": {
+          "@type": "Trade_Country"
+        },
+        "manufacturer": {
+          "@type": "Trade_Party"
+        },
+        "originCountry": {
+          "@type": "Trade_Country"
+        },
+        "originGeopoliticalRegion": {
+          "@type": "Trade_GeopoliticalRegion"
+        },
+        "pickUpEvent": {
+          "@type": "Transport_Event"
+        },
+        "previousAdministrativeDocument": {
+          "@type": "Referenced_Document"
+        },
+        "quarantineInstructions": {
+          "@type": "Quarantine_Instructions"
+        },
+        "reportedLogisticsStatus": {
+          "@type": "Logistics_Status"
+        },
+        "serviceCharge": {
+          "@type": "Logistics_ServiceCharge"
+        },
+        "shippingMarks": {
+          "@type": "Logistics_ShippingMarks"
+        },
+        "tradeLineItem": {
+          "@type": "SupplyChain_TradeLineItem"
+        },
+        "transitCountry": {
+          "@type": "Trade_Country"
+        },
+        "transportContractDocument": {
+          "@type": "Referenced_Document"
+        },
+        "transportDangerousGoods": {
+          "@type": "Transport_DangerousGoods"
+        },
+        "transportMeans": {
+          "@type": "Logistics_TransportMeans"
+        },
+        "transportPackage": {
+          "@type": "Logistics_Package"
+        },
+        "transportTemperatureSetting": {
+          "@type": "TransportSetting_Temperature"
+        },
+        "vanningEvent": {
+          "@type": "Transport_Event"
+        }
+      }
+    },
+    "SupplyChain_Event": {
+      "@context": {
+        "@vocab": "SupplyChain_Event#",
+        "description": {
+          "@type": "xsd:string"
+        },
+        "descriptionBinaryObject": {
+          "@type": "xsd:base64Binary"
+        },
+        "earliestOccurrenceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "frequencyCode": {
+          "@type": "xsd:token"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "latestOccurrenceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "occurrenceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "occurrenceTime": {
+          "@type": "xsd:datetime"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        },
+        "unitQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "location": {
+          "@type": "Logistics_Location"
+        },
+        "occurrencePeriod": {
+          "@type": "Specified_Period"
+        }
+      }
+    },
+    "SupplyChain_Packaging": {
+      "@context": {
+        "@vocab": "SupplyChain_Packaging#",
+        "conditionCode": {
+          "@type": "xsd:token"
+        },
+        "description": {
+          "@type": "xsd:string"
+        },
+        "disposalMethodCode": {
+          "@type": "xsd:token"
+        },
+        "maximumStackabilityQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "maximumStackabilityWeight": {
+          "@type": "xsd:decimal"
+        },
+        "returnableIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "typeCode": {
+          "@type": "PackageType_Сode"
+        },
+        "typeText": {
+          "@type": "xsd:string"
+        },
+        "weight": {
+          "@type": "xsd:decimal"
+        }
+      }
+    },
+    "SupplyChain_TradeLineItem": {
+      "@context": {
+        "@vocab": "SupplyChain_TradeLineItem#",
+        "barcodeID": {
+          "@type": "xsd:ID"
+        },
+        "descriptionCode": {
+          "@type": "xsd:token"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "sequenceNumber": {
+          "@type": "xsd:decimal"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        },
+        "typeExtensionCode": {
+          "@type": "xsd:token"
+        },
+        "additionalInformationNote": {
+          "@type": "Note"
+        },
+        "associatedDocumentLine": {
+          "@type": "DocumentLine_Document"
+        },
+        "includedWithinConsignmentItem": {
+          "@type": "SupplyChain_ConsignmentItem"
+        },
+        "lineTradeAgreement": {
+          "@type": "Line_TradeAgreement"
+        },
+        "lineTradeDelivery": {
+          "@type": "Line_TradeDelivery"
+        },
+        "lineTradeSettlement": {
+          "@type": "Line_TradeSettlement"
+        },
+        "referencedDocument": {
+          "@type": "Referenced_Document"
+        },
+        "tradeProduct": {
+          "@type": "Trade_Product"
+        }
+      }
+    },
+    "SupplyChain_TradeTransaction": {
+      "@context": {
+        "@vocab": "SupplyChain_TradeTransaction#",
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "information": {
+          "@type": "xsd:string"
+        },
+        "lineItemQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "salesAgentAssignedID": {
+          "@type": "xsd:ID"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        },
+        "associatedDocumentLine": {
+          "@type": "DocumentLine_Document"
+        },
+        "headerTradeAgreement": {
+          "@type": "Header_TradeAgreement"
+        },
+        "headerTradeDelivery": {
+          "@type": "Header_TradeDelivery"
+        },
+        "headerTradeSettlement": {
+          "@type": "Header_TradeSettlement"
+        },
+        "includedTradeLineItem": {
+          "@type": "SupplyChain_TradeLineItem"
+        },
+        "logisticsPackage": {
+          "@type": "Logistics_Package"
+        },
+        "referencedDocument": {
+          "@type": "Referenced_Document"
+        }
+      }
+    },
+    "Tax_Registration": {
+      "@context": {
+        "@vocab": "Tax_Registration#",
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "registeredTax": {
+          "@type": "Registered_Tax"
+        }
+      }
+    },
+    "TemperatureSetting_Instructions": {
+      "@context": {
+        "@vocab": "TemperatureSetting_Instructions#",
+        "description": {
+          "@type": "xsd:string"
+        },
+        "descriptionCode": {
+          "@type": "xsd:token"
+        },
+        "procedureText": {
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "TradeProduct_Certification": {
+      "@context": {
+        "@vocab": "TradeProduct_Certification#",
+        "assertionCode": {
+          "@type": "xsd:token"
+        },
+        "assertionText": {
+          "@type": "xsd:string"
+        },
+        "responsibleAgencyText": {
+          "@type": "xsd:string"
+        },
+        "standardText": {
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "TradeSettlementHeader_MonetarySummation": {
+      "@context": {
+        "@vocab": "TradeSettlementHeader_MonetarySummation#",
+        "allowanceTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "chargeTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "duePayableAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "grandTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "grossLineTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "lineTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "netIncludingTaxesLineTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "netLineTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "paymentTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "productValueExcludingTobaccoTaxInformationAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "taxBasisTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "taxTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "totalAllowanceChargeAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "totalDiscountAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "totalDiscountBasisAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "totalPrepaidAmount": {
+          "@type": "http://schema.org/amount"
+        }
+      }
+    },
+    "TradeSettlementLine_MonetarySummation": {
+      "@context": {
+        "@vocab": "TradeSettlementLine_MonetarySummation#",
+        "allowanceTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "chargeTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "duePayableAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "grandTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "grossLineTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "lineTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "netIncludingTaxesLineTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "netLineTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "paymentTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "taxBasisTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "taxTotalAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "totalAllowanceChargeAmount": {
+          "@type": "http://schema.org/amount"
+        }
+      }
+    },
+    "TradeSettlement_PaymentMeans": {
+      "@context": {
+        "@vocab": "TradeSettlement_PaymentMeans#",
+        "guaranteeMethodCode": {
+          "@type": "PaymentGuaranteeMeansType_Сode"
+        },
+        "paymentChannelCode": {
+          "@type": "PaymentMeansChannelType_Сode"
+        },
+        "paymentMethodCode": {
+          "@type": "xsd:token"
+        },
+        "typeCode": {
+          "@type": "PaymentMeansType_Сode"
+        }
+      }
+    },
+    "Trade_Address": {
+      "@context": {
+        "@vocab": "Trade_Address#",
+        "cityName": {
+          "@type": "xsd:string"
+        },
+        "countryCode": {
+          "@type": "ISO3166_Code"
+        },
+        "countryName": {
+          "@type": "xsd:string"
+        },
+        "countrySubDivisionName": {
+          "@type": "xsd:string"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "postcode": {
+          "@type": "xsd:token"
+        },
+        "streetName": {
+          "@type": "xsd:string"
+        },
+        "geographicalCoordinate": {
+          "@type": "GeographicalCoordinate"
+        }
+      }
+    },
+    "Trade_AllowanceCharge": {
+      "@context": {
+        "@vocab": "Trade_AllowanceCharge#",
+        "actualAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "basisAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "basisQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "calculationPercent": {
+          "@type": "xsd:decimal"
+        },
+        "chargeIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "prepaidIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "reasonCode": {
+          "@type": "AllowanceChargeReasonType_Сode"
+        },
+        "typeCode": {
+          "@type": "AllowanceChargeIdentificationType_Сode"
+        },
+        "unitBasisAmount": {
+          "@type": "http://schema.org/amount"
+        }
+      }
+    },
+    "Trade_Contact": {
+      "@context": {
+        "@vocab": "Trade_Contact#",
+        "departmentName": {
+          "@type": "xsd:string"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "personName": {
+          "@type": "xsd:string"
+        },
+        "typeCode": {
+          "@type": "ContactFunctionType_Сode"
+        },
+        "directTelephone": {
+          "@type": "Universal_Communication"
+        },
+        "emailAddress": {
+          "@type": "Universal_Communication"
+        },
+        "fax": {
+          "@type": "Universal_Communication"
+        },
+        "mobileTelephone": {
+          "@type": "Universal_Communication"
+        },
+        "note": {
+          "@type": "Note"
+        },
+        "telephone": {
+          "@type": "Universal_Communication"
+        },
+        "telex": {
+          "@type": "Universal_Communication"
+        }
+      }
+    },
+    "Trade_Country": {
+      "@context": {
+        "@vocab": "Trade_Country#",
+        "code": {
+          "@type": "ISO3166_Code"
+        },
+        "name": {
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "Trade_CountrySubDivision": {
+      "@context": {
+        "@vocab": "Trade_CountrySubDivision#",
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "name": {
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "Trade_CurrencyExchange": {
+      "@context": {
+        "@vocab": "Trade_CurrencyExchange#",
+        "conversionRate": {
+          "@type": "xsd:decimal"
+        },
+        "sourceCurrencyCode": {
+          "@type": "ISO4217_Code"
+        },
+        "targetCurrencyCode": {
+          "@type": "ISO4217_Code"
+        }
+      }
+    },
+    "Trade_DeliveryTerms": {
+      "@context": {
+        "@vocab": "Trade_DeliveryTerms#",
+        "code": {
+          "@type": "DeliveryTermsType_Сode"
+        },
+        "description": {
+          "@type": "xsd:string"
+        },
+        "functionCode": {
+          "@type": "DeliveryTermsFunctionType_Сode"
+        },
+        "relevantLocation": {
+          "@type": "Trade_Location"
+        }
+      }
+    },
+    "Trade_GeopoliticalRegion": {
+      "@context": {
+        "@vocab": "Trade_GeopoliticalRegion#",
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "name": {
+          "@type": "xsd:string"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        },
+        "includedCountry": {
+          "@type": "Trade_Country"
+        }
+      }
+    },
+    "Trade_Location": {
+      "@context": {
+        "@vocab": "Trade_Location#",
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "name": {
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "Trade_Party": {
+      "@context": {
+        "@vocab": "Trade_Party#",
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "languageCode": {
+          "@type": "ISO639_Code"
+        },
+        "name": {
+          "@type": "xsd:string"
+        },
+        "qualityAssuranceIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "roleCode": {
+          "@type": "PartyRoleType_Сode"
+        },
+        "authoritativeSignatoryPerson": {
+          "@type": "AuthoritativeSignatory_Person"
+        },
+        "definedContactDetails": {
+          "@type": "Trade_Contact"
+        },
+        "governmentRegistration": {
+          "@type": "Government_Registration"
+        },
+        "legalOrganization": {
+          "@type": "Legal_Organization"
+        },
+        "logisticsServiceCharge": {
+          "@type": "Logistics_ServiceCharge"
+        },
+        "postalAddress": {
+          "@type": "Trade_Address"
+        },
+        "taxRegistration": {
+          "@type": "Tax_Registration"
+        },
+        "telephone": {
+          "@type": "Universal_Communication"
+        },
+        "transportService": {
+          "@type": "Transport_Service"
+        },
+        "uRI": {
+          "@type": "Universal_Communication"
+        }
+      }
+    },
+    "Trade_PaymentDiscountTerms": {
+      "@context": {
+        "@vocab": "Trade_PaymentDiscountTerms#",
+        "actualDiscountAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "basisAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "basisDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "basisPeriodMeasure": {
+          "@type": "xsd:decimal"
+        },
+        "calculationPercent": {
+          "@type": "xsd:decimal"
+        }
+      }
+    },
+    "Trade_PaymentPenaltyTerms": {
+      "@context": {
+        "@vocab": "Trade_PaymentPenaltyTerms#",
+        "actualPenaltyAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "basisAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "basisDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "basisPeriodMeasure": {
+          "@type": "xsd:decimal"
+        },
+        "calculationPercent": {
+          "@type": "xsd:decimal"
+        }
+      }
+    },
+    "Trade_PaymentTerms": {
+      "@context": {
+        "@vocab": "Trade_PaymentTerms#",
+        "deprecatedDueDateDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "description": {
+          "@type": "xsd:string"
+        },
+        "dueDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "instructionCode": {
+          "@type": "xsd:token"
+        },
+        "settlementPeriodMeasure": {
+          "@type": "xsd:decimal"
+        },
+        "typeCode": {
+          "@type": "PaymentTermsType_Сode"
+        },
+        "paymentDiscountTerms": {
+          "@type": "Trade_PaymentDiscountTerms"
+        },
+        "paymentPenaltyTerms": {
+          "@type": "Trade_PaymentPenaltyTerms"
+        }
+      }
+    },
+    "Trade_Price": {
+      "@context": {
+        "@vocab": "Trade_Price#",
+        "basisQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "chargeAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "typeCode": {
+          "@type": "PriceType_Сode"
+        },
+        "unitAmount": {
+          "@type": "http://schema.org/amount"
+        }
+      }
+    },
+    "Trade_Product": {
+      "@context": {
+        "@vocab": "Trade_Product#",
+        "batchID": {
+          "@type": "xsd:ID"
+        },
+        "brandName": {
+          "@type": "xsd:string"
+        },
+        "brandRangeName": {
+          "@type": "xsd:string"
+        },
+        "colourCode": {
+          "@type": "xsd:token"
+        },
+        "colourDescription": {
+          "@type": "xsd:string"
+        },
+        "commonName": {
+          "@type": "xsd:string"
+        },
+        "conciseDescription": {
+          "@type": "xsd:string"
+        },
+        "contentUnitQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "description": {
+          "@type": "xsd:string"
+        },
+        "globalID": {
+          "@type": "xsd:ID"
+        },
+        "grossVolume": {
+          "@type": "xsd:decimal"
+        },
+        "grossWeight": {
+          "@type": "xsd:decimal"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "intendedUseText": {
+          "@type": "xsd:string"
+        },
+        "modelID": {
+          "@type": "xsd:ID"
+        },
+        "netVolume": {
+          "@type": "xsd:decimal"
+        },
+        "netWeight": {
+          "@type": "xsd:decimal"
+        },
+        "recyclingTypeCode": {
+          "@type": "xsd:token"
+        },
+        "regulationConformityID": {
+          "@type": "xsd:ID"
+        },
+        "scientificName": {
+          "@type": "xsd:string"
+        },
+        "subBrandName": {
+          "@type": "xsd:string"
+        },
+        "tradeName": {
+          "@type": "xsd:string"
+        },
+        "useDescription": {
+          "@type": "xsd:string"
+        },
+        "certification": {
+          "@type": "TradeProduct_Certification"
+        },
+        "certificationEvidenceDocument": {
+          "@type": "Referenced_Document"
+        },
+        "classification": {
+          "@type": "Product_Classification"
+        },
+        "dangerousGoods": {
+          "@type": "Transport_DangerousGoods"
+        },
+        "dimensions": {
+          "@type": "Spatial_Dimension"
+        },
+        "disposalInstructions": {
+          "@type": "Disposal_Instructions"
+        },
+        "finalAssemblyCountry": {
+          "@type": "Trade_Country"
+        },
+        "individualProductInstance": {
+          "@type": "Trade_ProductInstance"
+        },
+        "inspectionDocument": {
+          "@type": "Referenced_Document"
+        },
+        "mSDSDocument": {
+          "@type": "Referenced_Document"
+        },
+        "manufactureCountry": {
+          "@type": "Trade_Country"
+        },
+        "manufacturer": {
+          "@type": "Trade_Party"
+        },
+        "originCountry": {
+          "@type": "Trade_Country"
+        },
+        "securityInformation": {
+          "@type": "Note"
+        },
+        "storageInformation": {
+          "@type": "Note"
+        },
+        "suppliedFromCountry": {
+          "@type": "Trade_Country"
+        },
+        "transportInformation": {
+          "@type": "Note"
+        }
+      }
+    },
+    "Trade_ProductInstance": {
+      "@context": {
+        "@vocab": "Trade_ProductInstance#",
+        "actualQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "batchID": {
+          "@type": "xsd:ID"
+        },
+        "bestBeforeDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "expiryDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "lotID": {
+          "@type": "xsd:ID"
+        },
+        "sellByDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "serialID": {
+          "@type": "xsd:ID"
+        },
+        "inspectionEvent": {
+          "@type": "SupplyChain_Event"
+        }
+      }
+    },
+    "Trade_Tax": {
+      "@context": {
+        "@vocab": "Trade_Tax#",
+        "allowanceChargeBasisAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "applicableRatePercent": {
+          "@type": "xsd:decimal"
+        },
+        "basisAllowanceRate": {
+          "@type": "xsd:decimal"
+        },
+        "basisAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "basisQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "calculatedAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "calculatedRate": {
+          "@type": "xsd:decimal"
+        },
+        "calculationSequenceNumber": {
+          "@type": "xsd:decimal"
+        },
+        "categoryCode": {
+          "@type": "DutyorTaxorFeeCategoryType_Сode"
+        },
+        "currencyCode": {
+          "@type": "ISO4217_Code"
+        },
+        "customsDutyIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "deductionAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "dueDateTypeCode": {
+          "@type": "EventTimeReferenceType_Сode"
+        },
+        "exemptionAuthorizationID": {
+          "@type": "xsd:ID"
+        },
+        "exemptionIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "exemptionReasonCode": {
+          "@type": "xsd:token"
+        },
+        "exemptionReasonText": {
+          "@type": "xsd:string"
+        },
+        "guaranteeCode": {
+          "@type": "xsd:token"
+        },
+        "guaranteeText": {
+          "@type": "xsd:string"
+        },
+        "jurisdictionText": {
+          "@type": "xsd:string"
+        },
+        "lineTotalBasisAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "paymentID": {
+          "@type": "xsd:ID"
+        },
+        "paymentMethodCode": {
+          "@type": "PaymentMethodType_Сode"
+        },
+        "percent": {
+          "@type": "xsd:decimal"
+        },
+        "rateCode": {
+          "@type": "xsd:token"
+        },
+        "refundAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "regimeTypeCode": {
+          "@type": "CustomsDutyRegimeType_Сode"
+        },
+        "selfAssessedBasisAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "selfAssessedBasisQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "selfAssessedCalculatedAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "tariffDeductionQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "taxExemptionAuthorityID": {
+          "@type": "xsd:ID"
+        },
+        "taxPointDate": {
+          "@type": "xsd:date"
+        },
+        "typeCode": {
+          "@type": "DutyTaxFeeType_Сode"
+        },
+        "typeText": {
+          "@type": "xsd:string"
+        },
+        "unitBasisAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "serviceSupplyCountry": {
+          "@type": "Trade_Country"
+        }
+      }
+    },
+    "TransportService_Location": {
+      "@context": {
+        "@vocab": "TransportService_Location#",
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "name": {
+          "@type": "xsd:string"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        }
+      }
+    },
+    "TransportSetting_Temperature": {
+      "@context": {
+        "@vocab": "TransportSetting_Temperature#",
+        "maximumValue": {
+          "@type": "xsd:decimal"
+        },
+        "minimumValue": {
+          "@type": "xsd:decimal"
+        },
+        "typeCode": {
+          "@type": "TemperatureType_Сode"
+        },
+        "value": {
+          "@type": "xsd:decimal"
+        },
+        "instructions": {
+          "@type": "TemperatureSetting_Instructions"
+        }
+      }
+    },
+    "Transport_Cargo": {
+      "@context": {
+        "@vocab": "Transport_Cargo#",
+        "identificationText": {
+          "@type": "xsd:string"
+        },
+        "operationalCategoryCode": {
+          "@type": "CargoOperationalCategoryType_Сode"
+        },
+        "statisticalClassificationCode": {
+          "@type": "CommodityIdentificationType_Сode"
+        },
+        "typeCode": {
+          "@type": "CargoType_Сode"
+        }
+      }
+    },
+    "Transport_CargoInsurance": {
+      "@context": {
+        "@vocab": "Transport_CargoInsurance#",
+        "contractGeneralConditionsText": {
+          "@type": "xsd:string"
+        },
+        "coverageCode": {
+          "@type": "xsd:token"
+        },
+        "coverageDescription": {
+          "@type": "xsd:string"
+        },
+        "coverageParty": {
+          "@type": "Trade_Party"
+        }
+      }
+    },
+    "Transport_DangerousGoods": {
+      "@context": {
+        "@vocab": "Transport_DangerousGoods#",
+        "additionalHazardClassificationID": {
+          "@type": "xsd:ID"
+        },
+        "aircraftLimitationInformation": {
+          "@type": "xsd:string"
+        },
+        "allPackedInOneInformation": {
+          "@type": "xsd:string"
+        },
+        "authorizationInformation": {
+          "@type": "xsd:string"
+        },
+        "complianceDeclarationInformation": {
+          "@type": "xsd:string"
+        },
+        "eMSID": {
+          "@type": "xsd:ID"
+        },
+        "explosiveCargoNetWeight": {
+          "@type": "xsd:decimal"
+        },
+        "explosiveCompatibilityGroupCode": {
+          "@type": "xsd:token"
+        },
+        "grossVolume": {
+          "@type": "xsd:decimal"
+        },
+        "grossWeight": {
+          "@type": "xsd:decimal"
+        },
+        "hazardCategoryCode": {
+          "@type": "xsd:token"
+        },
+        "hazardClassVersionID": {
+          "@type": "xsd:ID"
+        },
+        "hazardClassificationID": {
+          "@type": "xsd:ID"
+        },
+        "hazardTypeCode": {
+          "@type": "xsd:token"
+        },
+        "iMDGSegregationGroupCode": {
+          "@type": "xsd:token"
+        },
+        "information": {
+          "@type": "xsd:string"
+        },
+        "limitedQuantityCode": {
+          "@type": "xsd:token"
+        },
+        "lowerPartOrangeHazardPlacardID": {
+          "@type": "xsd:ID"
+        },
+        "mFAGID": {
+          "@type": "xsd:ID"
+        },
+        "marinePollutantIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "markingText": {
+          "@type": "xsd:string"
+        },
+        "netWeight": {
+          "@type": "xsd:decimal"
+        },
+        "overpackInformation": {
+          "@type": "xsd:string"
+        },
+        "packageTypeCode": {
+          "@type": "PackageType_Сode"
+        },
+        "packagingDangerLevelCode": {
+          "@type": "DangerousGoodsPackingType_Сode"
+        },
+        "packingInstructionTypeCode": {
+          "@type": "xsd:token"
+        },
+        "pollutantIndicator": {
+          "@type": "xsd:boolean"
+        },
+        "pollutantLevelCode": {
+          "@type": "xsd:token"
+        },
+        "properShippingName": {
+          "@type": "xsd:string"
+        },
+        "qValueNumber": {
+          "@type": "xsd:decimal"
+        },
+        "regulationCode": {
+          "@type": "DangerousGoodsRegulationType_Сode"
+        },
+        "regulationName": {
+          "@type": "xsd:string"
+        },
+        "regulatoryAuthorityName": {
+          "@type": "xsd:string"
+        },
+        "reportableQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "shipperDeclarationInformation": {
+          "@type": "xsd:string"
+        },
+        "specialProvisionID": {
+          "@type": "xsd:ID"
+        },
+        "supplementaryInformation": {
+          "@type": "xsd:string"
+        },
+        "tREMID": {
+          "@type": "xsd:ID"
+        },
+        "technicalName": {
+          "@type": "xsd:string"
+        },
+        "tunnelRestrictionCode": {
+          "@type": "xsd:token"
+        },
+        "uNDGID": {
+          "@type": "xsd:token"
+        },
+        "upperPartOrangeHazardPlacardID": {
+          "@type": "xsd:ID"
+        },
+        "controlTemperature": {
+          "@type": "Measurement"
+        },
+        "emergencyContact": {
+          "@type": "Trade_Contact"
+        },
+        "emergencyTemperature": {
+          "@type": "Measurement"
+        },
+        "flashpointTemperature": {
+          "@type": "Measurement"
+        },
+        "handlingInstructions": {
+          "@type": "Handling_Instructions"
+        },
+        "radioactiveMaterial": {
+          "@type": "Radioactive_Material"
+        },
+        "transportEquipment": {
+          "@type": "Referenced_Logistics_TransportEquipment"
+        },
+        "transportExpertContact": {
+          "@type": "Trade_Contact"
+        }
+      }
+    },
+    "Transport_Event": {
+      "@context": {
+        "@vocab": "Transport_Event#",
+        "actualArrivalDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "actualDepartureDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "actualOccurrenceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "arrivalDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "departureDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "description": {
+          "@type": "xsd:string"
+        },
+        "estimatedOccurrenceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "estimatedTransportMeansArrivalOccurrenceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "requestedOccurrenceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "scheduledArrivalDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "scheduledDepartureDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "scheduledOccurrenceDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "typeCode": {
+          "@type": "xsd:token"
+        },
+        "unitQuantity": {
+          "@type": "xsd:decimal"
+        },
+        "applicableNote": {
+          "@type": "Note"
+        },
+        "cargoFacilityLocation": {
+          "@type": "Logistics_Location"
+        },
+        "certifyingParty": {
+          "@type": "Trade_Party"
+        },
+        "conveyanceFacilityLocation": {
+          "@type": "Logistics_Location"
+        },
+        "delayEvent": {
+          "@type": "Referenced_Transport_Event"
+        },
+        "delayPeriod": {
+          "@type": "Specified_Period"
+        },
+        "laycanPeriod": {
+          "@type": "Specified_Period"
+        },
+        "occurrenceLocation": {
+          "@type": "Logistics_Location"
+        },
+        "occurrencePeriod": {
+          "@type": "Specified_Period"
+        },
+        "relatedObservation": {
+          "@type": "Specified_Observation"
+        },
+        "relatedRoute": {
+          "@type": "Transport_Route"
+        },
+        "requestedService": {
+          "@type": "ReferencedTransport_Service"
+        },
+        "specifiedInstructions": {
+          "@type": "Transport_Instructions"
+        },
+        "stayEvent": {
+          "@type": "Referenced_Transport_Event"
+        },
+        "transportMeansStayPeriod": {
+          "@type": "Specified_Period"
+        }
+      }
+    },
+    "Transport_Instructions": {
+      "@context": {
+        "@vocab": "Transport_Instructions#",
+        "description": {
+          "@type": "xsd:string"
+        },
+        "descriptionCode": {
+          "@type": "xsd:token"
+        }
+      }
+    },
+    "Transport_Person": {
+      "@context": {
+        "@vocab": "Transport_Person#",
+        "birthDateTime": {
+          "@type": "xsd:datetime"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "languageCode": {
+          "@type": "ISO639_Code"
+        },
+        "name": {
+          "@type": "xsd:string"
+        },
+        "roleText": {
+          "@type": "xsd:string"
+        },
+        "certifiedAccreditation": {
+          "@type": "Certified_Accreditation"
+        },
+        "nationalityCountry": {
+          "@type": "Trade_Country"
+        }
+      }
+    },
+    "Transport_Route": {
+      "@context": {
+        "@vocab": "Transport_Route#",
+        "departurePointText": {
+          "@type": "xsd:string"
+        },
+        "description": {
+          "@type": "xsd:string"
+        },
+        "frequencyTypeCode": {
+          "@type": "xsd:token"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "mapBinaryObject": {
+          "@type": "xsd:base64Binary"
+        },
+        "statusCode": {
+          "@type": "StatusType_Сode"
+        },
+        "transportMeansText": {
+          "@type": "xsd:string"
+        },
+        "frequencyEffectivePeriod": {
+          "@type": "Specified_Period"
+        },
+        "itineraryStopEvent": {
+          "@type": "Transport_Event"
+        },
+        "specifiedPeriod": {
+          "@type": "Specified_Period"
+        }
+      }
+    },
+    "Transport_Service": {
+      "@context": {
+        "@vocab": "Transport_Service#",
+        "categoryTypeCode": {
+          "@type": "xsd:token"
+        },
+        "chargeAmount": {
+          "@type": "http://schema.org/amount"
+        },
+        "conditionTypeCode": {
+          "@type": "TransportServiceConditionType_Сode"
+        },
+        "description": {
+          "@type": "xsd:string"
+        },
+        "iD": {
+          "@type": "xsd:ID"
+        },
+        "informationText": {
+          "@type": "xsd:string"
+        },
+        "name": {
+          "@type": "xsd:string"
+        },
+        "paymentArrangementCode": {
+          "@type": "TransportPaymentArrangementType_Сode"
+        },
+        "priorityCode": {
+          "@type": "TransportServicePriorityType_Сode"
+        },
+        "serviceRequirementCode": {
+          "@type": "TransportServiceRequirementType_Сode"
+        },
+        "effectivePeriod": {
+          "@type": "Specified_Period"
+        },
+        "requester": {
+          "@type": "Trade_Party"
+        },
+        "responsibleParty": {
+          "@type": "Trade_Party"
+        },
+        "specifiedRoute": {
+          "@type": "Transport_Route"
+        },
+        "uRI": {
+          "@type": "Universal_Communication"
+        }
+      }
+    },
+    "Universal_Communication": {
+      "@context": {
+        "@vocab": "Universal_Communication#",
+        "channelCode": {
+          "@type": "CommunicationMeansType_Сode"
+        },
+        "completeNumber": {
+          "@type": "xsd:string"
+        },
+        "uRI": {
+          "@type": "xsd:ID"
+        }
+      }
+    }
+  }
+}
