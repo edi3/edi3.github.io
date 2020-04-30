@@ -1,15 +1,11 @@
 {
-    "openapi": "3.0.0",
-    "info": {
-        "description": "",
-        "title": "Town Plan MetaModel",
-        "version": ""
-    },
-    "servers": [],
-    "paths": {},
-    "components": {
-        "schemas": {
+    "schema": {
+        "model": "Town Plan MetaModel",
+        "type": "object",
+        "properties": {},
+        "definitions": {
             "Domain": {
+                "description": "A buisness domain within a governing organisation (eg Agriculture).",
                 "type": "object",
                 "properties": {
                     "name": {
@@ -23,6 +19,18 @@
                     "repositoryURL": {
                         "description": "The authoritative location of the repository containing version controlled domain information (eg  https://github.com/edi3/edi3-regulatory)",
                         "type": "string"
+                    },
+                    "Resource": {
+                        "items": {
+                            "$ref": "#/definitions/Resource"
+                        },
+                        "type": "array"
+                    },
+                    "subDomain": {
+                        "items": {
+                            "$ref": "#/definitions/Domain"
+                        },
+                        "type": "array"
                     }
                 },
                 "required": [
@@ -30,6 +38,7 @@
                 ]
             },
             "IdentityScheme": {
+                "description": "A globally unique identity scheme for the related resource ",
                 "type": "object",
                 "properties": {
                     "name": {
@@ -51,7 +60,7 @@
                     "issuer": {
                         "allOf": [
                             {
-                                "$ref": "#/components/schemas/OrganisationIds"
+                                "$ref": "#/definitions/OrganisationIds"
                             },
                             {
                                 "type": "object"
@@ -61,7 +70,8 @@
                 },
                 "required": [
                     "name",
-                    "scopes"
+                    "scopes",
+                    "issuer"
                 ]
             },
             "OrganisationIds": {
@@ -77,6 +87,7 @@
                 ]
             },
             "Organisation": {
+                "description": "An organisation (eg UN/CEFACT) that is the governing authroity over several domains.",
                 "type": "object",
                 "properties": {
                     "name": {
@@ -90,6 +101,12 @@
                     "dnsDomain": {
                         "description": "the DNS domain name of the organisation (eg unece.org)",
                         "type": "string"
+                    },
+                    "Domain": {
+                        "items": {
+                            "$ref": "#/definitions/Domain"
+                        },
+                        "type": "array"
                     }
                 },
                 "required": [
@@ -98,6 +115,7 @@
                 ]
             },
             "Resource": {
+                "description": "An information resource owned by the domain that has a defined information model, state lifecycle, and globally unique public identifier (eg consignments).  Resource names are always plural nouns",
                 "type": "object",
                 "properties": {
                     "name": {
@@ -127,7 +145,42 @@
                     },
                     "subResource": {
                         "items": {
-                            "$ref": "#/components/schemas/Resource"
+                            "$ref": "#/definitions/Resource"
+                        },
+                        "type": "array"
+                    },
+                    "State": {
+                        "items": {
+                            "$ref": "#/definitions/State"
+                        },
+                        "type": "array"
+                    },
+                    "IdentityScheme": {
+                        "items": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/IdentitySchemeIds"
+                                },
+                                {
+                                    "type": "object"
+                                }
+                            ]
+                        },
+                        "type": "array"
+                    },
+                    "implements": {
+                        "allOf": [
+                            {
+                                "$ref": "#/definitions/EntityIds"
+                            },
+                            {
+                                "type": "object"
+                            }
+                        ]
+                    },
+                    "Event": {
+                        "items": {
+                            "$ref": "#/definitions/Event"
                         },
                         "type": "array"
                     }
@@ -136,7 +189,32 @@
                     "name"
                 ]
             },
-            "Service": {
+            "IdentitySchemeIds": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            },
+            "EntityIds": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "The name of the library element - ie the name of the domain, resource, entity, property, code, or any other specialised metamodel model element.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            },
+            "State": {
+                "description": "",
                 "type": "object",
                 "properties": {
                     "name": {
@@ -146,27 +224,13 @@
                     "description": {
                         "description": "full description of the metadata element.",
                         "type": "string"
-                    },
-                    "status": {
-                        "description": "Status of the element from a library management perspective. \n using COSS lifecycle values (raw, draft, stable, deprecated, deleted).",
-                        "type": "string",
-                        "enum": [
-                            "proposed",
-                            "active",
-                            "deprecated",
-                            "deleted"
-                        ]
-                    },
-                    "version": {
-                        "description": "The public release version of the resource  in semver format major.minor.patch (eg 0.2.3).",
-                        "type": "string"
                     }
                 },
                 "required": [
-                    "name",
-                    "version"
+                    "name"
                 ]
             }
         }
-    }
+    },
+    "layout": []
 }

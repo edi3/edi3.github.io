@@ -1,15 +1,11 @@
 {
-    "openapi": "3.0.0",
-    "info": {
-        "description": "",
-        "title": "Codes MetaModel",
-        "version": ""
-    },
-    "servers": [],
-    "paths": {},
-    "components": {
-        "schemas": {
+    "schema": {
+        "model": "Codes MetaModel",
+        "type": "object",
+        "properties": {},
+        "definitions": {
             "Code": {
+                "description": "",
                 "type": "object",
                 "properties": {
                     "name": {
@@ -37,12 +33,18 @@
                     "parent": {
                         "allOf": [
                             {
-                                "$ref": "#/components/schemas/CodeIds"
+                                "$ref": "#/definitions/CodeIds"
                             },
                             {
                                 "type": "object"
                             }
                         ]
+                    },
+                    "PropertyValue": {
+                        "items": {
+                            "$ref": "#/definitions/PropertyValue"
+                        },
+                        "type": "array"
                     }
                 },
                 "required": [
@@ -62,6 +64,7 @@
                 ]
             },
             "PropertyName": {
+                "description": "",
                 "type": "object",
                 "properties": {
                     "name URI[1]": {
@@ -71,18 +74,40 @@
                 }
             },
             "PropertyValue": {
+                "description": "",
                 "type": "object",
                 "properties": {
                     "value": {
                         "description": "missing description",
                         "type": "string"
+                    },
+                    "PropertyName": {
+                        "allOf": [
+                            {
+                                "$ref": "#/definitions/PropertyNameIds"
+                            },
+                            {
+                                "type": "object"
+                            }
+                        ]
                     }
                 },
                 "required": [
-                    "value"
+                    "value",
+                    "PropertyName"
                 ]
             },
+            "PropertyNameIds": {
+                "type": "object",
+                "properties": {
+                    "name URI[1]": {
+                        "description": "missing description",
+                        "type": "string"
+                    }
+                }
+            },
             "Scheme": {
+                "description": "",
                 "type": "object",
                 "properties": {
                     "name": {
@@ -110,11 +135,25 @@
                             "deprecated",
                             "deleted"
                         ]
+                    },
+                    "PropertyName": {
+                        "items": {
+                            "$ref": "#/definitions/PropertyName"
+                        },
+                        "type": "array"
+                    },
+                    "Code": {
+                        "items": {
+                            "$ref": "#/definitions/Code"
+                        },
+                        "type": "array",
+                        "minItems": 1
                     }
                 },
                 "required": [
                     "name",
-                    "version"
+                    "version",
+                    "Code"
                 ]
             }
         }
