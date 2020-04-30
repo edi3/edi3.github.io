@@ -1,15 +1,2477 @@
 {
-  "name": "scheme01",
-  "version": "1.0",
-  "codes": [
-    {
-      "name": "code01",
-      "propertyValues": [
+    "name": "ISO Codes",
+    "version": "1.0",
+    "codes": [
         {
-          "value": "property value",
-          "propertyName": "https://edi3.org/codes/scheme01/code01"
+            "name": "ISO3166_Code",
+            "propertyValues": [
+                {
+                    "value": "Andorra",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AD"
+                },
+                {
+                    "value": "United Arab Emirates",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AE"
+                },
+                {
+                    "value": "Afghanistan",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AF"
+                },
+                {
+                    "value": "Antigua and Barbuda",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AG"
+                },
+                {
+                    "value": "Anguilla",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AI"
+                },
+                {
+                    "value": "Albania",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AL"
+                },
+                {
+                    "value": "Armenia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AM"
+                },
+                {
+                    "value": "Angola",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AO"
+                },
+                {
+                    "value": "Antarctica",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AQ"
+                },
+                {
+                    "value": "Argentina",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AR"
+                },
+                {
+                    "value": "American Samoa",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AS"
+                },
+                {
+                    "value": "Austria",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AT"
+                },
+                {
+                    "value": "Australia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AU"
+                },
+                {
+                    "value": "Aruba",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AW"
+                },
+                {
+                    "value": "Ă…land Islands",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AX"
+                },
+                {
+                    "value": "Azerbaijan",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/AZ"
+                },
+                {
+                    "value": "Bosnia and Herzegovina",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BA"
+                },
+                {
+                    "value": "Barbados",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BB"
+                },
+                {
+                    "value": "Bangladesh",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BD"
+                },
+                {
+                    "value": "Belgium",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BE"
+                },
+                {
+                    "value": "Burkina Faso",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BF"
+                },
+                {
+                    "value": "Bulgaria",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BG"
+                },
+                {
+                    "value": "Bahrain",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BH"
+                },
+                {
+                    "value": "Burundi",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BI"
+                },
+                {
+                    "value": "Benin",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BJ"
+                },
+                {
+                    "value": "Saint BarthĂ©lemy",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BL"
+                },
+                {
+                    "value": "Bermuda",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BM"
+                },
+                {
+                    "value": "Brunei Darussalam",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BN"
+                },
+                {
+                    "value": "Bolivia, Plurinational State of",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BO"
+                },
+                {
+                    "value": "Bonaire, Sint Eustatius and Saba",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BQ"
+                },
+                {
+                    "value": "Brazil",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BR"
+                },
+                {
+                    "value": "Bahamas",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BS"
+                },
+                {
+                    "value": "Bhutan",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BT"
+                },
+                {
+                    "value": "Bouvet Island",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BV"
+                },
+                {
+                    "value": "Botswana",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BW"
+                },
+                {
+                    "value": "Belarus",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BY"
+                },
+                {
+                    "value": "Belize",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/BZ"
+                },
+                {
+                    "value": "Canada",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CA"
+                },
+                {
+                    "value": "Cocos (Keeling) Islands",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CC"
+                },
+                {
+                    "value": "Congo, the Democratic Republic of the",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CD"
+                },
+                {
+                    "value": "Central African Republic",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CF"
+                },
+                {
+                    "value": "Congo",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CG"
+                },
+                {
+                    "value": "Switzerland",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CH"
+                },
+                {
+                    "value": "CĂ´te d'Ivoire",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CI"
+                },
+                {
+                    "value": "Cook Islands",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CK"
+                },
+                {
+                    "value": "Chile",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CL"
+                },
+                {
+                    "value": "Cameroon",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CM"
+                },
+                {
+                    "value": "China",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CN"
+                },
+                {
+                    "value": "Colombia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CO"
+                },
+                {
+                    "value": "Costa Rica",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CR"
+                },
+                {
+                    "value": "Cuba",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CU"
+                },
+                {
+                    "value": "Cape Verde",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CV"
+                },
+                {
+                    "value": "CuraĂ§ao",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CW"
+                },
+                {
+                    "value": "Christmas Island",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CX"
+                },
+                {
+                    "value": "Cyprus",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CY"
+                },
+                {
+                    "value": "Czech Republic",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/CZ"
+                },
+                {
+                    "value": "Germany",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/DE"
+                },
+                {
+                    "value": "Djibouti",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/DJ"
+                },
+                {
+                    "value": "Denmark",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/DK"
+                },
+                {
+                    "value": "Dominica",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/DM"
+                },
+                {
+                    "value": "Dominican Republic",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/DO"
+                },
+                {
+                    "value": "Algeria",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/DZ"
+                },
+                {
+                    "value": "Ecuador",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/EC"
+                },
+                {
+                    "value": "Estonia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/EE"
+                },
+                {
+                    "value": "Egypt",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/EG"
+                },
+                {
+                    "value": "Western Sahara",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/EH"
+                },
+                {
+                    "value": "Eritrea",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/ER"
+                },
+                {
+                    "value": "Spain",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/ES"
+                },
+                {
+                    "value": "Ethiopia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/ET"
+                },
+                {
+                    "value": "Finland",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/FI"
+                },
+                {
+                    "value": "Fiji",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/FJ"
+                },
+                {
+                    "value": "Falkland Islands (Malvinas)",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/FK"
+                },
+                {
+                    "value": "Micronesia, Federated States of",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/FM"
+                },
+                {
+                    "value": "Faroe Islands",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/FO"
+                },
+                {
+                    "value": "France",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/FR"
+                },
+                {
+                    "value": "Gabon",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GA"
+                },
+                {
+                    "value": "United Kingdom",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GB"
+                },
+                {
+                    "value": "Grenada",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GD"
+                },
+                {
+                    "value": "Georgia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GE"
+                },
+                {
+                    "value": "French Guiana",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GF"
+                },
+                {
+                    "value": "Guernsey",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GG"
+                },
+                {
+                    "value": "Ghana",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GH"
+                },
+                {
+                    "value": "Gibraltar",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GI"
+                },
+                {
+                    "value": "Greenland",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GL"
+                },
+                {
+                    "value": "Gambia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GM"
+                },
+                {
+                    "value": "Guinea",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GN"
+                },
+                {
+                    "value": "Guadeloupe",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GP"
+                },
+                {
+                    "value": "Equatorial Guinea",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GQ"
+                },
+                {
+                    "value": "Greece",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GR"
+                },
+                {
+                    "value": "South Georgia and the South Sandwich Islands",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GS"
+                },
+                {
+                    "value": "Guatemala",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GT"
+                },
+                {
+                    "value": "Guam",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GU"
+                },
+                {
+                    "value": "Guinea-Bissau",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GW"
+                },
+                {
+                    "value": "Guyana",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/GY"
+                },
+                {
+                    "value": "Hong Kong",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/HK"
+                },
+                {
+                    "value": "Heard Island and McDonald Islands",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/HM"
+                },
+                {
+                    "value": "Honduras",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/HN"
+                },
+                {
+                    "value": "Croatia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/HR"
+                },
+                {
+                    "value": "Haiti",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/HT"
+                },
+                {
+                    "value": "Hungary",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/HU"
+                },
+                {
+                    "value": "Indonesia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/ID"
+                },
+                {
+                    "value": "Ireland",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/IE"
+                },
+                {
+                    "value": "Israel",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/IL"
+                },
+                {
+                    "value": "Isle of Man",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/IM"
+                },
+                {
+                    "value": "India",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/IN"
+                },
+                {
+                    "value": "British Indian Ocean Territory",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/IO"
+                },
+                {
+                    "value": "Iraq",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/IQ"
+                },
+                {
+                    "value": "Iran, Islamic Republic of",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/IR"
+                },
+                {
+                    "value": "Iceland",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/IS"
+                },
+                {
+                    "value": "Italy",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/IT"
+                },
+                {
+                    "value": "Jersey",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/JE"
+                },
+                {
+                    "value": "Jamaica",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/JM"
+                },
+                {
+                    "value": "Jordan",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/JO"
+                },
+                {
+                    "value": "Japan",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/JP"
+                },
+                {
+                    "value": "Kenya",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/KE"
+                },
+                {
+                    "value": "Kyrgyzstan",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/KG"
+                },
+                {
+                    "value": "Cambodia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/KH"
+                },
+                {
+                    "value": "Kiribati",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/KI"
+                },
+                {
+                    "value": "Comoros",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/KM"
+                },
+                {
+                    "value": "Saint Kitts and Nevis",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/KN"
+                },
+                {
+                    "value": "Korea, Democratic People's Republic of",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/KP"
+                },
+                {
+                    "value": "Korea, Republic of",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/KR"
+                },
+                {
+                    "value": "Kuwait",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/KW"
+                },
+                {
+                    "value": "Cayman Islands",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/KY"
+                },
+                {
+                    "value": "Kazakhstan",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/KZ"
+                },
+                {
+                    "value": "Lao People's Democratic Republic",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/LA"
+                },
+                {
+                    "value": "Lebanon",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/LB"
+                },
+                {
+                    "value": "Saint Lucia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/LC"
+                },
+                {
+                    "value": "Liechtenstein",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/LI"
+                },
+                {
+                    "value": "Sri Lanka",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/LK"
+                },
+                {
+                    "value": "Liberia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/LR"
+                },
+                {
+                    "value": "Lesotho",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/LS"
+                },
+                {
+                    "value": "Lithuania",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/LT"
+                },
+                {
+                    "value": "Luxembourg",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/LU"
+                },
+                {
+                    "value": "Latvia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/LV"
+                },
+                {
+                    "value": "Libya",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/LY"
+                },
+                {
+                    "value": "Morocco",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MA"
+                },
+                {
+                    "value": "Monaco",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MC"
+                },
+                {
+                    "value": "Moldova, Republic of",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MD"
+                },
+                {
+                    "value": "Montenegro",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/ME"
+                },
+                {
+                    "value": "Saint Martin (French part)",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MF"
+                },
+                {
+                    "value": "Madagascar",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MG"
+                },
+                {
+                    "value": "Marshall Islands",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MH"
+                },
+                {
+                    "value": "Macedonia, the Former Yugoslav Republic of",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MK"
+                },
+                {
+                    "value": "Mali",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/ML"
+                },
+                {
+                    "value": "Myanmar",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MM"
+                },
+                {
+                    "value": "Mongolia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MN"
+                },
+                {
+                    "value": "Macao",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MO"
+                },
+                {
+                    "value": "Northern Mariana Islands",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MP"
+                },
+                {
+                    "value": "Martinique",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MQ"
+                },
+                {
+                    "value": "Mauritania",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MR"
+                },
+                {
+                    "value": "Montserrat",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MS"
+                },
+                {
+                    "value": "Malta",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MT"
+                },
+                {
+                    "value": "Mauritius",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MU"
+                },
+                {
+                    "value": "Maldives",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MV"
+                },
+                {
+                    "value": "Malawi",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MW"
+                },
+                {
+                    "value": "Mexico",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MX"
+                },
+                {
+                    "value": "Malaysia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MY"
+                },
+                {
+                    "value": "Mozambique",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/MZ"
+                },
+                {
+                    "value": "Namibia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/NA"
+                },
+                {
+                    "value": "New Caledonia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/NC"
+                },
+                {
+                    "value": "Niger",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/NE"
+                },
+                {
+                    "value": "Norfolk Island",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/NF"
+                },
+                {
+                    "value": "Nigeria",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/NG"
+                },
+                {
+                    "value": "Nicaragua",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/NI"
+                },
+                {
+                    "value": "Netherlands",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/NL"
+                },
+                {
+                    "value": "Norway",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/NO"
+                },
+                {
+                    "value": "Nepal",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/NP"
+                },
+                {
+                    "value": "Nauru",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/NR"
+                },
+                {
+                    "value": "Niue",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/NU"
+                },
+                {
+                    "value": "New Zealand",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/NZ"
+                },
+                {
+                    "value": "Oman",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/OM"
+                },
+                {
+                    "value": "Panama",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/PA"
+                },
+                {
+                    "value": "Peru",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/PE"
+                },
+                {
+                    "value": "French Polynesia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/PF"
+                },
+                {
+                    "value": "Papua New Guinea",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/PG"
+                },
+                {
+                    "value": "Philippines",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/PH"
+                },
+                {
+                    "value": "Pakistan",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/PK"
+                },
+                {
+                    "value": "Poland",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/PL"
+                },
+                {
+                    "value": "Saint Pierre and Miquelon",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/PM"
+                },
+                {
+                    "value": "Pitcairn",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/PN"
+                },
+                {
+                    "value": "Puerto Rico",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/PR"
+                },
+                {
+                    "value": "Palestine, State of",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/PS"
+                },
+                {
+                    "value": "Portugal",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/PT"
+                },
+                {
+                    "value": "Palau",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/PW"
+                },
+                {
+                    "value": "Paraguay",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/PY"
+                },
+                {
+                    "value": "Qatar",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/QA"
+                },
+                {
+                    "value": "RĂ©union",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/RE"
+                },
+                {
+                    "value": "Romania",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/RO"
+                },
+                {
+                    "value": "Serbia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/RS"
+                },
+                {
+                    "value": "Russian Federation",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/RU"
+                },
+                {
+                    "value": "Rwanda",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/RW"
+                },
+                {
+                    "value": "Saudi Arabia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SA"
+                },
+                {
+                    "value": "Solomon Islands",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SB"
+                },
+                {
+                    "value": "Seychelles",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SC"
+                },
+                {
+                    "value": "Sudan",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SD"
+                },
+                {
+                    "value": "Sweden",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SE"
+                },
+                {
+                    "value": "Singapore",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SG"
+                },
+                {
+                    "value": "Saint Helena, Ascension and Tristan da Cunha",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SH"
+                },
+                {
+                    "value": "Slovenia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SI"
+                },
+                {
+                    "value": "Svalbard and Jan Mayen",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SJ"
+                },
+                {
+                    "value": "Slovakia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SK"
+                },
+                {
+                    "value": "Sierra Leone",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SL"
+                },
+                {
+                    "value": "San Marino",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SM"
+                },
+                {
+                    "value": "Senegal",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SN"
+                },
+                {
+                    "value": "Somalia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SO"
+                },
+                {
+                    "value": "Suriname",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SR"
+                },
+                {
+                    "value": "South Sudan",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SS"
+                },
+                {
+                    "value": "Sao Tome and Principe",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/ST"
+                },
+                {
+                    "value": "El Salvador",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SV"
+                },
+                {
+                    "value": "Sint Maarten (Dutch part)",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SX"
+                },
+                {
+                    "value": "Syrian Arab Republic",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SY"
+                },
+                {
+                    "value": "Swaziland",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/SZ"
+                },
+                {
+                    "value": "Turks and Caicos Islands",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TC"
+                },
+                {
+                    "value": "Chad",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TD"
+                },
+                {
+                    "value": "French Southern Territories",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TF"
+                },
+                {
+                    "value": "Togo",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TG"
+                },
+                {
+                    "value": "Thailand",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TH"
+                },
+                {
+                    "value": "Tajikistan",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TJ"
+                },
+                {
+                    "value": "Tokelau",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TK"
+                },
+                {
+                    "value": "Timor-Leste",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TL"
+                },
+                {
+                    "value": "Turkmenistan",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TM"
+                },
+                {
+                    "value": "Tunisia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TN"
+                },
+                {
+                    "value": "Tonga",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TO"
+                },
+                {
+                    "value": "Turkey",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TR"
+                },
+                {
+                    "value": "Trinidad and Tobago",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TT"
+                },
+                {
+                    "value": "Tuvalu",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TV"
+                },
+                {
+                    "value": "Taiwan, Province of China",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TW"
+                },
+                {
+                    "value": "Tanzania, United Republic of",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/TZ"
+                },
+                {
+                    "value": "Ukraine",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/UA"
+                },
+                {
+                    "value": "Uganda",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/UG"
+                },
+                {
+                    "value": "United States Minor Outlying Islands",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/UM"
+                },
+                {
+                    "value": "United States",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/US"
+                },
+                {
+                    "value": "Uruguay",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/UY"
+                },
+                {
+                    "value": "Uzbekistan",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/UZ"
+                },
+                {
+                    "value": "Holy See (Vatican City State)",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/VA"
+                },
+                {
+                    "value": "Saint Vincent and the Grenadines",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/VC"
+                },
+                {
+                    "value": "Venezuela, Bolivarian Republic of",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/VE"
+                },
+                {
+                    "value": "Virgin Islands, British",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/VG"
+                },
+                {
+                    "value": "Virgin Islands, U.S.",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/VI"
+                },
+                {
+                    "value": "Viet Nam",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/VN"
+                },
+                {
+                    "value": "Vanuatu",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/VU"
+                },
+                {
+                    "value": "Wallis and Futuna",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/WF"
+                },
+                {
+                    "value": "Samoa",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/WS"
+                },
+                {
+                    "value": "Yemen",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/YE"
+                },
+                {
+                    "value": "Mayotte",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/YT"
+                },
+                {
+                    "value": "South Africa",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/ZA"
+                },
+                {
+                    "value": "Zambia",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/ZM"
+                },
+                {
+                    "value": "Zimbabwe",
+                    "propertyName": "https://edi3.org/codes/ISO3166_Code/ZW"
+                }
+            ]
+        },
+        {
+            "name": "ISO4217_Code",
+            "propertyValues": [
+                {
+                    "value": "UAE Dirham",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/AED"
+                },
+                {
+                    "value": "Afghani",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/AFN"
+                },
+                {
+                    "value": "Lek",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/ALL"
+                },
+                {
+                    "value": "Armenian Dram",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/AMD"
+                },
+                {
+                    "value": "Netherlands Antillean Guilder",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/ANG"
+                },
+                {
+                    "value": "Kwanza",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/AOA"
+                },
+                {
+                    "value": "Argentine Peso",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/ARS"
+                },
+                {
+                    "value": "Australian Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/AUD"
+                },
+                {
+                    "value": "Aruban Florin",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/AWG"
+                },
+                {
+                    "value": "Azerbaijan Manat",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/AZN"
+                },
+                {
+                    "value": "Convertible Mark",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BAM"
+                },
+                {
+                    "value": "Barbados Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BBD"
+                },
+                {
+                    "value": "Taka",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BDT"
+                },
+                {
+                    "value": "Bulgarian Lev",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BGN"
+                },
+                {
+                    "value": "Bahraini Dinar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BHD"
+                },
+                {
+                    "value": "Burundi Franc",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BIF"
+                },
+                {
+                    "value": "Bermudian Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BMD"
+                },
+                {
+                    "value": "Brunei Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BND"
+                },
+                {
+                    "value": "Boliviano",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BOB"
+                },
+                {
+                    "value": "Mvdol",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BOV"
+                },
+                {
+                    "value": "Brazilian Real",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BRL"
+                },
+                {
+                    "value": "Bahamian Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BSD"
+                },
+                {
+                    "value": "Ngultrum",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BTN"
+                },
+                {
+                    "value": "Pula",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BWP"
+                },
+                {
+                    "value": "Belarusian Ruble",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BYN"
+                },
+                {
+                    "value": "Belize Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/BZD"
+                },
+                {
+                    "value": "Canadian Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/CAD"
+                },
+                {
+                    "value": "Congolese Franc",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/CDF"
+                },
+                {
+                    "value": "WIR Euro",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/CHE"
+                },
+                {
+                    "value": "Swiss Franc",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/CHF"
+                },
+                {
+                    "value": "WIR Franc",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/CHW"
+                },
+                {
+                    "value": "Unidad de Fomento",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/CLF"
+                },
+                {
+                    "value": "Chilean Peso",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/CLP"
+                },
+                {
+                    "value": "Yuan Renminbi",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/CNY"
+                },
+                {
+                    "value": "Colombian Peso",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/COP"
+                },
+                {
+                    "value": "Unidad de Valor Real",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/COU"
+                },
+                {
+                    "value": "Costa Rican Colon",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/CRC"
+                },
+                {
+                    "value": "Peso Convertible",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/CUC"
+                },
+                {
+                    "value": "Cuban Peso",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/CUP"
+                },
+                {
+                    "value": "Cabo Verde Escudo",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/CVE"
+                },
+                {
+                    "value": "Czech Koruna",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/CZK"
+                },
+                {
+                    "value": "Djibouti Franc",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/DJF"
+                },
+                {
+                    "value": "Danish Krone",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/DKK"
+                },
+                {
+                    "value": "Dominican Peso",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/DOP"
+                },
+                {
+                    "value": "Algerian Dinar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/DZD"
+                },
+                {
+                    "value": "Egyptian Pound",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/EGP"
+                },
+                {
+                    "value": "Nakfa",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/ERN"
+                },
+                {
+                    "value": "Ethiopian Birr",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/ETB"
+                },
+                {
+                    "value": "Euro",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/EUR"
+                },
+                {
+                    "value": "Fiji Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/FJD"
+                },
+                {
+                    "value": "Falkland Islands Pound",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/FKP"
+                },
+                {
+                    "value": "Pound Sterling",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/GBP"
+                },
+                {
+                    "value": "Lari",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/GEL"
+                },
+                {
+                    "value": "Ghana Cedi",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/GHS"
+                },
+                {
+                    "value": "Gibraltar Pound",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/GIP"
+                },
+                {
+                    "value": "Dalasi",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/GMD"
+                },
+                {
+                    "value": "Guinean Franc",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/GNF"
+                },
+                {
+                    "value": "Quetzal",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/GTQ"
+                },
+                {
+                    "value": "Guyana Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/GYD"
+                },
+                {
+                    "value": "Hong Kong Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/HKD"
+                },
+                {
+                    "value": "Lempira",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/HNL"
+                },
+                {
+                    "value": "Kuna",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/HRK"
+                },
+                {
+                    "value": "Gourde",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/HTG"
+                },
+                {
+                    "value": "Forint",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/HUF"
+                },
+                {
+                    "value": "Rupiah",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/IDR"
+                },
+                {
+                    "value": "New Israeli Sheqel",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/ILS"
+                },
+                {
+                    "value": "Indian Rupee",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/INR"
+                },
+                {
+                    "value": "Iraqi Dinar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/IQD"
+                },
+                {
+                    "value": "Iranian Rial",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/IRR"
+                },
+                {
+                    "value": "Iceland Krona",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/ISK"
+                },
+                {
+                    "value": "Jamaican Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/JMD"
+                },
+                {
+                    "value": "Jordanian Dinar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/JOD"
+                },
+                {
+                    "value": "Yen",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/JPY"
+                },
+                {
+                    "value": "Kenyan Shilling",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/KES"
+                },
+                {
+                    "value": "Som",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/KGS"
+                },
+                {
+                    "value": "Riel",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/KHR"
+                },
+                {
+                    "value": "Comorian Franc ",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/KMF"
+                },
+                {
+                    "value": "North Korean Won",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/KPW"
+                },
+                {
+                    "value": "Won",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/KRW"
+                },
+                {
+                    "value": "Kuwaiti Dinar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/KWD"
+                },
+                {
+                    "value": "Cayman Islands Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/KYD"
+                },
+                {
+                    "value": "Tenge",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/KZT"
+                },
+                {
+                    "value": "Lao Kip",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/LAK"
+                },
+                {
+                    "value": "Lebanese Pound",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/LBP"
+                },
+                {
+                    "value": "Sri Lanka Rupee",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/LKR"
+                },
+                {
+                    "value": "Liberian Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/LRD"
+                },
+                {
+                    "value": "Loti",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/LSL"
+                },
+                {
+                    "value": "Libyan Dinar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/LYD"
+                },
+                {
+                    "value": "Moroccan Dirham",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/MAD"
+                },
+                {
+                    "value": "Moldovan Leu",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/MDL"
+                },
+                {
+                    "value": "Malagasy Ariary",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/MGA"
+                },
+                {
+                    "value": "Denar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/MKD"
+                },
+                {
+                    "value": "Kyat",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/MMK"
+                },
+                {
+                    "value": "Tugrik",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/MNT"
+                },
+                {
+                    "value": "Pataca",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/MOP"
+                },
+                {
+                    "value": "Ouguiya",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/MRU"
+                },
+                {
+                    "value": "Mauritius Rupee",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/MUR"
+                },
+                {
+                    "value": "Rufiyaa",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/MVR"
+                },
+                {
+                    "value": "Malawi Kwacha",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/MWK"
+                },
+                {
+                    "value": "Mexican Peso",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/MXN"
+                },
+                {
+                    "value": "Mexican Unidad de Inversion (UDI)",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/MXV"
+                },
+                {
+                    "value": "Malaysian Ringgit",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/MYR"
+                },
+                {
+                    "value": "Mozambique Metical",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/MZN"
+                },
+                {
+                    "value": "Namibia Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/NAD"
+                },
+                {
+                    "value": "Naira",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/NGN"
+                },
+                {
+                    "value": "Cordoba Oro",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/NIO"
+                },
+                {
+                    "value": "Norwegian Krone",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/NOK"
+                },
+                {
+                    "value": "Nepalese Rupee",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/NPR"
+                },
+                {
+                    "value": "New Zealand Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/NZD"
+                },
+                {
+                    "value": "Rial Omani",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/OMR"
+                },
+                {
+                    "value": "Balboa",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/PAB"
+                },
+                {
+                    "value": "Sol",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/PEN"
+                },
+                {
+                    "value": "Kina",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/PGK"
+                },
+                {
+                    "value": "Philippine Peso",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/PHP"
+                },
+                {
+                    "value": "Pakistan Rupee",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/PKR"
+                },
+                {
+                    "value": "Zloty",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/PLN"
+                },
+                {
+                    "value": "Guarani",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/PYG"
+                },
+                {
+                    "value": "Qatari Rial",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/QAR"
+                },
+                {
+                    "value": "Romanian Leu",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/RON"
+                },
+                {
+                    "value": "Serbian Dinar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/RSD"
+                },
+                {
+                    "value": "Russian Ruble",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/RUB"
+                },
+                {
+                    "value": "Rwanda Franc",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/RWF"
+                },
+                {
+                    "value": "Saudi Riyal",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/SAR"
+                },
+                {
+                    "value": "Solomon Islands Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/SBD"
+                },
+                {
+                    "value": "Seychelles Rupee",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/SCR"
+                },
+                {
+                    "value": "Sudanese Pound",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/SDG"
+                },
+                {
+                    "value": "Swedish Krona",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/SEK"
+                },
+                {
+                    "value": "Singapore Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/SGD"
+                },
+                {
+                    "value": "Saint Helena Pound",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/SHP"
+                },
+                {
+                    "value": "Leone",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/SLL"
+                },
+                {
+                    "value": "Somali Shilling",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/SOS"
+                },
+                {
+                    "value": "Surinam Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/SRD"
+                },
+                {
+                    "value": "South Sudanese Pound",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/SSP"
+                },
+                {
+                    "value": "Dobra",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/STN"
+                },
+                {
+                    "value": "El Salvador Colon",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/SVC"
+                },
+                {
+                    "value": "Syrian Pound",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/SYP"
+                },
+                {
+                    "value": "Lilangeni",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/SZL"
+                },
+                {
+                    "value": "Baht",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/THB"
+                },
+                {
+                    "value": "Somoni",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/TJS"
+                },
+                {
+                    "value": "Turkmenistan New Manat",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/TMT"
+                },
+                {
+                    "value": "Tunisian Dinar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/TND"
+                },
+                {
+                    "value": "Pa’anga",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/TOP"
+                },
+                {
+                    "value": "Turkish Lira",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/TRY"
+                },
+                {
+                    "value": "Trinidad and Tobago Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/TTD"
+                },
+                {
+                    "value": "New Taiwan Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/TWD"
+                },
+                {
+                    "value": "Tanzanian Shilling",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/TZS"
+                },
+                {
+                    "value": "Hryvnia",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/UAH"
+                },
+                {
+                    "value": "Uganda Shilling",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/UGX"
+                },
+                {
+                    "value": "US Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/USD"
+                },
+                {
+                    "value": "US Dollar (Next day)",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/USN"
+                },
+                {
+                    "value": "Uruguay Peso en Unidades Indexadas (UI)",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/UYI"
+                },
+                {
+                    "value": "Peso Uruguayo",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/UYU"
+                },
+                {
+                    "value": "Unidad Previsional",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/UYW"
+                },
+                {
+                    "value": "Uzbekistan Sum",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/UZS"
+                },
+                {
+                    "value": "Bolívar Soberano",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/VES"
+                },
+                {
+                    "value": "Dong",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/VND"
+                },
+                {
+                    "value": "Vatu",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/VUV"
+                },
+                {
+                    "value": "Tala",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/WST"
+                },
+                {
+                    "value": "CFA Franc BEAC",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XAF"
+                },
+                {
+                    "value": "Silver",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XAG"
+                },
+                {
+                    "value": "Gold",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XAU"
+                },
+                {
+                    "value": "Bond Markets Unit European Composite Unit (EURCO)",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XBA"
+                },
+                {
+                    "value": "Bond Markets Unit European Monetary Unit (E.M.U.-6)",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XBB"
+                },
+                {
+                    "value": "Bond Markets Unit European Unit of Account 9 (E.U.A.-9)",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XBC"
+                },
+                {
+                    "value": "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XBD"
+                },
+                {
+                    "value": "East Caribbean Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XCD"
+                },
+                {
+                    "value": "SDR (Special Drawing Right)",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XDR"
+                },
+                {
+                    "value": "CFA Franc BCEAO",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XOF"
+                },
+                {
+                    "value": "Palladium",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XPD"
+                },
+                {
+                    "value": "CFP Franc",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XPF"
+                },
+                {
+                    "value": "Platinum",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XPT"
+                },
+                {
+                    "value": "Sucre",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XSU"
+                },
+                {
+                    "value": "Codes specifically reserved for testing purposes",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XTS"
+                },
+                {
+                    "value": "ADB Unit of Account",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XUA"
+                },
+                {
+                    "value": "The codes assigned for transactions where no currency is involved",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/XXX"
+                },
+                {
+                    "value": "Yemeni Rial",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/YER"
+                },
+                {
+                    "value": "Rand",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/ZAR"
+                },
+                {
+                    "value": "Zambian Kwacha",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/ZMW"
+                },
+                {
+                    "value": "Zimbabwe Dollar",
+                    "propertyName": "https://edi3.org/codes/ISO4217_Code/ZWL"
+                }
+            ]
+        },
+        {
+            "name": "ISO639_Code",
+            "propertyValues": [
+                {
+                    "value": "Afar",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/AA"
+                },
+                {
+                    "value": "Abkhazian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/AB"
+                },
+                {
+                    "value": "Avestan",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/AE"
+                },
+                {
+                    "value": "Afrikaans",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/AF"
+                },
+                {
+                    "value": "Akan",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/AK"
+                },
+                {
+                    "value": "Amharic",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/AM"
+                },
+                {
+                    "value": "Aragonese",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/AN"
+                },
+                {
+                    "value": "Arabic",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/AR"
+                },
+                {
+                    "value": "Assamese",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/AS"
+                },
+                {
+                    "value": "Avaric",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/AV"
+                },
+                {
+                    "value": "Aymara",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/AY"
+                },
+                {
+                    "value": "Azerbaijani",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/AZ"
+                },
+                {
+                    "value": "Bashkir",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/BA"
+                },
+                {
+                    "value": "Belarusian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/BE"
+                },
+                {
+                    "value": "Bulgarian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/BG"
+                },
+                {
+                    "value": "Bihari languages",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/BH"
+                },
+                {
+                    "value": "Bislama",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/BI"
+                },
+                {
+                    "value": "Bambara",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/BM"
+                },
+                {
+                    "value": "Bengali",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/BN"
+                },
+                {
+                    "value": "Tibetan",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/BO"
+                },
+                {
+                    "value": "Breton",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/BR"
+                },
+                {
+                    "value": "Bosnian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/BS"
+                },
+                {
+                    "value": "Catalan, Valencian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/CA"
+                },
+                {
+                    "value": "Chechen",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/CE"
+                },
+                {
+                    "value": "Chamorro",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/CH"
+                },
+                {
+                    "value": "Corsican",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/CO"
+                },
+                {
+                    "value": "Cree",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/CR"
+                },
+                {
+                    "value": "Czech",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/CS"
+                },
+                {
+                    "value": "Church Slavic, Old Slavonic, Church Slavonic, Old Bulgarian, Old Church Slavonic",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/CU"
+                },
+                {
+                    "value": "Chuvash",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/CV"
+                },
+                {
+                    "value": "Welsh",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/CY"
+                },
+                {
+                    "value": "Danish",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/DA"
+                },
+                {
+                    "value": "German",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/DE"
+                },
+                {
+                    "value": "Divehi, Dhivehi, Maldivian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/DV"
+                },
+                {
+                    "value": "Dzongkha",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/DZ"
+                },
+                {
+                    "value": "Ewe",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/EE"
+                },
+                {
+                    "value": "Greek, Modern (1453-)",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/EL"
+                },
+                {
+                    "value": "English",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/EN"
+                },
+                {
+                    "value": "Esperanto",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/EO"
+                },
+                {
+                    "value": "Spanish, Castilian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/ES"
+                },
+                {
+                    "value": "Estonian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/ET"
+                },
+                {
+                    "value": "Basque",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/EU"
+                },
+                {
+                    "value": "Persian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/FA"
+                },
+                {
+                    "value": "Fulah",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/FF"
+                },
+                {
+                    "value": "Finnish",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/FI"
+                },
+                {
+                    "value": "Fijian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/FJ"
+                },
+                {
+                    "value": "Faroese",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/FO"
+                },
+                {
+                    "value": "French",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/FR"
+                },
+                {
+                    "value": "Western Frisian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/FY"
+                },
+                {
+                    "value": "Irish",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/GA"
+                },
+                {
+                    "value": "Gaelic, Scottish Gaelic",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/GD"
+                },
+                {
+                    "value": "Galician",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/GL"
+                },
+                {
+                    "value": "Guarani",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/GN"
+                },
+                {
+                    "value": "Gujarati",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/GU"
+                },
+                {
+                    "value": "Manx",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/GV"
+                },
+                {
+                    "value": "Hausa",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/HA"
+                },
+                {
+                    "value": "Hebrew",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/HE"
+                },
+                {
+                    "value": "Hindi",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/HI"
+                },
+                {
+                    "value": "Hiri Motu",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/HO"
+                },
+                {
+                    "value": "Croatian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/HR"
+                },
+                {
+                    "value": "Haitian, Haitian Creole",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/HT"
+                },
+                {
+                    "value": "Hungarian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/HU"
+                },
+                {
+                    "value": "Armenian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/HY"
+                },
+                {
+                    "value": "Herero",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/HZ"
+                },
+                {
+                    "value": "Interlingua (International Auxiliary Language Association)",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/IA"
+                },
+                {
+                    "value": "Indonesian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/ID"
+                },
+                {
+                    "value": "Interlingue, Occidental",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/IE"
+                },
+                {
+                    "value": "Igbo",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/IG"
+                },
+                {
+                    "value": "Sichuan Yi, Nuosu",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/II"
+                },
+                {
+                    "value": "Inupiaq",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/IK"
+                },
+                {
+                    "value": "Ido",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/IO"
+                },
+                {
+                    "value": "Icelandic",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/IS"
+                },
+                {
+                    "value": "Italian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/IT"
+                },
+                {
+                    "value": "Inuktitut",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/IU"
+                },
+                {
+                    "value": "Japanese",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/JA"
+                },
+                {
+                    "value": "Javanese",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/JV"
+                },
+                {
+                    "value": "Georgian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/KA"
+                },
+                {
+                    "value": "Kongo",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/KG"
+                },
+                {
+                    "value": "Kikuyu, Gikuyu",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/KI"
+                },
+                {
+                    "value": "Kuanyama, Kwanyama",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/KJ"
+                },
+                {
+                    "value": "Kazakh",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/KK"
+                },
+                {
+                    "value": "Kalaallisut, Greenlandic",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/KL"
+                },
+                {
+                    "value": "Central Khmer",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/KM"
+                },
+                {
+                    "value": "Kannada",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/KN"
+                },
+                {
+                    "value": "Korean",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/KO"
+                },
+                {
+                    "value": "Kanuri",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/KR"
+                },
+                {
+                    "value": "Kashmiri",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/KS"
+                },
+                {
+                    "value": "Kurdish",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/KU"
+                },
+                {
+                    "value": "Komi",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/KV"
+                },
+                {
+                    "value": "Cornish",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/KW"
+                },
+                {
+                    "value": "Kirghiz, Kyrgyz",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/KY"
+                },
+                {
+                    "value": "Latin",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/LA"
+                },
+                {
+                    "value": "Luxembourgish, Letzeburgesch",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/LB"
+                },
+                {
+                    "value": "Ganda",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/LG"
+                },
+                {
+                    "value": "Limburgan, Limburger, Limburgish",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/LI"
+                },
+                {
+                    "value": "Lingala",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/LN"
+                },
+                {
+                    "value": "Lao",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/LO"
+                },
+                {
+                    "value": "Lithuanian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/LT"
+                },
+                {
+                    "value": "Luba-Katanga",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/LU"
+                },
+                {
+                    "value": "Latvian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/LV"
+                },
+                {
+                    "value": "Malagasy",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/MG"
+                },
+                {
+                    "value": "Marshallese",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/MH"
+                },
+                {
+                    "value": "Maori",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/MI"
+                },
+                {
+                    "value": "Macedonian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/MK"
+                },
+                {
+                    "value": "Malayalam",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/ML"
+                },
+                {
+                    "value": "Mongolian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/MN"
+                },
+                {
+                    "value": "MO",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/MO"
+                },
+                {
+                    "value": "Marathi",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/MR"
+                },
+                {
+                    "value": "Malay",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/MS"
+                },
+                {
+                    "value": "Maltese",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/MT"
+                },
+                {
+                    "value": "Burmese",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/MY"
+                },
+                {
+                    "value": "Nauru",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/NA"
+                },
+                {
+                    "value": "Bokmål, Norwegian; Norwegian Bokmål",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/NB"
+                },
+                {
+                    "value": "Ndebele, North; North Ndebele",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/ND"
+                },
+                {
+                    "value": "Nepali",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/NE"
+                },
+                {
+                    "value": "Ndonga",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/NG"
+                },
+                {
+                    "value": "Dutch, Flemish",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/NL"
+                },
+                {
+                    "value": "Norwegian Nynorsk; Nynorsk, Norwegian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/NN"
+                },
+                {
+                    "value": "Norwegian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/NO"
+                },
+                {
+                    "value": "Ndebele, South; South Ndebele",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/NR"
+                },
+                {
+                    "value": "Navajo, Navaho",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/NV"
+                },
+                {
+                    "value": "Chichewa, Chewa, Nyanja",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/NY"
+                },
+                {
+                    "value": "Occitan (post 1500), Provençal",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/OC"
+                },
+                {
+                    "value": "Ojibwa",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/OJ"
+                },
+                {
+                    "value": "Oromo",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/OM"
+                },
+                {
+                    "value": "Oriya",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/OR"
+                },
+                {
+                    "value": "Ossetian, Ossetic",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/OS"
+                },
+                {
+                    "value": "Panjabi, Punjabi",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/PA"
+                },
+                {
+                    "value": "Pali",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/PI"
+                },
+                {
+                    "value": "Polish",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/PL"
+                },
+                {
+                    "value": "Pushto, Pashto",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/PS"
+                },
+                {
+                    "value": "Portuguese",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/PT"
+                },
+                {
+                    "value": "Quechua",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/QU"
+                },
+                {
+                    "value": "Romansh",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/RM"
+                },
+                {
+                    "value": "Rundi",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/RN"
+                },
+                {
+                    "value": "Romanian, Moldavian, Moldovan",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/RO"
+                },
+                {
+                    "value": "Russian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/RU"
+                },
+                {
+                    "value": "Kinyarwanda",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/RW"
+                },
+                {
+                    "value": "Sanskrit",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SA"
+                },
+                {
+                    "value": "Sardinian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SC"
+                },
+                {
+                    "value": "Sindhi",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SD"
+                },
+                {
+                    "value": "Northern Sami",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SE"
+                },
+                {
+                    "value": "Sango",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SG"
+                },
+                {
+                    "value": "Sinhala, Sinhalese",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SI"
+                },
+                {
+                    "value": "Slovak",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SK"
+                },
+                {
+                    "value": "Slovenian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SL"
+                },
+                {
+                    "value": "Samoan",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SM"
+                },
+                {
+                    "value": "Shona",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SN"
+                },
+                {
+                    "value": "Somali",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SO"
+                },
+                {
+                    "value": "Albanian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SQ"
+                },
+                {
+                    "value": "Serbian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SR"
+                },
+                {
+                    "value": "Swati",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SS"
+                },
+                {
+                    "value": "Sotho, Southern",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/ST"
+                },
+                {
+                    "value": "Sundanese",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SU"
+                },
+                {
+                    "value": "Swedish",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SV"
+                },
+                {
+                    "value": "Swahili",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/SW"
+                },
+                {
+                    "value": "Tamil",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/TA"
+                },
+                {
+                    "value": "Telugu",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/TE"
+                },
+                {
+                    "value": "Tajik",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/TG"
+                },
+                {
+                    "value": "Thai",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/TH"
+                },
+                {
+                    "value": "Tigrinya",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/TI"
+                },
+                {
+                    "value": "Turkmen",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/TK"
+                },
+                {
+                    "value": "Tagalog",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/TL"
+                },
+                {
+                    "value": "Tswana",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/TN"
+                },
+                {
+                    "value": "Tonga (Tonga Islands)",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/TO"
+                },
+                {
+                    "value": "Turkish",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/TR"
+                },
+                {
+                    "value": "Tsonga",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/TS"
+                },
+                {
+                    "value": "Tatar",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/TT"
+                },
+                {
+                    "value": "Twi",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/TW"
+                },
+                {
+                    "value": "Tahitian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/TY"
+                },
+                {
+                    "value": "Uighur, Uyghur",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/UG"
+                },
+                {
+                    "value": "Ukrainian",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/UK"
+                },
+                {
+                    "value": "Urdu",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/UR"
+                },
+                {
+                    "value": "Uzbek",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/UZ"
+                },
+                {
+                    "value": "Venda",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/VE"
+                },
+                {
+                    "value": "Vietnamese",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/VI"
+                },
+                {
+                    "value": "Volapük",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/VO"
+                },
+                {
+                    "value": "Walloon",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/WA"
+                },
+                {
+                    "value": "Wolof",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/WO"
+                },
+                {
+                    "value": "Xhosa",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/XH"
+                },
+                {
+                    "value": "Yiddish",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/YI"
+                },
+                {
+                    "value": "Yoruba",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/YO"
+                },
+                {
+                    "value": "Zhuang, Chuang",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/ZA"
+                },
+                {
+                    "value": "Chinese",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/ZH"
+                },
+                {
+                    "value": "Zulu",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/ZU"
+                },
+                {
+                    "value": "mo",
+                    "propertyName": "https://edi3.org/codes/ISO639_Code/mo"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
