@@ -1,0 +1,15 @@
+{
+  "name": "scheme01",
+  "version": "1.0",
+  "codes": [
+    {
+      "name": "code01",
+      "propertyValues": [
+        {
+          "value": "property value",
+          "propertyName": "https://edi3.org/codes/scheme01/code01"
+        }
+      ]
+    }
+  ]
+}

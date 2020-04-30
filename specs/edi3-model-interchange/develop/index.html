@@ -852,7 +852,24 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <p><img src="codes-metamodel.png" alt="codes model" /></p>
 
-<p>The code list model defines all the allowed values and additional properties of a single standard code list (eg UNECE Rec20 Units of measure)</p>
+<p>The code list model defines all the allowed values and additional properties of a single standard code list (eg UNECE Rec20 Units of measure). It is a flxible model that is designed to accomodate various additonal properties of different codelists.  For example</p>
+
+<ul>
+  <li>UNLOCODES have additional properties like “country”, “sub-division”, “geolocation”, “function”</li>
+  <li>Units of Measure have additional properties like “conversionFactor”, “category”, “symbol”</li>
+</ul>
+
+<p>A code list is constrained to include:</p>
+
+<ul>
+  <li>A scheme (eg “unece.un.org/rec20”) with name, description, version, levels (for hierarchical codes) and status.</li>
+  <li>One codelist scheme contains one or more codes (eg “KG”) with name, description, level and status (eg proposed, active, deprecated)</li>
+  <li>One code list scheme also contains zero or more additonal property names (eg “Symbol”)</li>
+  <li>Each code contains zero or more additional property values (eg “m/s2”) one for each property name defined by the scheme.</li>
+  <li>each code may reference a parent - this is unly applicable for hierarchical code lists like such as ISIC.</li>
+</ul>
+
+<p>This simple but flexible model supports the publishing and maintainence of any flat or hierarchical code list with any num,ber of additional properties per code.</p>
 
 <h2 id="json-schema-2">JSON Schema</h2>
 
