@@ -164,7 +164,7 @@
                 
                 <ul>
                     <li>Spec ID: <p>certificates/1</p>
-</li><li><p><img src="//rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" /></p>
+</li><li><p><img src="//rfc.unprotocols.org/spec:2/COSS/draft.svg" alt="draft" /></p>
 </li>
                     <li>Editor: <p><a href="mailto:steve.capell@gmail.com">Steven Capell</a></p>
 </li>
@@ -213,10 +213,8 @@
 
 <h2 id="status">Status</h2>
 
-<p>Certificate types and status:</p>
-
 <ul>
-  <li>A <img src="//rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" /> Certificate Of Origin has been defined.</li>
+  <li>This specification is in <img src="//rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="draft" /> state.  This means that design consensus has been reached and the specification is ready for implementation verification.</li>
 </ul>
 
 <h2 id="glossary">Glossary</h2>
@@ -269,17 +267,13 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <p>The Certificate of Origin (CoO) Data model is drawn from the UN/CEFACT Buy-Ship-Pay reference data model and conforms to the edi3 <a href="https://edi3.org/specs/edi3-uml-profile/master/">UML profile specification</a></p>
 
-<ul>
-  <li>Yellow elements are specific to the CoO. These are very simple - essentially a CoO decorates a standard consignment with a set of origin criteria and adds a document header.</li>
-  <li>Green elements are standard UN/CEFACT RDM elements.</li>
-  <li>Blue elements are standard enumerations.</li>
-</ul>
-
 <p><img src="CertificateOfOrigin.png" alt="CoO" /></p>
 
 <h2 id="state-lifecycle">State Lifecycle</h2>
 
-<p>To be completed</p>
+<p>The certificate state lifecycle is shown below.  The “status” property of the “CertificateOfOrigin” entity in the API model MUST equal one of these values.</p>
+
+<p><img src="CoO_StateLifecycle.png" alt="CoO Lifecycle" /></p>
 
 <h2 id="api-specification">API Specification</h2>
 
@@ -293,6 +287,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <ul>
   <li><a href="chafta-coo-template.pdf">CHAFTA CoO Template PDF</a></li>
+  <li><a href="jaepa-coo-template.pdf">JAEPA CoO Template</a></li>
   <li><a href="CertificateOfOriginDataElementMapping.xlsx">CoO data mapping UN / WCO Excel</a></li>
 </ul>
 
