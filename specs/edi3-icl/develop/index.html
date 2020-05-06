@@ -198,13 +198,6 @@
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#governance-model">Governance Model</a></li>
-<li class="toc-entry toc-h2"><a href="#component-model">Component Model</a></li>
-<li class="toc-entry toc-h2"><a href="#sequence-model">Sequence Model</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#client-sequence">Client sequence</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#node-sequence">Node Sequence</a></li>
 <li class="toc-entry toc-h2"><a href="#api-specifications">API Specifications</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#document-api">Document API</a></li>
@@ -221,11 +214,10 @@
 <li class="toc-entry toc-h3"><a href="#client-identity">Client Identity</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#smart-contracts">Smart Contracts</a>
+<li class="toc-entry toc-h2"><a href="#component-model">Component Model</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#abstract-model">Abstract Model</a></li>
-<li class="toc-entry toc-h3"><a href="#legal-stakeholders">Legal Stakeholders</a></li>
-<li class="toc-entry toc-h3"><a href="#legal-terms">Legal Terms</a></li>
+<li class="toc-entry toc-h3"><a href="#client-sequence">Client sequence</a></li>
+<li class="toc-entry toc-h3"><a href="#node-sequence">Node Sequence</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#performance--scalability">Performance &amp; Scalability</a>
@@ -560,65 +552,6 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <p>Identity providers and node operators SHOULD reference the accreditation framework on their public websites.</p>
 
-<h2 id="component-model">Component Model</h2>
-
-<p>A typical IGL node will comprise the high level components illustrated in the diagram below.</p>
-
-<p><img src="IGLNodeComponents.png" alt="IGL Node Components" /></p>
-
-<ul>
-  <li>An IGL worker exposes the Message API and is responsible to process IGL messages including secure document storage, routing the the relevant IGL channel, and communicating events to the event manager.</li>
-  <li>A document manager exposes the document API and is responsible for the secure storage of documents (both structured data and binaries) that are referenced by a message on a channel.</li>
-  <li>An event manager exposes the subscriptions API and allows client systems to subscribe to notifications about messages that they post.</li>
-</ul>
-
-<h2 id="sequence-model">Sequence Model</h2>
-
-<h3 id="client-sequence">Client sequence</h3>
-
-<p>The high level sequence flow for client system interactions with IGL nodes is shown below. Detailed interactions between node components and with IGL channels are not shown.</p>
-
-<p><img src="IGLClientSequence.png" alt="IGL client sequence" /></p>
-
-<p>Assuming that a channel has been established as per the governance model then</p>
-
-<ul>
-  <li>A document issuer using a client system proves their identity via an accredited identity provider (IDP), typically via the OAuth2 protocol, and the resulting token includes the identity of the document issuer.</li>
-  <li>The client system POSTs an IGL message to the message API together with an access token from the IDP.</li>
-  <li>The IGL node uses message metadata to determine the relevant IGL channel (or returns an error if there is no matching channel)</li>
-  <li>The IGL node requests a new transaction of the relevant distributed ledger channel and, once consensus is completed and a block is written, the client is notified via the event manager.</li>
-  <li>The counter party on the network detects the new message, gets the document, and notifies any subscribed parties (eg a government agency in country B) of the new message.</li>
-  <li>The message is processed by the receiving agency business systems.</li>
-  <li>The reverse flow (from country B back to country A) follows exactly the same pattern, except in the opposite direction.  A long running conversation is implemented as multiple independent messages correlated via a common subject-id.</li>
-</ul>
-
-<h2 id="node-sequence">Node Sequence</h2>
-
-<p>The sequence diagram below elaborates on the detailed interactions between IGL node components and IGL channels that are not shown on the client sequence diagram.</p>
-
-<p><img src="IGLNodeSequence.png" alt="IGL node sequence" /></p>
-
-<p>Assuming that public keys of authorised node operators have been exchanged and mapped to persistent identities then</p>
-
-<ul>
-  <li>A new message is received from a client by the message API</li>
-  <li>The IGL worker will POST the contained or referenced document to the document API for secure storage. The IGL specification is not prescriptive of document format (see Semantic model section).</li>
-  <li>The document API will return a unique fingerprint (multi-hash) of the stored document and will update it’s access control to allow read access by the recipient country authority.</li>
-  <li>The IGL worker will determine the relevant IGL channel using “toCountry” and “messageType” fields from the message header and passes the message to the relevant (DLT technology specific) channel node</li>
-  <li>The channel node requests a new ledger transaction comprising a semantic triple
-    <ul>
-      <li>Subject is a unique business identifier for the long running conversation which could be a namespace qualified id such as <code class="highlighter-rouge">chamber.com.au:chafta-coo:123</code> or could be a GUID.</li>
-      <li>Object is the unique fingerprint (multihash) of the document that is attached to the message and stored in the document repository.</li>
-      <li>Predicate is the semantic description of the message represented by the messageType.  This must be drawn from a controlled vocabulary (see semantic model) - eg <code class="highlighter-rouge">unece.un.org:coo:created</code></li>
-    </ul>
-  </li>
-  <li>The channel completes consensus and writes a new block - this process is specific to the particular DLT technology (eg ethereum or hyperledger).</li>
-  <li>once the new block is successfully written the channel node notifies the IGL worker which will send a callback event to all subscribed clients via the event manager.</li>
-  <li>The new transaction is observed by the counter party IGL node which reads the transaction (ie the semantic triple)</li>
-  <li>The recipient country node GETs the document identified by the Object multihash from the sender country repository. Authentication is via mutual SSL.</li>
-  <li>The recipient country IGL node notifies any subscribed clients of the new transaction via the event manager of the recipient IGL node.</li>
-</ul>
-
 <h2 id="api-specifications">API Specifications</h2>
 
 <p>There are five API specifications that define the standard interfaces provided by any IGL node.</p>
@@ -726,32 +659,62 @@ to-do : add swagger spec</p>
 
 <p>to-do: more details about claims etc</p>
 
-<h2 id="smart-contracts">Smart Contracts</h2>
+<h2 id="component-model">Component Model</h2>
 
-<p>A “Smart Contract” allows the encoding of IGL channel specific business rules into the ledger that allows transactions to be verified against the rules. Smart contracts can facilitate automated and verifiable regulatory compliance.</p>
+<p>A typical IGL node will comprise the high level components illustrated in the diagram below.</p>
 
-<p>Although an IGL channel does not require a “smart contract” there are likely to be cases where there will be value in encoding compliance rules into the ledger transaction.</p>
-
-<p>Different ledger technologies have different technical representations of these rules. Ethereum smart contracts are written in solidity code. Hyperledger Fabric smart contracts are written as chain code in the Go language.</p>
-
-<h3 id="abstract-model">Abstract Model</h3>
-
-<p>In order to support re-use and consistency in the implementation of smart contracts, this specification defines an inheritance hierarchy for smart contracts.</p>
-
-<p><img src="ContractsArchitecture.png" alt="Smart Contracts" /></p>
-
-<h3 id="legal-stakeholders">Legal Stakeholders</h3>
-
-<p>The legal stakeholders in IGL smart contract code are identified using:</p>
+<p><img src="IGLNodeComponents.png" alt="IGL Node Components" /></p>
 
 <ul>
-  <li>A type code - drawn from the UN/CEFACT semantic library and represented as a JSON-LD IRI</li>
-  <li>An entity identifier - which MUST be a verifiable identity from an accredited IDP in the country in which the entity is registered.</li>
+  <li>An IGL worker exposes the Message API and is responsible to process IGL messages including secure document storage, routing the the relevant IGL channel, and communicating events to the event manager.</li>
+  <li>A document manager exposes the document API and is responsible for the secure storage of documents (both structured data and binaries) that are referenced by a message on a channel.</li>
+  <li>An event manager exposes the subscriptions API and allows client systems to subscribe to notifications about messages that they post.</li>
 </ul>
 
-<h3 id="legal-terms">Legal Terms</h3>
+<h3 id="client-sequence">Client sequence</h3>
 
-<p>Legal terms in IGL smart contracts should also be drawn from a standard dictionary such as the UN/CEFACT semantic library and MUST be represented as a JSON-LD IRI</p>
+<p>The high level sequence flow for client system interactions with IGL nodes is shown below. Detailed interactions between node components and with IGL channels are not shown.</p>
+
+<p><img src="IGLClientSequence.png" alt="IGL client sequence" /></p>
+
+<p>Assuming that a channel has been established as per the governance model then</p>
+
+<ul>
+  <li>A document issuer using a client system proves their identity via an accredited identity provider (IDP), typically via the OAuth2 protocol, and the resulting token includes the identity of the document issuer.</li>
+  <li>The client system POSTs an IGL message to the message API together with an access token from the IDP.</li>
+  <li>The IGL node uses message metadata to determine the relevant IGL channel (or returns an error if there is no matching channel)</li>
+  <li>The IGL node requests a new transaction of the relevant distributed ledger channel and, once consensus is completed and a block is written, the client is notified via the event manager.</li>
+  <li>The counter party on the network detects the new message, gets the document, and notifies any subscribed parties (eg a government agency in country B) of the new message.</li>
+  <li>The message is processed by the receiving agency business systems.</li>
+  <li>The reverse flow (from country B back to country A) follows exactly the same pattern, except in the opposite direction.  A long running conversation is implemented as multiple independent messages correlated via a common subject-id.</li>
+</ul>
+
+<h3 id="node-sequence">Node Sequence</h3>
+
+<p>The sequence diagram below elaborates on the detailed interactions between IGL node components and IGL channels that are not shown on the client sequence diagram.</p>
+
+<p><img src="IGLNodeSequence.png" alt="IGL node sequence" /></p>
+
+<p>Assuming that public keys of authorised node operators have been exchanged and mapped to persistent identities then</p>
+
+<ul>
+  <li>A new message is received from a client by the message API</li>
+  <li>The IGL worker will POST the contained or referenced document to the document API for secure storage. The IGL specification is not prescriptive of document format (see Semantic model section).</li>
+  <li>The document API will return a unique fingerprint (multi-hash) of the stored document and will update it’s access control to allow read access by the recipient country authority.</li>
+  <li>The IGL worker will determine the relevant IGL channel using “toCountry” and “messageType” fields from the message header and passes the message to the relevant (DLT technology specific) channel node</li>
+  <li>The channel node requests a new ledger transaction comprising a semantic triple
+    <ul>
+      <li>Subject is a unique business identifier for the long running conversation which could be a namespace qualified id such as <code class="highlighter-rouge">chamber.com.au:chafta-coo:123</code> or could be a GUID.</li>
+      <li>Object is the unique fingerprint (multihash) of the document that is attached to the message and stored in the document repository.</li>
+      <li>Predicate is the semantic description of the message represented by the messageType.  This must be drawn from a controlled vocabulary (see semantic model) - eg <code class="highlighter-rouge">unece.un.org:coo:created</code></li>
+    </ul>
+  </li>
+  <li>The channel completes consensus and writes a new block - this process is specific to the particular DLT technology (eg ethereum or hyperledger).</li>
+  <li>once the new block is successfully written the channel node notifies the IGL worker which will send a callback event to all subscribed clients via the event manager.</li>
+  <li>The new transaction is observed by the counter party IGL node which reads the transaction (ie the semantic triple)</li>
+  <li>The recipient country node GETs the document identified by the Object multihash from the sender country repository. Authentication is via mutual SSL.</li>
+  <li>The recipient country IGL node notifies any subscribed clients of the new transaction via the event manager of the recipient IGL node.</li>
+</ul>
 
 <h2 id="performance--scalability">Performance &amp; Scalability</h2>
 
