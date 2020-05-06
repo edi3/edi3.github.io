@@ -207,10 +207,11 @@
 <li class="toc-entry toc-h2"><a href="#node-sequence">Node Sequence</a></li>
 <li class="toc-entry toc-h2"><a href="#api-specifications">API Specifications</a>
 <ul>
+<li class="toc-entry toc-h3"><a href="#document-api">Document API</a></li>
 <li class="toc-entry toc-h3"><a href="#message-api">Message API</a></li>
-<li class="toc-entry toc-h3"><a href="#channel-registry-api">Channel Registry API</a></li>
-<li class="toc-entry toc-h3"><a href="#document-api--acl">Document API &amp; ACL</a></li>
 <li class="toc-entry toc-h3"><a href="#subscriptions-api">Subscriptions API</a></li>
+<li class="toc-entry toc-h3"><a href="#channel-api">Channel API</a></li>
+<li class="toc-entry toc-h3"><a href="#registry-api">Registry API</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#semantic-model">Semantic Model</a></li>
@@ -620,16 +621,77 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <h2 id="api-specifications">API Specifications</h2>
 
+<p>There are five API specifications that define the standard interfaces provided by any IGL node.</p>
+
+<h3 id="document-api">Document API</h3>
+
+<p>The document API is used by authorised IGL clients to submit cross border regulatory or trade documents to an IGL node. The document API is used to submit documents <strong>before</strong> invoking the message API to advise the other country of the existance of a new document.
+The document API is also used by receiving jurisdictions to retreive documents that are referenced by an IGL message.</p>
+
+<p><img src="DocumentAPI.png" alt="Document API" /></p>
+
+<p>An IGL document MUST conform to the API schema and so always includes:</p>
+
+<ul>
+  <li>A sender specified reference (typically a business identifier like an invoice number)</li>
+  <li>A human readable document name (eg “certificate of Origin”)</li>
+  <li>The issuer ID (which must also be supported by an identity proof)</li>
+  <li>some structured data - using JSON-LD and conforming to a well undertood ontology (JSON-LD @context) that is supported by the IGL channel policy.</li>
+  <li>zero or more binary attachments</li>
+  <li>one or more <a href="https://www.w3.org/TR/vc-data-model/">W3C Verifiable credential</a> proofs.  The mimimum is the identity proof for the issuer.</li>
+</ul>
+
+<p>The ID of the document is always the merkle hash of all binaries, proofs, and structured data that comprise the document.  If a document is updated with modified metadata, binaries, or proofs, then the new version will have a new merkel hash and an incremented version sequence number.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
+</code></pre></div></div>
+
 <h3 id="message-api">Message API</h3>
 
-<p><img src="IGLMessageAPI.png" alt="Message API" /></p>
+<p>The message API is used by authorised IGL clients to send messages to other countries via channels supported by the node. The messages may reference a previously submitted document using the merkel hash ID of the document as the “object” of the message.</p>
+
+<p><img src="MessageAPI.png" alt="Message API" /></p>
+
+<p>IGL messages are essentially semantic triples (subject, predicate, object) that are sent from a sending jurisdiction to a receiving jurisdiction over an IGL channel that supports the predicate.  For example, for a ceritficate of origin sent from Australia to China, the message properties might be</p>
+
+<ul>
+  <li>Sender = AU</li>
+  <li>receiver = CN</li>
+  <li>predicate = “unece.un.org:coo:created” - defines the type of message (in this case that a certificate of origin has been created) - must be drawn from a well understood ontology and much match the channel policy.</li>
+  <li>subject = “chamber.com.au:chafta-coo:123” - defines the identity of the message and must be a unique IRI</li>
+  <li>object = a5c841c07663e6992389d27037369d4eb4972cc062f2b962ebadf8599b26fcbf - the merkel hash of the related document.</li>
+</ul>
+
+<p>Messages have a simple state lifecycle (pending, bundled, sent, delivered, failed, withdrawn)</p>
+
+<p>In some cases, channel policy may permit the transmission of additional related information about a message as a further set of semantic triples.  In this way, recipients can build semantic graphs of related data (eg certificate of origin 1234 is linked to consignment 5678 that is on voyage 9123)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
+</code></pre></div></div>
+
+<h3 id="subscriptions-api">Subscriptions API</h3>
+
+<p>The subscriptions API allows IGL clients to be notiofed when there is a message for them.  The IGL subscriptions service will POST any IGL messages that match the subscription pattern to the subscribers callback API.</p>
+
+<p><img src="SubscriptionAPI.png" alt="Subscription API" /></p>
+
+<p>There are two type of subscribers</p>
+<ul>
+  <li>members of the regulated community - can subscribe to updates about messages they have sent (eg keep me updated about CoO number 123)</li>
+  <li>regulators - can subscribe to predicate topic streams (ie tell me about all CoOs).</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
+</code></pre></div></div>
+
+<h3 id="channel-api">Channel API</h3>
 
 <p>to-do : document this
-to-do : add swagegr spec</p>
+to-do : add swagger spec</p>
 
-<h3 id="channel-registry-api">Channel Registry API</h3>
+<h3 id="registry-api">Registry API</h3>
 
-<p>The channel registry supports the query of channels on an IGL node channel registry.</p>
+<p>The registry API supports the query of channels on an IGL node channel registry.</p>
 
 <ul>
   <li>Query operations SHOULD be open to public unauthenticated clients.</li>
@@ -637,18 +699,10 @@ to-do : add swagegr spec</p>
   <li>An IGL node MAY choose to hide the existence of some channels from pubkuc queries.</li>
 </ul>
 
-<p><img src="ChannelSpecification.png" alt="ChannelSpec" /></p>
+<p><img src="RegistryAPI.png" alt="Registry API" /></p>
 
-<p>to-do : document this
-to-do : add swagegr spec</p>
-
-<h3 id="document-api--acl">Document API &amp; ACL</h3>
-
-<p>To-Do : document this</p>
-
-<h3 id="subscriptions-api">Subscriptions API</h3>
-
-<p>We think subscriptions should just use <a href="https://www.w3.org/TR/websub/">W3C WebSub</a> - but will need to say something about standard WebSub event format.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
+</code></pre></div></div>
 
 <h2 id="semantic-model">Semantic Model</h2>
 
