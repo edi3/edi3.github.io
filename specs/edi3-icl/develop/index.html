@@ -208,10 +208,12 @@
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#semantic-model">Semantic Model</a></li>
-<li class="toc-entry toc-h2"><a href="#security-architecture">Security Architecture</a>
+<li class="toc-entry toc-h2"><a href="#security-architecture">Security Architecture</a></li>
+<li class="toc-entry toc-h2"><a href="#igl-node-channel-security">IGL Node-Channel security</a></li>
+<li class="toc-entry toc-h2"><a href="#igl-node-node-g2g-security">IGL Node-Node (G2G) security</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#igl-node-identity">IGL Node Identity</a></li>
-<li class="toc-entry toc-h3"><a href="#client-identity">Client Identity</a></li>
+<li class="toc-entry toc-h3"><a href="#igl-client-node-b2g-security">IGL client-Node (B2G) security</a></li>
+<li class="toc-entry toc-h3"><a href="#igl-verifiable-claims">IGL verifiable claims</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#component-model">Component Model</a>
@@ -231,7 +233,7 @@
 <li class="toc-entry toc-h1"><a href="#igl-distributed-ledger-technology-implementations">IGL Distributed Ledger Technology Implementations</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#ethereum">Ethereum</a></li>
-<li class="toc-entry toc-h2"><a href="#hyperledger-sawtooth">Hyperledger Sawtooth</a></li>
+<li class="toc-entry toc-h2"><a href="#hyperledger">Hyperledger</a></li>
 </ul>
 </li>
 </ul>
@@ -639,25 +641,49 @@ to-do : add swagger spec</p>
 
 <h2 id="semantic-model">Semantic Model</h2>
 
-<p>This section is all about the predicate (ie message type IRI) and it’s relationship to supported document models/schema.</p>
+<p>An IGL message is a semantic triple</p>
+
+<ul>
+  <li>subject - typically the identifier of a thing  (eg certificate of origin #123)</li>
+  <li>predicate - a named relationship drawn froma  controlled vocabulary (eg unece.org:coo:created)</li>
+  <li>object - the thing itself (eg the derticate of origin document identified by the hash of the document)</li>
+</ul>
+
+<p>A number of related messages may be sent via the IGL, possibly by different parties in a jurisduiction.  The combination of the the messages allows the receiver node to construct a semantic graph or related entities.</p>
+
+<p><a href="SemanticGraph.png">Semantic Graph</a></p>
+
+<p>to do:  add table with specific examples of subject-object-predictates for the graph in the diagram.</p>
 
 <p>to-do: more details</p>
 
 <h2 id="security-architecture">Security Architecture</h2>
 
-<p>There are two very distinct layers of users and corresponding identity assurance models.</p>
+<p>There are different layers to the security mnodel for IGL as shownb in the diagram below</p>
 
-<h3 id="igl-node-identity">IGL Node Identity</h3>
+<p><img src="SecurityModel.png" alt="Security Model" /></p>
 
-<p>Mutual SSL</p>
+<ul>
+  <li>Authorised Agencies maintain channel keys that represent their identity on a speciucl ledger channel (eg ethereum).  The ksy are provided to the node operator to whom the agency delegates authority to operate a channel.</li>
+  <li>G2G security between coiuntries (eg for document API access) is managed using mutual SSL to verify DNS domains of the participating authorised agencies (eg agencyA.gov.xx)</li>
+  <li>B2G security within a jurisdiction is managed using OAuth2 federated identity claims.</li>
+</ul>
+
+<h2 id="igl-node-channel-security">IGL Node-Channel security</h2>
 
 <p>to-do: more details</p>
 
-<h3 id="client-identity">Client Identity</h3>
+<h2 id="igl-node-node-g2g-security">IGL Node-Node (G2G) security</h2>
 
-<p>In country IDP</p>
+<p>to-do: more details</p>
+
+<h3 id="igl-client-node-b2g-security">IGL client-Node (B2G) security</h3>
 
 <p>to-do: more details about claims etc</p>
+
+<h3 id="igl-verifiable-claims">IGL verifiable claims</h3>
+
+<p>to-do: more about verifiable claims</p>
 
 <h2 id="component-model">Component Model</h2>
 
@@ -737,7 +763,7 @@ to-do : add swagger spec</p>
 
 <h2 id="ethereum">Ethereum</h2>
 
-<h2 id="hyperledger-sawtooth">Hyperledger Sawtooth</h2>
+<h2 id="hyperledger">Hyperledger</h2>
 
 
             
