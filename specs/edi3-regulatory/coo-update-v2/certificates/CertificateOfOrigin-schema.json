@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://edi3.org/specs/edi3-regulatory/develop/certificates/CertificateOfOrigin-schema.json",
+  "description": "The json schema for CertificateOfOrigin",
+  "type": "object",
+  "properties": {
+    "certificateOfOrigin": {
+      "$ref": "edi3.org/specs/edi3-regulatory/develop/certificates/CertificateOfOrigin.json#/components/schemas/CertificateOfOrigin"
+    }
+  },
+  "required": [
+    "certificateOfOrigin"
+  ]
+}

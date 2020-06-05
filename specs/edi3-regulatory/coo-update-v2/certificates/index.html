@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>edi3 Certificates 1.0 Specification - edi3 Standards by edi3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-line">
+        <div class="wrapper">
+            <div id="mobile-menu-wrapper" class="mobile-menu">
+                <button id="hamburger-menu" class="hamburger-menu">
+                    <span>toggle menu</span>
+                </button>
+                <div id="mobile-menu" style="display: none;">
+                    
+                    <ul class="sidebar-menu">
+    
+    <li class="menu-title"><a href="/">Overview</a></li>
+    <li><a  href="/governance/">Governance</a></li>
+    <li><a  href="/business-case/">Business Case</a></li>
+    <li><a  href="/glossary/">Glossary</a></li>
+    <li class="menu-title"><a href="/semantic-specs/">Semantic Specs</a></li>
+    <li><a  href="/trade/">Trade Domain</a></li>
+    <li><a  href="/transport/">Transport Domain</a></li>
+    <li><a  href="/regulatory/">Regulatory Domain</a></li>
+    <li><a  href="/finance/">Finance Domain</a></li>
+    <li><a  href="/unlocode/">UN Locode</a></li>
+    <li><a  href="/codelists/">Code Lists</a></li>
+    <li><a  href="/dictionary/">Dictionary</a></li>
+    <li class="menu-title"><a href="/technical-specs/">Technical Specs</a></li>
+    <li><a  href="/icl/">Inter Customs Ledger</a></li>
+    <li><a  href="/identity/">Identity Provider</a></li>
+    <li><a  href="/discovery/">Resource Discovery</a></li>
+    <li><a  href="/description/">Resource Description</a></li>
+    <li><a  href="/events/">Event Structure</a></li>
+    <li><a  href="/notary/">Notary Service</a></li>
+    <li class="menu-title"><a href="/tools-and-methods/">Tools and Methods</a></li>
+    <li><a  href="/uml-profile/">UML Profile</a></li>
+    <li><a  href="/api-ndr/">OpenAPI NDR</a></li>
+    <li><a  href="/json-ld-ndr/">JSON-LD NDR</a></li>
+    <li><a  href="/api-conformance/">API Conformance</a></li>
+    <li><a  href="/model-interchange/">Model Interchange</a></li>
+    <li class="menu-title"><a href="/community/">Community</a></li>
+    <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter (subscribe)</a></li>
+    <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ" target="_blank">Chat (join team)</a></li>
+    <li><a  href="/github/">GitHub</a></li>
+</ul>
+
+                </div>
+            </div>
+            <a href="/" class="logo"><img src="/images/logo-horisontal-white.svg" alt="edi3"></a>
+            <div class="header-search">
+                <script>
+                    (function() {
+                        var cx = '002841699265932723855:7gvs7wrhud8';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
+                </script>
+                <gcse:search></gcse:search>
+            </div>
+            
+        </div>
+    </div>
+    <div class="header-content">
+        <div class="wrapper">
+            <div class="header-text-box">
+                <div class="header-name">edi3 Standards</div>
+                <div class="header-tagline">Supply Chain Standards and Tools for Web Developers</div>
+            </div>
+        </div>
+    </div>
+</header>
+<script type="text/javascript">
+    document.getElementById('hamburger-menu').onclick = function() {
+        var nf = document.getElementById('mobile-menu');
+
+        // Show and hide menu items when toggle is clicked
+        if(nf.style.display==='none') {
+            nf.style.display = 'block';
+        }
+        else {
+            nf.style.display = 'none';
+        }
+    };
+
+    window.addEventListener('click', function(e){
+        if (!document.getElementById('mobile-menu-wrapper').contains(e.target)){
+            document.getElementById('mobile-menu').style.display= 'none';
+        }
+    });
+</script>
+
+<div class="main-wrapper">
+    <div class="main-content">
+        <div class="page-sidebar">
+            <ul class="sidebar-menu">
+    
+    <li class="menu-title"><a href="/">Overview</a></li>
+    <li><a  href="/governance/">Governance</a></li>
+    <li><a  href="/business-case/">Business Case</a></li>
+    <li><a  href="/glossary/">Glossary</a></li>
+    <li class="menu-title"><a href="/semantic-specs/">Semantic Specs</a></li>
+    <li><a  href="/trade/">Trade Domain</a></li>
+    <li><a  href="/transport/">Transport Domain</a></li>
+    <li><a  href="/regulatory/">Regulatory Domain</a></li>
+    <li><a  href="/finance/">Finance Domain</a></li>
+    <li><a  href="/unlocode/">UN Locode</a></li>
+    <li><a  href="/codelists/">Code Lists</a></li>
+    <li><a  href="/dictionary/">Dictionary</a></li>
+    <li class="menu-title"><a href="/technical-specs/">Technical Specs</a></li>
+    <li><a  href="/icl/">Inter Customs Ledger</a></li>
+    <li><a  href="/identity/">Identity Provider</a></li>
+    <li><a  href="/discovery/">Resource Discovery</a></li>
+    <li><a  href="/description/">Resource Description</a></li>
+    <li><a  href="/events/">Event Structure</a></li>
+    <li><a  href="/notary/">Notary Service</a></li>
+    <li class="menu-title"><a href="/tools-and-methods/">Tools and Methods</a></li>
+    <li><a  href="/uml-profile/">UML Profile</a></li>
+    <li><a  href="/api-ndr/">OpenAPI NDR</a></li>
+    <li><a  href="/json-ld-ndr/">JSON-LD NDR</a></li>
+    <li><a  href="/api-conformance/">API Conformance</a></li>
+    <li><a  href="/model-interchange/">Model Interchange</a></li>
+    <li class="menu-title"><a href="/community/">Community</a></li>
+    <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter (subscribe)</a></li>
+    <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ" target="_blank">Chat (join team)</a></li>
+    <li><a  href="/github/">GitHub</a></li>
+</ul>
+
+        </div>
+        <div class="page-content docs-content">
+            
+            <div class="spec-header">
+                
+                
+                
+                <ul>
+                    <li>Spec ID: <p>certificates/1</p>
+</li><li><p><img src="//rfc.unprotocols.org/spec:2/COSS/draft.svg" alt="draft" /></p>
+</li>
+                    <li>Editor: <p><a href="mailto:steve.capell@gmail.com">Steven Capell</a></p>
+</li>
+                    <li>Contributors: 
+</li>
+                    <li><a href="/specs/edi3-regulatory/coo-update-v2/certificates/certificates-coo-update-v2.docx">Export to Doc</a></li>
+                </ul>
+            </div>
+            <div class="specs-toc">
+    <!--<div class="specs-toc-title">Table of contents</div>-->
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
+<li class="toc-entry toc-h2"><a href="#goals">Goals</a></li>
+<li class="toc-entry toc-h2"><a href="#status">Status</a></li>
+<li class="toc-entry toc-h2"><a href="#glossary">Glossary</a></li>
+<li class="toc-entry toc-h2"><a href="#licence">Licence</a></li>
+<li class="toc-entry toc-h2"><a href="#change-process">Change Process</a></li>
+<li class="toc-entry toc-h2"><a href="#language">Language</a></li>
+<li class="toc-entry toc-h1"><a href="#certificate-of-origin">Certificate Of Origin</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#data-model">Data Model</a></li>
+<li class="toc-entry toc-h2"><a href="#state-lifecycle">State Lifecycle</a></li>
+<li class="toc-entry toc-h2"><a href="#api-specification">API Specification</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#certificate-of-non-manipulation">Certificate of Non Manipulation</a></li>
+<li class="toc-entry toc-h1"><a href="#related-material">Related Material</a></li>
+</ul>
+</div>
+            <h2 id="introduction">Introduction</h2>
+
+<p>Regulatory processes often involve certificates that assert compliance of a shipment with some specification or legislative framework.  For example</p>
+
+<ul>
+  <li>A Certificate of Origin (CoO) is issued by an accredited body on behalf of an exporter and is required by the importing regulator.  It asserts that the goods in a consignment conform to the terms of a Free Trade Agreement (FTA) and so may attract concenssional duty terms.</li>
+  <li>A Certifictae of Non Manipulation (CoNM) is issued by an accredited body on behalf of a transhipment port/country and it asserts that goods in a consignment were not altered during transhipment.</li>
+  <li>A PhtoSanitary certificate is issued by an accredity authority on behalf of an exporter of food products and is required to meet the food safety standards of the importing regulator.</li>
+  <li>And dozens of others.</li>
+</ul>
+
+<p>In most cases certificates are about a consignment of goods. Accordingly, the edi3 approach to defining the data model of certifictaes is to “attach” certificate data to the existing UN/CEFACT trade and transport data models.</p>
+
+<h2 id="goals">Goals</h2>
+
+<p>To publish a consistent suite of data models and state lifecycles for various certifictaes used to satisfy regulatory processes and to support the <a href="https://edi3.org/icl/">Inter Customs Ledger</a> project.</p>
+
+<h2 id="status">Status</h2>
+
+<ul>
+  <li>This specification is in <img src="//rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="draft" /> state.  This means that design consensus has been reached and the specification is ready for implementation verification.</li>
+</ul>
+
+<h2 id="glossary">Glossary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phrase</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CoO</td>
+      <td>Certificate of Origin</td>
+    </tr>
+    <tr>
+      <td>CoNM</td>
+      <td>Certificate of Non Manipulation</td>
+    </tr>
+    <tr>
+      <td>FTA</td>
+      <td>Free Trade Agreement</td>
+    </tr>
+    <tr>
+      <td>RDM</td>
+      <td>Reference Data Model</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="licence">Licence</h2>
+
+<p>All material published on edi3.org including all parts of this specification are the intellectual property of the UN as per the <a href="https://www.unece.org/fileadmin/DAM/cefact/cf_plenary/plenary12/ECE_TRADE_C_CEFACT_2010_20_Rev2E_UpdatedIPRpolicy.pdf">UN/CEFACT IPR Policy</a>.</p>
+
+<p>This Specification is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version. See http://www.gnu.org/licenses.</p>
+
+<h2 id="change-process">Change Process</h2>
+
+<p>This document is governed by the <a href="http://rfc.unprotocols.org/spec:2/COSS/">2/COSS</a> (COSS).</p>
+
+<h2 id="language">Language</h2>
+
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” 
+in this document are to be interpreted as described in RFC 2119.</p>
+
+<h1 id="certificate-of-origin">Certificate Of Origin</h1>
+
+<h2 id="data-model">Data Model</h2>
+
+<p>The Certificate of Origin (CoO) Data model is drawn from the UN/CEFACT Buy-Ship-Pay reference data model and conforms to the edi3 <a href="https://edi3.org/specs/edi3-uml-profile/master/">UML profile specification</a></p>
+
+<p><img src="CertificateOfOrigin.png" alt="CoO" /></p>
+
+<h2 id="state-lifecycle">State Lifecycle</h2>
+
+<p>The certificate state lifecycle is shown below.  The “status” property of the “CertificateOfOrigin” entity in the API model MUST equal one of these values.</p>
+
+<p><img src="CoO_StateLifecycle.png" alt="CoO Lifecycle" /></p>
+
+<h2 id="api-specification">API Specification</h2>
+
+<p>The Data Model has been used to generate a <a href="https://edi3.org/specs/edi3-regulatory/develop/certificates/CertificateOfOrigin.html">CoO REST API specification</a> in accordance with the <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md">Open API3.0</a> standard.</p>
+
+<p>The full open API schema definition is provided below.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openapi: 3.0.0
+info:
+  description: ''
+  title: CertificateOfOrigin
+  version: ''
+servers: []
+paths:
+  /CertificatesOfOrigin:
+    get:
+      tags:
+        - CertificatesOfOrigin
+      description: Get a list of CertificateOfOrigin
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/CertificateOfOrigin'
+                type: array
+    post:
+      tags:
+        - CertificatesOfOrigin
+      description: Create a new CertificateOfOrigin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CertificateOfOrigin'
+        description: ''
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CertificateOfOrigin'
+          description: Created
+  '/CertificatesOfOrigin/{id}':
+    get:
+      tags:
+        - CertificatesOfOrigin
+      description: Get single CertificateOfOrigin by id
+      parameters:
+        - name: id
+          in: path
+          description: missing description
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CertificateOfOrigin'
+    put:
+      tags:
+        - CertificatesOfOrigin
+      description: Update an existing CertificateOfOrigin
+      parameters:
+        - name: id
+          in: path
+          description: missing description
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CertificateOfOrigin'
+        description: ''
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CertificateOfOrigin'
+components:
+  schemas:
+    CertificateOfOrigin:
+      description: ''
+      type: object
+      properties:
+        status:
+          description: missing description
+          type: string
+        isPreferential:
+          description: missing description
+          type: boolean
+        freeTradeAgreement:
+          description: missing description
+          type: string
+        SupplyChain_Consignment:
+          allOf:
+            - description: ''
+            - $ref: '#/components/schemas/SupplyChain_Consignment'
+      allOf:
+        - $ref: '#/components/schemas/Exchanged_Document'
+        - type: object
+      required:
+        - status
+        - isPreferential
+        - SupplyChain_Consignment
+    CrossBorder_RegulatoryProcedure:
+      description: &gt;-
+        A set of formal steps to satisfy a cross-border regulation, law or
+        convention.
+      type: object
+      properties:
+        originCriteriaText:
+          description: &gt;-
+            The origin criteria, expressed as text, for this cross-border
+            regulatory procedure.
+          type: string
+    Document_Authentication:
+      description: A proof that a document is genuine.
+      type: object
+      properties:
+        actualDateTime:
+          description: &gt;-
+            The actual date, time, date time, or other date time value of this
+            document authentication.
+          type: string
+        statement:
+          description: 'The statement, expressed as text, for this document authentication.'
+          type: string
+    Exchanged_Document:
+      description: &gt;-
+        A collection of data for a piece of written, printed or electronic
+        matter that is exchanged between two or more parties.
+      type: object
+      properties:
+        iD:
+          description: The unique identifier of this exchanged document.
+          type: string
+        issueDateTime:
+          description: &gt;-
+            The date, time, date time or other date time value for the issuance
+            of this exchanged document.
+          type: string
+        name:
+          description: 'A name, expressed as text, of this exchanged document.'
+          type: string
+        attachedFile:
+          allOf:
+            - description: A binary file attached to this exchanged document.
+            - $ref: '#/components/schemas/Specified_BinaryFile'
+        firstSignatoryAuthentication:
+          allOf:
+            - description: &gt;-
+                The first or primary signature that authenticates this exchanged
+                document.
+            - $ref: '#/components/schemas/Document_Authentication'
+        issueLocation:
+          allOf:
+            - description: The location where this exchanged document has been issued.
+            - $ref: '#/components/schemas/Logistics_Location'
+        issuer:
+          allOf:
+            - description: The party that issues this exchanged document.
+            - $ref: '#/components/schemas/Trade_Party'
+    Logistics_Location:
+      description: A logistics related physical location or place.
+      type: object
+      properties:
+        iD:
+          description: &gt;-
+            A unique identifier for this logistics related location, such as a
+            United Nations Location Code (UNLOCODE) or GS1 Global Location
+            Number (GLN).
+          type: string
+        name:
+          description: 'A name, expressed as text, of this logistics related location.'
+          type: string
+    Logistics_Package:
+      description: &gt;-
+        A self-contained wrapping or container within which goods can be
+        contained for logistics purposes, such as a box or a barrel which can be
+        filled, partially filled or empty.
+      type: object
+      properties:
+        sequenceNumber:
+          description: The sequence number of this logistics package.
+          type: string
+        grossVolume:
+          description: The measure of the gross volume of this logistics package.
+          type: string
+        grossWeight:
+          description: &gt;-
+            The measure of the gross weight (mass) of this logistics package and
+            its contents.
+          type: string
+    Logistics_TransportMeans:
+      description: &gt;-
+        The devices used to convey goods or other objects from place to place
+        during logistics cargo movements.
+      type: object
+      properties:
+        iD:
+          description: &gt;-
+            An identifier of this logistics means of transport, such as the
+            International Maritime Organization number of a vessel.
+          type: string
+        name:
+          description: 'The name, expressed as text, of this logistics means of transport.'
+          type: string
+    Logistics_TransportMovement:
+      description: &gt;-
+        The conveyance (physical carriage) of goods or other objects used for
+        logistics transport purposes.
+      type: object
+      properties:
+        iD:
+          description: &gt;-
+            The unique identifier for this logistics transport movement, such as
+            a voyage number, flight number, or trip number.
+          type: string
+        information:
+          description: &gt;-
+            Information, expressed as text, for this logistics transport
+            movement.
+          type: string
+        usedTransportMeans:
+          allOf:
+            - description: &gt;-
+                The means of transport used for this logistics transport
+                movement.
+            - $ref: '#/components/schemas/Logistics_TransportMeans'
+    Product_Classification:
+      description: &gt;-
+        A systematic arrangement of products in classes or categories according
+        to established criteria.
+      type: object
+      properties:
+        classCode:
+          description: The code specifying the class for this product classification.
+          type: string
+        className:
+          description: 'A class name, expressed as text, for this product classification.'
+          type: string
+    Referenced_Document:
+      description: 'Written, printed or electronic matter that is referenced.'
+      type: object
+      properties:
+        iD:
+          description: A unique identifier for this referenced document.
+          type: string
+        attachedBinaryFile:
+          allOf:
+            - description: A specified binary file attached to this referenced document.
+            - $ref: '#/components/schemas/Specified_BinaryFile'
+    Specified_BinaryFile:
+      description: A specified computer file or program stored in a binary format.
+      type: object
+      properties:
+        uRI:
+          description: &gt;-
+            The unique Uniform Resource Identifier (URI) for this specified
+            binary file.
+          type: string
+        encodingCode:
+          description: The code specifying the encoding of this specified binary file.
+          type: string
+        mIMECode:
+          description: &gt;-
+            The code specifying the Multipurpose Internet Mail Extensions (MIME)
+            type for this specified binary file.
+          type: string
+        size:
+          description: The measure of the size of this specified binary file.
+          type: string
+    SupplyChain_Consignment:
+      description: &gt;-
+        A separately identifiable collection of goods items to be transported or
+        available to be transported from one consignor to one consignee in a
+        supply chain via one or more modes of transport where each consignment
+        is the subject of one single transport contract.
+      type: object
+      properties:
+        iD:
+          description: A unique identifier for this supply chain consignment.
+          type: string
+        exportCountry:
+          allOf:
+            - description: The export country for this supply chain consignment.
+            - $ref: '#/components/schemas/Trade_Country'
+        exporter:
+          allOf:
+            - description: The party who exports this supply chain consignment.
+            - $ref: '#/components/schemas/Trade_Party'
+        importCountry:
+          allOf:
+            - description: The import country for this supply chain consignment.
+            - $ref: '#/components/schemas/Trade_Country'
+        importer:
+          allOf:
+            - description: The party who imports this supply chain consignment.
+            - $ref: '#/components/schemas/Trade_Party'
+        includedConsignmentItem:
+          items:
+            $ref: '#/components/schemas/SupplyChain_ConsignmentItem'
+          type: array
+          description: A consignment item included in this supply chain consignment.
+        loadingBaseportLocation:
+          allOf:
+            - description: &gt;-
+                The baseport location at which this supply chain consignment is
+                to be loaded on a means of transport according to the transport
+                contract.
+            - $ref: '#/components/schemas/Logistics_Location'
+        mainCarriageTransportMovement:
+          allOf:
+            - description: &gt;-
+                A main carriage logistics transport movement for this supply
+                chain consignment.
+            - $ref: '#/components/schemas/Logistics_TransportMovement'
+        transportPackage:
+          items:
+            $ref: '#/components/schemas/Logistics_Package'
+          type: array
+          description: Transport packages for this supply chain consignment.
+        unloadingBaseportLocation:
+          allOf:
+            - description: &gt;-
+                The baseport location at which this supply chain consignment is
+                to be unloaded from a means of transport according to the
+                transport contract.
+            - $ref: '#/components/schemas/Logistics_Location'
+    SupplyChain_ConsignmentItem:
+      description: &gt;-
+        An item within a supply chain consignment of goods separately identified
+        for transport and customs purposes.
+      type: object
+      properties:
+        iD:
+          description: A unique identifier for this supply chain consignment item.
+          type: string
+        information:
+          items:
+            description: &gt;-
+              Information, expressed as text, for this supply chain consignment
+              item.
+            type: string
+          type: array
+        crossBorderRegulatoryProcedure:
+          allOf:
+            - description: &gt;-
+                A cross-border regulatory procedure applicable to this supply
+                chain consignment item.
+            - $ref: '#/components/schemas/CrossBorder_RegulatoryProcedure'
+        manufacturer:
+          allOf:
+            - description: The party which manufactured this supply chain consignment item.
+            - $ref: '#/components/schemas/Trade_Party'
+        tradeLineItem:
+          allOf:
+            - description: &gt;-
+                A trade line item included in this supply chain consignment
+                item.
+            - $ref: '#/components/schemas/SupplyChain_TradeLineItem'
+    SupplyChain_TradeLineItem:
+      description: &gt;-
+        A collection of information specific to an item being used or reported
+        on for supply chain trade purposes.
+      type: object
+      properties:
+        sequenceNumber:
+          description: A sequence number for this supply chain trade line item.
+          type: string
+        description:
+          description: &gt;-
+            The code specifying a description of this supply chain trade line
+            item.
+          type: string
+        invoiceReference:
+          allOf:
+            - description: A document referenced for this supply chain trade line item.
+            - $ref: '#/components/schemas/Referenced_Document'
+        tradeProduct:
+          allOf:
+            - description: The product specified for this supply chain trade line item.
+            - $ref: '#/components/schemas/Trade_Product'
+    Trade_Address:
+      description: &gt;-
+        The location at which a particular trade related organization or person
+        may be found or reached.
+      type: object
+      properties:
+        line1:
+          description: missing description
+          type: string
+        line2:
+          description: missing description
+          type: string
+        cityName:
+          description: &gt;-
+            The name, expressed as text, of the city, town or village of this
+            trade address.
+          type: string
+        postcode:
+          description: A code specifying the postcode of this trade address.
+          type: string
+        countrySubDivisionName:
+          description: &gt;-
+            A name, expressed as text, of the sub-division of a country for this
+            trade address.
+          type: string
+        countryCode:
+          allOf:
+            - description: The unique identifier of a country for this trade address.
+            - $ref: '#/components/schemas/ISO3166_Code'
+    ISO3166_Code:
+      $ref: &gt;-
+        https://edi3.org/shared/openapi/ISO/codes.yml#/components/schemas/ISO3166_Code
+    Trade_Country:
+      description: &gt;-
+        The area of land that belongs to a nation together with its properties,
+        such as population, political organization, etc., used or referenced for
+        trade purposes.
+      type: object
+      properties:
+        code:
+          allOf:
+            - description: A unique identifier for this trade country.
+            - $ref: '#/components/schemas/ISO3166_Code'
+        name:
+          description: 'A name, expressed as text, of this trade country.'
+          type: string
+    Trade_Party:
+      description: &gt;-
+        An individual, a group, or a body having a role in a trade business
+        function.
+      type: object
+      properties:
+        iD:
+          description: A unique identifier of this trade party.
+          type: string
+        name:
+          description: 'The name, expressed as text, for this trade party.'
+          type: string
+        postalAddress:
+          allOf:
+            - description: The postal address for this trade party.
+            - $ref: '#/components/schemas/Trade_Address'
+    Trade_Product:
+      description: &gt;-
+        Any tangible output or service produced by human or mechanical effort or
+        by a natural process for trade purposes.
+      type: object
+      properties:
+        iD:
+          description: A unique identifier for this trade product.
+          type: string
+        description:
+          description: A textual description for this trade product.
+          type: string
+        harmonisedTariffCode:
+          allOf:
+            - description: A product classification designated for this trade product.
+            - $ref: '#/components/schemas/Product_Classification'
+        originCountry:
+          allOf:
+            - description: A country of origin for this trade product.
+            - $ref: '#/components/schemas/Trade_Country'
+</code></pre></div></div>
+
+<h1 id="certificate-of-non-manipulation">Certificate of Non Manipulation</h1>
+
+<p>To be completed</p>
+
+<h1 id="related-material">Related Material</h1>
+
+<ul>
+  <li><a href="chafta-coo-template.pdf">CHAFTA CoO Template PDF</a></li>
+  <li><a href="jaepa-coo-template.pdf">JAEPA CoO Template</a></li>
+  <li><a href="CertificateOfOriginDataElementMapping.xlsx">CoO data mapping UN / WCO Excel</a></li>
+</ul>
+
+            
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <a href="/" class="footer-logo"><img src="/images/logo-horisontal-white.svg" alt=""></a>
+    <ul class="footer-menu">
+        <li><a href="http://edi3.org/about">About edi3</a></li>
+        <li><a href="https://github.com/edi3" target="_blank">Github</a></li>
+        <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter</a></li>
+        <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ" target="_blank">Join</a> <a href="https://edi3.slack.com/messages/general/" target="_blank">team</a></li>
+    </ul>
+    <div class="footer-credits">
+        This page was generated by GitHub Pages.
+        Comments, issues and suggestions are welcome in the <a href="https://github.com/edi3/edi3.github.io/issues/new">ticket system</a>.
+        Pull requests welcome in the <a href="https://github.com/edi3/edi3.github.io/">site repository</a>.
+    </div>
+</footer>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-135810483-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="/js/anchor.min.js"></script>
+<script>
+    anchors.add('h1, h2, h3, h4, h5');
+    anchors.remove('.no-anchor, .page-content > h1:first-child');
+</script>
+</body>
+</html>
