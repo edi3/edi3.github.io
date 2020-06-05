@@ -82,6 +82,32 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CertificateOfOrigin'
+  '/CertificatesOfOrigin/{id}/Certification':
+    post:
+      tags:
+        - CertificatesOfOrigin
+      description: Create a new CertificateOfOrigin
+      parameters:
+        - name: id
+          in: path
+          description: missing description
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DocumentAuthentication'
+        description: ''
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DocumentAuthentication'
+          description: Created
 components:
   schemas:
     CertificateOfOrigin:
@@ -89,26 +115,31 @@ components:
       type: object
       properties:
         status:
-          description: missing description
+          description: >-
+            The status of the certificate of origin - but be one of the allowed
+            state lifecycle values.
           type: string
         isPreferential:
-          description: missing description
+          description: >-
+            indicates whether the certificate is a preferential or
+            non-preferential certificate of origin.
           type: boolean
         freeTradeAgreement:
-          description: missing description
+          description: >-
+            for preferential certificates of origin, the name of the free trade
+            agreement (eg CHAFTA)
           type: string
-        SupplyChain_Consignment:
+        supplyChainConsignment:
           allOf:
             - description: ''
-            - $ref: '#/components/schemas/SupplyChain_Consignment'
+            - $ref: '#/components/schemas/SupplyChainConsignment'
       allOf:
-        - $ref: '#/components/schemas/Exchanged_Document'
+        - $ref: '#/components/schemas/ExchangedDocument'
         - type: object
       required:
-        - status
         - isPreferential
-        - SupplyChain_Consignment
-    CrossBorder_RegulatoryProcedure:
+        - supplyChainConsignment
+    CrossBorderRegulatoryProcedure:
       description: >-
         A set of formal steps to satisfy a cross-border regulation, law or
         convention.
@@ -119,19 +150,23 @@ components:
             The origin criteria, expressed as text, for this cross-border
             regulatory procedure.
           type: string
-    Document_Authentication:
+    DocumentAuthentication:
       description: A proof that a document is genuine.
       type: object
       properties:
+        signature:
+          description: the multi-hash of the document  that is authenticated
+          type: string
         actualDateTime:
           description: >-
             The actual date, time, date time, or other date time value of this
             document authentication.
           type: string
+          format: date-time
         statement:
           description: 'The statement, expressed as text, for this document authentication.'
           type: string
-    Exchanged_Document:
+    ExchangedDocument:
       description: >-
         A collection of data for a piece of written, printed or electronic
         matter that is exchanged between two or more parties.
@@ -140,33 +175,44 @@ components:
         iD:
           description: The unique identifier of this exchanged document.
           type: string
+          format: uri
         issueDateTime:
           description: >-
             The date, time, date time or other date time value for the issuance
             of this exchanged document.
           type: string
+          format: date-time
         name:
           description: 'A name, expressed as text, of this exchanged document.'
           type: string
         attachedFile:
           allOf:
             - description: A binary file attached to this exchanged document.
-            - $ref: '#/components/schemas/Specified_BinaryFile'
+            - $ref: '#/components/schemas/SpecifiedBinaryFile'
         firstSignatoryAuthentication:
           allOf:
             - description: >-
                 The first or primary signature that authenticates this exchanged
                 document.
-            - $ref: '#/components/schemas/Document_Authentication'
+            - $ref: '#/components/schemas/DocumentAuthentication'
         issueLocation:
           allOf:
             - description: The location where this exchanged document has been issued.
-            - $ref: '#/components/schemas/Logistics_Location'
+            - $ref: '#/components/schemas/LogisticsLocation'
         issuer:
           allOf:
             - description: The party that issues this exchanged document.
-            - $ref: '#/components/schemas/Trade_Party'
-    Logistics_Location:
+            - $ref: '#/components/schemas/TradeParty'
+        secondSignatoryAuthentication:
+          allOf:
+            - description: >-
+                The second signature, also known as the first counter signature,
+                that has been authenticated on this exchanged document
+                indicating where appropriate the authentication party.
+            - $ref: '#/components/schemas/DocumentAuthentication'
+      required:
+        - iD
+    LogisticsLocation:
       description: A logistics related physical location or place.
       type: object
       properties:
@@ -176,19 +222,21 @@ components:
             United Nations Location Code (UNLOCODE) or GS1 Global Location
             Number (GLN).
           type: string
+          format: uri
         name:
           description: 'A name, expressed as text, of this logistics related location.'
           type: string
-    Logistics_Package:
+    LogisticsPackage:
       description: >-
         A self-contained wrapping or container within which goods can be
         contained for logistics purposes, such as a box or a barrel which can be
         filled, partially filled or empty.
       type: object
       properties:
-        sequenceNumber:
-          description: The sequence number of this logistics package.
+        iD:
+          description: The unique identifier for this logistics package.
           type: string
+          format: uri
         grossVolume:
           description: The measure of the gross volume of this logistics package.
           type: string
@@ -197,7 +245,7 @@ components:
             The measure of the gross weight (mass) of this logistics package and
             its contents.
           type: string
-    Logistics_TransportMeans:
+    LogisticsTransportMeans:
       description: >-
         The devices used to convey goods or other objects from place to place
         during logistics cargo movements.
@@ -208,10 +256,11 @@ components:
             An identifier of this logistics means of transport, such as the
             International Maritime Organization number of a vessel.
           type: string
+          format: uri
         name:
           description: 'The name, expressed as text, of this logistics means of transport.'
           type: string
-    Logistics_TransportMovement:
+    LogisticsTransportMovement:
       description: >-
         The conveyance (physical carriage) of goods or other objects used for
         logistics transport purposes.
@@ -222,18 +271,23 @@ components:
             The unique identifier for this logistics transport movement, such as
             a voyage number, flight number, or trip number.
           type: string
+          format: uri
         information:
           description: >-
             Information, expressed as text, for this logistics transport
             movement.
           type: string
+        departureEvent:
+          allOf:
+            - description: A departure event during this logistics transport movement.
+            - $ref: '#/components/schemas/TransportEvent'
         usedTransportMeans:
           allOf:
             - description: >-
                 The means of transport used for this logistics transport
                 movement.
-            - $ref: '#/components/schemas/Logistics_TransportMeans'
-    Product_Classification:
+            - $ref: '#/components/schemas/LogisticsTransportMeans'
+    ProductClassification:
       description: >-
         A systematic arrangement of products in classes or categories according
         to established criteria.
@@ -245,18 +299,36 @@ components:
         className:
           description: 'A class name, expressed as text, for this product classification.'
           type: string
-    Referenced_Document:
+    ReferencedDocument:
       description: 'Written, printed or electronic matter that is referenced.'
       type: object
       properties:
         iD:
           description: A unique identifier for this referenced document.
           type: string
+          format: uri
+        formattedIssueDateTime:
+          description: >-
+            The formatted date or date time for the issuance of this referenced
+            document.
+          type: string
+          format: date-time
         attachedBinaryFile:
           allOf:
-            - description: A specified binary file attached to this referenced document.
-            - $ref: '#/components/schemas/Specified_BinaryFile'
-    Specified_BinaryFile:
+            - $ref: '#/components/schemas/SpecifiedBinaryFileIds'
+            - type: object
+    SpecifiedBinaryFileIds:
+      type: object
+      properties:
+        uRI:
+          description: >-
+            The unique Uniform Resource Identifier (URI) for this specified
+            binary file.
+          type: string
+          format: uri
+      required:
+        - uRI
+    SpecifiedBinaryFile:
       description: A specified computer file or program stored in a binary format.
       type: object
       properties:
@@ -265,6 +337,7 @@ components:
             The unique Uniform Resource Identifier (URI) for this specified
             binary file.
           type: string
+          format: uri
         encodingCode:
           description: The code specifying the encoding of this specified binary file.
           type: string
@@ -276,7 +349,9 @@ components:
         size:
           description: The measure of the size of this specified binary file.
           type: string
-    SupplyChain_Consignment:
+      required:
+        - uRI
+    SupplyChainConsignment:
       description: >-
         A separately identifiable collection of goods items to be transported or
         available to be transported from one consignor to one consignee in a
@@ -287,25 +362,29 @@ components:
         iD:
           description: A unique identifier for this supply chain consignment.
           type: string
+          format: uri
+        information:
+          description: 'Information, expressed as text, for this supply chain consignment.'
+          type: string
         exportCountry:
           allOf:
             - description: The export country for this supply chain consignment.
-            - $ref: '#/components/schemas/Trade_Country'
+            - $ref: '#/components/schemas/TradeCountry'
         exporter:
           allOf:
             - description: The party who exports this supply chain consignment.
-            - $ref: '#/components/schemas/Trade_Party'
+            - $ref: '#/components/schemas/TradeParty'
         importCountry:
           allOf:
             - description: The import country for this supply chain consignment.
-            - $ref: '#/components/schemas/Trade_Country'
+            - $ref: '#/components/schemas/TradeCountry'
         importer:
           allOf:
             - description: The party who imports this supply chain consignment.
-            - $ref: '#/components/schemas/Trade_Party'
-        includedConsignmentItem:
+            - $ref: '#/components/schemas/TradeParty'
+        includedConsignmentItems:
           items:
-            $ref: '#/components/schemas/SupplyChain_ConsignmentItem'
+            $ref: '#/components/schemas/SupplyChainConsignmentItem'
           type: array
           description: A consignment item included in this supply chain consignment.
         loadingBaseportLocation:
@@ -314,16 +393,16 @@ components:
                 The baseport location at which this supply chain consignment is
                 to be loaded on a means of transport according to the transport
                 contract.
-            - $ref: '#/components/schemas/Logistics_Location'
+            - $ref: '#/components/schemas/LogisticsLocation'
         mainCarriageTransportMovement:
           allOf:
             - description: >-
                 A main carriage logistics transport movement for this supply
                 chain consignment.
-            - $ref: '#/components/schemas/Logistics_TransportMovement'
-        transportPackage:
+            - $ref: '#/components/schemas/LogisticsTransportMovement'
+        transportPackages:
           items:
-            $ref: '#/components/schemas/Logistics_Package'
+            $ref: '#/components/schemas/LogisticsPackage'
           type: array
           description: Transport packages for this supply chain consignment.
         unloadingBaseportLocation:
@@ -332,8 +411,8 @@ components:
                 The baseport location at which this supply chain consignment is
                 to be unloaded from a means of transport according to the
                 transport contract.
-            - $ref: '#/components/schemas/Logistics_Location'
-    SupplyChain_ConsignmentItem:
+            - $ref: '#/components/schemas/LogisticsLocation'
+    SupplyChainConsignmentItem:
       description: >-
         An item within a supply chain consignment of goods separately identified
         for transport and customs purposes.
@@ -342,30 +421,28 @@ components:
         iD:
           description: A unique identifier for this supply chain consignment item.
           type: string
+          format: uri
         information:
-          items:
-            description: >-
-              Information, expressed as text, for this supply chain consignment
-              item.
-            type: string
-          type: array
+          description: >-
+            Information, expressed as text, for this supply chain consignment
+            item.
+          type: string
         crossBorderRegulatoryProcedure:
           allOf:
             - description: >-
                 A cross-border regulatory procedure applicable to this supply
                 chain consignment item.
-            - $ref: '#/components/schemas/CrossBorder_RegulatoryProcedure'
+            - $ref: '#/components/schemas/CrossBorderRegulatoryProcedure'
         manufacturer:
           allOf:
             - description: The party which manufactured this supply chain consignment item.
-            - $ref: '#/components/schemas/Trade_Party'
-        tradeLineItem:
-          allOf:
-            - description: >-
-                A trade line item included in this supply chain consignment
-                item.
-            - $ref: '#/components/schemas/SupplyChain_TradeLineItem'
-    SupplyChain_TradeLineItem:
+            - $ref: '#/components/schemas/TradeParty'
+        tradeLineItems:
+          items:
+            $ref: '#/components/schemas/SupplyChainTradeLineItem'
+          type: array
+          description: A trade line item included in this supply chain consignment item.
+    SupplyChainTradeLineItem:
       description: >-
         A collection of information specific to an item being used or reported
         on for supply chain trade purposes.
@@ -373,21 +450,16 @@ components:
       properties:
         sequenceNumber:
           description: A sequence number for this supply chain trade line item.
-          type: string
-        description:
-          description: >-
-            The code specifying a description of this supply chain trade line
-            item.
-          type: string
+          type: number
         invoiceReference:
           allOf:
             - description: A document referenced for this supply chain trade line item.
-            - $ref: '#/components/schemas/Referenced_Document'
+            - $ref: '#/components/schemas/ReferencedDocument'
         tradeProduct:
           allOf:
             - description: The product specified for this supply chain trade line item.
-            - $ref: '#/components/schemas/Trade_Product'
-    Trade_Address:
+            - $ref: '#/components/schemas/TradeProduct'
+    TradeAddress:
       description: >-
         The location at which a particular trade related organization or person
         may be found or reached.
@@ -415,11 +487,11 @@ components:
         countryCode:
           allOf:
             - description: The unique identifier of a country for this trade address.
-            - $ref: '#/components/schemas/ISO3166_Code'
-    ISO3166_Code:
+            - $ref: '#/components/schemas/ISO3166Code'
+    ISO3166Code:
       $ref: >-
         https://edi3.org/shared/openapi/ISO/codes.yml#/components/schemas/ISO3166_Code
-    Trade_Country:
+    TradeCountry:
       description: >-
         The area of land that belongs to a nation together with its properties,
         such as population, political organization, etc., used or referenced for
@@ -429,11 +501,11 @@ components:
         code:
           allOf:
             - description: A unique identifier for this trade country.
-            - $ref: '#/components/schemas/ISO3166_Code'
+            - $ref: '#/components/schemas/ISO3166Code'
         name:
           description: 'A name, expressed as text, of this trade country.'
           type: string
-    Trade_Party:
+    TradeParty:
       description: >-
         An individual, a group, or a body having a role in a trade business
         function.
@@ -442,14 +514,15 @@ components:
         iD:
           description: A unique identifier of this trade party.
           type: string
+          format: uri
         name:
           description: 'The name, expressed as text, for this trade party.'
           type: string
         postalAddress:
           allOf:
             - description: The postal address for this trade party.
-            - $ref: '#/components/schemas/Trade_Address'
-    Trade_Product:
+            - $ref: '#/components/schemas/TradeAddress'
+    TradeProduct:
       description: >-
         Any tangible output or service produced by human or mechanical effort or
         by a natural process for trade purposes.
@@ -458,14 +531,25 @@ components:
         iD:
           description: A unique identifier for this trade product.
           type: string
+          format: uri
         description:
           description: A textual description for this trade product.
           type: string
         harmonisedTariffCode:
           allOf:
             - description: A product classification designated for this trade product.
-            - $ref: '#/components/schemas/Product_Classification'
+            - $ref: '#/components/schemas/ProductClassification'
         originCountry:
           allOf:
             - description: A country of origin for this trade product.
-            - $ref: '#/components/schemas/Trade_Country'
+            - $ref: '#/components/schemas/TradeCountry'
+    TransportEvent:
+      description: A significant occurrence or happening during transport.
+      type: object
+      properties:
+        departureDateTime:
+          description: >-
+            A departure date, time, date time, or other date time value related
+            to this transport event.
+          type: string
+          format: date-time
