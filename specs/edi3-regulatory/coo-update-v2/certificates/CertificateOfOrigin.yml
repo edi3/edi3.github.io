@@ -18,7 +18,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/CertificateOfOrigin'
+                  $ref: '#/components/schemas/CertificateOfOriginObj'
                 type: array
     post:
       tags:
@@ -28,7 +28,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CertificateOfOrigin'
+              $ref: '#/components/schemas/CertificateOfOriginObj'
         description: ''
         required: true
       responses:
@@ -36,7 +36,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CertificateOfOrigin'
+                $ref: '#/components/schemas/CertificateOfOriginObj'
           description: Created
   '/CertificatesOfOrigin/{id}':
     get:
@@ -56,7 +56,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CertificateOfOrigin'
+                $ref: '#/components/schemas/CertificateOfOriginObj'
     put:
       tags:
         - CertificatesOfOrigin
@@ -72,7 +72,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CertificateOfOrigin'
+              $ref: '#/components/schemas/CertificateOfOriginObj'
         description: ''
         required: true
       responses:
@@ -81,7 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CertificateOfOrigin'
+                $ref: '#/components/schemas/CertificateOfOriginObj'
   '/CertificatesOfOrigin/{id}/Certification':
     post:
       tags:
@@ -110,6 +110,11 @@ paths:
           description: Created
 components:
   schemas:
+    CertificateOfOriginObj:
+      type: object
+      properties:
+        certificateOfOrigin:
+          $ref: '#/components/schemas/CertificateOfOrigin'
     CertificateOfOrigin:
       description: ''
       type: object
