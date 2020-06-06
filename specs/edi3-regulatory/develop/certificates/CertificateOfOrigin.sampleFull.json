@@ -150,7 +150,7 @@
         },
         "tradeLineItems": [
           {
-            "sequenceNumber": 1,
+            "sequenceNumber": 3,
             "invoiceReference": {
               "iD": "tweglobal.com:invoice:8877654",
               "formattedIssueDateTime": "2020-06-05T11:30:00Z",
