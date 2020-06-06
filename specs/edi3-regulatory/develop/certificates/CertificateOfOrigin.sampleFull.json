@@ -19,7 +19,7 @@
     "statement": "On the basis of the control carried out, it is hereby certified that the information herein is correct and that the described goods comply with the origin requirements of the China-Australia Free Trade Agreement."
   },
   "issueLocation": {
-    "iD": "loc:AUADL",
+    "iD": "unece.un.org:locode:AUADL",
     "name": "Adelaide"
   },
   "issuer": {
@@ -73,7 +73,7 @@
         "iD": "penfolds.com:shipment:4738291",
         "information": "2 pallets (80 cases) Bin23 Pinot and 2 pallets (80 cases) Bin 28 Shiraz",
         "crossBorderRegulatoryProcedure": {
-          "originCriteriaText": "2204.21"
+          "originCriteriaText": "WP"
         },
         "manufacturer": {
           "iD": "id:penfolds.com",
@@ -174,7 +174,7 @@
       }
     ],
     "loadingBaseportLocation": {
-      "iD": "loc:AUMEL",
+      "iD": "unece.un.org:locode:AUMEL",
       "name": "Melbourne"
     },
     "mainCarriageTransportMovement": {
@@ -221,7 +221,7 @@
       }
     ],
     "unloadingBaseportLocation": {
-      "iD": "id:CNPVG",
+      "iD": "unece.un.org:locode:CNPVG",
       "name": "Shanghai Pudon International Apt"
     }
   }

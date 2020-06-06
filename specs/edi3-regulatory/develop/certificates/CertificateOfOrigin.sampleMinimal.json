@@ -1,0 +1,37 @@
+{
+  "iD": "wfa.org.au:coo:WBC208897",
+  "issueDateTime": "2020-06-03T00:46:34Z",
+  "name": "CHAFTA Certificate of Origin",
+  "issuer": {
+    "iD": "id:wfa.org.au",
+    "name": "Australian Grape and Wine Incorporated"
+  },
+  "status": "issued",
+  "isPreferential": true,
+  "freeTradeAgreement": "CHAFTA",
+  "supplyChainConsignment": {
+    "exportCountry": {
+      "code": "AU"
+    },
+    "exporter": {
+      "iD": "abr.gov.au:abn:55004094599"
+    },
+    "importCountry": {
+      "code": "CN"
+    },
+    "includedConsignmentItems": [
+      {
+        "iD": "penfolds.com:shipment:4738291",
+        "crossBorderRegulatoryProcedure": {
+          "originCriteriaText": "WP"
+        },
+      },
+      {
+        "iD": "lindemans.com:shipment:228764",
+        "crossBorderRegulatoryProcedure": {
+          "originCriteriaText": "PSR"
+        }
+      }
+    ]
+  }
+}
