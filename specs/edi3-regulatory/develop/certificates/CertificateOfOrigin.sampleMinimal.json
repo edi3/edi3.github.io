@@ -25,12 +25,34 @@
         "crossBorderRegulatoryProcedure": {
           "originCriteriaText": "WP"
         },
+        "tradeLineItems": [
+          {
+            "sequenceNumber": 1,
+            "invoiceReference": {
+              "iD": "tweglobal.com:invoice:1122345"
+            }
+          },
+          {
+            "sequenceNumber": 2,
+            "invoiceReference": {
+              "iD": "tweglobal.com:invoice:1122345"
+            }
+          }
+        ]
       },
       {
         "iD": "lindemans.com:shipment:228764",
         "crossBorderRegulatoryProcedure": {
           "originCriteriaText": "PSR"
-        }
+        },
+        "tradeLineItems": [
+          {
+            "sequenceNumber": 3,
+            "invoiceReference": {
+              "iD": "tweglobal.com:invoice:8877654"
+            }
+          }
+        ]
       }
     ]
   }
