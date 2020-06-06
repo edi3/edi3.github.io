@@ -10,20 +10,20 @@
   },
   "firstSignatoryAuthentication": {
     "signature": "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJIUzI1NiJ9..5rPBT_XW-x7mjc1ubf4WwW1iV2YJyc4CCFxORIEaAEk",
-    "actualDateTime": "2020-05-29T09:46:Z",
+    "actualDateTime": "2020-05-29T09:46:34Z",
     "statement": "The undersigned hereby declares that the above-stated information is correct and that the goods exported to [importer] comply with the origin requirements specified in the China-Australia Free Trade Agreement."
   },
-    "secondSignatoryAuthentication": {
+  "secondSignatoryAuthentication": {
     "signature": "eyJ0eXAiOiJKV1QiLA0KICJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJqb2UiLA0KICJleHAiOjEzMDA4MTkzODAsDQogImh0dHA6Ly9leGFtcGxlLmNvbS9pc19yb290Ijp0cnVlfQ.dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk",
-    "actualDateTime": "2020-06-03T03:50",
+    "actualDateTime": "2020-06-03T03:50:45Z",
     "statement": "On the basis of the control carried out, it is hereby certified that the information herein is correct and that the described goods comply with the origin requirements of the China-Australia Free Trade Agreement."
-  }
+  },
   "issueLocation": {
-    "iD": "AUADL",
+    "iD": "loc:AUADL",
     "name": "Adelaide"
   },
   "issuer": {
-    "iD": "wfa.org.au",
+    "iD": "id:wfa.org.au",
     "name": "Australian Grape and Wine Incorporated",
     "postalAddress": {
       "line1": "Level 1, Industry Offcies",
@@ -58,7 +58,7 @@
       "code": "CN"
     },
     "importer": {
-      "iD": "emw-wines.com",
+      "iD": "id:emw-wines.com",
       "name": "East meets west fine wines",
       "postalAddress": {
         "line1": "Room 202, Man Po International Business Center",
@@ -76,7 +76,7 @@
           "originCriteriaText": "2204.21"
         },
         "manufacturer": {
-          "iD": "penfolds.com",
+          "iD": "id:penfolds.com",
           "name": "Penfolds wine",
           "postalAddress": {
             "line1": "Penfolds vineyard",
@@ -88,10 +88,10 @@
         },
         "tradeLineItems": [
           {
-            "sequenceNumber":1,
+            "sequenceNumber": 1,
             "invoiceReference": {
               "iD": "tweglobal.com:invoice:1122345",
-              "formattedIssueDateTime":"2020-06-02T14:30Z",
+              "formattedIssueDateTime": "2020-06-02T14:30:00Z",
               "attachedBinaryFile": {
                 "uRI": "https://docs.tweglobal.com/8c624a35-9497-41fb-a548-cb5cf43bac21.pdf"
               }
@@ -104,15 +104,15 @@
                 "className": "Wine of fresh grapes, including fortified wines"
               },
               "originCountry": {
-                "code": "AU",
+                "code": "AU"
               }
             }
           },
           {
-            "sequenceNumber":2,
+            "sequenceNumber": 2,
             "invoiceReference": {
               "iD": "tweglobal.com:invoice:1122345",
-              "formattedIssueDateTime":"2020-06-02T14:30Z",
+              "formattedIssueDateTime": "2020-06-02T14:30:00Z",
               "attachedBinaryFile": {
                 "uRI": "https://docs.tweglobal.com/8c624a35-9497-41fb-a548-cb5cf43bac21.pdf"
               }
@@ -125,7 +125,7 @@
                 "className": "Wine of fresh grapes, including fortified wines"
               },
               "originCountry": {
-                "code": "AU",
+                "code": "AU"
               }
             }
           }
@@ -138,7 +138,7 @@
           "originCriteriaText": "PSR"
         },
         "manufacturer": {
-          "iD": "lindemans.com",
+          "iD": "id:lindemans.com",
           "name": "Lindemans wine",
           "postalAddress": {
             "line1": "44 Johns way",
@@ -148,42 +148,44 @@
             "countryCode": "AU"
           }
         },
-        "tradeLineItems": [{
-          "sequenceNumber":1,
-          "invoiceReference": {
-            "iD": "tweglobal.com:invoice:8877654",
-            "formattedIssueDateTime":"2020-06-05T11:30Z",
-            "attachedBinaryFile": {
-              "uRI": "https://docs.tweglobal.com/03e3754c-906d-4f6d-a592-67447c9119e9.pdf"
-            }
-          },
-          "tradeProduct": {
-            "iD": "gs1.org:gtin:4088700053621",
-            "description": "Coonawarra Trio Limestone Ridge Shiraz Cabernet 2013",
-            "harmonisedTariffCode": {
-              "classCode": "2204.21",
-              "className": "Wine of fresh grapes, including fortified wines"
+        "tradeLineItems": [
+          {
+            "sequenceNumber": 1,
+            "invoiceReference": {
+              "iD": "tweglobal.com:invoice:8877654",
+              "formattedIssueDateTime": "2020-06-05T11:30:00Z",
+              "attachedBinaryFile": {
+                "uRI": "https://docs.tweglobal.com/03e3754c-906d-4f6d-a592-67447c9119e9.pdf"
+              }
             },
-            "originCountry": {
-              "code": "AU",
+            "tradeProduct": {
+              "iD": "gs1.org:gtin:4088700053621",
+              "description": "Coonawarra Trio Limestone Ridge Shiraz Cabernet 2013",
+              "harmonisedTariffCode": {
+                "classCode": "2204.21",
+                "className": "Wine of fresh grapes, including fortified wines"
+              },
+              "originCountry": {
+                "code": "AU"
+              }
             }
           }
         ]
       }
     ],
     "loadingBaseportLocation": {
-      "iD": "AUMEL",
+      "iD": "loc:AUMEL",
       "name": "Melbourne"
     },
     "mainCarriageTransportMovement": {
       "iD": "iata.org:CX104",
       "information": "Cathay Pacific Flight CX 104 Melbourne to Shangai",
       "usedTransportMeans": {
-        "iD": "B-2398",
+        "iD": "id:B-2398",
         "name": "airbus A350"
       },
-      "departureEvent":{
-         "departureDateTime":"2020-06-20T09:30Z"
+      "departureEvent": {
+        "departureDateTime": "2020-06-20T09:30:00Z"
       }
     },
     "transportPackages": [
@@ -219,7 +221,7 @@
       }
     ],
     "unloadingBaseportLocation": {
-      "iD": "CNPVG",
+      "iD": "id:CNPVG",
       "name": "Shanghai Pudon International Apt"
     }
   }
