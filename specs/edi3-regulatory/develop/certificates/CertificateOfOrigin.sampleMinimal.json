@@ -14,14 +14,14 @@
       "code": "AU"
     },
     "exporter": {
-      "iD": "abr.gov.au:abn:55004094599"
+      "iD": "abr.gov.au:abn:55004094599",
+       "name": "TREASURY WINE ESTATES VINTNERS LIMITED"
     },
     "importCountry": {
       "code": "CN"
     },
     "includedConsignmentItems": [
       {
-        "iD": "penfolds.com:shipment:4738291",
         "crossBorderRegulatoryProcedure": {
           "originCriteriaText": "WP"
         },
@@ -30,18 +30,27 @@
             "sequenceNumber": 1,
             "invoiceReference": {
               "iD": "tweglobal.com:invoice:1122345"
+            },
+            "tradeProduct": {
+              "harmonisedTariffCode": {
+                "classCode": "2204.21"
+              }
             }
           },
           {
             "sequenceNumber": 2,
             "invoiceReference": {
               "iD": "tweglobal.com:invoice:1122345"
+            },
+            "tradeProduct": {
+              "harmonisedTariffCode": {
+                "classCode": "2204.21"
+              }
             }
           }
         ]
       },
       {
-        "iD": "lindemans.com:shipment:228764",
         "crossBorderRegulatoryProcedure": {
           "originCriteriaText": "PSR"
         },
@@ -50,6 +59,11 @@
             "sequenceNumber": 3,
             "invoiceReference": {
               "iD": "tweglobal.com:invoice:8877654"
+            },
+            "tradeProduct": {
+              "harmonisedTariffCode": {
+                "classCode": "2204.21"
+              }
             }
           }
         ]
