@@ -1,0 +1,71 @@
+{
+    "resources": [
+        {
+            "name": "MMT",
+            "entities": [
+                {
+                    "name": "Academic_Qualification",
+                    "description": "An academic achievement that is officially recognized.",
+                    "tags": [
+                        {
+                            "name": "UID",
+                            "value": "UN01002516",
+                            "kind": "hidden"
+                        },
+                        {
+                            "name": "DEN",
+                            "value": "Academic_ Qualification. Details",
+                            "kind": "hidden"
+                        }
+                    ],
+                    "properties": [
+                        {
+                            "name": "abbreviatedName",
+                            "description": "The abbreviated name, expressed as text, of this academic qualification.",
+                            "dataType": "Text",
+                            "minCardinality": 0,
+                            "maxCardinality": 1,
+                            "tags": [
+                                {
+                                    "name": "UID",
+                                    "value": "UDT0000019\nUN01002518",
+                                    "kind": "hidden"
+                                },
+                                {
+                                    "name": "DEN",
+                                    "value": "Academic_ Qualification. Abbreviated Name. Text",
+                                    "kind": "hidden"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "name",
+                            "description": "A name, expressed as text, of this academic qualification.",
+                            "dataType": "Text",
+                            "minCardinality": 0,
+                            "tags": [
+                                {
+                                    "name": "UID",
+                                    "value": "UDT0000019\nUN01002517",
+                                    "kind": "hidden"
+                                },
+                                {
+                                    "name": "DEN",
+                                    "value": "Academic_ Qualification. Name. Text",
+                                    "kind": "hidden"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "importedProperty",
+                            "description": "A new property added by the import.",
+                            "dataType": "Text",
+                            "minCardinality": 0,
+                            "tags": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
