@@ -161,6 +161,7 @@
             <div class="spec-header">
                 
                 
+                
                 <ul>
                     <li>Spec ID: <p>notary/1</p>
 </li><li><p><img src="http://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" /></p>
@@ -741,12 +742,12 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <p><img src="architecture.png" alt="docs" /></p>
 
-<p>A verifier is made up of multiple <code class="highlighter-rouge">Verification Methods</code>. In the diagram above, <code class="highlighter-rouge">OpenAttestationDnsTxt, OpenAttestationEthereumDocumentStoreIssued</code> and <code class="highlighter-rouge">OpenAttestationHash</code> are examples of <code class="highlighter-rouge">Verification Methods</code> provided.
-Depending on the type of document, a document can be executed using one or multiple <code class="highlighter-rouge">Verification Methods</code>. Each <code class="highlighter-rouge">Verification Method</code> will return a <code class="highlighter-rouge">VerificationFragment</code>which states the status of the verification.</p>
+<p>A verifier is made up of multiple <code class="language-plaintext highlighter-rouge">Verification Methods</code>. In the diagram above, <code class="language-plaintext highlighter-rouge">OpenAttestationDnsTxt, OpenAttestationEthereumDocumentStoreIssued</code> and <code class="language-plaintext highlighter-rouge">OpenAttestationHash</code> are examples of <code class="language-plaintext highlighter-rouge">Verification Methods</code> provided.
+Depending on the type of document, a document can be executed using one or multiple <code class="language-plaintext highlighter-rouge">Verification Methods</code>. Each <code class="language-plaintext highlighter-rouge">Verification Method</code> will return a <code class="language-plaintext highlighter-rouge">VerificationFragment</code>which states the status of the verification.</p>
 
 <h3 id="43-api">4.3 API</h3>
 
-<p>‘verify’ checks the document against the different verification methods and returns the corresponding results of the verification, whereas <code class="highlighter-rouge">isValid</code> will check if the document is valid.</p>
+<p>‘verify’ checks the document against the different verification methods and returns the corresponding results of the verification, whereas <code class="language-plaintext highlighter-rouge">isValid</code> will check if the document is valid.</p>
 
 <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">documentRopstenValidWithToken</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./test/fixtures/v2/documentRopstenValidWithToken</span><span class="dl">"</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">verify</span><span class="p">,</span> <span class="nx">isValid</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@govtechsg/oa-verify</span><span class="dl">"</span><span class="p">;</span>
@@ -756,23 +757,23 @@ Depending on the type of document, a document can be executed using one or multi
 </code></pre></div></div>
 
 <h4 id="431-verify">4.3.1 verify</h4>
-<p>The <code class="highlighter-rouge">verify</code> MUST return a array of verification fragments.</p>
+<p>The <code class="language-plaintext highlighter-rouge">verify</code> MUST return a array of verification fragments.</p>
 <h4 id="4311--verification-fragments">4.3.1.1  Verification Fragments</h4>
 <p>Verification fragments return the status of the verification against a verification method. The status key can have the following values:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">VALID</code>: when the verification is successful</li>
-  <li><code class="highlighter-rouge">INVALID</code>: when the verification is unsuccessful</li>
-  <li><code class="highlighter-rouge">ERROR</code>: when an unexpected error is met</li>
-  <li><code class="highlighter-rouge">SKIPPED</code>: when the verification was skipped by the manager</li>
+  <li><code class="language-plaintext highlighter-rouge">VALID</code>: when the verification is successful</li>
+  <li><code class="language-plaintext highlighter-rouge">INVALID</code>: when the verification is unsuccessful</li>
+  <li><code class="language-plaintext highlighter-rouge">ERROR</code>: when an unexpected error is met</li>
+  <li><code class="language-plaintext highlighter-rouge">SKIPPED</code>: when the verification was skipped by the manager</li>
 </ul>
 
 <p>As well as any metadata returned from the verification method. Examples of metadata includes resolved identity from a identity verification method.</p>
 
 <h4 id="432-isvalid">4.3.2 isValid</h4>
-<p>The ‘isValid’ MUST take in results from <code class="highlighter-rouge">verify</code> method and return a sumarised status of either true or false.</p>
+<p>The ‘isValid’ MUST take in results from <code class="language-plaintext highlighter-rouge">verify</code> method and return a sumarised status of either true or false.</p>
 
-<p><code class="highlighter-rouge">isValid</code> checks the following before returning the validity status:</p>
+<p><code class="language-plaintext highlighter-rouge">isValid</code> checks the following before returning the validity status:</p>
 <ul>
   <li>Status of a document: checks that the document has been issued and that it’s issuance status is in good standing.</li>
   <li>Integrity of a document: ensure that the content of the issued document has not been modified since the document has been issued, with exception of data which has been removed using built-in obfuscation mechanism</li>
@@ -797,13 +798,13 @@ Depending on the type of document, a document can be executed using one or multi
 
 <p><img src="decentralised_rendered_api.png" alt="docs" /></p>
 
-<p>Since the decentralised renderer is rendering a document dynamically, <code class="highlighter-rouge">Actions</code> are used to two-way communication between the parent frame (document-renderer.com) and the child frame (renderer.example.com).</p>
+<p>Since the decentralised renderer is rendering a document dynamically, <code class="language-plaintext highlighter-rouge">Actions</code> are used to two-way communication between the parent frame (document-renderer.com) and the child frame (renderer.example.com).</p>
 
 <p>All actions follow the same structure and are composed of type and payload</p>
 
 <ul>
-  <li><code class="highlighter-rouge">type</code> indicates the kind of action executed, for instance, RENDER_DOCUMENT to render a document. The type of action is mandatory</li>
-  <li><code class="highlighter-rouge">payload</code> indicates optional data associated with the type, for instance, the content of the document to render.</li>
+  <li><code class="language-plaintext highlighter-rouge">type</code> indicates the kind of action executed, for instance, RENDER_DOCUMENT to render a document. The type of action is mandatory</li>
+  <li><code class="language-plaintext highlighter-rouge">payload</code> indicates optional data associated with the type, for instance, the content of the document to render.</li>
 </ul>
 
 <p>Examples of actions used:</p>
@@ -877,7 +878,7 @@ Depending on the type of document, a document can be executed using one or multi
 
 <p>This action returns the list of template tabs available on the document.</p>
 
-<p>The payload is the document data as returned by <code class="highlighter-rouge">getData</code> method from @govtechsg/open-attestation</p>
+<p>The payload is the document data as returned by <code class="language-plaintext highlighter-rouge">getData</code> method from @govtechsg/open-attestation</p>
 
 <p>Example:</p>
 
@@ -921,7 +922,7 @@ Depending on the type of document, a document can be executed using one or multi
 
 <h3 id="523-update_templates">5.2.3 UPDATE_TEMPLATES</h3>
 
-<p>This action provides the list of templates that can be used to render a document. This is usually the response to the <code class="highlighter-rouge">GET_TEMPLATES</code> action.</p>
+<p>This action provides the list of templates that can be used to render a document. This is usually the response to the <code class="language-plaintext highlighter-rouge">GET_TEMPLATES</code> action.</p>
 
 <p>Example:</p>
 
@@ -967,7 +968,7 @@ Depending on the type of document, a document can be executed using one or multi
 
 <h3 id="611-salting-the-data">6.1.1 Salting the data</h3>
 
-<p>To generate an OA document, through a process known as <code class="highlighter-rouge">document wrapping</code>, each value is converted from its primitive type to a string with a UUID, the data type and the original value.</p>
+<p>To generate an OA document, through a process known as <code class="language-plaintext highlighter-rouge">document wrapping</code>, each value is converted from its primitive type to a string with a UUID, the data type and the original value.</p>
 
 <p>The UUID prevents rainbow table attacks on the value after it has been obfuscated and the type will help disambiguate the original data type.</p>
 
@@ -1040,7 +1041,7 @@ Depending on the type of document, a document can be executed using one or multi
 
 <p>After the individual values have been salted, the entire data object is flattened, while preserving the hierarchical structure of the data within the individual keys.</p>
 
-<p>In our implementation the library <a href="https://www.npmjs.com/package/flatley">flatley</a> is used to flatten the object and <a href="https://www.npmjs.com/package/js-sha3">js-sha3</a> is used to compute the <code class="highlighter-rouge">keccak256</code> hash.</p>
+<p>In our implementation the library <a href="https://www.npmjs.com/package/flatley">flatley</a> is used to flatten the object and <a href="https://www.npmjs.com/package/js-sha3">js-sha3</a> is used to compute the <code class="language-plaintext highlighter-rouge">keccak256</code> hash.</p>
 
 <p>Output after flattening:</p>
 
@@ -1069,7 +1070,7 @@ Depending on the type of document, a document can be executed using one or multi
 
 <p>Once the data object has been salted and flattened, each key-value pair will be hashed.</p>
 
-<p>In the example above, we will apply the <code class="highlighter-rouge">keccak256</code> hash on the object <code class="highlighter-rouge">{"key4.key41":"7e3b72f8-e521-4892-a26c-b56d3e2ab5cf:string:value4.1"}</code> which will yield <code class="highlighter-rouge">c3edad333f0829b92a82cd3c09b7795b0f00f07dfbbfc5ff8779272d1eaba3a8</code>.</p>
+<p>In the example above, we will apply the <code class="language-plaintext highlighter-rouge">keccak256</code> hash on the object <code class="language-plaintext highlighter-rouge">{"key4.key41":"7e3b72f8-e521-4892-a26c-b56d3e2ab5cf:string:value4.1"}</code> which will yield <code class="language-plaintext highlighter-rouge">c3edad333f0829b92a82cd3c09b7795b0f00f07dfbbfc5ff8779272d1eaba3a8</code>.</p>
 
 <p>Once this function has been applied to all the keys, the output hashes will be sorted and stored in an array.</p>
 
@@ -1100,7 +1101,7 @@ Depending on the type of document, a document can be executed using one or multi
 
 <h3 id="613-computing-documents-targethash">6.1.3 Computing document’s targetHash</h3>
 
-<p>Finally, with the array of sorted hashes, <code class="highlighter-rouge">keccak256</code> is applied again on the stringified array to obtain the <code class="highlighter-rouge">targetHash</code> of the document.</p>
+<p>Finally, with the array of sorted hashes, <code class="language-plaintext highlighter-rouge">keccak256</code> is applied again on the stringified array to obtain the <code class="language-plaintext highlighter-rouge">targetHash</code> of the document.</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">keccak256</span><span class="p">(</span>
   <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">([</span>
@@ -1134,7 +1135,7 @@ Depending on the type of document, a document can be executed using one or multi
 
 <h3 id="614-assembling-the-oa-document">6.1.4 Assembling the OA document</h3>
 
-<p>Once the <code class="highlighter-rouge">targetHash</code> of the document is calculated, it can be appended to the document under the <code class="highlighter-rouge">signature</code> object.</p>
+<p>Once the <code class="language-plaintext highlighter-rouge">targetHash</code> of the document is calculated, it can be appended to the document under the <code class="language-plaintext highlighter-rouge">signature</code> object.</p>
 
 <p>Example of wrapped OA Document:</p>
 
@@ -1187,9 +1188,9 @@ Depending on the type of document, a document can be executed using one or multi
 
 <h2 id="62-obfuscating-a-value">6.2 Obfuscating a value</h2>
 
-<p>To obfuscate a value in the OA document, one simply hash the key-value pair with <code class="highlighter-rouge">keccak256</code> and store the resulting hash in <code class="highlighter-rouge">privacy.obfuscatedData</code>. This method can be used to obfuscate multiple key-value pairs in the document data file.</p>
+<p>To obfuscate a value in the OA document, one simply hash the key-value pair with <code class="language-plaintext highlighter-rouge">keccak256</code> and store the resulting hash in <code class="language-plaintext highlighter-rouge">privacy.obfuscatedData</code>. This method can be used to obfuscate multiple key-value pairs in the document data file.</p>
 
-<p>For example to obfuscated <code class="highlighter-rouge">key4.key41</code>:</p>
+<p>For example to obfuscated <code class="language-plaintext highlighter-rouge">key4.key41</code>:</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">keccak256</span><span class="p">(</span>
   <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
@@ -1258,9 +1259,9 @@ Depending on the type of document, a document can be executed using one or multi
 <ol>
   <li>Flatten the data object</li>
   <li>Hash individual key-value pairs</li>
-  <li>Append and sort the hash from (2) with the hashes from <code class="highlighter-rouge">privacy.obfuscatedData</code></li>
+  <li>Append and sort the hash from (2) with the hashes from <code class="language-plaintext highlighter-rouge">privacy.obfuscatedData</code></li>
   <li>Compute the keccak256 hash for the results from (3)</li>
-  <li>Check that the resulting hash from (4) matches the <code class="highlighter-rouge">targetHash</code></li>
+  <li>Check that the resulting hash from (4) matches the <code class="language-plaintext highlighter-rouge">targetHash</code></li>
 </ol>
 
 <h2 id="64-implementation">6.4 Implementation</h2>

@@ -161,6 +161,7 @@
             <div class="spec-header">
                 
                 
+                
                 <ul>
                     <li>Spec ID: <p>notary/1</p>
 </li><li><p><img src="http://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" /></p>
@@ -510,30 +511,30 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <p><img src="architecture.png" alt="docs" /></p>
 
-<p>A verifier is made up of multiple <code class="highlighter-rouge">Verification Methods</code>. In the diagram above, <code class="highlighter-rouge">OpenAttestationDnsTxt, OpenAttestationEthereumDocumentStoreIssued</code> and <code class="highlighter-rouge">OpenAttestationHash</code> are examples of <code class="highlighter-rouge">Verification Methods</code> provided.</p>
+<p>A verifier is made up of multiple <code class="language-plaintext highlighter-rouge">Verification Methods</code>. In the diagram above, <code class="language-plaintext highlighter-rouge">OpenAttestationDnsTxt, OpenAttestationEthereumDocumentStoreIssued</code> and <code class="language-plaintext highlighter-rouge">OpenAttestationHash</code> are examples of <code class="language-plaintext highlighter-rouge">Verification Methods</code> provided.</p>
 
-<p>The role of a verification method is to verify the OA document is valid against specific criterias. Since there are many types and versions of OA document, not all test should run against all types of OA document. For that reason, a <code class="highlighter-rouge">test</code> method is also defined to test if a method should run against a document. If the method is incompatible with the document type, it should skip the method.</p>
+<p>The role of a verification method is to verify the OA document is valid against specific criterias. Since there are many types and versions of OA document, not all test should run against all types of OA document. For that reason, a <code class="language-plaintext highlighter-rouge">test</code> method is also defined to test if a method should run against a document. If the method is incompatible with the document type, it should skip the method.</p>
 
-<p>As a result, a verification method should implement 3 abstract methods: <code class="highlighter-rouge">verify, test and skip</code>.</p>
+<p>As a result, a verification method should implement 3 abstract methods: <code class="language-plaintext highlighter-rouge">verify, test and skip</code>.</p>
 
-<p>The verification method should return a <code class="highlighter-rouge">VerificationFragment</code> which states the status of the verification. The status key can have the following values:</p>
+<p>The verification method should return a <code class="language-plaintext highlighter-rouge">VerificationFragment</code> which states the status of the verification. The status key can have the following values:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">VALID</code>: when the verification is successful</li>
-  <li><code class="highlighter-rouge">INVALID</code>: when the verification is unsuccessful</li>
-  <li><code class="highlighter-rouge">ERROR</code>: when an unexpected error is met</li>
-  <li><code class="highlighter-rouge">SKIPPED</code>: when the verification was skipped by the manager</li>
+  <li><code class="language-plaintext highlighter-rouge">VALID</code>: when the verification is successful</li>
+  <li><code class="language-plaintext highlighter-rouge">INVALID</code>: when the verification is unsuccessful</li>
+  <li><code class="language-plaintext highlighter-rouge">ERROR</code>: when an unexpected error is met</li>
+  <li><code class="language-plaintext highlighter-rouge">SKIPPED</code>: when the verification was skipped by the manager</li>
 </ul>
 
 <h4 id="testdocument-document-boolean">test(document: Document): boolean</h4>
 <p>This function takes in an OA document and returns a boolean result that determines if this verification method is meant to be ran against the document.</p>
 
-<p>In the case that the test passes, we should run the <code class="highlighter-rouge">verify</code> function. Otherwise, the <code class="highlighter-rouge">skip</code> function should be ran.</p>
+<p>In the case that the test passes, we should run the <code class="language-plaintext highlighter-rouge">verify</code> function. Otherwise, the <code class="language-plaintext highlighter-rouge">skip</code> function should be ran.</p>
 
 <h4 id="skip-verificationfragment">skip(): VerificationFragment</h4>
-<p>This function should be ran when the verification method is skipped for the given OA document. It will return the skipped <code class="highlighter-rouge">VerificationFragment</code> for the test.</p>
+<p>This function should be ran when the verification method is skipped for the given OA document. It will return the skipped <code class="language-plaintext highlighter-rouge">VerificationFragment</code> for the test.</p>
 
-<p>An example of <code class="highlighter-rouge">VerificationFragment</code> that skips the DNS-TXT verification:
+<p>An example of <code class="language-plaintext highlighter-rouge">VerificationFragment</code> that skips the DNS-TXT verification:
 {</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OpenAttestationDnsTxt"</span><span class="err">,</span><span class="w">
   </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ISSUER_IDENTITY"</span><span class="err">,</span><span class="w">
@@ -547,7 +548,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <p>This function should be ran when the test passes. Running this function will execute the necessary computation to determine if the document passes the verification method.</p>
 
-<p>An example <code class="highlighter-rouge">VerificationFragment</code> of a passing test:</p>
+<p>An example <code class="language-plaintext highlighter-rouge">VerificationFragment</code> of a passing test:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OpenAttestationEthereumDocumentStoreIssued"</span><span class="p">,</span><span class="w">
@@ -565,7 +566,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>An example <code class="highlighter-rouge">VerificationFragment</code> of a failed test:</p>
+<p>An example <code class="language-plaintext highlighter-rouge">VerificationFragment</code> of a failed test:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OpenAttestationEthereumDocumentStoreIssued"</span><span class="p">,</span><span class="w">
@@ -587,40 +588,40 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <h3 id="verification-types">Verification Types</h3>
 
-<p>A <code class="highlighter-rouge">Verification Type</code> is a type label to a verification method. It specifies what type of verification the method is performing. The diagram above shows the 3 default verification types: <code class="highlighter-rouge">ISSUER_IDENTITY</code>, <code class="highlighter-rouge">DOCUMENT_INTEGRITY</code> and <code class="highlighter-rouge">DOCUMENT_STATUS</code>.</p>
+<p>A <code class="language-plaintext highlighter-rouge">Verification Type</code> is a type label to a verification method. It specifies what type of verification the method is performing. The diagram above shows the 3 default verification types: <code class="language-plaintext highlighter-rouge">ISSUER_IDENTITY</code>, <code class="language-plaintext highlighter-rouge">DOCUMENT_INTEGRITY</code> and <code class="language-plaintext highlighter-rouge">DOCUMENT_STATUS</code>.</p>
 
 <p>For the validity of the verification type to be true, the requirements must be met:</p>
 
 <ol>
-  <li>At least one method in that type should return <code class="highlighter-rouge">VALID</code> as the status.</li>
-  <li>All methods in the type should return either <code class="highlighter-rouge">VALID</code> or <code class="highlighter-rouge">SKIPPED</code> as the status.</li>
+  <li>At least one method in that type should return <code class="language-plaintext highlighter-rouge">VALID</code> as the status.</li>
+  <li>All methods in the type should return either <code class="language-plaintext highlighter-rouge">VALID</code> or <code class="language-plaintext highlighter-rouge">SKIPPED</code> as the status.</li>
 </ol>
 
 <h3 id="verifier">Verifier</h3>
 
-<p>The verifier is a function used to verify any OpenAttestation document. It returns a set of <code class="highlighter-rouge">VerificationFragment</code> from the different verification methods.</p>
+<p>The verifier is a function used to verify any OpenAttestation document. It returns a set of <code class="language-plaintext highlighter-rouge">VerificationFragment</code> from the different verification methods.</p>
 
-<p>From the <code class="highlighter-rouge">VerificationFragments</code> we can then determine if the OA document is valid. The OA document is valid when all <code class="highlighter-rouge">Verification Types</code> has valid statuses.</p>
+<p>From the <code class="language-plaintext highlighter-rouge">VerificationFragments</code> we can then determine if the OA document is valid. The OA document is valid when all <code class="language-plaintext highlighter-rouge">Verification Types</code> has valid statuses.</p>
 
 <h2 id="default-verification-types-and-methods">Default Verification Types and Methods</h2>
 
 <h3 id="document-integrity-document_integrity">Document Integrity (DOCUMENT_INTEGRITY)</h3>
 
-<p>The <code class="highlighter-rouge">DOCUMENT_INTEGRITY</code> type of verification methods ensure that the content of the issued document has not been modified since the document has been issued, with exception of data which has been removed using built-in obfuscation mechanism.</p>
+<p>The <code class="language-plaintext highlighter-rouge">DOCUMENT_INTEGRITY</code> type of verification methods ensure that the content of the issued document has not been modified since the document has been issued, with exception of data which has been removed using built-in obfuscation mechanism.</p>
 
 <h4 id="openattestationhash">OpenAttestationHash</h4>
 
-<p>The <code class="highlighter-rouge">OpenAttestationHash</code> method checks the integrity of the document using the <code class="highlighter-rouge">OpenAttestationSignature2018</code> method by digesting the content of the OA document and comparing it with the document’s <code class="highlighter-rouge">targetHash</code>.</p>
+<p>The <code class="language-plaintext highlighter-rouge">OpenAttestationHash</code> method checks the integrity of the document using the <code class="language-plaintext highlighter-rouge">OpenAttestationSignature2018</code> method by digesting the content of the OA document and comparing it with the document’s <code class="language-plaintext highlighter-rouge">targetHash</code>.</p>
 
-<p>In addition, if the <code class="highlighter-rouge">targetHash</code> does not match the <code class="highlighter-rouge">merkleRoot</code> of the document, the function also checks that the <code class="highlighter-rouge">targetHash</code> resolves to the <code class="highlighter-rouge">merkleRoot</code> using the given <code class="highlighter-rouge">proofs</code>.</p>
+<p>In addition, if the <code class="language-plaintext highlighter-rouge">targetHash</code> does not match the <code class="language-plaintext highlighter-rouge">merkleRoot</code> of the document, the function also checks that the <code class="language-plaintext highlighter-rouge">targetHash</code> resolves to the <code class="language-plaintext highlighter-rouge">merkleRoot</code> using the given <code class="language-plaintext highlighter-rouge">proofs</code>.</p>
 
 <h3 id="document-status-document_status">Document Status (DOCUMENT_STATUS)</h3>
 
-<p>The <code class="highlighter-rouge">DOCUMENT_STATUS</code> type of verification methods checks that the document has been issued and that it’s issuance status is in good standing. Methods of these types generally verifies the issuance status against a record maintained externally, ie Records on a Blockchain or API endpoints.</p>
+<p>The <code class="language-plaintext highlighter-rouge">DOCUMENT_STATUS</code> type of verification methods checks that the document has been issued and that it’s issuance status is in good standing. Methods of these types generally verifies the issuance status against a record maintained externally, ie Records on a Blockchain or API endpoints.</p>
 
 <h4 id="openattestationethereumdocumentstoreissued">OpenAttestationEthereumDocumentStoreIssued</h4>
 
-<p>The <code class="highlighter-rouge">OpenAttestationEthereumDocumentStoreIssued</code> checks the issuance status of the document using <code class="highlighter-rouge">OpenAttestationSignature2018</code> with <code class="highlighter-rouge">DOCUMENT_STORE</code> or <code class="highlighter-rouge">TOKEN_REGISTRY</code> methods.</p>
+<p>The <code class="language-plaintext highlighter-rouge">OpenAttestationEthereumDocumentStoreIssued</code> checks the issuance status of the document using <code class="language-plaintext highlighter-rouge">OpenAttestationSignature2018</code> with <code class="language-plaintext highlighter-rouge">DOCUMENT_STORE</code> or <code class="language-plaintext highlighter-rouge">TOKEN_REGISTRY</code> methods.</p>
 
 <p>Signature of OA Document using this method:</p>
 
@@ -635,25 +636,25 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <p>Such document uses a smart contract to store the issuance status of the document.</p>
 
-<p>In the case of <code class="highlighter-rouge">DOCUMENT_STORE</code> smart contract, the check calls the method <code class="highlighter-rouge">isIssued(merkleRoot)</code> implemented on the Ethereum smart contract. It returns a valid <code class="highlighter-rouge">VerificationFragment</code> if the merkle root of the document has been marked as issued.</p>
+<p>In the case of <code class="language-plaintext highlighter-rouge">DOCUMENT_STORE</code> smart contract, the check calls the method <code class="language-plaintext highlighter-rouge">isIssued(merkleRoot)</code> implemented on the Ethereum smart contract. It returns a valid <code class="language-plaintext highlighter-rouge">VerificationFragment</code> if the merkle root of the document has been marked as issued.</p>
 
-<p>In the case of <code class="highlighter-rouge">TOKEN_REGISTRY</code> smart contract, the check calls the method <code class="highlighter-rouge">ownerOf(targetHash)</code> implemented on the Ethereum smart contract. It returns a valid <code class="highlighter-rouge">VerificationFragment</code> if the owner of the document is non-zero.</p>
+<p>In the case of <code class="language-plaintext highlighter-rouge">TOKEN_REGISTRY</code> smart contract, the check calls the method <code class="language-plaintext highlighter-rouge">ownerOf(targetHash)</code> implemented on the Ethereum smart contract. It returns a valid <code class="language-plaintext highlighter-rouge">VerificationFragment</code> if the owner of the document is non-zero.</p>
 
 <h4 id="openattestationethereumdocumentstorerevoked">OpenAttestationEthereumDocumentStoreRevoked</h4>
 
-<p>The <code class="highlighter-rouge">OpenAttestationEthereumDocumentStoreRevoked</code> checks the revocation status of the document using <code class="highlighter-rouge">OpenAttestationSignature2018</code> with <code class="highlighter-rouge">DOCUMENT_STORE</code> or <code class="highlighter-rouge">TOKEN_REGISTRY</code> methods, similar to <code class="highlighter-rouge">OpenAttestationEthereumDocumentStoreIssued</code>.</p>
+<p>The <code class="language-plaintext highlighter-rouge">OpenAttestationEthereumDocumentStoreRevoked</code> checks the revocation status of the document using <code class="language-plaintext highlighter-rouge">OpenAttestationSignature2018</code> with <code class="language-plaintext highlighter-rouge">DOCUMENT_STORE</code> or <code class="language-plaintext highlighter-rouge">TOKEN_REGISTRY</code> methods, similar to <code class="language-plaintext highlighter-rouge">OpenAttestationEthereumDocumentStoreIssued</code>.</p>
 
-<p>In the case of <code class="highlighter-rouge">DOCUMENT_STORE</code> smart contract, the check calls the method <code class="highlighter-rouge">isRevoked(merkleRoot)</code> implemented on the Ethereum smart contract. It returns a valid <code class="highlighter-rouge">VerificationFragment</code> if the merkle root of the document has not been marked as revoked.</p>
+<p>In the case of <code class="language-plaintext highlighter-rouge">DOCUMENT_STORE</code> smart contract, the check calls the method <code class="language-plaintext highlighter-rouge">isRevoked(merkleRoot)</code> implemented on the Ethereum smart contract. It returns a valid <code class="language-plaintext highlighter-rouge">VerificationFragment</code> if the merkle root of the document has not been marked as revoked.</p>
 
 <h3 id="issuer-identity-issuer_identity">Issuer Identity (ISSUER_IDENTITY)</h3>
 
-<p>The <code class="highlighter-rouge">ISSUER_IDENTITY</code> type of verification methods checks and return the identity of the issuer. Methods of these types generally verify the identity of the issuer against a decentralised identity provider (ie DID, DNS, etc) or some centrally managed identity registry (ie Singapore’s OpenCerts Registry, Citizen Identity Registry, Business Identity Registry, etc).</p>
+<p>The <code class="language-plaintext highlighter-rouge">ISSUER_IDENTITY</code> type of verification methods checks and return the identity of the issuer. Methods of these types generally verify the identity of the issuer against a decentralised identity provider (ie DID, DNS, etc) or some centrally managed identity registry (ie Singapore’s OpenCerts Registry, Citizen Identity Registry, Business Identity Registry, etc).</p>
 
 <h4 id="openattestationdnstxt">OpenAttestationDnsTxt</h4>
 
-<p>The <code class="highlighter-rouge">OpenAttestationDnsTxt</code> method checks the identity of a document issuer using the <code class="highlighter-rouge">DNS-TXT</code> identity proof mechanism.</p>
+<p>The <code class="language-plaintext highlighter-rouge">OpenAttestationDnsTxt</code> method checks the identity of a document issuer using the <code class="language-plaintext highlighter-rouge">DNS-TXT</code> identity proof mechanism.</p>
 
-<p>The sample provided below shows a document which claims that <code class="highlighter-rouge">openattestation.com</code> is the owner of the smart contract <code class="highlighter-rouge">0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d</code>, which in turn issued the said document:</p>
+<p>The sample provided below shows a document which claims that <code class="language-plaintext highlighter-rouge">openattestation.com</code> is the owner of the smart contract <code class="language-plaintext highlighter-rouge">0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d</code>, which in turn issued the said document:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -672,12 +673,12 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The method checks against the DNS record of the domain to confirm the claimed relationship. A sample TXT record on <code class="highlighter-rouge">openattestation.com</code> to prove ownership of the contract <code class="highlighter-rouge">0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d</code> on Ethereum Ropsten network is provided below:</p>
+<p>The method checks against the DNS record of the domain to confirm the claimed relationship. A sample TXT record on <code class="language-plaintext highlighter-rouge">openattestation.com</code> to prove ownership of the contract <code class="language-plaintext highlighter-rouge">0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d</code> on Ethereum Ropsten network is provided below:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openatts net=ethereum netId=3 addr=0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openatts net=ethereum netId=3 addr=0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d
 </code></pre></div></div>
 
-<p>Upon confirming that the matching DNS TXT record on the domain, the verification method returns a valid <code class="highlighter-rouge">VerificationFragment</code> as the result.</p>
+<p>Upon confirming that the matching DNS TXT record on the domain, the verification method returns a valid <code class="language-plaintext highlighter-rouge">VerificationFragment</code> as the result.</p>
 
 <p>In depth discussion of DNS-TXT method is described <a href="https://blog.gds-gov.tech/opencerts-2-0-decentralised-issuer-identity-verification-fb7e2cae8295">in this blog post</a></p>
 
@@ -713,13 +714,13 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <p><img src="decentralised_rendered_api.png" alt="docs" /></p>
 
-<p>Since the decentralised renderer is rendering a document dynamically, <code class="highlighter-rouge">Actions</code> are used to two-way communication between the parent frame (document-renderer.com) and the child frame (renderer.example.com).</p>
+<p>Since the decentralised renderer is rendering a document dynamically, <code class="language-plaintext highlighter-rouge">Actions</code> are used to two-way communication between the parent frame (document-renderer.com) and the child frame (renderer.example.com).</p>
 
 <p>All actions follow the same structure and are composed of type and payload</p>
 
 <ul>
-  <li><code class="highlighter-rouge">type</code> indicates the kind of action executed, for instance, RENDER_DOCUMENT to render a document. The type of action is mandatory</li>
-  <li><code class="highlighter-rouge">payload</code> indicates optional data associated with the type, for instance, the content of the document to render.</li>
+  <li><code class="language-plaintext highlighter-rouge">type</code> indicates the kind of action executed, for instance, RENDER_DOCUMENT to render a document. The type of action is mandatory</li>
+  <li><code class="language-plaintext highlighter-rouge">payload</code> indicates optional data associated with the type, for instance, the content of the document to render.</li>
 </ul>
 
 <p>Examples of actions used:</p>
@@ -793,7 +794,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <p>This action returns the list of template tabs available on the document.</p>
 
-<p>The payload is the document data as returned by <code class="highlighter-rouge">getData</code> method from @govtechsg/open-attestation</p>
+<p>The payload is the document data as returned by <code class="language-plaintext highlighter-rouge">getData</code> method from @govtechsg/open-attestation</p>
 
 <p>Example:</p>
 
@@ -837,7 +838,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <h3 id="update_templates">UPDATE_TEMPLATES</h3>
 
-<p>This action provides the list of templates that can be used to render a document. This is usually the response to the <code class="highlighter-rouge">GET_TEMPLATES</code> action.</p>
+<p>This action provides the list of templates that can be used to render a document. This is usually the response to the <code class="language-plaintext highlighter-rouge">GET_TEMPLATES</code> action.</p>
 
 <p>Example:</p>
 
@@ -885,7 +886,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <h3 id="salting-the-data">Salting the data</h3>
 
-<p>To generate an OA document, through a process known as <code class="highlighter-rouge">document wrapping</code>, each value is converted from its primitive type to a string with a UUID, the data type and the original value.</p>
+<p>To generate an OA document, through a process known as <code class="language-plaintext highlighter-rouge">document wrapping</code>, each value is converted from its primitive type to a string with a UUID, the data type and the original value.</p>
 
 <p>The UUID prevents rainbow table attacks on the value after it has been obfuscated and the type will help disambiguate the original data type.</p>
 
@@ -958,7 +959,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <p>After the individual values have been salted, the entire data object is flattened, while preserving the hierarchical structure of the data within the individual keys.</p>
 
-<p>In our implementation the library <a href="https://www.npmjs.com/package/flatley">flatley</a> is used to flatten the object and <a href="https://www.npmjs.com/package/js-sha3">js-sha3</a> is used to compute the <code class="highlighter-rouge">keccak256</code> hash.</p>
+<p>In our implementation the library <a href="https://www.npmjs.com/package/flatley">flatley</a> is used to flatten the object and <a href="https://www.npmjs.com/package/js-sha3">js-sha3</a> is used to compute the <code class="language-plaintext highlighter-rouge">keccak256</code> hash.</p>
 
 <p>Output after flattening:</p>
 
@@ -987,7 +988,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <p>Once the data object has been salted and flattened, each key-value pair will be hashed.</p>
 
-<p>In the example above, we will apply the <code class="highlighter-rouge">keccak256</code> hash on the object <code class="highlighter-rouge">{"key4.key41":"7e3b72f8-e521-4892-a26c-b56d3e2ab5cf:string:value4.1"}</code> which will yield <code class="highlighter-rouge">c3edad333f0829b92a82cd3c09b7795b0f00f07dfbbfc5ff8779272d1eaba3a8</code>.</p>
+<p>In the example above, we will apply the <code class="language-plaintext highlighter-rouge">keccak256</code> hash on the object <code class="language-plaintext highlighter-rouge">{"key4.key41":"7e3b72f8-e521-4892-a26c-b56d3e2ab5cf:string:value4.1"}</code> which will yield <code class="language-plaintext highlighter-rouge">c3edad333f0829b92a82cd3c09b7795b0f00f07dfbbfc5ff8779272d1eaba3a8</code>.</p>
 
 <p>Once this function has been applied to all the keys, the output hashes will be sorted and stored in an array.</p>
 
@@ -1018,7 +1019,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <h3 id="computing-documents-targethash">Computing document’s targetHash</h3>
 
-<p>Finally, with the array of sorted hashes, <code class="highlighter-rouge">keccak256</code> is applied again on the stringified array to obtain the <code class="highlighter-rouge">targetHash</code> of the document.</p>
+<p>Finally, with the array of sorted hashes, <code class="language-plaintext highlighter-rouge">keccak256</code> is applied again on the stringified array to obtain the <code class="language-plaintext highlighter-rouge">targetHash</code> of the document.</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">keccak256</span><span class="p">(</span>
   <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">([</span>
@@ -1052,7 +1053,7 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <h3 id="assembling-the-oa-document">Assembling the OA document</h3>
 
-<p>Once the <code class="highlighter-rouge">targetHash</code> of the document is calculated, it can be appended to the document under the <code class="highlighter-rouge">signature</code> object.</p>
+<p>Once the <code class="language-plaintext highlighter-rouge">targetHash</code> of the document is calculated, it can be appended to the document under the <code class="language-plaintext highlighter-rouge">signature</code> object.</p>
 
 <p>Example of wrapped OA Document:</p>
 
@@ -1105,9 +1106,9 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 
 <h2 id="obfuscating-a-value">Obfuscating a value</h2>
 
-<p>To obfuscate a value in the OA document, one simply hash the key-value pair with <code class="highlighter-rouge">keccak256</code> and store the resulting hash in <code class="highlighter-rouge">privacy.obfuscatedData</code>. This method can be used to obfuscate multiple key-value pairs in the document data file.</p>
+<p>To obfuscate a value in the OA document, one simply hash the key-value pair with <code class="language-plaintext highlighter-rouge">keccak256</code> and store the resulting hash in <code class="language-plaintext highlighter-rouge">privacy.obfuscatedData</code>. This method can be used to obfuscate multiple key-value pairs in the document data file.</p>
 
-<p>For example to obfuscated <code class="highlighter-rouge">key4.key41</code>:</p>
+<p>For example to obfuscated <code class="language-plaintext highlighter-rouge">key4.key41</code>:</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">keccak256</span><span class="p">(</span>
   <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
@@ -1176,9 +1177,9 @@ By allowing the DNS system to be used as an identity registry, we allow the doma
 <ol>
   <li>Flatten the data object</li>
   <li>Hash individual key-value pairs</li>
-  <li>Append and sort the hash from (2) with the hashes from <code class="highlighter-rouge">privacy.obfuscatedData</code></li>
+  <li>Append and sort the hash from (2) with the hashes from <code class="language-plaintext highlighter-rouge">privacy.obfuscatedData</code></li>
   <li>Compute the keccak256 hash for the results from (3)</li>
-  <li>Check that the resulting hash from (4) matches the <code class="highlighter-rouge">targetHash</code></li>
+  <li>Check that the resulting hash from (4) matches the <code class="language-plaintext highlighter-rouge">targetHash</code></li>
 </ol>
 
 <h2 id="implementation">Implementation</h2>
