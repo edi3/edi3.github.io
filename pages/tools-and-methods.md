@@ -5,9 +5,9 @@ permalink: /tools-and-methods/
 ---
 # Tools and Methods
 
-UN/CEFACT semantic models such as the [Core Component Library](https://www.unece.org/cefact/codesfortrade/unccl/ccl_index.html) are essentially the semantic dictionary that is used to create standard EDIFACT documents and XML schema. Web platform APIs will have a different granularity than traditional EDIFACT documents but can nevertheless be built upon the same semantic dictionary (which is published as a CSV file).
+UN/CEFACT standards such as the [Core Component Library](https://www.unece.org/cefact/codesfortrade/unccl/ccl_index.html) and various code lists are used to create the standard EDIFACT documents and XML schema that have been successfully used to support interoperable systems in the international supply chain for decades. The proliferation of the use of JSON (JavaScript Object Notation) APIs (Application Programming Interfaces) offers an opportunity to API implemeters with some semantics standards that will support interoperability between API implementations in the supply chain. APIs will have a different shape (generally more fine grained) than traditional EDIFACT documents and XML messages but can nevertheless be built upon the same semantic dictionary.
 
-This suite of specifications defines a repeatable methodology to import UN/CEFACT semantics, model web API resources, then generate and publish consistent reference APIs and JSON-LD definitions. This will allow business subject matter experts and/or information modellers to quickly and consistently generate high quality API specifications that leverage existing semantic libraries.
+This suite of specifications defines a repeatable methodology to publish UN/CEFACT data models and code lists as JSON-LD vocabularies so that the rich supply chain semantics from UN are available for use by web developers. In additon, we provide guidance and a UML profile to help API designers leverage the standard vocabulary in the design of their API specifications. This will allow business subject matter experts and/or information modellers to quickly and consistently generate high quality API specifications that leverage existing semantic libraries.
 
 We hope that the value of these specifications will not be limited to UN/CEFACT project teams. The specifications should be re-usable by any design team that needs to develop REST API specifications that leverage some existing library of definitions. 
 
@@ -15,52 +15,45 @@ We hope that the value of these specifications will not be limited to UN/CEFACT 
 
 The diagram below shows the relationships between the methodology specifications (dark blue), the semantic library inputs (light blue), the outputs (green) and implementer systems (grey).
 
-A UN/CEFACT business expert would use conformant modelling tools as follows.
+An API designer would use conformant modelling tools as follows.
 
-* Import reference libraries such as UN/CEFACT RDM.
+* Import JSON-LD vocabularies such as UN/CEFACT RDM.
 * Define web resources and their state lifecycles using simple UML class and state-chart diagrams. 
 * Link relevant semantic definitions from the imported RDMs to the web resources.
-* Generate Open API 3.0 reference specifications and publish them to any platform that is readily accessible to web developers.
+* Generate Open API 3.0 soecifciations.
 
 ![Methodology Diagram](../images/edi3-method.png)
 
-A web developer that is charged with implementing web APIs that comply with UN/CEFACT standards would use the published specifications as follows.
+Implementers that wish to build APIs that conform with UN/CEFACT standards would choose between two conformance levels
 
-* Import the Open API 3.0 reference specification into their preferred web development tool.
-* Implement an API in accordance with the specification, including any non-breaking extensions.
-* Run the open source test harness against their implementation and publish the conformance report.
+* dictionary conformance means that the API uses terms from the JSON-LD vocabulary.  In essence, the structure or behaviour of the interface is not standard but the data elements in the interface are drawn from a UN standard JSON-LD vocabulary. 
+* interface conformance means that the API is an implementaiton of a UN standard open API specification.  
 
-## Model Interchange Specification
+## JSON-LD NDR & Conformance Rules  
 
-A standard JSON structure/schema for the representation of semantic library content and API models. This is used to 
+JSON-LD is the normative format for publishing UN/CEFACT semantics.  The Naming & Design Rules (NDR) specify the mapping rules for publishing JSON-Ld vocabularies from two types of UN/CEFACT sources
 
-* import library content into any conformant modelling tool, and to 
-* interchange API models between conformant modelling tools.
+* Reference Data Models (RDM) such as the buy-ship-pay (BSP) model or multi-modal-transport (MMT) model.
+* Code lists such as UN/Locode location codes or Rec 20 units of measure codes.
 
-A DSL (domain specific language) approach is preferred here because it will be simpler and more stable than XMI (interchange standard for UML tools) and will allow non-UML based tools to participate equally in the market.
+This is the foundation specification that makes UN/CEFACT semantics accessible and consumable for web developers. This specification will have achieved it's purpose when UN semantics are published and consumable in a similar way to other well established vocabularies such as schema.org.
 
-## UML Profile Specification
+## UML Profile
 
-When the modelling tool is UML based (not all tools will be) then a simple UML profile that defines a consistent approach to modelling web resources in UML is needed.  The profile would most likely include 
+Designing good quality API specifications is as much a business exercise as a technical one. Data modelling tools such as UML tools provide a powerful way to visualise both the structureal and behavioural aspects of an interface. Although, of course, API designers may develop API specifications based on the pubnlished vocabulary using any tool including a simple text editor, visual modelling tools are a powerful way for business domain experts to design high quality APIs. 
+
+For different UML tools to be able to import vocabularies, model interfaces, and generate API specifications in a consistent and interoperable way, it is important to define a UML profile for Open API 3.0 - using two types of UML diagrams.
 
 * A UML class diagram profile for web resources, verbs, paths, and associated definitions.  
 * A UML state chart profile for web resource state lifecycles and events.
 
-## Open API3.0 NDR & Conformance Rules  
+This specification will have achieved it's purpose when different data modellers using different UML tools can succesfully interchange their models and can consistently generate the same Open API 3.0 specification from the same UML model.
 
-Naming & Design Rules for the generation of Open API 3.0 reference specifications from the models. This specification will also define conformance rules that can be implemented in a test harness that can be used to verify that any implementation API is a conformant implementation of the reference specification.
+## Open API3.0 Design Rules 
 
-Ssupported by an open source testing tool that can assess any actual API implementation against the corresponding UN/CEFACT reference API specification.  The rules would allow (but report) non-breaking extensions and would deny (and alert) breaking changes.  A non-breaking change is one where a conformant API consumer is not impacted by the extensions.
+The [Open API 3.0](http://spec.openapis.org/oas/v3.0.3) technical specification says how to represent an API description in a machine readable way. It does not say how to design a high quality API or what design best practices and principles should be applied. The purpose of this specification is to define a set of design rules so that business modellers will consistenly deliver high quality API designs.
 
-## JSON-LD NDR & Conformance Rules  
 
-Similar to the above but for the generation of schema.org style JSON-LD definitions. Unlike API specifications that define specific structures (nouns) and actions (verbs), mostly for transactional purposes, the JSON-LD output would be used to support consistent semantics for snippets of data such as might be generated by IoT devices or granular trade data pipeline services.
-
-## Using Conformant Tools
-
-Tools the conform to the specifications in this section can be used to import reference libraries and generate both API specifications and JSON-LD linked data schema.
-
-![Buy Ship Pay API Domains](../images/edi3-bsp.png)
 
 
 
