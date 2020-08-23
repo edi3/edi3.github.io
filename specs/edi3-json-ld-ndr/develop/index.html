@@ -188,8 +188,19 @@
 <li class="toc-entry toc-h2"><a href="#non-breaking-retro-fitting">Non-Breaking Retro Fitting</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#edi3-json-ld-project-output">EDI3 JSON-LD Project Output</a></li>
-<li class="toc-entry toc-h1"><a href="#related-material">Related Material</a></li>
+<li class="toc-entry toc-h1"><a href="#requirements">Requirements</a></li>
+<li class="toc-entry toc-h1"><a href="#naming--design-rules">Naming &amp; Design Rules</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#rdm-mapping">RDM mapping</a></li>
+<li class="toc-entry toc-h2"><a href="#code-list-representation">Code list representation</a></li>
+<li class="toc-entry toc-h2"><a href="#context-granularity">@context granularity</a></li>
+<li class="toc-entry toc-h2"><a href="#primary-id-mapping">primary @id mapping</a></li>
+<li class="toc-entry toc-h2"><a href="#de-duplication">de-duplication</a></li>
+<li class="toc-entry toc-h2"><a href="#versioning">versioning</a></li>
+<li class="toc-entry toc-h2"><a href="#uncefact-metadtaa">UN/CEFACT metadtaa</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#examples">Examples</a></li>
 </ul>
 </div>
             <h2 id="status">Status</h2>
@@ -244,7 +255,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <p>From this, a machine would be able to build this kind of simple knowledge graph: Author - name is - Nis - lives in - Denmark. And by parsing this graph, determine for example that “the author lives in Denmark”.</p>
 
-<p>All subjects, predicates and (some) objects are identified on the web by a IRI (Uniform Resource Identifier). An IRI identifies <em>the thing</em>, as opposed to a URL which locates a page describing the <em>the thing</em>. While this is important to machines, there can be a bit of a clash here as to how humans best read data. For example <code class="highlighter-rouge">&lt;https://schema.org/author&gt; &lt;https://schema.org/givenName&gt; Nis.</code> is hardly as readable as ”Presenter’s name is Nis”.</p>
+<p>All subjects, predicates and (some) objects are identified on the web by a IRI (Uniform Resource Identifier). An IRI identifies <em>the thing</em>, as opposed to a URL which locates a page describing the <em>the thing</em>. While this is important to machines, there can be a bit of a clash here as to how humans best read data. For example <code class="language-plaintext highlighter-rouge">&lt;https://schema.org/author&gt; &lt;https://schema.org/givenName&gt; Nis.</code> is hardly as readable as ”Presenter’s name is Nis”.</p>
 
 <h2 id="json-ld">JSON-LD</h2>
 <p>Luckily, RDF comes in many flavors. The one which we will focus on here is JSON-LD, which among its advantages is that it is useful for both humans and machines. Also, JSON-LD is based on JSON, which practically is the grammar of any modern API.</p>
@@ -253,7 +264,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <p>Let’s consider an example:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
 	"@context": "https://edi3.org/specs/edi3-transport/develop/context.jsonld",
 	"consignment": {
 		"bookingNumber": "123456789",
@@ -280,13 +291,13 @@ in this document are to be interpreted as described in RFC 2119.</p>
 }
 </code></pre></div></div>
 
-<p>Most of this is just a basic json: a consignment with some consignmentItems and a transportEquipment. All expressed in somewhat nice CEFACT lingo which is useful for humans, but just meaningless strings to a computer. The JSON-LD parts <code class="highlighter-rouge">@context</code> and <code class="highlighter-rouge">@id</code> changes that.</p>
+<p>Most of this is just a basic json: a consignment with some consignmentItems and a transportEquipment. All expressed in somewhat nice CEFACT lingo which is useful for humans, but just meaningless strings to a computer. The JSON-LD parts <code class="language-plaintext highlighter-rouge">@context</code> and <code class="language-plaintext highlighter-rouge">@id</code> changes that.</p>
 
-<p>The <code class="highlighter-rouge">@id</code> tags inject IRIs to properly identify the consignment and transportEquipment, respectively referencing appropriate APIs from the carrier and BIC.</p>
+<p>The <code class="language-plaintext highlighter-rouge">@id</code> tags inject IRIs to properly identify the consignment and transportEquipment, respectively referencing appropriate APIs from the carrier and BIC.</p>
 
-<p>The <code class="highlighter-rouge">@context</code> links to a jsonld file, defining the semantic meaning of each element of the JSON (note that the context does not have to be externalized to a referenced file like this, but can also just be included directly within the json data file). Here’s what <code class="highlighter-rouge">https://edi3.org/specs/edi3-transport/develop/context.jsonld</code> might look like:</p>
+<p>The <code class="language-plaintext highlighter-rouge">@context</code> links to a jsonld file, defining the semantic meaning of each element of the JSON (note that the context does not have to be externalized to a referenced file like this, but can also just be included directly within the json data file). Here’s what <code class="language-plaintext highlighter-rouge">https://edi3.org/specs/edi3-transport/develop/context.jsonld</code> might look like:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
 	"@context": {
 		"consignment": {
 			"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment",
@@ -303,11 +314,11 @@ in this document are to be interpreted as described in RFC 2119.</p>
 }
 </code></pre></div></div>
 
-<p>Here, the @context adds mapping from the human terms in the JSON to IRIs formally defining the semantics used. For example, <code class="highlighter-rouge">https://edi3.org/specs/edi3-transport/develop/vocab/Consignment</code> is the IRI for Consignment.</p>
+<p>Here, the @context adds mapping from the human terms in the JSON to IRIs formally defining the semantics used. For example, <code class="language-plaintext highlighter-rouge">https://edi3.org/specs/edi3-transport/develop/vocab/Consignment</code> is the IRI for Consignment.</p>
 
 <p>From this, a computer is able to build a model like this (here serialized as N-Quads):</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;https://www.maersk.com/tracking/123456789&gt; &lt;https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#ConsignmentItem&gt; _:b1 .
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;https://www.maersk.com/tracking/123456789&gt; &lt;https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#ConsignmentItem&gt; _:b1 .
 &lt;https://www.maersk.com/tracking/123456789&gt; &lt;https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#utilizedTransportEquipment&gt; _:b3 .
 _:b0 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/Consignment&gt; &lt;https://www.maersk.com/tracking/123456789&gt; .
 _:b1 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/ConsignmentItem&gt; _:b2 .
@@ -315,11 +326,11 @@ _:b3 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment&
 </code></pre></div></div>
 
 <h2 id="non-breaking-retro-fitting">Non-Breaking Retro Fitting</h2>
-<p>A clever aspect of JSON-LD is that it can be retrofitted “on top” of legacy JSONs. Adding the JSON-LD (<code class="highlighter-rouge">@</code>-prefixed) tags will not break your APIs.</p>
+<p>A clever aspect of JSON-LD is that it can be retrofitted “on top” of legacy JSONs. Adding the JSON-LD (<code class="language-plaintext highlighter-rouge">@</code>-prefixed) tags will not break your APIs.</p>
 
-<p>For example, the following legacy JSON (which is much less aligned to CEFACT) will continue working, but generate the exact same machine model. Note that the <code class="highlighter-rouge">@context</code> in this example is embedded into the JSON itself:</p>
+<p>For example, the following legacy JSON (which is much less aligned to CEFACT) will continue working, but generate the exact same machine model. Note that the <code class="language-plaintext highlighter-rouge">@context</code> in this example is embedded into the JSON itself:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
 	"@context": {
 		"shipment": {
 			"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment",
@@ -352,8 +363,53 @@ _:b3 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment&
 }
 </code></pre></div></div>
 
-<h1 id="edi3-json-ld-project-output">EDI3 JSON-LD Project Output</h1>
-<p>Common semantics are defined many places throughout the internet. A very relevant example is https://schema.org/ which is extensively used for common stuff like defining Person, Address, Name and many other such fundamental aspects. More specialized semantics typically require specialized governance. In the case of trade and transport, that governance is CEFACT. In order to enable the web developers of the world to utilize our semantics, part of the edi3 ambition is to expose our semantics in a referenceable way as a library of IRIs.</p>
+<h1 id="requirements">Requirements</h1>
+
+<p>This specification is part of a suite of documents that collectively provids the neccessary tools and methods for data modellers to produce high quality API designs based on UN/CEFACT semantics.</p>
+
+<p>The UN/CEFACT vocabulary is currently published as a CSV file (the reference data models) and variously as CSV, XML, PDF or HTML (the code lists).  The core piurpose of this specification is to define the naming and design rules for consistent publishing of both the reference data models and code lists as JSON-LD vocuabularies. This is the foundation specification that makes UN/CEFACT semantics accessible and consumable for web developers. This specification will have achieved it’s purpose when UN semantics are published and consumable in a similar way to other well established vocabularies such as schema.org.</p>
+
+<p>Within this primary goal, there are several more detailed requirements</p>
+
+<ol>
+  <li>unambiguous. The NDR must define unambiguous rules for publishing UN/CEFACT constructs such as ABIEs, ASBIES, BBIEs, etc as JSON-LD vocabulary constructs.</li>
+  <li>governed. The UN/CEFACT RDMs and code lists are updated on a regular basis (roughly once per 6 months). The JSON-LD publishing process should allow updates to the vocuabulary (not a new duplicated vocabulary) at each version increment.</li>
+  <li>developer freindly. The published output must be redable and consumable by any developer that is familiar with JSON-LD and should no require any understanding of UN/CEFACT library management terms and processes (eg they should not need to know what an ABIE is). Schema.org provides the most widely used JSON-LD vocabulary in use today and so is a good guide for what the published UN/CEFACT output should look like.</li>
+  <li>de-duplication. In JSON-LD a “property” such as “consignment.consignor”is a primary entity and has attributes like “domain” (ie which classes may include this proiperty) and “range” (ie what is the value domain of this property). In the UN/CEFACT RDMs the “class” is the primary entity and properties can only belong to a class. Furthermore it is common for the RDM to define several version of the same class intended for use in different contexts (eg “consignment” and “referenced.consignment”). There is usually significant overlap between the properties of these classes. This means that the same semantic vocabulary item occurs multiple times. The JSON-LD vocabulary must de-duplicate without losing the usage context.</li>
+  <li>what else?</li>
+</ol>
+
+<h1 id="naming--design-rules">Naming &amp; Design Rules</h1>
+
+<h2 id="rdm-mapping">RDM mapping</h2>
+
+<p>Stuff about ABIE/BBIE etc -&gt; JSON-LD here</p>
+
+<h2 id="code-list-representation">Code list representation</h2>
+
+<p>Stuff about representation of simple (ie name value/pair) and complex (ie multi-attribute / hierarchical) code lists here</p>
+
+<h2 id="context-granularity">@context granularity</h2>
+
+<p>Stuff about granularity of graph publishing here - ie one graph per serpately goverened thing in the source</p>
+
+<h2 id="primary-id-mapping">primary @id mapping</h2>
+
+<p>stuff about mapping entity ID to JSON-LD @id here</p>
+
+<h2 id="de-duplication">de-duplication</h2>
+
+<p>stuff about de-duplication of properties here</p>
+
+<h2 id="versioning">versioning</h2>
+
+<p>stuff about  version updates here</p>
+
+<h2 id="uncefact-metadtaa">UN/CEFACT metadtaa</h2>
+
+<p>stuff about publishing source metadata without corrupting the primary “schema.org style” here</p>
+
+<h1 id="examples">Examples</h1>
 
 <p>These are some simple examples of how this could look for the three classes referenced in the above examples:</p>
 <ul>
@@ -362,14 +418,6 @@ _:b3 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment&
   <li><a href="https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment">https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment</a></li>
 </ul>
 
-<p>This should obviously be generated from the SCRDM model, part of the output of the RDM2API methodology. Similarly, the governance of the various high level groupings (in these examples /edi3-transport) should follow the town plan approach.</p>
-
-<h1 id="related-material">Related Material</h1>
-
-<ul>
-  <li></li>
-  <li></li>
-</ul>
 
             
         </div>

@@ -212,7 +212,7 @@
 
 <p>From this, a machine would be able to build this kind of simple knowledge graph: Author - name is - Nis - lives in - Denmark. And by parsing this graph, determine for example that “the author lives in Denmark”.</p>
 
-<p>All subjects, predicates and (some) objects are identified on the web by a IRI (Uniform Resource Identifier). An IRI identifies <em>the thing</em>, as opposed to a URL which locates a page describing the <em>the thing</em>. While this is important to machines, there can be a bit of a clash here as to how humans best read data. For example <code class="highlighter-rouge">&lt;https://schema.org/author&gt; &lt;https://schema.org/givenName&gt; Nis.</code> is hardly as readable as ”Presenter’s name is Nis”.</p>
+<p>All subjects, predicates and (some) objects are identified on the web by a IRI (Uniform Resource Identifier). An IRI identifies <em>the thing</em>, as opposed to a URL which locates a page describing the <em>the thing</em>. While this is important to machines, there can be a bit of a clash here as to how humans best read data. For example <code class="language-plaintext highlighter-rouge">&lt;https://schema.org/author&gt; &lt;https://schema.org/givenName&gt; Nis.</code> is hardly as readable as ”Presenter’s name is Nis”.</p>
 
 <h2 id="json-ld">JSON-LD</h2>
 <p>Luckily, RDF comes in many flavors. The one which we will focus on here is JSON-LD, which among its advantages is that it is useful for both humans and machines. Also, JSON-LD is based on JSON, which practically is the grammar of any modern API.</p>
@@ -221,7 +221,7 @@
 
 <p>Let’s consider an example:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
 	"@context": "https://edi3.org/specs/edi3-transport/develop/context.jsonld",
 	"consignment": {
 		"bookingNumber": "123456789",
@@ -248,13 +248,13 @@
 }
 </code></pre></div></div>
 
-<p>Most of this is just a basic json: a consignment with some consignmentItems and a transportEquipment. All expressed in somewhat nice CEFACT lingo which is useful for humans, but just meaningless strings to a computer. The JSON-LD parts <code class="highlighter-rouge">@context</code> and <code class="highlighter-rouge">@id</code> changes that.</p>
+<p>Most of this is just a basic json: a consignment with some consignmentItems and a transportEquipment. All expressed in somewhat nice CEFACT lingo which is useful for humans, but just meaningless strings to a computer. The JSON-LD parts <code class="language-plaintext highlighter-rouge">@context</code> and <code class="language-plaintext highlighter-rouge">@id</code> changes that.</p>
 
-<p>The <code class="highlighter-rouge">@id</code> tags inject IRIs to properly identify the consignment and transportEquipment, respectively referencing appropriate APIs from the carrier and BIC.</p>
+<p>The <code class="language-plaintext highlighter-rouge">@id</code> tags inject IRIs to properly identify the consignment and transportEquipment, respectively referencing appropriate APIs from the carrier and BIC.</p>
 
-<p>The <code class="highlighter-rouge">@context</code> links to a jsonld file, defining the semantic meaning of each element of the JSON (note that the context does not have to be externalized to a referenced file like this, but can also just be included directly within the json data file). Here’s what <code class="highlighter-rouge">https://edi3.org/specs/edi3-transport/develop/context.jsonld</code> might look like:</p>
+<p>The <code class="language-plaintext highlighter-rouge">@context</code> links to a jsonld file, defining the semantic meaning of each element of the JSON (note that the context does not have to be externalized to a referenced file like this, but can also just be included directly within the json data file). Here’s what <code class="language-plaintext highlighter-rouge">https://edi3.org/specs/edi3-transport/develop/context.jsonld</code> might look like:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
 	"@context": {
 		"consignment": {
 			"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment",
@@ -271,11 +271,11 @@
 }
 </code></pre></div></div>
 
-<p>Here, the @context adds mapping from the human terms in the JSON to IRIs formally defining the semantics used. For example, <code class="highlighter-rouge">https://edi3.org/specs/edi3-transport/develop/vocab/Consignment</code> is the IRI for Consignment.</p>
+<p>Here, the @context adds mapping from the human terms in the JSON to IRIs formally defining the semantics used. For example, <code class="language-plaintext highlighter-rouge">https://edi3.org/specs/edi3-transport/develop/vocab/Consignment</code> is the IRI for Consignment.</p>
 
 <p>From this, a computer is able to build a model like this (here serialized as N-Quads):</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;https://www.maersk.com/tracking/123456789&gt; &lt;https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#ConsignmentItem&gt; _:b1 .
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;https://www.maersk.com/tracking/123456789&gt; &lt;https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#ConsignmentItem&gt; _:b1 .
 &lt;https://www.maersk.com/tracking/123456789&gt; &lt;https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#utilizedTransportEquipment&gt; _:b3 .
 _:b0 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/Consignment&gt; &lt;https://www.maersk.com/tracking/123456789&gt; .
 _:b1 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/ConsignmentItem&gt; _:b2 .
@@ -283,11 +283,11 @@ _:b3 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment&
 </code></pre></div></div>
 
 <h2 id="non-breaking-retro-fitting">Non-Breaking Retro Fitting</h2>
-<p>A clever aspect of JSON-LD is that it can be retrofitted “on top” of legacy JSONs. Adding the JSON-LD (<code class="highlighter-rouge">@</code>-prefixed) tags will not break your APIs.</p>
+<p>A clever aspect of JSON-LD is that it can be retrofitted “on top” of legacy JSONs. Adding the JSON-LD (<code class="language-plaintext highlighter-rouge">@</code>-prefixed) tags will not break your APIs.</p>
 
-<p>For example, the following legacy JSON (which is much less aligned to CEFACT) will continue working, but generate the exact same machine model. Note that the <code class="highlighter-rouge">@context</code> in this example is embedded into the JSON itself:</p>
+<p>For example, the following legacy JSON (which is much less aligned to CEFACT) will continue working, but generate the exact same machine model. Note that the <code class="language-plaintext highlighter-rouge">@context</code> in this example is embedded into the JSON itself:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
 	"@context": {
 		"shipment": {
 			"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment",
