@@ -192,7 +192,12 @@
 <li class="toc-entry toc-h1"><a href="#naming--design-rules">Naming &amp; Design Rules</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#rdm-mapping">RDM mapping</a></li>
-<li class="toc-entry toc-h2"><a href="#code-list-representation">Code list representation</a></li>
+<li class="toc-entry toc-h2"><a href="#code-list-representation">Code list representation</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#motivation">Motivation</a></li>
+<li class="toc-entry toc-h3"><a href="#examples-of-more-complex-hierarchical-codelists">Examples of more complex hierarchical codelists</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#context-granularity">@context granularity</a></li>
 <li class="toc-entry toc-h2"><a href="#primary-id-mapping">primary @id mapping</a></li>
 <li class="toc-entry toc-h2"><a href="#de-duplication">de-duplication</a></li>
@@ -387,7 +392,42 @@ _:b3 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment&
 
 <h2 id="code-list-representation">Code list representation</h2>
 
-<p>Stuff about representation of simple (ie name value/pair) and complex (ie multi-attribute / hierarchical) code lists here</p>
+<p>Domain-specific parts of data model may be goverened and published separately, some of these vocabularies are called “codelists”. Such vocabularies sometimes have fairly flat and simple organization, for ex. iso-3166 country codes. But others may have quite complex hierarchical structure with additional metadata, for ex. WCO Harmonized System nomenclature.</p>
+
+<p>In this section we describe the recommended format for publishing codelists using rdf and json-ld data model. The vocabulary definitions are represented as <a href="https://www.w3.org/TR/json-ld/#flattened-document-form">flattened json-ld</a> graph:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://edi3.org/context.json"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iso:AU"</span><span class="p">,</span><span class="w"> </span><span class="nl">"rdfs:label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Australia"</span><span class="w"> </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iso:US"</span><span class="p">,</span><span class="w"> </span><span class="nl">"rdfs:label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"United States of America"</span><span class="w"> </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>RDF graph data model and json-ld representation may be the best format for machine-readable vocabularies available today. Some prominent features are:</p>
+
+<ul>
+  <li>Standartized way to cross-reference, reuse and extend terms from multiple separately governed vocabularies</li>
+  <li>Support for internationalized strings</li>
+  <li>Supports hierarchical model of classes and properties</li>
+  <li>Consistent library of simple data types like bool, int, date and time</li>
+  <li>json-ld is designed to be easily interpreted by human developer, compared to older formats like xml</li>
+</ul>
+
+<h3 id="motivation">Motivation</h3>
+
+<p>TODO: does it belong here?</p>
+
+<p>To avoid interoperability disruptions, it is important for communicating systems to have consistent and up-to-date data model to operate on. Given that codelists are regularly updated, maintaining interoperability between several separately developed business applications is a challenging task.</p>
+
+<p>Unfortunately maintainers often publish codelists in proprietary or machine-unfriendly formats like xls, pdf and html, which require tedious human processing to translate and implement in business logic. It would be beneficial to have an authoritative source of vocabulary definitions in a machine readable format to enable automated processing and allow existing systems to have always up-to-date and consistent view on the data they produce/consume.</p>
+
+<p>TODO: we could discuss somewhere automated mechanisms to distribute updates of machine-readable vocabularies. Differences between push\pull approaches, for ex. CDN vs infrastructure based on WEBSUB hubs?</p>
+
+<h3 id="examples-of-more-complex-hierarchical-codelists">Examples of more complex hierarchical codelists</h3>
+<p>TODO</p>
 
 <h2 id="context-granularity">@context granularity</h2>
 
@@ -407,7 +447,32 @@ _:b3 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment&
 
 <h2 id="uncefact-metadtaa">UN/CEFACT metadtaa</h2>
 
-<p>stuff about publishing source metadata without corrupting the primary “schema.org style” here</p>
+<p>We provide and publish the machine-readable RDF representation of The CEFACT Buy-Ship-Pay RDM Business Information Elements, preserving their types, inheritance heirarchy and metadata. All rdfs classes and properties in edi3 vocabulary are linked with corresponding BIEs by its identifier. This link can be used to implement a software which automatically maps CEFACT RDM messages to RDF format. So that interoperability between existing systems which use CEFACT RDM and new Linked Data based systems is preserved.</p>
+
+<p>The example rdfs property from the edi3 vocabulary, with linked CEFACT RDM BIEs:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:consignorTradeParty"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rdfs:type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:Property"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rdfs:domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:Consignment"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rdfs:range"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:Party"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"edi3:cefactElementMetadata"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:Referenced_SupplyChain_Consignment.Consignor.Trade_Party"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:AssociationBIE"</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"edi3:cefactUNId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:UN01011054"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"edi3:cefactBieDomainClass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:Referenced_SupplyChain_Consignment.Details"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"edi3:cefactBusinessProcess"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buy-Ship-Pay"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:SupplyChain_Consignment.Consignor.Trade_Party"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:AssociationBIE"</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"edi3:cefactUNId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:UN01004212"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"edi3:cefactBieDomainClass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:SupplyChain_Consignment.Details"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"edi3:cefactBusinessProcess"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buy-Ship-Pay"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <h1 id="examples">Examples</h1>
 
