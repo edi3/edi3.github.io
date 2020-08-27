@@ -195,7 +195,12 @@
 <li class="toc-entry toc-h2"><a href="#code-list-representation">Code list representation</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#motivation">Motivation</a></li>
-<li class="toc-entry toc-h3"><a href="#examples-of-more-complex-hierarchical-codelists">Examples of more complex hierarchical codelists</a></li>
+<li class="toc-entry toc-h3"><a href="#identifiers">Identifiers</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#namespaces">Namespaces</a></li>
+<li class="toc-entry toc-h4"><a href="#documentation-discovery">Documentation discovery</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#context-granularity">@context granularity</a></li>
@@ -426,8 +431,46 @@ _:b3 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment&
 
 <p>TODO: we could discuss somewhere automated mechanisms to distribute updates of machine-readable vocabularies. Differences between push\pull approaches, for ex. CDN vs infrastructure based on WEBSUB hubs?</p>
 
-<h3 id="examples-of-more-complex-hierarchical-codelists">Examples of more complex hierarchical codelists</h3>
-<p>TODO</p>
+<h3 id="identifiers">Identifiers</h3>
+
+<p>Business application data usually reference entities defined in the codelist vocabulary by its identifier. For example “AU” is an identifier of Australia, defined by iso-3166.</p>
+
+<p>While arbitrary string like “AU” may be good enough identifier in many scenarios, <a href="https://www.w3.org/TR/dwbp/#DataIdentifiers">best practices for data on the web</a> is to use http URLs as primary identifiers. The advantages of http urls are namespacing and discovery, briefly highlighted below.</p>
+
+<h4 id="namespaces">Namespaces</h4>
+
+<p>Sometimes several concurrent codelists exist, which describe similar concepts, for ex. <a href="https://en.wikipedia.org/wiki/International_vehicle_registration_code">Vehicle Plate Country codes</a> vs iso-3166 country codes. Quite often business applications data have to use a mix of multiple codelists, rendering the used identifiers ambiguous.</p>
+
+<p>To resolve the identifiers ambiguity, we recommend using http urls based on the domain name which is under control of the authoritative group which maintains the codelist vocabualry. For example in place of UNECE rec.21 code “1A”, the http url “https://www.unece.org/uncefact/rec21#1A” can be used.</p>
+
+<p>For human convenience, most RDF syntaxes support url shortening. For example, the json-ld representation can use default vocabualry or namespace prefix defined in the context:</p>
+
+<p>Example: default vocabulary makes “1A” to expand to the full url “https://www.unece.org/uncefact/rec21#1A”</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+ </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+   </span><span class="nl">"@vocab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.unece.org/uncefact/rec21#"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"typeCode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@vocab"</span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://maersk.com/packages/171346"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"typeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1A"</span><span class="w"> 
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Example: prefix definition makes “rec21:1A” to expand to the full url “https://www.unece.org/uncefact/rec21#1A”</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+ </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+   </span><span class="nl">"@vocab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://edi3.org/vocab#"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"rec21"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.unece.org/uncefact/rec21#"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"typeCode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://maersk.com/packages/171346"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"typeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rec21:1A"</span><span class="w"> 
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="documentation-discovery">Documentation discovery</h4>
+
+<p>It is recommended that dereferencing vocabulary term identifier url in the web browser result (or redirect to) the page, where the human-readable definition of this term can be found.</p>
 
 <h2 id="context-granularity">@context granularity</h2>
 
