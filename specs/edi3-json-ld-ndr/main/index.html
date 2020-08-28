@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>edi3 JSON-LD NDR 1.0 Specification - edi3 Standards by edi3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-line">
+        <div class="wrapper">
+            <div id="mobile-menu-wrapper" class="mobile-menu">
+                <button id="hamburger-menu" class="hamburger-menu">
+                    <span>toggle menu</span>
+                </button>
+                <div id="mobile-menu" style="display: none;">
+                    
+                    <ul class="sidebar-menu">
+    
+    <li class="menu-title"><a href="/">Overview</a></li>
+    <li><a  href="/governance/">Governance</a></li>
+    <li><a  href="/business-case/">Business Case</a></li>
+    <li><a  href="/glossary/">Glossary</a></li>
+    <li class="menu-title"><a href="/semantic-specs/">Semantic Specs</a></li>
+    <li><a  href="/trade/">Trade Domain</a></li>
+    <li><a  href="/transport/">Transport Domain</a></li>
+    <li><a  href="/regulatory/">Regulatory Domain</a></li>
+    <li><a  href="/finance/">Finance Domain</a></li>
+    <li><a  href="/unlocode/">UN Locode</a></li>
+    <li><a  href="/codelists/">Code Lists</a></li>
+    <li><a  href="/dictionary/">Dictionary</a></li>
+    <li class="menu-title"><a href="/technical-specs/">Technical Specs</a></li>
+    <li><a  href="/icl/">Inter Customs Ledger</a></li>
+    <li><a  href="/identity/">Identity Provider</a></li>
+    <li><a  href="/discovery/">Resource Discovery</a></li>
+    <li><a  href="/description/">Resource Description</a></li>
+    <li><a  href="/events/">Event Structure</a></li>
+    <li><a  href="/notary/">Notary Service</a></li>
+    <li class="menu-title"><a href="/tools-and-methods/">Tools and Methods</a></li>
+    <li><a  href="/uml-profile/">UML Profile</a></li>
+    <li><a  href="/api-ndr/">OpenAPI NDR</a></li>
+    <li><a  href="/json-ld-ndr/">JSON-LD NDR</a></li>
+    <li><a  href="/api-conformance/">API Conformance</a></li>
+    <li><a  href="/model-interchange/">Model Interchange</a></li>
+    <li class="menu-title"><a href="/community/">Community</a></li>
+    <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter (subscribe)</a></li>
+    <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ" target="_blank">Chat (join team)</a></li>
+    <li><a  href="/github/">GitHub</a></li>
+</ul>
+
+                </div>
+            </div>
+            <a href="/" class="logo"><img src="/images/logo-horisontal-white.svg" alt="edi3"></a>
+            <div class="header-search">
+                <script>
+                    (function() {
+                        var cx = '002841699265932723855:7gvs7wrhud8';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
+                </script>
+                <gcse:search></gcse:search>
+            </div>
+            
+        </div>
+    </div>
+    <div class="header-content">
+        <div class="wrapper">
+            <div class="header-text-box">
+                <div class="header-name">edi3 Standards</div>
+                <div class="header-tagline">Supply Chain Standards and Tools for Web Developers</div>
+            </div>
+        </div>
+    </div>
+</header>
+<script type="text/javascript">
+    document.getElementById('hamburger-menu').onclick = function() {
+        var nf = document.getElementById('mobile-menu');
+
+        // Show and hide menu items when toggle is clicked
+        if(nf.style.display==='none') {
+            nf.style.display = 'block';
+        }
+        else {
+            nf.style.display = 'none';
+        }
+    };
+
+    window.addEventListener('click', function(e){
+        if (!document.getElementById('mobile-menu-wrapper').contains(e.target)){
+            document.getElementById('mobile-menu').style.display= 'none';
+        }
+    });
+</script>
+
+<div class="main-wrapper">
+    <div class="main-content">
+        <div class="page-sidebar">
+            <ul class="sidebar-menu">
+    
+    <li class="menu-title"><a href="/">Overview</a></li>
+    <li><a  href="/governance/">Governance</a></li>
+    <li><a  href="/business-case/">Business Case</a></li>
+    <li><a  href="/glossary/">Glossary</a></li>
+    <li class="menu-title"><a href="/semantic-specs/">Semantic Specs</a></li>
+    <li><a  href="/trade/">Trade Domain</a></li>
+    <li><a  href="/transport/">Transport Domain</a></li>
+    <li><a  href="/regulatory/">Regulatory Domain</a></li>
+    <li><a  href="/finance/">Finance Domain</a></li>
+    <li><a  href="/unlocode/">UN Locode</a></li>
+    <li><a  href="/codelists/">Code Lists</a></li>
+    <li><a  href="/dictionary/">Dictionary</a></li>
+    <li class="menu-title"><a href="/technical-specs/">Technical Specs</a></li>
+    <li><a  href="/icl/">Inter Customs Ledger</a></li>
+    <li><a  href="/identity/">Identity Provider</a></li>
+    <li><a  href="/discovery/">Resource Discovery</a></li>
+    <li><a  href="/description/">Resource Description</a></li>
+    <li><a  href="/events/">Event Structure</a></li>
+    <li><a  href="/notary/">Notary Service</a></li>
+    <li class="menu-title"><a href="/tools-and-methods/">Tools and Methods</a></li>
+    <li><a  href="/uml-profile/">UML Profile</a></li>
+    <li><a  href="/api-ndr/">OpenAPI NDR</a></li>
+    <li><a  href="/json-ld-ndr/">JSON-LD NDR</a></li>
+    <li><a  href="/api-conformance/">API Conformance</a></li>
+    <li><a  href="/model-interchange/">Model Interchange</a></li>
+    <li class="menu-title"><a href="/community/">Community</a></li>
+    <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter (subscribe)</a></li>
+    <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ" target="_blank">Chat (join team)</a></li>
+    <li><a  href="/github/">GitHub</a></li>
+</ul>
+
+        </div>
+        <div class="page-content docs-content">
+            
+            <div class="spec-header">
+                
+                
+                
+                <ul>
+                    <li>Spec ID: <p>json-ld-ndr/1</p>
+</li><li><p><img src="https://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" /></p>
+</li>
+                    <li>Editor: <p><a href="mailto:nis.jespersen@maerskgtd.com">Nis Jespersen</a></p>
+</li>
+                    <li>Contributors: <p><a href="mailto:steve.capell@gmail.com">Steven Capell</a></p>
+</li>
+                    <li><a href="/specs/edi3-json-ld-ndr/main/edi3-json-ld-ndr-main.docx">Export to Doc</a></li>
+                </ul>
+            </div>
+            <div class="specs-toc">
+    <!--<div class="specs-toc-title">Table of contents</div>-->
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#status">Status</a></li>
+<li class="toc-entry toc-h2"><a href="#glossary">Glossary</a></li>
+<li class="toc-entry toc-h2"><a href="#licence">Licence</a></li>
+<li class="toc-entry toc-h2"><a href="#change-process">Change Process</a></li>
+<li class="toc-entry toc-h2"><a href="#language">Language</a></li>
+<li class="toc-entry toc-h1"><a href="#introduction">Introduction</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#linked-data">Linked Data</a></li>
+<li class="toc-entry toc-h2"><a href="#json-ld">JSON-LD</a></li>
+<li class="toc-entry toc-h2"><a href="#non-breaking-retro-fitting">Non-Breaking Retro Fitting</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#requirements">Requirements</a></li>
+<li class="toc-entry toc-h1"><a href="#naming--design-rules">Naming &amp; Design Rules</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#rdm-mapping">RDM mapping</a></li>
+<li class="toc-entry toc-h2"><a href="#code-list-representation">Code list representation</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#motivation">Motivation</a></li>
+<li class="toc-entry toc-h3"><a href="#identifiers">Identifiers</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#namespaces">Namespaces</a></li>
+<li class="toc-entry toc-h4"><a href="#documentation-discovery">Documentation discovery</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#context-granularity">@context granularity</a></li>
+<li class="toc-entry toc-h2"><a href="#primary-id-mapping">primary @id mapping</a></li>
+<li class="toc-entry toc-h2"><a href="#de-duplication">de-duplication</a></li>
+<li class="toc-entry toc-h2"><a href="#versioning">versioning</a></li>
+<li class="toc-entry toc-h2"><a href="#uncefact-metadtaa">UN/CEFACT metadtaa</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#examples">Examples</a></li>
+</ul>
+</div>
+            <h2 id="status">Status</h2>
+
+<p>Raw</p>
+
+<h2 id="glossary">Glossary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phrase</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This service depends on - TBA.</p>
+
+<p>The TBA specification depends on this document. Note, TBA.</p>
+
+<h2 id="licence">Licence</h2>
+
+<p>All material published on edi3.org including all parts of this specification are the intellectual property of the UN as per the <a href="https://www.unece.org/fileadmin/DAM/cefact/cf_plenary/plenary12/ECE_TRADE_C_CEFACT_2010_20_Rev2E_UpdatedIPRpolicy.pdf">UN/CEFACT IPR Policy</a>.</p>
+
+<p>This Specification is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version. See http://www.gnu.org/licenses.</p>
+
+<h2 id="change-process">Change Process</h2>
+
+<p>This document is governed by the <a href="http://rfc.unprotocols.org/spec:2/COSS/">2/COSS</a> (COSS).</p>
+
+<h2 id="language">Language</h2>
+
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” 
+in this document are to be interpreted as described in RFC 2119.</p>
+
+<h1 id="introduction">Introduction</h1>
+<p>The JSON-LD project aims to let not just humans, but also machines understand the semantics of CEFACT.</p>
+
+<h2 id="linked-data">Linked Data</h2>
+<p>Machines build “knowledge graphs” by linking data together. This is done by use of RDF (Resource Description Framework). RDF specifies expressing data as so-called triples, defining subject-predicate-object. A super simple example of a knowledge graph might be:</p>
+<ul>
+  <li>The author’s name is Nis.</li>
+  <li>Nis lives in Denmark.</li>
+</ul>
+
+<p>From this, a machine would be able to build this kind of simple knowledge graph: Author - name is - Nis - lives in - Denmark. And by parsing this graph, determine for example that “the author lives in Denmark”.</p>
+
+<p>All subjects, predicates and (some) objects are identified on the web by a IRI (Uniform Resource Identifier). An IRI identifies <em>the thing</em>, as opposed to a URL which locates a page describing the <em>the thing</em>. While this is important to machines, there can be a bit of a clash here as to how humans best read data. For example <code class="language-plaintext highlighter-rouge">&lt;https://schema.org/author&gt; &lt;https://schema.org/givenName&gt; Nis.</code> is hardly as readable as ”Presenter’s name is Nis”.</p>
+
+<h2 id="json-ld">JSON-LD</h2>
+<p>Luckily, RDF comes in many flavors. The one which we will focus on here is JSON-LD, which among its advantages is that it is useful for both humans and machines. Also, JSON-LD is based on JSON, which practically is the grammar of any modern API.</p>
+
+<p>JSON-LD works by injecting a “context” and some other linked data aspects into a normal JSON. All injections are prefixed with an “@” indicating a JSON-LD keyword.</p>
+
+<p>Let’s consider an example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+	"@context": "https://edi3.org/specs/edi3-transport/develop/context.jsonld",
+	"consignment": {
+		"bookingNumber": "123456789",
+		"@id": "https://www.maersk.com/tracking/123456789",
+		"includedConsignmentItem": [
+			{
+				"consignmentItem": {
+					"information": "Mangos and bananas",
+					"grossWeight": {
+						"Value": "12000", "Unit": "Kgs"
+					}
+				}
+			}
+		],
+		"utilizedTransportEquipment": [
+			{
+				"transportEquipment": {
+					"identification": "MSKU0134962",
+        				"@id": "https://app.bic-boxtech.org/containers?search=MSKU0134962"
+				}
+			}
+		]
+	}
+}
+</code></pre></div></div>
+
+<p>Most of this is just a basic json: a consignment with some consignmentItems and a transportEquipment. All expressed in somewhat nice CEFACT lingo which is useful for humans, but just meaningless strings to a computer. The JSON-LD parts <code class="language-plaintext highlighter-rouge">@context</code> and <code class="language-plaintext highlighter-rouge">@id</code> changes that.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">@id</code> tags inject IRIs to properly identify the consignment and transportEquipment, respectively referencing appropriate APIs from the carrier and BIC.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">@context</code> links to a jsonld file, defining the semantic meaning of each element of the JSON (note that the context does not have to be externalized to a referenced file like this, but can also just be included directly within the json data file). Here’s what <code class="language-plaintext highlighter-rouge">https://edi3.org/specs/edi3-transport/develop/context.jsonld</code> might look like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+	"@context": {
+		"consignment": {
+			"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment",
+			"@type": "@id"
+		},
+  		"includedConsignmentItem": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#ConsignmentItem",
+		"consignmentItem": "https://edi3.org/specs/edi3-transport/develop/vocab/ConsignmentItem",
+  		"utilizedTransportEquipment": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#utilizedTransportEquipment",
+		"transportEquipment": {
+			"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment",
+			"@type": "@id"
+		}
+	}
+}
+</code></pre></div></div>
+
+<p>Here, the @context adds mapping from the human terms in the JSON to IRIs formally defining the semantics used. For example, <code class="language-plaintext highlighter-rouge">https://edi3.org/specs/edi3-transport/develop/vocab/Consignment</code> is the IRI for Consignment.</p>
+
+<p>From this, a computer is able to build a model like this (here serialized as N-Quads):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;https://www.maersk.com/tracking/123456789&gt; &lt;https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#ConsignmentItem&gt; _:b1 .
+&lt;https://www.maersk.com/tracking/123456789&gt; &lt;https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#utilizedTransportEquipment&gt; _:b3 .
+_:b0 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/Consignment&gt; &lt;https://www.maersk.com/tracking/123456789&gt; .
+_:b1 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/ConsignmentItem&gt; _:b2 .
+_:b3 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment&gt; &lt;https://app.bic-boxtech.org/containers?search=MSKU0134962&gt; .
+</code></pre></div></div>
+
+<h2 id="non-breaking-retro-fitting">Non-Breaking Retro Fitting</h2>
+<p>A clever aspect of JSON-LD is that it can be retrofitted “on top” of legacy JSONs. Adding the JSON-LD (<code class="language-plaintext highlighter-rouge">@</code>-prefixed) tags will not break your APIs.</p>
+
+<p>For example, the following legacy JSON (which is much less aligned to CEFACT) will continue working, but generate the exact same machine model. Note that the <code class="language-plaintext highlighter-rouge">@context</code> in this example is embedded into the JSON itself:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+	"@context": {
+		"shipment": {
+			"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment",
+			"@type": "@id"
+		},
+      	"goods": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#ConsignmentItem",
+		"goodsItem": "https://edi3.org/specs/edi3-transport/develop/vocab/ConsignmentItem",
+      	"containers": "https://edi3.org/specs/edi3-transport/develop/vocab/Consignment#utilizedTransportEquipment",
+		"container": {
+			"@id": "https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment",
+			"@type": "@id"
+		}
+	},
+	"shipment": {
+		"bookingNumber": "123456789",
+		"@id": "https://www.maersk.com/tracking/123456789",
+		"goods": [{
+				"goodsItem": {
+					"information": "Mangos and bananas",
+					"grossWeight": {"Value": "12000", "Unit": "Kgs"}
+				}
+			}],
+		"containers": [{
+				"container": {
+					"boxNb": "MSKU0134962",
+                  	"@id": "https://app.bic-boxtech.org/containers?search=MSKU0134962"
+				}
+			}]
+	}
+}
+</code></pre></div></div>
+
+<h1 id="requirements">Requirements</h1>
+
+<p>This specification is part of a suite of documents that collectively provids the neccessary tools and methods for data modellers to produce high quality API designs based on UN/CEFACT semantics.</p>
+
+<p>The UN/CEFACT vocabulary is currently published as a CSV file (the reference data models) and variously as CSV, XML, PDF or HTML (the code lists).  The core piurpose of this specification is to define the naming and design rules for consistent publishing of both the reference data models and code lists as JSON-LD vocuabularies. This is the foundation specification that makes UN/CEFACT semantics accessible and consumable for web developers. This specification will have achieved it’s purpose when UN semantics are published and consumable in a similar way to other well established vocabularies such as schema.org.</p>
+
+<p>Within this primary goal, there are several more detailed requirements</p>
+
+<ol>
+  <li>unambiguous. The NDR must define unambiguous rules for publishing UN/CEFACT constructs such as ABIEs, ASBIES, BBIEs, etc as JSON-LD vocabulary constructs.</li>
+  <li>governed. The UN/CEFACT RDMs and code lists are updated on a regular basis (roughly once per 6 months). The JSON-LD publishing process should allow updates to the vocuabulary (not a new duplicated vocabulary) at each version increment.</li>
+  <li>developer freindly. The published output must be redable and consumable by any developer that is familiar with JSON-LD and should no require any understanding of UN/CEFACT library management terms and processes (eg they should not need to know what an ABIE is). Schema.org provides the most widely used JSON-LD vocabulary in use today and so is a good guide for what the published UN/CEFACT output should look like.</li>
+  <li>de-duplication. In JSON-LD a “property” such as “consignment.consignor”is a primary entity and has attributes like “domain” (ie which classes may include this proiperty) and “range” (ie what is the value domain of this property). In the UN/CEFACT RDMs the “class” is the primary entity and properties can only belong to a class. Furthermore it is common for the RDM to define several version of the same class intended for use in different contexts (eg “consignment” and “referenced.consignment”). There is usually significant overlap between the properties of these classes. This means that the same semantic vocabulary item occurs multiple times. The JSON-LD vocabulary must de-duplicate without losing the usage context.</li>
+  <li>what else?</li>
+</ol>
+
+<h1 id="naming--design-rules">Naming &amp; Design Rules</h1>
+
+<h2 id="rdm-mapping">RDM mapping</h2>
+
+<p>Stuff about ABIE/BBIE etc -&gt; JSON-LD here</p>
+
+<h2 id="code-list-representation">Code list representation</h2>
+
+<p>Domain-specific parts of data model may be goverened and published separately, some of these vocabularies are called “codelists”. Such vocabularies sometimes have fairly flat and simple organization, for ex. iso-3166 country codes. But others may have quite complex hierarchical structure with additional metadata, for ex. WCO Harmonized System nomenclature.</p>
+
+<p>In this section we describe the recommended format for publishing codelists using rdf and json-ld data model. The vocabulary definitions are represented as <a href="https://www.w3.org/TR/json-ld/#flattened-document-form">flattened json-ld</a> graph:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://edi3.org/context.json"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iso:AU"</span><span class="p">,</span><span class="w"> </span><span class="nl">"rdfs:label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Australia"</span><span class="w"> </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iso:US"</span><span class="p">,</span><span class="w"> </span><span class="nl">"rdfs:label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"United States of America"</span><span class="w"> </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>RDF graph data model and json-ld representation may be the best format for machine-readable vocabularies available today. Some prominent features are:</p>
+
+<ul>
+  <li>Standartized way to cross-reference, reuse and extend terms from multiple separately governed vocabularies</li>
+  <li>Support for internationalized strings</li>
+  <li>Supports hierarchical model of classes and properties</li>
+  <li>Consistent library of simple data types like bool, int, date and time</li>
+  <li>json-ld is designed to be easily interpreted by human developer, compared to older formats like xml</li>
+</ul>
+
+<h3 id="motivation">Motivation</h3>
+
+<p>TODO: does it belong here?</p>
+
+<p>To avoid interoperability disruptions, it is important for communicating systems to have consistent and up-to-date data model to operate on. Given that codelists are regularly updated, maintaining interoperability between several separately developed business applications is a challenging task.</p>
+
+<p>Unfortunately maintainers often publish codelists in proprietary or machine-unfriendly formats like xls, pdf and html, which require tedious human processing to translate and implement in business logic. It would be beneficial to have an authoritative source of vocabulary definitions in a machine readable format to enable automated processing and allow existing systems to have always up-to-date and consistent view on the data they produce/consume.</p>
+
+<p>TODO: we could discuss somewhere automated mechanisms to distribute updates of machine-readable vocabularies. Differences between push\pull approaches, for ex. CDN vs infrastructure based on WEBSUB hubs?</p>
+
+<h3 id="identifiers">Identifiers</h3>
+
+<p>Business application data usually reference entities defined in the codelist vocabulary by its identifier. For example “AU” is an identifier of Australia, defined by iso-3166.</p>
+
+<p>While arbitrary string like “AU” may be good enough identifier in many scenarios, <a href="https://www.w3.org/TR/dwbp/#DataIdentifiers">best practices for data on the web</a> is to use http URLs as primary identifiers. The advantages of http urls are namespacing and discovery, briefly highlighted below.</p>
+
+<h4 id="namespaces">Namespaces</h4>
+
+<p>Sometimes several concurrent codelists exist, which describe similar concepts, for ex. <a href="https://en.wikipedia.org/wiki/International_vehicle_registration_code">Vehicle Plate Country codes</a> vs iso-3166 country codes. Quite often business applications data have to use a mix of multiple codelists, rendering the used identifiers ambiguous.</p>
+
+<p>To resolve the identifiers ambiguity, we recommend using http urls based on the domain name which is under control of the authoritative group which maintains the codelist vocabualry. For example in place of UNECE rec.21 code “1A”, the http url “https://www.unece.org/uncefact/rec21#1A” can be used.</p>
+
+<p>For human convenience, most RDF syntaxes support url shortening. For example, the json-ld representation can use default vocabualry or namespace prefix defined in the context:</p>
+
+<p>Example: default vocabulary makes “1A” to expand to the full url “https://www.unece.org/uncefact/rec21#1A”</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+ </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+   </span><span class="nl">"@vocab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.unece.org/uncefact/rec21#"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"typeCode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@vocab"</span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://maersk.com/packages/171346"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"typeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1A"</span><span class="w"> 
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Example: prefix definition makes “rec21:1A” to expand to the full url “https://www.unece.org/uncefact/rec21#1A”</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+ </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+   </span><span class="nl">"@vocab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://edi3.org/vocab#"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"rec21"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.unece.org/uncefact/rec21#"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"typeCode"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://maersk.com/packages/171346"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"typeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rec21:1A"</span><span class="w"> 
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="documentation-discovery">Documentation discovery</h4>
+
+<p>It is recommended that dereferencing vocabulary term identifier url in the web browser result (or redirect to) the page, where the human-readable definition of this term can be found.</p>
+
+<h2 id="context-granularity">@context granularity</h2>
+
+<p>Stuff about granularity of graph publishing here - ie one graph per serpately goverened thing in the source</p>
+
+<h2 id="primary-id-mapping">primary @id mapping</h2>
+
+<p>stuff about mapping entity ID to JSON-LD @id here</p>
+
+<h2 id="de-duplication">de-duplication</h2>
+
+<p>stuff about de-duplication of properties here</p>
+
+<h2 id="versioning">versioning</h2>
+
+<p>stuff about  version updates here</p>
+
+<h2 id="uncefact-metadtaa">UN/CEFACT metadtaa</h2>
+
+<p>We provide and publish the machine-readable RDF representation of The CEFACT Buy-Ship-Pay RDM Business Information Elements, preserving their types, inheritance heirarchy and metadata. All rdfs classes and properties in edi3 vocabulary are linked with corresponding BIEs by its identifier. This link can be used to implement a software which automatically maps CEFACT RDM messages to RDF format. So that interoperability between existing systems which use CEFACT RDM and new Linked Data based systems is preserved.</p>
+
+<p>The example rdfs property from the edi3 vocabulary, with linked CEFACT RDM BIEs:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:consignorTradeParty"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rdfs:type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:Property"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rdfs:domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:Consignment"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rdfs:range"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:Party"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"edi3:cefactElementMetadata"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:Referenced_SupplyChain_Consignment.Consignor.Trade_Party"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:AssociationBIE"</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"edi3:cefactUNId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:UN01011054"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"edi3:cefactBieDomainClass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:Referenced_SupplyChain_Consignment.Details"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"edi3:cefactBusinessProcess"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buy-Ship-Pay"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:SupplyChain_Consignment.Consignor.Trade_Party"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:AssociationBIE"</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"edi3:cefactUNId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:UN01004212"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"edi3:cefactBieDomainClass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:SupplyChain_Consignment.Details"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"edi3:cefactBusinessProcess"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buy-Ship-Pay"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h1 id="examples">Examples</h1>
+
+<p>These are some simple examples of how this could look for the three classes referenced in the above examples:</p>
+<ul>
+  <li><a href="https://edi3.org/specs/edi3-transport/develop/vocab/Consignment">https://edi3.org/specs/edi3-transport/develop/vocab/Consignment</a></li>
+  <li><a href="https://edi3.org/specs/edi3-transport/develop/vocab/ConsignmentItem">https://edi3.org/specs/edi3-transport/develop/vocab/ConsignmentItem</a></li>
+  <li><a href="https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment">https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment</a></li>
+</ul>
+
+
+            
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <a href="/" class="footer-logo"><img src="/images/logo-horisontal-white.svg" alt=""></a>
+    <ul class="footer-menu">
+        <li><a href="http://edi3.org/about">About edi3</a></li>
+        <li><a href="https://github.com/edi3" target="_blank">Github</a></li>
+        <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter</a></li>
+        <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ" target="_blank">Join</a> <a href="https://edi3.slack.com/messages/general/" target="_blank">team</a></li>
+    </ul>
+    <div class="footer-credits">
+        This page was generated by GitHub Pages.
+        Comments, issues and suggestions are welcome in the <a href="https://github.com/edi3/edi3.github.io/issues/new">ticket system</a>.
+        Pull requests welcome in the <a href="https://github.com/edi3/edi3.github.io/">site repository</a>.
+    </div>
+</footer>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-135810483-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="/js/anchor.min.js"></script>
+<script>
+    anchors.add('h1, h2, h3, h4, h5');
+    anchors.remove('.no-anchor, .page-content > h1:first-child');
+</script>
+</body>
+</html>
