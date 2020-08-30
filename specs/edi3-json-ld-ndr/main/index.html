@@ -201,6 +201,18 @@
 <li class="toc-entry toc-h4"><a href="#documentation-discovery">Documentation discovery</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h3"><a href="#data-modelling">Data modelling</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#rdf-schema-rdfs-explainer">RDF Schema (RDFS) explainer</a>
+<ul>
+<li class="toc-entry toc-h5"><a href="#classes">Classes</a></li>
+<li class="toc-entry toc-h5"><a href="#properties">Properties</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h4"><a href="#inferencing">Inferencing</a></li>
+<li class="toc-entry toc-h4"><a href="#rdfs-for-existing-codelists">RDFS for existing codelists</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#context-granularity">@context granularity</a></li>
@@ -446,6 +458,7 @@ _:b3 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment&
 <p>For human convenience, most RDF syntaxes support url shortening. For example, the json-ld representation can use default vocabualry or namespace prefix defined in the context:</p>
 
 <p>Example: default vocabulary makes “1A” to expand to the full url “https://www.unece.org/uncefact/rec21#1A”</p>
+
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> 
    </span><span class="nl">"@vocab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.unece.org/uncefact/rec21#"</span><span class="p">,</span><span class="w">
@@ -457,6 +470,7 @@ _:b3 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment&
 </span></code></pre></div></div>
 
 <p>Example: prefix definition makes “rec21:1A” to expand to the full url “https://www.unece.org/uncefact/rec21#1A”</p>
+
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> 
    </span><span class="nl">"@vocab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://edi3.org/vocab#"</span><span class="p">,</span><span class="w">
@@ -471,6 +485,152 @@ _:b3 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment&
 <h4 id="documentation-discovery">Documentation discovery</h4>
 
 <p>It is recommended that dereferencing vocabulary term identifier url in the web browser result (or redirect to) the page, where the human-readable definition of this term can be found.</p>
+
+<h3 id="data-modelling">Data modelling</h3>
+
+<p>Entities in the codelist vocabulary might have associated metadata, such as human-readable definition, comments, symbolic representation, and links to other related entities. Each entity can be seen as a node in the RDF graph with assigned primary identifier (http url), and other datatyped or identifier nodes linked to it. In the Subject-Predicate-Object RDF representation, the kg/m² measurement unit can be defined as:</p>
+
+<div class="language-turtle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">&lt;rec20:kilogram_per_square_meter&gt;</span><span class="w"> </span><span class="nl">&lt;rdfs:comment&gt;</span><span class="w"> </span><span class="s">"Unit of surface density, areic mass"</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="nl">&lt;rec20:kilogram_per_square_meter&gt;</span><span class="w"> </span><span class="nl">&lt;edi3:unitSymbol&gt;</span><span class="w"> </span><span class="s">"kg/m²"</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="nl">&lt;rec20:kilogram_per_square_meter&gt;</span><span class="w"> </span><span class="nl">&lt;edi3:uneceRec20Code&gt;</span><span class="w"> </span><span class="s">"28"</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Which corresponds to the json-ld</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rec20:kilogram_per_square_meter"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rdfs:comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unit of surface density, areic mass"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"edi3:uneceRec20Code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"28"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"edi3:unitSymbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kg/m²"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Predicates used to associate entity with related metadata have their own primary identifier (http url). In the example above the context is omitted, but implied that <em>rdfs:comment</em> and <em>edi3:uneceRec20Code</em> are abbreviated http url identifiers of predicates (properties), which are defined in the rdfs and edi3 vocabularies (see rdfs properties definition below).</p>
+
+<h4 id="rdf-schema-rdfs-explainer">RDF Schema (RDFS) explainer</h4>
+
+<p><a href="https://www.w3.org/TR/rdf-schema/">RDF Schema</a> provides the mechanisms for describing groups of related resources (entities) and the relationships between these resources. The RDF Schema class and property system is similar to the type systems of object-oriented programming languages, and modelling languages like UML.</p>
+
+<p>While abstract linked graph view on the data may be useful for simple cases, the RDF Schema provides familiar and powerful semantics of Classes and Properties on top of it.</p>
+
+<h5 id="classes">Classes</h5>
+
+<p>Continuing from the example of UNECE rec.20 codes for measurement units, we can divide entities into classes NormativeUnit, NormativeEquivalentUnit, InformativeUnit, which are all subclasses of MeasurementUnit. To achieve that, we should first define a class, and then we can assign that class to the entity (instance of that class). On the RDF level, classes just like instances have unique identifier an can be seen as nodes in the graph.</p>
+
+<p>Example: Base class and its specific subclasses definition</p>
+<div class="language-turtle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">&lt;edi3:MeasurementUnit&gt;</span><span class="w"> </span><span class="nl">&lt;rdf:type&gt;</span><span class="w"> </span><span class="nl">&lt;rdfs:Class&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="nl">&lt;edi3:NormativeUnit&gt;</span><span class="w"> </span><span class="nl">&lt;rdf:type&gt;</span><span class="w"> </span><span class="nl">&lt;rdfs:Class&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="nl">&lt;edi3:NormativeUnit&gt;</span><span class="w"> </span><span class="nl">&lt;rdfs:subClassOf&gt;</span><span class="w"> </span><span class="nl">&lt;edi3:MeasurementUnit&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="nl">&lt;edi3:NormativeEquivalentUnit&gt;</span><span class="w"> </span><span class="nl">&lt;rdf:type&gt;</span><span class="w"> </span><span class="nl">&lt;rdfs:Class&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="nl">&lt;edi3:NormativeEquivalentUnit&gt;</span><span class="w"> </span><span class="nl">&lt;rdfs:subClassOf&gt;</span><span class="w"> </span><span class="nl">&lt;edi3:MeasurementUnit&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="nl">&lt;edi3:InformativeUnit&gt;</span><span class="w"> </span><span class="nl">&lt;rdf:type&gt;</span><span class="w"> </span><span class="nl">&lt;rdfs:Class&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="nl">&lt;edi3:InformativeUnit&gt;</span><span class="w"> </span><span class="nl">&lt;rdfs:subClassOf&gt;</span><span class="w"> </span><span class="nl">&lt;edi3:MeasurementUnit&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now all measurement units can be declared being an instance of appropriate class:</p>
+<div class="language-turtle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">&lt;rec20:kilogram_per_square_meter&gt;</span><span class="w"> </span><span class="nl">&lt;rdf:type&gt;</span><span class="w"> </span><span class="nl">&lt;edi3:NormativeUnit&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="nl">&lt;rec20:fahrenheit&gt;</span><span class="w"> </span><span class="nl">&lt;rdf:type&gt;</span><span class="w"> </span><span class="nl">&lt;edi3:NormativeEquivalentUnit&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="p">...</span><span class="w">
+</span></code></pre></div></div>
+
+<h5 id="properties">Properties</h5>
+
+<p>On the RDF graph level, predicates (properties) just like classes or instances have unique identifier an can be seen as nodes in the graph. Unlike classes or class instances, the property identifiers can also appear in the predicate position (link between the nodes), specifying the semantic of the relationship between subject and object. RDFS vocabulary allows to define a node as a property, and express restrictions on the valid types of the subject and object which is allowed to be linked by this property (domain and range).</p>
+
+<p>Example: define a property and its domain and range</p>
+<div class="language-turtle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">&lt;edi3:unitSymbol&gt;</span><span class="w"> </span><span class="nl">&lt;rdf:type&gt;</span><span class="w"> </span><span class="nl">&lt;rdfs:Property&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="nl">&lt;edi3:unitSymbol&gt;</span><span class="w"> </span><span class="nl">&lt;rdfs:domain&gt;</span><span class="w"> </span><span class="nl">&lt;edi3:MeasurementUnit&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="nl">&lt;edi3:unitSymbol&gt;</span><span class="w"> </span><span class="nl">&lt;rdfs:range&gt;</span><span class="w"> </span><span class="nl">&lt;xsd:string&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now the property can be used to associate measurement unit with its symbol</p>
+<div class="language-turtle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">&lt;rec20:kilogram_per_square_meter&gt;</span><span class="w"> </span><span class="nl">&lt;edi3:unitSymbol&gt;</span><span class="w"> </span><span class="s">"kg/m²"</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="inferencing">Inferencing</h4>
+
+<p>The advanced data consumers can apply RDFS inferencing engine to enrich the input graph data with the additional links (triples), which was omitted, but implied by the rdfs class heirarchy and property domain\range provided in the vocabulary.</p>
+
+<p>For example, the kilogram_per_square_meter was defined as instance of NormativeUnit:</p>
+
+<div class="language-turtle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">&lt;rec20:kilogram_per_square_meter&gt;</span><span class="w"> </span><span class="nl">&lt;rdf:type&gt;</span><span class="w"> </span><span class="nl">&lt;edi3:NormativeUnit&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span></code></pre></div></div>
+
+<p>And after applying RDFS inferencing, the new association will be added, saying that kilogram_per_square_meter is also an instance of the base MeasurementUnit class:</p>
+
+<div class="language-turtle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">&lt;rec20:kilogram_per_square_meter&gt;</span><span class="w"> </span><span class="nl">&lt;rdf:type&gt;</span><span class="w"> </span><span class="nl">&lt;edi3:MeasurementUnit&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span></code></pre></div></div>
+
+<p>While RDFS inferencing is powerful, it is also computationally complex and hard to implement. It is not recommended to rely on the data consumer inferencing capability in the published data and vocabularies. It is up for particular use case to decide on, but generally it is safer to explicitly declare all types\classes on the instances, and use more generic properties instead of more specific subproperties.</p>
+
+<h4 id="rdfs-for-existing-codelists">RDFS for existing codelists</h4>
+
+<p>Some existing codelists combine multiple entity attributes to be “flattened” into a list of unique identifiers. For example UNECE Rec.21 for package types assigns a code “BO” to “Bottle, non-protected, cylindrical”, and “XH” to “Bag, textile, water resistant”. The brute-force way to express this codelist in machine-readable way would be 1) assign the full http url to each code, 2) associate it with a human-readable description and 3) publish it as flattened graph json-ld</p>
+
+<p>Example: simplest json-ld representation of UNECE Rec.21</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"rec21"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://unece.org/codelists/rec21#"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rdfs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2000/01/rdf-schema#"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rec21:1A"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"rdfs:comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Drum, steel"</span><span class="p">,</span><span class="w">
+    </span><span class="p">},</span><span class="w"> 
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rec21:1B"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"rdfs:comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Drum, aluminium"</span><span class="p">,</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w"> 
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>While the example given above is valid and fulfills the requirement of making the codelist machine-readable in many usecases, it can be improved. Proper use of RDFS annotations can make the codelist vocabulary significantly more convenient to maintain, comprehend and implement in the business logic.</p>
+
+<p>The entities in the rec.21 vocabulary can be quite naturally interpreted as types of package, so they can be declared to be instances of <em>rdfs:Class</em>. Also the primary identifier can be made more human-friendly:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rec21:Drum_steel"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:Class"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rdf:value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1A"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now the business data producer can assign appropriate rec.21 package class to the subject of interest:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://maersk.com/packages/b646-629"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rec21:Drum_steel"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Many entities in the rec.21 vocabulary could be seen as subclasses of the generic base class, for example all package types listed below can be made subclasses of generic <em>Pallet</em> base class:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Pallet, CHEP 100 cm x 120 cm
+Pallet, AS 4068-1993
+Pallet, ISO T11
+</code></pre></div></div>
+
+<p>The appropriate class heirarchy can help maintainers to organize and visualize the vocabulary and allow business logic applications to choose the generalization level they need to operate on.</p>
+
+<p>Some entities in the rec.21 vocabulary mix class-level abstraction with properties, such as water resistance or physical dimensions. It would be more natural to define the properties which business data could use to express such attributes:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rec21:width"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:Property"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rdfs:domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rec21:BasePackage"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rdfs:range"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xsd:decimal"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rdfs:comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"physical width of the package, in millimeters"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>In some cases, part of the vocabulary such as base classes and properties could be exctracted to form the stable core vocabualry, while keeping other more specific and volatile subclasses and instances to be governed and published separately. Such distinction might be beneficial for maintaining long-term interoperability between codelist users.</p>
 
 <h2 id="context-granularity">@context granularity</h2>
 
