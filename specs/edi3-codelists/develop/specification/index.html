@@ -52,11 +52,8 @@
     <li><a  href="/codelists/">Code Lists</a></li>
     <li><a  href="/dictionary/">Dictionary</a></li>
     <li class="menu-title"><a href="/technical-specs/">Technical Specs</a></li>
-    <li><a  href="/icl/">Inter Customs Ledger</a></li>
+    <li><a  href="/igl/">Inter-Goverment Ledger</a></li>
     <li><a  href="/identity/">Identity Provider</a></li>
-    <li><a  href="/discovery/">Resource Discovery</a></li>
-    <li><a  href="/description/">Resource Description</a></li>
-    <li><a  href="/events/">Event Structure</a></li>
     <li><a  href="/notary/">Notary Service</a></li>
     <li class="menu-title"><a href="/tools-and-methods/">Tools and Methods</a></li>
     <li><a  href="/uml-profile/">UML Profile</a></li>
@@ -137,11 +134,8 @@
     <li><a  href="/codelists/">Code Lists</a></li>
     <li><a  href="/dictionary/">Dictionary</a></li>
     <li class="menu-title"><a href="/technical-specs/">Technical Specs</a></li>
-    <li><a  href="/icl/">Inter Customs Ledger</a></li>
+    <li><a  href="/igl/">Inter-Goverment Ledger</a></li>
     <li><a  href="/identity/">Identity Provider</a></li>
-    <li><a  href="/discovery/">Resource Discovery</a></li>
-    <li><a  href="/description/">Resource Description</a></li>
-    <li><a  href="/events/">Event Structure</a></li>
     <li><a  href="/notary/">Notary Service</a></li>
     <li class="menu-title"><a href="/tools-and-methods/">Tools and Methods</a></li>
     <li><a  href="/uml-profile/">UML Profile</a></li>
@@ -339,7 +333,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <p>Each code list is maintained in a separate folder of the same name under the docs folder in the edi3.org codelists repository https://github.com/edi3/edi3-codelists/tree/master/docs.  For example a file similar to the snippet below would be located at /rec20/codes.json</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
 	"@Context":"https://edi3.org",
 	"@Type":"codelist",
 	"@id":"https://edi3.org/codelists/rec20/1.0",
@@ -380,7 +374,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <p>All edi3.org codelists are published as consumable APIs according to the following end-point structure</p>
 
-<p>Base URL <code class="highlighter-rouge">https://api.edi3.org/codelists</code></p>
+<p>Base URL <code class="language-plaintext highlighter-rouge">https://api.edi3.org/codelists</code></p>
 
 <table>
   <thead>
@@ -411,7 +405,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <p>For example, the following query would return the structure shown in the canonical form snippet in the previous section</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://edi3.org/codelists/rec20/1.0?canonicalUnit=MTQ&amp;responseSet=full
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://edi3.org/codelists/rec20/1.0?canonicalUnit=MTQ&amp;responseSet=full
 </code></pre></div></div>
 
 <p>Notes</p>
