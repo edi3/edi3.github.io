@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>edi3 Inter Customs Ledger 0.1.0 Specification - edi3 Standards by edi3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-line">
+        <div class="wrapper">
+            <div id="mobile-menu-wrapper" class="mobile-menu">
+                <button id="hamburger-menu" class="hamburger-menu">
+                    <span>toggle menu</span>
+                </button>
+                <div id="mobile-menu" style="display: none;">
+                    
+                    <ul class="sidebar-menu">
+    
+    <li class="menu-title"><a href="/">Overview</a></li>
+    <li><a  href="/governance/">Governance</a></li>
+    <li><a  href="/business-case/">Business Case</a></li>
+    <li><a  href="/glossary/">Glossary</a></li>
+    <li class="menu-title"><a href="/semantic-specs/">Semantic Specs</a></li>
+    <li><a  href="/trade/">Trade Domain</a></li>
+    <li><a  href="/transport/">Transport Domain</a></li>
+    <li><a  href="/regulatory/">Regulatory Domain</a></li>
+    <li><a  href="/finance/">Finance Domain</a></li>
+    <li><a  href="/unlocode/">UN Locode</a></li>
+    <li><a  href="/codelists/">Code Lists</a></li>
+    <li><a  href="/dictionary/">Dictionary</a></li>
+    <li class="menu-title"><a href="/technical-specs/">Technical Specs</a></li>
+    <li><a  href="/icl/">Inter Customs Ledger</a></li>
+    <li><a  href="/identity/">Identity Provider</a></li>
+    <li><a  href="/discovery/">Resource Discovery</a></li>
+    <li><a  href="/description/">Resource Description</a></li>
+    <li><a  href="/events/">Event Structure</a></li>
+    <li><a  href="/notary/">Notary Service</a></li>
+    <li class="menu-title"><a href="/tools-and-methods/">Tools and Methods</a></li>
+    <li><a  href="/uml-profile/">UML Profile</a></li>
+    <li><a  href="/api-ndr/">OpenAPI NDR</a></li>
+    <li><a  href="/json-ld-ndr/">JSON-LD NDR</a></li>
+    <li><a  href="/api-conformance/">API Conformance</a></li>
+    <li><a  href="/model-interchange/">Model Interchange</a></li>
+    <li class="menu-title"><a href="/community/">Community</a></li>
+    <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter (subscribe)</a></li>
+    <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ" target="_blank">Chat (join team)</a></li>
+    <li><a  href="/github/">GitHub</a></li>
+</ul>
+
+                </div>
+            </div>
+            <a href="/" class="logo"><img src="/images/logo-horisontal-white.svg" alt="edi3"></a>
+            <div class="header-search">
+                <script>
+                    (function() {
+                        var cx = '002841699265932723855:7gvs7wrhud8';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
+                </script>
+                <gcse:search></gcse:search>
+            </div>
+            
+        </div>
+    </div>
+    <div class="header-content">
+        <div class="wrapper">
+            <div class="header-text-box">
+                <div class="header-name">edi3 Standards</div>
+                <div class="header-tagline">Supply Chain Standards and Tools for Web Developers</div>
+            </div>
+        </div>
+    </div>
+</header>
+<script type="text/javascript">
+    document.getElementById('hamburger-menu').onclick = function() {
+        var nf = document.getElementById('mobile-menu');
+
+        // Show and hide menu items when toggle is clicked
+        if(nf.style.display==='none') {
+            nf.style.display = 'block';
+        }
+        else {
+            nf.style.display = 'none';
+        }
+    };
+
+    window.addEventListener('click', function(e){
+        if (!document.getElementById('mobile-menu-wrapper').contains(e.target)){
+            document.getElementById('mobile-menu').style.display= 'none';
+        }
+    });
+</script>
+
+<div class="main-wrapper">
+    <div class="main-content">
+        <div class="page-sidebar">
+            <ul class="sidebar-menu">
+    
+    <li class="menu-title"><a href="/">Overview</a></li>
+    <li><a  href="/governance/">Governance</a></li>
+    <li><a  href="/business-case/">Business Case</a></li>
+    <li><a  href="/glossary/">Glossary</a></li>
+    <li class="menu-title"><a href="/semantic-specs/">Semantic Specs</a></li>
+    <li><a  href="/trade/">Trade Domain</a></li>
+    <li><a  href="/transport/">Transport Domain</a></li>
+    <li><a  href="/regulatory/">Regulatory Domain</a></li>
+    <li><a  href="/finance/">Finance Domain</a></li>
+    <li><a  href="/unlocode/">UN Locode</a></li>
+    <li><a  href="/codelists/">Code Lists</a></li>
+    <li><a  href="/dictionary/">Dictionary</a></li>
+    <li class="menu-title"><a href="/technical-specs/">Technical Specs</a></li>
+    <li><a  href="/icl/">Inter Customs Ledger</a></li>
+    <li><a  href="/identity/">Identity Provider</a></li>
+    <li><a  href="/discovery/">Resource Discovery</a></li>
+    <li><a  href="/description/">Resource Description</a></li>
+    <li><a  href="/events/">Event Structure</a></li>
+    <li><a  href="/notary/">Notary Service</a></li>
+    <li class="menu-title"><a href="/tools-and-methods/">Tools and Methods</a></li>
+    <li><a  href="/uml-profile/">UML Profile</a></li>
+    <li><a  href="/api-ndr/">OpenAPI NDR</a></li>
+    <li><a  href="/json-ld-ndr/">JSON-LD NDR</a></li>
+    <li><a  href="/api-conformance/">API Conformance</a></li>
+    <li><a  href="/model-interchange/">Model Interchange</a></li>
+    <li class="menu-title"><a href="/community/">Community</a></li>
+    <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter (subscribe)</a></li>
+    <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ" target="_blank">Chat (join team)</a></li>
+    <li><a  href="/github/">GitHub</a></li>
+</ul>
+
+        </div>
+        <div class="page-content docs-content">
+            
+            <div class="spec-header">
+                
+                
+                
+                <ul>
+                    <li>Spec ID: <p>IGL/1</p>
+</li><li><p><img src="http://rfc.unprotocols.org/spec:2/COSS/raw.svg" alt="raw" /></p>
+</li>
+                    <li>Editor: <p><a href="mailto:christopher.d.gough@gmail.com">Chris Gough</a></p>
+</li>
+                    <li>Contributors: <p><a href="https://github.com/arpentnoir">Richard Spellman</a></p>
+</li>
+                    <li><a href="/specs/edi3-icl/develop/edi3-icl-develop.docx">Export to Doc</a></li>
+                </ul>
+            </div>
+            <div class="specs-toc">
+    <!--<div class="specs-toc-title">Table of contents</div>-->
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#licence">Licence</a></li>
+<li class="toc-entry toc-h2"><a href="#change-process">Change Process</a></li>
+<li class="toc-entry toc-h2"><a href="#language">Language</a></li>
+<li class="toc-entry toc-h2"><a href="#abstract">Abstract</a></li>
+<li class="toc-entry toc-h2"><a href="#glossary">Glossary</a></li>
+<li class="toc-entry toc-h1"><a href="#igl-requirements">IGL Requirements</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#business-context">Business Context</a></li>
+<li class="toc-entry toc-h2"><a href="#architectural-principles">Architectural Principles</a></li>
+<li class="toc-entry toc-h2"><a href="#high-level-requirements">High Level Requirements</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#igl-technical-specification">IGL Technical Specification</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#architecture-overview">Architecture Overview</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#channels">Channels</a></li>
+<li class="toc-entry toc-h3"><a href="#igl-nodes">IGL Nodes</a></li>
+<li class="toc-entry toc-h3"><a href="#client-applications">Client Applications</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#governance-model">Governance Model</a></li>
+<li class="toc-entry toc-h2"><a href="#api-specifications">API Specifications</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#document-api">Document API</a></li>
+<li class="toc-entry toc-h3"><a href="#message-api">Message API</a></li>
+<li class="toc-entry toc-h3"><a href="#subscriptions-api">Subscriptions API</a></li>
+<li class="toc-entry toc-h3"><a href="#channel-api">Channel API</a></li>
+<li class="toc-entry toc-h3"><a href="#registry-api">Registry API</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#semantic-model">Semantic Model</a></li>
+<li class="toc-entry toc-h2"><a href="#security-architecture">Security Architecture</a></li>
+<li class="toc-entry toc-h2"><a href="#igl-node-channel-security">IGL Node-Channel security</a></li>
+<li class="toc-entry toc-h2"><a href="#igl-node-node-g2g-security">IGL Node-Node (G2G) security</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#igl-client-node-b2g-security">IGL client-Node (B2G) security</a></li>
+<li class="toc-entry toc-h3"><a href="#igl-verifiable-claims">IGL verifiable claims</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#component-model">Component Model</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#client-sequence">Client sequence</a></li>
+<li class="toc-entry toc-h3"><a href="#node-sequence">Node Sequence</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#performance--scalability">Performance &amp; Scalability</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#merkel-dag-trees">Merkel DAG Trees</a></li>
+<li class="toc-entry toc-h3"><a href="#side-chains">Side Chains</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#igl-distributed-ledger-technology-implementations">IGL Distributed Ledger Technology Implementations</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#ethereum">Ethereum</a></li>
+<li class="toc-entry toc-h2"><a href="#hyperledger">Hyperledger</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            <h2 id="licence">Licence</h2>
+
+<p>All material published on edi3.org including all parts of this specification are the intellectual property of the UN as per the <a href="https://www.unece.org/fileadmin/DAM/cefact/cf_plenary/plenary12/ECE_TRADE_C_CEFACT_2010_20_Rev2E_UpdatedIPRpolicy.pdf">UN/CEFACT IPR Policy</a>.</p>
+
+<p>This Specification is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version. See http://www.gnu.org/licenses.</p>
+
+<h2 id="change-process">Change Process</h2>
+
+<p>This document is governed by the <a href="http://rfc.unprotocols.org/spec:2/COSS/">2/COSS</a> (COSS).</p>
+
+<h2 id="language">Language</h2>
+
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” 
+in this document are to be interpreted as described in RFC 2119.</p>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>This document describes a technical specification for the trusted transfer of cross-border regulatory documents between government agencies using distributed ledger technology. The use of a distributed ledger approach for G2G document sharing offers several advantages over alternative methods.</p>
+
+<ul>
+  <li>There is no centralised infrastructure - thereby avoiding the need for complex funding models and avoiding a single point of failure or security risk.</li>
+  <li>Each country can host trade documents within their jurisdiction, conforming to increasingly strict data sovereignty rules.</li>
+  <li>Trade documents can be notarised and verified with very high integrity against tampering or forgery.</li>
+  <li>Where appropriate (eg single use certificates), documents as digital assets can be transferred and acquitted following the physical asset movement.</li>
+</ul>
+
+<p>There is no expectation that a single uber-ledger supports all G2G transactions. A specific ledger may service as few as two countries and may be limited to a single process (eg certificates of origin and certificates of non-manipulation) or may service multiple countries and multiple processes. Therefore this specification supports the use of multiple different distributed ledgers (both public and private) by defining a standardised protocol that allows users within a jurisdiction to interact with multiple ledgers via a simple interface.</p>
+
+<p>This document uses Certificates of Origin and Certificates of Non-Manipulation as the guiding use case for the initial specification, however it is intended that the Inter Customs Ledger should be generic and allow for the transfer of any shipment related documentation between authorised agencies.</p>
+
+<h2 id="glossary">Glossary</h2>
+
+<p>To-do : replace this section with a simple link to role definitions in the dictionary specification</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3PL</td>
+      <td>Third Party Logistics Provider (eg freight forwarders)</td>
+    </tr>
+    <tr>
+      <td>Agent</td>
+      <td>Intermediaries such as customs agents</td>
+    </tr>
+    <tr>
+      <td>API</td>
+      <td>Application Programming Interface</td>
+    </tr>
+    <tr>
+      <td>Carrier</td>
+      <td>A provider of transport means/equipment such a shipping line or airline</td>
+    </tr>
+    <tr>
+      <td>Certifying Body</td>
+      <td>An organisation that has been accredited to issue one or more certificate types - such as a chamber of commerce or government agency that may issue Certificates of Origin</td>
+    </tr>
+    <tr>
+      <td>DLT</td>
+      <td>Distributed Ledger Technology, of which Blockchain is the most common example.</td>
+    </tr>
+    <tr>
+      <td>Document</td>
+      <td>When capitalised in this document, this term refers to any document which gives authorisation for an importer or exporter to take some action (or be granted some further authority) with respect to an international shipment of goods. e.g. a Certificate of Origin, a Phytosanitary Certificate, an Export Declaration, etc</td>
+    </tr>
+    <tr>
+      <td>Exporter</td>
+      <td>Business or individual that is the seller of internationally traded goods</td>
+    </tr>
+    <tr>
+      <td>IGL Node</td>
+      <td>A device on an IGL network which has full visibility of the entire ledger and contributes to the integrity of the ledger by implementing a Consensus Algorithm. Typically operated by a national regulator</td>
+    </tr>
+    <tr>
+      <td>IGL User</td>
+      <td>any of the above roles that interact with the IGL (typically via some software application)</td>
+    </tr>
+    <tr>
+      <td>Importer</td>
+      <td>Business or individual that is the buyer of internationally traded goods</td>
+    </tr>
+    <tr>
+      <td>Regulator</td>
+      <td>A government agency such as a customs authority</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="igl-requirements">IGL Requirements</h1>
+
+<h2 id="business-context">Business Context</h2>
+
+<p>International trade clearance procedures require a number of documents to be presented to satisfy the requirements of a variety of agreements. For example, in order for an importer to gain preferential tariff treatment under a Free Trade Agreement, the importer must present a valid Certificate of Origin (issued to the exporter) which states that the goods being imported qualify as originating in the country which is party to the agreement. These processes are managed largely by the transfer of paper documents which are subject to loss, alteration and forgery.</p>
+
+<p><img src="DocumentFlows_AsIs.png" alt="paper flows" /></p>
+
+<p>In many jurisdictions, significant digitisation progress has been made for interactions between the national regulators (eg customs) and the local regulated community (eg importers, exporters, etc). In Australia for example, 99% of customs documents are already lodged electronically. However there still remains a very significant amount of paper documents that support cross border trade. The majority of the paper documents fit the same pattern; they are issued by a party in the exporting country but required by the regulator of the importing country for goods clearance. One significant reason that paper has been difficult to replace is that there is no direct trust relationship that allows in importing regulator to confirm the identity of the document issuer in the exporting jurisdiction.</p>
+
+<p>An Inter Customs Ledger (IGL) is proposed as an approach to the transfer of shipment related documents between customs agencies which is immediate, permanent and irrefutable.  The intercustoms ledger is essentially a trust bridge between national identity schemes - basically the importing regulator trusts the identity of the document issuer because the exporting regulator confirms the issuer identity.</p>
+
+<p><img src="DocumentFlows_ToBe.png" alt="digital flows" /></p>
+
+<p>The future state diagram shows the relationship between the IGL and three other key components.</p>
+
+<ul>
+  <li>National single windows and port community systems provide a streamlined and automated means for local entities (traders, 3PL, agents, etc) to interact with their local regulators. Many nations now have some kind of single window system but implementations are varied and usually unique to the local regulatory environment. The IGL can be thought of as a cross-border integration framework <em>between</em> national single windows.  However, it is important that the varied and complex national rules do not bleed into the IGL so that integration remains simple.</li>
+  <li>National digital identity schemes are emerging in many jurisdictions are provide a way for businesses and individuals in a country to prove their identity to any government agency and to any authorised non-government entity. Business identity schemes are typically linked to public tax registration numbers. Individual identities may be linked to a business identity and will normally include the idea of identity assurance levels which indicate the degree of identity integrity attached to the token holder. This means, for example, that a certificate of origin provided by an exporter to their local customs authority (possibly via a single window) can be passed to the importing authority together with a high integrity identity claim. In this way, the IGL is essentially an international “trust bridge” between national identity schemes.</li>
+  <li>Commercial trade data platforms/pipelines are an emerging capability that seek to provide their customers with and-to-end supply chain visibility and management. They are essentially multi-source data aggregators and their scope usually includes some or all of trade, transport, financial, and regulatory data. The data managed by commercial pipelines is not only traditional trade documents (invoices, bills of lading etc) but also IoT streams like data feeds from instrumented smart containers. These platforms can provide significant value to their stakeholders and have a scope much larger than G2G data sharing. The IGL complements these commercial services and does not compete with them.</li>
+</ul>
+
+<h2 id="architectural-principles">Architectural Principles</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Principle</th>
+      <th>Rationale</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P1</td>
+      <td>Avoid bleeding any local regulatory complexities into cross-border processes</td>
+      <td>A strong separation between local complexity and cross border document exchange is essential for scalability. The IGL specification must be as simple as possible in order for update to scale.</td>
+    </tr>
+    <tr>
+      <td>P2</td>
+      <td>Support multiple distributed ledger types &amp; networks</td>
+      <td>A single global uber-ledger would need to pick a technology winner, would restrict the ability to introduce non breaking extensions, would present a high value attack target, and is unlikely to be supported by every nation.</td>
+    </tr>
+    <tr>
+      <td>P3</td>
+      <td>Coexist nicely with paper processes</td>
+      <td>A switch from paper processes to native digital documents exchanged via IGL will not happen overnight. Therefore the IGL should add value to existing paper processes and should facilitate a simple and gradual transition from paper to native digital documents.</td>
+    </tr>
+    <tr>
+      <td>P4</td>
+      <td>Leverage the unique position of national regulators</td>
+      <td>Customs authorities enjoy a unique position as the single convergence point for all imports to and exports from a country. That allows an intercustoms ledger to easily achieve complete coverage of bilateral or multilateral trading relationships.</td>
+    </tr>
+    <tr>
+      <td>P5</td>
+      <td>Complement rather than compete with commercial platforms</td>
+      <td>Regulators are not natural innovators. The ideal IGL will provide a non-competitive platform that leverages the position to regulators to the benefit of their constituents whilst allowing commercial innovation to flourish.</td>
+    </tr>
+    <tr>
+      <td>P6</td>
+      <td>Do not <em>require</em> businesses to provide more than their local regulatory obligations demand.</td>
+      <td>There may be genuine value to business in using the IGL for cross border processes beyond the regulatory minimum but regulators cannot and should not demand it. Therefore, IGL implementations should define a clear value proposition for every document that exceeds the regulatory minimum.</td>
+    </tr>
+    <tr>
+      <td>P7</td>
+      <td>Assume on-chain data is public</td>
+      <td>The IGL may be implemented on either public ledgers such as etherium or private ledgers such as hyperledger. In either case, it should be assumed that on-chain data is public since even a private ledger has multiple nodes, each of which has a has a full copy and the privacy of on-chain data cannot be guaranteed.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="high-level-requirements">High Level Requirements</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Requirement</th>
+      <th>Solution Links</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>R1</td>
+      <td>The on-chain IGL data model MUST be simple enough to support any cross border use case.</td>
+      <td>Link to IGL on-chain data model</td>
+    </tr>
+    <tr>
+      <td>R2</td>
+      <td>The on-chain IGL data SHOULD not contain sensitive or private information</td>
+      <td>link to threat-risk analysis</td>
+    </tr>
+    <tr>
+      <td>R3</td>
+      <td>A message on the IGL SHOULD provide a mechanism for discovering the full content of the document to which it relates</td>
+      <td>Link to discovery protocol</td>
+    </tr>
+    <tr>
+      <td>R4</td>
+      <td>Trade documents referenced by the IGL SHOULD be accessible via a consistent API</td>
+      <td>Link to Repository API</td>
+    </tr>
+    <tr>
+      <td>R5</td>
+      <td>The IGL SHOULD NOT require that the user have any knowledge of the specific ledger technology used (etherium, hyperledger, etc)</td>
+      <td>link to Message API</td>
+    </tr>
+    <tr>
+      <td>R6</td>
+      <td>The IGL SHOULD NOT assume that the user knows which ledger and which protocol to use in order to exchange a specific document type between two countries.</td>
+      <td>Link to Routing API</td>
+    </tr>
+    <tr>
+      <td>R7</td>
+      <td>Any Regulator SHOULD be able to participate in the IGL by hosting an IGL Message API that integrates with one or more ledgers</td>
+      <td>link to participation rules</td>
+    </tr>
+    <tr>
+      <td>R8</td>
+      <td>Participating in the network by hosting a Message API SHOULD NOT automatically grant access to the content of a document</td>
+      <td>link to access control rules</td>
+    </tr>
+    <tr>
+      <td>R9</td>
+      <td>The IGL SHOULD provide an extension mechanism to allow smart contract to be defined where appropriate for the business context.</td>
+      <td>Link to smart contract patterns</td>
+    </tr>
+    <tr>
+      <td>R10</td>
+      <td>The IGL MUST provide some mechanism for asserting the validity of a document presented by an importer or exporter</td>
+      <td>Link to notary / verification API</td>
+    </tr>
+    <tr>
+      <td>R11</td>
+      <td>The IGL MUST provide some mechanism for invalidating a Document</td>
+      <td>Link to message API</td>
+    </tr>
+    <tr>
+      <td>R12</td>
+      <td>The IGL MUST provide some mechanism for specifying who can perform certain actions with respect to a Document</td>
+      <td>Link to access control rules</td>
+    </tr>
+    <tr>
+      <td>R13</td>
+      <td>The IGL SHOULD allow any blockchain technology to be used</td>
+      <td>link to technology plug in architecture</td>
+    </tr>
+    <tr>
+      <td>R14</td>
+      <td>The IGL MUST allow transactions to be written individually or in bulk</td>
+      <td>link to wire protocol / side tree architecture</td>
+    </tr>
+    <tr>
+      <td>R15</td>
+      <td>The IGL MUST provide a consistent means to support any G2G business process</td>
+      <td>link to semantic layer architecture</td>
+    </tr>
+    <tr>
+      <td>R16</td>
+      <td>The IGL architecture MUST provide a scalability mechanism to support the volumes that may be required for the world’s largest economies. Up to 1 billion transactions per day</td>
+      <td>link to scalability architecture</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="igl-technical-specification">IGL Technical Specification</h1>
+
+<h2 id="architecture-overview">Architecture Overview</h2>
+
+<p>The IGL specification provides a flexible framework for distributed transaction management between participating countries for the exchange of regulatory or trade documents. The architecture assumes that no single Distributed Ledger Technology or network will be used for all purposes by all countries. The conceptual model is shown below.</p>
+
+<p><img src="IGL_API_Architecture.png" alt="API Architecture" /></p>
+
+<h3 id="channels">Channels</h3>
+
+<p>The architecture permits the creation of any number of “channels” that can be used for bilateral or multi-lateral exchange of specific message types.  One “channel” supports</p>
+
+<ul>
+  <li>one or more message types drawn from a controlled vocabulary - for example <code class="highlighter-rouge">unece.un.org:regulatory.coo.created</code></li>
+  <li>two or more countries - for example “AU, SG”</li>
+  <li>one ledger network and technology - eg ethereum</li>
+  <li>one validity time period</li>
+</ul>
+
+<h3 id="igl-nodes">IGL Nodes</h3>
+
+<p>The IGL node layer represents the components deployed one or more node operators in any country that wishes to participate in the inter-government ledger. It provides an abstraction above specific DLT channels but remains agnostic of specific cross-border business processes such as origin data exchange. This layer provides one or more secure document repositories and implements the routing logic for recording channel transactions. THe IGL Node offers 3 standard APIs to the client layer.</p>
+
+<ul>
+  <li>The Message API is used to record messages that include structured data and binary files that represent ledger transactions (eg a Certificate of origin).</li>
+  <li>The Subscriptions API is used to subscribe to call backs about the status of ledger transactions (eg the certificate of origin is created / validated / acquitted)</li>
+  <li>The channels API is used to query which channels are supported by the IGL node.</li>
+</ul>
+
+<h3 id="client-applications">Client Applications</h3>
+
+<p>The applications layer represents any platform that will make use of the IGL for cross border exchange. THis is the business process specific layer and will typically be represented by single window applications or other trade &amp; logistics applications. The diagram shows a CoO (Certificate of Origin) API as an example but this layer could support any trade document (invoice, Bill of Lading, etc).</p>
+
+<h2 id="governance-model">Governance Model</h2>
+
+<p>The IGL Specification assumes that any country may have several “authorised agencies” that have an existing authority to negotiate bilateral or multi-lateral exchanges with counterpart agencies in other countries.  For example</p>
+
+<ul>
+  <li>A Trade Agency may negotiate FTAs and the corresponding exchange of origin data.</li>
+  <li>A Border Agency may negotiate secure trade lanes supported by exchange of Authorised Economic Operator (AEO) data and/or export declaration data.</li>
+  <li>An Agriculture agency may negotiate the exchange of phytosanitary and other certificates.</li>
+</ul>
+
+<p>Similarly the IGL specification assumes that there may be more than one IGL nodes in any country and that these may be operated internally by an authorised agency or may be operated by accredited third parties.  An authorised agency may delegate authority to exchange IGL messages on a channel to one or more node operators.</p>
+
+<p><img src="GovernanceModel.png" alt="IGL Node Governance" /></p>
+
+<p>Client systems may use an IGL node but must be authenticated via an accredited identity provider.</p>
+
+<p>The accreditation schemes for both IGL nodes and identity providers are not defined by this specification because most countries will already have suitable protocols.  For example:</p>
+
+<ul>
+  <li>Some kind of trusted identity accreditation framework for identity providers - such as the AU government <a href="https://www.dta.gov.au/our-projects/digital-identity/join-identity-federation/accreditation-and-onboarding/trusted-digital-identity-framework">TDIF</a></li>
+  <li>Some kind of security accreditation framework for node operators - such as the AU government <a href="https://www.cyber.gov.au/programs/irap">IRAP</a></li>
+</ul>
+
+<p>Identity providers and node operators SHOULD reference the accreditation framework on their public websites.</p>
+
+<h2 id="api-specifications">API Specifications</h2>
+
+<p>There are five API specifications that define the standard interfaces provided by any IGL node.</p>
+
+<h3 id="document-api">Document API</h3>
+
+<p>The document API is used by authorised IGL clients to submit cross border regulatory or trade documents to an IGL node. The document API is used to submit documents <strong>before</strong> invoking the message API to advise the other country of the existance of a new document.
+The document API is also used by receiving jurisdictions to retreive documents that are referenced by an IGL message.</p>
+
+<p><img src="DocumentAPI.png" alt="Document API" /></p>
+
+<p>An IGL document MUST conform to the API schema and so always includes:</p>
+
+<ul>
+  <li>A sender specified reference (typically a business identifier like an invoice number)</li>
+  <li>A human readable document name (eg “certificate of Origin”)</li>
+  <li>The issuer ID (which must also be supported by an identity proof)</li>
+  <li>some structured data - using JSON-LD and conforming to a well undertood ontology (JSON-LD @context) that is supported by the IGL channel policy.</li>
+  <li>zero or more binary attachments</li>
+  <li>one or more <a href="https://www.w3.org/TR/vc-data-model/">W3C Verifiable credential</a> proofs.  The mimimum is the identity proof for the issuer.</li>
+</ul>
+
+<p>The ID of the document is always the merkle hash of all binaries, proofs, and structured data that comprise the document.  If a document is updated with modified metadata, binaries, or proofs, then the new version will have a new merkel hash and an incremented version sequence number.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
+</code></pre></div></div>
+
+<h3 id="message-api">Message API</h3>
+
+<p>The message API is used by authorised IGL clients to send messages to other countries via channels supported by the node. The messages may reference a previously submitted document using the merkel hash ID of the document as the “object” of the message.</p>
+
+<p><img src="MessageAPI.png" alt="Message API" /></p>
+
+<p>IGL messages are essentially semantic triples (subject, predicate, object) that are sent from a sending jurisdiction to a receiving jurisdiction over an IGL channel that supports the predicate.  For example, for a ceritficate of origin sent from Australia to China, the message properties might be</p>
+
+<ul>
+  <li>Sender = AU</li>
+  <li>receiver = CN</li>
+  <li>predicate = “unece.un.org:coo:created” - defines the type of message (in this case that a certificate of origin has been created) - must be drawn from a well understood ontology and much match the channel policy.</li>
+  <li>subject = “chamber.com.au:chafta-coo:123” - defines the identity of the message and must be a unique IRI</li>
+  <li>object = a5c841c07663e6992389d27037369d4eb4972cc062f2b962ebadf8599b26fcbf - the merkel hash of the related document.</li>
+</ul>
+
+<p>Messages have a simple state lifecycle (pending, bundled, sent, delivered, failed, withdrawn)</p>
+
+<p>In some cases, channel policy may permit the transmission of additional related information about a message as a further set of semantic triples.  In this way, recipients can build semantic graphs of related data (eg certificate of origin 1234 is linked to consignment 5678 that is on voyage 9123)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
+</code></pre></div></div>
+
+<h3 id="subscriptions-api">Subscriptions API</h3>
+
+<p>The subscriptions API allows IGL clients to be notiofed when there is a message for them.  The IGL subscriptions service will POST any IGL messages that match the subscription pattern to the subscribers callback API.</p>
+
+<p><img src="SubscriptionAPI.png" alt="Subscription API" /></p>
+
+<p>There are two type of subscribers</p>
+<ul>
+  <li>members of the regulated community - can subscribe to updates about messages they have sent (eg keep me updated about CoO number 123)</li>
+  <li>regulators - can subscribe to predicate topic streams (ie tell me about all CoOs).</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
+</code></pre></div></div>
+
+<h3 id="channel-api">Channel API</h3>
+
+<p>to-do : document this
+to-do : add swagger spec</p>
+
+<h3 id="registry-api">Registry API</h3>
+
+<p>The registry API supports the query of channels on an IGL node channel registry.</p>
+
+<ul>
+  <li>Query operations SHOULD be open to public unauthenticated clients.</li>
+  <li>A common public use case is for a client system to determine what message types may be sent to which countries using the node.</li>
+  <li>An IGL node MAY choose to hide the existence of some channels from pubkuc queries.</li>
+</ul>
+
+<p><img src="RegistryAPI.png" alt="Registry API" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
+</code></pre></div></div>
+
+<h2 id="semantic-model">Semantic Model</h2>
+
+<p>An IGL message is a semantic triple</p>
+
+<ul>
+  <li>subject - typically the identifier of a thing  (eg certificate of origin #123)</li>
+  <li>predicate - a named relationship drawn froma  controlled vocabulary (eg unece.org:coo:created)</li>
+  <li>object - the thing itself (eg the derticate of origin document identified by the hash of the document)</li>
+</ul>
+
+<p>A number of related messages may be sent via the IGL, possibly by different parties in a jurisduiction.  The combination of the the messages allows the receiver node to construct a semantic graph or related entities.</p>
+
+<p><img src="SemanticGraph.png" alt="Semantic Graph" /></p>
+
+<p>to do:  add table with specific examples of subject-object-predictates for the graph in the diagram.</p>
+
+<p>to-do: more details</p>
+
+<h2 id="security-architecture">Security Architecture</h2>
+
+<p>There are different layers to the security mnodel for IGL as shownb in the diagram below</p>
+
+<p><img src="SecurityModel.png" alt="Security Model" /></p>
+
+<ul>
+  <li>Authorised Agencies maintain channel keys that represent their identity on a speciucl ledger channel (eg ethereum).  The ksy are provided to the node operator to whom the agency delegates authority to operate a channel.</li>
+  <li>G2G security between coiuntries (eg for document API access) is managed using mutual SSL to verify DNS domains of the participating authorised agencies (eg agencyA.gov.xx)</li>
+  <li>B2G security within a jurisdiction is managed using OAuth2 federated identity claims.</li>
+</ul>
+
+<h2 id="igl-node-channel-security">IGL Node-Channel security</h2>
+
+<p>to-do: more details</p>
+
+<h2 id="igl-node-node-g2g-security">IGL Node-Node (G2G) security</h2>
+
+<p>to-do: more details</p>
+
+<h3 id="igl-client-node-b2g-security">IGL client-Node (B2G) security</h3>
+
+<p>to-do: more details about claims etc</p>
+
+<h3 id="igl-verifiable-claims">IGL verifiable claims</h3>
+
+<p>to-do: more about verifiable claims</p>
+
+<h2 id="component-model">Component Model</h2>
+
+<p>A typical IGL node will comprise the high level components illustrated in the diagram below.</p>
+
+<p><img src="IGLNodeComponents.png" alt="IGL Node Components" /></p>
+
+<ul>
+  <li>An IGL worker exposes the Message API and is responsible to process IGL messages including secure document storage, routing the the relevant IGL channel, and communicating events to the event manager.</li>
+  <li>A document manager exposes the document API and is responsible for the secure storage of documents (both structured data and binaries) that are referenced by a message on a channel.</li>
+  <li>An event manager exposes the subscriptions API and allows client systems to subscribe to notifications about messages that they post.</li>
+</ul>
+
+<h3 id="client-sequence">Client sequence</h3>
+
+<p>The high level sequence flow for client system interactions with IGL nodes is shown below. Detailed interactions between node components and with IGL channels are not shown.</p>
+
+<p><img src="IGLClientSequence.png" alt="IGL client sequence" /></p>
+
+<p>Assuming that a channel has been established as per the governance model then</p>
+
+<ul>
+  <li>A document issuer using a client system proves their identity via an accredited identity provider (IDP), typically via the OAuth2 protocol, and the resulting token includes the identity of the document issuer.</li>
+  <li>The client system POSTs an IGL message to the message API together with an access token from the IDP.</li>
+  <li>The IGL node uses message metadata to determine the relevant IGL channel (or returns an error if there is no matching channel)</li>
+  <li>The IGL node requests a new transaction of the relevant distributed ledger channel and, once consensus is completed and a block is written, the client is notified via the event manager.</li>
+  <li>The counter party on the network detects the new message, gets the document, and notifies any subscribed parties (eg a government agency in country B) of the new message.</li>
+  <li>The message is processed by the receiving agency business systems.</li>
+  <li>The reverse flow (from country B back to country A) follows exactly the same pattern, except in the opposite direction.  A long running conversation is implemented as multiple independent messages correlated via a common subject-id.</li>
+</ul>
+
+<h3 id="node-sequence">Node Sequence</h3>
+
+<p>The sequence diagram below elaborates on the detailed interactions between IGL node components and IGL channels that are not shown on the client sequence diagram.</p>
+
+<p><img src="IGLNodeSequence.png" alt="IGL node sequence" /></p>
+
+<p>Assuming that public keys of authorised node operators have been exchanged and mapped to persistent identities then</p>
+
+<ul>
+  <li>A new message is received from a client by the message API</li>
+  <li>The IGL worker will POST the contained or referenced document to the document API for secure storage. The IGL specification is not prescriptive of document format (see Semantic model section).</li>
+  <li>The document API will return a unique fingerprint (multi-hash) of the stored document and will update it’s access control to allow read access by the recipient country authority.</li>
+  <li>The IGL worker will determine the relevant IGL channel using “toCountry” and “messageType” fields from the message header and passes the message to the relevant (DLT technology specific) channel node</li>
+  <li>The channel node requests a new ledger transaction comprising a semantic triple
+    <ul>
+      <li>Subject is a unique business identifier for the long running conversation which could be a namespace qualified id such as <code class="highlighter-rouge">chamber.com.au:chafta-coo:123</code> or could be a GUID.</li>
+      <li>Object is the unique fingerprint (multihash) of the document that is attached to the message and stored in the document repository.</li>
+      <li>Predicate is the semantic description of the message represented by the messageType.  This must be drawn from a controlled vocabulary (see semantic model) - eg <code class="highlighter-rouge">unece.un.org:coo:created</code></li>
+    </ul>
+  </li>
+  <li>The channel completes consensus and writes a new block - this process is specific to the particular DLT technology (eg ethereum or hyperledger).</li>
+  <li>once the new block is successfully written the channel node notifies the IGL worker which will send a callback event to all subscribed clients via the event manager.</li>
+  <li>The new transaction is observed by the counter party IGL node which reads the transaction (ie the semantic triple)</li>
+  <li>The recipient country node GETs the document identified by the Object multihash from the sender country repository. Authentication is via mutual SSL.</li>
+  <li>The recipient country IGL node notifies any subscribed clients of the new transaction via the event manager of the recipient IGL node.</li>
+</ul>
+
+<h2 id="performance--scalability">Performance &amp; Scalability</h2>
+
+<p>Blockchain technology can become prohibitively slow and/or expensive at very high volumes. An IGL node operating in a large economy may need to process a very high volume of transactions. The IGL should be able to handle high volumes without significant performance degradation or cost increases. A benchmark volume target is one billion transactions per day. There are two approaches to increasing volumes on distributed ledgers without significant performance loss.</p>
+
+<ul>
+  <li>The Side-tree is essentially a batch protocol where an arbitrary number of transactions are composed into a Merkel DAG (Directed Acyclic Graph) where each node in the tree contains the hash of transactions at lower levels. Only the top level root of the tree is written to the chain but all transactions inherit the integrity of the chain.</li>
+  <li>The side-chain is essentially an independent fork to create a new chain that can include an arbitrary number of new blocks before the fork re-joins the main chain. Side chains are more complex than side trees but allow more dynamic rules (transaction verifications) and can include new stakeholders as side chain node operators that are not part of the main chain.</li>
+</ul>
+
+<p>The combination of performance requirements and channel specific rule/validation requirements leads to a decision tree</p>
+
+<p><img src="ScalabilityModel.png" alt="performance decision tree" /></p>
+
+<h3 id="merkel-dag-trees">Merkel DAG Trees</h3>
+
+<h3 id="side-chains">Side Chains</h3>
+
+<h1 id="igl-distributed-ledger-technology-implementations">IGL Distributed Ledger Technology Implementations</h1>
+
+<h2 id="ethereum">Ethereum</h2>
+
+<h2 id="hyperledger">Hyperledger</h2>
+
+
+            
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <a href="/" class="footer-logo"><img src="/images/logo-horisontal-white.svg" alt=""></a>
+    <ul class="footer-menu">
+        <li><a href="http://edi3.org/about">About edi3</a></li>
+        <li><a href="https://github.com/edi3" target="_blank">Github</a></li>
+        <li><a href="http://eepurl.com/dMLfdU" target="_blank">Newsletter</a></li>
+        <li><a href="https://join.slack.com/t/edi3/shared_invite/enQtNTY5OTkzMjQ0NjcyLTAxZGVlMzJmNWQ5MDBjOTRmMWViNGU0MzdhY2VkOWIwZWY3ODMxOWE4YTJmZjdiNTBkYzczZDk5Y2ViOWJlNzQ" target="_blank">Join</a> <a href="https://edi3.slack.com/messages/general/" target="_blank">team</a></li>
+    </ul>
+    <div class="footer-credits">
+        This page was generated by GitHub Pages.
+        Comments, issues and suggestions are welcome in the <a href="https://github.com/edi3/edi3.github.io/issues/new">ticket system</a>.
+        Pull requests welcome in the <a href="https://github.com/edi3/edi3.github.io/">site repository</a>.
+    </div>
+</footer>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-135810483-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="/js/anchor.min.js"></script>
+<script>
+    anchors.add('h1, h2, h3, h4, h5');
+    anchors.remove('.no-anchor, .page-content > h1:first-child');
+</script>
+</body>
+</html>

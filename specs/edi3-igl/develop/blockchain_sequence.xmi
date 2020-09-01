@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
+		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_A6944A42_98D2_4e66_84E5_A52EDAAF14CA" name="Dynamic View" visibility="public">
+			<packagedElement xmi:type="uml:Collaboration" xmi:id="EAID_CB000000_A42_98D2_4e66_84E5_A52EDAAF14C" name="EA_Collaboration1" visibility="public">
+				<ownedBehavior xmi:type="uml:Interaction" xmi:id="EAID_IN000000_A42_98D2_4e66_84E5_A52EDAAF14C" name="EA_Interaction1" visibility="public"/>
+			</packagedElement>
+		</packagedElement>
+	</uml:Model>
+	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+		<elements>
+			<element xmi:idref="EAPK_A6944A42_98D2_4e66_84E5_A52EDAAF14CA" xmi:type="uml:Package" name="Dynamic View" scope="public">
+				<model package2="EAID_A6944A42_98D2_4e66_84E5_A52EDAAF14CA" package="EAPK_91D533B3_BB04_4fbe_9079_17F31E189326" tpos="3" ea_localid="6" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Vision Wang" version="1.0" phase="1.0" created="2020-02-17 23:05:44" modified="2020-02-17 23:05:44" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Model"/>
+				<packageproperties version="1.0" tpos="3"/>
+				<paths/>
+				<times created="2020-02-17 00:00:00" modified="2020-02-17 00:00:00"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE" packageFlags="isModel=1;VICON=2;"/>
+			</element>
+		</elements>
+		<connectors/>
+		<primitivetypes>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package" visibility="public"/>
+		</primitivetypes>
+		<profiles/>
+	</xmi:Extension>
+</xmi:XMI>
