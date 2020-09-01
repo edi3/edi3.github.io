@@ -170,7 +170,7 @@
 </li>
                     <li>Contributors: <p><a href="https://github.com/arpentnoir">Richard Spellman</a></p>
 </li>
-                    <li><a href="/specs/edi3-icl/master/edi3-icl-master.docx">Export to Doc</a></li>
+                    <li><a href="/specs/edi3-igl/master/edi3-igl-master.docx">Export to Doc</a></li>
                 </ul>
             </div>
             <div class="specs-toc">
@@ -501,7 +501,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
 <p>The architecture permits the creation of any number of “channels” that can be used for bilateral or multi-lateral exchange of specific message types.  One “channel” supports</p>
 
 <ul>
-  <li>one or more message types drawn from a controlled vocabulary - for example <code class="highlighter-rouge">unece.un.org:regulatory.coo.created</code></li>
+  <li>one or more message types drawn from a controlled vocabulary - for example <code class="language-plaintext highlighter-rouge">unece.un.org:regulatory.coo.created</code></li>
   <li>two or more countries - for example “AU, SG”</li>
   <li>one ledger network and technology - eg ethereum</li>
   <li>one validity time period</li>
@@ -593,9 +593,9 @@ in this document are to be interpreted as described in RFC 2119.</p>
   <li>The IGL worker will determine the relevant IGL channel using “toCountry” and “messageType” fields from the message header and passes the message to the relevant (DLT technology specific) channel node</li>
   <li>The channel node requests a new ledger transaction comprising a semantic triple
     <ul>
-      <li>Subject is a unique business identifier for the long running conversation which could be a namespace qualified id suhc as <code class="highlighter-rouge">chamber.com.au:chafta-coo:123</code> or could be a GUID.</li>
+      <li>Subject is a unique business identifier for the long running conversation which could be a namespace qualified id suhc as <code class="language-plaintext highlighter-rouge">chamber.com.au:chafta-coo:123</code> or could be a GUID.</li>
       <li>Object is the unique fingerprint (multihash) of the document that is attached to the message and stored in the documenbt repository.</li>
-      <li>Predicate is the semantic description of the message represented by the messageType.  This must be drawn from a controlled vocabularoy (see semantic model) - eg <code class="highlighter-rouge">unece.un.org:coo:created</code></li>
+      <li>Predicate is the semantic description of the message represented by the messageType.  This must be drawn from a controlled vocabularoy (see semantic model) - eg <code class="language-plaintext highlighter-rouge">unece.un.org:coo:created</code></li>
     </ul>
   </li>
   <li>The channel completes consensus and writes a new block - this process is specific to the particular DLT techology (eg ethereum or hyperledger).</li>

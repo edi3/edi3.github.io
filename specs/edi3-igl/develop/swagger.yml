@@ -1,9 +1,9 @@
 openapi: 3.0.0
 servers: []
 info:
-  description: This is edi3 Inter Customs Ledger API
+  description: This is edi3 Inter Goverment Ledger API
   version: 1.0
-  title: edi3 Inter Customs Ledger API
+  title: edi3 Inter Goverment Ledger API
   contact:
     email: info@edi3.org
   license:
@@ -20,7 +20,7 @@ paths:
       summary: provides base information
       operationId: getInfo
       description: |
-        Get some base information about edi3 Inter Customs Ledger API
+        Get some base information about edi3 Inter Goverment Ledger API
       parameters:
         - in: query
           name: searchString
@@ -45,7 +45,7 @@ paths:
       summary: updates base information
       operationId: updateInfo
       description: |
-        Update base information about edi3 Inter Customs Ledger API
+        Update base information about edi3 Inter Goverment Ledger API
       responses:
         '200':
           description: information updated
@@ -69,10 +69,10 @@ components:
       properties:
         alias:
           type: string
-          example: edi3-icl
+          example: edi3-igl
         title:
           type: string
-          example: edi3 Inter Customs Ledger
+          example: edi3 Inter Goverment Ledger
         version:
           type: string
           example: 1.0

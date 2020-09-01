@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>edi3 Inter Customs Ledger 0.1.0 Specification - edi3 Standards by edi3</title>
+    <title>edi3 Inter Goverment Ledger 0.1.0 Specification - edi3 Standards by edi3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/style.css">
 
@@ -170,7 +170,7 @@
 </li>
                     <li>Contributors: <p><a href="https://github.com/arpentnoir">Richard Spellman</a></p>
 </li>
-                    <li><a href="/specs/edi3-icl/develop/edi3-icl-develop.docx">Export to Doc</a></li>
+                    <li><a href="/specs/edi3-igl/develop/edi3-igl-develop.docx">Export to Doc</a></li>
                 </ul>
             </div>
             <div class="specs-toc">
@@ -266,7 +266,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <p>There is no expectation that a single uber-ledger supports all G2G transactions. A specific ledger may service as few as two countries and may be limited to a single process (eg certificates of origin and certificates of non-manipulation) or may service multiple countries and multiple processes. Therefore this specification supports the use of multiple different distributed ledgers (both public and private) by defining a standardised protocol that allows users within a jurisdiction to interact with multiple ledgers via a simple interface.</p>
 
-<p>This document uses Certificates of Origin and Certificates of Non-Manipulation as the guiding use case for the initial specification, however it is intended that the Inter Customs Ledger should be generic and allow for the transfer of any shipment related documentation between authorised agencies.</p>
+<p>This document uses Certificates of Origin and Certificates of Non-Manipulation as the guiding use case for the initial specification, however it is intended that the Inter Goverment Ledger should be generic and allow for the transfer of any shipment related documentation between authorised agencies.</p>
 
 <h2 id="glossary">Glossary</h2>
 
@@ -341,7 +341,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
 
 <p>In many jurisdictions, significant digitisation progress has been made for interactions between the national regulators (eg customs) and the local regulated community (eg importers, exporters, etc). In Australia for example, 99% of customs documents are already lodged electronically. However there still remains a very significant amount of paper documents that support cross border trade. The majority of the paper documents fit the same pattern; they are issued by a party in the exporting country but required by the regulator of the importing country for goods clearance. One significant reason that paper has been difficult to replace is that there is no direct trust relationship that allows in importing regulator to confirm the identity of the document issuer in the exporting jurisdiction.</p>
 
-<p>An Inter Customs Ledger (IGL) is proposed as an approach to the transfer of shipment related documents between customs agencies which is immediate, permanent and irrefutable.  The intercustoms ledger is essentially a trust bridge between national identity schemes - basically the importing regulator trusts the identity of the document issuer because the exporting regulator confirms the issuer identity.</p>
+<p>An Inter Goverment Ledger (IGL) is proposed as an approach to the transfer of shipment related documents between customs agencies which is immediate, permanent and irrefutable.  The Inter Goverment ledger is essentially a trust bridge between national identity schemes - basically the importing regulator trusts the identity of the document issuer because the exporting regulator confirms the issuer identity.</p>
 
 <p><img src="DocumentFlows_ToBe.png" alt="digital flows" /></p>
 
@@ -382,7 +382,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
     <tr>
       <td>P4</td>
       <td>Leverage the unique position of national regulators</td>
-      <td>Customs authorities enjoy a unique position as the single convergence point for all imports to and exports from a country. That allows an intercustoms ledger to easily achieve complete coverage of bilateral or multilateral trading relationships.</td>
+      <td>Customs authorities enjoy a unique position as the single convergence point for all imports to and exports from a country. That allows an Inter Goverment ledger to easily achieve complete coverage of bilateral or multilateral trading relationships.</td>
     </tr>
     <tr>
       <td>P5</td>
@@ -509,7 +509,7 @@ in this document are to be interpreted as described in RFC 2119.</p>
 <p>The architecture permits the creation of any number of “channels” that can be used for bilateral or multi-lateral exchange of specific message types.  One “channel” supports</p>
 
 <ul>
-  <li>one or more message types drawn from a controlled vocabulary - for example <code class="highlighter-rouge">unece.un.org:regulatory.coo.created</code></li>
+  <li>one or more message types drawn from a controlled vocabulary - for example <code class="language-plaintext highlighter-rouge">unece.un.org:regulatory.coo.created</code></li>
   <li>two or more countries - for example “AU, SG”</li>
   <li>one ledger network and technology - eg ethereum</li>
   <li>one validity time period</li>
@@ -578,7 +578,7 @@ The document API is also used by receiving jurisdictions to retreive documents t
 
 <p>The ID of the document is always the merkle hash of all binaries, proofs, and structured data that comprise the document.  If a document is updated with modified metadata, binaries, or proofs, then the new version will have a new merkel hash and an incremented version sequence number.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
 </code></pre></div></div>
 
 <h3 id="message-api">Message API</h3>
@@ -601,7 +601,7 @@ The document API is also used by receiving jurisdictions to retreive documents t
 
 <p>In some cases, channel policy may permit the transmission of additional related information about a message as a further set of semantic triples.  In this way, recipients can build semantic graphs of related data (eg certificate of origin 1234 is linked to consignment 5678 that is on voyage 9123)</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
 </code></pre></div></div>
 
 <h3 id="subscriptions-api">Subscriptions API</h3>
@@ -616,7 +616,7 @@ The document API is also used by receiving jurisdictions to retreive documents t
   <li>regulators - can subscribe to predicate topic streams (ie tell me about all CoOs).</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
 </code></pre></div></div>
 
 <h3 id="channel-api">Channel API</h3>
@@ -636,7 +636,7 @@ to-do : add swagger spec</p>
 
 <p><img src="RegistryAPI.png" alt="Registry API" /></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenAPI 3.0 Specifciation to be added here
 </code></pre></div></div>
 
 <h2 id="semantic-model">Semantic Model</h2>
@@ -730,9 +730,9 @@ to-do : add swagger spec</p>
   <li>The IGL worker will determine the relevant IGL channel using “toCountry” and “messageType” fields from the message header and passes the message to the relevant (DLT technology specific) channel node</li>
   <li>The channel node requests a new ledger transaction comprising a semantic triple
     <ul>
-      <li>Subject is a unique business identifier for the long running conversation which could be a namespace qualified id such as <code class="highlighter-rouge">chamber.com.au:chafta-coo:123</code> or could be a GUID.</li>
+      <li>Subject is a unique business identifier for the long running conversation which could be a namespace qualified id such as <code class="language-plaintext highlighter-rouge">chamber.com.au:chafta-coo:123</code> or could be a GUID.</li>
       <li>Object is the unique fingerprint (multihash) of the document that is attached to the message and stored in the document repository.</li>
-      <li>Predicate is the semantic description of the message represented by the messageType.  This must be drawn from a controlled vocabulary (see semantic model) - eg <code class="highlighter-rouge">unece.un.org:coo:created</code></li>
+      <li>Predicate is the semantic description of the message represented by the messageType.  This must be drawn from a controlled vocabulary (see semantic model) - eg <code class="language-plaintext highlighter-rouge">unece.un.org:coo:created</code></li>
     </ul>
   </li>
   <li>The channel completes consensus and writes a new block - this process is specific to the particular DLT technology (eg ethereum or hyperledger).</li>
