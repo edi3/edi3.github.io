@@ -1,9 +1,9 @@
 openapi: 3.0.0
 servers: []
 info:
-  description: This is edi3 Identity Provider API
+  description: This is edi3 Decentralised Identifiers API
   version: 1.0
-  title: edi3 Identity Provider API
+  title: edi3 Decentralised Identifiers API
   contact:
     email: info@edi3.org
   license:
@@ -20,7 +20,7 @@ paths:
       summary: provides base information
       operationId: getInfo
       description: |
-        Get some base information about edi3 Identity Provider API
+        Get some base information about edi3 Decentralised Identifiers API
       parameters:
         - in: query
           name: searchString
@@ -45,7 +45,7 @@ paths:
       summary: updates base information
       operationId: updateInfo
       description: |
-        Update base information about edi3 Identity Provider API
+        Update base information about edi3 Decentralised Identifiers API
       responses:
         '200':
           description: information updated
@@ -72,7 +72,7 @@ components:
           example: edi3-identity
         title:
           type: string
-          example: edi3 Identity Provider
+          example: edi3 Decentralised Identifiers
         version:
           type: string
           example: 1.0
