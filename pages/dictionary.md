@@ -13,7 +13,7 @@ The edi3 Dictionary Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Dictionary spec](//edi3.org/specs/edi3-dictionary/develop/) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) | [OpenAPI](//edi3.org/specs/edi3-dictionary/develop/swagger){:target="_blank"} |  [Dictionary Issues](https://github.com/edi3/edi3-dictionary/issues){:target="_blank"}  |
+| [Dictionary](//edi3.org/vocab) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) |  |  [Dictionary Issues](https://github.com/edi3/edi3-dictionary/issues){:target="_blank"}  |
 
 ## Known Implementations
 
