@@ -52,11 +52,8 @@
     <li><a  href="/codelists/">Code Lists</a></li>
     <li><a  href="/dictionary/">Dictionary</a></li>
     <li class="menu-title"><a href="/technical-specs/">Technical Specs</a></li>
-    <li><a  href="/icl/">Inter Customs Ledger</a></li>
+    <li><a  href="/igl/">Inter-Goverment Ledger</a></li>
     <li><a  href="/identity/">Identity Provider</a></li>
-    <li><a  href="/discovery/">Resource Discovery</a></li>
-    <li><a  href="/description/">Resource Description</a></li>
-    <li><a  href="/events/">Event Structure</a></li>
     <li><a  href="/notary/">Notary Service</a></li>
     <li class="menu-title"><a href="/tools-and-methods/">Tools and Methods</a></li>
     <li><a  href="/uml-profile/">UML Profile</a></li>
@@ -137,11 +134,8 @@
     <li><a  href="/codelists/">Code Lists</a></li>
     <li><a  href="/dictionary/">Dictionary</a></li>
     <li class="menu-title"><a href="/technical-specs/">Technical Specs</a></li>
-    <li><a  href="/icl/">Inter Customs Ledger</a></li>
+    <li><a  href="/igl/">Inter-Goverment Ledger</a></li>
     <li><a  href="/identity/">Identity Provider</a></li>
-    <li><a  href="/discovery/">Resource Discovery</a></li>
-    <li><a  href="/description/">Resource Description</a></li>
-    <li><a  href="/events/">Event Structure</a></li>
     <li><a  href="/notary/">Notary Service</a></li>
     <li class="menu-title"><a href="/tools-and-methods/">Tools and Methods</a></li>
     <li><a  href="/uml-profile/">UML Profile</a></li>
@@ -159,6 +153,7 @@
         <div class="page-content docs-content">
             
             <div class="spec-header">
+                
                 
                 
                 <ul>
@@ -414,9 +409,9 @@ Complex data elements are represented as containment relationships between UML c
 <p>A web resource is modelled most like a UML interface. A web resource</p>
 
 <ul>
-  <li>MUST be modelled as a UML class with stereotype <code class="highlighter-rouge">&lt;&lt;resource&gt;&gt;</code></li>
+  <li>MUST be modelled as a UML class with stereotype <code class="language-plaintext highlighter-rouge">&lt;&lt;resource&gt;&gt;</code></li>
   <li>MUST be named using a noun, not a verb.</li>
-  <li>MUST be the target of a UML <code class="highlighter-rouge">&lt;&lt;realisation&gt;&gt;</code> relationship where the source is a UML class hierarchy that represents the resource information model.</li>
+  <li>MUST be the target of a UML <code class="language-plaintext highlighter-rouge">&lt;&lt;realisation&gt;&gt;</code> relationship where the source is a UML class hierarchy that represents the resource information model.</li>
   <li>MUST include a styate machine model that defines the behaviour of the reource object (see more on this in the next section)</li>
   <li>MUST include two mandatory UML attributes
     <ul>
@@ -425,8 +420,8 @@ Complex data elements are represented as containment relationships between UML c
     </ul>
   </li>
   <li>MUST include one or more UML operations that define the allowed actions on the resource which SHOULD be named as http verbe (GET / POST / PATCH etc).</li>
-  <li>MAY be the target of one or more UML aggregation relationships where the sources MUST be another <code class="highlighter-rouge">&lt;&lt;resource&gt;&gt;</code> class. This is used to define sub-resource relationships.</li>
-  <li>MAY be the source of one of UML association relationshoips where the targets MUST be other <code class="highlighter-rouge">&lt;&lt;resource&gt;&gt; </code>class. This is used to represent links to independent but related resources such as the invoice for a shipment or the bill of lading for a consignment.</li>
+  <li>MAY be the target of one or more UML aggregation relationships where the sources MUST be another <code class="language-plaintext highlighter-rouge">&lt;&lt;resource&gt;&gt;</code> class. This is used to define sub-resource relationships.</li>
+  <li>MAY be the source of one of UML association relationshoips where the targets MUST be other <code class="language-plaintext highlighter-rouge">&lt;&lt;resource&gt;&gt; </code>class. This is used to represent links to independent but related resources such as the invoice for a shipment or the bill of lading for a consignment.</li>
 </ul>
 
 <p><em>sample</em></p>
@@ -434,16 +429,16 @@ Complex data elements are represented as containment relationships between UML c
 <p><em>implementation notes</em></p>
 
 <ul>
-  <li>The UML <code class="highlighter-rouge">&lt;&lt;resource&gt;&gt;</code> type will map to a RESTful API web resource such as <code class="highlighter-rouge">https://api.acme.com/v1/consignments/{123456789}</code>.  The mapping rules for Open API 3.0 specification generation are defined in the Open API 3.0 NDR specification.</li>
+  <li>The UML <code class="language-plaintext highlighter-rouge">&lt;&lt;resource&gt;&gt;</code> type will map to a RESTful API web resource such as <code class="language-plaintext highlighter-rouge">https://api.acme.com/v1/consignments/{123456789}</code>.  The mapping rules for Open API 3.0 specification generation are defined in the Open API 3.0 NDR specification.</li>
   <li>Resopurce models are deliberately kept simple and so do not attempt to model things like different structures for different types of PATCH operations or a list of filters allowed in GET collection actions. These things are likely to vary by implementation.  Models and generated OpenAPI specifications published by edi3.org represent only the minimum conformant behaviour for an implemention.</li>
 </ul>
 
 <h1 id="resource-state-lifecycle">Resource state lifecycle</h1>
 
-<p>Each <code class="highlighter-rouge">&lt;&lt;resource&gt;&gt;</code> class MUST have an embedded UML state machine model that describes the state lifecycle of a resource. Resource state lifecvycles are important because</p>
+<p>Each <code class="language-plaintext highlighter-rouge">&lt;&lt;resource&gt;&gt;</code> class MUST have an embedded UML state machine model that describes the state lifecycle of a resource. Resource state lifecvycles are important because</p>
 
 <ul>
-  <li>They describe the set of allowed states and allowed transitions between states. For example an <code class="highlighter-rouge">invoice</code> resource may transition through <code class="highlighter-rouge">received</code>, <code class="highlighter-rouge">approved</code>, <code class="highlighter-rouge">disputed</code>, <code class="highlighter-rouge">amended</code>, and <code class="highlighter-rouge">paid</code>.  The precise meanings of each state can have signifcant legal or commercial significance (eg financing an <code class="highlighter-rouge">approved</code> invoice will have less risk and hence lower cost than financing a <code class="highlighter-rouge">received</code> invoice)</li>
+  <li>They describe the set of allowed states and allowed transitions between states. For example an <code class="language-plaintext highlighter-rouge">invoice</code> resource may transition through <code class="language-plaintext highlighter-rouge">received</code>, <code class="language-plaintext highlighter-rouge">approved</code>, <code class="language-plaintext highlighter-rouge">disputed</code>, <code class="language-plaintext highlighter-rouge">amended</code>, and <code class="language-plaintext highlighter-rouge">paid</code>.  The precise meanings of each state can have signifcant legal or commercial significance (eg financing an <code class="language-plaintext highlighter-rouge">approved</code> invoice will have less risk and hence lower cost than financing a <code class="language-plaintext highlighter-rouge">received</code> invoice)</li>
   <li>Under edi3 technical specification guidelines, every resource owner SHOULD publish an event to all authorised subscribers whenever a resource transitions from one state to another. So the state lifecycle model tells susbsriber what they can listen for.</li>
 </ul>
 

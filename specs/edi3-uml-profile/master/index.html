@@ -52,11 +52,8 @@
     <li><a  href="/codelists/">Code Lists</a></li>
     <li><a  href="/dictionary/">Dictionary</a></li>
     <li class="menu-title"><a href="/technical-specs/">Technical Specs</a></li>
-    <li><a  href="/icl/">Inter Customs Ledger</a></li>
+    <li><a  href="/igl/">Inter-Goverment Ledger</a></li>
     <li><a  href="/identity/">Identity Provider</a></li>
-    <li><a  href="/discovery/">Resource Discovery</a></li>
-    <li><a  href="/description/">Resource Description</a></li>
-    <li><a  href="/events/">Event Structure</a></li>
     <li><a  href="/notary/">Notary Service</a></li>
     <li class="menu-title"><a href="/tools-and-methods/">Tools and Methods</a></li>
     <li><a  href="/uml-profile/">UML Profile</a></li>
@@ -137,11 +134,8 @@
     <li><a  href="/codelists/">Code Lists</a></li>
     <li><a  href="/dictionary/">Dictionary</a></li>
     <li class="menu-title"><a href="/technical-specs/">Technical Specs</a></li>
-    <li><a  href="/icl/">Inter Customs Ledger</a></li>
+    <li><a  href="/igl/">Inter-Goverment Ledger</a></li>
     <li><a  href="/identity/">Identity Provider</a></li>
-    <li><a  href="/discovery/">Resource Discovery</a></li>
-    <li><a  href="/description/">Resource Description</a></li>
-    <li><a  href="/events/">Event Structure</a></li>
     <li><a  href="/notary/">Notary Service</a></li>
     <li class="menu-title"><a href="/tools-and-methods/">Tools and Methods</a></li>
     <li><a  href="/uml-profile/">UML Profile</a></li>
@@ -163,6 +157,7 @@
             </div>
             
             <div class="spec-header">
+                
                 
                 
                 <ul>
@@ -430,11 +425,11 @@ in this document are to be interpreted as described in IETF RFC 2119.</p>
 
 <h3 id="api-serialisation-note-1">API Serialisation Note</h3>
 
-<p>Types will map to corresponding JSON Schema types as defined in relevant NDR specifications (<a href="https://edi3.org/api-ndr/">OpenAPI</a> or <a href="https://edi3.org/json-ld-ndr/">JSON-LD</a>. Note that code and identifier types MUST resolve to unambiguous values at runtime and so MUST include the scheme URI.  For example a party <code class="highlighter-rouge">identification</code> element (with <code class="highlighter-rouge">identfier</code> type) for an Australian business would be serialised as<code class="highlighter-rouge">{"identification":"ato.gov.au/abn:123456789"}</code> where <code class="highlighter-rouge">ato.gov.au/abn</code> is the schemeURI and <code class="highlighter-rouge">123456789</code> is the ABN identifier value. The SchemeURI value SHOULD be compatible with the edi3 <a href="https://edi3.org/discovery/">resource discovery</a> specification so that consumers can validate identifier or code values at runtime.</p>
+<p>Types will map to corresponding JSON Schema types as defined in relevant NDR specifications (<a href="https://edi3.org/api-ndr/">OpenAPI</a> or <a href="https://edi3.org/json-ld-ndr/">JSON-LD</a>. Note that code and identifier types MUST resolve to unambiguous values at runtime and so MUST include the scheme URI.  For example a party <code class="language-plaintext highlighter-rouge">identification</code> element (with <code class="language-plaintext highlighter-rouge">identfier</code> type) for an Australian business would be serialised as<code class="language-plaintext highlighter-rouge">{"identification":"ato.gov.au/abn:123456789"}</code> where <code class="language-plaintext highlighter-rouge">ato.gov.au/abn</code> is the schemeURI and <code class="language-plaintext highlighter-rouge">123456789</code> is the ABN identifier value. The SchemeURI value SHOULD be compatible with the edi3 <a href="https://edi3.org/discovery/">resource discovery</a> specification so that consumers can validate identifier or code values at runtime.</p>
 
 <h2 id="qualified-types--enumerations">Qualified Types &amp; Enumerations</h2>
 
-<p>In most cases, the core data types are sufficient for any use. However, in some cases it is useful to define restrictions as part of the model. The most common use is where a small number of stable code values are enumerated in the data model (as opposed to discovered and validated at runtime). Common examples are entity status lifecycle values and party role enumerations. Qualified types are named using the convention {qualifier term}_{core type name}. The example shows the use of a qualified data type <code class="highlighter-rouge">TransportEventType_Code</code> to restrict the allowed values of the <code class="highlighter-rouge">Type</code> attribute of the <code class="highlighter-rouge">TransportEvent</code> class.</p>
+<p>In most cases, the core data types are sufficient for any use. However, in some cases it is useful to define restrictions as part of the model. The most common use is where a small number of stable code values are enumerated in the data model (as opposed to discovered and validated at runtime). Common examples are entity status lifecycle values and party role enumerations. Qualified types are named using the convention {qualifier term}_{core type name}. The example shows the use of a qualified data type <code class="language-plaintext highlighter-rouge">TransportEventType_Code</code> to restrict the allowed values of the <code class="language-plaintext highlighter-rouge">Type</code> attribute of the <code class="language-plaintext highlighter-rouge">TransportEvent</code> class.</p>
 
 <h3 id="example-2">Example</h3>
 
@@ -448,8 +443,8 @@ in this document are to be interpreted as described in IETF RFC 2119.</p>
 
 <p>Every data element has a globally unique name called the “dictionary entry name” of the form urn:org.unece:domain.class.property - for example “urn:org.unece:transport.transportevent.occurrencetime”</p>
 
-<p>Simple data elements are represented as attributes of UML classes - for example <code class="highlighter-rouge">OccurrenceTime</code> in <code class="highlighter-rouge">TransportEvent</code> class. 
-Complex data elements are represented as containment relationships (UML aggregation or composition) from source UML classes - for example <code class="highlighter-rouge">EventLocation</code> from <code class="highlighter-rouge">TransportEvent</code> class.</p>
+<p>Simple data elements are represented as attributes of UML classes - for example <code class="language-plaintext highlighter-rouge">OccurrenceTime</code> in <code class="language-plaintext highlighter-rouge">TransportEvent</code> class. 
+Complex data elements are represented as containment relationships (UML aggregation or composition) from source UML classes - for example <code class="language-plaintext highlighter-rouge">EventLocation</code> from <code class="language-plaintext highlighter-rouge">TransportEvent</code> class.</p>
 
 <ul>
   <li>Class names MUST be unique within a domain.</li>
@@ -465,7 +460,7 @@ Complex data elements are represented as containment relationships (UML aggregat
 
 <h3 id="api-serialisation-note-3">API Serialisation Note</h3>
 
-<p>UML Classes map to JSON Scherma objects and UML attributes become properties of the JSON Schema object. [1] cardinalities map the the <code class="highlighter-rouge">required</code> schema property. UML cardinalities [0..<em>] or [1..</em>] map to a JSON array.</p>
+<p>UML Classes map to JSON Scherma objects and UML attributes become properties of the JSON Schema object. [1] cardinalities map the the <code class="language-plaintext highlighter-rouge">required</code> schema property. UML cardinalities [0..<em>] or [1..</em>] map to a JSON array.</p>
 
 <h1 id="relationships">Relationships</h1>
 
@@ -473,7 +468,7 @@ Complex data elements are represented as containment relationships (UML aggregat
 
 <h2 id="generalisation-relationship">Generalisation Relationship</h2>
 
-<p>The UML generalisation relationship is used to indicate sub-types or specialisations of an information resource.  For example, a <code class="highlighter-rouge">Vessel</code> is a type of <code class="highlighter-rouge">TransportMeans</code>.  The specialised class (ie <code class="highlighter-rouge">Vessel</code>) inherits all the properties of the general class (ie <code class="highlighter-rouge">TransportMeans</code>).  This modelling approach permits the separation of specific properties such as <code class="highlighter-rouge">Helipad</code> (only for vessels) and <code class="highlighter-rouge">AxleLoad</code> (only for vehicles)</p>
+<p>The UML generalisation relationship is used to indicate sub-types or specialisations of an information resource.  For example, a <code class="language-plaintext highlighter-rouge">Vessel</code> is a type of <code class="language-plaintext highlighter-rouge">TransportMeans</code>.  The specialised class (ie <code class="language-plaintext highlighter-rouge">Vessel</code>) inherits all the properties of the general class (ie <code class="language-plaintext highlighter-rouge">TransportMeans</code>).  This modelling approach permits the separation of specific properties such as <code class="language-plaintext highlighter-rouge">Helipad</code> (only for vessels) and <code class="language-plaintext highlighter-rouge">AxleLoad</code> (only for vehicles)</p>
 
 <h3 id="example-4">Example</h3>
 
@@ -481,11 +476,11 @@ Complex data elements are represented as containment relationships (UML aggregat
 
 <h3 id="api-serialisation-note-4">API Serialisation Note</h3>
 
-<p>The concrete class contains all propertiers of the abstract - so for example, the API user will just see a <code class="highlighter-rouge">Vessel</code> resource with the combined properties of Vessel and TransportMeans.</p>
+<p>The concrete class contains all propertiers of the abstract - so for example, the API user will just see a <code class="language-plaintext highlighter-rouge">Vessel</code> resource with the combined properties of Vessel and TransportMeans.</p>
 
 <h2 id="composition-relationship">Composition Relationship</h2>
 
-<p>The UML composition relationship is used to indicate a containment relationship between two classes where the contained class is part of the containing class.  It is essentially a complex property of the parent class that has no meaning without the parent context.  For example the 1TransportEvent1 class describes the sequence of scheduled, estimated, or actual events that consititute the movement record of a <code class="highlighter-rouge">TransportMovement</code>.</p>
+<p>The UML composition relationship is used to indicate a containment relationship between two classes where the contained class is part of the containing class.  It is essentially a complex property of the parent class that has no meaning without the parent context.  For example the 1TransportEvent1 class describes the sequence of scheduled, estimated, or actual events that consititute the movement record of a <code class="language-plaintext highlighter-rouge">TransportMovement</code>.</p>
 
 <h3 id="example-5">Example</h3>
 
@@ -493,11 +488,11 @@ Complex data elements are represented as containment relationships (UML aggregat
 
 <h3 id="api-serialisation-note-5">API Serialisation Note</h3>
 
-<p>The target class and all its attributes become part of the schema of the parent - ie $ref to a nested data structure. So, in the example above, <code class="highlighter-rouge">GET /TransportMovement</code> would return all properties of the <code class="highlighter-rouge">TransportMovement</code> class AND all properties of the contained <code class="highlighter-rouge">TransportEvent</code> as a nested array structure.</p>
+<p>The target class and all its attributes become part of the schema of the parent - ie $ref to a nested data structure. So, in the example above, <code class="language-plaintext highlighter-rouge">GET /TransportMovement</code> would return all properties of the <code class="language-plaintext highlighter-rouge">TransportMovement</code> class AND all properties of the contained <code class="language-plaintext highlighter-rouge">TransportEvent</code> as a nested array structure.</p>
 
 <h2 id="aggregation-relationship">Aggregation Relationship</h2>
 
-<p>The UML aggregation relationship is used to indicate a containment relationship between two classes where the contained class may be re-used by other classes and has meaning independent of the relationship. It is essentially a link to a relevant but independent entity. For example a <code class="highlighter-rouge">TransportMeans</code> (such as a Vessel) is an independent concept from from a <code class="highlighter-rouge">TransportMovement</code> (such as a <code class="highlighter-rouge">Voyage</code>).  Both can exist and be meaningful in isolation but clearly the the vessel identity is an important aspect of a voyage.</p>
+<p>The UML aggregation relationship is used to indicate a containment relationship between two classes where the contained class may be re-used by other classes and has meaning independent of the relationship. It is essentially a link to a relevant but independent entity. For example a <code class="language-plaintext highlighter-rouge">TransportMeans</code> (such as a Vessel) is an independent concept from from a <code class="language-plaintext highlighter-rouge">TransportMovement</code> (such as a <code class="language-plaintext highlighter-rouge">Voyage</code>).  Both can exist and be meaningful in isolation but clearly the the vessel identity is an important aspect of a voyage.</p>
 
 <h3 id="example-6">Example</h3>
 
@@ -505,11 +500,11 @@ Complex data elements are represented as containment relationships (UML aggregat
 
 <h3 id="api-serialisation-note-6">API Serialisation Note</h3>
 
-<p>Only the <code class="highlighter-rouge">{id}</code> properties of the target class are embedded into the source schema. So, in the example above, <code class="highlighter-rouge">GET /TransportMovement</code> would return all properties of <code class="highlighter-rouge">TransportMovement</code> and only the <code class="highlighter-rouge">Identification</code> and <code class="highlighter-rouge">Name</code> of the associated <code class="highlighter-rouge">TransportMeans</code> - because those are the properties with the UML ‘isID’ flag set. The JSON API header would also carry a {link} element that holds the URL of the <code class="highlighter-rouge">Transportmeans</code> resource. To retrieve the full properties of the <code class="highlighter-rouge">TransportMeans</code> element (eg to find <code class="highlighter-rouge">GrossWeight</code>), consumers would simply follow the link with a <code class="highlighter-rouge">GET /TransportMeans/{id}</code></p>
+<p>Only the <code class="language-plaintext highlighter-rouge">{id}</code> properties of the target class are embedded into the source schema. So, in the example above, <code class="language-plaintext highlighter-rouge">GET /TransportMovement</code> would return all properties of <code class="language-plaintext highlighter-rouge">TransportMovement</code> and only the <code class="language-plaintext highlighter-rouge">Identification</code> and <code class="language-plaintext highlighter-rouge">Name</code> of the associated <code class="language-plaintext highlighter-rouge">TransportMeans</code> - because those are the properties with the UML ‘isID’ flag set. The JSON API header would also carry a {link} element that holds the URL of the <code class="language-plaintext highlighter-rouge">Transportmeans</code> resource. To retrieve the full properties of the <code class="language-plaintext highlighter-rouge">TransportMeans</code> element (eg to find <code class="language-plaintext highlighter-rouge">GrossWeight</code>), consumers would simply follow the link with a <code class="language-plaintext highlighter-rouge">GET /TransportMeans/{id}</code></p>
 
 <h2 id="relationship-class">Relationship Class</h2>
 
-<p>A UML relationship class is used when the relationship itself requires extra properties. The relatiionship class can be added to either the composition or aggregation relationship. For example, there are a number of different <code class="highlighter-rouge">Party</code> types that may participate in a <code class="highlighter-rouge">TransportMovement</code>. These can be distinguished via a <code class="highlighter-rouge">Role</code> property of the relationship as shown in the example below.</p>
+<p>A UML relationship class is used when the relationship itself requires extra properties. The relatiionship class can be added to either the composition or aggregation relationship. For example, there are a number of different <code class="language-plaintext highlighter-rouge">Party</code> types that may participate in a <code class="language-plaintext highlighter-rouge">TransportMovement</code>. These can be distinguished via a <code class="language-plaintext highlighter-rouge">Role</code> property of the relationship as shown in the example below.</p>
 
 <h3 id="example-7">Example</h3>
 
@@ -517,7 +512,7 @@ Complex data elements are represented as containment relationships (UML aggregat
 
 <h3 id="api-serialisation-note-7">API Serialisation Note</h3>
 
-<p>The properties of association classes are added as extra properties of the target class during serialisation. So, in the example above, the JSAON schema would define an object <code class="highlighter-rouge">TransportMovementParty</code> as an arraye property of <code class="highlighter-rouge">TransportMovement</code> and the properties of the array object would be <code class="highlighter-rouge">Role</code> (from the relationship class) and <code class="highlighter-rouge">Identification</code>, <code class="highlighter-rouge">Name</code> (from <code class="highlighter-rouge">Party</code> class).</p>
+<p>The properties of association classes are added as extra properties of the target class during serialisation. So, in the example above, the JSAON schema would define an object <code class="language-plaintext highlighter-rouge">TransportMovementParty</code> as an arraye property of <code class="language-plaintext highlighter-rouge">TransportMovement</code> and the properties of the array object would be <code class="language-plaintext highlighter-rouge">Role</code> (from the relationship class) and <code class="language-plaintext highlighter-rouge">Identification</code>, <code class="language-plaintext highlighter-rouge">Name</code> (from <code class="language-plaintext highlighter-rouge">Party</code> class).</p>
 
 <h2 id="directed-association-relationship">Directed Association Relationship</h2>
 
@@ -534,7 +529,7 @@ Complex data elements are represented as containment relationships (UML aggregat
 
 <h3 id="api-serialisation-note-8">API Serialisation Note</h3>
 
-<p>When used between two interfaces, indicates that the source API MAY include a HATEOAS style URL link to the target resource, implemented using <a href="https://jsonapi.org/">JSON-API</a> <code class="highlighter-rouge">"links"</code> element. When used between two classes, the association is ignored for API serialisation (but is included in the JSON-LD ontology serialisation)</p>
+<p>When used between two interfaces, indicates that the source API MAY include a HATEOAS style URL link to the target resource, implemented using <a href="https://jsonapi.org/">JSON-API</a> <code class="language-plaintext highlighter-rouge">"links"</code> element. When used between two classes, the association is ignored for API serialisation (but is included in the JSON-LD ontology serialisation)</p>
 
 <h1 id="interfaces">Interfaces</h1>
 
@@ -543,9 +538,9 @@ Complex data elements are represented as containment relationships (UML aggregat
 <h2 id="interface-data-model">Interface Data Model</h2>
 
 <ul>
-  <li>MUST be modelled as a UML class with stereotype <code class="highlighter-rouge">&lt;&lt;interface&gt;&gt;</code></li>
+  <li>MUST be modelled as a UML class with stereotype <code class="language-plaintext highlighter-rouge">&lt;&lt;interface&gt;&gt;</code></li>
   <li>MUST be named using a noun, not a verb.</li>
-  <li>MUST be the target of a UML <code class="highlighter-rouge">&lt;&lt;realisation&gt;&gt;</code> relationship where the source is a UML class hierarchy that represents the resource information model.</li>
+  <li>MUST be the target of a UML <code class="language-plaintext highlighter-rouge">&lt;&lt;realisation&gt;&gt;</code> relationship where the source is a UML class hierarchy that represents the resource information model.</li>
   <li>MUST include a styate machine model that defines the behaviour of the reource object (see more on this in the next section)</li>
   <li>MUST include two mandatory UML attributes
     <ul>
@@ -554,8 +549,8 @@ Complex data elements are represented as containment relationships (UML aggregat
     </ul>
   </li>
   <li>MUST include one or more UML operations that define the allowed actions on the resource which SHOULD be named as http verbe (GET / POST / PATCH etc).</li>
-  <li>MAY be the target of one or more UML composition relationships where the sources MUST be another <code class="highlighter-rouge">&lt;&lt;interface&gt;</code> class. This is used to define sub-resource relationships.</li>
-  <li>MAY be the target of one of or more UML directed association relationshoips where the source MUST be other <code class="highlighter-rouge">&lt;&lt;interface&gt; </code>class. This is used to represent URL links to independent but related resources such as the invoice for a shipment or the bill of lading for a consignment.</li>
+  <li>MAY be the target of one or more UML composition relationships where the sources MUST be another <code class="language-plaintext highlighter-rouge">&lt;&lt;interface&gt;</code> class. This is used to define sub-resource relationships.</li>
+  <li>MAY be the target of one of or more UML directed association relationshoips where the source MUST be other <code class="language-plaintext highlighter-rouge">&lt;&lt;interface&gt; </code>class. This is used to represent URL links to independent but related resources such as the invoice for a shipment or the bill of lading for a consignment.</li>
 </ul>
 
 <h3 id="example-9">Example</h3>
@@ -565,13 +560,13 @@ Complex data elements are represented as containment relationships (UML aggregat
 <h3 id="api-serialisation-note-9">API Serialisation Note</h3>
 
 <ul>
-  <li>The UML <code class="highlighter-rouge">&lt;&lt;interface&gt;&gt;</code> type will map to a RESTful API web resource such as <code class="highlighter-rouge">/v1/transportmovements/123456789</code>. Targets of composition relationships are implemented as sub-resources only eg /voyages/12456789/transportEvents. The mapping rules for Open API 3.0 specification generation are defined in the Open API 3.0 NDR specification.</li>
+  <li>The UML <code class="language-plaintext highlighter-rouge">&lt;&lt;interface&gt;&gt;</code> type will map to a RESTful API web resource such as <code class="language-plaintext highlighter-rouge">/v1/transportmovements/123456789</code>. Targets of composition relationships are implemented as sub-resources only eg /voyages/12456789/transportEvents. The mapping rules for Open API 3.0 specification generation are defined in the Open API 3.0 NDR specification.</li>
   <li>Resopurce models are deliberately kept simple and so do not attempt to model things like different structures for different types of PATCH operations or a list of filters allowed in GET collection actions. These things are likely to vary by implementation.  Models and generated OpenAPI specifications published by edi3.org represent only the minimum conformant behaviour for an implemention.</li>
 </ul>
 
 <h2 id="interface-behaviour-model">Interface behaviour Model</h2>
 
-<p>Each <code class="highlighter-rouge">&lt;&lt;interface&gt;&gt;</code> UML class MUST have an embedded UML state machine model that describes the state lifecycle of a resource. Resource state lifecvycles are important because they describe the set of allowed states and allowed transitions between states. For example an <code class="highlighter-rouge">invoice</code> resource may transition through <code class="highlighter-rouge">received</code>, <code class="highlighter-rouge">approved</code>, <code class="highlighter-rouge">disputed</code>, <code class="highlighter-rouge">amended</code>, and <code class="highlighter-rouge">paid</code>.  The precise meanings of each state can have signifcant legal or commercial significance (eg financing an <code class="highlighter-rouge">approved</code> invoice will have less risk and hence lower cost than financing a <code class="highlighter-rouge">received</code> invoice)</p>
+<p>Each <code class="language-plaintext highlighter-rouge">&lt;&lt;interface&gt;&gt;</code> UML class MUST have an embedded UML state machine model that describes the state lifecycle of a resource. Resource state lifecvycles are important because they describe the set of allowed states and allowed transitions between states. For example an <code class="language-plaintext highlighter-rouge">invoice</code> resource may transition through <code class="language-plaintext highlighter-rouge">received</code>, <code class="language-plaintext highlighter-rouge">approved</code>, <code class="language-plaintext highlighter-rouge">disputed</code>, <code class="language-plaintext highlighter-rouge">amended</code>, and <code class="language-plaintext highlighter-rouge">paid</code>.  The precise meanings of each state can have signifcant legal or commercial significance (eg financing an <code class="language-plaintext highlighter-rouge">approved</code> invoice will have less risk and hence lower cost than financing a <code class="language-plaintext highlighter-rouge">received</code> invoice)</p>
 
 <p>The UML profile for state lifecycles is very simple as it is just a minimal UML state machine</p>
 
