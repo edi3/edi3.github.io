@@ -181,7 +181,15 @@
 <li class="toc-entry toc-h1"><a href="#requirements">Requirements</a></li>
 <li class="toc-entry toc-h1"><a href="#naming--design-rules">Naming &amp; Design Rules</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#rdm-mapping">RDM mapping</a></li>
+<li class="toc-entry toc-h2"><a href="#rdm-mapping">RDM mapping</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#de-duplication">De-duplication</a></li>
+<li class="toc-entry toc-h3"><a href="#primary-identifier-mapping">Primary identifier mapping</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#uncefact-metadtaa">UN/CEFACT metadtaa</a></li>
+<li class="toc-entry toc-h2"><a href="#business-domain-granularity">Business domain granularity</a></li>
+<li class="toc-entry toc-h2"><a href="#versioning">Versioning</a></li>
 <li class="toc-entry toc-h2"><a href="#code-list-representation">Code list representation</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#motivation">Motivation</a></li>
@@ -205,11 +213,6 @@
 </li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#context-granularity">@context granularity</a></li>
-<li class="toc-entry toc-h2"><a href="#primary-id-mapping">primary @id mapping</a></li>
-<li class="toc-entry toc-h2"><a href="#de-duplication">de-duplication</a></li>
-<li class="toc-entry toc-h2"><a href="#versioning">versioning</a></li>
-<li class="toc-entry toc-h2"><a href="#uncefact-metadtaa">UN/CEFACT metadtaa</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#examples">Examples</a></li>
@@ -395,7 +398,86 @@ _:b3 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment&
 
 <h2 id="rdm-mapping">RDM mapping</h2>
 
-<p>Stuff about ABIE/BBIE etc -&gt; JSON-LD here</p>
+<p>Current version of vocabualry was automatically generated from the CEFACT Buy-Ship-Pay Reference Data Model xls file, following the rules listed below.</p>
+
+<ul>
+  <li>ABIEs are grouped by <code class="language-plaintext highlighter-rouge">Object Class Term</code> as RDFS Classes</li>
+  <li>BBIEs are grouped by <code class="language-plaintext highlighter-rouge">Property Term Qualifier(s)</code> + <code class="language-plaintext highlighter-rouge">Property Term</code> + <code class="language-plaintext highlighter-rouge">Datatype Qualifier(s)</code> + <code class="language-plaintext highlighter-rouge">Representation Term</code> as RDFS Properties</li>
+  <li>ASBIEs are grouped by <code class="language-plaintext highlighter-rouge">Property Term Qualifier(s)</code> + <code class="language-plaintext highlighter-rouge">Property Term</code> + <code class="language-plaintext highlighter-rouge">Associated Object Class Term Qualifier(s)</code> + <code class="language-plaintext highlighter-rouge">Associated Object Class</code> as RDFS Properties</li>
+</ul>
+
+<h3 id="de-duplication">De-duplication</h3>
+
+<p>The above grouping rules may lead to deduplication of several CEFACT BIEs into single class or property. For example both <em>SupplyChain_Consignment</em> and <em>Referenced_SupplyChain_Consignment</em> BIEs get merged into one <em>Consignment</em> class.</p>
+
+<p>Such deduplication is necessary to make the RDFS modelling guidelines to be unambiguous.</p>
+
+<h3 id="primary-identifier-mapping">Primary identifier mapping</h3>
+
+<p>Some CEFACT BIEs have explicit primary identifier property, for example Referenced_SupplyChain_Consignment.Identification.Identifier. These properties are omitted in the RDF vocabulary, as RDF data model makes the primary identifier an inherent attribute for each entitiy in the graph.</p>
+
+<h2 id="uncefact-metadtaa">UN/CEFACT metadtaa</h2>
+
+<p>We provide and publish the machine-readable RDF representation of The CEFACT Buy-Ship-Pay RDM Business Information Elements, preserving their types, inheritance heirarchy and metadata. All rdfs classes and properties in edi3 vocabulary are linked with corresponding BIEs by its identifier. This link can be used to implement a software which automatically maps CEFACT RDM messages to RDF format. So that interoperability between existing systems which use CEFACT RDM and new Linked Data based systems is preserved.</p>
+
+<p>The example rdfs property from the edi3 vocabulary, with linked CEFACT RDM BIEs:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:consignorTradeParty"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:Property"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rdfs:domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:Consignment"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rdfs:range"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:Party"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"edi3:cefactElementMetadata"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:Referenced_SupplyChain_Consignment.Consignor.Trade_Party"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:AssociationBIE"</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"edi3:cefactUNId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:UN01011054"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"edi3:cefactBieDomainClass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:Referenced_SupplyChain_Consignment.Details"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"edi3:cefactBusinessProcess"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buy-Ship-Pay"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:SupplyChain_Consignment.Consignor.Trade_Party"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:AssociationBIE"</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"edi3:cefactUNId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:UN01004212"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"edi3:cefactBieDomainClass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:SupplyChain_Consignment.Details"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"edi3:cefactBusinessProcess"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buy-Ship-Pay"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="business-domain-granularity">Business domain granularity</h2>
+
+<p>The vocabulary terms are annotated with the logical business domain which this term belongs to:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:consignorTradeParty"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:Property"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"edi3:businessDomain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Trade"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>TODO: The formal process of assigning the business domain to the vocabulary terms is to be decided.</p>
+
+<h2 id="versioning">Versioning</h2>
+
+<p>The vocabulary is updated every 6 months, following the maintainance cycle of the CEFACT BSP RDM.
+Each BIE is annotated with the date when it was created, current active\deprecated status, and the date of deprecation.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SupplyChain_Consignment.Consignor.Trade_Party"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:AssociationBIE"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"@edi3:cefactUNId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:UN01004212"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"edi3:currentStatus"</span><span class="p">:</span><span class="s2">"deprecated"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"edi3:createdDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01-04-2017"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"edi3:deprecatedDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21-03-2020"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Each rdfs class and property in the vocabualry is annotated the same way. The rdfs class or property can only be deprecated when all the RDM BIEs it is linked to are deprecated.</p>
+
+<p>Every time when the vocabulary is updated from the new version of BSP RDM, the new json-ld context file for this vocabualry is created, and published at the new permanent url, e.g https://edi3.org/vocab/2020.09/context.json</p>
+
+<p>TODO: the exact url for the context is to be decided.</p>
 
 <h2 id="code-list-representation">Code list representation</h2>
 
@@ -404,7 +486,7 @@ _:b3 &lt;https://edi3.org/specs/edi3-transport/develop/vocab/TransportEquipment&
 <p>In this section we describe the recommended format for publishing codelists using rdf and json-ld data model. The vocabulary definitions are represented as <a href="https://www.w3.org/TR/json-ld/#flattened-document-form">flattened json-ld</a> graph:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://edi3.org/context.json"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://edi3.org/vocab/2020.09/context.json"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iso:AU"</span><span class="p">,</span><span class="w"> </span><span class="nl">"rdfs:label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Australia"</span><span class="w"> </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iso:US"</span><span class="p">,</span><span class="w"> </span><span class="nl">"rdfs:label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"United States of America"</span><span class="w"> </span><span class="p">},</span><span class="w">
@@ -621,51 +703,6 @@ Pallet, ISO T11
 </span></code></pre></div></div>
 
 <p>In some cases, part of the vocabulary such as base classes and properties could be exctracted to form the stable core vocabualry, while keeping other more specific and volatile subclasses and instances to be governed and published separately. Such distinction might be beneficial for maintaining long-term interoperability between codelist users.</p>
-
-<h2 id="context-granularity">@context granularity</h2>
-
-<p>Stuff about granularity of graph publishing here - ie one graph per serpately goverened thing in the source</p>
-
-<h2 id="primary-id-mapping">primary @id mapping</h2>
-
-<p>stuff about mapping entity ID to JSON-LD @id here</p>
-
-<h2 id="de-duplication">de-duplication</h2>
-
-<p>stuff about de-duplication of properties here</p>
-
-<h2 id="versioning">versioning</h2>
-
-<p>stuff about  version updates here</p>
-
-<h2 id="uncefact-metadtaa">UN/CEFACT metadtaa</h2>
-
-<p>We provide and publish the machine-readable RDF representation of The CEFACT Buy-Ship-Pay RDM Business Information Elements, preserving their types, inheritance heirarchy and metadata. All rdfs classes and properties in edi3 vocabulary are linked with corresponding BIEs by its identifier. This link can be used to implement a software which automatically maps CEFACT RDM messages to RDF format. So that interoperability between existing systems which use CEFACT RDM and new Linked Data based systems is preserved.</p>
-
-<p>The example rdfs property from the edi3 vocabulary, with linked CEFACT RDM BIEs:</p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:consignorTradeParty"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"rdfs:type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rdfs:Property"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"rdfs:domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:Consignment"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"rdfs:range"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:Party"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"edi3:cefactElementMetadata"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:Referenced_SupplyChain_Consignment.Consignor.Trade_Party"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:AssociationBIE"</span><span class="p">,</span><span class="w"> 
-      </span><span class="nl">"edi3:cefactUNId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:UN01011054"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"edi3:cefactBieDomainClass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:Referenced_SupplyChain_Consignment.Details"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"edi3:cefactBusinessProcess"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buy-Ship-Pay"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:SupplyChain_Consignment.Consignor.Trade_Party"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"edi3:AssociationBIE"</span><span class="p">,</span><span class="w"> 
-      </span><span class="nl">"edi3:cefactUNId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:UN01004212"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"edi3:cefactBieDomainClass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cefact:SupplyChain_Consignment.Details"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"edi3:cefactBusinessProcess"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buy-Ship-Pay"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
 
 <h1 id="examples">Examples</h1>
 
