@@ -140,6 +140,12 @@
       margin: 0 0 12px 0;
     }
 
+    .header-tagline{
+      a{
+        color: $app-red;
+      }
+    }
+
   }
 
   .mobile-menu{
@@ -152,6 +158,7 @@
 
   #mobile-menu{
     position: absolute;
+    z-index: 2;
     left: 0;
     top: 60px;
     background: $app-red;
