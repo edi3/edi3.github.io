@@ -1,0 +1,125 @@
+@mixin chevron($cDirection:"right", $cSize: 8px, $cWidth: 1px, $cColor: black) {
+
+    display: block;
+    width: $cSize;
+    height: $cSize;
+    border-top: 1px solid $cColor;
+    border-right: 1px solid $cColor;
+    border-width: $cWidth;
+
+    @if $cDirection == 'top'    { transform: rotate(-45deg);}
+    @if $cDirection == 'right'  { transform: rotate(45deg);}
+    @if $cDirection == 'bottom' { transform: rotate(135deg);}
+    @if $cDirection == 'left'   { transform: rotate(225deg);}
+}
+
+.collapsible{
+    position: relative;
+    padding: 0 0 0 20px;
+    cursor: pointer;
+
+    &:before{
+        position: absolute;
+        left: 0;
+        top: 13px;
+        content: '';
+        @include chevron('right');
+    }
+
+    &.active{
+        &:before{
+            top:7px;
+            @include chevron('bottom');
+        }
+    }
+}
+
+.menu-header,
+.menu-subheader{
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.vocabulary-sidebar{
+    .sidebar-menu{
+        li{
+            text-align: left;
+        }
+    }
+
+    .vocabulary-submenu,
+    .sidebar-menu{
+        margin: 0 0 0 15px;
+    }
+}
+
+.vocabulary-content{
+    font-size: 14px;
+
+    h2{
+        font-size: 26px;
+        margin: 10px 0 15px 0;
+        padding: 0 0 5px 0;
+        border-bottom: 1px solid rgba(59,65,81,.3);
+        word-break: break-all;
+    }
+
+    h3{
+        font-size: 18px;
+        padding: 10px 0 10px 10px;
+        margin: 0;
+    }
+
+    .collapsible{
+        padding-right: 20px;
+
+        &:before {
+            left: auto;
+            right: 20px;
+            top: 20px;
+        }
+    }
+
+    .collapsible-content{
+        padding: 10px 20px 10px 20px;
+    }
+
+    table{
+        width: 100%;
+        font-size: 14px;
+        margin: 0;
+
+        & + table{
+            margin-top: 20px;
+        }
+
+        tbody {
+            th, td{
+                padding: 4px 8px;
+            }
+            th {
+                text-align: left;
+            }
+        }
+    }
+
+    .vocabulary-item-row{
+        margin: 0 0 20px 0;
+    }
+
+    .vocabulary-item-data{
+        list-style: none;
+        margin: 0 0 0 10px;
+
+        li{
+            padding: 0;
+        }
+    }
+}
+
+.vocabulary-item-card{
+    border: 1px solid rgba(59,65,81,.3);
+    border-radius: 4px;
+    margin: 10px 0;
+}

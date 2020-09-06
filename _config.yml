@@ -15,11 +15,18 @@ kramwdown:
 
 gems: [jekyll-toc]
 
+collections:
+  vocabulary:
+    output: true
+
 defaults:
   -
     scope:
-      path: "specs"
-      type: "pages"
+      path: ""
+      type: "vocabulary"
     values:
-      layout: "specs"
-      toc: true
+      layout: "vocabulary"
+
+exclude:
+  - .idea
+  - .git

@@ -31,8 +31,20 @@
     <div class="header-content">
         <div class="wrapper">
             <div class="header-text-box">
-                <div class="header-name">edi3 Standards</div>
-                <div class="header-tagline">Supply Chain Standards and Tools for Web Developers</div>
+                <div class="header-name">
+                    {% if include.header_name %}
+                        {{ include.header_name }}
+                    {% else %}
+                        edi3 Standards
+                    {% endif %}
+                </div>
+                <div class="header-tagline">
+                    {% if include.header_description %}
+                        {{ include.header_description | markdownify }}
+                    {% else %}
+                        Supply Chain Standards and Tools for Web Developers
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
