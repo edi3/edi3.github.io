@@ -1,9 +1,10 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html lang="en">
 
 {% include head.html %}
-
-<div>
 
 {% include header.html header_name=page.header_name header_description=page.header_description %}
 
@@ -20,7 +21,7 @@
                         {% for graphItem in graphItems %}
                         {% if graphItem["@type"] == "rdfs:Class" %}
                         <li>
-                            <a title='{{ graphItem["@id"] | replace_first: "edi3:", "" }}' href='#{{ graphItem["@id"] | slugify }}'>{{ graphItem["@id"] | replace_first: "edi3:", "" | truncate: 25, "..." }}</a>
+                            <a title='{{ graphItem["@id"] | replace_first: "edi3:", "" }}' href='#{{ graphItem["@id"] | replace_first: "edi3:", "" }}'>{{ graphItem["@id"] | replace_first: "edi3:", "" | truncate: 25, "..." }}</a>
                         </li>
                         {% endif %}
                         {% endfor %}
@@ -30,7 +31,7 @@
                         {% for graphItem in graphItems %}
                         {% if graphItem["@type"] == "rdfs:Property" %}
                         <li>
-                            <a title='{{ graphItem["@id"] | replace_first: "edi3:", "" }}' href='#{{ graphItem["@id"] | slugify }}'>{{ graphItem["@id"] | replace_first: "edi3:", "" | truncate: 25, "..." }}</a>
+                            <a title='{{ graphItem["@id"] | replace_first: "edi3:", "" }}' href='#{{ graphItem["@id"]  | replace_first: "edi3:", "" }}'>{{ graphItem["@id"] | replace_first: "edi3:", "" | truncate: 25, "..." }}</a>
                         </li>
                         {% endif %}
                         {% endfor %}
@@ -42,14 +43,28 @@
             {% assign vocab = site.data[page.jsonid] %}
             {% assign graphItems = vocab["@graph"] %}
             {% for graphItem in graphItems %}
-                <div class="vocabulary-item-row" id="{{ graphItem["@id"] | slugify }}">
-                    <h2>{{ graphItem["@id"] | replace_first: "edi3:", "" }}</h2>
+                <div class="vocabulary-item-row" id="{{ graphItem["@id"] | replace_first: "edi3:", "" }}">
+                    <h2 id="{{ graphItem["@id"] | replace_first: "edi3:", "" }}">{{ graphItem["@id"] | replace_first: "edi3:", "" }}</h2>
                     <ul class="vocabulary-item-data">
                         <li><strong>@id:</strong> {{ graphItem["@id"] }}
                         <li><strong>@type:</strong> {{ graphItem["@type"] }}</li>
+                        {% if graphItem["rdfs:range"] %}
+                            <li><strong>Range:</strong> {{ graphItem["rdfs:range"] }}</li>
+                        {% endif %}
+                        {% if graphItem["rdfs:domain"] %}
+                            <li>
+                                {% assign domains = graphItem["rdfs:domain"] %}
+                                <strong>Domains:</strong>
+                                {% if domains.first %}
+                                    <br/>{% for domain in domains %}<a href="#{{ domain | replace_first: "edi3:", "" }}">{{ domain }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
+                                {% else %}
+                                    <a href="#{{ domains | replace_first: "edi3:", "" }}">{{ domains }}</a>
+                                {% endif %}
+                            </li>
+                        {% endif %}
                     </ul>
                     <div class="vocabulary-item-card">
-                        <h3 class="collapsible" id="{{ graphItem["@id"] | slugify }}-cefact-data">CEFACT Element Data</h3>
+                        <h3 class="collapsible" id="{{ graphItem["@id"] | replace_first: "edi3:", "" }}-cefact-data">CEFACT Element Data</h3>
                         <div class="collapsible-content" style="display: none;">
                         {% for cefactElementMetadata in graphItem["edi3:cefactElementMetadata"] %}
                         <table>
@@ -60,7 +75,7 @@
                                 </tr>
                                 <tr>
                                     <th>@type</th>
-                                    <td><a href="#{{ cefactElementMetadata["@type"] | slugify }}">{{cefactElementMetadata["@type"]}}</a></td>
+                                    <td>{{cefactElementMetadata["@type"]}}</td>
                                 </tr>
                                 <tr>
                                     <th>edi3:cefactUNId</th>
@@ -68,8 +83,14 @@
                                 </tr>
                                 <tr>
                                     <th>rdfs:comment</th>
-                                    <td>{{cefactElementMetadata["rdfs:comment"]}}</td>
+                                    <td><p>{{cefactElementMetadata["rdfs:comment"]}}</p></td>
                                 </tr>
+                                {% if cefactElementMetadata["edi3:cefactBieDomainClass"] %}
+                                <tr>
+                                    <th>edi3:cefactBieDomainClass</th>
+                                    <td>{{cefactElementMetadata["edi3:cefactBieDomainClass"]}}</td>
+                                </tr>
+                                {% endif %}
                                 <tr>
                                     <th>edi3:cefactBusinessProcess</th>
                                     <td>{{cefactElementMetadata["edi3:cefactBusinessProcess"]}}</td>
@@ -92,10 +113,10 @@
 
                     {% if item_ranges.first %}
                         <div class="vocabulary-item-card">
-                            <h3 class="collapsible" id="{{ graphItem["@id"] | slugify }}-ranges">Range for</h3>
+                            <h3 class="collapsible" id="{{ graphItem["@id"] | replace_first: "edi3:", "" }}-ranges">Range for</h3>
                             <div class="collapsible-content" style="display: none;">
                             {% for item_range in item_ranges %}
-                                <a href="#{{ item_range["@id"] | slugify }}">{{ item_range["@id"] | replace_first: "edi3:", "" }}</a>{% if forloop.last == false %}, {% endif %}
+                                <a href="#{{ item_range["@id"] | replace_first: "edi3:", "" }}">{{ item_range["@id"] | replace_first: "edi3:", "" }}</a>{% if forloop.last == false %}, {% endif %}
                             {% endfor %}
                             </div>
                         </div>
@@ -116,7 +137,7 @@
                     {% endfor %}
                     {% if item_properties.first %}
                         <div class="vocabulary-item-card">
-                            <h3 class="collapsible" id="{{ graphItem["@id"] | slugify }}-properies">Properties</h3>
+                            <h3 class="collapsible" id="{{ graphItem["@id"] | replace_first: "edi3:", "" }}-properies">Properties</h3>
                             <div class="collapsible-content" style="display: none;">
                             <table>
                                 <thead>
@@ -128,7 +149,7 @@
                                 <tbody>
                                 {% for property in item_properties%}
                                     <tr>
-                                        <th><a href="#{{ property["@id"] | slugify }}">{{property["@id"] | replace_first: "edi3:", ""}}</a></th>
+                                        <th><a href="#{{ property["@id"] | replace_first: "edi3:", "" }}">{{property["@id"] | replace_first: "edi3:", ""}}</a></th>
                                         <td>{{property["rdfs:range"]}}</td>
                                     </tr>
                                 {% endfor %}
@@ -152,7 +173,7 @@
                     {% endfor %}
                     {% if item_relationships.first %}
                         <div class="vocabulary-item-card">
-                            <h3 class="collapsible" id="{{ graphItem["@id"] | slugify }}-relationships">Relationships</h3>
+                            <h3 class="collapsible" id="{{ graphItem["@id"] | replace_first: "edi3:", "" }}-relationships">Relationships</h3>
                             <div class="collapsible-content" style="display: none;">
                                 <table>
                                     <thead>
@@ -164,8 +185,8 @@
                                     <tbody>
                                         {% for relationship in item_relationships%}
                                             <tr>
-                                                <th><a href="#{{ relationship["@id"] | slugify }}">{{relationship["@id"] | replace_first: "edi3:", ""}}</a></th>
-                                                <td><a href="#{{ relationship["rdfs:range"] | slugify }}">{{relationship["rdfs:range"]}}</td></td>
+                                                <th><a href="#{{ relationship["@id"] | replace_first: "edi3:", "" }}">{{relationship["@id"] | replace_first: "edi3:", ""}}</a></th>
+                                                <td><a href="#{{ relationship["rdfs:range"] | replace_first: "edi3:", "" }}">{{relationship["rdfs:range"]}}</td></td>
                                             </tr>
                                         {% endfor %}
                                     </tbody>
@@ -177,8 +198,9 @@
             {% endfor %}
         </div>
     </div>
-</div>
+
 {% include footer.html %}
+<button type="button" onclick="scrollTopFunction();" id="scroll-to-top" style="display: none;"></button>
 <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
@@ -194,8 +216,27 @@
             }
         });
     }
-</script>
 
+    //Get the button
+    var scrollButton = document.getElementById("scroll-to-top");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+            scrollButton.style.display = "block";
+        } else {
+            scrollButton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function scrollTopFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
 <script src="/js/anchor.min.js"></script>
 <script>
     anchors.add('h2, h3');
