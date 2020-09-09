@@ -5,8 +5,8 @@ description:
 jsonid: "rec20"
 layout: vocabulary
 permalink: vocabulary/rec20/
-header_name: Rec 21 JSON-LD Vocabulary
-header_description: Vocabulary Definition of Rec 20 semantics in HTML format. JSON-LD format is available at [rec20.jsonld](https://edi3.org/vocab/rec21.jsonld)
+header_name: Rec 20 JSON-LD Vocabulary
+header_description: Vocabulary Definition of Recommendation N°. 20 - Revision 15 (Annexes II & Annexes III) semantics in HTML format. JSON-LD format is available at [rec20.jsonld](https://edi3.org/vocabulary/rec20.jsonld)
 type: code-list
 options:
   - edi3:levelCategory
