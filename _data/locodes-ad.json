@@ -37,7 +37,7 @@
         {
             "@id": "locodes-ad:ADEAC",
             "@type": "edi3:UNECELOCODE",
-            "rdfs:comment": "Esc�s",
+            "rdfs:comment": "Escas",
             "edi3:country": "AD",
             "rdf:value": "ADEAC"
         },
@@ -72,7 +72,7 @@
         {
             "@id": "locodes-ad:ADSJL",
             "@type": "edi3:UNECELOCODE",
-            "rdfs:comment": "Sant Juli� de L�ria",
+            "rdfs:comment": "Sant Julia de Loria",
             "edi3:country": "AD",
             "rdf:value": "ADSJL"
         },
