@@ -1,0 +1,1734 @@
+{
+	"@context": {
+		"edi3": "https://edi3.org/vocab#",
+		"rec24": "https://unece.org/codelists/rec24#",
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+	},
+	"@graph": [{
+		"@id": "rec24:Arrival_completed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has arrived.",
+		"rdf:value": "1"
+	}, {
+		"@id": "rec24:Loading_authorized",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Authorisation to load has been given.",
+		"rdf:value": "2"
+	}, {
+		"@id": "rec24:Arrival_in_defective_condition",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment or a means of transport has arrived in a defective condition.",
+		"rdf:value": "3"
+	}, {
+		"@id": "rec24:Defective_equipment_returned_to_service",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment previously the subject of a 'defective condition' status has been returned to service.",
+		"rdf:value": "4"
+	}, {
+		"@id": "rec24:Process_begun",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The process has begun.",
+		"rdf:value": "5"
+	}, {
+		"@id": "rec24:Booking_completed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment or means of transport has been booked.",
+		"rdf:value": "6"
+	}, {
+		"@id": "rec24:Booking_cancelled",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The booking of goods/consignment/equipment or means of transport has been cancelled.",
+		"rdf:value": "7"
+	}, {
+		"@id": "rec24:Cleared_import_restrictions",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport held for import restriction purposes has been released for import.",
+		"rdf:value": "8"
+	}, {
+		"@id": "rec24:Cleared_export_restrictions",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport held for export restriction purposes has been released for export.",
+		"rdf:value": "9"
+	}, {
+		"@id": "rec24:Cleared_by_agriculture_food_or_fisheries_authorities",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has been cleared by agriculture food or fisheries authorities.",
+		"rdf:value": "10"
+	}, {
+		"@id": "rec24:Cleared_by_port_authority",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has been cleared by port authority.",
+		"rdf:value": "11"
+	}, {
+		"@id": "rec24:Cleared_by_customs",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has been cleared by customs.",
+		"rdf:value": "12"
+	}, {
+		"@id": "rec24:Collection/pick-up_completed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been collected/picked-up.",
+		"rdf:value": "13"
+	}, {
+		"@id": "rec24:Process_completed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The process has been completed.",
+		"rdf:value": "14"
+	}, {
+		"@id": "rec24:Consolidated",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignments have been consolidated.",
+		"rdf:value": "15"
+	}, {
+		"@id": "rec24:Crossed_border",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignments/equipment/means of transport has crossed a border. ",
+		"rdf:value": "16"
+	}, {
+		"@id": "rec24:Customs_clearance_refused",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has been refused to be cleared by the customs authorities.",
+		"rdf:value": "17"
+	}, {
+		"@id": "rec24:Damaged_in_the_course_of_transportation",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been damaged in the course of transportation.",
+		"rdf:value": "18"
+	}, {
+		"@id": "rec24:Equipment_damage_quoted_for",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Damaged equipment has been assessed and a repair quotation has been sent.",
+		"rdf:value": "19"
+	}, {
+		"@id": "rec24:Delayed_in_the_course_of_transportation",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has been delayed in the course of transportation.",
+		"rdf:value": "20"
+	}, {
+		"@id": "rec24:Delivery_completed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been delivered.",
+		"rdf:value": "21"
+	}, {
+		"@id": "rec24:Delivery_completed_as_per_instruction",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Delivery of the goods/consignment/equipment has been completed as per instruction.",
+		"rdf:value": "22"
+	}, {
+		"@id": "rec24:Delivery_not_completed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Delivery of the goods/consignment/equipment has not been completed.",
+		"rdf:value": "23"
+	}, {
+		"@id": "rec24:Departure_completed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The means of transport has departed. ",
+		"rdf:value": "24"
+	}, {
+		"@id": "rec24:Departure_delayed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The means of transport has been delayed in departure.",
+		"rdf:value": "25"
+	}, {
+		"@id": "rec24:Deramped",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment has been removed from a position above another type of equipment and/or on a means of transport.",
+		"rdf:value": "26"
+	}, {
+		"@id": "rec24:Despatch_completed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been despatched.",
+		"rdf:value": "27"
+	}, {
+		"@id": "rec24:Stripped",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been unloaded from a piece of equipment in which they were transported.",
+		"rdf:value": "28"
+	}, {
+		"@id": "rec24:Unloaded",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been unloaded from a means of transport.",
+		"rdf:value": "29"
+	}, {
+		"@id": "rec24:Empty_on_inspection",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The package/equipment has been found to be empty on inspection.",
+		"rdf:value": "30"
+	}, {
+		"@id": "rec24:En_route",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport is moving to destination.",
+		"rdf:value": "31"
+	}, {
+		"@id": "rec24:Equipment_returned_from_repair",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment has been returned from repair.",
+		"rdf:value": "32"
+	}, {
+		"@id": "rec24:Equipment_sent_for_repair",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment has been sent for repair.",
+		"rdf:value": "33"
+	}, {
+		"@id": "rec24:Equipment_repaired",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment has been repaired.",
+		"rdf:value": "34"
+	}, {
+		"@id": "rec24:Forwarded_to_destination",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been forwarded to a destination.",
+		"rdf:value": "35"
+	}, {
+		"@id": "rec24:Not_found",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has not been found.",
+		"rdf:value": "36"
+	}, {
+		"@id": "rec24:Found",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has been found.",
+		"rdf:value": "37"
+	}, {
+		"@id": "rec24:Freight_paid",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The freight charges have been paid.",
+		"rdf:value": "38"
+	}, {
+		"@id": "rec24:Released_from_bond",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been released from bond.",
+		"rdf:value": "39"
+	}, {
+		"@id": "rec24:Arrival_at_port",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has arrived at the port.",
+		"rdf:value": "40"
+	}, {
+		"@id": "rec24:Handed_over_under_continued_responsibility",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been handed over under responsibility of the same transport operator.",
+		"rdf:value": "41"
+	}, {
+		"@id": "rec24:Misrouted_consignment_corrected",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has been re-routed to the correct destination.",
+		"rdf:value": "44"
+	}, {
+		"@id": "rec24:Arrival_consignee_informed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The consignee has been informed of the arrival of the goods/consignments/equipment/means of transport.",
+		"rdf:value": "45"
+	}, {
+		"@id": "rec24:Moved_into_bond",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been moved into bond.",
+		"rdf:value": "46"
+	}, {
+		"@id": "rec24:Moved_into_packing_depot",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been moved into a packing depot.",
+		"rdf:value": "47"
+	}, {
+		"@id": "rec24:Loading_completed_onto_a_means_of_transport",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been loaded onto a means of transport.",
+		"rdf:value": "48"
+	}, {
+		"@id": "rec24:Lost",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has been lost.",
+		"rdf:value": "49"
+	}, {
+		"@id": "rec24:Manifested",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been included on a manifest.",
+		"rdf:value": "50"
+	}, {
+		"@id": "rec24:Onloaded_from_a_means_of_transport",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The consignment has been onloaded from a means of transport.",
+		"rdf:value": "51"
+	}, {
+		"@id": "rec24:Collection/pick-up_not_completed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment expected has not been collected/picked-up.",
+		"rdf:value": "53"
+	}, {
+		"@id": "rec24:Unidentifiable",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport cannot be identified.",
+		"rdf:value": "54"
+	}, {
+		"@id": "rec24:Not_loaded_onto_a_means_of_transport",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has not been loaded onto a means of transport.",
+		"rdf:value": "57"
+	}, {
+		"@id": "rec24:Equipment_off_hire",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment is no longer under lease.",
+		"rdf:value": "58"
+	}, {
+		"@id": "rec24:Premature_onloading",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been onloaded prematurely from a means of transport.",
+		"rdf:value": "59"
+	}, {
+		"@id": "rec24:Equipment_on_hire",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment has been leased.",
+		"rdf:value": "60"
+	}, {
+		"@id": "rec24:Outstanding_claims_settled",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Outstanding claims in respect of the goods/consignment/equipment have been settled.",
+		"rdf:value": "61"
+	}, {
+		"@id": "rec24:Overlanded",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Unmanifested goods/consignments/equipment has been unloaded.",
+		"rdf:value": "62"
+	}, {
+		"@id": "rec24:Not_available_for_collection/pick-up",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment is not available for collection/pick-up.",
+		"rdf:value": "63"
+	}, {
+		"@id": "rec24:Collection/pick-up_awaited",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment is awaiting collection/pick-up.",
+		"rdf:value": "64"
+	}, {
+		"@id": "rec24:Equipment_plugged-in",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment has been plugged into a power source.",
+		"rdf:value": "65"
+	}, {
+		"@id": "rec24:Plundered",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has been plundered.",
+		"rdf:value": "66"
+	}, {
+		"@id": "rec24:Positioned",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been positioned.",
+		"rdf:value": "67"
+	}, {
+		"@id": "rec24:Pre-informed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The party has been informed in advance.",
+		"rdf:value": "68"
+	}, {
+		"@id": "rec24:Disposed_of",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been disposed of.",
+		"rdf:value": "69"
+	}, {
+		"@id": "rec24:Ramped_equipment",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment has been placed above another type of equipment and/or placed on a means of transport.",
+		"rdf:value": "70"
+	}, {
+		"@id": "rec24:Ready_for_transportation",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment is ready for transportation.",
+		"rdf:value": "71"
+	}, {
+		"@id": "rec24:Receipt_of_goods_fully_acknowledged",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The receipt of goods has been fully acknowledged.",
+		"rdf:value": "72"
+	}, {
+		"@id": "rec24:Receipt_of_goods_partially_acknowledged",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The receipt of goods has been partially acknowledged.",
+		"rdf:value": "73"
+	}, {
+		"@id": "rec24:Received",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment have been received.",
+		"rdf:value": "74"
+	}, {
+		"@id": "rec24:Consignee_changed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The consignee has been changed.",
+		"rdf:value": "75"
+	}, {
+		"@id": "rec24:Transport_re-arranged",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The transport of the goods/consignment/equipment has been re-arranged.",
+		"rdf:value": "76"
+	}, {
+		"@id": "rec24:Refused_action",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The transport action has been refused.",
+		"rdf:value": "77"
+	}, {
+		"@id": "rec24:Released",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been released.",
+		"rdf:value": "78"
+	}, {
+		"@id": "rec24:Reloaded_onto_a_means_of_transport",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been reloaded onto a means of transport.",
+		"rdf:value": "79"
+	}, {
+		"@id": "rec24:Returned_as_instructed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been returned as instructed.",
+		"rdf:value": "80"
+	}, {
+		"@id": "rec24:Returned_wrecked",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has been returned in a wrecked condition.",
+		"rdf:value": "81"
+	}, {
+		"@id": "rec24:Returned",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been returned.",
+		"rdf:value": "82"
+	}, {
+		"@id": "rec24:Sealed_equipment",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment has been sealed.",
+		"rdf:value": "83"
+	}, {
+		"@id": "rec24:Service_ordered",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "A service has been ordered.",
+		"rdf:value": "84"
+	}, {
+		"@id": "rec24:Short_landed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Goods/consignments/equipment manifested for unloading have not been unloaded.",
+		"rdf:value": "85"
+	}, {
+		"@id": "rec24:Short_shipped",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment expected to be sent has not been fully loaded onto a means of transport.",
+		"rdf:value": "86"
+	}, {
+		"@id": "rec24:Despatched_completed_via_a_wrong_route",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been despatched via a wrong route.",
+		"rdf:value": "87"
+	}, {
+		"@id": "rec24:Split_consignment",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The consignment of goods has been split. ",
+		"rdf:value": "88"
+	}, {
+		"@id": "rec24:Steam_cleaned",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/equipment has been steam cleaned.",
+		"rdf:value": "89"
+	}, {
+		"@id": "rec24:Movement_stopped",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The movement of the goods/consignment/equipment has been stopped.",
+		"rdf:value": "90"
+	}, {
+		"@id": "rec24:Stored",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been placed into storage.",
+		"rdf:value": "91"
+	}, {
+		"@id": "rec24:Stowed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been placed on a means of transport.",
+		"rdf:value": "92"
+	}, {
+		"@id": "rec24:Stuffed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignments have been loaded into a piece of equipment.",
+		"rdf:value": "93"
+	}, {
+		"@id": "rec24:Stuffed_and_sealed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignments have been loaded into a piece of equipment and the equipment has been sealed.",
+		"rdf:value": "94"
+	}, {
+		"@id": "rec24:Sub-lease_notice_in",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "A sub-lease notice has been sent to the lessor.",
+		"rdf:value": "95"
+	}, {
+		"@id": "rec24:Sub-lease_notice_out",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "A sub-lease notice has been sent by the lessee.",
+		"rdf:value": "96"
+	}, {
+		"@id": "rec24:Damage_surveyed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been surveyed to assess the damage.",
+		"rdf:value": "97"
+	}, {
+		"@id": "rec24:Transferred_in",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been transferred in.",
+		"rdf:value": "98"
+	}, {
+		"@id": "rec24:Transferred_out",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been transferred out.",
+		"rdf:value": "99"
+	}, {
+		"@id": "rec24:Transshipment",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been transferred to another means of transport.",
+		"rdf:value": "100"
+	}, {
+		"@id": "rec24:Delayed_in_transit",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has been delayed in transit.",
+		"rdf:value": "101"
+	}, {
+		"@id": "rec24:Unknown",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport is not known.",
+		"rdf:value": "102"
+	}, {
+		"@id": "rec24:Equipment_unplugged",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment has been removed from the power source.",
+		"rdf:value": "103"
+	}, {
+		"@id": "rec24:Delivery_refused_to_be_re-arranged",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery of the goods has been refused and is to be re-arranged.",
+		"rdf:value": "104"
+	}, {
+		"@id": "rec24:Delivery_postponed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "A part or the whole of the delivery is postponed.",
+		"rdf:value": "105"
+	}, {
+		"@id": "rec24:Delivery_refused",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "A part or the whole of the delivery is refused.",
+		"rdf:value": "106"
+	}, {
+		"@id": "rec24:Anomaly_on_arrival",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "An anomaly has been found on arrival.",
+		"rdf:value": "107"
+	}, {
+		"@id": "rec24:Delivery_claim",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "A claim has been made at delivery.",
+		"rdf:value": "108"
+	}, {
+		"@id": "rec24:Delivery_impossible_delivery_notice_left",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Delivery has not been possible; a delivery notice has been left.",
+		"rdf:value": "109"
+	}, {
+		"@id": "rec24:Delivery_impossible_no_delivery_notice_left",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Delivery has not been possible; no delivery notice has been left.",
+		"rdf:value": "110"
+	}, {
+		"@id": "rec24:Transport_terminated",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The transport of the goods/consignment/equipment/means of transport has been terminated.",
+		"rdf:value": "111"
+	}, {
+		"@id": "rec24:Held_at_consignee's_disposal",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment is held at consignee's disposal.",
+		"rdf:value": "112"
+	}, {
+		"@id": "rec24:Delivery_in_progress",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery of the goods/consignment is in progress. ",
+		"rdf:value": "113"
+	}, {
+		"@id": "rec24:Delivery_accepted_subject_to_further_inspection",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Delivery accepted subject to further inspection of the good/consignment/equipment/means of transport.",
+		"rdf:value": "114"
+	}, {
+		"@id": "rec24:Discrepancy",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "There is a discrepancy in the details.",
+		"rdf:value": "115"
+	}, {
+		"@id": "rec24:Export_inhibited",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Export is inhibited.",
+		"rdf:value": "116"
+	}, {
+		"@id": "rec24:Missing",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment is missing.",
+		"rdf:value": "117"
+	}, {
+		"@id": "rec24:Stowed_on_deck",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been stowed on/above deck.",
+		"rdf:value": "118"
+	}, {
+		"@id": "rec24:Unable_to_be_located",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment cannot be located.",
+		"rdf:value": "119"
+	}, {
+		"@id": "rec24:Unacceptable_condition",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport is in an unacceptable condition.",
+		"rdf:value": "120"
+	}, {
+		"@id": "rec24:Stowed_under_deck",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been stowed under/below deck.",
+		"rdf:value": "121"
+	}, {
+		"@id": "rec24:Accompanying_documents_delivered",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "All documents accompanying the cargo have been delivered.",
+		"rdf:value": "123"
+	}, {
+		"@id": "rec24:For_transfer",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment is to be transferred.",
+		"rdf:value": "124"
+	}, {
+		"@id": "rec24:No_status",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "No status information is available.",
+		"rdf:value": "125"
+	}, {
+		"@id": "rec24:Customs_clearance_in_progress",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Customs clearance is in progress.",
+		"rdf:value": "126"
+	}, {
+		"@id": "rec24:Departed_completed_on_a_means_of_transport",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has departed on a means of transport.",
+		"rdf:value": "127"
+	}, {
+		"@id": "rec24:Awaiting_customs_import_release",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Awaiting customs release for import.",
+		"rdf:value": "128"
+	}, {
+		"@id": "rec24:In-bond_movement",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment are moving under bond.",
+		"rdf:value": "129"
+	}, {
+		"@id": "rec24:Consignment_received_from_shipper",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The consignment has been received from shipper.",
+		"rdf:value": "130"
+	}, {
+		"@id": "rec24:For_transfer_to_another_carrier",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment is to be transferred to another carrier.",
+		"rdf:value": "131"
+	}, {
+		"@id": "rec24:Loading_in_progress",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment is being loaded onto a means of transport.",
+		"rdf:value": "132"
+	}, {
+		"@id": "rec24:Special_loading_operations",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operations related to special loading of goods/consignment/equipment. ",
+		"rdf:value": "133"
+	}, {
+		"@id": "rec24:Embarking_passengers",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The embarkation of passengers.",
+		"rdf:value": "134"
+	}, {
+		"@id": "rec24:Unloading_in_progress",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment is being unloaded from a means of transport.",
+		"rdf:value": "135"
+	}, {
+		"@id": "rec24:Special_unloading",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operations related to special unloading of goods/consignment/equipment.",
+		"rdf:value": "136"
+	}, {
+		"@id": "rec24:Disembarking_passengers",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The disembarkation of passengers.",
+		"rdf:value": "137"
+	}, {
+		"@id": "rec24:Relocation_of_a_means_of_transport",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Relocating of a means of transport.",
+		"rdf:value": "138"
+	}, {
+		"@id": "rec24:Manoeuvring_operations_entering_port",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Manoeuvring operations connected with entering the port.",
+		"rdf:value": "139"
+	}, {
+		"@id": "rec24:Manoeuvring_operations_leaving_port",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Manoeuvring operations connected with leaving the port.",
+		"rdf:value": "140"
+	}, {
+		"@id": "rec24:Manoeuvring_operations_within_the_port",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Manoeuvring operations connected with movement within the port.",
+		"rdf:value": "141"
+	}, {
+		"@id": "rec24:Means_of_transport_under_preparation",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Preparation for handling of the means of transport.",
+		"rdf:value": "142"
+	}, {
+		"@id": "rec24:Ballast_loading",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Loading of ballast.",
+		"rdf:value": "143"
+	}, {
+		"@id": "rec24:Ballast_unloading",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Unloading of ballast.",
+		"rdf:value": "144"
+	}, {
+		"@id": "rec24:Cargo_space_under_preparation",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Preparation of the cargo space of the means of transport.",
+		"rdf:value": "145"
+	}, {
+		"@id": "rec24:Provisioning",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Provision of supplies for a means of transport. ",
+		"rdf:value": "146"
+	}, {
+		"@id": "rec24:Provisioning_fuel",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Provision of fuel for a means of transport.",
+		"rdf:value": "147"
+	}, {
+		"@id": "rec24:Provisioning_water",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Provision of water for a means of transport.",
+		"rdf:value": "148"
+	}, {
+		"@id": "rec24:Provisioning_oil",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Provision of oil for a means of transport.",
+		"rdf:value": "149"
+	}, {
+		"@id": "rec24:Provisioning_food",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Provision of food for a means of transport.",
+		"rdf:value": "150"
+	}, {
+		"@id": "rec24:Sanitary_operations",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operations related to sanitary conditions.",
+		"rdf:value": "151"
+	}, {
+		"@id": "rec24:Fumigation_operations",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operations related to fumigation of the equipment or the means of transport.",
+		"rdf:value": "152"
+	}, {
+		"@id": "rec24:Desinfestation_operations",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operations related to desinfestation of the equipment or the means of transport.",
+		"rdf:value": "153"
+	}, {
+		"@id": "rec24:Deratization_operations",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operations related to deratization of the means of transport.",
+		"rdf:value": "154"
+	}, {
+		"@id": "rec24:Degasation_operations",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operations related to the removal of unwanted gas.",
+		"rdf:value": "155"
+	}, {
+		"@id": "rec24:Crew_recruitment_operation",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operation related to recruitment of crew.",
+		"rdf:value": "156"
+	}, {
+		"@id": "rec24:Training_operations",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operations related to training.",
+		"rdf:value": "157"
+	}, {
+		"@id": "rec24:Salvage_operations",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operations related to salvage work.",
+		"rdf:value": "158"
+	}, {
+		"@id": "rec24:Loading_alongside",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Loading the goods when the means of transport is alongside.",
+		"rdf:value": "159"
+	}, {
+		"@id": "rec24:Loading_at_anchor",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Loading the goods when the means of transport is at anchor.",
+		"rdf:value": "161"
+	}, {
+		"@id": "rec24:Unloading_at_wharf",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Unloading the goods when the means of transport is at the wharf.",
+		"rdf:value": "162"
+	}, {
+		"@id": "rec24:Unloading_on_board",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Unloading the goods from the vessel.",
+		"rdf:value": "163"
+	}, {
+		"@id": "rec24:Unloading_at_anchor",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Unloading the goods when the means of transport is at anchor.",
+		"rdf:value": "164"
+	}, {
+		"@id": "rec24:Loading_and_unloading",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "simultaneously\tLoading and unloading operations simultaneously.",
+		"rdf:value": "165"
+	}, {
+		"@id": "rec24:Idle_time_operations",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operations during idle time pending a scheduled event.",
+		"rdf:value": "166"
+	}, {
+		"@id": "rec24:Technical_operations",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operations of a technical nature.",
+		"rdf:value": "167"
+	}, {
+		"@id": "rec24:Compass_calibration",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operations related to calibration of a compass.",
+		"rdf:value": "168"
+	}, {
+		"@id": "rec24:Document_clearance_operation",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operation related to clearance of a document.",
+		"rdf:value": "169"
+	}, {
+		"@id": "rec24:Customs_formalities_operation",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operation related to customs formalities.",
+		"rdf:value": "170"
+	}, {
+		"@id": "rec24:Medical_control_operations",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Medical control operations related to the crew.",
+		"rdf:value": "171"
+	}, {
+		"@id": "rec24:Loading_preparation_for",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Preparation for the loading of the goods.",
+		"rdf:value": "172"
+	}, {
+		"@id": "rec24:Unloading_preparation_for",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Preparation for the unloading of the goods.",
+		"rdf:value": "174"
+	}, {
+		"@id": "rec24:Unloading_polluted_ballast",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Unloading of polluted ballast.",
+		"rdf:value": "175"
+	}, {
+		"@id": "rec24:Obtaining_documents_from_shipping_register",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operations related to obtaining documents from the shipping register.",
+		"rdf:value": "176"
+	}, {
+		"@id": "rec24:Obtaining_wreckage_documentation",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Operations related to obtaining documents for a wrecked means of transport.",
+		"rdf:value": "177"
+	}, {
+		"@id": "rec24:Waiting_to_enter_or_leave",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting to enter or leave.",
+		"rdf:value": "178"
+	}, {
+		"@id": "rec24:Waiting_for_a_pilot",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting for an available pilot.",
+		"rdf:value": "179"
+	}, {
+		"@id": "rec24:Waiting_for_a_tug",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting for an available tug.",
+		"rdf:value": "180"
+	}, {
+		"@id": "rec24:Waiting_for_day_light",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting for day light hours.",
+		"rdf:value": "181"
+	}, {
+		"@id": "rec24:Waiting_due_to_meteorological_circumstances",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting due to meteorological circumstances.",
+		"rdf:value": "182"
+	}, {
+		"@id": "rec24:Waiting_to_form_a_convoy",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting to form a convoy.",
+		"rdf:value": "183"
+	}, {
+		"@id": "rec24:Waiting_for_action_by_authorities",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting for action to be taken by authorities.",
+		"rdf:value": "184"
+	}, {
+		"@id": "rec24:Waiting_due_to_a_ban",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting due to a ban.",
+		"rdf:value": "185"
+	}, {
+		"@id": "rec24:Waiting_for_entry_permission",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting for entry permission from the authorities.",
+		"rdf:value": "186"
+	}, {
+		"@id": "rec24:Waiting_due_to_an_action_taken_by_authorities",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting due to an action taken by the authorities.",
+		"rdf:value": "187"
+	}, {
+		"@id": "rec24:Waiting_due_to_the_terms_of_charter",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting due to terms of the charter.",
+		"rdf:value": "188"
+	}, {
+		"@id": "rec24:Waiting_for_a_location",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting for a location.",
+		"rdf:value": "189"
+	}, {
+		"@id": "rec24:Waiting_for_cargo",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting for cargo.",
+		"rdf:value": "190"
+	}, {
+		"@id": "rec24:Waiting_for_workers",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting for workers.",
+		"rdf:value": "191"
+	}, {
+		"@id": "rec24:Waiting_for_storage_area",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting for a storage area.",
+		"rdf:value": "192"
+	}, {
+		"@id": "rec24:Waiting_for_equipment",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting for equipment.",
+		"rdf:value": "193"
+	}, {
+		"@id": "rec24:Waiting_for_other_means_of_transport",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting for other means of transport.",
+		"rdf:value": "194"
+	}, {
+		"@id": "rec24:Waiting_for_handling_equipment",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting for handling equipment.",
+		"rdf:value": "195"
+	}, {
+		"@id": "rec24:Waiting_for_on_board_handling_equipment",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting for onboard handling equipment.",
+		"rdf:value": "196"
+	}, {
+		"@id": "rec24:Waiting_for_cargo_to_be_ready_for_loading",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting due to the cargo not being ready to be loaded/handled.",
+		"rdf:value": "197"
+	}, {
+		"@id": "rec24:Waiting_for_means_of_transport_to_be_ready",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting due to the means of transport not being ready. ",
+		"rdf:value": "198"
+	}, {
+		"@id": "rec24:Waiting_due_to_damaged_cargo",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting because cargo was damaged.",
+		"rdf:value": "199"
+	}, {
+		"@id": "rec24:Waiting_for_operational_periods",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting due to being outside the period of operation.",
+		"rdf:value": "200"
+	}, {
+		"@id": "rec24:Waiting_for_repair_and/or_maintenance_of_the_means_of_transport",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting due to repairs and/or maintenance to the means of transport.",
+		"rdf:value": "201"
+	}, {
+		"@id": "rec24:Waiting_for_repair_and/or_maintenance_of_handling_equipment",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting due to repairs and/or maintenance of handling equipment.",
+		"rdf:value": "202"
+	}, {
+		"@id": "rec24:Embarking_passengers_from_tender",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The embarkation of passengers from a tender.",
+		"rdf:value": "203"
+	}, {
+		"@id": "rec24:Waiting_for_a_counter_convoy_to_pass",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Waiting due to passage of counter convoy. ",
+		"rdf:value": "204"
+	}, {
+		"@id": "rec24:Delivery_address_outside_delivery_area",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The address for delivery is outside the area of the carrier/transport operator.",
+		"rdf:value": "205"
+	}, {
+		"@id": "rec24:Arrival_after_means_of_transport_departed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has arrived after the means of transport has departed.",
+		"rdf:value": "206"
+	}, {
+		"@id": "rec24:Delivery_refused_agent",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The agent refused to accept delivery.",
+		"rdf:value": "207"
+	}, {
+		"@id": "rec24:Seals_replaced",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The seals on the equipment have been replaced.",
+		"rdf:value": "208"
+	}, {
+		"@id": "rec24:Delivery_scheduled",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery has been scheduled.",
+		"rdf:value": "209"
+	}, {
+		"@id": "rec24:Delivery_unsuccessful_attempt",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "An unsuccessful attempt has been made to deliver the goods/consignment/equipment.",
+		"rdf:value": "210"
+	}, {
+		"@id": "rec24:Delivery_not_completed_business_closed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment could not be delivered as the business was closed.",
+		"rdf:value": "211"
+	}, {
+		"@id": "rec24:Delivery_changed_schedule",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment cannot be delivered at the arranged time because of a change of schedule.",
+		"rdf:value": "212"
+	}, {
+		"@id": "rec24:Delivery_further_address_needed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "A further address is needed to effect delivery of the goods/consignment/ equipment.",
+		"rdf:value": "213"
+	}, {
+		"@id": "rec24:Computer_system_not_in_operation",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The computer system is not in operation.",
+		"rdf:value": "214"
+	}, {
+		"@id": "rec24:Delivery_awaiting_credit_approval",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Delivery on a credit base is requested.",
+		"rdf:value": "215"
+	}, {
+		"@id": "rec24:Delivery_awaiting_customer_arrangements",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment require delivery arrangements by the customer.",
+		"rdf:value": "216"
+	}, {
+		"@id": "rec24:Damaged",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignments/equipment have been damaged.",
+		"rdf:value": "218"
+	}, {
+		"@id": "rec24:Delivery_pending_awaiting_specified_dates/times/periods",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Delivery of the goods/consignment/equipment is pending awaiting specified dates/times/periods.",
+		"rdf:value": "219"
+	}, {
+		"@id": "rec24:Destination_incorrect",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been sent to an incorrect destination.",
+		"rdf:value": "220"
+	}, {
+		"@id": "rec24:Derailment",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The train has derailed.",
+		"rdf:value": "222"
+	}, {
+		"@id": "rec24:Delivery_industrial_dispute",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment cannot be delivered due to an industrial dispute.",
+		"rdf:value": "224"
+	}, {
+		"@id": "rec24:Operation_affected_by_customer_action",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "An operation has been affected by an action of the customer.",
+		"rdf:value": "225"
+	}, {
+		"@id": "rec24:Delivery_equipment_failure",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment cannot be delivered due to a failure in the equipment.",
+		"rdf:value": "227"
+	}, {
+		"@id": "rec24:Inspection_required_by_authority",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "An inspection of the goods/equipment is required by an authority.",
+		"rdf:value": "228"
+	}, {
+		"@id": "rec24:Export_suspended",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been suspended from export pending further investigation.",
+		"rdf:value": "229"
+	}, {
+		"@id": "rec24:Missing_goods_item",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods item is missing.",
+		"rdf:value": "231"
+	}, {
+		"@id": "rec24:Import_suspended",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been suspended from import pending further investigation.",
+		"rdf:value": "232"
+	}, {
+		"@id": "rec24:Incorrect_picklist",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment was not collected/picked-up due to an incorrect picklist.",
+		"rdf:value": "233"
+	}, {
+		"@id": "rec24:Incorrect_address",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The address is incorrect.",
+		"rdf:value": "234"
+	}, {
+		"@id": "rec24:Industrial_dispute",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "An industrial dispute has happened.",
+		"rdf:value": "235"
+	}, {
+		"@id": "rec24:Waiting_for_instructions",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Further instructions are awaited.",
+		"rdf:value": "236"
+	}, {
+		"@id": "rec24:Means_of_transport_damaged",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The means of transport has been damaged.",
+		"rdf:value": "238"
+	}, {
+		"@id": "rec24:Mechanical_breakdown",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "There has been a mechanical breakdown of the means of transport/equipment.",
+		"rdf:value": "239"
+	}, {
+		"@id": "rec24:Mechanical_inspection_required",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "A mechanical inspection of the means of transport/equipment is required.",
+		"rdf:value": "240"
+	}, {
+		"@id": "rec24:Missing_document",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The document for the goods/consignments/equipment is missing.",
+		"rdf:value": "241"
+	}, {
+		"@id": "rec24:New_delivery_arrangements_advised",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "New delivery arrangements have been advised. ",
+		"rdf:value": "242"
+	}, {
+		"@id": "rec24:No_recipient_contact_information",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "No contact information available concerning the recipient.",
+		"rdf:value": "243"
+	}, {
+		"@id": "rec24:Collection/pick-up_package_not_available",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The package is not available for collection/pick-up.",
+		"rdf:value": "247"
+	}, {
+		"@id": "rec24:Tracking_number_unknown",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The tracking number of the goods/consignment/equipment is unknown.",
+		"rdf:value": "248"
+	}, {
+		"@id": "rec24:Transport_payment_not_received",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The transport payment has not been received.",
+		"rdf:value": "250"
+	}, {
+		"@id": "rec24:Refused_non-payment_by_payer",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Payer refused to make the payment.",
+		"rdf:value": "251"
+	}, {
+		"@id": "rec24:Refused_no_reason_given",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The transport action/documentation has been refused without a reason given.",
+		"rdf:value": "253"
+	}, {
+		"@id": "rec24:Delivery_scheduled_past_cut-off_time",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment to be delivered has been scheduled past the cut-off time.",
+		"rdf:value": "254"
+	}, {
+		"@id": "rec24:Shunted_to_siding",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The means of transport has been shunted to a siding.",
+		"rdf:value": "255"
+	}, {
+		"@id": "rec24:Signature_not_required",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "A signature is not required.",
+		"rdf:value": "256"
+	}, {
+		"@id": "rec24:Special_service_required",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "A special service is required.",
+		"rdf:value": "258"
+	}, {
+		"@id": "rec24:Tracking_information_unavailable",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The tracking information is unavailable.",
+		"rdf:value": "260"
+	}, {
+		"@id": "rec24:Reason_unknown",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The reason is unknown.",
+		"rdf:value": "265"
+	}, {
+		"@id": "rec24:Delivery_delayed_adverse_weather_conditions",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Adverse weather conditions have delayed delivery.",
+		"rdf:value": "266"
+	}, {
+		"@id": "rec24:Free_storage_time_expired",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been in a storage facility for longer than the permitted free time.",
+		"rdf:value": "267"
+	}, {
+		"@id": "rec24:Delivery_consignee_absent",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment cannot be delivered as the consignee was absent.",
+		"rdf:value": "269"
+	}, {
+		"@id": "rec24:Delayed_operation_local_circumstances",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The operation is delayed due to local circumstances.",
+		"rdf:value": "270"
+	}, {
+		"@id": "rec24:Delayed_operation_consignee's_instructions",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The operation is delayed awaiting consignee's instructions.",
+		"rdf:value": "271"
+	}, {
+		"@id": "rec24:Delayed_operation_consignor's_instructions",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The operation is delayed awaiting consignor's instructions.",
+		"rdf:value": "272"
+	}, {
+		"@id": "rec24:Delayed_operation",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The operation is delayed.",
+		"rdf:value": "273"
+	}, {
+		"@id": "rec24:Incomplete_address",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The address is incomplete.",
+		"rdf:value": "274"
+	}, {
+		"@id": "rec24:Delivery_refused_purchase_order_cancelled",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused as the purchase order has been cancelled.",
+		"rdf:value": "275"
+	}, {
+		"@id": "rec24:Delivery_refused_return_to_the_consignor",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused and the goods/consignment/equipment will be returned to the consignor.",
+		"rdf:value": "276"
+	}, {
+		"@id": "rec24:Delivery_refused_inconsistent_with_purchase_order",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused as an inconsistency with the purchase order was found.",
+		"rdf:value": "277"
+	}, {
+		"@id": "rec24:Delivery_refused_incorrect_delivery_date",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused as the delivery date was incorrect.",
+		"rdf:value": "278"
+	}, {
+		"@id": "rec24:Delivery_refused_automatic_return",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused and the goods/consignment/equipment is automatically returned as instructed.",
+		"rdf:value": "279"
+	}, {
+		"@id": "rec24:Delivery_refused_duplicate_delivery",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused because of duplicate delivery.",
+		"rdf:value": "280"
+	}, {
+		"@id": "rec24:Delivery_refused_instructions_requested",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused and instructions are requested.",
+		"rdf:value": "281"
+	}, {
+		"@id": "rec24:Delivery_refused_consignee's_condition",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused due to the consignee's condition.",
+		"rdf:value": "282"
+	}, {
+		"@id": "rec24:Delivery_refused_delivery_incomplete",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused due to incomplete delivery.",
+		"rdf:value": "283"
+	}, {
+		"@id": "rec24:Delivery_refused_not_ordered",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused as the goods/consignment/equipment had not been ordered. ",
+		"rdf:value": "284"
+	}, {
+		"@id": "rec24:Delivery_refused_remainder_not_accepted",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery of the remaining goods was not accepted.",
+		"rdf:value": "285"
+	}, {
+		"@id": "rec24:Delivery_refused_spoilt_state",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused as the goods/consignment/equipment was in a spoilt state.",
+		"rdf:value": "286"
+	}, {
+		"@id": "rec24:Missing_contents",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The contents are missing.",
+		"rdf:value": "287"
+	}, {
+		"@id": "rec24:Not_on_package_list",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment is not on the package list.",
+		"rdf:value": "288"
+	}, {
+		"@id": "rec24:Delivery_refused_collect_freight_charges_not_paid",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused as the collect freight charges were not paid.",
+		"rdf:value": "291"
+	}, {
+		"@id": "rec24:Delivery_refused_reimbursement_not_paid",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused as the reimbursement was not paid.",
+		"rdf:value": "292"
+	}, {
+		"@id": "rec24:Delivery_refused_opened",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused as the goods/consignment was found to be opened.",
+		"rdf:value": "295"
+	}, {
+		"@id": "rec24:Delivery_refused_commercial_dispute",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused because of a commercial dispute. ",
+		"rdf:value": "297"
+	}, {
+		"@id": "rec24:Delivery_refused_error_on_product_or_packaging",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused as an error was found on product or packaging.",
+		"rdf:value": "298"
+	}, {
+		"@id": "rec24:Delivery_refused_delivery_date/time_changed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery was refused as the delivery date or time has been changed.",
+		"rdf:value": "299"
+	}, {
+		"@id": "rec24:Document_received_without_goods",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "A document for a consignment has been received without the corresponding goods.",
+		"rdf:value": "300"
+	}, {
+		"@id": "rec24:Goods_received_without_documentation",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Goods/consignment has been received without the corresponding documentation.",
+		"rdf:value": "301"
+	}, {
+		"@id": "rec24:Overcarried_consignment",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The consignment has been overcarried.",
+		"rdf:value": "302"
+	}, {
+		"@id": "rec24:Document_found",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The document has been found.",
+		"rdf:value": "306"
+	}, {
+		"@id": "rec24:Damaged_but_deliverable",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been damaged but delivery can be completed.",
+		"rdf:value": "307"
+	}, {
+		"@id": "rec24:Spoilt",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment is spoilt.",
+		"rdf:value": "308"
+	}, {
+		"@id": "rec24:Packaging/equipment_opened",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The packaging/equipment has been opened.",
+		"rdf:value": "309"
+	}, {
+		"@id": "rec24:Processed_as_contractually_agreed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been processed as contractually agreed.",
+		"rdf:value": "310"
+	}, {
+		"@id": "rec24:Claim_folder_opened",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "A claim folder has been opened.",
+		"rdf:value": "311"
+	}, {
+		"@id": "rec24:Moved_completed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been moved.",
+		"rdf:value": "312"
+	}, {
+		"@id": "rec24:Returned_by_recipient",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been returned by the recipient.",
+		"rdf:value": "313"
+	}, {
+		"@id": "rec24:Delayed_at_origin",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has been delayed at the origin.",
+		"rdf:value": "314"
+	}, {
+		"@id": "rec24:Held_by_logistic_service_provider",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been held by the logistic service provider.",
+		"rdf:value": "315"
+	}, {
+		"@id": "rec24:Incident_occurred_but_accepted_by_ordering_party",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "An incident has occurred but has been accepted by the ordering party.",
+		"rdf:value": "316"
+	}, {
+		"@id": "rec24:Delivery_party'_premises_closed_during_normal_hours",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The premises of the delivery party were closed during normal hours.",
+		"rdf:value": "317"
+	}, {
+		"@id": "rec24:Delivery_incomplete_time_shortage",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery of the goods/consignment/equipment could not be completed due to a shortage of time to handle the delivery.",
+		"rdf:value": "318"
+	}, {
+		"@id": "rec24:Despatch_preparation_error",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "An error occurred during the preparation of the despatch.",
+		"rdf:value": "319"
+	}, {
+		"@id": "rec24:Undefined_incident_attributed_to_logistic_server_provider",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "An undefined incident has occurred which has been attributed to the logistic service provider.",
+		"rdf:value": "320"
+	}, {
+		"@id": "rec24:Instruction_to_despatch_received",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The instruction to despatch has been received.",
+		"rdf:value": "321"
+	}, {
+		"@id": "rec24:Despatch_under_preparation",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The despatch of the goods/consignment/equipment is in preparation.",
+		"rdf:value": "322"
+	}, {
+		"@id": "rec24:Return_in_progress",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment is being returned.",
+		"rdf:value": "323"
+	}, {
+		"@id": "rec24:Instruction_to_despatch_cancelled",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The instruction to despatch has been cancelled.",
+		"rdf:value": "324"
+	}, {
+		"@id": "rec24:Delivery_refused_by_recipient",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The delivery of the goods/consignment/equipment has been refused by the recipient.",
+		"rdf:value": "325"
+	}, {
+		"@id": "rec24:Goods_held_by_third_party_on_instruction_from_owner",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Goods are held under control of a third party following an instruction from the owner of the goods.",
+		"rdf:value": "326"
+	}, {
+		"@id": "rec24:Weight_or_volume_loss",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods have suffered a weight or volume loss.",
+		"rdf:value": "327"
+	}, {
+		"@id": "rec24:Moved_internally",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been moved internally.",
+		"rdf:value": "328"
+	}, {
+		"@id": "rec24:Consignment_partially_stolen",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The consignment has been partially stolen.",
+		"rdf:value": "329"
+	}, {
+		"@id": "rec24:Consignment_partially_lost_or_missing",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The consignment is partially lost or missing.",
+		"rdf:value": "330"
+	}, {
+		"@id": "rec24:Destroyed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been destroyed.",
+		"rdf:value": "331"
+	}, {
+		"@id": "rec24:Action_by_logistics_service_provider",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "An action was taken by the logistics service provider. ",
+		"rdf:value": "332"
+	}, {
+		"@id": "rec24:Action_by_logistics_service_provider_on_instruction_by_owner",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "An action was taken by the logistics service provider as instructed by owner of the goods. ",
+		"rdf:value": "333"
+	}, {
+		"@id": "rec24:Document_refused",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The document has been refused.",
+		"rdf:value": "334"
+	}, {
+		"@id": "rec24:Seals_damaged",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The seals on the equipment have been damaged.",
+		"rdf:value": "335"
+	}, {
+		"@id": "rec24:Seals_broken",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The seals on the equipment have been broken.",
+		"rdf:value": "336"
+	}, {
+		"@id": "rec24:Seals_tampered",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The seals on the equipment have been tampered.",
+		"rdf:value": "337"
+	}, {
+		"@id": "rec24:Collection/pick-up_business_closed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment could not be collected/picked-up as the business was closed.",
+		"rdf:value": "338"
+	}, {
+		"@id": "rec24:Collection/pick-up_changed_schedule",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment cannot be collected/picked-up at the arranged time because of a change of schedule.",
+		"rdf:value": "339"
+	}, {
+		"@id": "rec24:Collection/pick-up_further_address_needed",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "A further address is needed to effect collection/pick-up of the goods/consignment/ equipment.",
+		"rdf:value": "340"
+	}, {
+		"@id": "rec24:Collection/pick-up_industrial_dispute",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment cannot be collected/picked-up due to an industrial dispute.",
+		"rdf:value": "341"
+	}, {
+		"@id": "rec24:Collection/pick-up_equipment_failure",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment cannot be collected/picked-up due to a failure in the equipment.",
+		"rdf:value": "342"
+	}, {
+		"@id": "rec24:Document_incorrect",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The document for the goods/consignments/equipment is incorrect.",
+		"rdf:value": "343"
+	}, {
+		"@id": "rec24:Collection/pick-up_scheduled_past_cut-off_time",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment to be collected/picked-up has been scheduled past the cut-off time.",
+		"rdf:value": "344"
+	}, {
+		"@id": "rec24:Collection/pick-up_adverse_weather_conditions",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Adverse weather conditions have affected collection/pick-up.",
+		"rdf:value": "345"
+	}, {
+		"@id": "rec24:Unloading_completed_from_a_means_of_transport",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been unloaded from a means of transport.",
+		"rdf:value": "346"
+	}, {
+		"@id": "rec24:Deliverable",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment can be delivered.",
+		"rdf:value": "347"
+	}, {
+		"@id": "rec24:Not_deliverable",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment cannot be delivered.",
+		"rdf:value": "348"
+	}, {
+		"@id": "rec24:Handed_over",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment has been handed over to another party.",
+		"rdf:value": "349"
+	}, {
+		"@id": "rec24:Signature_required",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "A signature is required.",
+		"rdf:value": "350"
+	}, {
+		"@id": "rec24:Defined_incident_attributed_to_logistic_server_provider",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "A defined incident has occurred which has been attributed to the logistic service provider.",
+		"rdf:value": "351"
+	}, {
+		"@id": "rec24:Delivery_not_completed_business_closed_inventory_count",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment could not be delivered as the business was closed due to inventory count.",
+		"rdf:value": "352"
+	}, {
+		"@id": "rec24:Delivery_not_completed_business_closed_on_Saturday",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment could not be delivered as the business was closed on Saturday.",
+		"rdf:value": "353"
+	}, {
+		"@id": "rec24:Delivery_not_completed_business_closed_on_national_holiday",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment could not be delivered as the business was closed on a national holiday.",
+		"rdf:value": "354"
+	}, {
+		"@id": "rec24:En_route_via_local_route",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport is moving to destination via a local route.",
+		"rdf:value": "355"
+	}, {
+		"@id": "rec24:En_route_via_national_route",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport is moving to destination via a national route.",
+		"rdf:value": "356"
+	}, {
+		"@id": "rec24:En_route_via_international_route",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport is moving to destination via an international route.",
+		"rdf:value": "357"
+	}, {
+		"@id": "rec24:Transport_terminated_mail_not_received",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The transport of the goods/consignment/equipment/means of transport has been terminated and the mail has not been received.",
+		"rdf:value": "358"
+	}, {
+		"@id": "rec24:Bill_of_Lading_issued",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The Bill of Lading for the goods/consignment/equipment has been issued.",
+		"rdf:value": "359"
+	}, {
+		"@id": "rec24:Cleared_by_logistics_service_provider",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has been cleared by logistics service provider.",
+		"rdf:value": "360"
+	}, {
+		"@id": "rec24:Delivery_expected",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment expected to be delivered.",
+		"rdf:value": "361"
+	}, {
+		"@id": "rec24:Measured",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has been measured.",
+		"rdf:value": "362"
+	}, {
+		"@id": "rec24:Loading_ready",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment is ready to be loaded onto a means of transport.",
+		"rdf:value": "363"
+	}, {
+		"@id": "rec24:Arrival_at_yard",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has arrived at the yard.",
+		"rdf:value": "364"
+	}, {
+		"@id": "rec24:Departure_from_yard",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has departed from the yard.",
+		"rdf:value": "365"
+	}, {
+		"@id": "rec24:Accepted_at_interchange_point",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment/equipment/means of transport has been accepted at the interchange point.",
+		"rdf:value": "366"
+	}, {
+		"@id": "rec24:Alerted_no_action_taken",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "No action taken after an alert in relation to the goods/consignment/equipment/means of transport.",
+		"rdf:value": "367"
+	}, {
+		"@id": "rec24:Transshipment_to_another_wagon",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The goods/consignment has been transhipped to another wagon.",
+		"rdf:value": "368"
+	}, {
+		"@id": "rec24:Trip_plan_revised_manually",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The transport route has been re-programmed manually.",
+		"rdf:value": "369"
+	}, {
+		"@id": "rec24:Special_wagon_handling_arranged",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The handling of a special wagon has been arranged.",
+		"rdf:value": "370"
+	}, {
+		"@id": "rec24:Equipment_emptied",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment has been emptied.",
+		"rdf:value": "371"
+	}, {
+		"@id": "rec24:Equipment_loaded",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment has been loaded.",
+		"rdf:value": "372"
+	}, {
+		"@id": "rec24:Equipment_held_by_transport_operator",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment has been held by the transport operator.",
+		"rdf:value": "373"
+	}, {
+		"@id": "rec24:Equipment_held_by_terminal_operator",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment has been held by the terminal operator.",
+		"rdf:value": "374"
+	}, {
+		"@id": "rec24:Equipment_storage_period_at_terminal",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "exceeded\tThe equipment storage period at a transport terminal has been exceeded. ",
+		"rdf:value": "375"
+	}, {
+		"@id": "rec24:Equipment_held_by_equipment_operator",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment has been held by the equipment operator.",
+		"rdf:value": "376"
+	}, {
+		"@id": "rec24:Equipment_not_released_by_equipment_operator",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The equipment has not been released by the equipment operator.",
+		"rdf:value": "377"
+	}, {
+		"@id": "rec24:Delivery_Order_Issued",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "Delivery Order for the goods/consignment/equipment/means has been issued.",
+		"rdf:value": "378"
+	}, {
+		"@id": "rec24:Cleared_for_container_release",
+		"@type": "edi3:UNECERec21Code",
+		"rdfs:comment": "The procedures of containers’ release from container yard have been cleared by all authorities and private sectors.",
+		"rdf:value": "379"
+	}]
+}
