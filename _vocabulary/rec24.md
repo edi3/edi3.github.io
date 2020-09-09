@@ -1,6 +1,6 @@
 ---
 title: "Rec 24 JSON-LD Vocabulary"
-name: Rec 24 Package Types
+name: Rec 24 Transport Status
 description: 
 jsonid: "rec24"
 layout: vocabulary
