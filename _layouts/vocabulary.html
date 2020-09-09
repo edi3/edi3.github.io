@@ -11,45 +11,75 @@ layout: compress
 <div class="main-wrapper">
     <div class="main-content">
         <div class="page-sidebar vocabulary-sidebar">
-            {% for vocabulary_item in site.vocabulary%}
-                <div class="collapsible menu-header"><span class="menu-text">{{ vocabulary_item.name }}</span></div>
-                <div class="vocabulary-submenu" style="display: none;">
-                    <div class="collapsible menu-subheader"><span class="menu-text">Classes</span></div>
-                    {% assign vocab = site.data[vocabulary_item.jsonid] %}
-                    {% assign graphItems = vocab["@graph"] %}
-                    <ul class="collapsible-content sidebar-menu" style="display: none;">
-                        {% for graphItem in graphItems %}
-                        {% if graphItem["@type"] == "rdfs:Class" %}
+            <div class="sidebar-menu-section">
+                <div class="sidebar-section-title">Data Models</div>
+                {% for vocabulary_item in site.vocabulary%}
+                    {% if vocabulary_item.type == "data-model" %}
+                        <div class="collapsible menu-header"><span class="menu-text">{{ vocabulary_item.name }}</span></div>
+                        <div class="vocabulary-submenu" style="display: none;">
+                            <div class="collapsible menu-subheader"><span class="menu-text">Classes</span></div>
+                            {% assign vocab = site.data[vocabulary_item.jsonid] %}
+                            {% assign graphItems = vocab["@graph"] %}
+                            <ul class="collapsible-content sidebar-menu" style="display: none;">
+                                {% for graphItem in graphItems %}
+                                {% if graphItem["@type"] == "rdfs:Class" %}
+                                <li>
+                                    <a title='{{ graphItem["@id"] | replace_first: "edi3:", "" }}' href='{{ vocabulary_item.url }}#{{ graphItem["@id"] | replace_first: "edi3:", "" }}'>{{ graphItem["@id"] | replace_first: "edi3:", "" | truncate: 25, "..." }}</a>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                            </ul>
+                            <div class="collapsible menu-subheader"><span class="menu-text">Properties</span></div>
+                            <ul class="collapsible-content sidebar-menu" style="display: none;">
+                                {% for graphItem in graphItems %}
+                                {% if graphItem["@type"] == "rdfs:Property" %}
+                                <li>
+                                    <a title='{{ graphItem["@id"] | replace_first: "edi3:", "" }}' href='{{ vocabulary_item.url }}#{{ graphItem["@id"]  | replace_first: "edi3:", "" }}'>{{ graphItem["@id"] | replace_first: "edi3:", "" | truncate: 25, "..." }}</a>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="sidebar-menu-section">
+                <div class="sidebar-section-title">Code Lists</div>
+                <ul class="sidebar-menu">
+                {% for vocabulary_item in site.vocabulary%}
+                    {% if vocabulary_item.type == "code-list" %}
                         <li>
-                            <a title='{{ graphItem["@id"] | replace_first: "edi3:", "" }}' href='#{{ graphItem["@id"] | replace_first: "edi3:", "" }}'>{{ graphItem["@id"] | replace_first: "edi3:", "" | truncate: 25, "..." }}</a>
+                            <a title='{{ vocabulary_item.name }}' href='{{vocabulary_item.url}}'>{{ vocabulary_item.name }}</a>
                         </li>
-                        {% endif %}
-                        {% endfor %}
-                    </ul>
-                    <div class="collapsible menu-subheader"><span class="menu-text">Properties</span></div>
-                    <ul class="collapsible-content sidebar-menu" style="display: none;">
-                        {% for graphItem in graphItems %}
-                        {% if graphItem["@type"] == "rdfs:Property" %}
-                        <li>
-                            <a title='{{ graphItem["@id"] | replace_first: "edi3:", "" }}' href='#{{ graphItem["@id"]  | replace_first: "edi3:", "" }}'>{{ graphItem["@id"] | replace_first: "edi3:", "" | truncate: 25, "..." }}</a>
-                        </li>
-                        {% endif %}
-                        {% endfor %}
-                    </ul>
-                </div>
-            {% endfor %}
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
         </div>
         <div class="page-content vocabulary-content">
             {% assign vocab = site.data[page.jsonid] %}
             {% assign graphItems = vocab["@graph"] %}
             {% for graphItem in graphItems %}
-                <div class="vocabulary-item-row" id="{{ graphItem["@id"] | replace_first: "edi3:", "" }}">
-                    <h2 id="{{ graphItem["@id"] | replace_first: "edi3:", "" }}">{{ graphItem["@id"] | replace_first: "edi3:", "" }}</h2>
+                {% if page.type == "code-list" %}
+                    {% assign anchorId = graphItem["@id"] | replace_first: page.jsonid, "" | replace_first: ":", "" %}
+                {% else %}
+                    {% assign anchorId = graphItem["@id"] | replace_first: "edi3:", ""  %}
+                {% endif %}
+
+                <div class="vocabulary-item-row">
+                    <h2 id="{{ anchorId }}">{{ anchorId }}</h2>
                     <ul class="vocabulary-item-data">
                         <li><strong>@id:</strong> {{ graphItem["@id"] }}
                         <li><strong>@type:</strong> {{ graphItem["@type"] }}</li>
                         {% if graphItem["rdfs:range"] %}
-                            <li><strong>Range:</strong> {{ graphItem["rdfs:range"] }}</li>
+                            <li><strong>Range:</strong>
+                                {% assign rangePrefix = graphItem["rdfs:range"] | slice: 0, 4 %}
+                                {% if rangePrefix == "edi3" %}
+                                    <a href="#{{ graphItem["rdfs:range"] | replace_first: "edi3:", "" }}">{{ graphItem["rdfs:range"] }}</a>
+                                {% else %}
+                                    {{ graphItem["rdfs:range"] }}
+                                {% endif %}
+                            </li>
                         {% endif %}
                         {% if graphItem["rdfs:domain"] %}
                             <li>
@@ -62,11 +92,26 @@ layout: compress
                                 {% endif %}
                             </li>
                         {% endif %}
+                        {% if page.type == "code-list" %}
+                            {% if graphItem["rdfs:comment"] != "" %}
+                            <li><strong>rdfs:comment:</strong> {{ graphItem["rdfs:comment"] }}</li>
+                            {% endif %}
+                            {% if graphItem["rdf:value"] %}
+                            <li><strong>rdf:value:</strong> {{ graphItem["rdf:value"] }}</li>
+                            {% endif %}
+                            {% for option in page.options  %}
+                                {% if graphItem[option] %}
+                                <li><strong>{{option}}:</strong> {{ graphItem[option] }}</li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
                     </ul>
+                    {% assign cefactElementMetadata = graphItem["edi3:cefactElementMetadata"] %}
+                    {% if cefactElementMetadata %}
                     <div class="vocabulary-item-card">
                         <h3 class="collapsible" id="{{ graphItem["@id"] | replace_first: "edi3:", "" }}-cefact-data">CEFACT Element Data</h3>
                         <div class="collapsible-content" style="display: none;">
-                        {% for cefactElementMetadata in graphItem["edi3:cefactElementMetadata"] %}
+                        {% for cefactElementMetadata in cefactElementMetadata %}
                         <table>
                             <tbody>
                                 <tr>
@@ -100,6 +145,7 @@ layout: compress
                         {% endfor %}
                         </div>
                     </div>
+                    {% endif %}
                     {% assign currentClass = graphItem %}
                     {% assign item_ranges = "" %}
                     {% assign item_ranges = "" | split: ',' %}
