@@ -1,0 +1,87 @@
+{
+    "@context": {
+        "edi3": "https://edi3.org/vocabulary#",
+        "locode": "https://unece.org/codelists/locode#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@graph": [
+        {
+            "@id": "locode:ADALV",
+            "@type": "edi3:UNECELOCODE",
+            "rdfs:comment": "Andorra la Vella",
+            "edi3:country": "AD",
+            "rdf:value": "ADALV"
+        },
+        {
+            "@id": "locode:ADCAN",
+            "@type": "edi3:UNECELOCODE",
+            "rdfs:comment": "Canillo",
+            "edi3:country": "AD",
+            "rdf:value": "ADCAN"
+        },
+        {
+            "@id": "locode:ADENC",
+            "@type": "edi3:UNECELOCODE",
+            "rdfs:comment": "Encamp",
+            "edi3:country": "AD",
+            "rdf:value": "ADENC"
+        },
+        {
+            "@id": "locode:ADESC",
+            "@type": "edi3:UNECELOCODE",
+            "rdfs:comment": "Escaldes-Engordany",
+            "edi3:country": "AD",
+            "rdf:value": "ADESC"
+        },
+        {
+            "@id": "locode:ADEAC",
+            "@type": "edi3:UNECELOCODE",
+            "rdfs:comment": "Esc�s",
+            "edi3:country": "AD",
+            "rdf:value": "ADEAC"
+        },
+        {
+            "@id": "locode:ADFMO",
+            "@type": "edi3:UNECELOCODE",
+            "rdfs:comment": "La Farga de Moles",
+            "edi3:country": "AD",
+            "rdf:value": "ADFMO"
+        },
+        {
+            "@id": "locode:ADLMA",
+            "@type": "edi3:UNECELOCODE",
+            "rdfs:comment": "La Massana",
+            "edi3:country": "AD",
+            "rdf:value": "ADLMA"
+        },
+        {
+            "@id": "locode:ADORD",
+            "@type": "edi3:UNECELOCODE",
+            "rdfs:comment": "Ordino",
+            "edi3:country": "AD",
+            "rdf:value": "ADORD"
+        },
+        {
+            "@id": "locode:ADPAS",
+            "@type": "edi3:UNECELOCODE",
+            "rdfs:comment": "Pas de la Casa",
+            "edi3:country": "AD",
+            "rdf:value": "ADPAS"
+        },
+        {
+            "@id": "locode:ADSJL",
+            "@type": "edi3:UNECELOCODE",
+            "rdfs:comment": "Sant Juli� de L�ria",
+            "edi3:country": "AD",
+            "rdf:value": "ADSJL"
+        },
+        {
+            "@id": "locode:ADSCO",
+            "@type": "edi3:UNECELOCODE",
+            "rdfs:comment": "Santa Coloma",
+            "edi3:country": "AD",
+            "rdf:value": "ADSCO"
+        }
+    ]
+}
