@@ -10,11 +10,7 @@
 		"@type": "edi3:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "1A",
-		"edi3:numericCode": "34",
-		"edi3:numericCode1": "numericCode1",
-		"edi3:numeric": "numeric",
-		"edi3:code": "code",
-		"edi3:bla": "bla"
+		"edi3:numericCode": "34"
 	}, {
 		"@id": "rec21:Drum_aluminium",
 		"@type": "edi3:UNECERec21Code",
