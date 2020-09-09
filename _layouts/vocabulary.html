@@ -45,12 +45,18 @@ layout: compress
             </div>
             <div class="sidebar-menu-section">
                 <div class="sidebar-section-title">Code Lists</div>
-                <ul class="sidebar-menu">
                 {% for vocabulary_item in site.vocabulary%}
                     {% if vocabulary_item.type == "code-list" %}
-                        <li>
-                            <a title='{{ vocabulary_item.name }}' href='{{vocabulary_item.url}}'>{{ vocabulary_item.name }}</a>
-                        </li>
+                        <div class="collapsible menu-subheader"><span class="menu-text">{{ vocabulary_item.name }}</span></div>
+                        <ul class="collapsible-content sidebar-menu" style="display: none;">
+                            {% assign vocab = site.data[vocabulary_item.jsonid] %}
+                            {% assign codeListItems = vocab["@graph"] %}
+                            {% for codeListItem in codeListItems %}
+                                <li>
+                                    <a title='{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}' href='{{ vocabulary_item.url }}#{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}'>{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" | truncate: 25, "..." }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
                     {% endif %}
                 {% endfor %}
                 </ul>
