@@ -61,6 +61,24 @@ layout: compress
                 {% endfor %}
                 </ul>
             </div>
+            <div class="sidebar-menu-section">
+                <div class="sidebar-section-title">Locodes</div>
+                {% for vocabulary_item in site.vocabulary%}
+                    {% if vocabulary_item.type == "locode" %}
+                        <div class="collapsible menu-subheader"><span class="menu-text">{{ vocabulary_item.name }}</span></div>
+                        <ul class="collapsible-content sidebar-menu" style="display: none;">
+                            {% assign vocab = site.data[vocabulary_item.jsonid] %}
+                            {% assign locodesItems = vocab["@graph"] %}
+                            {% for locodeItem in locodesItems %}
+                                <li>
+                                    <a title='{{ locodeItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}' href='{{ vocabulary_item.url }}#{{ locodeItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}'>{{ locodeItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" | truncate: 25, "..." }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
         </div>
         <div class="page-content vocabulary-content">
             {% assign vocab = site.data[page.jsonid] %}
@@ -68,11 +86,16 @@ layout: compress
             {% for graphItem in graphItems %}
                 {% if page.type == "code-list" %}
                     {% assign anchorId = graphItem["@id"] | replace_first: page.jsonid, "" | replace_first: ":", "" %}
+                {% elsif page.type == "locode" %}
+                    {% assign anchorId = graphItem["@id"] | replace_first: page.jsonid, "" | replace_first: ":", "" %}
                 {% else %}
                     {% assign anchorId = graphItem["@id"] | replace_first: "edi3:", ""  %}
                 {% endif %}
+                {% assign currentClass = graphItem %}
+                {% assign cefactElementMetadata = graphItem["edi3:cefactElementMetadata"] %}
 
-                <div class="vocabulary-item-row">
+
+                <div class="vocabulary-item-row" id="{{ anchorId | downcase }}-row">
                     <h2 id="{{ anchorId }}">{{ anchorId }}</h2>
                     <ul class="vocabulary-item-data">
                         <li><strong>@id:</strong> {{ graphItem["@id"] }}
@@ -112,68 +135,6 @@ layout: compress
                             {% endfor %}
                         {% endif %}
                     </ul>
-                    {% assign cefactElementMetadata = graphItem["edi3:cefactElementMetadata"] %}
-                    {% if cefactElementMetadata %}
-                    <div class="vocabulary-item-card">
-                        <h3 class="collapsible" id="{{ graphItem["@id"] | replace_first: "edi3:", "" }}-cefact-data">CEFACT Element Data</h3>
-                        <div class="collapsible-content" style="display: none;">
-                        {% for cefactElementMetadata in cefactElementMetadata %}
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <th>@id</th>
-                                    <td>{{cefactElementMetadata["@id"]}}</td>
-                                </tr>
-                                <tr>
-                                    <th>@type</th>
-                                    <td>{{cefactElementMetadata["@type"]}}</td>
-                                </tr>
-                                <tr>
-                                    <th>edi3:cefactUNId</th>
-                                    <td>{{cefactElementMetadata["edi3:cefactUNId"]}}</td>
-                                </tr>
-                                <tr>
-                                    <th>rdfs:comment</th>
-                                    <td><p>{{cefactElementMetadata["rdfs:comment"]}}</p></td>
-                                </tr>
-                                {% if cefactElementMetadata["edi3:cefactBieDomainClass"] %}
-                                <tr>
-                                    <th>edi3:cefactBieDomainClass</th>
-                                    <td>{{cefactElementMetadata["edi3:cefactBieDomainClass"]}}</td>
-                                </tr>
-                                {% endif %}
-                                <tr>
-                                    <th>edi3:cefactBusinessProcess</th>
-                                    <td>{{cefactElementMetadata["edi3:cefactBusinessProcess"]}}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        {% endfor %}
-                        </div>
-                    </div>
-                    {% endif %}
-                    {% assign currentClass = graphItem %}
-                    {% assign item_ranges = "" %}
-                    {% assign item_ranges = "" | split: ',' %}
-                    {% for graphItem in graphItems %}
-                        {% if graphItem["@type"] == "rdfs:Property" %}
-                            {% if currentClass["@id"] contains graphItem["rdfs:range"] %}
-                                {% assign item_ranges = item_ranges | push: graphItem %}
-                            {% endif %}
-                        {% endif %}
-                    {% endfor %}
-
-                    {% if item_ranges.first %}
-                        <div class="vocabulary-item-card">
-                            <h3 class="collapsible" id="{{ graphItem["@id"] | replace_first: "edi3:", "" }}-ranges">Range for</h3>
-                            <div class="collapsible-content" style="display: none;">
-                            {% for item_range in item_ranges %}
-                                <a href="#{{ item_range["@id"] | replace_first: "edi3:", "" }}">{{ item_range["@id"] | replace_first: "edi3:", "" }}</a>{% if forloop.last == false %}, {% endif %}
-                            {% endfor %}
-                            </div>
-                        </div>
-                    {% endif %}
-
 
                     {% assign item_properties = "" %}
                     {% assign item_properties = "" | split: ',' %}
@@ -191,22 +152,57 @@ layout: compress
                         <div class="vocabulary-item-card">
                             <h3 class="collapsible" id="{{ graphItem["@id"] | replace_first: "edi3:", "" }}-properies">Properties</h3>
                             <div class="collapsible-content" style="display: none;">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Type</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                {% for property in item_properties%}
-                                    <tr>
-                                        <th><a href="#{{ property["@id"] | replace_first: "edi3:", "" }}">{{property["@id"] | replace_first: "edi3:", ""}}</a></th>
-                                        <td>{{property["rdfs:range"]}}</td>
-                                    </tr>
-                                {% endfor %}
-                                </tbody>
-                            </table>
+                                {% if graphItem["@type"] == "rdfs:Class" %}
+                                    {% if cefactElementMetadata %}
+                                        <div class="vocabulary-item-filter">
+                                            <strong>Show properties for:</strong>
+                                            <select name="{{anchorId}}_context" id='{{ anchorId | downcase | append: "_filter" }}'>
+                                                <option value="all">All contexts</option>
+                                                {% for cefactElementMetadata in cefactElementMetadata %}
+                                                    <option value='{{cefactElementMetadata["@id"] | slugify }}'>{{cefactElementMetadata["@id"] | replace_first: "cefact:", ""}}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <script>
+                                            const {{ anchorId | downcase | append: "_row" }} = document.getElementById('{{ anchorId | lowercase | prepend: "#" | append: "-row" }}');
+                                            const {{ anchorId | downcase | append: "_filter" }} = document.querySelector('{{ anchorId | downcase | prepend: "#" | append: "_filter" }}');
+                                            {{ anchorId | downcase | append: "_filter" }}.addEventListener('change', function (event) {
+                                                let allProperties = document.querySelectorAll('{{ anchorId | downcase | prepend: "#" | append: "_table" }} [data-context]');
+                                                let activeProperties = document.querySelectorAll('{{ anchorId | downcase | prepend: "#" | append: "_table" }} [data-context="' + event.target.value +'"]');
+
+                                                for (i = 0; i < allProperties.length; ++i) {
+                                                    allProperties[i].style.display = "none";
+                                                };
+
+                                                for (i = 0; i < activeProperties.length; ++i) {
+                                                    activeProperties[i].style.display = "";
+                                                };
+                                            });
+                                        </script>
+                                    {% endif %}
+                                {% endif %}
+                                <table id='{{ anchorId | downcase | append: "_table" }}' class="vocabulary-item-properties">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                        </tr>
+                                    </thead>
+                                    {% for property in item_properties%}
+                                    <tbody>
+                                        <tr data-context="all">
+                                            <th><a href="#{{ property["@id"] | replace_first: "edi3:", "" }}">{{property["@id"] | replace_first: "edi3:", ""}}</a></th>
+                                            <td>{{property["rdfs:range"]}}</td>
+                                        </tr>
+                                        {% for propertyCefactElement in property["edi3:cefactElementMetadata"] %}
+                                        <tr data-context="{{ propertyCefactElement["edi3:cefactBieDomainClass"] | slugify }}" style="display: none;">
+                                            <th><a href="#{{ property["@id"] | replace_first: "edi3:", "" }}">{{property["@id"] | replace_first: "edi3:", ""}}</a></th>
+                                            <td>{{property["rdfs:range"]}}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                    {% endfor %}
+                                </table>
                             </div>
                         </div>
                     {% endif %}
@@ -227,22 +223,118 @@ layout: compress
                         <div class="vocabulary-item-card">
                             <h3 class="collapsible" id="{{ graphItem["@id"] | replace_first: "edi3:", "" }}-relationships">Relationships</h3>
                             <div class="collapsible-content" style="display: none;">
-                                <table>
+                                {% if graphItem["@type"] == "rdfs:Class" %}
+                                    {% if cefactElementMetadata %}
+                                        <div class="vocabulary-item-filter">
+                                            <strong>Show relationships for:</strong>
+                                            <select name="{{anchorId}}_context" id='{{ anchorId | downcase | append: "_relationship_filter" }}'>
+                                                <option value="all">All contexts</option>
+                                                {% for cefactElementMetadata in cefactElementMetadata %}
+                                                    <option value='{{cefactElementMetadata["@id"] | slugify }}'>{{cefactElementMetadata["@id"] | replace_first: "cefact:", ""}}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <script>
+                                            const {{ anchorId | downcase | append: "_relationship_filter" }} = document.querySelector('{{ anchorId | downcase | prepend: "#" | append: "_relationship_filter" }}');
+                                            {{ anchorId | downcase | append: "_relationship_filter" }}.addEventListener('change', function (event) {
+                                                let allProperties = document.querySelectorAll('{{ anchorId | downcase | prepend: "#" | append: "_relationship_table" }} [data-context]');
+                                                let activeProperties = document.querySelectorAll('{{ anchorId | downcase | prepend: "#" | append: "_relationship_table" }} [data-context="' + event.target.value +'_rs"]');
+
+                                                for (i = 0; i < allProperties.length; ++i) {
+                                                    allProperties[i].style.display = "none";
+                                                };
+
+                                                for (i = 0; i < activeProperties.length; ++i) {
+                                                    activeProperties[i].style.display = "";
+                                                };
+                                            });
+                                        </script>
+                                    {% endif %}
+                                {% endif %}
+
+                                <table id='{{ anchorId | downcase | append: "_relationship_table" }}' class="vocabulary-item-properties">
                                     <thead>
                                         <tr>
                                             <th>Name</th>
                                             <th>Type</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        {% for relationship in item_relationships%}
-                                            <tr>
+                                    {% for relationship in item_relationships%}
+                                        <tbody>
+                                            <tr data-context="all_rs">
                                                 <th><a href="#{{ relationship["@id"] | replace_first: "edi3:", "" }}">{{relationship["@id"] | replace_first: "edi3:", ""}}</a></th>
-                                                <td><a href="#{{ relationship["rdfs:range"] | replace_first: "edi3:", "" }}">{{relationship["rdfs:range"]}}</td></td>
+                                                <td><a href="#{{ relationship["rdfs:range"] | replace_first: "edi3:", "" }}">{{relationship["rdfs:range"]}}</a></td>
                                             </tr>
-                                        {% endfor %}
-                                    </tbody>
+                                            {% for relationshipCefactElement in relationship["edi3:cefactElementMetadata"] %}
+                                            <tr data-context="{{ relationshipCefactElement["edi3:cefactBieDomainClass"] | slugify | append: "_rs" }}" style="display: none;">
+                                                <th><a href="#{{ relationship["@id"] | replace_first: "edi3:", "" }}">{{relationship["@id"] | replace_first: "edi3:", ""}}</a></th>
+                                                <td><a href="#{{ relationship["rdfs:range"] | replace_first: "edi3:", "" }}">{{relationship["rdfs:range"]}}</a></td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                   {% endfor %}
                                 </table>
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    {% assign item_ranges = "" %}
+                    {% assign item_ranges = "" | split: ',' %}
+                    {% for graphItem in graphItems %}
+                        {% if graphItem["@type"] == "rdfs:Property" %}
+                            {% if currentClass["@id"] contains graphItem["rdfs:range"] %}
+                                {% assign item_ranges = item_ranges | push: graphItem %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if item_ranges.first %}
+                        <div class="vocabulary-item-card">
+                            <h3 class="collapsible" id="{{ graphItem["@id"] | replace_first: "edi3:", "" }}-ranges">Referenced by</h3>
+                            <div class="collapsible-content" style="display: none;">
+                            {% for item_range in item_ranges %}
+                                <a href="#{{ item_range["@id"] | replace_first: "edi3:", "" }}">{{ item_range["@id"] | replace_first: "edi3:", "" }}</a>{% if forloop.last == false %}, {% endif %}
+                            {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    {% if cefactElementMetadata %}
+                        <div class="vocabulary-item-card">
+                            <h3 class="collapsible" id="{{ graphItem["@id"] | replace_first: "edi3:", "" }}-cefact-data">CEFACT Element Data</h3>
+                            <div class="collapsible-content" style="display: none;">
+                            {% for cefactElementMetadata in cefactElementMetadata %}
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>@id</th>
+                                        <td>{{cefactElementMetadata["@id"]}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>@type</th>
+                                        <td>{{cefactElementMetadata["@type"]}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>edi3:cefactUNId</th>
+                                        <td>{{cefactElementMetadata["edi3:cefactUNId"]}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>rdfs:comment</th>
+                                        <td><p>{{cefactElementMetadata["rdfs:comment"]}}</p></td>
+                                    </tr>
+                                    {% if cefactElementMetadata["edi3:cefactBieDomainClass"] %}
+                                    <tr>
+                                        <th>edi3:cefactBieDomainClass</th>
+                                        <td>{{cefactElementMetadata["edi3:cefactBieDomainClass"]}}</td>
+                                    </tr>
+                                    {% endif %}
+                                    <tr>
+                                        <th>edi3:cefactBusinessProcess</th>
+                                        <td>{{cefactElementMetadata["edi3:cefactBusinessProcess"]}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            {% endfor %}
                             </div>
                         </div>
                     {% endif %}
