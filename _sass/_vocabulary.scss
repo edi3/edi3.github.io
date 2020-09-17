@@ -142,6 +142,28 @@
     margin: 10px 0;
 }
 
+.vocabulary-item-filter{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin: 0 0 10px 0;
+
+    select{
+        margin: 0 0 0 5px;
+    }
+}
+
+.page-content .vocabulary-item-properties{
+
+    tr:nth-child(2n){
+        background: transparent;
+    }
+
+    tbody:nth-child(2n) tr{
+        background-color: #f8f8f8;
+    }
+}
+
 
 #scroll-to-top{
     position: fixed;
