@@ -105,6 +105,8 @@ layout: compress
             {% for graphItem in graphItems %}
                 {% if page.type == "code-list" %}
                     {% assign anchorId = graphItem["@id"] | replace_first: page.jsonid, "" | replace_first: ":", "" %}
+                {% elsif page.type == "uncl" %}
+                    {% assign anchorId = graphItem["@id"] | replace_first: page.jsonid, "" | replace_first: ":", "" %}
                 {% elsif page.type == "locode" %}
                     {% assign anchorId = graphItem["@id"] | replace_first: page.jsonid, "" | replace_first: ":", "" %}
                 {% else %}
@@ -141,6 +143,19 @@ layout: compress
                             </li>
                         {% endif %}
                         {% if page.type == "code-list" %}
+                            {% if graphItem["rdfs:comment"] != "" %}
+                            <li><strong>rdfs:comment:</strong> {{ graphItem["rdfs:comment"] }}</li>
+                            {% endif %}
+                            {% if graphItem["rdf:value"] %}
+                            <li><strong>rdf:value:</strong> {{ graphItem["rdf:value"] }}</li>
+                            {% endif %}
+                            {% for option in page.options  %}
+                                {% if graphItem[option] %}
+                                <li><strong>{{option}}:</strong> {{ graphItem[option] }}</li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                        {% if page.type == "uncl" %}
                             {% if graphItem["rdfs:comment"] != "" %}
                             <li><strong>rdfs:comment:</strong> {{ graphItem["rdfs:comment"] }}</li>
                             {% endif %}
