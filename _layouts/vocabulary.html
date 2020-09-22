@@ -176,7 +176,7 @@ layout: compress
                         {% if graphItem["@type"] == "rdfs:Property" %}
                             {% assign range = graphItem["schema:rangeIncludes"] | slice: 0, 4 %}
                             {% if range == "xsd:" %}
-                                {% if currentClass["@id"] contains graphItem["schema:domainIncludes"] %}
+                                {% if currentClass["@id"] contains graphItem["schema:domainIncludes"] or graphItem["schema:domainIncludes"] contains currentClass["@id"] %}
                                     {% assign item_properties = item_properties | push: graphItem %}
                                 {% endif %}
                             {% endif %}
@@ -247,7 +247,7 @@ layout: compress
                         {% if graphItem["@type"] == "rdfs:Property" %}
                             {% assign range = graphItem["schema:rangeIncludes"] | slice: 0, 4 %}
                             {% if range != "xsd:" %}
-                                {% if currentClass["@id"] contains graphItem["schema:domainIncludes"] %}
+                                {% if currentClass["@id"] contains graphItem["schema:domainIncludes"] or graphItem["schema:domainIncludes"] contains currentClass["@id"] %}
                                     {% assign item_relationships = item_relationships | push: graphItem %}
                                 {% endif %}
                             {% endif %}
