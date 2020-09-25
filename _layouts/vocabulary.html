@@ -155,6 +155,19 @@ layout: compress
                                 {% endif %}
                             {% endfor %}
                         {% endif %}
+                        {% if page.type == "locode" %}
+                            {% if graphItem["rdfs:comment"] != "" %}
+                            <li><strong>rdfs:comment:</strong> {{ graphItem["rdfs:comment"] }}</li>
+                            {% endif %}
+                            {% if graphItem["rdf:value"] %}
+                            <li><strong>rdf:value:</strong> {{ graphItem["rdf:value"] }}</li>
+                            {% endif %}
+                            {% for option in page.options  %}
+                                {% if graphItem[option] %}
+                                <li><strong>{{option}}:</strong> {{ graphItem[option] }}</li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
                         {% if page.type == "uncl" %}
                             {% if graphItem["rdfs:comment"] != "" %}
                             <li><strong>rdfs:comment:</strong> {{ graphItem["rdfs:comment"] }}</li>
