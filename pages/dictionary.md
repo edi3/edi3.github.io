@@ -13,7 +13,7 @@ The edi3 Dictionary Specifications are based on ...
 
 | Specification URL | Version | Status | API Definition | Issues List |
 | ----------------- | ------  | ------ | -------------- | ----------- |
-| [Vocabulary](//edi3.org/vocabulary/bsp) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) |  |  [Dictionary Issues](https://github.com/edi3/edi3-dictionary/issues){:target="_blank"}  |
+| [Vocabulary](//edi3.org/vocabulary/unece) | Working Draft | ![Raw](//rfc.unprotocols.org/spec:2/COSS/raw.svg) |  |  [Dictionary Issues](https://github.com/edi3/edi3-dictionary/issues){:target="_blank"}  |
 
 ## Known Implementations
 
