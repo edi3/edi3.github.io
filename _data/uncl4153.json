@@ -1,0 +1,1 @@
+{"@context":{"unece":"https://unece.org/vocab#","uncl4153":"https://unece.org/codelists/uncl4153#","rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#","rdfs":"http://www.w3.org/2000/01/rdf-schema#"},"@graph":[{"@id":"uncl4153:Business_information","@type":"unece:UNECECL4153Code","rdfs:comment":"Identifies information related to the business.","rdf:value":"1"}]}
