@@ -24,7 +24,7 @@ layout: compress
                                 {% for graphItem in graphItems %}
                                 {% if graphItem["@type"] == "rdfs:Class" %}
                                 <li>
-                                    <a title='{{ graphItem["@id"] | replace_first: "unece:", "" }}' href='{{ vocabulary_item.url }}#{{ graphItem["@id"] | replace_first: "unece:", "" }}'>{{ graphItem["@id"] | replace_first: "unece:", "" | truncate: 25, "..." }}</a>
+                                    <a title='{{ graphItem["@id"] | replace_first: "unece:", "" }}' href='{{ vocabulary_item.url | prepend: site.baseurl }}#{{ graphItem["@id"] | replace_first: "unece:", "" }}'>{{ graphItem["@id"] | replace_first: "unece:", "" | truncate: 25, "..." }}</a>
                                 </li>
                                 {% endif %}
                                 {% endfor %}
@@ -34,7 +34,7 @@ layout: compress
                                 {% for graphItem in graphItems %}
                                 {% if graphItem["@type"] == "rdfs:Property" %}
                                 <li>
-                                    <a title='{{ graphItem["@id"] | replace_first: "unece:", "" }}' href='{{ vocabulary_item.url }}#{{ graphItem["@id"]  | replace_first: "unece:", "" }}'>{{ graphItem["@id"] | replace_first: "unece:", "" | truncate: 25, "..." }}</a>
+                                    <a title='{{ graphItem["@id"] | replace_first: "unece:", "" }}' href='{{ vocabulary_item.url | prepend: site.baseurl }}#{{ graphItem["@id"]  | replace_first: "unece:", "" }}'>{{ graphItem["@id"] | replace_first: "unece:", "" | truncate: 25, "..." }}</a>
                                 </li>
                                 {% endif %}
                                 {% endfor %}
@@ -53,7 +53,7 @@ layout: compress
                             {% assign codeListItems = vocab["@graph"] %}
                             {% for codeListItem in codeListItems %}
                                 <li>
-                                    <a title='{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}' href='{{ vocabulary_item.url }}#{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}'>{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" | truncate: 25, "..." }}</a>
+                                    <a title='{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}' href='{{ vocabulary_item.url | prepend: site.baseurl }}#{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}'>{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" | truncate: 25, "..." }}</a>
                                 </li>
                             {% endfor %}
                         </ul>
@@ -89,7 +89,7 @@ layout: compress
                             {% assign codeListItems = vocab["@graph"] %}
                             {% for codeListItem in codeListItems %}
                                 <li>
-                                    <a title='{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}' href='{{ vocabulary_item.url }}#{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}'>{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" | truncate: 25, "..." }}</a>
+                                    <a title='{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}' href='{{ vocabulary_item.url  | prepend: site.baseurl}}#{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}'>{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" | truncate: 25, "..." }}</a>
                                 </li>
                             {% endfor %}
                         </ul>
