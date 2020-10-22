@@ -11,3 +11,7 @@ Thumbs.db
 # RubyMine artifacts
 .idea
 Gemfile.lock
+
+#vocabulary static generation outputs
+uncefact
+vocabulary.tar.gz
