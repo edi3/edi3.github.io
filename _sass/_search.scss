@@ -1,0 +1,59 @@
+.sidebar-search {
+  margin: 0 0 15px 0;
+}
+
+.search {
+  .page-title {
+    font-weight: 600;
+  }
+
+  &-form {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    &__input {
+      border: 1px solid $app-grey;
+      padding: 5px 10px;
+      height: 34px;
+    }
+
+    &__submit {
+      background: $app-grey;
+      border: 0;
+      border-radius: 5px;
+      display: block;
+      width: 43px;
+      height: 34px;
+      margin: 0 0 0 5px;
+
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+
+  &-results {
+    &__amount {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0 0 20px 0;
+      padding: 0 0 5px 0;
+      border-bottom: 1px solid $grey-color-light;
+    }
+
+    &__title {
+      font-size: 16px;
+
+      &-link {
+        color: $text-color;
+      }
+    }
+
+    &__row {
+      margin: 0 0 10px 0;
+      padding: 0 0 10px 0;
+      border-bottom: 1px solid $grey-color-light;
+    }
+  }
+}

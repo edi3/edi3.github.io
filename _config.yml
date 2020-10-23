@@ -27,6 +27,9 @@ defaults:
     values:
       layout: "vocabulary"
 
+plugins:
+  - jekyll-sitemap
+
 exclude:
   - .idea
   - .git
