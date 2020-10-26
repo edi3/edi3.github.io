@@ -1,162 +1,167 @@
-.header{
+.header {
   background: $app-red;
 
-  .logo{
+  .logo {
     float: left;
     color: #fff;
     font-weight: 700;
     text-decoration: none;
     font-size: 29px;
 
-    span{
+    span {
       display: inline-block;
       vertical-align: middle;
       padding: 0 0 0 8px;
     }
 
-    img{
+    img {
       max-height: 45px;
       vertical-align: middle;
     }
   }
 
-  .header-line{
+  .header-line {
     padding: 16px 0 24px 0;
 
-    &:after{
+    &:after {
       display: table;
       clear: both;
       content: '';
     }
   }
 
-  .header-menu{
+  .header-menu {
     float: right;
     list-style: none;
     padding: 0;
     margin: 10px 0 0 0;
 
-    li{
+    li {
       float: left;
     }
 
-    a{
+    a {
       display: block;
       text-decoration: none;
       color: #fff;
       font-size: 16px;
       padding: 5px 15px;
 
-      @media screen and (max-width: 960px){
+      @media screen and (max-width: 960px) {
         padding: 5px 8px;
       }
 
-      &:hover, &.active{
+      &:hover, &.active {
         background: $app-grey;
       }
     }
 
   }
 
-  .header-search{
+  .header-search {
     float: right;
     padding: 0;
     margin: 15px 0 0 0;
     width: 250px;
     height: 27px;
 
-    @media screen and (max-width: 640px){
+    @media screen and (max-width: 640px) {
       display: block;
       width: 100%;
       float: none;
       margin-top: 20px;
     }
 
-    .gsc-control-cse{
+    .gsc-control-cse {
       background: none;
       border: 0;
       padding: 0;
     }
 
-    form.gsc-search-box{
+    form.gsc-search-box {
       margin: 0;
     }
 
-    .gsc-search-button{
-      background: #313e48 url("https://www.google.com/uds/css/v2/search_box_icon.png") no-repeat 50% 50%;
+    button.gsc-search-button {
+      background: #313e48;
       border: 0;
       border-radius: 5px;
       display: block;
-      width: 33px;
+      width: 43px;
       height: 25px;
       margin-top: 0;
 
-      svg{
-        display: none;
+      &.gsc-search-button-v2 {
+        padding: 6px 10px;
       }
 
-      &:hover{
+      svg {
+        //display: none;
+      }
+
+      &:hover {
         background-color: #939393;
       }
     }
 
-    .gsib_a{
+    .gsib_a {
       padding: 4px 5px 2px 5px;
     }
-    .gsib_b{
+
+    .gsib_b {
       padding: 0;
     }
 
-    .gsst_a{
+    .gsst_a {
       padding-top: 7px;
     }
 
-    input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus{
+    input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
       border: 0;
       padding: 0;
     }
   }
 
-  .header-content{
+  .header-content {
     background: $app-grey;
     text-align: center;
     color: #fff;
     font-size: 18px;
     padding: 60px 0;
 
-    .img{
+    .img {
       display: inline-block;
       vertical-align: top;
     }
 
-    .header-text-box{
+    .header-text-box {
       display: inline-block;
       vertical-align: top;
     }
 
-    .header-name{
+    .header-name {
       font-weight: 700;
       font-size: 40px;
       margin: 0 0 12px 0;
     }
 
-    .header-tagline{
-      a{
+    .header-tagline {
+      a {
         color: $app-red;
       }
     }
 
   }
 
-  .mobile-menu{
+  .mobile-menu {
     display: inline-block;
   }
 
-  .hamburger-menu{
+  .hamburger-menu {
     display: none;
   }
 
-  #mobile-menu{
+  #mobile-menu {
     position: absolute;
     z-index: 2;
     left: 0;
@@ -216,69 +221,68 @@
     }
   }
 
-  @media (max-width: 767px){
-    .hamburger-menu{
+  @media (max-width: 767px) {
+    .hamburger-menu {
       display: inline-block;
       vertical-align: middle;
     }
 
-    .logo{
+    .logo {
       float: none;
       font-size: 20px;
       line-height: 24px;
       vertical-align: top;
 
-      img{
+      img {
         max-height: 40px;
       }
 
     }
 
-    .header-menu{
+    .header-menu {
       display: none;
     }
 
-    .mobile-menu{
+    .mobile-menu {
       margin-right: 15px;
 
-      .sidebar-menu, .header-menu{
+      .sidebar-menu, .header-menu {
         display: block;
         list-style: none;
         margin: 0;
 
-        li{
+        li {
           display: block;
           float: none;
 
 
-          &.menu-title{
+          &.menu-title {
             padding: 0;
             color: #fff;
             font-weight: 600;
             font-size: 16px;
 
-            a{
+            a {
               padding: 6px 19px 8px 15px;
             }
           }
 
         }
 
-        a{
+        a {
           display: block;
           padding: 6px 20px 6px 25px;
           color: #fff;
           font-size: 16px;
           text-decoration: none;
 
-          &.active{
+          &.active {
             font-weight: 600;
             background: #ee4901;
           }
         }
       }
     }
-
 
 
   }
