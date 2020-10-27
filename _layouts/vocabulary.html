@@ -14,97 +14,19 @@ layout: compress
             <div class="sidebar-search">
                 {% include search-form.html %}
             </div>
-            <div class="sidebar-menu-section">
-                <div class="sidebar-section-title">Data Models</div>
-                {% for vocabulary_item in site.vocabulary%}
-                    {% if vocabulary_item.type == "data-model" %}
-                        <div class="collapsible menu-header"><span class="menu-text">{{ vocabulary_item.name }}</span></div>
-                        <div class="vocabulary-submenu" style="display: none;">
-                            <div class="collapsible menu-subheader"><span class="menu-text">Classes</span></div>
-                            {% assign vocab = site.data[vocabulary_item.jsonid] %}
-                            {% assign graphItems = vocab["@graph"] %}
-                            <ul class="collapsible-content sidebar-menu" style="display: none;">
-                                {% for graphItem in graphItems %}
-                                {% if graphItem["@type"] == "rdfs:Class" %}
-                                <li>
-                                    <a title='{{ graphItem["@id"] | replace_first: "unece:", "" }}' href='{{ vocabulary_item.url }}#{{ graphItem["@id"] | replace_first: "unece:", "" }}'>{{ graphItem["@id"] | replace_first: "unece:", "" | truncate: 25, "..." }}</a>
-                                </li>
-                                {% endif %}
-                                {% endfor %}
-                            </ul>
-                            <div class="collapsible menu-subheader"><span class="menu-text">Properties</span></div>
-                            <ul class="collapsible-content sidebar-menu" style="display: none;">
-                                {% for graphItem in graphItems %}
-                                {% if graphItem["@type"] == "rdfs:Property" %}
-                                <li>
-                                    <a title='{{ graphItem["@id"] | replace_first: "unece:", "" }}' href='{{ vocabulary_item.url }}#{{ graphItem["@id"]  | replace_first: "unece:", "" }}'>{{ graphItem["@id"] | replace_first: "unece:", "" | truncate: 25, "..." }}</a>
-                                </li>
-                                {% endif %}
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-            <div class="sidebar-menu-section">
-                <div class="sidebar-section-title">Code Lists</div>
-                {% for vocabulary_item in site.vocabulary%}
-                    {% if vocabulary_item.type == "code-list" %}
-                        <div class="collapsible menu-subheader"><span class="menu-text">{{ vocabulary_item.name }}</span></div>
-                        <ul class="collapsible-content sidebar-menu" style="display: none;">
-                            {% assign vocab = site.data[vocabulary_item.jsonid] %}
-                            {% assign codeListItems = vocab["@graph"] %}
-                            {% for codeListItem in codeListItems %}
-                                <li>
-                                    <a title='{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}' href='{{ vocabulary_item.url }}#{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}'>{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" | truncate: 25, "..." }}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                {% endfor %}
-                </ul>
-            </div>
-            <div class="sidebar-menu-section">
-                <div class="sidebar-section-title">Locodes</div>
-                {% for vocabulary_item in site.vocabulary%}
-                    {% if vocabulary_item.type == "locode" %}
-                        <div class="collapsible menu-subheader"><span class="menu-text">{{ vocabulary_item.name }}</span></div>
-                        <ul class="collapsible-content sidebar-menu" style="display: none;">
-                            {% assign vocab = site.data[vocabulary_item.jsonid] %}
-                            {% assign locodesItems = vocab["@graph"] %}
-                            {% for locodeItem in locodesItems %}
-                                <li>
-                                    <a title='{{ locodeItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}' href='{{ vocabulary_item.url }}#{{ locodeItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}'>{{ locodeItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" | truncate: 25, "..." }}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                {% endfor %}
-                </ul>
-            </div>
-            <div class="sidebar-menu-section">
-                <div class="sidebar-section-title">UNCL</div>
-                {% for vocabulary_item in site.vocabulary%}
-                    {% if vocabulary_item.type == "uncl" %}
-                        <div class="collapsible menu-subheader"><span class="menu-text">{{ vocabulary_item.name }}</span></div>
-                        <ul class="collapsible-content sidebar-menu" style="display: none;">
-                            {% assign vocab = site.data[vocabulary_item.jsonid] %}
-                            {% assign codeListItems = vocab["@graph"] %}
-                            {% for codeListItem in codeListItems %}
-                                <li>
-                                    <a title='{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}' href='{{ vocabulary_item.url }}#{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}'>{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" | truncate: 25, "..." }}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                {% endfor %}
-                </ul>
-            </div>
+            {% include vocabulary-menu.html %}
 
         </div>
         <div class="page-content vocabulary-content">
             {% assign vocab = site.data[page.jsonid] %}
             {% assign graphItems = vocab["@graph"] %}
+            {% assign item_properties = "" %}
+            {% assign item_properties = "" | split: ',' %}
+            {% assign item_relationships = "" %}
+            {% assign item_relationships = "" | split: ',' %}
+            {% assign item_ranges = "" %}
+            {% assign item_ranges = "" | split: ',' %}
+
             {% for graphItem in graphItems %}
                 {% if page.type == "code-list" %}
                     {% assign anchorId = graphItem["@id"] | replace_first: page.jsonid, "" | replace_first: ":", "" %}
@@ -117,7 +39,6 @@ layout: compress
                 {% endif %}
                 {% assign currentClass = graphItem %}
                 {% assign cefactElementMetadata = graphItem["unece:cefactElementMetadata"] %}
-
 
                 <div class="vocabulary-item-row" id="{{ anchorId | downcase | slugify }}-row">
                     <h2 id="{{ anchorId | slugify }}">{{ anchorId }}</h2>
@@ -186,8 +107,6 @@ layout: compress
                         {% endif %}
                     </ul>
 
-                    {% assign item_properties = "" %}
-                    {% assign item_properties = "" | split: ',' %}
                     {% for graphItem in graphItems %}
                         {% if graphItem["@type"] == "rdfs:Property" %}
                             {% assign range = graphItem["schema:rangeIncludes"] | slice: 0, 4 %}
@@ -196,8 +115,17 @@ layout: compress
                                     {% assign item_properties = item_properties | push: graphItem %}
                                 {% endif %}
                             {% endif %}
+                            {% if range != "xsd:" %}
+                                {% if currentClass["@id"] contains graphItem["schema:domainIncludes"] or graphItem["schema:domainIncludes"] contains currentClass["@id"] %}
+                                    {% assign item_relationships = item_relationships | push: graphItem %}
+                                {% endif %}
+                            {% endif %}
+                            {% if currentClass["@id"] contains graphItem["schema:rangeIncludes"] %}
+                                {% assign item_ranges = item_ranges | push: graphItem %}
+                            {% endif %}
                         {% endif %}
                     {% endfor %}
+
                     {% if item_properties.first %}
                         <div class="vocabulary-item-card">
                             <h3 class="collapsible" id="{{ graphItem["@id"] | replace_first: "unece:", "" }}-properies">Properties</h3>
@@ -238,7 +166,7 @@ layout: compress
                                             <th>Type</th>
                                         </tr>
                                     </thead>
-                                    {% for property in item_properties%}
+                                    {% for property in item_properties %}
                                     <tbody>
                                         <tr data-context="all">
                                             <th><a href="#{{ property["@id"] | replace_first: "unece:", "" }}">{{property["@id"] | replace_first: "unece:", ""}}</a></th>
@@ -257,18 +185,6 @@ layout: compress
                         </div>
                     {% endif %}
 
-                    {% assign item_relationships = "" %}
-                    {% assign item_relationships = "" | split: ',' %}
-                    {% for graphItem in graphItems %}
-                        {% if graphItem["@type"] == "rdfs:Property" %}
-                            {% assign range = graphItem["schema:rangeIncludes"] | slice: 0, 4 %}
-                            {% if range != "xsd:" %}
-                                {% if currentClass["@id"] contains graphItem["schema:domainIncludes"] or graphItem["schema:domainIncludes"] contains currentClass["@id"] %}
-                                    {% assign item_relationships = item_relationships | push: graphItem %}
-                                {% endif %}
-                            {% endif %}
-                        {% endif %}
-                    {% endfor %}
                     {% if item_relationships.first %}
                         <div class="vocabulary-item-card">
                             <h3 class="collapsible" id="{{ graphItem["@id"] | replace_first: "unece:", "" }}-relationships">Relationships</h3>
@@ -327,16 +243,6 @@ layout: compress
                             </div>
                         </div>
                     {% endif %}
-
-                    {% assign item_ranges = "" %}
-                    {% assign item_ranges = "" | split: ',' %}
-                    {% for graphItem in graphItems %}
-                        {% if graphItem["@type"] == "rdfs:Property" %}
-                            {% if currentClass["@id"] contains graphItem["schema:rangeIncludes"] %}
-                                {% assign item_ranges = item_ranges | push: graphItem %}
-                            {% endif %}
-                        {% endif %}
-                    {% endfor %}
 
                     {% if item_ranges.first %}
                         <div class="vocabulary-item-card">
