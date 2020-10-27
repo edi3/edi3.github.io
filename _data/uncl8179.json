@@ -1,0 +1,1 @@
+{"@context":{"unece":"https://unece.org/vocab#","uncl8179":"https://unece.org/codelists/uncl8179#","rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#","rdfs":"http://www.w3.org/2000/01/rdf-schema#"},"@graph":[{"@id":"uncl8179:Box_tricycle","@type":"unece:UNECECL8179Code","rdfs:comment":"Tricycle with a basket for delivering goods.","rdf:value":"1"}]}

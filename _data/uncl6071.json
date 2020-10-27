@@ -1,0 +1,1 @@
+{"@context":{"unece":"https://unece.org/vocab#","uncl6071":"https://unece.org/codelists/uncl6071#","rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#","rdfs":"http://www.w3.org/2000/01/rdf-schema#"},"@graph":[{"@id":"uncl6071:Sample_frequency","@type":"unece:UNECECL6071Code","rdfs:comment":"The rate at which goods are sampled over a particular period.","rdf:value":"1"}]}
