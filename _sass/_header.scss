@@ -96,7 +96,8 @@
       }
 
       svg {
-        //display: none;
+        display: block;
+        margin: 0 auto;
       }
 
       &:hover {
