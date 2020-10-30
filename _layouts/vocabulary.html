@@ -40,8 +40,8 @@ layout: compress
                 {% assign currentClass = graphItem %}
                 {% assign cefactElementMetadata = graphItem["unece:cefactElementMetadata"] %}
 
-                <div class="vocabulary-item-row" id="{{ anchorId | downcase | slugify }}-row">
-                    <h2 id="{{ anchorId | slugify }}">{{ anchorId }}</h2>
+                <div class="vocabulary-item-row" id="{{ anchorId | downcase }}-row">
+                    <h2 id="{{ anchorId }}">{{ anchorId }}</h2>
                     <ul class="vocabulary-item-data">
                         <li><strong>@id:</strong> {{ graphItem["@id"] }}
                         <li><strong>@type:</strong> {{ graphItem["@type"] }}</li>
