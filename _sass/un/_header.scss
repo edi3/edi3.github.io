@@ -1,0 +1,253 @@
+.header {
+  background: #fff;
+
+  .logo {
+    float: left;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 29px;
+    height: 45px;
+    width: 300px;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0 0 0 8px;
+    }
+
+    img {
+      max-height: 45px;
+      vertical-align: middle;
+    }
+  }
+
+  .header-line {
+    padding: 16px 0 24px 0;
+
+    &:after {
+      display: table;
+      clear: both;
+      content: '';
+    }
+  }
+
+  .header-menu {
+    float: right;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+
+    li {
+      float: left;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      padding: 5px 15px;
+
+      @media screen and (max-width: 960px) {
+        padding: 5px 8px;
+      }
+
+      &:hover, &.active {
+        background: $app-grey;
+      }
+    }
+
+  }
+
+  .header-search {
+    float: right;
+    padding: 0;
+    margin: 6px 0 0 0;
+    width: 250px;
+    height: 27px;
+
+    @media screen and (max-width: 640px) {
+      display: block;
+      width: 100%;
+      float: none;
+      margin-top: 20px;
+    }
+
+    .search-form {
+      width: 100%;
+
+      &__input {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  .header-content {
+    background: #333;
+    text-align: center;
+    color: #F2F2F2;
+    font-size: 18px;
+    padding: 60px 0;
+
+    .img {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .header-text-box {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .header-name {
+      font-weight: 700;
+      font-size: 40px;
+      margin: 0 0 12px 0;
+    }
+
+    .header-tagline {
+      color: #f2f2f2;
+
+      a, p {
+        color: #f2f2f2;
+      }
+    }
+  }
+
+  .mobile-menu {
+    display: inline-block;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 60px;
+    background: $app-red;
+    padding: 0 0 10px 0;
+  }
+
+  .hamburger-menu {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 34px;
+    height: 24px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+
+    :focus {
+      outline: none;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: white;
+
+      &::before,
+      &::after {
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        content: "";
+      }
+
+      &::before {
+        top: 10px;
+      }
+
+      &::after {
+        top: 20px;
+      }
+
+    }
+  }
+
+  @media (max-width: 767px) {
+    .hamburger-menu {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .logo {
+      float: none;
+      font-size: 20px;
+      line-height: 24px;
+      vertical-align: top;
+
+      img {
+        max-height: 40px;
+
+        @media screen and (max-width: 960px) {
+          max-height: 100%;
+        }
+      }
+
+    }
+
+    .header-menu {
+      display: none;
+    }
+
+    .mobile-menu {
+      margin-right: 15px;
+
+      .sidebar-menu, .header-menu {
+        display: block;
+        list-style: none;
+        margin: 0;
+
+        li {
+          display: block;
+          float: none;
+
+
+          &.menu-title {
+            padding: 0;
+            color: #fff;
+            font-weight: 600;
+            font-size: 16px;
+
+            a {
+              padding: 6px 19px 8px 15px;
+            }
+          }
+
+        }
+
+        a {
+          display: block;
+          padding: 6px 20px 6px 25px;
+          color: #fff;
+          font-size: 16px;
+          text-decoration: none;
+
+          &.active {
+            font-weight: 600;
+            background: #ee4901;
+          }
+        }
+      }
+    }
+  }
+}

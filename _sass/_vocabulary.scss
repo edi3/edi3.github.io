@@ -1,189 +1,208 @@
 @mixin chevron($cDirection:"right", $cSize: 8px, $cWidth: 1px, $cColor: black) {
 
-    display: block;
-    width: $cSize;
-    height: $cSize;
-    border-top: 1px solid $cColor;
-    border-right: 1px solid $cColor;
-    border-width: $cWidth;
+  display: block;
+  width: $cSize;
+  height: $cSize;
+  border-top: 1px solid $cColor;
+  border-right: 1px solid $cColor;
+  border-width: $cWidth;
 
-    @if $cDirection == 'top'    { transform: rotate(-45deg);}
-    @if $cDirection == 'right'  { transform: rotate(45deg);}
-    @if $cDirection == 'bottom' { transform: rotate(135deg);}
-    @if $cDirection == 'left'   { transform: rotate(225deg);}
+  @if $cDirection == 'top' {
+    transform: rotate(-45deg);
+  }
+  @if $cDirection == 'right' {
+    transform: rotate(45deg);
+  }
+  @if $cDirection == 'bottom' {
+    transform: rotate(135deg);
+  }
+  @if $cDirection == 'left' {
+    transform: rotate(225deg);
+  }
 }
 
-.collapsible{
-    position: relative;
-    padding: 0 0 0 20px;
-    cursor: pointer;
+.collapsible {
+  position: relative;
+  padding: 0 0 0 20px;
+  cursor: pointer;
 
-    &:before{
-        position: absolute;
-        left: 0;
-        top: 13px;
-        content: '';
-        @include chevron('right');
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 13px;
+    content: '';
+    @include chevron('right');
+  }
+
+  &.active {
+    &:before {
+      top: 7px;
+      @include chevron('bottom');
     }
-
-    &.active{
-        &:before{
-            top:7px;
-            @include chevron('bottom');
-        }
-    }
+  }
 }
 
-.sidebar-menu-section{
-    margin: 0 0 15px 0;
+.sidebar-menu-section {
+  margin: 0 0 15px 0;
 }
 
-.sidebar-section-title{
-    padding: 0 0 5px 0;
-    margin: 0 0 5px 0;
-    border-bottom: 1px solid rgba(59, 65, 81, 0.3);
-    font-weight: 700;
+.sidebar-section-title {
+  padding: 0 0 5px 0;
+  margin: 0 0 5px 0;
+  border-bottom: 1px solid rgba(59, 65, 81, 0.3);
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .menu-header,
-.menu-subheader{
-    font-weight: bold;
-    padding-top: 5px;
-    padding-bottom: 5px;
+.menu-subheader {
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
 }
 
-.vocabulary-sidebar{
-    .sidebar-menu{
-        li{
-            text-align: left;
-        }
-    }
+.vocabulary-sidebar {
+  .sidebar-menu {
+    list-style: none;
 
-    .vocabulary-submenu,
-    .sidebar-menu{
-        margin: 0 0 0 20px;
+    li {
+      text-align: left;
+
+      a {
+        text-decoration: none;
+        font-size: 15px;
+      }
     }
+  }
+
+  .vocabulary-submenu,
+  .sidebar-menu {
+    margin: 0 0 0 20px;
+  }
 }
 
-.vocabulary-content{
+.vocabulary-content {
+  font-size: 14px;
+
+  h2 {
+    font-size: 26px;
+    margin: 10px 0 15px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid rgba(59, 65, 81, .3);
+    word-break: break-all;
+  }
+
+  h3 {
+    font-size: 18px;
+    padding: 10px 0 10px 10px;
+    margin: 0;
+  }
+
+  .collapsible {
+    padding-right: 20px;
+
+    &:before {
+      left: auto;
+      right: 20px;
+      top: 20px;
+    }
+  }
+
+  .collapsible-content {
+    padding: 10px 20px 10px 20px;
+  }
+
+  table {
+    width: 100%;
     font-size: 14px;
+    margin: 0;
 
-    h2{
-        font-size: 26px;
-        margin: 10px 0 15px 0;
-        padding: 0 0 5px 0;
-        border-bottom: 1px solid rgba(59,65,81,.3);
-        word-break: break-all;
+    & + table {
+      margin-top: 20px;
     }
 
-    h3{
-        font-size: 18px;
-        padding: 10px 0 10px 10px;
-        margin: 0;
-    }
+    tbody {
+      th, td {
+        padding: 4px 8px;
+      }
 
-    .collapsible{
-        padding-right: 20px;
-
-        &:before {
-            left: auto;
-            right: 20px;
-            top: 20px;
-        }
-    }
-
-    .collapsible-content{
-        padding: 10px 20px 10px 20px;
-    }
-
-    table{
-        width: 100%;
-        font-size: 14px;
-        margin: 0;
-
-        & + table{
-            margin-top: 20px;
-        }
-
-        tbody {
-            th, td{
-                padding: 4px 8px;
-            }
-            th {
-                text-align: left;
-            }
-        }
-
-        p{
-            margin: 0;
-            line-height: normal;
-            text-align: left;
-        }
-    }
-
-    .vocabulary-item-row{
-        margin: 0 0 20px 0;
-    }
-
-    .vocabulary-item-data{
-        list-style: none;
-        margin: 0 0 0 10px;
+      th {
         text-align: left;
-
-        li{
-            padding: 0;
-        }
+      }
     }
+
+    p {
+      margin: 0;
+      line-height: normal;
+      text-align: left;
+    }
+  }
+
+  .vocabulary-item-row {
+    margin: 0 0 20px 0;
+  }
+
+  .vocabulary-item-data {
+    list-style: none;
+    margin: 0 0 0 10px;
+    text-align: left;
+
+    li {
+      padding: 0;
+      word-break: break-all;
+    }
+  }
 }
 
-.vocabulary-item-card{
-    border: 1px solid rgba(59,65,81,.3);
-    border-radius: 4px;
-    margin: 10px 0;
+.vocabulary-item-card {
+  border: 1px solid rgba(59, 65, 81, .3);
+  border-radius: 4px;
+  margin: 10px 0;
 }
 
-.vocabulary-item-filter{
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    margin: 0 0 10px 0;
+.vocabulary-item-filter {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0 0 10px 0;
 
-    select{
-        margin: 0 0 0 5px;
-    }
+  select {
+    margin: 0 0 0 5px;
+  }
 }
 
-.page-content .vocabulary-item-properties{
+.page-content .vocabulary-item-properties {
 
-    tr:nth-child(2n){
-        background: transparent;
-    }
+  tr:nth-child(2n) {
+    background: transparent;
+  }
 
-    tbody:nth-child(2n) tr{
-        background-color: #f8f8f8;
-    }
+  tbody:nth-child(2n) tr {
+    background-color: #f8f8f8;
+  }
 }
 
 
-#scroll-to-top{
-    position: fixed;
-    border: 0;
-    background: $app-red;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 4px;
-    bottom: 10px;
-    left: 10px;
-    transition: background-color .3s, opacity .5s, visibility .5s;
+#scroll-to-top {
+  position: fixed;
+  border: 0;
+  background: $scroll-to-top-bg;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  bottom: 10px;
+  left: 10px;
+  transition: background-color .3s, opacity .5s, visibility .5s;
 
-    &:focus{
-        outline: 0;
-    }
+  &:focus {
+    outline: 0;
+  }
 
-    &:after {
-        content: "";
-        @include chevron('top', 16px, 4px, white);
-        margin: 10px 0 0 15px;
-    }
+  &:after {
+    content: "";
+    @include chevron('top', 16px, 4px, white);
+    margin: 10px 0 0 15px;
+  }
 }

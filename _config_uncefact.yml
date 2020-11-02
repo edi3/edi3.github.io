@@ -27,6 +27,8 @@ defaults:
     values:
       layout: "vocabulary"
 
+platform: uncefact
+
 exclude:
   - .idea
   - .git
