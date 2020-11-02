@@ -1,0 +1,91 @@
+<header class="header">
+    <div id="brand-bar" class="navbar navbar-default navbar-fixed-top" role="navigation"><!-- UN global brand bar -->
+        <div class="container-fluid brandbar-header">
+            <div class="row">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="col-md-4">
+                    <a class="navbar-brand" href="/en/">Welcome to the United Nations</a>
+                </div><!-- /UN global brand bar -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <!-- <div class="col-md-8 language-switcher">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#language-switcher">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <div class="language-title visible-xs-inline"><a href="javascript:void(0)" data-toggle="collapse" data-target="#language-switcher">Language:</a></div>
+
+                  <div class="navbar-collapse collapse" id="language-switcher">
+                    <nav role="navigation">     -->
+                <!-- <ul class="language-switcher-locale-url nav navbar-nav navbar-right" role="menu">
+        <li class="en active"><a href="/en/" class="language-link active" xml:lang="en">English</a></li>
+        <li class="ar first"><a href="/ar/" class="language-link" xml:lang="ar">العربية</a></li>
+        <li class="zh-hans"><a href="/zh/" class="language-link" xml:lang="zh-hans">中文</a></li>
+        <li class="fr"><a href="/fr/" class="language-link" xml:lang="fr">Français</a></li>
+        <li class="ru"><a href="/ru/" class="language-link" xml:lang="ru">Русский</a></li>
+        <li class="es last"><a href="/es/" class="language-link" xml:lang="es">Español</a></li>
+                </ul>                 -->
+                <!-- </nav> -->
+            </div>
+        </div><!-- /.navbar-collapse -->
+
+    </div>
+    <div class="header-line">
+        <div class="wrapper">
+            <div id="mobile-menu-wrapper" class="mobile-menu">
+                <button id="hamburger-menu" class="hamburger-menu">
+                    <span>toggle menu</span>
+                </button>
+                <div id="mobile-menu" style="display: none;">
+                    {% include header-menu.html %}
+                    {% include sidebar-menu.html %}
+                </div>
+            </div>
+            <a href="/" class="logo logo-un"><img src="{{site.baseurl}}/images/un/logo.svg" alt=""></a>
+            <div class="header-search">
+                {% include search-form.html %}
+            </div>
+            {% include header-menu.html %}
+        </div>
+    </div>
+    <div class="header-content">
+        <div class="wrapper">
+            <div class="header-text-box">
+                <div class="header-name">
+                    {% if include.header_name %}
+                        {{ include.header_name }}
+                    {% else %}
+                        edi3 Standards
+                    {% endif %}
+                </div>
+                <div class="header-tagline">
+                    {% if include.header_description %}
+                        {{ include.header_description | markdownify }}
+                    {% else %}
+                        Supply Chain Standards and Tools for Web Developers
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<script type="text/javascript">
+    document.getElementById('hamburger-menu').onclick = function() {
+        var nf = document.getElementById('mobile-menu');
+
+        if(nf.style.display==='none') {
+            nf.style.display = 'block';
+        }
+        else {
+            nf.style.display = 'none';
+        }
+    };
+
+    window.addEventListener('click', function(e){
+        if (!document.getElementById('mobile-menu-wrapper').contains(e.target)){
+            document.getElementById('mobile-menu').style.display= 'none';
+        }
+    })
+</script>

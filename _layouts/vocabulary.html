@@ -3,17 +3,21 @@ layout: compress
 ---
 <!DOCTYPE html>
 <html lang="en">
-
 {% include head.html %}
-
-{% include header.html header_name=page.header_name header_description=page.header_description %}
+{% if site.platform == "uncefact" %}
+    {% include header-un.html header_name=page.header_name header_description=page.header_description %}
+{% else %}
+    {% include header.html header_name=page.header_name header_description=page.header_description %}
+{% endif %}
 
 <div class="main-wrapper">
     <div class="main-content">
         <div class="page-sidebar vocabulary-sidebar">
+            {% if site.platform != "uncefact" %}
             <div class="sidebar-search">
                 {% include search-form.html %}
             </div>
+            {% endif %}
             {% include vocabulary-menu.html %}
 
         </div>
@@ -301,7 +305,12 @@ layout: compress
         </div>
     </div>
 
-{% include footer.html %}
+{% if site.platform == "uncefact" %}
+    {% include footer-un.html %}
+{% else %}
+    {% include footer.html %}
+{% endif %}
+
 <button type="button" onclick="scrollTopFunction();" id="scroll-to-top" style="display: none;"></button>
 <script>
     var coll = document.getElementsByClassName("collapsible");
