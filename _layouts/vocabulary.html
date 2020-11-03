@@ -24,12 +24,6 @@ layout: compress
         <div class="page-content vocabulary-content">
             {% assign vocab = site.data[page.jsonid] %}
             {% assign graphItems = vocab["@graph"] %}
-            {% assign item_properties = "" %}
-            {% assign item_properties = "" | split: ',' %}
-            {% assign item_relationships = "" %}
-            {% assign item_relationships = "" | split: ',' %}
-            {% assign item_ranges = "" %}
-            {% assign item_ranges = "" | split: ',' %}
 
             {% for graphItem in graphItems %}
                 {% if page.type == "code-list" %}
@@ -111,6 +105,12 @@ layout: compress
                         {% endif %}
                     </ul>
 
+                    {% assign item_properties = "" %}
+                    {% assign item_properties = "" | split: ',' %}
+                    {% assign item_relationships = "" %}
+                    {% assign item_relationships = "" | split: ',' %}
+                    {% assign item_ranges = "" %}
+                    {% assign item_ranges = "" | split: ',' %}
                     {% for graphItem in graphItems %}
                         {% if graphItem["@type"] == "rdfs:Property" %}
                             {% assign range = graphItem["schema:rangeIncludes"] | slice: 0, 4 %}
