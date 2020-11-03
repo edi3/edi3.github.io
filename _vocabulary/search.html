@@ -36,7 +36,7 @@ layout: vocabulary
                         "type": {{ graphItem["@type"] | xml_escape | strip_newlines | jsonify }},
                         "comment": {% if graphItem["rdfs:comment"] %}{{ graphItem["rdfs:comment"] | jsonify }}{% else %}""{% endif %},
                         "value": "{{ graphItem["rdf:value"] | xml_escape | strip_newlines }}",
-                        "url": "{{ vocabulary.url | xml_escape }}#{{ anchorId }}",
+                        "url": "{{site.baseurl}}{{ vocabulary.url | xml_escape }}#{{ anchorId }}",
                         "cefactIds": "{% for cefactElementMetadata in cefactElementMetadata %}{{ cefactElementMetadata["@id"] | xml_escape | strip_newlines | escape }} {% endfor %}",
                         "cefactComments": "{% for cefactElementMetadata in cefactElementMetadata %}{{ cefactElementMetadata["rdfs:comment"] | xml_escape | strip_newlines | escape }} {% endfor %}",
                         "cefactUNId": "{% for cefactElementMetadata in cefactElementMetadata %}{{ cefactElementMetadata["unece:cefactUNId"] | xml_escape | strip_newlines | escape }} {% endfor %}",
