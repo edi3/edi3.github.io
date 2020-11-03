@@ -18,6 +18,7 @@ gems: [jekyll-toc]
 collections:
   vocabulary:
     output: true
+    permalink: /:collection/:name/
 
 defaults:
   -
@@ -33,4 +34,3 @@ plugins:
 exclude:
   - .idea
   - .git
-  - _vocabulary

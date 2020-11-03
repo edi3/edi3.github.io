@@ -1,1 +1,0 @@
-{"@context":{"unece":"https://unece.org/vocab#","uncl4059":"https://unece.org/codelists/uncl4059#","rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#","rdfs":"http://www.w3.org/2000/01/rdf-schema#"},"@graph":[{"@id":"uncl4059:Insurance_policy","@type":"unece:UNECECL4059Code","rdfs:comment":"Clause relating to an insurance policy.","rdf:value":"1"}]}

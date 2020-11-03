@@ -1,1 +1,0 @@
-{"@context":{"unece":"https://unece.org/vocab#","uncl9643":"https://unece.org/codelists/uncl9643#","rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#","rdfs":"http://www.w3.org/2000/01/rdf-schema#"},"@graph":[{"@id":"uncl9643:Radiology_film","@type":"unece:UNECECL9643Code","rdfs:comment":"X-ray image.","rdf:value":"1"}]}

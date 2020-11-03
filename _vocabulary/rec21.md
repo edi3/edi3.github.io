@@ -4,7 +4,6 @@ name: Package Types
 description: 
 jsonid: "rec21"
 layout: vocabulary
-permalink: vocabulary/rec21/
 header_name: Package Types JSON-LD Vocabulary
 header_description: Vocabulary Definition of Package Types semantics in HTML format. JSON-LD format is available at [rec21.jsonld](https://edi3.org/vocabulary/rec21.jsonld)
 type: code-list

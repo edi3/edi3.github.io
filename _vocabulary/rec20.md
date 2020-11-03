@@ -4,7 +4,6 @@ name: Units Of Measurement
 description: 
 jsonid: "rec20"
 layout: vocabulary
-permalink: vocabulary/rec20/
 header_name: Units Of Measurement JSON-LD Vocabulary
 header_description: Vocabulary Definition of Units Of Measurement (Recommendation N°. 20 - Revision 15 (Annexes II & Annexes III)) semantics in HTML format. JSON-LD format is available at [rec20.jsonld](https://edi3.org/vocabulary/rec20.jsonld)
 type: code-list
