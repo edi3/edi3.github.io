@@ -34,3 +34,4 @@ plugins:
 exclude:
   - .idea
   - .git
+  - _vocabulary
