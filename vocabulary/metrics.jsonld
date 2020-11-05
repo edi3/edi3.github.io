@@ -1,0 +1,55 @@
+{
+  "metrics": [
+    {
+      "name": "unique visitors",
+      "lastWeek": 51,
+      "total": 787
+    },
+    {
+      "name": "registered members",
+      "lastWeek": 0,
+      "total": 66
+    },
+    {
+      "name": "chat message count",
+      "lastWeek": 43,
+      "total": 5393
+    },
+    {
+      "name": "site updates",
+      "lastWeek": 2,
+      "total": 307
+    },
+    {
+      "name": "issues",
+      "lastWeek": 0,
+      "total": 38
+    }
+  ],
+  "mostActive": [
+    {
+      "type": "repository",
+      "value": "Code Lists",
+      "url": "https://github.com/edi3/edi3-codelists"
+    },
+    {
+      "type": "contributor",
+      "value": "David Roff",
+      "url": "https://github.com/cmsdroff"
+    }
+  ],
+  "links": [
+    {
+      "text": "Google site metrics",
+      "url": "https://edi3-metrics.s3-ap-southeast-2.amazonaws.com/Analytics+All+Web+Site+Data+Audience+Overview+20190301-20190805.pdf"
+    },
+    {
+      "text": "Slack team metrics",
+      "url": " https://edi3-metrics.s3-ap-southeast-2.amazonaws.com/edi3+Enterprise+Analytics+All+time+-+Aug+06+2019.csv"
+    },
+    {
+      "text": "Github project metrics",
+      "url": ""
+    }
+  ]
+}
