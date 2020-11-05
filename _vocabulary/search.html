@@ -14,38 +14,41 @@ layout: vocabulary
 <script>
     window.store = {
         {% for vocabulary in site.vocabulary %}
-            {% assign vocab = site.data[vocabulary.jsonid] %}
-            {% assign graphItems = vocab["@graph"] %}
-            {% if graphItems %}
-                {% for graphItem in graphItems %}
-                    {% if vocabulary.type == "code-list" %}
-                        {% assign anchorId = graphItem["@id"] | replace_first: vocabulary.jsonid, "" | replace_first: ":", "" %}
-                    {% elsif vocabulary.type == "uncl" %}
-                        {% assign anchorId = graphItem["@id"] | replace_first: vocabulary.jsonid, "" | replace_first: ":", "" %}
-                    {% elsif vocabulary.type == "locode" %}
-                        {% assign anchorId = graphItem["@id"] | replace_first: vocabulary.jsonid, "" | replace_first: ":", "" %}
-                    {% else %}
-                        {% assign anchorId = graphItem["@id"] | replace_first: "unece:", ""  %}
-                    {% endif %}
+            {% if vocabulary.jsonid == "unece" %}
+                {% assign vocab = site.data[vocabulary.jsonid] %}
+                {% assign graphItems = vocab["@graph"] %}
+                {% if graphItems %}
+                    {% for graphItem in graphItems %}
+                        {% if vocabulary.type == "code-list" %}
+                            {% assign anchorId = graphItem["@id"] | replace_first: vocabulary.jsonid, "" | replace_first: ":", "" %}
+                        {% elsif vocabulary.type == "uncl" %}
+                            {% assign anchorId = graphItem["@id"] | replace_first: vocabulary.jsonid, "" | replace_first: ":", "" %}
+                        {% elsif vocabulary.type == "locode" %}
+                            {% assign anchorId = graphItem["@id"] | replace_first: vocabulary.jsonid, "" | replace_first: ":", "" %}
+                        {% else %}
+                            {% assign anchorId = graphItem["@id"] | replace_first: "unece:", ""  %}
+                        {% endif %}
 
-                    {% assign cefactElementMetadata = graphItem["unece:cefactElementMetadata"] %}
+                        {% assign cefactElementMetadata = graphItem["unece:cefactElementMetadata"] %}
 
-                    "{{ vocabulary.url | slugify }}_{{ anchorId | slugify }}": {
-                        "title": "{{ anchorId | xml_escape }} - {{ vocabulary.title | xml_escape | strip_newlines }}",
-                        "graphId": "{{ graphItem["@id"] | xml_escape | strip_newlines }}",
-                        "type": {{ graphItem["@type"] | xml_escape | strip_newlines | jsonify }},
-                        "comment": {% if graphItem["rdfs:comment"] %}{{ graphItem["rdfs:comment"] | jsonify }}{% else %}""{% endif %},
-                        "value": "{{ graphItem["rdf:value"] | xml_escape | strip_newlines }}",
-                        "url": "{{site.baseurl}}{{ vocabulary.url | xml_escape }}#{{ anchorId }}",
-                        "cefactIds": "{% for cefactElementMetadata in cefactElementMetadata %}{{ cefactElementMetadata["@id"] | xml_escape | strip_newlines | escape }} {% endfor %}",
-                        "cefactComments": "{% for cefactElementMetadata in cefactElementMetadata %}{{ cefactElementMetadata["rdfs:comment"] | xml_escape | strip_newlines | escape }} {% endfor %}",
-                        "cefactUNId": "{% for cefactElementMetadata in cefactElementMetadata %}{{ cefactElementMetadata["unece:cefactUNId"] | xml_escape | strip_newlines | escape }} {% endfor %}",
-                        "cefactBusinessProcess": "{% for cefactElementMetadata in cefactElementMetadata %}{{ cefactElementMetadata["unece:cefactBusinessProcess"] | xml_escape | strip_newlines | escape }} {% endfor %}"
-                    }
+                        "{{ vocabulary.url | slugify }}_{{ anchorId | slugify }}": {
+                            "title": "{{ anchorId | xml_escape }} - {{ vocabulary.title | xml_escape | strip_newlines }}",
+                            "graphId": "{{ graphItem["@id"] | xml_escape | strip_newlines }}",
+                            "type": {{ graphItem["@type"] | xml_escape | strip_newlines | jsonify }},
+                            "comment": {% if graphItem["rdfs:comment"] %}{{ graphItem["rdfs:comment"] | jsonify }}{% else %}""{% endif %},
+                            "value": "{{ graphItem["rdf:value"] | xml_escape | strip_newlines }}",
+                            "url": "{{site.baseurl}}{{ vocabulary.url | xml_escape }}#{{ anchorId }}",
+                            "cefactIds": "{% for cefactElementMetadata in cefactElementMetadata %}{{ cefactElementMetadata["@id"] | xml_escape | strip_newlines | escape }} {% endfor %}",
+                            "cefactComments": "{% for cefactElementMetadata in cefactElementMetadata %}{{ cefactElementMetadata["rdfs:comment"] | xml_escape | strip_newlines | escape }} {% endfor %}",
+                            "cefactUNId": "{% for cefactElementMetadata in cefactElementMetadata %}{{ cefactElementMetadata["unece:cefactUNId"] | xml_escape | strip_newlines | escape }} {% endfor %}",
+                            "cefactBusinessProcess": "{% for cefactElementMetadata in cefactElementMetadata %}{{ cefactElementMetadata["unece:cefactBusinessProcess"] | xml_escape | strip_newlines | escape }} {% endfor %}"
+                        }
+                        {% unless forloop.last %},{% endunless %}
+                    {% endfor %}
                     {% unless forloop.last %},{% endunless %}
-                {% endfor %}
-                {% unless forloop.last %},{% endunless %}
+                {% endif %}
             {% endif %}
+
 
         {% endfor %}
     };
