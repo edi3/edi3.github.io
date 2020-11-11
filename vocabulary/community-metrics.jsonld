@@ -1,0 +1,77 @@
+{
+    "enterprise": {
+        "name": "Buy Ship Pay API Specifications",
+        "layers" : [
+            {
+                "type": "SEMANTIC",
+                "name": "Semantic Specs",
+                "domains": [
+                    {
+                        "name": "Trade",
+                        "description": "Trade Domain description.",
+                        "repositoryURL": "https://edi3.org/trade/",
+                        "apiDocsURL" : "",
+                        "resources": [
+                            {
+                                "name": "/invoices",
+                                "description": ""
+                            },
+                            {
+                                "name": "etc",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Transport",
+                        "description": "Transport Domain description.",
+                        "repositoryURL": "https://edi3.org/transport/",
+                        "apiDocsURL" : "",
+                        "resources": [
+                            {
+                                "name": "/consignments",
+                                "description": ""
+                            },
+                            {
+                                "name": "etc",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Regulatory",
+                        "description": "Regulatory Domain description.",
+                        "repositoryURL": "https://edi3.org/regulatory/",
+                        "apiDocsURL" : "",
+                        "resources": [
+                            {
+                                "name": "/declarations",
+                                "description": ""
+                            },
+                            {
+                                "name": "etc",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Finance",
+                        "description": "Finance Domain description.",
+                        "repositoryURL": "https://edi3.org/finance/",
+                        "apiDocsURL" : "",
+                        "resources": [
+                            {
+                                "name": "/credits",
+                                "description": ""
+                            },
+                            {
+                                "name": "etc",
+                                "description": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
