@@ -1,2277 +1,2277 @@
 {
 	"@context": {
-		"edi3": "https://edi3.org/vocab#",
-		"rec21": "https://unece.org/codelists/rec21#",
+		"unece":"https://service.unece.org/trade/uncefact/vocabulary/unece#",
+		"rec21": "https://service.unece.org/trade/uncefact/vocabulary/rec21#",
 		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
 		"rdfs": "http://www.w3.org/2000/01/rdf-schema#"
 	},
 	"@graph": [{
 		"@id": "rec21:Drum_steel",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "1A",
-		"edi3:numericCode": "34"
+		"unece:numericCode": "34"
 	}, {
 		"@id": "rec21:Drum_aluminium",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "1B",
-		"edi3:numericCode": "34"
+		"unece:numericCode": "34"
 	}, {
 		"@id": "rec21:Drum_plywood",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "1D",
-		"edi3:numericCode": "34"
+		"unece:numericCode": "34"
 	}, {
 		"@id": "rec21:Container_flexible",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A packaging container of flexible construction.",
 		"rdf:value": "1F",
-		"edi3:numericCode": "93"
+		"unece:numericCode": "93"
 	}, {
 		"@id": "rec21:Drum_fibre",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "1G",
-		"edi3:numericCode": "34"
+		"unece:numericCode": "34"
 	}, {
 		"@id": "rec21:Drum_wooden",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "1W",
-		"edi3:numericCode": "34, 35"
+		"unece:numericCode": "34, 35"
 	}, {
 		"@id": "rec21:Barrel_wooden",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "2C",
-		"edi3:numericCode": "44, 45"
+		"unece:numericCode": "44, 45"
 	}, {
 		"@id": "rec21:Jerrican_steel",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "3A",
-		"edi3:numericCode": "23, 33"
+		"unece:numericCode": "23, 33"
 	}, {
 		"@id": "rec21:Jerrican_plastic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "3H",
-		"edi3:numericCode": "23, 33"
+		"unece:numericCode": "23, 33"
 	}, {
 		"@id": "rec21:Bag_super_bulk",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A cloth plastic or paper based bag having the dimensions of the pallet on which it is constructed.",
 		"rdf:value": "43",
-		"edi3:numericCode": "64"
+		"unece:numericCode": "64"
 	}, {
 		"@id": "rec21:Bag_polybag",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A type of plastic bag, typically used to wrap promotional pieces, publications, product samples, and/or catalogues. ",
 		"rdf:value": "44",
-		"edi3:numericCode": "62, 63"
+		"unece:numericCode": "62, 63"
 	}, {
 		"@id": "rec21:Box_steel",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "4A",
-		"edi3:numericCode": "21, 22, 23, 24, 25"
+		"unece:numericCode": "21, 22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Box_aluminium",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "4B",
-		"edi3:numericCode": "21, 22, 23, 24, 25"
+		"unece:numericCode": "21, 22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Box_natural_wood",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "4C",
-		"edi3:numericCode": "21, 22, 23, 24, 25"
+		"unece:numericCode": "21, 22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Box_plywood",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "4D",
-		"edi3:numericCode": "21, 22, 23, 24, 25"
+		"unece:numericCode": "21, 22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Box_reconstituted_wood",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "4F",
-		"edi3:numericCode": "21, 22, 23, 24, 25"
+		"unece:numericCode": "21, 22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Box_fibreboard",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "4G",
-		"edi3:numericCode": "21, 22, 23, 24, 25"
+		"unece:numericCode": "21, 22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Box_plastic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "4H",
-		"edi3:numericCode": "21, 22, 23, 24, 25"
+		"unece:numericCode": "21, 22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Bag_woven_plastic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "5H",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Bag_textile",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "5L",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Bag_paper",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "5M",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Composite_packaging_plastic_receptacle",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "6H",
-		"edi3:numericCode": "24, 25, 33, 34"
+		"unece:numericCode": "24, 25, 33, 34"
 	}, {
 		"@id": "rec21:Composite_packaging_glass_receptacle",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "6P",
-		"edi3:numericCode": "23, 24, 25, 33, 34, 62, 63"
+		"unece:numericCode": "23, 24, 25, 33, 34, 62, 63"
 	}, {
 		"@id": "rec21:Case_car",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A type of portable container designed to store equipment for carriage in an automobile.",
 		"rdf:value": "7A",
-		"edi3:numericCode": "22, 23"
+		"unece:numericCode": "22, 23"
 	}, {
 		"@id": "rec21:Case_wooden",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A case made of wood for retaining substances or articles.",
 		"rdf:value": "7B",
-		"edi3:numericCode": "24, 25"
+		"unece:numericCode": "24, 25"
 	}, {
 		"@id": "rec21:Pallet_wooden",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A platform or open-ended box, made of wood, on which goods are retained for ease of mechanical handling during transport and storage.",
 		"rdf:value": "8A",
-		"edi3:numericCode": "24, 25"
+		"unece:numericCode": "24, 25"
 	}, {
 		"@id": "rec21:Crate_wooden",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A receptacle, made of wood, on which goods are retained for ease of mechanical handling during transport and storage.",
 		"rdf:value": "8B",
-		"edi3:numericCode": "23, 24, 25, 26, 27"
+		"unece:numericCode": "23, 24, 25, 26, 27"
 	}, {
 		"@id": "rec21:Bundle_wooden",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Loose or unpacked pieces of wood tied or wrapped together. ",
 		"rdf:value": "8C",
-		"edi3:numericCode": "16"
+		"unece:numericCode": "16"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_rigid_plastic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "AA",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Receptacle_fibre",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Containment vessel made of fibre used for retaining substances or articles.",
 		"rdf:value": "AB",
-		"edi3:numericCode": "21, 22, 23, 31, 32, 33, 41, 42, 43"
+		"unece:numericCode": "21, 22, 23, 31, 32, 33, 41, 42, 43"
 	}, {
 		"@id": "rec21:Receptacle_paper",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Containment vessel made of paper for retaining substances or articles.",
 		"rdf:value": "AC",
-		"edi3:numericCode": "21, 22, 23, 31, 32, 33, 41, 42, 43"
+		"unece:numericCode": "21, 22, 23, 31, 32, 33, 41, 42, 43"
 	}, {
 		"@id": "rec21:Receptacle_wooden",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Containment vessel made of wood for retaining substances or articles.",
 		"rdf:value": "AD",
-		"edi3:numericCode": "21, 22, 23, 31, 32, 33, 41, 42, 43"
+		"unece:numericCode": "21, 22, 23, 31, 32, 33, 41, 42, 43"
 	}, {
 		"@id": "rec21:Aerosol",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "AE",
-		"edi3:numericCode": "42, 43"
+		"unece:numericCode": "42, 43"
 	}, {
 		"@id": "rec21:Pallet_modular_collars_80cms_*_60cms",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Standard sized pallet of dimensions 80 centimeters by 60 centimeters (cms).",
 		"rdf:value": "AF",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Pallet_shrinkwrapped",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Pallet load secured with transparent plastic film that has been wrapped around and then shrunk tightly.",
 		"rdf:value": "AG",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Pallet_100cms_*_110cms",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Standard sized pallet of dimensions 100centimeters by 110 centimeters (cms).",
 		"rdf:value": "AH",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Clamshell",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "AI",
-		"edi3:numericCode": "21, 22, 23"
+		"unece:numericCode": "21, 22, 23"
 	}, {
 		"@id": "rec21:Cone",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Container used in the transport of linear material such as yarn.",
 		"rdf:value": "AJ",
-		"edi3:numericCode": "51"
+		"unece:numericCode": "51"
 	}, {
 		"@id": "rec21:Ball",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A spherical containment vessel for retaining substances or articles.",
 		"rdf:value": "AL",
-		"edi3:numericCode": "46"
+		"unece:numericCode": "46"
 	}, {
 		"@id": "rec21:Ampoule_non-protected",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "AM",
-		"edi3:numericCode": "31"
+		"unece:numericCode": "31"
 	}, {
 		"@id": "rec21:Ampoule_protected",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "AP",
-		"edi3:numericCode": "31"
+		"unece:numericCode": "31"
 	}, {
 		"@id": "rec21:Atomizer",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "AT",
-		"edi3:numericCode": "42, 43"
+		"unece:numericCode": "42, 43"
 	}, {
 		"@id": "rec21:Capsule",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "AV",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Belt",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A band use to retain multiple articles together.",
 		"rdf:value": "B4",
-		"edi3:numericCode": "93"
+		"unece:numericCode": "93"
 	}, {
 		"@id": "rec21:Barrel",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BA",
-		"edi3:numericCode": "44, 45"
+		"unece:numericCode": "44, 45"
 	}, {
 		"@id": "rec21:Bobbin",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BB",
-		"edi3:numericCode": "91"
+		"unece:numericCode": "91"
 	}, {
 		"@id": "rec21:Bottlecrate_/_bottlerack",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BC",
-		"edi3:numericCode": "29"
+		"unece:numericCode": "29"
 	}, {
 		"@id": "rec21:Board",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BD",
-		"edi3:numericCode": "16"
+		"unece:numericCode": "16"
 	}, {
 		"@id": "rec21:Bundle",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BE",
-		"edi3:numericCode": "61, 62, 63, 64, 65"
+		"unece:numericCode": "61, 62, 63, 64, 65"
 	}, {
 		"@id": "rec21:Balloon_non-protected",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BF",
-		"edi3:numericCode": "42, 43"
+		"unece:numericCode": "42, 43"
 	}, {
 		"@id": "rec21:Bag",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A receptacle made of flexible material with an open or closed top.",
 		"rdf:value": "BG",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Bunch",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BH",
-		"edi3:numericCode": "61, 62, 63, 64, 65"
+		"unece:numericCode": "61, 62, 63, 64, 65"
 	}, {
 		"@id": "rec21:Bin",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BI",
-		"edi3:numericCode": "21, 25"
+		"unece:numericCode": "21, 25"
 	}, {
 		"@id": "rec21:Bucket",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BJ",
-		"edi3:numericCode": "51"
+		"unece:numericCode": "51"
 	}, {
 		"@id": "rec21:Basket",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BK",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Bale_compressed",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BL",
-		"edi3:numericCode": "65"
+		"unece:numericCode": "65"
 	}, {
 		"@id": "rec21:Basin",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BM",
-		"edi3:numericCode": "51"
+		"unece:numericCode": "51"
 	}, {
 		"@id": "rec21:Bale_non-compressed",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BN",
-		"edi3:numericCode": "65"
+		"unece:numericCode": "65"
 	}, {
 		"@id": "rec21:Bottle_non-protected_cylindrical",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A narrow-necked cylindrical shaped vessel without external protective packing material.",
 		"rdf:value": "BO",
-		"edi3:numericCode": "32, 33"
+		"unece:numericCode": "32, 33"
 	}, {
 		"@id": "rec21:Balloon_protected",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BP",
-		"edi3:numericCode": "42, 43"
+		"unece:numericCode": "42, 43"
 	}, {
 		"@id": "rec21:Bottle_protected_cylindrical",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A narrow-necked cylindrical shaped vessel with external protective packing material.",
 		"rdf:value": "BQ",
-		"edi3:numericCode": "32, 33"
+		"unece:numericCode": "32, 33"
 	}, {
 		"@id": "rec21:Bar",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BR",
-		"edi3:numericCode": "16"
+		"unece:numericCode": "16"
 	}, {
 		"@id": "rec21:Bottle_non-protected_bulbous",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A narrow-necked bulb shaped vessel without external protective packing material.",
 		"rdf:value": "BS",
-		"edi3:numericCode": "42, 43"
+		"unece:numericCode": "42, 43"
 	}, {
 		"@id": "rec21:Bolt",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BT",
-		"edi3:numericCode": "13"
+		"unece:numericCode": "13"
 	}, {
 		"@id": "rec21:Butt",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BU",
-		"edi3:numericCode": "44, 45"
+		"unece:numericCode": "44, 45"
 	}, {
 		"@id": "rec21:Bottle_protected_bulbous",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A narrow-necked bulb shaped vessel with external protective packing material.",
 		"rdf:value": "BV",
-		"edi3:numericCode": "42, 43"
+		"unece:numericCode": "42, 43"
 	}, {
 		"@id": "rec21:Box_for_liquids",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BW",
-		"edi3:numericCode": "21, 22, 23, 24, 25"
+		"unece:numericCode": "21, 22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Box",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BX",
-		"edi3:numericCode": "21, 22, 23, 24, 25"
+		"unece:numericCode": "21, 22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Board_in_bundle/bunch/truss",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BY",
-		"edi3:numericCode": "16"
+		"unece:numericCode": "16"
 	}, {
 		"@id": "rec21:Bars_in_bundle/bunch/truss",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "BZ",
-		"edi3:numericCode": "16"
+		"unece:numericCode": "16"
 	}, {
 		"@id": "rec21:Can_rectangular",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CA",
-		"edi3:numericCode": "22"
+		"unece:numericCode": "22"
 	}, {
 		"@id": "rec21:Crate_beer",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CB",
-		"edi3:numericCode": "23, 24, 25, 26, 27"
+		"unece:numericCode": "23, 24, 25, 26, 27"
 	}, {
 		"@id": "rec21:Churn",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CC",
-		"edi3:numericCode": "32, 33"
+		"unece:numericCode": "32, 33"
 	}, {
 		"@id": "rec21:Can_with_handle_and_spout",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CD",
-		"edi3:numericCode": "22"
+		"unece:numericCode": "22"
 	}, {
 		"@id": "rec21:Creel",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CE",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Coffer",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CF",
-		"edi3:numericCode": "24"
+		"unece:numericCode": "24"
 	}, {
 		"@id": "rec21:Cage",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CG",
-		"edi3:numericCode": "26"
+		"unece:numericCode": "26"
 	}, {
 		"@id": "rec21:Chest",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CH",
-		"edi3:numericCode": "25"
+		"unece:numericCode": "25"
 	}, {
 		"@id": "rec21:Canister",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CI",
-		"edi3:numericCode": "21, 22"
+		"unece:numericCode": "21, 22"
 	}, {
 		"@id": "rec21:Coffin",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CJ",
-		"edi3:numericCode": "54"
+		"unece:numericCode": "54"
 	}, {
 		"@id": "rec21:Cask",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CK",
-		"edi3:numericCode": "44, 45"
+		"unece:numericCode": "44, 45"
 	}, {
 		"@id": "rec21:Coil",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CL",
-		"edi3:numericCode": "14"
+		"unece:numericCode": "14"
 	}, {
 		"@id": "rec21:Card",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A flat package usually made of fibreboard from/to which product is often hung or attached.",
 		"rdf:value": "CM",
-		"edi3:numericCode": "67"
+		"unece:numericCode": "67"
 	}, {
 		"@id": "rec21:Container_not_otherwise_specified_as_transport_equipment",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CN",
-		"edi3:numericCode": "25"
+		"unece:numericCode": "25"
 	}, {
 		"@id": "rec21:Carboy_non-protected",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CO",
-		"edi3:numericCode": "43"
+		"unece:numericCode": "43"
 	}, {
 		"@id": "rec21:Carboy_protected",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CP",
-		"edi3:numericCode": "43"
+		"unece:numericCode": "43"
 	}, {
 		"@id": "rec21:Cartridge",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Package containing a charge such as propelling explosive for firearms or ink toner for a printer.",
 		"rdf:value": "CQ",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Crate",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CR",
-		"edi3:numericCode": "24, 25"
+		"unece:numericCode": "24, 25"
 	}, {
 		"@id": "rec21:Case",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CS",
-		"edi3:numericCode": "21, 22, 23, 24, 25"
+		"unece:numericCode": "21, 22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Carton",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CT",
-		"edi3:numericCode": "22, 23, 24"
+		"unece:numericCode": "22, 23, 24"
 	}, {
 		"@id": "rec21:Cup",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CU",
-		"edi3:numericCode": "51"
+		"unece:numericCode": "51"
 	}, {
 		"@id": "rec21:Cover",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CV",
-		"edi3:numericCode": "67"
+		"unece:numericCode": "67"
 	}, {
 		"@id": "rec21:Cage_roll",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CW",
-		"edi3:numericCode": "26"
+		"unece:numericCode": "26"
 	}, {
 		"@id": "rec21:Can_cylindrical",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CX",
-		"edi3:numericCode": "32"
+		"unece:numericCode": "32"
 	}, {
 		"@id": "rec21:Cylinder",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CY",
-		"edi3:numericCode": "12"
+		"unece:numericCode": "12"
 	}, {
 		"@id": "rec21:Canvas",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "CZ",
-		"edi3:numericCode": "67"
+		"unece:numericCode": "67"
 	}, {
 		"@id": "rec21:Crate_multiple_layer_plastic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DA",
-		"edi3:numericCode": "23, 24, 25, 27"
+		"unece:numericCode": "23, 24, 25, 27"
 	}, {
 		"@id": "rec21:Crate_multiple_layer_wooden",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DB",
-		"edi3:numericCode": "23, 24, 25, 27"
+		"unece:numericCode": "23, 24, 25, 27"
 	}, {
 		"@id": "rec21:Crate_multiple_layer_cardboard",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DC",
-		"edi3:numericCode": "23, 24, 25, 27"
+		"unece:numericCode": "23, 24, 25, 27"
 	}, {
 		"@id": "rec21:Cage_Commonwealth_Handling_Equipment_Pool__(CHEP)",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DG",
-		"edi3:numericCode": "26"
+		"unece:numericCode": "26"
 	}, {
 		"@id": "rec21:Box_Commonwealth_Handling_Equipment_Pool_(CHEP)_Eurobox",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A box mounted on a pallet base under the control of CHEP.",
 		"rdf:value": "DH",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Drum_iron",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DI",
-		"edi3:numericCode": "34"
+		"unece:numericCode": "34"
 	}, {
 		"@id": "rec21:Demijohn_non-protected",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DJ",
-		"edi3:numericCode": "43"
+		"unece:numericCode": "43"
 	}, {
 		"@id": "rec21:Crate_bulk_cardboard",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DK",
-		"edi3:numericCode": "23, 24, 25, 27"
+		"unece:numericCode": "23, 24, 25, 27"
 	}, {
 		"@id": "rec21:Crate_bulk_plastic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DL",
-		"edi3:numericCode": "23, 24, 25, 27"
+		"unece:numericCode": "23, 24, 25, 27"
 	}, {
 		"@id": "rec21:Crate_bulk_wooden",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DM",
-		"edi3:numericCode": "23, 24, 25, 27"
+		"unece:numericCode": "23, 24, 25, 27"
 	}, {
 		"@id": "rec21:Dispenser",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DN",
-		"edi3:numericCode": "93"
+		"unece:numericCode": "93"
 	}, {
 		"@id": "rec21:Demijohn_protected",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DP",
-		"edi3:numericCode": "43"
+		"unece:numericCode": "43"
 	}, {
 		"@id": "rec21:Drum",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DR",
-		"edi3:numericCode": "34"
+		"unece:numericCode": "34"
 	}, {
 		"@id": "rec21:Tray_one_layer_no_cover_plastic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DS",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Tray_one_layer_no_cover_wooden",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DT",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Tray_one_layer_no_cover_polystyrene",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DU",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Tray_one_layer_no_cover_cardboard",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DV",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Tray_two_layers_no_cover_plastic_tray",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DW",
-		"edi3:numericCode": "27, 29"
+		"unece:numericCode": "27, 29"
 	}, {
 		"@id": "rec21:Tray_two_layers_no_cover_wooden",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DX",
-		"edi3:numericCode": "27, 29"
+		"unece:numericCode": "27, 29"
 	}, {
 		"@id": "rec21:Tray_two_layers_no_cover_cardboard",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "DY",
-		"edi3:numericCode": "27, 29"
+		"unece:numericCode": "27, 29"
 	}, {
 		"@id": "rec21:Bag_plastic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "EC",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Case_with_pallet_base",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ED",
-		"edi3:numericCode": "23, 24, 25"
+		"unece:numericCode": "23, 24, 25"
 	}, {
 		"@id": "rec21:Case_with_pallet_base_wooden",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "EE",
-		"edi3:numericCode": "23, 24, 25"
+		"unece:numericCode": "23, 24, 25"
 	}, {
 		"@id": "rec21:Case_with_pallet_base_cardboard",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "EF",
-		"edi3:numericCode": "23, 24, 25"
+		"unece:numericCode": "23, 24, 25"
 	}, {
 		"@id": "rec21:Case_with_pallet_base_plastic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "EG",
-		"edi3:numericCode": "23, 24, 25"
+		"unece:numericCode": "23, 24, 25"
 	}, {
 		"@id": "rec21:Case_with_pallet_base_metal",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "EH",
-		"edi3:numericCode": "23, 24, 25"
+		"unece:numericCode": "23, 24, 25"
 	}, {
 		"@id": "rec21:Case_isothermic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "EI",
-		"edi3:numericCode": "22, 23, 24, 25"
+		"unece:numericCode": "22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Envelope",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "EN",
-		"edi3:numericCode": "67"
+		"unece:numericCode": "67"
 	}, {
 		"@id": "rec21:Flexibag",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A flexible containment bag made of plastic, typically for the transportation bulk non-hazardous cargoes using standard size shipping containers.",
 		"rdf:value": "FB",
-		"edi3:numericCode": "65"
+		"unece:numericCode": "65"
 	}, {
 		"@id": "rec21:Crate_fruit",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "FC",
-		"edi3:numericCode": "23, 24, 25, 26, 27"
+		"unece:numericCode": "23, 24, 25, 26, 27"
 	}, {
 		"@id": "rec21:Crate_framed",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "FD",
-		"edi3:numericCode": "26"
+		"unece:numericCode": "26"
 	}, {
 		"@id": "rec21:Flexitank",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A flexible containment tank made of plastic, typically for the transportation bulk non-hazardous cargoes using standard size shipping containers.",
 		"rdf:value": "FE",
-		"edi3:numericCode": "65"
+		"unece:numericCode": "65"
 	}, {
 		"@id": "rec21:Firkin",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "FI",
-		"edi3:numericCode": "44, 45"
+		"unece:numericCode": "44, 45"
 	}, {
 		"@id": "rec21:Flask",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "FL",
-		"edi3:numericCode": "42, 43"
+		"unece:numericCode": "42, 43"
 	}, {
 		"@id": "rec21:Footlocker",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "FO",
-		"edi3:numericCode": "23"
+		"unece:numericCode": "23"
 	}, {
 		"@id": "rec21:Filmpack",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "FP",
-		"edi3:numericCode": "67"
+		"unece:numericCode": "67"
 	}, {
 		"@id": "rec21:Frame",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "FR",
-		"edi3:numericCode": "26"
+		"unece:numericCode": "26"
 	}, {
 		"@id": "rec21:Foodtainer",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "FT",
-		"edi3:numericCode": "21, 22, 23"
+		"unece:numericCode": "21, 22, 23"
 	}, {
 		"@id": "rec21:Cart_flatbed",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Wheeled flat bedded device on which trays or other regular shaped items are packed for transportation purposes.",
 		"rdf:value": "FW",
-		"edi3:numericCode": "94"
+		"unece:numericCode": "94"
 	}, {
 		"@id": "rec21:Bag_flexible_container",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "FX",
-		"edi3:numericCode": "61, 62, 63, 64, 65, 66"
+		"unece:numericCode": "61, 62, 63, 64, 65, 66"
 	}, {
 		"@id": "rec21:Bottle_gas",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A narrow-necked metal cylinder for retention of liquefied or compressed gas.",
 		"rdf:value": "GB",
-		"edi3:numericCode": "31, 35"
+		"unece:numericCode": "31, 35"
 	}, {
 		"@id": "rec21:Girder",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "GI",
-		"edi3:numericCode": "16"
+		"unece:numericCode": "16"
 	}, {
 		"@id": "rec21:Container_gallon",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A container with a capacity of one gallon.",
 		"rdf:value": "GL",
-		"edi3:numericCode": "32"
+		"unece:numericCode": "32"
 	}, {
 		"@id": "rec21:Receptacle_glass",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Containment vessel made of glass for retaining substances or articles.",
 		"rdf:value": "GR",
-		"edi3:numericCode": "21, 22, 23, 31, 32, 33, 41, 42, 43"
+		"unece:numericCode": "21, 22, 23, 31, 32, 33, 41, 42, 43"
 	}, {
 		"@id": "rec21:Tray_containing_horizontally_stacked_flat_items",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Tray containing flat items stacked on top of one another.",
 		"rdf:value": "GU",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Bag_gunny",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A sack made of gunny or burlap, used for transporting coarse commodities, such as grains, potatoes, and other agricultural products. ",
 		"rdf:value": "GY",
-		"edi3:numericCode": "63, 64"
+		"unece:numericCode": "63, 64"
 	}, {
 		"@id": "rec21:Girders_in_bundle/bunch/truss",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "GZ",
-		"edi3:numericCode": "16"
+		"unece:numericCode": "16"
 	}, {
 		"@id": "rec21:Basket_with_handle_plastic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "HA",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Basket_with_handle_wooden",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "HB",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Basket_with_handle_cardboard",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "HC",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Hogshead",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "HG",
-		"edi3:numericCode": "44, 45"
+		"unece:numericCode": "44, 45"
 	}, {
 		"@id": "rec21:Hanger",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A purpose shaped device with a hook at the top for hanging items from a rail.",
 		"rdf:value": "HN",
-		"edi3:numericCode": "93"
+		"unece:numericCode": "93"
 	}, {
 		"@id": "rec21:Hamper",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "HR",
-		"edi3:numericCode": "23"
+		"unece:numericCode": "23"
 	}, {
 		"@id": "rec21:Package_display_wooden",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "IA",
-		"edi3:numericCode": "21, 22, 23"
+		"unece:numericCode": "21, 22, 23"
 	}, {
 		"@id": "rec21:Package_display_cardboard",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "IB",
-		"edi3:numericCode": "21, 22, 23"
+		"unece:numericCode": "21, 22, 23"
 	}, {
 		"@id": "rec21:Package_display_plastic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "IC",
-		"edi3:numericCode": "21, 22, 23"
+		"unece:numericCode": "21, 22, 23"
 	}, {
 		"@id": "rec21:Package_display_metal",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ID",
-		"edi3:numericCode": "21, 22, 23"
+		"unece:numericCode": "21, 22, 23"
 	}, {
 		"@id": "rec21:Package_show",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "IE",
-		"edi3:numericCode": "21, 22, 23"
+		"unece:numericCode": "21, 22, 23"
 	}, {
 		"@id": "rec21:Package_flow",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A flexible tubular package or skin, possibly transparent, often used for containment of foodstuffs (e.g. salami sausage).",
 		"rdf:value": "IF",
-		"edi3:numericCode": "61, 62"
+		"unece:numericCode": "61, 62"
 	}, {
 		"@id": "rec21:Package_paper_wrapped",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "IG",
-		"edi3:numericCode": "21, 22, 23"
+		"unece:numericCode": "21, 22, 23"
 	}, {
 		"@id": "rec21:Drum_plastic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "IH",
-		"edi3:numericCode": "34"
+		"unece:numericCode": "34"
 	}, {
 		"@id": "rec21:Package_cardboard_with_bottle_grip-holes",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Packaging material made out of cardboard that facilitates the separation of individual glass or plastic bottles.    ",
 		"rdf:value": "IK",
-		"edi3:numericCode": "21, 22, 23"
+		"unece:numericCode": "21, 22, 23"
 	}, {
 		"@id": "rec21:Tray_rigid_lidded_stackable_(CEN_TS_14482:2002)",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Lidded stackable rigid tray compliant with CEN TS 14482:2002.",
 		"rdf:value": "IL",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Ingot",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "IN",
-		"edi3:numericCode": "17"
+		"unece:numericCode": "17"
 	}, {
 		"@id": "rec21:Ingots_in_bundle/bunch/truss",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "IZ",
-		"edi3:numericCode": "17"
+		"unece:numericCode": "17"
 	}, {
 		"@id": "rec21:Bag_jumbo",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A flexible containment bag, widely used for storage, transportation and handling of powder, flake or granular materials. Typically constructed from woven polypropylene (PP) fabric in the form of cubic bags. ",
 		"rdf:value": "JB",
-		"edi3:numericCode": "65"
+		"unece:numericCode": "65"
 	}, {
 		"@id": "rec21:Jerrican_rectangular",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "JC",
-		"edi3:numericCode": "23"
+		"unece:numericCode": "23"
 	}, {
 		"@id": "rec21:Jug",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "JG",
-		"edi3:numericCode": "41"
+		"unece:numericCode": "41"
 	}, {
 		"@id": "rec21:Jar",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "JR",
-		"edi3:numericCode": "41"
+		"unece:numericCode": "41"
 	}, {
 		"@id": "rec21:Jutebag",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "JT",
-		"edi3:numericCode": "61, 65"
+		"unece:numericCode": "61, 65"
 	}, {
 		"@id": "rec21:Jerrican_cylindrical",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "JY",
-		"edi3:numericCode": "33"
+		"unece:numericCode": "33"
 	}, {
 		"@id": "rec21:Keg",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "KG",
-		"edi3:numericCode": "44, 45"
+		"unece:numericCode": "44, 45"
 	}, {
 		"@id": "rec21:Kit",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A set of articles or implements used for a specific purpose.",
 		"rdf:value": "KI",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Luggage",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A collection of bags, cases and/or containers which hold personal belongings for a journey.",
 		"rdf:value": "LE",
-		"edi3:numericCode": "21, 22, 23, 61, 62, 63"
+		"unece:numericCode": "21, 22, 23, 61, 62, 63"
 	}, {
 		"@id": "rec21:Log",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "LG",
-		"edi3:numericCode": "12"
+		"unece:numericCode": "12"
 	}, {
 		"@id": "rec21:Lot",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "LT",
-		"edi3:numericCode": "01, 02, 03"
+		"unece:numericCode": "01, 02, 03"
 	}, {
 		"@id": "rec21:Lug",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A wooden box for the transportation and storage of fruit or vegetables.",
 		"rdf:value": "LU",
-		"edi3:numericCode": "23"
+		"unece:numericCode": "23"
 	}, {
 		"@id": "rec21:Liftvan",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A wooden or metal container used for packing household goods and personal effects.",
 		"rdf:value": "LV",
-		"edi3:numericCode": "22, 23, 24"
+		"unece:numericCode": "22, 23, 24"
 	}, {
 		"@id": "rec21:Logs_in_bundle/bunch/truss",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "LZ",
-		"edi3:numericCode": "12"
+		"unece:numericCode": "12"
 	}, {
 		"@id": "rec21:Crate_metal",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Containment box made of metal for retaining substances or articles.",
 		"rdf:value": "MA",
-		"edi3:numericCode": "23, 24, 25, 27"
+		"unece:numericCode": "23, 24, 25, 27"
 	}, {
 		"@id": "rec21:Bag_multiply",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "MB",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Crate_milk",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "MC",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Container_metal",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A type of containment box made of metal for retaining substances or articles, not otherwise specified as transport equipment.",
 		"rdf:value": "ME",
-		"edi3:numericCode": "23, 24, 25, 27"
+		"unece:numericCode": "23, 24, 25, 27"
 	}, {
 		"@id": "rec21:Receptacle_metal",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Containment vessel made of metal for retaining substances or articles.",
 		"rdf:value": "MR",
-		"edi3:numericCode": "21, 22, 23, 31, 32, 33"
+		"unece:numericCode": "21, 22, 23, 31, 32, 33"
 	}, {
 		"@id": "rec21:Sack_multi-wall",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "MS",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Mat",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "MT",
-		"edi3:numericCode": "67"
+		"unece:numericCode": "67"
 	}, {
 		"@id": "rec21:Receptacle_plastic_wrapped",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Containment vessel wrapped with plastic for retaining substances or articles.",
 		"rdf:value": "MW",
-		"edi3:numericCode": "21, 22, 23, 31, 32, 33, 41, 42, 43, 61, 62, 63"
+		"unece:numericCode": "21, 22, 23, 31, 32, 33, 41, 42, 43, 61, 62, 63"
 	}, {
 		"@id": "rec21:Matchbox",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "MX",
-		"edi3:numericCode": "21"
+		"unece:numericCode": "21"
 	}, {
 		"@id": "rec21:Not_available",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "NA",
-		"edi3:numericCode": "0"
+		"unece:numericCode": "0"
 	}, {
 		"@id": "rec21:Unpacked_or_unpackaged",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "NE",
-		"edi3:numericCode": "0"
+		"unece:numericCode": "0"
 	}, {
 		"@id": "rec21:Unpacked_or_unpackaged_single_unit",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "NF",
-		"edi3:numericCode": "0"
+		"unece:numericCode": "0"
 	}, {
 		"@id": "rec21:Unpacked_or_unpackaged_multiple_units",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "NG",
-		"edi3:numericCode": "0"
+		"unece:numericCode": "0"
 	}, {
 		"@id": "rec21:Nest",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "NS",
-		"edi3:numericCode": "24"
+		"unece:numericCode": "24"
 	}, {
 		"@id": "rec21:Net",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "NT",
-		"edi3:numericCode": "66"
+		"unece:numericCode": "66"
 	}, {
 		"@id": "rec21:Net_tube_plastic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "NU",
-		"edi3:numericCode": "66"
+		"unece:numericCode": "66"
 	}, {
 		"@id": "rec21:Net_tube_textile",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "NV",
-		"edi3:numericCode": "66"
+		"unece:numericCode": "66"
 	}, {
 		"@id": "rec21:Pallet_CHEP_40_cm_x_60_cm",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Commonwealth Handling Equipment Pool (CHEP) standard pallet of dimensions 40 centimeters x 60 centimeters.",
 		"rdf:value": "OA",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Pallet_CHEP_80_cm_x_120_cm",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Commonwealth Handling Equipment Pool (CHEP) standard pallet of dimensions 80 centimeters x 120 centimeters.",
 		"rdf:value": "OB",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Pallet_CHEP_100_cm_x_120_cm",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Commonwealth Handling Equipment Pool (CHEP) standard pallet of dimensions 100 centimeters x 120 centimeters.",
 		"rdf:value": "OC",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Pallet_AS_4068-1993",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Australian standard pallet of dimensions 115.5 centimeters x 116.5 centimeters.",
 		"rdf:value": "OD",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Pallet_ISO_T11",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "ISO standard pallet of dimensions 110 centimeters x 110 centimeters, prevalent in Asia - Pacific region.",
 		"rdf:value": "OE",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Platform_unspecified_weight_or_dimension",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A pallet equivalent shipping platform of unknown dimensions or unknown weight. ",
 		"rdf:value": "OF",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Block",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A solid piece of a hard substance, such as granite, having one or more flat sides.",
 		"rdf:value": "OK",
-		"edi3:numericCode": "17"
+		"unece:numericCode": "17"
 	}, {
 		"@id": "rec21:Octabin",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A standard cardboard container of large dimensions for storing for example vegetables, granules of plastics or other dry products.",
 		"rdf:value": "OT",
-		"edi3:numericCode": "25"
+		"unece:numericCode": "25"
 	}, {
 		"@id": "rec21:Container_outer",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A type of containment box that serves as the outer shipping container, not otherwise specified as transport equipment.",
 		"rdf:value": "OU",
-		"edi3:numericCode": "23, 24, 25, 27"
+		"unece:numericCode": "23, 24, 25, 27"
 	}, {
 		"@id": "rec21:Pan",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A shallow, wide, open container, usually of metal.",
 		"rdf:value": "P2",
-		"edi3:numericCode": "51"
+		"unece:numericCode": "51"
 	}, {
 		"@id": "rec21:Packet",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Small package.",
 		"rdf:value": "PA",
-		"edi3:numericCode": "21, 22, 23"
+		"unece:numericCode": "21, 22, 23"
 	}, {
 		"@id": "rec21:Pallet_box_Combined_open-ended_box_and_pallet",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "PB",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Parcel",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "PC",
-		"edi3:numericCode": "21, 22, 23, 61, 62, 63"
+		"unece:numericCode": "21, 22, 23, 61, 62, 63"
 	}, {
 		"@id": "rec21:Pallet_modular_collars_80cms_*_100cms",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Standard sized pallet of dimensions 80 centimeters by 100 centimeters (cms).",
 		"rdf:value": "PD",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Pallet_modular_collars_80cms_*_120cms",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Standard sized pallet of dimensions 80 centimeters by 120 centimeters (cms).",
 		"rdf:value": "PE",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Pen",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A small open top enclosure for retaining animals.",
 		"rdf:value": "PF",
-		"edi3:numericCode": "26, 27"
+		"unece:numericCode": "26, 27"
 	}, {
 		"@id": "rec21:Plate",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "PG",
-		"edi3:numericCode": "15"
+		"unece:numericCode": "15"
 	}, {
 		"@id": "rec21:Pitcher",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "PH",
-		"edi3:numericCode": "41"
+		"unece:numericCode": "41"
 	}, {
 		"@id": "rec21:Pipe",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "PI",
-		"edi3:numericCode": "11"
+		"unece:numericCode": "11"
 	}, {
 		"@id": "rec21:Punnet",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "PJ",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Package",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Standard packaging unit.",
 		"rdf:value": "PK",
-		"edi3:numericCode": "21, 22, 23"
+		"unece:numericCode": "21, 22, 23"
 	}, {
 		"@id": "rec21:Pail",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "PL",
-		"edi3:numericCode": "51"
+		"unece:numericCode": "51"
 	}, {
 		"@id": "rec21:Plank",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "PN",
-		"edi3:numericCode": "16"
+		"unece:numericCode": "16"
 	}, {
 		"@id": "rec21:Pouch",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "PO",
-		"edi3:numericCode": "61"
+		"unece:numericCode": "61"
 	}, {
 		"@id": "rec21:Piece",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A loose or unpacked article. ",
 		"rdf:value": "PP",
-		"edi3:numericCode": "19"
+		"unece:numericCode": "19"
 	}, {
 		"@id": "rec21:Receptacle_plastic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Containment vessel made of plastic for retaining substances or articles.",
 		"rdf:value": "PR",
-		"edi3:numericCode": "21, 22, 23, 31, 32, 33, 41, 42, 43, 61, 62, 63"
+		"unece:numericCode": "21, 22, 23, 31, 32, 33, 41, 42, 43, 61, 62, 63"
 	}, {
 		"@id": "rec21:Pot",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "PT",
-		"edi3:numericCode": "41"
+		"unece:numericCode": "41"
 	}, {
 		"@id": "rec21:Tray",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "PU",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Pipes_in_bundle/bunch/truss",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "PV",
-		"edi3:numericCode": "11"
+		"unece:numericCode": "11"
 	}, {
 		"@id": "rec21:Pallet",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Platform or open-ended box, usually made of wood, on which goods are retained for ease of mechanical handling during transport and storage.",
 		"rdf:value": "PX",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Plates_in_bundle/bunch/truss",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "PY",
-		"edi3:numericCode": "15"
+		"unece:numericCode": "15"
 	}, {
 		"@id": "rec21:Planks_in_bundle/bunch/truss",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "PZ",
-		"edi3:numericCode": "16"
+		"unece:numericCode": "16"
 	}, {
 		"@id": "rec21:Drum_steel_non-removable_head",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QA",
-		"edi3:numericCode": "34"
+		"unece:numericCode": "34"
 	}, {
 		"@id": "rec21:Drum_steel_removable_head",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QB",
-		"edi3:numericCode": "34"
+		"unece:numericCode": "34"
 	}, {
 		"@id": "rec21:Drum_aluminium_non-removable_head",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QC",
-		"edi3:numericCode": "34"
+		"unece:numericCode": "34"
 	}, {
 		"@id": "rec21:Drum_aluminium_removable_head",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QD",
-		"edi3:numericCode": "34"
+		"unece:numericCode": "34"
 	}, {
 		"@id": "rec21:Drum_plastic_non-removable_head",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QF",
-		"edi3:numericCode": "34"
+		"unece:numericCode": "34"
 	}, {
 		"@id": "rec21:Drum_plastic_removable_head",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QG",
-		"edi3:numericCode": "34"
+		"unece:numericCode": "34"
 	}, {
 		"@id": "rec21:Barrel_wooden_bung_type",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QH",
-		"edi3:numericCode": "44, 45"
+		"unece:numericCode": "44, 45"
 	}, {
 		"@id": "rec21:Barrel_wooden_removable_head",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QJ",
-		"edi3:numericCode": "44, 45"
+		"unece:numericCode": "44, 45"
 	}, {
 		"@id": "rec21:Jerrican_steel_non-removable_head",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QK",
-		"edi3:numericCode": "23, 33"
+		"unece:numericCode": "23, 33"
 	}, {
 		"@id": "rec21:Jerrican_steel_removable_head",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QL",
-		"edi3:numericCode": "23, 33"
+		"unece:numericCode": "23, 33"
 	}, {
 		"@id": "rec21:Jerrican_plastic_non-removable_head",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QM",
-		"edi3:numericCode": "23, 33"
+		"unece:numericCode": "23, 33"
 	}, {
 		"@id": "rec21:Jerrican_plastic_removable_head",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QN",
-		"edi3:numericCode": "23, 33"
+		"unece:numericCode": "23, 33"
 	}, {
 		"@id": "rec21:Box_wooden_natural_wood_ordinary",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QP",
-		"edi3:numericCode": "21, 22, 23, 24, 25"
+		"unece:numericCode": "21, 22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Box_wooden_natural_wood_with_sift_proof_walls",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QQ",
-		"edi3:numericCode": "21, 22, 23, 24, 25"
+		"unece:numericCode": "21, 22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Box_plastic_expanded",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QR",
-		"edi3:numericCode": "21, 22, 23, 24, 25"
+		"unece:numericCode": "21, 22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Box_plastic_solid",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "QS",
-		"edi3:numericCode": "21, 22, 23, 24, 25"
+		"unece:numericCode": "21, 22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Rod",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "RD",
-		"edi3:numericCode": "12"
+		"unece:numericCode": "12"
 	}, {
 		"@id": "rec21:Ring",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "RG",
-		"edi3:numericCode": "14"
+		"unece:numericCode": "14"
 	}, {
 		"@id": "rec21:Rack_clothing_hanger",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "RJ",
-		"edi3:numericCode": "93"
+		"unece:numericCode": "93"
 	}, {
 		"@id": "rec21:Rack",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "RK",
-		"edi3:numericCode": "93"
+		"unece:numericCode": "93"
 	}, {
 		"@id": "rec21:Reel",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Cylindrical rotatory device with a rim at each end on which materials are wound.",
 		"rdf:value": "RL",
-		"edi3:numericCode": "91"
+		"unece:numericCode": "91"
 	}, {
 		"@id": "rec21:Roll",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "RO",
-		"edi3:numericCode": "13"
+		"unece:numericCode": "13"
 	}, {
 		"@id": "rec21:Rednet",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Containment material made of red mesh netting for retaining articles (e.g. trees).",
 		"rdf:value": "RT",
-		"edi3:numericCode": "66"
+		"unece:numericCode": "66"
 	}, {
 		"@id": "rec21:Rods_in_bundle/bunch/truss",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "RZ",
-		"edi3:numericCode": "12"
+		"unece:numericCode": "12"
 	}, {
 		"@id": "rec21:Sack",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "SA",
-		"edi3:numericCode": "65"
+		"unece:numericCode": "65"
 	}, {
 		"@id": "rec21:Slab",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "SB",
-		"edi3:numericCode": "16, 17"
+		"unece:numericCode": "16, 17"
 	}, {
 		"@id": "rec21:Crate_shallow",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "SC",
-		"edi3:numericCode": "27"
+		"unece:numericCode": "27"
 	}, {
 		"@id": "rec21:Spindle",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "SD",
-		"edi3:numericCode": "91"
+		"unece:numericCode": "91"
 	}, {
 		"@id": "rec21:Sea-chest",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "SE",
-		"edi3:numericCode": "22, 23"
+		"unece:numericCode": "22, 23"
 	}, {
 		"@id": "rec21:Sachet",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "SH",
-		"edi3:numericCode": "61"
+		"unece:numericCode": "61"
 	}, {
 		"@id": "rec21:Skid",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A low movable platform or pallet to facilitate the handling and transport of goods.",
 		"rdf:value": "SI",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Case_skeleton",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "SK",
-		"edi3:numericCode": "26"
+		"unece:numericCode": "26"
 	}, {
 		"@id": "rec21:Slipsheet",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Hard plastic sheeting primarily used as the base on which to stack goods to optimise the space within a container. May be used as an alternative to a palletized packaging.",
 		"rdf:value": "SL",
-		"edi3:numericCode": "67"
+		"unece:numericCode": "67"
 	}, {
 		"@id": "rec21:Sheetmetal",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "SM",
-		"edi3:numericCode": "15"
+		"unece:numericCode": "15"
 	}, {
 		"@id": "rec21:Spool",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A packaging container used in the transport of such items as wire, cable, tape and yarn.",
 		"rdf:value": "SO",
-		"edi3:numericCode": "91"
+		"unece:numericCode": "91"
 	}, {
 		"@id": "rec21:Sheet_plastic_wrapping",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "SP",
-		"edi3:numericCode": "15"
+		"unece:numericCode": "15"
 	}, {
 		"@id": "rec21:Case_steel",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "SS",
-		"edi3:numericCode": "21, 22, 23, 24, 25"
+		"unece:numericCode": "21, 22, 23, 24, 25"
 	}, {
 		"@id": "rec21:Sheet",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ST",
-		"edi3:numericCode": "15"
+		"unece:numericCode": "15"
 	}, {
 		"@id": "rec21:Suitcase",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "SU",
-		"edi3:numericCode": "21, 22, 23, 61, 62, 63"
+		"unece:numericCode": "21, 22, 23, 61, 62, 63"
 	}, {
 		"@id": "rec21:Envelope_steel",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "SV",
-		"edi3:numericCode": "67"
+		"unece:numericCode": "67"
 	}, {
 		"@id": "rec21:Shrinkwrapped",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Goods retained in a transparent plastic film that has been wrapped around and then shrunk tightly on to the goods.",
 		"rdf:value": "SW",
-		"edi3:numericCode": "67"
+		"unece:numericCode": "67"
 	}, {
 		"@id": "rec21:Set",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "SX",
-		"edi3:numericCode": "11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,40, 41, 42, 43, 44, 45"
+		"unece:numericCode": "11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,40, 41, 42, 43, 44, 45"
 	}, {
 		"@id": "rec21:Sleeve",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "SY",
-		"edi3:numericCode": "69"
+		"unece:numericCode": "69"
 	}, {
 		"@id": "rec21:Sheets_in_bundle/bunch/truss",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "SZ",
-		"edi3:numericCode": "15"
+		"unece:numericCode": "15"
 	}, {
 		"@id": "rec21:Tablet",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A loose or unpacked article in the form of a bar, block or piece. ",
 		"rdf:value": "T1",
-		"edi3:numericCode": "16"
+		"unece:numericCode": "16"
 	}, {
 		"@id": "rec21:Tub",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "TB",
-		"edi3:numericCode": "51"
+		"unece:numericCode": "51"
 	}, {
 		"@id": "rec21:Tea-chest",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "TC",
-		"edi3:numericCode": "21, 22, 23"
+		"unece:numericCode": "21, 22, 23"
 	}, {
 		"@id": "rec21:Tube_collapsible",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "TD",
-		"edi3:numericCode": "61, 62, 63, 64, 65"
+		"unece:numericCode": "61, 62, 63, 64, 65"
 	}, {
 		"@id": "rec21:Tyre",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A ring made of rubber and/or metal surrounding a wheel.",
 		"rdf:value": "TE",
-		"edi3:numericCode": "93"
+		"unece:numericCode": "93"
 	}, {
 		"@id": "rec21:Tank_container_generic",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A specially constructed container for transporting liquids and gases in bulk.",
 		"rdf:value": "TG",
-		"edi3:numericCode": "93"
+		"unece:numericCode": "93"
 	}, {
 		"@id": "rec21:Tierce",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "TI",
-		"edi3:numericCode": "44"
+		"unece:numericCode": "44"
 	}, {
 		"@id": "rec21:Tank_rectangular",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "TK",
-		"edi3:numericCode": "24, 25"
+		"unece:numericCode": "24, 25"
 	}, {
 		"@id": "rec21:Tub_with_lid",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "TL",
-		"edi3:numericCode": "51"
+		"unece:numericCode": "51"
 	}, {
 		"@id": "rec21:Tin",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "TN",
-		"edi3:numericCode": "21, 22"
+		"unece:numericCode": "21, 22"
 	}, {
 		"@id": "rec21:Tun",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "TO",
-		"edi3:numericCode": "44, 45"
+		"unece:numericCode": "44, 45"
 	}, {
 		"@id": "rec21:Trunk",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "TR",
-		"edi3:numericCode": "24, 25"
+		"unece:numericCode": "24, 25"
 	}, {
 		"@id": "rec21:Truss",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "TS",
-		"edi3:numericCode": "16"
+		"unece:numericCode": "16"
 	}, {
 		"@id": "rec21:Bag_tote",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A capacious bag or basket.",
 		"rdf:value": "TT",
-		"edi3:numericCode": "62, 63"
+		"unece:numericCode": "62, 63"
 	}, {
 		"@id": "rec21:Tube",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "TU",
-		"edi3:numericCode": "11"
+		"unece:numericCode": "11"
 	}, {
 		"@id": "rec21:Tube_with_nozzle",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A tube made of plastic, metal or cardboard fitted with a nozzle, containing a liquid or semi-liquid product, e.g. silicon.",
 		"rdf:value": "TV",
-		"edi3:numericCode": "31, 32"
+		"unece:numericCode": "31, 32"
 	}, {
 		"@id": "rec21:Pallet_triwall",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A lightweight pallet made from heavy duty corrugated board.  ",
 		"rdf:value": "TW",
-		"edi3:numericCode": "92"
+		"unece:numericCode": "92"
 	}, {
 		"@id": "rec21:Tank_cylindrical",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "TY",
-		"edi3:numericCode": "34, 35"
+		"unece:numericCode": "34, 35"
 	}, {
 		"@id": "rec21:Tubes_in_bundle/bunch/truss",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "TZ",
-		"edi3:numericCode": "11"
+		"unece:numericCode": "11"
 	}, {
 		"@id": "rec21:Uncaged",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "UC",
-		"edi3:numericCode": "0"
+		"unece:numericCode": "0"
 	}, {
 		"@id": "rec21:Unit",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A type of package composed of a single item or object, not otherwise specified as a unit of transport equipment.",
 		"rdf:value": "UN",
-		"edi3:numericCode": "23, 24, 25, 27"
+		"unece:numericCode": "23, 24, 25, 27"
 	}, {
 		"@id": "rec21:Vat",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "VA",
-		"edi3:numericCode": "35"
+		"unece:numericCode": "35"
 	}, {
 		"@id": "rec21:Bulk_gas_(at_1031_mbar_and_15°C)",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "VG",
-		"edi3:numericCode": "6"
+		"unece:numericCode": "6"
 	}, {
 		"@id": "rec21:Vial",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "VI",
-		"edi3:numericCode": "31"
+		"unece:numericCode": "31"
 	}, {
 		"@id": "rec21:Vanpack",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A type of wooden crate. ",
 		"rdf:value": "VK",
-		"edi3:numericCode": "99"
+		"unece:numericCode": "99"
 	}, {
 		"@id": "rec21:Bulk_liquid",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "VL",
-		"edi3:numericCode": "4"
+		"unece:numericCode": "4"
 	}, {
 		"@id": "rec21:Bulk_solid_large_particles_(“nodules”)",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "VO",
-		"edi3:numericCode": "3"
+		"unece:numericCode": "3"
 	}, {
 		"@id": "rec21:Vacuum-packed",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "VP",
-		"edi3:numericCode": "67"
+		"unece:numericCode": "67"
 	}, {
 		"@id": "rec21:Bulk_liquefied_gas_(at_abnormal_temperature/pressure)",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "VQ",
-		"edi3:numericCode": "5"
+		"unece:numericCode": "5"
 	}, {
 		"@id": "rec21:Vehicle",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A self-propelled means of conveyance.",
 		"rdf:value": "VN",
-		"edi3:numericCode": "93"
+		"unece:numericCode": "93"
 	}, {
 		"@id": "rec21:Bulk_solid_granular_particles_(“grains”)",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "VR",
-		"edi3:numericCode": "2"
+		"unece:numericCode": "2"
 	}, {
 		"@id": "rec21:Bulk_scrap_metal",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "Loose or unpacked scrap metal transported in bulk form. ",
 		"rdf:value": "VS",
-		"edi3:numericCode": "9"
+		"unece:numericCode": "9"
 	}, {
 		"@id": "rec21:Bulk_solid_fine_particles_(“powders”)",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "VY",
-		"edi3:numericCode": "1"
+		"unece:numericCode": "1"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "A reusable container made of metal, plastic, textile, wood or composite materials used to facilitate transportation of bulk solids and liquids in manageable volumes.",
 		"rdf:value": "WA",
-		"edi3:numericCode": "23, 24, 25, 26, 62, 63, 64"
+		"unece:numericCode": "23, 24, 25, 26, 62, 63, 64"
 	}, {
 		"@id": "rec21:Wickerbottle",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WB",
-		"edi3:numericCode": "42, 43"
+		"unece:numericCode": "42, 43"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_steel",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WC",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_aluminium",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WD",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_metal",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WF",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_steel_pressurised_>_10_kpa",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WG",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_aluminium_pressurised_>_10_kpa",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WH",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_metal_pressure_10_kpa",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WJ",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_steel_liquid",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WK",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_aluminium_liquid",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WL",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_metal_liquid",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WM",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_woven_plastic_without_coat/liner",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WN",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_woven_plastic_coated",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WP",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_woven_plastic_with_liner",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WQ",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_woven_plastic_coated_and_liner",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WR",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_plastic_film",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WS",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_textile_with_out_coat/liner",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WT",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_natural_wood_with_inner_liner",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WU",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_textile_coated",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WV",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_textile_with_liner",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WW",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_textile_coated_and_liner",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WX",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_plywood_with_inner_liner",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WY",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_reconstituted_wood_with_inner_liner",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "WZ",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Bag_woven_plastic_without_inner_coat/liner",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "XA",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Bag_woven_plastic_sift_proof",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "XB",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Bag_woven_plastic_water_resistant",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "XC",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Bag_plastics_film",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "XD",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Bag_textile_without_inner_coat/liner",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "XF",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Bag_textile_sift_proof",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "XG",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Bag_textile_water_resistant",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "XH",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Bag_paper_multi-wall",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "XJ",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Bag_paper_multi-wall_water_resistant",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "XK",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Composite_packaging_plastic_receptacle_in_steel_drum",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YA",
-		"edi3:numericCode": "33, 34"
+		"unece:numericCode": "33, 34"
 	}, {
 		"@id": "rec21:Composite_packaging_plastic_receptacle_in_steel_crate_box",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YB",
-		"edi3:numericCode": "24, 25"
+		"unece:numericCode": "24, 25"
 	}, {
 		"@id": "rec21:Composite_packaging_plastic_receptacle_in_aluminium_drum",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YC",
-		"edi3:numericCode": "33, 34"
+		"unece:numericCode": "33, 34"
 	}, {
 		"@id": "rec21:Composite_packaging_plastic_receptacle_in_aluminium_crate",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YD",
-		"edi3:numericCode": "24, 25"
+		"unece:numericCode": "24, 25"
 	}, {
 		"@id": "rec21:Composite_packaging_plastic_receptacle_in_wooden_box",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YF",
-		"edi3:numericCode": "24, 25"
+		"unece:numericCode": "24, 25"
 	}, {
 		"@id": "rec21:Composite_packaging_plastic_receptacle_in_plywood_drum",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YG",
-		"edi3:numericCode": "33, 34"
+		"unece:numericCode": "33, 34"
 	}, {
 		"@id": "rec21:Composite_packaging_plastic_receptacle_in_plywood_box",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YH",
-		"edi3:numericCode": "24, 25"
+		"unece:numericCode": "24, 25"
 	}, {
 		"@id": "rec21:Composite_packaging_plastic_receptacle_in_fibre_drum",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YJ",
-		"edi3:numericCode": "33, 34"
+		"unece:numericCode": "33, 34"
 	}, {
 		"@id": "rec21:Composite_packaging_plastic_receptacle_in_fibreboard_box",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YK",
-		"edi3:numericCode": "24, 25"
+		"unece:numericCode": "24, 25"
 	}, {
 		"@id": "rec21:Composite_packaging_plastic_receptacle_in_plastic_drum",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YL",
-		"edi3:numericCode": "33, 34"
+		"unece:numericCode": "33, 34"
 	}, {
 		"@id": "rec21:Composite_packaging_plastic_receptacle_in_solid_plastic_box",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YM",
-		"edi3:numericCode": "24, 25"
+		"unece:numericCode": "24, 25"
 	}, {
 		"@id": "rec21:Composite_packaging_glass_receptacle_in_steel_drum",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YN",
-		"edi3:numericCode": "33, 34"
+		"unece:numericCode": "33, 34"
 	}, {
 		"@id": "rec21:Composite_packaging_glass_receptacle_in_steel_crate_box",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YP",
-		"edi3:numericCode": "24, 25"
+		"unece:numericCode": "24, 25"
 	}, {
 		"@id": "rec21:Composite_packaging_glass_receptacle_in_aluminium_drum",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YQ",
-		"edi3:numericCode": "33, 34"
+		"unece:numericCode": "33, 34"
 	}, {
 		"@id": "rec21:Composite_packaging_glass_receptacle_in_aluminium_crate",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YR",
-		"edi3:numericCode": "24, 25"
+		"unece:numericCode": "24, 25"
 	}, {
 		"@id": "rec21:Composite_packaging_glass_receptacle_in_wooden_box",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YS",
-		"edi3:numericCode": "24, 25"
+		"unece:numericCode": "24, 25"
 	}, {
 		"@id": "rec21:Composite_packaging_glass_receptacle_in_plywood_drum",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YT",
-		"edi3:numericCode": "33, 34"
+		"unece:numericCode": "33, 34"
 	}, {
 		"@id": "rec21:Composite_packaging_glass_receptacle_in_wickerwork_hamper",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YV",
-		"edi3:numericCode": "23"
+		"unece:numericCode": "23"
 	}, {
 		"@id": "rec21:Composite_packaging_glass_receptacle_in_fibre_drum",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YW",
-		"edi3:numericCode": "33, 34"
+		"unece:numericCode": "33, 34"
 	}, {
 		"@id": "rec21:Composite_packaging_glass_receptacle_in_fibreboard_box",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YX",
-		"edi3:numericCode": "24, 25"
+		"unece:numericCode": "24, 25"
 	}, {
 		"@id": "rec21:Composite_packaging_glass_receptacle_in_expandable_plastic_pack",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YY",
-		"edi3:numericCode": "62, 63"
+		"unece:numericCode": "62, 63"
 	}, {
 		"@id": "rec21:Composite_packaging_glass_receptacle_in_solid_plastic_pack",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "YZ",
-		"edi3:numericCode": "23, 24"
+		"unece:numericCode": "23, 24"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_paper_multi-wall",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZA",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Bag_large",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZB",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_paper_multi-wall_water_resistant",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZC",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_rigid_plastic_with_structural_equipment_solids",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZD",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_rigid_plastic_freestanding_solids",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZF",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_rigid_plastic_with_structural_equipment_pressurised",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZG",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_rigid_plastic_freestanding_pressurised",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZH",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_rigid_plastic_with_structural_equipment_liquids",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZJ",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_rigid_plastic_freestanding_liquids",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZK",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_composite_rigid_plastic_solids",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZL",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_composite_flexible_plastic_solids",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZM",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_composite_rigid_plastic_pressurised",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZN",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_composite_flexible_plastic_pressurised",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZP",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_composite_rigid_plastic_liquids",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZQ",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_composite_flexible_plastic_liquids",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZR",
-		"edi3:numericCode": "62, 63, 64"
+		"unece:numericCode": "62, 63, 64"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_composite",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZS",
-		"edi3:numericCode": "23, 24, 25, 26, 62, 63, 64"
+		"unece:numericCode": "23, 24, 25, 26, 62, 63, 64"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_fibreboard",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZT",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_flexible",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZU",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_metal_other_than_steel",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZV",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_natural_wood",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZW",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_plywood",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZX",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Intermediate_bulk_container_reconstituted_wood",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZY",
-		"edi3:numericCode": "23, 24, 25, 26"
+		"unece:numericCode": "23, 24, 25, 26"
 	}, {
 		"@id": "rec21:Mutually_defined",
-		"@type": "edi3:UNECERec21Code",
+		"@type": "unece:UNECERec21Code",
 		"rdfs:comment": "",
 		"rdf:value": "ZZ",
-		"edi3:numericCode": "0"
+		"unece:numericCode": "0"
 	}]
 }

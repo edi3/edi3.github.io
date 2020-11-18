@@ -1,1700 +1,1700 @@
 {
     "@context": {
-        "edi3": "https://edi3.org/vocab#",
-        "rec28": "https://unece.org/codelists/rec28#",
+        "unece":"https://service.unece.org/trade/uncefact/vocabulary/unece#",
+        "rec28": "https://service.unece.org/trade/uncefact/vocabulary/rec28#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
     "@graph": [
         {
             "@id": "rec28:General_cargo_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry general cargo.",
             "rdf:value": "150"
         },
         {
             "@id": "rec28:Grain_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry grain.",
             "rdf:value": "1501"
         },
         {
             "@id": "rec28:Timber/log_carrier",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry logs and timber.",
             "rdf:value": "1502"
         },
         {
             "@id": "rec28:Wood_chips_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry wood chips.",
             "rdf:value": "1503"
         },
         {
             "@id": "rec28:Steel_products_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry steel products.",
             "rdf:value": "1504"
         },
         {
             "@id": "rec28:Carrier_general_cargo/container",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry general cargo and containers.",
             "rdf:value": "1505"
         },
         {
             "@id": "rec28:Temperature_controlled_cargo_vessels",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry temperature-controlled cargo.",
             "rdf:value": "1506"
         },
         {
             "@id": "rec28:Unit_carrier",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry unit loads",
             "rdf:value": "151"
         },
         {
             "@id": "rec28:Full_container_ship/cellular_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry containers only.",
             "rdf:value": "1511"
         },
         {
             "@id": "rec28:RoRo_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel with ramp designed to carry roll-on/roll-off cargo.",
             "rdf:value": "1512"
         },
         {
             "@id": "rec28:Car_carrier",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry automotive vehicles or their knock-down parts.",
             "rdf:value": "1513"
         },
         {
             "@id": "rec28:Livestock_carrier",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry livestock.",
             "rdf:value": "1514"
         },
         {
             "@id": "rec28:Barge_carrier_–_Lash_ship",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry barges. Lash means lighters aboard ship.",
             "rdf:value": "1515"
         },
         {
             "@id": "rec28:Chemical_carrier",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry chemicals in bulk or drums not in tanks.",
             "rdf:value": "1516"
         },
         {
             "@id": "rec28:Irradiated_fuel_carrier",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry irradiated fuel.",
             "rdf:value": "1517"
         },
         {
             "@id": "rec28:Heavy_cargo_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Ship designed to carry heavy cargo.",
             "rdf:value": "1518"
         },
         {
             "@id": "rec28:RoRo/Container_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry both containers and roll-on/roll-off cargo.",
             "rdf:value": "1519"
         },
         {
             "@id": "rec28:Bulk_carrier",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry bulk cargo.",
             "rdf:value": "152"
         },
         {
             "@id": "rec28:Dry_bulk_carrier",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry dry bulk (expellers).",
             "rdf:value": "1521"
         },
         {
             "@id": "rec28:Ore_carrier",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry ore.",
             "rdf:value": "1522"
         },
         {
             "@id": "rec28:Cement_carrier",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry cement.",
             "rdf:value": "1523"
         },
         {
             "@id": "rec28:Gravel_carrier",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry gravel.",
             "rdf:value": "1524"
         },
         {
             "@id": "rec28:Coal_carrier",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry coal.",
             "rdf:value": "1525"
         },
         {
             "@id": "rec28:Tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel solely equipped with tanks to carry cargo.",
             "rdf:value": "153"
         },
         {
             "@id": "rec28:Crude_oil_tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Tanker designed to carry crude oil.",
             "rdf:value": "1531"
         },
         {
             "@id": "rec28:Chemical_tanker_coaster",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Tanker designed to carry chemicals in coastal traffic.",
             "rdf:value": "1532"
         },
         {
             "@id": "rec28:Chemical_tanker_deep_sea",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Tanker designed to carry chemicals in deep sea.",
             "rdf:value": "1533"
         },
         {
             "@id": "rec28:Oil_and_other_derivatives_tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Tanker designed to carry oil and other derivatives.",
             "rdf:value": "1534"
         },
         {
             "@id": "rec28:Liquefied_gas_tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Tanker designed to carry liquefied gas.",
             "rdf:value": "154"
         },
         {
             "@id": "rec28:LPG_tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry Liquefied Petroleum Gas (LPG).",
             "rdf:value": "1541"
         },
         {
             "@id": "rec28:LNG_tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Tanker designed to carry Liquefied Natural Gas (LNG).",
             "rdf:value": "1542"
         },
         {
             "@id": "rec28:LNG/LPG_tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Tanker designed to carry Liquefied Natural Gas (LNG) and Liquefied Petroleum Gas (LPG).",
             "rdf:value": "1543"
         },
         {
             "@id": "rec28:Other_special_tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Tanker designed to carry other special liquids.",
             "rdf:value": "155"
         },
         {
             "@id": "rec28:Asphalt/bitumen_tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Tanker designed asphalt and bitumen.",
             "rdf:value": "1551"
         },
         {
             "@id": "rec28:Molasses_tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Tanker designed to carry molasses.",
             "rdf:value": "1552"
         },
         {
             "@id": "rec28:Vegetable_oil_tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Tanker designed to carry vegetable oil.",
             "rdf:value": "1553"
         },
         {
             "@id": "rec28:Cargo_and_passenger_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry cargo and passengers.",
             "rdf:value": "157"
         },
         {
             "@id": "rec28:Passenger_ship",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry more than 12 passengers.",
             "rdf:value": "159"
         },
         {
             "@id": "rec28:Cruise_ship_1591",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Passenger ship designed to carry tourists on specified routes.",
             "rdf:value": "1591"
         },
         {
             "@id": "rec28:Ferry_1592",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to ply regularly between two or more ports.",
             "rdf:value": "1592"
         },
         {
             "@id": "rec28:Other_passenger_ship",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry passengers, not otherwise specified.",
             "rdf:value": "1593"
         },
         {
             "@id": "rec28:Passenger_ship_sailing",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry passengers and mainly propelled by sails.",
             "rdf:value": "1594"
         },
         {
             "@id": "rec28:Assistance_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to give assistance.",
             "rdf:value": "160"
         },
         {
             "@id": "rec28:Tug_without_tow",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to tow objects but sailing alone.",
             "rdf:value": "1601"
         },
         {
             "@id": "rec28:Tug_with_tow",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to tow, and towing an object.",
             "rdf:value": "1602"
         },
         {
             "@id": "rec28:Salvage_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to salvage.",
             "rdf:value": "1603"
         },
         {
             "@id": "rec28:Rescue_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to effect rescue operations.",
             "rdf:value": "1604"
         },
         {
             "@id": "rec28:Oil_combat_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to combat oil spills.",
             "rdf:value": "1605"
         },
         {
             "@id": "rec28:Oil_rig",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Object designed for drilling oil at sea.",
             "rdf:value": "1606"
         },
         {
             "@id": "rec28:Hospital_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to serve as a hospital at sea.",
             "rdf:value": "1607"
         },
         {
             "@id": "rec28:Other_sea-going_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Sea-going vessel, not otherwise specified.",
             "rdf:value": "170"
         },
         {
             "@id": "rec28:Pilot_boat",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to convey pilots to/from ships.",
             "rdf:value": "1711"
         },
         {
             "@id": "rec28:Patrol/measure_ship",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to guard, patrol or measure.",
             "rdf:value": "1712"
         },
         {
             "@id": "rec28:Work_ship",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to assist in work.",
             "rdf:value": "172"
         },
         {
             "@id": "rec28:Supply_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to provide supplies.",
             "rdf:value": "1721"
         },
         {
             "@id": "rec28:Offshore_support_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to provide offshore support.",
             "rdf:value": "1723"
         },
         {
             "@id": "rec28:Pontoon",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Flat-bottomed vessel with a flat deck.",
             "rdf:value": "1724"
         },
         {
             "@id": "rec28:Stone_dumping_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to dump stones.",
             "rdf:value": "1725"
         },
         {
             "@id": "rec28:Cable_layer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to lay cable.",
             "rdf:value": "1726"
         },
         {
             "@id": "rec28:Buoyage_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to handle buoys.",
             "rdf:value": "1727"
         },
         {
             "@id": "rec28:Icebreaker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to break ice.",
             "rdf:value": "1728"
         },
         {
             "@id": "rec28:Pipelaying_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to lay pipe.",
             "rdf:value": "1729"
         },
         {
             "@id": "rec28:Push_boat",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to push other vessels.",
             "rdf:value": "173"
         },
         {
             "@id": "rec28:Dredger",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to scoop or suck mud or sand.",
             "rdf:value": "174"
         },
         {
             "@id": "rec28:Fishing_boat_175",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for fishing.",
             "rdf:value": "175"
         },
         {
             "@id": "rec28:Trawler",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to drag a bag-like net.",
             "rdf:value": "1751"
         },
         {
             "@id": "rec28:Cutter",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Small vessel that sometimes can be carried on a larger ship.",
             "rdf:value": "1752"
         },
         {
             "@id": "rec28:Factory_ship",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed as a fish factory.",
             "rdf:value": "1753"
         },
         {
             "@id": "rec28:Research_and_education_ship",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for research and education.",
             "rdf:value": "176"
         },
         {
             "@id": "rec28:Fishery_research_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for fishery research.",
             "rdf:value": "1761"
         },
         {
             "@id": "rec28:Climate_registration_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for climate registration.",
             "rdf:value": "1762"
         },
         {
             "@id": "rec28:Ship_for_environmental_measurement",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for environmental monitoring and measurement.",
             "rdf:value": "1763"
         },
         {
             "@id": "rec28:Scientific_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for scientific purposes.",
             "rdf:value": "1764"
         },
         {
             "@id": "rec28:Sailing_school_ship",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for training, powered by sail.",
             "rdf:value": "1765"
         },
         {
             "@id": "rec28:Training_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for training.",
             "rdf:value": "1766"
         },
         {
             "@id": "rec28:Navy_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel operated by a Navy.",
             "rdf:value": "177"
         },
         {
             "@id": "rec28:Structure_floating",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Any floating structure.",
             "rdf:value": "178"
         },
         {
             "@id": "rec28:Crane_floating",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A crane mounted on a barge or pontoon.",
             "rdf:value": "1781"
         },
         {
             "@id": "rec28:Dock_floating",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A submersible floating structure used as a dock.",
             "rdf:value": "1782"
         },
         {
             "@id": "rec28:Pleasure_boat",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for recreation.",
             "rdf:value": "180"
         },
         {
             "@id": "rec28:Speedboat",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for speed, often used for recreation.",
             "rdf:value": "181"
         },
         {
             "@id": "rec28:Sailing_boat_with_auxiliary_motor",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed primarily for sailing outfitted with an auxiliary motor.",
             "rdf:value": "182"
         },
         {
             "@id": "rec28:Sailing_yacht",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A specific type of vessel mostly used for pleasure and designed for sailing.",
             "rdf:value": "183"
         },
         {
             "@id": "rec28:Boat_for_sport_fishing",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for sport fishing.",
             "rdf:value": "184"
         },
         {
             "@id": "rec28:Craft_pleasure_longer_than_20_metres",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A pleasure craft equal or longer than 20 metres, used for purposes of sports and recreation and not financial gain.",
             "rdf:value": "185"
         },
         {
             "@id": "rec28:Craft_pleasure_smaller_than_20_metres",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A pleasure craft smaller than 20 metres, used for purposes of sports and recreation and not financial gain.",
             "rdf:value": "186"
         },
         {
             "@id": "rec28:Craft_other_extra_definitions_and_specifications",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A small craft with some extra definitions and specifications.",
             "rdf:value": "187"
         },
         {
             "@id": "rec28:Craft_other_recreational",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for recreation, not otherwise specified.",
             "rdf:value": "189"
         },
         {
             "@id": "rec28:Fast_ship",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Fast, all-purpose vessel.",
             "rdf:value": "190"
         },
         {
             "@id": "rec28:Hydrofoil",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel with wing-like structure for skimming at high speed.",
             "rdf:value": "191"
         },
         {
             "@id": "rec28:Catamaran_fast",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Fast vessel designed with two parallel hulls.",
             "rdf:value": "192"
         },
         {
             "@id": "rec28:Train_railroad",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "One or more rail wagons pulled or pushed by one or more locomotive units, or self-propelled, that move over rail tracks.",
             "rdf:value": "210"
         },
         {
             "@id": "rec28:Train_passenger",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Train designed to carry passengers.",
             "rdf:value": "220"
         },
         {
             "@id": "rec28:Train_super_express",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Train designed for high speed.",
             "rdf:value": "2201"
         },
         {
             "@id": "rec28:Train_sleeper",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Passenger train that includes carriages for sleeping.",
             "rdf:value": "2202"
         },
         {
             "@id": "rec28:Train_passenger_hired_group",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A chartered train.",
             "rdf:value": "2203"
         },
         {
             "@id": "rec28:Train_freight",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Train for carrying freight.",
             "rdf:value": "230"
         },
         {
             "@id": "rec28:Blocktrain",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Train for carrying freight to the same destination.",
             "rdf:value": "2301"
         },
         {
             "@id": "rec28:Train_container",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Train for carrying containers.",
             "rdf:value": "2302"
         },
         {
             "@id": "rec28:Train_with_one_wagon",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Train with a single wagon for carrying freight.",
             "rdf:value": "2303"
         },
         {
             "@id": "rec28:Train_with_more_than_one_and_less_than_20_wagons",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Train with more than one and less than 20 wagons for carrying freight.",
             "rdf:value": "2304"
         },
         {
             "@id": "rec28:Train_with_more_than_20_wagons",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Train with more than 20 wagons for carrying freight.",
             "rdf:value": "2305"
         },
         {
             "@id": "rec28:Truck",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for hauling loads.",
             "rdf:value": "31"
         },
         {
             "@id": "rec28:Truck_tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle with a tank.",
             "rdf:value": "32"
         },
         {
             "@id": "rec28:Tractor",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive Vehicle with an engine designed for pulling.",
             "rdf:value": "33"
         },
         {
             "@id": "rec28:Van",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Closed automotive vehicle designed for carrying freight.",
             "rdf:value": "34"
         },
         {
             "@id": "rec28:Van_delivery",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for making fast deliveries.",
             "rdf:value": "341"
         },
         {
             "@id": "rec28:Van_light",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for light carriage.",
             "rdf:value": "342"
         },
         {
             "@id": "rec28:Van_furniture",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying furniture.",
             "rdf:value": "343"
         },
         {
             "@id": "rec28:Tiptanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed with a tank lifting capability.",
             "rdf:value": "35"
         },
         {
             "@id": "rec28:Truck_dry_bulk",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying dry bulk cargo.",
             "rdf:value": "36"
         },
         {
             "@id": "rec28:Truck_container",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying containers.",
             "rdf:value": "37"
         },
         {
             "@id": "rec28:Carrier_car",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying motorcars.",
             "rdf:value": "38"
         },
         {
             "@id": "rec28:Truck_reefer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for the carriage of frozen cargo.",
             "rdf:value": "39"
         },
         {
             "@id": "rec28:Truck_mail",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying mail.",
             "rdf:value": "310"
         },
         {
             "@id": "rec28:Truck_dump",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed with a cargo-dumping capability.",
             "rdf:value": "311"
         },
         {
             "@id": "rec28:Truck_forklift",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for lifting cargo and heavy objects.",
             "rdf:value": "312"
         },
         {
             "@id": "rec28:Loader_shovel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for shoveling sand and other bulk material.",
             "rdf:value": "313"
         },
         {
             "@id": "rec28:Truck_platform_fixed",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed with a fixed platform.",
             "rdf:value": "314"
         },
         {
             "@id": "rec28:Carrier_straddle",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for lifting and transporting containers.",
             "rdf:value": "315"
         },
         {
             "@id": "rec28:Crane_mobile",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle with cargo crane.",
             "rdf:value": "320"
         },
         {
             "@id": "rec28:Car_elevator",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle with raisable work platform.",
             "rdf:value": "3201"
         },
         {
             "@id": "rec28:Bus",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying more than 8 passengers including the driver.",
             "rdf:value": "330"
         },
         {
             "@id": "rec28:Bus_with_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle with an attached trailer for carrying passengers and/or luggage.",
             "rdf:value": "3301"
         },
         {
             "@id": "rec28:Bus_highway",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for highway travel.",
             "rdf:value": "3302"
         },
         {
             "@id": "rec28:Bus_sightseeing",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for sightseeing.",
             "rdf:value": "3303"
         },
         {
             "@id": "rec28:Bus_airport/city",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed to carry passengers and their baggage between an airport and a city and return.",
             "rdf:value": "3304"
         },
         {
             "@id": "rec28:Tractor_industrial",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for towing one or more trailers.",
             "rdf:value": "360"
         },
         {
             "@id": "rec28:Truck_freezer_with_isothermic_trailer,",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying frozen goods with a trailer designed for carrying temperature-controlled goods.",
             "rdf:value": "362"
         },
         {
             "@id": "rec28:Truck_isothermic_with_isothermic_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle with trailer designed to carry temperature-controlled goods.",
             "rdf:value": "363"
         },
         {
             "@id": "rec28:Truck_refrigerated_with_isothermic_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying refrigerated goods with a trailer designed for carrying temperature-controlled goods.",
             "rdf:value": "364"
         },
         {
             "@id": "rec28:Truck_freezer_with_refrigerated_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying frozen goods with a trailer designed for carrying refrigerated goods.",
             "rdf:value": "365"
         },
         {
             "@id": "rec28:Truck_isothermic_with_refrigerated_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed to carry temperature-controlled goods with a trailer designed to carry refrigerated goods.",
             "rdf:value": "366"
         },
         {
             "@id": "rec28:Truck_opening_floor_with_extendable_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle with an opening floor with an extendable trailer.",
             "rdf:value": "367"
         },
         {
             "@id": "rec28:Truck_rigid_with_tank_and_tank_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Rigid automotive vehicle designed with a tank with a tank trailer.",
             "rdf:value": "368"
         },
         {
             "@id": "rec28:Truck_bulk_with_tank_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for bulk carrying with a tank trailer.",
             "rdf:value": "369"
         },
         {
             "@id": "rec28:Truck_rigid_with_tank_and_bulk_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Rigid automotive vehicle designed with a tank with a trailer capable of carrying bulk cargo and liquid.",
             "rdf:value": "370"
         },
         {
             "@id": "rec28:Truck_bulk_with_bulk_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle and trailer both designed for carrying bulk cargo.",
             "rdf:value": "371"
         },
         {
             "@id": "rec28:Truck_tautliner_with_extendable_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautliner vehicle with extendable trailer.",
             "rdf:value": "372 "
         },
         {
             "@id": "rec28:Truck_tautliner_with_removable_roof_and_extendable_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautliner vehicle with removable roof and extendable trailer.",
             "rdf:value": "373 "
         },
         {
             "@id": "rec28:Truck_bulk_truck_with_extendable_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying bulk cargo with an extendable trailer.",
             "rdf:value": "374 "
         },
         {
             "@id": "rec28:Truck_refrigerated_with_freezer_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying refrigerated goods with a trailer designed to carry frozen goods.",
             "rdf:value": "375 "
         },
         {
             "@id": "rec28:Truck_isothermic_with_freezer_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying temperature-controlled goods with a trailer designed for carrying frozen goods.",
             "rdf:value": "376 "
         },
         {
             "@id": "rec28:Truck_furniture_with_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying furniture with a trailer.",
             "rdf:value": "377 "
         },
         {
             "@id": "rec28:Truck_tautliner_with_furniture_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautliner vehicle with trailer designed for carrying furniture.",
             "rdf:value": "378"
         },
         {
             "@id": "rec28:Truck_tautliner_removable_roof_with_furniture_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautliner vehicle designed with a removable roof with a trailer designed for carrying furniture.",
             "rdf:value": "379 "
         },
         {
             "@id": "rec28:Truck_tip-up_with_gondola_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed with a tip-up capability with a gondola trailer.",
             "rdf:value": "380 "
         },
         {
             "@id": "rec28:Truck_tautliner_with_gondola_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautliner vehicle with a gondola trailer.",
             "rdf:value": "381 "
         },
         {
             "@id": "rec28:Truck_tautliner_with_removable_roof_and_gondola_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautliner vehicle with removable roof and a gondola trailer.",
             "rdf:value": "382 "
         },
         {
             "@id": "rec28:Truck_opening_floor_with_gondola_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle with an opening floor and with a gondola trailer.",
             "rdf:value": "383"
         },
         {
             "@id": "rec28:Truck_bulk_with_gondola_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying bulk cargo with a gondola trailer.",
             "rdf:value": "384"
         },
         {
             "@id": "rec28:Truck_tip-up_with_extendable_gondola_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed with a tip-up capability with an extendable gondola trailer.",
             "rdf:value": "385"
         },
         {
             "@id": "rec28:Truck_tautliner_with_extendable_gondola_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautliner vehicle with an extendable gondola trailer.",
             "rdf:value": "386"
         },
         {
             "@id": "rec28:Truck_tautliner_removable_roof_with_extendable_gondola_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautliner vehicle designed with a removable rook and with an extendable gondola trailer.",
             "rdf:value": "387"
         },
         {
             "@id": "rec28:Truck_opening_floor_with_extendable_gondola_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautliner vehicle designed with an opening floor and with an extendable gondola trailer.",
             "rdf:value": "388"
         },
         {
             "@id": "rec28:Truck_bulk_with_extendable_gondola_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying bulk cargo with an extendable gondola trailer.",
             "rdf:value": "389"
         },
         {
             "@id": "rec28:Truck_tip-up_truck_with_opening_floor_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed with a tip-up capability with an opening-floor trailer.",
             "rdf:value": "390"
         },
         {
             "@id": "rec28:Truck_tautliner_with_opening_floor_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautliner vehicle with opening-floor trailer.",
             "rdf:value": "391"
         },
         {
             "@id": "rec28:Truck_tautliner_removable_roof_with_opening_floor_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautliner vehicle with a removable roof, with an opening-floor trailer.",
             "rdf:value": "392"
         },
         {
             "@id": "rec28:Truck_opening-floor_with_opening-floor_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle and trailer both with opening floors.",
             "rdf:value": "393"
         },
         {
             "@id": "rec28:Truck_bulk_truck_with_opening-_floor_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying bulk cargo with an opening-floor trailer.",
             "rdf:value": "394"
         },
         {
             "@id": "rec28:Truck_with_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed to pull a trailer, with a trailer attached.",
             "rdf:value": "395"
         },
         {
             "@id": "rec28:Truck_tilt_with_tilt_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle with a tilt capability with a trailer also with a tilt capability.",
             "rdf:value": "396"
         },
         {
             "@id": "rec28:Truck_refrigerated_with_refrigerated_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed to carry refrigerated goods with a trailer also capable or carrying refrigerated goods.",
             "rdf:value": "397"
         },
         {
             "@id": "rec28:Truck_freezer_with_freezer_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle capable of carrying frozen goods with a trailer also capable of carrying frozen goods.",
             "rdf:value": "398"
         },
         {
             "@id": "rec28:Truck_removal_with_removal_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed to carry household effects with a trailer also capable of carrying household effects.",
             "rdf:value": "399"
         },
         {
             "@id": "rec28:Truck_tautliner_with_removal_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautline truck with trailer capable of carrying household effects.",
             "rdf:value": "3100"
         },
         {
             "@id": "rec28:Truck_tautliner_with_removable_roof_and_removal_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautline vehicle with removable roof and a trailer capable of carrying household effects.",
             "rdf:value": "3101"
         },
         {
             "@id": "rec28:Car_with_caravan",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automobile towing a house trailer.",
             "rdf:value": "3102"
         },
         {
             "@id": "rec28:Truck_tautliner_25_tonne",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautline vehicle with a 25 tonne capacity.",
             "rdf:value": "3103"
         },
         {
             "@id": "rec28:Truck_tautliner_25_tonne_with_removable_roof",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautline vehicle with a 25 tonne capacity and a removable roof.",
             "rdf:value": "3104"
         },
         {
             "@id": "rec28:Lorry_articulated_flat_bed_25_tonne",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Articulated automotive vehicle with a flat bed and 25 tonne capacity.",
             "rdf:value": "3105"
         },
         {
             "@id": "rec28:Lorry_articulated_flat_bed_24_tonne_with_10_metre_crane",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Articulated automotive vehicle with a flat bed and 25 tonne capacity with a 10 metre crane attached.",
             "rdf:value": "3106"
         },
         {
             "@id": "rec28:Lorry_articulated_flat_bed_24_tonne_with_15_metre_crane",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Articulated automotive vehicle with a flat bed and 25 tonne capacity with a 15 metre crane attached.",
             "rdf:value": "3107"
         },
         {
             "@id": "rec28:Lorry_articulated_flat_bed_24_tonne_with_18_metre_crane",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Articulated automotive vehicle with a flat bed and 25 tonne capacity with an 18 metre crane attached.",
             "rdf:value": "3108"
         },
         {
             "@id": "rec28:Lorry_articulated_flat_bed_10_tonne",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Articulated automotive vehicle with a flat bed and 10 tonne capacity.",
             "rdf:value": "3109"
         },
         {
             "@id": "rec28:Truck_tautliner_25_tonne_with_90_cubic_metre_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautline vehicle with a 25 tonne capacity and a 90 cubic metre trailer.",
             "rdf:value": "3110"
         },
         {
             "@id": "rec28:Truck_tautliner_25_tonne_with_120_cubic_metre_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautline vehicle with a 25 tonne capacity and a 120 cubic metre trailer.",
             "rdf:value": "3111"
         },
         {
             "@id": "rec28:Lorry_flat_with_trailer_and_10_metre_crane",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle with flat bed and trailer and 10 metre crane.",
             "rdf:value": "3112"
         },
         {
             "@id": "rec28:Lorry_articulated_with_tank",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Articulated automotive vehicle with tank designed for carrying liquid or bulk goods.",
             "rdf:value": "3113"
         },
         {
             "@id": "rec28:Lorry_flat_15_tonne",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle with flat bed and a 15 tonne capacity.",
             "rdf:value": "3114"
         },
         {
             "@id": "rec28:Lorry_flat_15_tonne_with_crane",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle with flat bed and a 15 tonne capacity and attached crane.",
             "rdf:value": "3115"
         },
         {
             "@id": "rec28:Truck_isothermic",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed to carry temperature-controlled goods.",
             "rdf:value": "3116"
         },
         {
             "@id": "rec28:Truck_refrigerated",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed to carry refrigerated goods.",
             "rdf:value": "3117"
         },
         {
             "@id": "rec28:Van_freezer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed to carry frozen goods.",
             "rdf:value": "3118"
         },
         {
             "@id": "rec28:Van_isothermic",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed to carry temperature-controlled goods.",
             "rdf:value": "3119"
         },
         {
             "@id": "rec28:Van_refrigerated",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed to carry refrigerated goods.",
             "rdf:value": "3120"
         },
         {
             "@id": "rec28:Truck_bulk",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed to carry bulk goods.",
             "rdf:value": "3121"
         },
         {
             "@id": "rec28:Truck_tip-up",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed with a tip-up capability.",
             "rdf:value": "3122"
         },
         {
             "@id": "rec28:Truck_articulated_tip-up",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Articulated automotive vehicle designed with a tip-up capability.",
             "rdf:value": "3123"
         },
         {
             "@id": "rec28:Truck_rigid_with_tank",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Rigid automotive vehicle designed with a tank.",
             "rdf:value": "3124"
         },
         {
             "@id": "rec28:Truck_tautliner",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle with non-rigid sides.",
             "rdf:value": "3125"
         },
         {
             "@id": "rec28:Truck_tautliner_with_removable_roof",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive tautline vehicle with a removable roof.",
             "rdf:value": "3126"
         },
         {
             "@id": "rec28:Truck_with_opening_floor",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle with a floor that can be opened.",
             "rdf:value": "3127"
         },
         {
             "@id": "rec28:Truck_freezer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed to carry frozen goods.",
             "rdf:value": "3128"
         },
         {
             "@id": "rec28:Truck_with_crane_for_moving_goods_without_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A truck with a crane for moving goods, without a trailer.",
             "rdf:value": "3129"
         },
         {
             "@id": "rec28:Truck_with_crane_for_moving_goods_with_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A truck with a crane for moving goods, with a trailer.",
             "rdf:value": "3130"
         },
         {
             "@id": "rec28:Truck_with_crane_for_lifting_goods_without_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A truck with a crane for lifting goods, without a trailer.",
             "rdf:value": "3131"
         },
         {
             "@id": "rec28:Truck_with_crane_for_lifting_goods_with_trailer",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A truck with a crane for lifting goods, with a trailer.",
             "rdf:value": "3132"
         },
         {
             "@id": "rec28:Taxi_cab",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle licensed to ply for hire.",
             "rdf:value": "3133"
         },
         {
             "@id": "rec28:Truck_furniture",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for carrying furniture.",
             "rdf:value": "3134"
         },
         {
             "@id": "rec28:Truck_hydrant",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed for the delivery of fuel from a fixed installation to a means of transport.",
             "rdf:value": "3135"
         },
         {
             "@id": "rec28:Car",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed to carry a small number of passengers.",
             "rdf:value": "3136"
         },
         {
             "@id": "rec28:Truck_with_tail-lift",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle with a hydraulic lifting device on the rear of the vehicle for loading and unloading goods.",
             "rdf:value": "3137"
         },
         {
             "@id": "rec28:Armoured_vehicle",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Automotive vehicle designed with fortified body for enhanced protection.",
             "rdf:value": "3138"
         },
         {
             "@id": "rec28:Aircraft_type_unknown",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Aircraft of unknown type",
             "rdf:value": "4000"
         },
         {
             "@id": "rec28:Mail_type_unknown",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Mail of unknown type",
             "rdf:value": "5000"
         },
         {
             "@id": "rec28:Multimodal_type_unknown",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Multimodal transport of unknown type.",
             "rdf:value": "60"
         },
         {
             "@id": "rec28:Fixed_transport_installation_type_unknown",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Fixed transport installation of unknown type.",
             "rdf:value": "70"
         },
         {
             "@id": "rec28:Pipeline",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A line of one or more pipes for continuous transport of liquid or gas commodity.",
             "rdf:value": "71"
         },
         {
             "@id": "rec28:Powerline",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A line of one or more cables or wires for continuous transport of electricity.",
             "rdf:value": "72"
         },
         {
             "@id": "rec28:Vessel_type_unknown",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel of unknown type.",
             "rdf:value": "80"
         },
         {
             "@id": "rec28:Motor_freighter",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Motorized vessel designed for carrying general cargo.",
             "rdf:value": "81"
         },
         {
             "@id": "rec28:Motor_tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Motorized vessel designed for carrying liquid cargo in fixed cargo tanks.",
             "rdf:value": "802"
         },
         {
             "@id": "rec28:Motor_tanker_liquid_cargo_type_N",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Motorized vessel designed for carrying liquid cargo in cargo tanks, type N according to ADN.",
             "rdf:value": "8021"
         },
         {
             "@id": "rec28:Motor_tanker_liquid_cargo_type_C",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Motorized vessel designed for carrying special liquid chemicals in cargo tanks, type C according to ADN.",
             "rdf:value": "8022"
         },
         {
             "@id": "rec28:Motor_tanker_dry_cargo",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Motorized vessel designed for carrying dry cargo as if liquid in fixed tanks (e.g. cement).",
             "rdf:value": "8023"
         },
         {
             "@id": "rec28:Container_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Motorized vessel specially designed and equipped for carrying containers.",
             "rdf:value": "803"
         },
         {
             "@id": "rec28:Gas_tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Motorized vessel designed for carrying gas in fixed cargo tanks, type G according to ADN.",
             "rdf:value": "804"
         },
         {
             "@id": "rec28:Motor_freighter_tug",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Motorized vessel designed for carrying cargo and capable of towing.",
             "rdf:value": "85"
         },
         {
             "@id": "rec28:Motor_tanker_tug",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Motorized vessel designed for carrying liquid cargo and capable to tow.",
             "rdf:value": "86"
         },
         {
             "@id": "rec28:Motor_freighter_with_one_or_more_ships_alongside",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Motorized vessel designed for carrying general cargo that has one or more vessels alongside.",
             "rdf:value": "87"
         },
         {
             "@id": "rec28:Motor_freighter_with_tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Motorized vessel designed for carrying general cargo alongside a vessel designed for carrying liquid cargo.",
             "rdf:value": "88"
         },
         {
             "@id": "rec28:Motor_freighter_pushing_one_or_more_freighters",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Motorized vessel designed for carrying general cargo, pushing one or more vessels also designed for carrying general cargo.",
             "rdf:value": "89"
         },
         {
             "@id": "rec28:Motor_freighter_pushing_at_least_one_tank-ship",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Motorized vessel designed for carrying general cargo, pushing at least one vessel designed to carry a liquid cargo.",
             "rdf:value": "810"
         },
         {
             "@id": "rec28:Tug_freighter",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to push or pull another vessel that is also capable of carrying general cargo.",
             "rdf:value": "811"
         },
         {
             "@id": "rec28:Tug_tanker",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to push or pull another vessel also capable of carrying liquid cargo.",
             "rdf:value": "812"
         },
         {
             "@id": "rec28:Tug_freighter_coupled",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to push or pull another vessel that is also capable of carrying general cargo tied to one or more other vessels.",
             "rdf:value": "813"
         },
         {
             "@id": "rec28:Tug_freighter/tanker_coupled",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to push or pull another vessel that is also capable of carrying either general or liquid cargo tied to one or more other vessels.",
             "rdf:value": "814"
         },
         {
             "@id": "rec28:Freight_barge",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Lighter or Barge designed for carrying general cargo, either having no motive power of its own or having only sufficient motive power to perform restricted manoeuvres.",
             "rdf:value": "815"
         },
         {
             "@id": "rec28:Tank_barge",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Lighter or Barge designed for carrying liquid cargo in fixed tanks, either having no motive power of its own or having only sufficient motive power to perform restricted manoeuvres.",
             "rdf:value": "816"
         },
         {
             "@id": "rec28:Tank_barge_liquid_cargo_type N",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Lighter or Barge designed for carrying liquid cargo in cargo tanks, type N according to ADN, either having no motive power of its own or having only sufficient motive power to perform restricted manoeuvres.",
             "rdf:value": "8161"
         },
         {
             "@id": "rec28:Tank_barge_liquid_cargo_type C",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Lighter or Barge designed to for carrying special liquid chemicals in cargo tanks, type C according to ADN, either having no motive power of its own or having only sufficient motive power to perform restricted manoeuvres.",
             "rdf:value": "8162"
         },
         {
             "@id": "rec28:Tank_barge_dry_cargo",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Lighter or Barge designed for carrying dry cargo in fixed tanks as if liquid (e.g. cement), either having no motive power of its own or having only sufficient motive power to perform restricted manoeuvres.",
             "rdf:value": "8163"
         },
         {
             "@id": "rec28:Freight_barge_with_containers",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Lighter or Barge specially designed and equipped for carrying containers, either having no motive power of its own or having only sufficient motive power to perform restricted manoeuvres.",
             "rdf:value": "817"
         },
         {
             "@id": "rec28:Tank_barge_gas",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Lighter or Barge designed for carrying gas in cargo tanks, type G according to ADN, either having no motive power of its own or having only sufficient motive power to perform restricted manoeuvres.",
             "rdf:value": "818"
         },
         {
             "@id": "rec28:Pushtow_one_cargo_barge",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for pushing/towing, facilitating the movement of one cargo barge.",
             "rdf:value": "821"
         },
         {
             "@id": "rec28:Pushtow_two_cargo_barges",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, facilitating the movement of two cargo barges",
             "rdf:value": "822"
         },
         {
             "@id": "rec28:Pushtow_three_cargo_barges",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, facilitating the movement of three cargo barges",
             "rdf:value": "823"
         },
         {
             "@id": "rec28:Pushtow_four_cargo_barges",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, facilitating the movement four cargo barges",
             "rdf:value": "824"
         },
         {
             "@id": "rec28:Pushtow_five_cargo_barges",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, facilitating the movement of five cargo barges.",
             "rdf:value": "825"
         },
         {
             "@id": "rec28:Pushtow_six_cargo_barges",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, facilitating the movement of six cargo barges.",
             "rdf:value": "826"
         },
         {
             "@id": "rec28:Pushtow_seven_cargo_barges",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, facilitating the movement of seven cargo barges.",
             "rdf:value": "827"
         },
         {
             "@id": "rec28:Pushtow_eight_cargo_barges",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, facilitating the movement of eight cargo barges.",
             "rdf:value": "828"
         },
         {
             "@id": "rec28:Pushtow_nine_cargo_barges",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, facilitating the movement of nine or more cargo barges.",
             "rdf:value": "829"
         },
         {
             "@id": "rec28:Pushtow_one_gas/tank_barge",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, moving one tanker or gas barge.",
             "rdf:value": "831"
         },
         {
             "@id": "rec28:Pushtow_two_barges_at_least_one_tanker_or_gas_barge",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, moving two barges of which at least one tanker or gas barge.",
             "rdf:value": "832"
         },
         {
             "@id": "rec28:Pushtow_three_barges_at_least_one_tanker_or_gasbarge",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, moving three barges of which at least one is a tanker or gas barge.",
             "rdf:value": "833"
         },
         {
             "@id": "rec28:Pushtow_four_barges_at_least_one_tanker_or_gasbarge",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, moving four barges of which at least one tanker or gasbarge.",
             "rdf:value": "834"
         },
         {
             "@id": "rec28:Pushtow_five_barges_at_least_one_tanker_or_gasbarge",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, moving five barges of which at least one tanker of gasbarge.",
             "rdf:value": "835"
         },
         {
             "@id": "rec28:Pushtow_six_barges_at_least_one_tanker_or_gasbarge",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, moving six barges of which at least one tanker or gasbarge.",
             "rdf:value": "836"
         },
         {
             "@id": "rec28:Pushtow_seven_barges_at_least_one_tanker_or_gasbarge",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, moving seven barges of which at least one tanker or gasbarge.",
             "rdf:value": "837"
         },
         {
             "@id": "rec28:Pushtow_eight_barges_at_least_one_tanker_or_gasbarge",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, moving eight barges of which at least one tanker or gasbarge.",
             "rdf:value": "838"
         },
         {
             "@id": "rec28:Pushtow_nine_or_more_barges_at_least_one_tanker_or_gasbarge",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Combination designed for pushing/towing, moving nine or more barges of which at least one tanker or gasbarge.",
             "rdf:value": "839"
         },
         {
             "@id": "rec28:Tug_single",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel specially designed to perform towing operations.",
             "rdf:value": "840"
         },
         {
             "@id": "rec28:Tug_one_or_more_tows",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for pushing another vessel that is involved in one or more concurrent tows.",
             "rdf:value": "841"
         },
         {
             "@id": "rec28:Tug_assisting_a_vessel_or_linked_combination",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for pushing another vessel that is assisting one vessel or a combination of vessels or tugs and vessels.",
             "rdf:value": "842"
         },
         {
             "@id": "rec28:Pushboat_single",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel specially designed for pushing a pushed convoy.",
             "rdf:value": "843"
         },
         {
             "@id": "rec28:Passenger_ship_ferry_red_cross_ship_cruise_ship",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessels designed for carrying passengers.",
             "rdf:value": "844"
         },
         {
             "@id": "rec28:Ferry_8441",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for carrying passengers and/or vehicles on regular short voyages.",
             "rdf:value": "8441"
         },
         {
             "@id": "rec28:Red_cross_ship",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Passenger vessel with overnight passenger cabins designed for carrying sick and or disabled people.",
             "rdf:value": "8442"
         },
         {
             "@id": "rec28:Cruise_ship_8443",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Passenger vessel designed for carrying more than 12 passengers accommodated on board.",
             "rdf:value": "8443"
         },
         {
             "@id": "rec28:Passenger_ship_without_accommodation",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Passenger vessel designed for carrying more than 12 passengers but without passenger accommodation such as cabins etc.",
             "rdf:value": "8444"
         },
         {
             "@id": "rec28:Day-trip_high_speed_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Passenger vessel designed for carrying more than 12 passengers but without passenger accommodation such as cabins etc. capable of reaching speeds over 40 km/h in relation to water.",
             "rdf:value": "8445"
         },
         {
             "@id": "rec28:Day-trip_hydrofoil_vessel",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Passenger vessel designed for carrying more than 12 passengers but without passenger accommodation such as cabins etc., hydrofoil.",
             "rdf:value": "8446"
         },
         {
             "@id": "rec28:Sailing_cruise_ship",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Passenger vessel built and fitted out also with a view to propulsion under sail and designed for carrying more than 12 passengers accommodated on board.",
             "rdf:value": "8447"
         },
         {
             "@id": "rec28:Sailing_passenger_ship_without_accommodation",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Passenger vessel built and fitted out also with a view to propulsion under sail and designed for carrying more than 12 passengers but without passenger accommodation such as cabins etc.",
             "rdf:value": "8448"
         },
         {
             "@id": "rec28:Service_vessel_845",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A tender (vessel for logistical support), dealing with the transport of small material and maintenance requirements outside the port area on rivers and other inland waterways.",
             "rdf:value": "845"
         },
         {
             "@id": "rec28:Service_vessel_8451",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A tender (vessel for logistical support), dealing with the transport of small material and maintenance requirements outside the port area on rivers and other inland waterways.",
             "rdf:value": "8451"
         },
         {
             "@id": "rec28:Police_patrol_vessel_8452",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A vessel for the supervision by police for the enforcement of applicable rules and regulations.",
             "rdf:value": "8452"
         },
         {
             "@id": "rec28:Port_service_vessel_8453",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A port tender (vessel for logistical support), dealing with the transport of material and people within a port area.",
             "rdf:value": "8453"
         },
         {
             "@id": "rec28:Navigation_surveillance_vessel_8454",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A vessel of the competent authority supervising waterway traffic and navigation to ensure safety and adherence to the respective rules and regulations.",
             "rdf:value": "8454"
         },
         {
             "@id": "rec28:Vessel_work_maintenance_craft_floating_derrick_cable-ship_buoy-ship_dredge.",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to perform a specific type of work.",
             "rdf:value": "846"
         },
         {
             "@id": "rec28:Object_towed_not_otherwise_specified.",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "An object in tow that is not otherwise specified.",
             "rdf:value": "847"
         },
         {
             "@id": "rec28:Fishing_boat_848",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed for fishing.",
             "rdf:value": "848"
         },
         {
             "@id": "rec28:Bunkership",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Motorized vessel designed for carrying and delivering bunkers (products intended for the propulsion and operation of vessels) to other vessels, type N according to ADN.",
             "rdf:value": "849"
         },
         {
             "@id": "rec28:Barge_tanker_chemical",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "Vessel designed to carry liquid or bulk chemicals.",
             "rdf:value": "850"
         },
         {
             "@id": "rec28:Object_not_otherwise_specified.",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A floating object that is not otherwise specified, i.e. a raft or other structure, object, establishment or assembly capable of  navigation, not being a vessel or floating equipment.",
             "rdf:value": "851"
         },
         {
             "@id": "rec28:Service_vessel_852",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A tender (vessel for logistical support), dealing with the transport of small material and maintenance requirements outside the port area on rivers and other inland waterways.",
             "rdf:value": "852"
         },
         {
             "@id": "rec28:Police_patrol_vessel_853",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A vessel for the supervision by police of applicable rules and regulations. ",
             "rdf:value": "853"
         },
         {
             "@id": "rec28:Port_service_vessel_854",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A port tender (vessel for logistical support), dealing with the transport of material and people within a port area. ",
             "rdf:value": "854"
         },
         {
             "@id": "rec28:Navigation_surveillance_vessel_855",
-            "@type": "edi3:UNECERec28Code",
+            "@type": "unece:UNECERec28Code",
             "rdfs:comment": "A vessel of the competent authority (waterway) dealing with the surveillance of navigation.",
             "rdf:value": "855"
         }
