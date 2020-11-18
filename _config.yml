@@ -23,10 +23,11 @@ collections:
 defaults:
   -
     scope:
-      path: ""
-      type: "vocabulary"
+      path: "specs"
+      type: "pages"
     values:
-      layout: "vocabulary"
+      layout: "specs"
+      toc: true
 
 plugins:
   - jekyll-sitemap
