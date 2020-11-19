@@ -2,7 +2,7 @@
     "@context": {
         "id": "@id",
         "type": "@type",
-        "unece": "https://service.unece.org/trade/uncefact/vocabulary/unece#",
+        "unece": "https://edi3.org/vocabulary/unece#",
         "@vocab": "unece",
         "AccountingAccount": {
             "@id": "unece:AccountingAccount"
