@@ -13,5 +13,4 @@ Thumbs.db
 Gemfile.lock
 
 #vocabulary static generation outputs
-uncefact
 vocabulary.tar.gz

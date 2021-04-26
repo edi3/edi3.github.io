@@ -1,0 +1,5666 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "uncefact": "https://service.unece.org/trade/uncefact/trade/uncefact/vocabulary/uncefact#",
+        "@vocab": "uncefact",
+        "AccountingAccount": {
+            "@id": "uncefact:AccountingAccount"
+        },
+        "Accreditation": {
+            "@id": "uncefact:Accreditation"
+        },
+        "Address": {
+            "@id": "uncefact:Address"
+        },
+        "Adjustment": {
+            "@id": "uncefact:Adjustment"
+        },
+        "AllowanceCharge": {
+            "@id": "uncefact:AllowanceCharge"
+        },
+        "Authentication": {
+            "@id": "uncefact:Authentication"
+        },
+        "BalanceOut": {
+            "@id": "uncefact:BalanceOut"
+        },
+        "BinaryFile": {
+            "@id": "uncefact:BinaryFile"
+        },
+        "Booking": {
+            "@id": "uncefact:Booking"
+        },
+        "BreakdownStatement": {
+            "@id": "uncefact:BreakdownStatement"
+        },
+        "Cargo": {
+            "@id": "uncefact:Cargo"
+        },
+        "CargoInsurance": {
+            "@id": "uncefact:CargoInsurance"
+        },
+        "Certificate": {
+            "@id": "uncefact:Certificate"
+        },
+        "Certification": {
+            "@id": "uncefact:Certification"
+        },
+        "Characteristic": {
+            "@id": "uncefact:Characteristic"
+        },
+        "Chemical": {
+            "@id": "uncefact:Chemical"
+        },
+        "ChemicalTreatment": {
+            "@id": "uncefact:ChemicalTreatment"
+        },
+        "Circle": {
+            "@id": "uncefact:Circle"
+        },
+        "Classification": {
+            "@id": "uncefact:Classification"
+        },
+        "Clause": {
+            "@id": "uncefact:Clause"
+        },
+        "Communication": {
+            "@id": "uncefact:Communication"
+        },
+        "ComplexDescription": {
+            "@id": "uncefact:ComplexDescription"
+        },
+        "Condition": {
+            "@id": "uncefact:Condition"
+        },
+        "Consignment": {
+            "@id": "uncefact:Consignment"
+        },
+        "ConsignmentItem": {
+            "@id": "uncefact:ConsignmentItem"
+        },
+        "Contact": {
+            "@id": "uncefact:Contact"
+        },
+        "Context": {
+            "@id": "uncefact:Context"
+        },
+        "Convoy": {
+            "@id": "uncefact:Convoy"
+        },
+        "CoordinateSourceSystem": {
+            "@id": "uncefact:CoordinateSourceSystem"
+        },
+        "Country": {
+            "@id": "uncefact:Country"
+        },
+        "CountrySubDivision": {
+            "@id": "uncefact:CountrySubDivision"
+        },
+        "CurrencyExchange": {
+            "@id": "uncefact:CurrencyExchange"
+        },
+        "CustomsValuation": {
+            "@id": "uncefact:CustomsValuation"
+        },
+        "DangerousGoods": {
+            "@id": "uncefact:DangerousGoods"
+        },
+        "Declaration": {
+            "@id": "uncefact:Declaration"
+        },
+        "DeliveryTerms": {
+            "@id": "uncefact:DeliveryTerms"
+        },
+        "Dimension": {
+            "@id": "uncefact:Dimension"
+        },
+        "DirectPosition": {
+            "@id": "uncefact:DirectPosition"
+        },
+        "DirectPositionList": {
+            "@id": "uncefact:DirectPositionList"
+        },
+        "Document": {
+            "@id": "uncefact:Document"
+        },
+        "Emission": {
+            "@id": "uncefact:Emission"
+        },
+        "Equipment": {
+            "@id": "uncefact:Equipment"
+        },
+        "Event": {
+            "@id": "uncefact:Event"
+        },
+        "Fault": {
+            "@id": "uncefact:Fault"
+        },
+        "Feature": {
+            "@id": "uncefact:Feature"
+        },
+        "FinancialAccount": {
+            "@id": "uncefact:FinancialAccount"
+        },
+        "FinancialCard": {
+            "@id": "uncefact:FinancialCard"
+        },
+        "FinancialInstitution": {
+            "@id": "uncefact:FinancialInstitution"
+        },
+        "ForecastTerms": {
+            "@id": "uncefact:ForecastTerms"
+        },
+        "GeographicalCoordinate": {
+            "@id": "uncefact:GeographicalCoordinate"
+        },
+        "GeographicalFeature": {
+            "@id": "uncefact:GeographicalFeature"
+        },
+        "GeographicalGrid": {
+            "@id": "uncefact:GeographicalGrid"
+        },
+        "GeographicalLine": {
+            "@id": "uncefact:GeographicalLine"
+        },
+        "GeographicalMultiCurve": {
+            "@id": "uncefact:GeographicalMultiCurve"
+        },
+        "GeographicalMultiPoint": {
+            "@id": "uncefact:GeographicalMultiPoint"
+        },
+        "GeographicalMultiSurface": {
+            "@id": "uncefact:GeographicalMultiSurface"
+        },
+        "GeographicalObjectCharacteristic": {
+            "@id": "uncefact:GeographicalObjectCharacteristic"
+        },
+        "GeographicalPoint": {
+            "@id": "uncefact:GeographicalPoint"
+        },
+        "GeographicalSurface": {
+            "@id": "uncefact:GeographicalSurface"
+        },
+        "GeopoliticalRegion": {
+            "@id": "uncefact:GeopoliticalRegion"
+        },
+        "GoodsCharacteristic": {
+            "@id": "uncefact:GoodsCharacteristic"
+        },
+        "IOTDevice": {
+            "@id": "uncefact:IOTDevice"
+        },
+        "Identity": {
+            "@id": "uncefact:Identity"
+        },
+        "InstalmentPlan": {
+            "@id": "uncefact:InstalmentPlan"
+        },
+        "Instructions": {
+            "@id": "uncefact:Instructions"
+        },
+        "Inventory": {
+            "@id": "uncefact:Inventory"
+        },
+        "Keyword": {
+            "@id": "uncefact:Keyword"
+        },
+        "Label": {
+            "@id": "uncefact:Label"
+        },
+        "LinearRing": {
+            "@id": "uncefact:LinearRing"
+        },
+        "Location": {
+            "@id": "uncefact:Location"
+        },
+        "Marketplace": {
+            "@id": "uncefact:Marketplace"
+        },
+        "Marking": {
+            "@id": "uncefact:Marking"
+        },
+        "Material": {
+            "@id": "uncefact:Material"
+        },
+        "MaterialComponent": {
+            "@id": "uncefact:MaterialComponent"
+        },
+        "Measurement": {
+            "@id": "uncefact:Measurement"
+        },
+        "MonetarySummation": {
+            "@id": "uncefact:MonetarySummation"
+        },
+        "Note": {
+            "@id": "uncefact:Note"
+        },
+        "Observation": {
+            "@id": "uncefact:Observation"
+        },
+        "Organization": {
+            "@id": "uncefact:Organization"
+        },
+        "Package": {
+            "@id": "uncefact:Package"
+        },
+        "Packaging": {
+            "@id": "uncefact:Packaging"
+        },
+        "Pairing": {
+            "@id": "uncefact:Pairing"
+        },
+        "Parameter": {
+            "@id": "uncefact:Parameter"
+        },
+        "Party": {
+            "@id": "uncefact:Party"
+        },
+        "Payment": {
+            "@id": "uncefact:Payment"
+        },
+        "PaymentDiscountTerms": {
+            "@id": "uncefact:PaymentDiscountTerms"
+        },
+        "PaymentMeans": {
+            "@id": "uncefact:PaymentMeans"
+        },
+        "PaymentPenaltyTerms": {
+            "@id": "uncefact:PaymentPenaltyTerms"
+        },
+        "PaymentTerms": {
+            "@id": "uncefact:PaymentTerms"
+        },
+        "Period": {
+            "@id": "uncefact:Period"
+        },
+        "Person": {
+            "@id": "uncefact:Person"
+        },
+        "PersonalEffects": {
+            "@id": "uncefact:PersonalEffects"
+        },
+        "Polygon": {
+            "@id": "uncefact:Polygon"
+        },
+        "Price": {
+            "@id": "uncefact:Price"
+        },
+        "Process": {
+            "@id": "uncefact:Process"
+        },
+        "Product": {
+            "@id": "uncefact:Product"
+        },
+        "ProductGroup": {
+            "@id": "uncefact:ProductGroup"
+        },
+        "ProductInstance": {
+            "@id": "uncefact:ProductInstance"
+        },
+        "Production": {
+            "@id": "uncefact:Production"
+        },
+        "Project": {
+            "@id": "uncefact:Project"
+        },
+        "Qualification": {
+            "@id": "uncefact:Qualification"
+        },
+        "QuantityAnalysis": {
+            "@id": "uncefact:QuantityAnalysis"
+        },
+        "Query": {
+            "@id": "uncefact:Query"
+        },
+        "Range": {
+            "@id": "uncefact:Range"
+        },
+        "Registration": {
+            "@id": "uncefact:Registration"
+        },
+        "RegulatedGoods": {
+            "@id": "uncefact:RegulatedGoods"
+        },
+        "RegulatoryProcedure": {
+            "@id": "uncefact:RegulatoryProcedure"
+        },
+        "Response": {
+            "@id": "uncefact:Response"
+        },
+        "RiskAnalysisResult": {
+            "@id": "uncefact:RiskAnalysisResult"
+        },
+        "Route": {
+            "@id": "uncefact:Route"
+        },
+        "Schedule": {
+            "@id": "uncefact:Schedule"
+        },
+        "Seal": {
+            "@id": "uncefact:Seal"
+        },
+        "Section": {
+            "@id": "uncefact:Section"
+        },
+        "SecurityTag": {
+            "@id": "uncefact:SecurityTag"
+        },
+        "Segment": {
+            "@id": "uncefact:Segment"
+        },
+        "Sensor": {
+            "@id": "uncefact:Sensor"
+        },
+        "Service": {
+            "@id": "uncefact:Service"
+        },
+        "ServiceCharge": {
+            "@id": "uncefact:ServiceCharge"
+        },
+        "ShippingMarks": {
+            "@id": "uncefact:ShippingMarks"
+        },
+        "Standard": {
+            "@id": "uncefact:Standard"
+        },
+        "Status": {
+            "@id": "uncefact:Status"
+        },
+        "SupplyPlan": {
+            "@id": "uncefact:SupplyPlan"
+        },
+        "Tax": {
+            "@id": "uncefact:Tax"
+        },
+        "Temperature": {
+            "@id": "uncefact:Temperature"
+        },
+        "TestSpecificationReport": {
+            "@id": "uncefact:TestSpecificationReport"
+        },
+        "TradeAgreement": {
+            "@id": "uncefact:TradeAgreement"
+        },
+        "TradeDelivery": {
+            "@id": "uncefact:TradeDelivery"
+        },
+        "TradeLineItem": {
+            "@id": "uncefact:TradeLineItem"
+        },
+        "TradeSettlement": {
+            "@id": "uncefact:TradeSettlement"
+        },
+        "TradeTransaction": {
+            "@id": "uncefact:TradeTransaction"
+        },
+        "TransportEquipment": {
+            "@id": "uncefact:TransportEquipment"
+        },
+        "TransportMeans": {
+            "@id": "uncefact:TransportMeans"
+        },
+        "TransportMovement": {
+            "@id": "uncefact:TransportMovement"
+        },
+        "Version": {
+            "@id": "uncefact:Version"
+        },
+        "WorkItem": {
+            "@id": "uncefact:WorkItem"
+        },
+        "WorkflowObject": {
+            "@id": "uncefact:WorkflowObject"
+        },
+        "abbreviatedName": {
+            "@id": "uncefact:abbreviatedName"
+        },
+        "absolutePresenceVolumeMeasure": {
+            "@id": "uncefact:absolutePresenceVolumeMeasure"
+        },
+        "absolutePresenceWeightMeasure": {
+            "@id": "uncefact:absolutePresenceWeightMeasure"
+        },
+        "abstract": {
+            "@id": "uncefact:abstract"
+        },
+        "acceptablePeriod": {
+            "@id": "uncefact:acceptablePeriod"
+        },
+        "acceptanceDateTime": {
+            "@id": "uncefact:acceptanceDateTime"
+        },
+        "acceptanceEvent": {
+            "@id": "uncefact:acceptanceEvent"
+        },
+        "acceptedTransactionOriginalTotalAmount": {
+            "@id": "uncefact:acceptedTransactionOriginalTotalAmount"
+        },
+        "access": {
+            "@id": "uncefact:access"
+        },
+        "accessAvailabilityPeriod": {
+            "@id": "uncefact:accessAvailabilityPeriod"
+        },
+        "accessRightsCode": {
+            "@id": "uncefact:accessRightsCode"
+        },
+        "accessoryApplicableProduct": {
+            "@id": "uncefact:accessoryApplicableProduct"
+        },
+        "accompaniedIndicator": {
+            "@id": "uncefact:accompaniedIndicator"
+        },
+        "accountName": {
+            "@id": "uncefact:accountName"
+        },
+        "accreditingBodyName": {
+            "@id": "uncefact:accreditingBodyName"
+        },
+        "acknowledgementStatusAcknowledgementCode": {
+            "@id": "uncefact:acknowledgementStatusAcknowledgementCode"
+        },
+        "acquisitionDateTime": {
+            "@id": "uncefact:acquisitionDateTime"
+        },
+        "activityAuthorizedParty": {
+            "@id": "uncefact:activityAuthorizedParty"
+        },
+        "actualAmount": {
+            "@id": "uncefact:actualAmount"
+        },
+        "actualArrivalRelatedDateTime": {
+            "@id": "uncefact:actualArrivalRelatedDateTime"
+        },
+        "actualComplexDescription": {
+            "@id": "uncefact:actualComplexDescription"
+        },
+        "actualCurrencyExchange": {
+            "@id": "uncefact:actualCurrencyExchange"
+        },
+        "actualDateTime": {
+            "@id": "uncefact:actualDateTime"
+        },
+        "actualDeliveryEvent": {
+            "@id": "uncefact:actualDeliveryEvent"
+        },
+        "actualDepartureRelatedDateTime": {
+            "@id": "uncefact:actualDepartureRelatedDateTime"
+        },
+        "actualDespatchEvent": {
+            "@id": "uncefact:actualDespatchEvent"
+        },
+        "actualDiscountAmount": {
+            "@id": "uncefact:actualDiscountAmount"
+        },
+        "actualEffectiveDateTime": {
+            "@id": "uncefact:actualEffectiveDateTime"
+        },
+        "actualFormattedDateTime": {
+            "@id": "uncefact:actualFormattedDateTime"
+        },
+        "actualLoadingEvent": {
+            "@id": "uncefact:actualLoadingEvent"
+        },
+        "actualMeasure": {
+            "@id": "uncefact:actualMeasure"
+        },
+        "actualOccurrenceDateTime": {
+            "@id": "uncefact:actualOccurrenceDateTime"
+        },
+        "actualOccurrencePeriod": {
+            "@id": "uncefact:actualOccurrencePeriod"
+        },
+        "actualPenaltyAmount": {
+            "@id": "uncefact:actualPenaltyAmount"
+        },
+        "actualPickUpEvent": {
+            "@id": "uncefact:actualPickUpEvent"
+        },
+        "actualQuantity": {
+            "@id": "uncefact:actualQuantity"
+        },
+        "actualQuantityDimension": {
+            "@id": "uncefact:actualQuantityDimension"
+        },
+        "actualQuantityPercent": {
+            "@id": "uncefact:actualQuantityPercent"
+        },
+        "actualReceiptEvent": {
+            "@id": "uncefact:actualReceiptEvent"
+        },
+        "actualReportedMeasurement": {
+            "@id": "uncefact:actualReportedMeasurement"
+        },
+        "actualRoute": {
+            "@id": "uncefact:actualRoute"
+        },
+        "actualUnloadingEvent": {
+            "@id": "uncefact:actualUnloadingEvent"
+        },
+        "addedAdjustmentAmount": {
+            "@id": "uncefact:addedAdjustmentAmount"
+        },
+        "addedAdjustmentPercent": {
+            "@id": "uncefact:addedAdjustmentPercent"
+        },
+        "additionalApplicableProduct": {
+            "@id": "uncefact:additionalApplicableProduct"
+        },
+        "additionalClearingSystemId": {
+            "@id": "uncefact:additionalClearingSystemId"
+        },
+        "additionalDescription": {
+            "@id": "uncefact:additionalDescription"
+        },
+        "additionalDocument": {
+            "@id": "uncefact:additionalDocument"
+        },
+        "additionalHazardClassificationId": {
+            "@id": "uncefact:additionalHazardClassificationId"
+        },
+        "additionalIdentificationId": {
+            "@id": "uncefact:additionalIdentificationId"
+        },
+        "additionalInformationIncludedNote": {
+            "@id": "uncefact:additionalInformationIncludedNote"
+        },
+        "additionalInformationNote": {
+            "@id": "uncefact:additionalInformationNote"
+        },
+        "additionalInstructionCode": {
+            "@id": "uncefact:additionalInstructionCode"
+        },
+        "additionalInstructionIndicator": {
+            "@id": "uncefact:additionalInstructionIndicator"
+        },
+        "additionalInstructions": {
+            "@id": "uncefact:additionalInstructions"
+        },
+        "additionalReason": {
+            "@id": "uncefact:additionalReason"
+        },
+        "additionalReferenceDocument": {
+            "@id": "uncefact:additionalReferenceDocument"
+        },
+        "additionalSecurityMeasuresApplicableNote": {
+            "@id": "uncefact:additionalSecurityMeasuresApplicableNote"
+        },
+        "additionalStatementNote": {
+            "@id": "uncefact:additionalStatementNote"
+        },
+        "additionalStreetName": {
+            "@id": "uncefact:additionalStreetName"
+        },
+        "adjustedBalanceOutAmount": {
+            "@id": "uncefact:adjustedBalanceOutAmount"
+        },
+        "affectedDistanceLinearUnitMeasure": {
+            "@id": "uncefact:affectedDistanceLinearUnitMeasure"
+        },
+        "affixedSeal": {
+            "@id": "uncefact:affixedSeal"
+        },
+        "aftDraughtLevelMeasure": {
+            "@id": "uncefact:aftDraughtLevelMeasure"
+        },
+        "agencyId": {
+            "@id": "uncefact:agencyId"
+        },
+        "agentAssignedCustomerIdentificationId": {
+            "@id": "uncefact:agentAssignedCustomerIdentificationId"
+        },
+        "agentParty": {
+            "@id": "uncefact:agentParty"
+        },
+        "agreedQuantity": {
+            "@id": "uncefact:agreedQuantity"
+        },
+        "agreementInformation": {
+            "@id": "uncefact:agreementInformation"
+        },
+        "airFlowAirFlowUnitMeasure": {
+            "@id": "uncefact:airFlowAirFlowUnitMeasure"
+        },
+        "aircraftLimitationInformation": {
+            "@id": "uncefact:aircraftLimitationInformation"
+        },
+        "alienRegistrationIdentificationId": {
+            "@id": "uncefact:alienRegistrationIdentificationId"
+        },
+        "allPackedInOneInformation": {
+            "@id": "uncefact:allPackedInOneInformation"
+        },
+        "allowanceCharge": {
+            "@id": "uncefact:allowanceCharge"
+        },
+        "allowanceChargeBasisAmount": {
+            "@id": "uncefact:allowanceChargeBasisAmount"
+        },
+        "allowanceTotalAmount": {
+            "@id": "uncefact:allowanceTotalAmount"
+        },
+        "alternativeClassificationCode": {
+            "@id": "uncefact:alternativeClassificationCode"
+        },
+        "alternativeSourceSystemId": {
+            "@id": "uncefact:alternativeSourceSystemId"
+        },
+        "altimetricSystemId": {
+            "@id": "uncefact:altimetricSystemId"
+        },
+        "altitudeMeasure": {
+            "@id": "uncefact:altitudeMeasure"
+        },
+        "amendmentPurposeCode": {
+            "@id": "uncefact:amendmentPurposeCode"
+        },
+        "amendmentReasonCode": {
+            "@id": "uncefact:amendmentReasonCode"
+        },
+        "amountTypeAccountingAmountTypeCode": {
+            "@id": "uncefact:amountTypeAccountingAmountTypeCode"
+        },
+        "annualQuotaQuantity": {
+            "@id": "uncefact:annualQuotaQuantity"
+        },
+        "applicableAllowanceCharge": {
+            "@id": "uncefact:applicableAllowanceCharge"
+        },
+        "applicableBalanceOut": {
+            "@id": "uncefact:applicableBalanceOut"
+        },
+        "applicableCargoInsurance": {
+            "@id": "uncefact:applicableCargoInsurance"
+        },
+        "applicableCertification": {
+            "@id": "uncefact:applicableCertification"
+        },
+        "applicableCharacteristic": {
+            "@id": "uncefact:applicableCharacteristic"
+        },
+        "applicableCondition": {
+            "@id": "uncefact:applicableCondition"
+        },
+        "applicableCurrencyExchange": {
+            "@id": "uncefact:applicableCurrencyExchange"
+        },
+        "applicableCustomsValuation": {
+            "@id": "uncefact:applicableCustomsValuation"
+        },
+        "applicableDangerousGoods": {
+            "@id": "uncefact:applicableDangerousGoods"
+        },
+        "applicableDeliveryTerms": {
+            "@id": "uncefact:applicableDeliveryTerms"
+        },
+        "applicableFinancialCard": {
+            "@id": "uncefact:applicableFinancialCard"
+        },
+        "applicableForecastTerms": {
+            "@id": "uncefact:applicableForecastTerms"
+        },
+        "applicableGoodsCharacteristic": {
+            "@id": "uncefact:applicableGoodsCharacteristic"
+        },
+        "applicableInstructions": {
+            "@id": "uncefact:applicableInstructions"
+        },
+        "applicableKeyword": {
+            "@id": "uncefact:applicableKeyword"
+        },
+        "applicableLocation": {
+            "@id": "uncefact:applicableLocation"
+        },
+        "applicableNote": {
+            "@id": "uncefact:applicableNote"
+        },
+        "applicableObjectCode": {
+            "@id": "uncefact:applicableObjectCode"
+        },
+        "applicablePackaging": {
+            "@id": "uncefact:applicablePackaging"
+        },
+        "applicablePaymentDiscountTerms": {
+            "@id": "uncefact:applicablePaymentDiscountTerms"
+        },
+        "applicablePaymentPenaltyTerms": {
+            "@id": "uncefact:applicablePaymentPenaltyTerms"
+        },
+        "applicablePaymentTerms": {
+            "@id": "uncefact:applicablePaymentTerms"
+        },
+        "applicablePercent": {
+            "@id": "uncefact:applicablePercent"
+        },
+        "applicablePeriod": {
+            "@id": "uncefact:applicablePeriod"
+        },
+        "applicableProduct": {
+            "@id": "uncefact:applicableProduct"
+        },
+        "applicableRegulatoryProcedure": {
+            "@id": "uncefact:applicableRegulatoryProcedure"
+        },
+        "applicableServiceCharge": {
+            "@id": "uncefact:applicableServiceCharge"
+        },
+        "applicableStandard": {
+            "@id": "uncefact:applicableStandard"
+        },
+        "applicableTax": {
+            "@id": "uncefact:applicableTax"
+        },
+        "applicableTemperature": {
+            "@id": "uncefact:applicableTemperature"
+        },
+        "applicableTradeAgreement": {
+            "@id": "uncefact:applicableTradeAgreement"
+        },
+        "applicableTradeDelivery": {
+            "@id": "uncefact:applicableTradeDelivery"
+        },
+        "applicableTradeSettlement": {
+            "@id": "uncefact:applicableTradeSettlement"
+        },
+        "applicableTransportMeans": {
+            "@id": "uncefact:applicableTransportMeans"
+        },
+        "applicationSpecifiedParameter": {
+            "@id": "uncefact:applicationSpecifiedParameter"
+        },
+        "appliedAllowanceCharge": {
+            "@id": "uncefact:appliedAllowanceCharge"
+        },
+        "appliedAmount": {
+            "@id": "uncefact:appliedAmount"
+        },
+        "appliedFromLocation": {
+            "@id": "uncefact:appliedFromLocation"
+        },
+        "appliedPeriod": {
+            "@id": "uncefact:appliedPeriod"
+        },
+        "appliedProcess": {
+            "@id": "uncefact:appliedProcess"
+        },
+        "appliedTax": {
+            "@id": "uncefact:appliedTax"
+        },
+        "appliedToLocation": {
+            "@id": "uncefact:appliedToLocation"
+        },
+        "approvedSecurityPlanOnboardIndicator": {
+            "@id": "uncefact:approvedSecurityPlanOnboardIndicator"
+        },
+        "approverSignatoryAuthentication": {
+            "@id": "uncefact:approverSignatoryAuthentication"
+        },
+        "areaDensityMeasure": {
+            "@id": "uncefact:areaDensityMeasure"
+        },
+        "areaNumberCode": {
+            "@id": "uncefact:areaNumberCode"
+        },
+        "arrivalEvent": {
+            "@id": "uncefact:arrivalEvent"
+        },
+        "arrivalRelatedDateTime": {
+            "@id": "uncefact:arrivalRelatedDateTime"
+        },
+        "arrivalReportedEvent": {
+            "@id": "uncefact:arrivalReportedEvent"
+        },
+        "assertedAuthentication": {
+            "@id": "uncefact:assertedAuthentication"
+        },
+        "assertion": {
+            "@id": "uncefact:assertion"
+        },
+        "assertionCode": {
+            "@id": "uncefact:assertionCode"
+        },
+        "associatedConvoy": {
+            "@id": "uncefact:associatedConvoy"
+        },
+        "associatedDirectPositionList": {
+            "@id": "uncefact:associatedDirectPositionList"
+        },
+        "associatedDocument": {
+            "@id": "uncefact:associatedDocument"
+        },
+        "associatedGeographicalFeature": {
+            "@id": "uncefact:associatedGeographicalFeature"
+        },
+        "associatedGeographicalObjectCharacteristic": {
+            "@id": "uncefact:associatedGeographicalObjectCharacteristic"
+        },
+        "associatedInvoiceAmount": {
+            "@id": "uncefact:associatedInvoiceAmount"
+        },
+        "associatedInvoiceDiscountAmount": {
+            "@id": "uncefact:associatedInvoiceDiscountAmount"
+        },
+        "associatedInvoiceDiscountPercent": {
+            "@id": "uncefact:associatedInvoiceDiscountPercent"
+        },
+        "associatedLocation": {
+            "@id": "uncefact:associatedLocation"
+        },
+        "associatedMeasurement": {
+            "@id": "uncefact:associatedMeasurement"
+        },
+        "associatedParty": {
+            "@id": "uncefact:associatedParty"
+        },
+        "associatedPeriod": {
+            "@id": "uncefact:associatedPeriod"
+        },
+        "associatedTax": {
+            "@id": "uncefact:associatedTax"
+        },
+        "associatedTransportEquipment": {
+            "@id": "uncefact:associatedTransportEquipment"
+        },
+        "atArrivalTransportMovement": {
+            "@id": "uncefact:atArrivalTransportMovement"
+        },
+        "atDepartureTransportMovement": {
+            "@id": "uncefact:atDepartureTransportMovement"
+        },
+        "attachedAssetIdentificationId": {
+            "@id": "uncefact:attachedAssetIdentificationId"
+        },
+        "attachedBinaryFile": {
+            "@id": "uncefact:attachedBinaryFile"
+        },
+        "attachedIOTDevice": {
+            "@id": "uncefact:attachedIOTDevice"
+        },
+        "attachedSecurityTag": {
+            "@id": "uncefact:attachedSecurityTag"
+        },
+        "attachedTransportEquipment": {
+            "@id": "uncefact:attachedTransportEquipment"
+        },
+        "attachmentBinaryObject": {
+            "@id": "uncefact:attachmentBinaryObject"
+        },
+        "attainedQualification": {
+            "@id": "uncefact:attainedQualification"
+        },
+        "attentionOf": {
+            "@id": "uncefact:attentionOf"
+        },
+        "australianBSBIdentificationId": {
+            "@id": "uncefact:australianBSBIdentificationId"
+        },
+        "australianSNIdentificationId": {
+            "@id": "uncefact:australianSNIdentificationId"
+        },
+        "austrianBankleitzahlIdentificationId": {
+            "@id": "uncefact:austrianBankleitzahlIdentificationId"
+        },
+        "authenticatedOriginalIndicator": {
+            "@id": "uncefact:authenticatedOriginalIndicator"
+        },
+        "authenticationMethodCode": {
+            "@id": "uncefact:authenticationMethodCode"
+        },
+        "authorName": {
+            "@id": "uncefact:authorName"
+        },
+        "authorization": {
+            "@id": "uncefact:authorization"
+        },
+        "authorizationInformation": {
+            "@id": "uncefact:authorizationInformation"
+        },
+        "authorizedPersonName": {
+            "@id": "uncefact:authorizedPersonName"
+        },
+        "authorizedRegistration": {
+            "@id": "uncefact:authorizedRegistration"
+        },
+        "automaticDataCaptureMethodTypeAutomaticDataCaptureMethodCode": {
+            "@id": "uncefact:automaticDataCaptureMethodTypeAutomaticDataCaptureMethodCode"
+        },
+        "availabilityDueDateTime": {
+            "@id": "uncefact:availabilityDueDateTime"
+        },
+        "availableInventory": {
+            "@id": "uncefact:availableInventory"
+        },
+        "availableQuantity": {
+            "@id": "uncefact:availableQuantity"
+        },
+        "averageDemandQuantity": {
+            "@id": "uncefact:averageDemandQuantity"
+        },
+        "averageDurationDateTime": {
+            "@id": "uncefact:averageDurationDateTime"
+        },
+        "axisLabelList": {
+            "@id": "uncefact:axisLabelList"
+        },
+        "axisName": {
+            "@id": "uncefact:axisName"
+        },
+        "bBANIdentificationId": {
+            "@id": "uncefact:bBANIdentificationId"
+        },
+        "bEIIdentificationId": {
+            "@id": "uncefact:bEIIdentificationId"
+        },
+        "bICId": {
+            "@id": "uncefact:bICId"
+        },
+        "bICIdentificationId": {
+            "@id": "uncefact:bICIdentificationId"
+        },
+        "bIMSpecifiedParameter": {
+            "@id": "uncefact:bIMSpecifiedParameter"
+        },
+        "balanceOutAmount": {
+            "@id": "uncefact:balanceOutAmount"
+        },
+        "bankAssignedIdentificationId": {
+            "@id": "uncefact:bankAssignedIdentificationId"
+        },
+        "barcodeIdentificationId": {
+            "@id": "uncefact:barcodeIdentificationId"
+        },
+        "barcodeLabel": {
+            "@id": "uncefact:barcodeLabel"
+        },
+        "barcodeTypeCode": {
+            "@id": "uncefact:barcodeTypeCode"
+        },
+        "basisAmount": {
+            "@id": "uncefact:basisAmount"
+        },
+        "basisDateTime": {
+            "@id": "uncefact:basisDateTime"
+        },
+        "basisPeriodMeasure": {
+            "@id": "uncefact:basisPeriodMeasure"
+        },
+        "basisQuantity": {
+            "@id": "uncefact:basisQuantity"
+        },
+        "batchIdentificationId": {
+            "@id": "uncefact:batchIdentificationId"
+        },
+        "bestBeforeDateTime": {
+            "@id": "uncefact:bestBeforeDateTime"
+        },
+        "billedQuantity": {
+            "@id": "uncefact:billedQuantity"
+        },
+        "billingPeriod": {
+            "@id": "uncefact:billingPeriod"
+        },
+        "birthCountryId": {
+            "@id": "uncefact:birthCountryId"
+        },
+        "birthDateTime": {
+            "@id": "uncefact:birthDateTime"
+        },
+        "birthplaceName": {
+            "@id": "uncefact:birthplaceName"
+        },
+        "blanketOrderDocument": {
+            "@id": "uncefact:blanketOrderDocument"
+        },
+        "bondedWarehouseStorageEvent": {
+            "@id": "uncefact:bondedWarehouseStorageEvent"
+        },
+        "borderClearanceInstructions": {
+            "@id": "uncefact:borderClearanceInstructions"
+        },
+        "borderCrossingDateTime": {
+            "@id": "uncefact:borderCrossingDateTime"
+        },
+        "borderCrossingEvent": {
+            "@id": "uncefact:borderCrossingEvent"
+        },
+        "borderCrossingTransportMovement": {
+            "@id": "uncefact:borderCrossingTransportMovement"
+        },
+        "brandName": {
+            "@id": "uncefact:brandName"
+        },
+        "brandOwnerParty": {
+            "@id": "uncefact:brandOwnerParty"
+        },
+        "brandRangeName": {
+            "@id": "uncefact:brandRangeName"
+        },
+        "breakdownBalanceOut": {
+            "@id": "uncefact:breakdownBalanceOut"
+        },
+        "breakdownQuantityAnalysis": {
+            "@id": "uncefact:breakdownQuantityAnalysis"
+        },
+        "buildingName": {
+            "@id": "uncefact:buildingName"
+        },
+        "buildingNumber": {
+            "@id": "uncefact:buildingNumber"
+        },
+        "businessProcessSpecifiedParameter": {
+            "@id": "uncefact:businessProcessSpecifiedParameter"
+        },
+        "businessTypeCode": {
+            "@id": "uncefact:businessTypeCode"
+        },
+        "buyerAgentParty": {
+            "@id": "uncefact:buyerAgentParty"
+        },
+        "buyerApprovedFormattedDateTime": {
+            "@id": "uncefact:buyerApprovedFormattedDateTime"
+        },
+        "buyerAssignedAccountantParty": {
+            "@id": "uncefact:buyerAssignedAccountantParty"
+        },
+        "buyerAssignedCategoryCode": {
+            "@id": "uncefact:buyerAssignedCategoryCode"
+        },
+        "buyerAssignedIdentificationId": {
+            "@id": "uncefact:buyerAssignedIdentificationId"
+        },
+        "buyerDeductibleTaxSpecifiedAccountingAccount": {
+            "@id": "uncefact:buyerDeductibleTaxSpecifiedAccountingAccount"
+        },
+        "buyerNonDeductibleTaxSpecifiedAccountingAccount": {
+            "@id": "uncefact:buyerNonDeductibleTaxSpecifiedAccountingAccount"
+        },
+        "buyerOrderDocument": {
+            "@id": "uncefact:buyerOrderDocument"
+        },
+        "buyerOrderFormattedDateTime": {
+            "@id": "uncefact:buyerOrderFormattedDateTime"
+        },
+        "buyerParty": {
+            "@id": "uncefact:buyerParty"
+        },
+        "buyerReference": {
+            "@id": "uncefact:buyerReference"
+        },
+        "buyerRepayableTaxSpecifiedAccountingAccount": {
+            "@id": "uncefact:buyerRepayableTaxSpecifiedAccountingAccount"
+        },
+        "buyerRequisitionerParty": {
+            "@id": "uncefact:buyerRequisitionerParty"
+        },
+        "buyerSellerRelationshipIndicator": {
+            "@id": "uncefact:buyerSellerRelationshipIndicator"
+        },
+        "buyerSellerRelationshipPriceInfluenceIndicator": {
+            "@id": "uncefact:buyerSellerRelationshipPriceInfluenceIndicator"
+        },
+        "buyerSignatoryAuthentication": {
+            "@id": "uncefact:buyerSignatoryAuthentication"
+        },
+        "buyerSuppliedPartsReferenceDocument": {
+            "@id": "uncefact:buyerSuppliedPartsReferenceDocument"
+        },
+        "buyerTaxRepresentativeParty": {
+            "@id": "uncefact:buyerTaxRepresentativeParty"
+        },
+        "cHIPSParticipantIdentificationId": {
+            "@id": "uncefact:cHIPSParticipantIdentificationId"
+        },
+        "cHIPSUniversalIdentificationId": {
+            "@id": "uncefact:cHIPSUniversalIdentificationId"
+        },
+        "cODAmount": {
+            "@id": "uncefact:cODAmount"
+        },
+        "calculatedAmount": {
+            "@id": "uncefact:calculatedAmount"
+        },
+        "calculatedRate": {
+            "@id": "uncefact:calculatedRate"
+        },
+        "calculationBasis": {
+            "@id": "uncefact:calculationBasis"
+        },
+        "calculationBasisLogisticsChargeCalculationBasisCode": {
+            "@id": "uncefact:calculationBasisLogisticsChargeCalculationBasisCode"
+        },
+        "calculationDateTime": {
+            "@id": "uncefact:calculationDateTime"
+        },
+        "calculationMethodCode": {
+            "@id": "uncefact:calculationMethodCode"
+        },
+        "calculationPercent": {
+            "@id": "uncefact:calculationPercent"
+        },
+        "calculationSequenceNumeric": {
+            "@id": "uncefact:calculationSequenceNumeric"
+        },
+        "callEvent": {
+            "@id": "uncefact:callEvent"
+        },
+        "callPurposeCode": {
+            "@id": "uncefact:callPurposeCode"
+        },
+        "canadianPaymentsAssociationIdentificationId": {
+            "@id": "uncefact:canadianPaymentsAssociationIdentificationId"
+        },
+        "cancellationDateTime": {
+            "@id": "uncefact:cancellationDateTime"
+        },
+        "cancellationReason": {
+            "@id": "uncefact:cancellationReason"
+        },
+        "cancelledQuantity": {
+            "@id": "uncefact:cancelledQuantity"
+        },
+        "cardholderName": {
+            "@id": "uncefact:cardholderName"
+        },
+        "careOf": {
+            "@id": "uncefact:careOf"
+        },
+        "cargoDescription": {
+            "@id": "uncefact:cargoDescription"
+        },
+        "cargoFacilityRelatedLocation": {
+            "@id": "uncefact:cargoFacilityRelatedLocation"
+        },
+        "cargoGrossWeightWeightUnitMeasure": {
+            "@id": "uncefact:cargoGrossWeightWeightUnitMeasure"
+        },
+        "cargoInsuranceInstructionsInformation": {
+            "@id": "uncefact:cargoInsuranceInstructionsInformation"
+        },
+        "cargoToleranceInformation": {
+            "@id": "uncefact:cargoToleranceInformation"
+        },
+        "carriedGoodsCharacteristic": {
+            "@id": "uncefact:carriedGoodsCharacteristic"
+        },
+        "carriedInactiveTransportMeans": {
+            "@id": "uncefact:carriedInactiveTransportMeans"
+        },
+        "carriedTransportEquipment": {
+            "@id": "uncefact:carriedTransportEquipment"
+        },
+        "carrierAcceptanceDateTime": {
+            "@id": "uncefact:carrierAcceptanceDateTime"
+        },
+        "carrierAcceptanceFormattedDateTime": {
+            "@id": "uncefact:carrierAcceptanceFormattedDateTime"
+        },
+        "carrierAcceptanceLocation": {
+            "@id": "uncefact:carrierAcceptanceLocation"
+        },
+        "carrierAgentParty": {
+            "@id": "uncefact:carrierAgentParty"
+        },
+        "carrierAssignedBookingIdentificationId": {
+            "@id": "uncefact:carrierAssignedBookingIdentificationId"
+        },
+        "carrierAssignedId": {
+            "@id": "uncefact:carrierAssignedId"
+        },
+        "carrierParty": {
+            "@id": "uncefact:carrierParty"
+        },
+        "carrierProvidedInformation": {
+            "@id": "uncefact:carrierProvidedInformation"
+        },
+        "catalogueDocument": {
+            "@id": "uncefact:catalogueDocument"
+        },
+        "catalogueInformationProviderParty": {
+            "@id": "uncefact:catalogueInformationProviderParty"
+        },
+        "catalogueInformationReceiverParty": {
+            "@id": "uncefact:catalogueInformationReceiverParty"
+        },
+        "catalogueRequestDocument": {
+            "@id": "uncefact:catalogueRequestDocument"
+        },
+        "catalogueSubscriptionDocument": {
+            "@id": "uncefact:catalogueSubscriptionDocument"
+        },
+        "categoryCode": {
+            "@id": "uncefact:categoryCode"
+        },
+        "categoryName": {
+            "@id": "uncefact:categoryName"
+        },
+        "categoryTax": {
+            "@id": "uncefact:categoryTax"
+        },
+        "categoryTaxCategoryCode": {
+            "@id": "uncefact:categoryTaxCategoryCode"
+        },
+        "categoryTransportEquipmentCategoryCode": {
+            "@id": "uncefact:categoryTransportEquipmentCategoryCode"
+        },
+        "categoryTransportServiceCategoryCode": {
+            "@id": "uncefact:categoryTransportServiceCategoryCode"
+        },
+        "categoryTypeCode": {
+            "@id": "uncefact:categoryTypeCode"
+        },
+        "cell": {
+            "@id": "uncefact:cell"
+        },
+        "centreGeographicalPoint": {
+            "@id": "uncefact:centreGeographicalPoint"
+        },
+        "certificationBasis": {
+            "@id": "uncefact:certificationBasis"
+        },
+        "certificationEvidenceReferenceDocument": {
+            "@id": "uncefact:certificationEvidenceReferenceDocument"
+        },
+        "certifiedEmission": {
+            "@id": "uncefact:certifiedEmission"
+        },
+        "certifyingParty": {
+            "@id": "uncefact:certifyingParty"
+        },
+        "changeReason": {
+            "@id": "uncefact:changeReason"
+        },
+        "changeableIndicator": {
+            "@id": "uncefact:changeableIndicator"
+        },
+        "changedDateTime": {
+            "@id": "uncefact:changedDateTime"
+        },
+        "changedStatus": {
+            "@id": "uncefact:changedStatus"
+        },
+        "changerName": {
+            "@id": "uncefact:changerName"
+        },
+        "channelCommunicationChannelCode": {
+            "@id": "uncefact:channelCommunicationChannelCode"
+        },
+        "characterSetCode": {
+            "@id": "uncefact:characterSetCode"
+        },
+        "characteristic": {
+            "@id": "uncefact:characteristic"
+        },
+        "characteristicTransportEquipmentSizeTypeCode": {
+            "@id": "uncefact:characteristicTransportEquipmentSizeTypeCode"
+        },
+        "chargeAmount": {
+            "@id": "uncefact:chargeAmount"
+        },
+        "chargeApportionMethodCode": {
+            "@id": "uncefact:chargeApportionMethodCode"
+        },
+        "chargeCategoryCode": {
+            "@id": "uncefact:chargeCategoryCode"
+        },
+        "chargeFreeQuantity": {
+            "@id": "uncefact:chargeFreeQuantity"
+        },
+        "chargeIndicator": {
+            "@id": "uncefact:chargeIndicator"
+        },
+        "chargeTotalAmount": {
+            "@id": "uncefact:chargeTotalAmount"
+        },
+        "chargeableTransportationStageQuantity": {
+            "@id": "uncefact:chargeableTransportationStageQuantity"
+        },
+        "chargeableWeightWeightUnitMeasure": {
+            "@id": "uncefact:chargeableWeightWeightUnitMeasure"
+        },
+        "chemicalConcentrationMeasure": {
+            "@id": "uncefact:chemicalConcentrationMeasure"
+        },
+        "cityId": {
+            "@id": "uncefact:cityId"
+        },
+        "cityName": {
+            "@id": "uncefact:cityName"
+        },
+        "citySubDivisionName": {
+            "@id": "uncefact:citySubDivisionName"
+        },
+        "claimRelatedParty": {
+            "@id": "uncefact:claimRelatedParty"
+        },
+        "classCharacteristic": {
+            "@id": "uncefact:classCharacteristic"
+        },
+        "classCode": {
+            "@id": "uncefact:classCode"
+        },
+        "className": {
+            "@id": "uncefact:className"
+        },
+        "clearingSystemName": {
+            "@id": "uncefact:clearingSystemName"
+        },
+        "closingBookDueDateTime": {
+            "@id": "uncefact:closingBookDueDateTime"
+        },
+        "closingDateTime": {
+            "@id": "uncefact:closingDateTime"
+        },
+        "collectionIndicator": {
+            "@id": "uncefact:collectionIndicator"
+        },
+        "colourCode": {
+            "@id": "uncefact:colourCode"
+        },
+        "colourDescription": {
+            "@id": "uncefact:colourDescription"
+        },
+        "comment": {
+            "@id": "uncefact:comment"
+        },
+        "commitmentLevelCode": {
+            "@id": "uncefact:commitmentLevelCode"
+        },
+        "commodityConsolidatorAgentParty": {
+            "@id": "uncefact:commodityConsolidatorAgentParty"
+        },
+        "commodityConsolidatorParty": {
+            "@id": "uncefact:commodityConsolidatorParty"
+        },
+        "commonName": {
+            "@id": "uncefact:commonName"
+        },
+        "communicationCapabilityCode": {
+            "@id": "uncefact:communicationCapabilityCode"
+        },
+        "companySecurityOfficerPerson": {
+            "@id": "uncefact:companySecurityOfficerPerson"
+        },
+        "comparisonMethodCode": {
+            "@id": "uncefact:comparisonMethodCode"
+        },
+        "comparisonOperatorCode": {
+            "@id": "uncefact:comparisonOperatorCode"
+        },
+        "complementaryApplicableProduct": {
+            "@id": "uncefact:complementaryApplicableProduct"
+        },
+        "completeDateTime": {
+            "@id": "uncefact:completeDateTime"
+        },
+        "completeDeliveryIndicator": {
+            "@id": "uncefact:completeDeliveryIndicator"
+        },
+        "completeNumber": {
+            "@id": "uncefact:completeNumber"
+        },
+        "completionPeriod": {
+            "@id": "uncefact:completionPeriod"
+        },
+        "complianceDeclarationInformation": {
+            "@id": "uncefact:complianceDeclarationInformation"
+        },
+        "componentApplicableProduct": {
+            "@id": "uncefact:componentApplicableProduct"
+        },
+        "componentDimension": {
+            "@id": "uncefact:componentDimension"
+        },
+        "compositionDescription": {
+            "@id": "uncefact:compositionDescription"
+        },
+        "conciseDescription": {
+            "@id": "uncefact:conciseDescription"
+        },
+        "conditionCancellationDocumentStatusCode": {
+            "@id": "uncefact:conditionCancellationDocumentStatusCode"
+        },
+        "conditionCode": {
+            "@id": "uncefact:conditionCode"
+        },
+        "conditionDocumentStatusCode": {
+            "@id": "uncefact:conditionDocumentStatusCode"
+        },
+        "conditionFinancingStatusCode": {
+            "@id": "uncefact:conditionFinancingStatusCode"
+        },
+        "conditionLogisticsStatusCode": {
+            "@id": "uncefact:conditionLogisticsStatusCode"
+        },
+        "conditionMeasure": {
+            "@id": "uncefact:conditionMeasure"
+        },
+        "conditionSealConditionCode": {
+            "@id": "uncefact:conditionSealConditionCode"
+        },
+        "conditionTypeTransportServiceConditionCode": {
+            "@id": "uncefact:conditionTypeTransportServiceConditionCode"
+        },
+        "conditionValidationDocumentStatusCode": {
+            "@id": "uncefact:conditionValidationDocumentStatusCode"
+        },
+        "conferenceCode": {
+            "@id": "uncefact:conferenceCode"
+        },
+        "configurableIndicator": {
+            "@id": "uncefact:configurableIndicator"
+        },
+        "confirmedDeliveryEvent": {
+            "@id": "uncefact:confirmedDeliveryEvent"
+        },
+        "confirmedDespatchEvent": {
+            "@id": "uncefact:confirmedDespatchEvent"
+        },
+        "confirmedPickUpEvent": {
+            "@id": "uncefact:confirmedPickUpEvent"
+        },
+        "confirmedReleaseEvent": {
+            "@id": "uncefact:confirmedReleaseEvent"
+        },
+        "connectingCarrierParty": {
+            "@id": "uncefact:connectingCarrierParty"
+        },
+        "consigneeAgentParty": {
+            "@id": "uncefact:consigneeAgentParty"
+        },
+        "consigneeAssignedId": {
+            "@id": "uncefact:consigneeAssignedId"
+        },
+        "consigneeParty": {
+            "@id": "uncefact:consigneeParty"
+        },
+        "consigneeReceiptLocation": {
+            "@id": "uncefact:consigneeReceiptLocation"
+        },
+        "consignmentDestinationSpecifiedLocation": {
+            "@id": "uncefact:consignmentDestinationSpecifiedLocation"
+        },
+        "consignmentInventory": {
+            "@id": "uncefact:consignmentInventory"
+        },
+        "consignmentItemQuantity": {
+            "@id": "uncefact:consignmentItemQuantity"
+        },
+        "consignmentQuantity": {
+            "@id": "uncefact:consignmentQuantity"
+        },
+        "consignmentRiskRelatedCode": {
+            "@id": "uncefact:consignmentRiskRelatedCode"
+        },
+        "consignorAgentParty": {
+            "@id": "uncefact:consignorAgentParty"
+        },
+        "consignorAssignedId": {
+            "@id": "uncefact:consignorAssignedId"
+        },
+        "consignorParty": {
+            "@id": "uncefact:consignorParty"
+        },
+        "consignorProvidedBorderClearanceInstructions": {
+            "@id": "uncefact:consignorProvidedBorderClearanceInstructions"
+        },
+        "consignorProvidedInformation": {
+            "@id": "uncefact:consignorProvidedInformation"
+        },
+        "consolidationEvent": {
+            "@id": "uncefact:consolidationEvent"
+        },
+        "consolidatorParty": {
+            "@id": "uncefact:consolidatorParty"
+        },
+        "consortiumCarrierParty": {
+            "@id": "uncefact:consortiumCarrierParty"
+        },
+        "constraintIndicator": {
+            "@id": "uncefact:constraintIndicator"
+        },
+        "consumerAgeDescription": {
+            "@id": "uncefact:consumerAgeDescription"
+        },
+        "consumerGenderDescription": {
+            "@id": "uncefact:consumerGenderDescription"
+        },
+        "consumptionReportDocument": {
+            "@id": "uncefact:consumptionReportDocument"
+        },
+        "consumptionSchedule": {
+            "@id": "uncefact:consumptionSchedule"
+        },
+        "containedConsignment": {
+            "@id": "uncefact:containedConsignment"
+        },
+        "containedConsignmentQuantity": {
+            "@id": "uncefact:containedConsignmentQuantity"
+        },
+        "containedTransportEquipment": {
+            "@id": "uncefact:containedTransportEquipment"
+        },
+        "containerizationIndicator": {
+            "@id": "uncefact:containerizationIndicator"
+        },
+        "content": {
+            "@id": "uncefact:content"
+        },
+        "contentAmount": {
+            "@id": "uncefact:contentAmount"
+        },
+        "contentCode": {
+            "@id": "uncefact:contentCode"
+        },
+        "contentDateTime": {
+            "@id": "uncefact:contentDateTime"
+        },
+        "contentLayerQuantity": {
+            "@id": "uncefact:contentLayerQuantity"
+        },
+        "contentTypeCode": {
+            "@id": "uncefact:contentTypeCode"
+        },
+        "contentUnitQuantity": {
+            "@id": "uncefact:contentUnitQuantity"
+        },
+        "contentVariableMeasureIndicator": {
+            "@id": "uncefact:contentVariableMeasureIndicator"
+        },
+        "continuousIndicator": {
+            "@id": "uncefact:continuousIndicator"
+        },
+        "contractDocument": {
+            "@id": "uncefact:contractDocument"
+        },
+        "contractGeneralConditions": {
+            "@id": "uncefact:contractGeneralConditions"
+        },
+        "contractIdentificationId": {
+            "@id": "uncefact:contractIdentificationId"
+        },
+        "contractualClause": {
+            "@id": "uncefact:contractualClause"
+        },
+        "contractualLanguageCode": {
+            "@id": "uncefact:contractualLanguageCode"
+        },
+        "controlRequirementIndicator": {
+            "@id": "uncefact:controlRequirementIndicator"
+        },
+        "controlResult": {
+            "@id": "uncefact:controlResult"
+        },
+        "controlStartDateConfirmationIndicator": {
+            "@id": "uncefact:controlStartDateConfirmationIndicator"
+        },
+        "controlTemperatureMeasurement": {
+            "@id": "uncefact:controlTemperatureMeasurement"
+        },
+        "conversionRate": {
+            "@id": "uncefact:conversionRate"
+        },
+        "conversionRateDateTime": {
+            "@id": "uncefact:conversionRateDateTime"
+        },
+        "conveyanceFacilityRelatedLocation": {
+            "@id": "uncefact:conveyanceFacilityRelatedLocation"
+        },
+        "coordinate": {
+            "@id": "uncefact:coordinate"
+        },
+        "coordinateDirectPosition": {
+            "@id": "uncefact:coordinateDirectPosition"
+        },
+        "coordinateReferenceDimension": {
+            "@id": "uncefact:coordinateReferenceDimension"
+        },
+        "coordinateReferenceSystemId": {
+            "@id": "uncefact:coordinateReferenceSystemId"
+        },
+        "copyIndicator": {
+            "@id": "uncefact:copyIndicator"
+        },
+        "copyIssuedQuantity": {
+            "@id": "uncefact:copyIssuedQuantity"
+        },
+        "copyRequiredQuantity": {
+            "@id": "uncefact:copyRequiredQuantity"
+        },
+        "costReferenceDimensionPattern": {
+            "@id": "uncefact:costReferenceDimensionPattern"
+        },
+        "countNumeric": {
+            "@id": "uncefact:countNumeric"
+        },
+        "countryCountryId": {
+            "@id": "uncefact:countryCountryId"
+        },
+        "countryId": {
+            "@id": "uncefact:countryId"
+        },
+        "countryName": {
+            "@id": "uncefact:countryName"
+        },
+        "countryNumberCode": {
+            "@id": "uncefact:countryNumberCode"
+        },
+        "countrySubDivisionId": {
+            "@id": "uncefact:countrySubDivisionId"
+        },
+        "countrySubDivisionName": {
+            "@id": "uncefact:countrySubDivisionName"
+        },
+        "coverageCode": {
+            "@id": "uncefact:coverageCode"
+        },
+        "coverageDescription": {
+            "@id": "uncefact:coverageDescription"
+        },
+        "coverageParty": {
+            "@id": "uncefact:coverageParty"
+        },
+        "creationBinaryFile": {
+            "@id": "uncefact:creationBinaryFile"
+        },
+        "creationDateTime": {
+            "@id": "uncefact:creationDateTime"
+        },
+        "creationFormattedDateTime": {
+            "@id": "uncefact:creationFormattedDateTime"
+        },
+        "creditAvailableAmount": {
+            "@id": "uncefact:creditAvailableAmount"
+        },
+        "creditFormattedDateTime": {
+            "@id": "uncefact:creditFormattedDateTime"
+        },
+        "creditLimitAmount": {
+            "@id": "uncefact:creditLimitAmount"
+        },
+        "creditNoteAmount": {
+            "@id": "uncefact:creditNoteAmount"
+        },
+        "creditReason": {
+            "@id": "uncefact:creditReason"
+        },
+        "creditReasonCode": {
+            "@id": "uncefact:creditReasonCode"
+        },
+        "creditorReferenceId": {
+            "@id": "uncefact:creditorReferenceId"
+        },
+        "creditorReferenceIssuerId": {
+            "@id": "uncefact:creditorReferenceIssuerId"
+        },
+        "creditorReferenceType": {
+            "@id": "uncefact:creditorReferenceType"
+        },
+        "creditorReferenceTypeCode": {
+            "@id": "uncefact:creditorReferenceTypeCode"
+        },
+        "crewListRelatedDocument": {
+            "@id": "uncefact:crewListRelatedDocument"
+        },
+        "crewNationalityCountry": {
+            "@id": "uncefact:crewNationalityCountry"
+        },
+        "crewPerson": {
+            "@id": "uncefact:crewPerson"
+        },
+        "crewPersonalEffects": {
+            "@id": "uncefact:crewPersonalEffects"
+        },
+        "crewQuantity": {
+            "@id": "uncefact:crewQuantity"
+        },
+        "criticalitySafetyIndexNumeric": {
+            "@id": "uncefact:criticalitySafetyIndexNumeric"
+        },
+        "currencyCode": {
+            "@id": "uncefact:currencyCode"
+        },
+        "currencyCurrencyCode": {
+            "@id": "uncefact:currencyCurrencyCode"
+        },
+        "currencyExchangeRate": {
+            "@id": "uncefact:currencyExchangeRate"
+        },
+        "customerAssignedIdentificationId": {
+            "@id": "uncefact:customerAssignedIdentificationId"
+        },
+        "customerFacingTotalUnitQuantity": {
+            "@id": "uncefact:customerFacingTotalUnitQuantity"
+        },
+        "customerInventory": {
+            "@id": "uncefact:customerInventory"
+        },
+        "customsDutyIndicator": {
+            "@id": "uncefact:customsDutyIndicator"
+        },
+        "customsExportAgentParty": {
+            "@id": "uncefact:customsExportAgentParty"
+        },
+        "customsIdentificationId": {
+            "@id": "uncefact:customsIdentificationId"
+        },
+        "customsImportAgentParty": {
+            "@id": "uncefact:customsImportAgentParty"
+        },
+        "customsRequiredInvoiceDocument": {
+            "@id": "uncefact:customsRequiredInvoiceDocument"
+        },
+        "customsTransitAgentParty": {
+            "@id": "uncefact:customsTransitAgentParty"
+        },
+        "customsValueSpecifiedAmount": {
+            "@id": "uncefact:customsValueSpecifiedAmount"
+        },
+        "cycle": {
+            "@id": "uncefact:cycle"
+        },
+        "dUNSIdentificationId": {
+            "@id": "uncefact:dUNSIdentificationId"
+        },
+        "damageRemark": {
+            "@id": "uncefact:damageRemark"
+        },
+        "damageRemarks": {
+            "@id": "uncefact:damageRemarks"
+        },
+        "dangerousGoodsIndicator": {
+            "@id": "uncefact:dangerousGoodsIndicator"
+        },
+        "dangerousGoodsNotifierParty": {
+            "@id": "uncefact:dangerousGoodsNotifierParty"
+        },
+        "dateTypeCode": {
+            "@id": "uncefact:dateTypeCode"
+        },
+        "debitFormattedDateTime": {
+            "@id": "uncefact:debitFormattedDateTime"
+        },
+        "debitNoteAmount": {
+            "@id": "uncefact:debitNoteAmount"
+        },
+        "declarantAgentParty": {
+            "@id": "uncefact:declarantAgentParty"
+        },
+        "declarantAssignedDeclarationId": {
+            "@id": "uncefact:declarantAssignedDeclarationId"
+        },
+        "declarantParty": {
+            "@id": "uncefact:declarantParty"
+        },
+        "declarationLodgementLocation": {
+            "@id": "uncefact:declarationLodgementLocation"
+        },
+        "declaredForCustomsLocation": {
+            "@id": "uncefact:declaredForCustomsLocation"
+        },
+        "declaredPersonalEffects": {
+            "@id": "uncefact:declaredPersonalEffects"
+        },
+        "declaredValueForCarriageAmount": {
+            "@id": "uncefact:declaredValueForCarriageAmount"
+        },
+        "declaredValueForCustomsAmount": {
+            "@id": "uncefact:declaredValueForCustomsAmount"
+        },
+        "declaredValueForStatisticsAmount": {
+            "@id": "uncefact:declaredValueForStatisticsAmount"
+        },
+        "deconsolidatorParty": {
+            "@id": "uncefact:deconsolidatorParty"
+        },
+        "deductedAdjustmentAmount": {
+            "@id": "uncefact:deductedAdjustmentAmount"
+        },
+        "deductedAdjustmentPercent": {
+            "@id": "uncefact:deductedAdjustmentPercent"
+        },
+        "deductionAmount": {
+            "@id": "uncefact:deductionAmount"
+        },
+        "defaultCurrencyCurrencyCode": {
+            "@id": "uncefact:defaultCurrencyCurrencyCode"
+        },
+        "defaultLanguageCode": {
+            "@id": "uncefact:defaultLanguageCode"
+        },
+        "deferredPayableTotalChargeAmount": {
+            "@id": "uncefact:deferredPayableTotalChargeAmount"
+        },
+        "deferredPaymentMethodIndicator": {
+            "@id": "uncefact:deferredPaymentMethodIndicator"
+        },
+        "definedContact": {
+            "@id": "uncefact:definedContact"
+        },
+        "definedParameter": {
+            "@id": "uncefact:definedParameter"
+        },
+        "definedRange": {
+            "@id": "uncefact:definedRange"
+        },
+        "delayOccurrencePeriod": {
+            "@id": "uncefact:delayOccurrencePeriod"
+        },
+        "delaySpecifiedEvent": {
+            "@id": "uncefact:delaySpecifiedEvent"
+        },
+        "deliveryApplicableTemperature": {
+            "@id": "uncefact:deliveryApplicableTemperature"
+        },
+        "deliveryDiscontinuationCode": {
+            "@id": "uncefact:deliveryDiscontinuationCode"
+        },
+        "deliveryEvent": {
+            "@id": "uncefact:deliveryEvent"
+        },
+        "deliveryInformation": {
+            "@id": "uncefact:deliveryInformation"
+        },
+        "deliveryInstructions": {
+            "@id": "uncefact:deliveryInstructions"
+        },
+        "deliveryLocation": {
+            "@id": "uncefact:deliveryLocation"
+        },
+        "deliveryNoteDocument": {
+            "@id": "uncefact:deliveryNoteDocument"
+        },
+        "deliveryOrderFulfilmentLeadTimeDurationUnitMeasure": {
+            "@id": "uncefact:deliveryOrderFulfilmentLeadTimeDurationUnitMeasure"
+        },
+        "deliveryParty": {
+            "@id": "uncefact:deliveryParty"
+        },
+        "deliveryPriorityPriorityDescriptionCode": {
+            "@id": "uncefact:deliveryPriorityPriorityDescriptionCode"
+        },
+        "deliverySchedule": {
+            "@id": "uncefact:deliverySchedule"
+        },
+        "deliveryTypeDeliveryTermsCode": {
+            "@id": "uncefact:deliveryTypeDeliveryTermsCode"
+        },
+        "demandForecastDocument": {
+            "@id": "uncefact:demandForecastDocument"
+        },
+        "demurrageInformation": {
+            "@id": "uncefact:demurrageInformation"
+        },
+        "departmentName": {
+            "@id": "uncefact:departmentName"
+        },
+        "departureEvent": {
+            "@id": "uncefact:departureEvent"
+        },
+        "departurePoint": {
+            "@id": "uncefact:departurePoint"
+        },
+        "departureRelatedDateTime": {
+            "@id": "uncefact:departureRelatedDateTime"
+        },
+        "departureReportedEvent": {
+            "@id": "uncefact:departureReportedEvent"
+        },
+        "depositValueSpecifiedAmount": {
+            "@id": "uncefact:depositValueSpecifiedAmount"
+        },
+        "depositValueValidityPeriod": {
+            "@id": "uncefact:depositValueValidityPeriod"
+        },
+        "description": {
+            "@id": "uncefact:description"
+        },
+        "descriptionBinaryObject": {
+            "@id": "uncefact:descriptionBinaryObject"
+        },
+        "descriptionCode": {
+            "@id": "uncefact:descriptionCode"
+        },
+        "descriptionReference": {
+            "@id": "uncefact:descriptionReference"
+        },
+        "designatedClassification": {
+            "@id": "uncefact:designatedClassification"
+        },
+        "designation": {
+            "@id": "uncefact:designation"
+        },
+        "despatchAdviceDocument": {
+            "@id": "uncefact:despatchAdviceDocument"
+        },
+        "despatchNoteAssociatedDocument": {
+            "@id": "uncefact:despatchNoteAssociatedDocument"
+        },
+        "despatchParty": {
+            "@id": "uncefact:despatchParty"
+        },
+        "despatchSchedule": {
+            "@id": "uncefact:despatchSchedule"
+        },
+        "despatchedQuantity": {
+            "@id": "uncefact:despatchedQuantity"
+        },
+        "destinationCountry": {
+            "@id": "uncefact:destinationCountry"
+        },
+        "destroyedQuantity": {
+            "@id": "uncefact:destroyedQuantity"
+        },
+        "devanningEvent": {
+            "@id": "uncefact:devanningEvent"
+        },
+        "diameterLinearUnitMeasure": {
+            "@id": "uncefact:diameterLinearUnitMeasure"
+        },
+        "dimensionNumeric": {
+            "@id": "uncefact:dimensionNumeric"
+        },
+        "directDebitMandateIdentificationId": {
+            "@id": "uncefact:directDebitMandateIdentificationId"
+        },
+        "directTelephoneCommunication": {
+            "@id": "uncefact:directTelephoneCommunication"
+        },
+        "directionAccountingDebitCreditStatusCode": {
+            "@id": "uncefact:directionAccountingDebitCreditStatusCode"
+        },
+        "disbursementAmount": {
+            "@id": "uncefact:disbursementAmount"
+        },
+        "discountIndicator": {
+            "@id": "uncefact:discountIndicator"
+        },
+        "disembarkationLocation": {
+            "@id": "uncefact:disembarkationLocation"
+        },
+        "disposalMethodCode": {
+            "@id": "uncefact:disposalMethodCode"
+        },
+        "disposalParty": {
+            "@id": "uncefact:disposalParty"
+        },
+        "dispositionDocument": {
+            "@id": "uncefact:dispositionDocument"
+        },
+        "documentURLId": {
+            "@id": "uncefact:documentURLId"
+        },
+        "documentaryInstructionsNotifiedParty": {
+            "@id": "uncefact:documentaryInstructionsNotifiedParty"
+        },
+        "drainedNetWeightMeasure": {
+            "@id": "uncefact:drainedNetWeightMeasure"
+        },
+        "draughtLevelMeasure": {
+            "@id": "uncefact:draughtLevelMeasure"
+        },
+        "driverAccompaniedIndicator": {
+            "@id": "uncefact:driverAccompaniedIndicator"
+        },
+        "driversLicenceIdentificationId": {
+            "@id": "uncefact:driversLicenceIdentificationId"
+        },
+        "dueDateDateTime": {
+            "@id": "uncefact:dueDateDateTime"
+        },
+        "dueDateTime": {
+            "@id": "uncefact:dueDateTime"
+        },
+        "dueDateTypeTimeReferenceCode": {
+            "@id": "uncefact:dueDateTypeTimeReferenceCode"
+        },
+        "dueFormattedDateTime": {
+            "@id": "uncefact:dueFormattedDateTime"
+        },
+        "dueInAvailableQuantity": {
+            "@id": "uncefact:dueInAvailableQuantity"
+        },
+        "dueInForecastedQuantity": {
+            "@id": "uncefact:dueInForecastedQuantity"
+        },
+        "dueInRequestedQuantity": {
+            "@id": "uncefact:dueInRequestedQuantity"
+        },
+        "dueInReturnedQuantity": {
+            "@id": "uncefact:dueInReturnedQuantity"
+        },
+        "duePayableAmount": {
+            "@id": "uncefact:duePayableAmount"
+        },
+        "durationMeasure": {
+            "@id": "uncefact:durationMeasure"
+        },
+        "eMSId": {
+            "@id": "uncefact:eMSId"
+        },
+        "earliestOccurrenceDateTime": {
+            "@id": "uncefact:earliestOccurrenceDateTime"
+        },
+        "economicOrderQuantity": {
+            "@id": "uncefact:economicOrderQuantity"
+        },
+        "effectivePeriod": {
+            "@id": "uncefact:effectivePeriod"
+        },
+        "electronicPresentationIndicator": {
+            "@id": "uncefact:electronicPresentationIndicator"
+        },
+        "elementVersionId": {
+            "@id": "uncefact:elementVersionId"
+        },
+        "emailURICommunication": {
+            "@id": "uncefact:emailURICommunication"
+        },
+        "embarkationLocation": {
+            "@id": "uncefact:embarkationLocation"
+        },
+        "embeddedSensor": {
+            "@id": "uncefact:embeddedSensor"
+        },
+        "emergencyContact": {
+            "@id": "uncefact:emergencyContact"
+        },
+        "emergencyTemperatureMeasurement": {
+            "@id": "uncefact:emergencyTemperatureMeasurement"
+        },
+        "encodingCode": {
+            "@id": "uncefact:encodingCode"
+        },
+        "endDateTime": {
+            "@id": "uncefact:endDateTime"
+        },
+        "endId": {
+            "@id": "uncefact:endId"
+        },
+        "endItemName": {
+            "@id": "uncefact:endItemName"
+        },
+        "endItemTypeCode": {
+            "@id": "uncefact:endItemTypeCode"
+        },
+        "endPointURICommunication": {
+            "@id": "uncefact:endPointURICommunication"
+        },
+        "endToEndIdentificationId": {
+            "@id": "uncefact:endToEndIdentificationId"
+        },
+        "engineeringChangeDocument": {
+            "@id": "uncefact:engineeringChangeDocument"
+        },
+        "entryCustomsOfficeSpecifiedLocation": {
+            "@id": "uncefact:entryCustomsOfficeSpecifiedLocation"
+        },
+        "equivalentTransferTotalAmount": {
+            "@id": "uncefact:equivalentTransferTotalAmount"
+        },
+        "establishedDateTime": {
+            "@id": "uncefact:establishedDateTime"
+        },
+        "estimatedApplicableServiceCharge": {
+            "@id": "uncefact:estimatedApplicableServiceCharge"
+        },
+        "estimatedGeneratedVolumeUnitMeasure": {
+            "@id": "uncefact:estimatedGeneratedVolumeUnitMeasure"
+        },
+        "estimatedOccurrenceDateTime": {
+            "@id": "uncefact:estimatedOccurrenceDateTime"
+        },
+        "estimatedTransportMeansArrivalOccurrenceDateTime": {
+            "@id": "uncefact:estimatedTransportMeansArrivalOccurrenceDateTime"
+        },
+        "examinationEvent": {
+            "@id": "uncefact:examinationEvent"
+        },
+        "excessTransportService": {
+            "@id": "uncefact:excessTransportService"
+        },
+        "excludingTaxesLineTotalAmount": {
+            "@id": "uncefact:excludingTaxesLineTotalAmount"
+        },
+        "exclusivityPeriod": {
+            "@id": "uncefact:exclusivityPeriod"
+        },
+        "exemptionAuthorizationIdentificationId": {
+            "@id": "uncefact:exemptionAuthorizationIdentificationId"
+        },
+        "exemptionClaimantParty": {
+            "@id": "uncefact:exemptionClaimantParty"
+        },
+        "exemptionIndicator": {
+            "@id": "uncefact:exemptionIndicator"
+        },
+        "exemptionReason": {
+            "@id": "uncefact:exemptionReason"
+        },
+        "exemptionReasonCode": {
+            "@id": "uncefact:exemptionReasonCode"
+        },
+        "exitCustomsOfficeSpecifiedLocation": {
+            "@id": "uncefact:exitCustomsOfficeSpecifiedLocation"
+        },
+        "expectedIndicator": {
+            "@id": "uncefact:expectedIndicator"
+        },
+        "expiryDate": {
+            "@id": "uncefact:expiryDate"
+        },
+        "expiryDateTime": {
+            "@id": "uncefact:expiryDateTime"
+        },
+        "expiryFormattedDateTime": {
+            "@id": "uncefact:expiryFormattedDateTime"
+        },
+        "explosiveCargoNetWeightWeightUnitMeasure": {
+            "@id": "uncefact:explosiveCargoNetWeightWeightUnitMeasure"
+        },
+        "explosiveCompatibilityGroupCode": {
+            "@id": "uncefact:explosiveCompatibilityGroupCode"
+        },
+        "exportCountry": {
+            "@id": "uncefact:exportCountry"
+        },
+        "exportCustomsOfficeSpecifiedLocation": {
+            "@id": "uncefact:exportCustomsOfficeSpecifiedLocation"
+        },
+        "exportExitDateTime": {
+            "@id": "uncefact:exportExitDateTime"
+        },
+        "exportGeopoliticalRegion": {
+            "@id": "uncefact:exportGeopoliticalRegion"
+        },
+        "exportIndicator": {
+            "@id": "uncefact:exportIndicator"
+        },
+        "exportLicenceControlClassificationId": {
+            "@id": "uncefact:exportLicenceControlClassificationId"
+        },
+        "exportLicenceDocument": {
+            "@id": "uncefact:exportLicenceDocument"
+        },
+        "exportTypeCode": {
+            "@id": "uncefact:exportTypeCode"
+        },
+        "exporterParty": {
+            "@id": "uncefact:exporterParty"
+        },
+        "extensionNumber": {
+            "@id": "uncefact:extensionNumber"
+        },
+        "exteriorLinearRing": {
+            "@id": "uncefact:exteriorLinearRing"
+        },
+        "fOBAmount": {
+            "@id": "uncefact:fOBAmount"
+        },
+        "factoringAgreementDocument": {
+            "@id": "uncefact:factoringAgreementDocument"
+        },
+        "factoringListDocument": {
+            "@id": "uncefact:factoringListDocument"
+        },
+        "familyName": {
+            "@id": "uncefact:familyName"
+        },
+        "faxCommunication": {
+            "@id": "uncefact:faxCommunication"
+        },
+        "fedwireRoutingNumberIdentificationId": {
+            "@id": "uncefact:fedwireRoutingNumberIdentificationId"
+        },
+        "fileName": {
+            "@id": "uncefact:fileName"
+        },
+        "finalAssemblyCountry": {
+            "@id": "uncefact:finalAssemblyCountry"
+        },
+        "finalDeliveryIndicator": {
+            "@id": "uncefact:finalDeliveryIndicator"
+        },
+        "finalDestinationCountry": {
+            "@id": "uncefact:finalDestinationCountry"
+        },
+        "finalDestinationLocation": {
+            "@id": "uncefact:finalDestinationLocation"
+        },
+        "financedAppliedRatePercent": {
+            "@id": "uncefact:financedAppliedRatePercent"
+        },
+        "financedRatePercent": {
+            "@id": "uncefact:financedRatePercent"
+        },
+        "financedTotalAmount": {
+            "@id": "uncefact:financedTotalAmount"
+        },
+        "financedTransactionSpecifiedQuantity": {
+            "@id": "uncefact:financedTransactionSpecifiedQuantity"
+        },
+        "firstAgentSpecifiedFinancialInstitution": {
+            "@id": "uncefact:firstAgentSpecifiedFinancialInstitution"
+        },
+        "firstArrivalEvent": {
+            "@id": "uncefact:firstArrivalEvent"
+        },
+        "firstSignatoryAuthentication": {
+            "@id": "uncefact:firstSignatoryAuthentication"
+        },
+        "firstTypeExtensionCode": {
+            "@id": "uncefact:firstTypeExtensionCode"
+        },
+        "fissileExceptionIndicator": {
+            "@id": "uncefact:fissileExceptionIndicator"
+        },
+        "flashpointTemperatureMeasurement": {
+            "@id": "uncefact:flashpointTemperatureMeasurement"
+        },
+        "forecastTypeCode": {
+            "@id": "uncefact:forecastTypeCode"
+        },
+        "formattedCancellationAnnouncedLaunchFormattedDateTime": {
+            "@id": "uncefact:formattedCancellationAnnouncedLaunchFormattedDateTime"
+        },
+        "formattedIssueFormattedDateTime": {
+            "@id": "uncefact:formattedIssueFormattedDateTime"
+        },
+        "formattedLatestProductDataChangeFormattedDateTime": {
+            "@id": "uncefact:formattedLatestProductDataChangeFormattedDateTime"
+        },
+        "formattedPickUpAvailabilityDateTime": {
+            "@id": "uncefact:formattedPickUpAvailabilityDateTime"
+        },
+        "formattedPickUpAvailabilityFormattedDateTime": {
+            "@id": "uncefact:formattedPickUpAvailabilityFormattedDateTime"
+        },
+        "formattedReceivedFormattedDateTime": {
+            "@id": "uncefact:formattedReceivedFormattedDateTime"
+        },
+        "formattedUltimateShipToDeliveryFormattedDateTime": {
+            "@id": "uncefact:formattedUltimateShipToDeliveryFormattedDateTime"
+        },
+        "formulaDescription": {
+            "@id": "uncefact:formulaDescription"
+        },
+        "forwardDraughtLevelMeasure": {
+            "@id": "uncefact:forwardDraughtLevelMeasure"
+        },
+        "fourthSignatoryAuthentication": {
+            "@id": "uncefact:fourthSignatoryAuthentication"
+        },
+        "freightForwarderAssignedId": {
+            "@id": "uncefact:freightForwarderAssignedId"
+        },
+        "freightForwarderParty": {
+            "@id": "uncefact:freightForwarderParty"
+        },
+        "freightInvoiceTypeCode": {
+            "@id": "uncefact:freightInvoiceTypeCode"
+        },
+        "frequencyCode": {
+            "@id": "uncefact:frequencyCode"
+        },
+        "frequencyEffectivePeriod": {
+            "@id": "uncefact:frequencyEffectivePeriod"
+        },
+        "frequencyTypeCode": {
+            "@id": "uncefact:frequencyTypeCode"
+        },
+        "fromDeliveryLifeSpanDurationUnitMeasure": {
+            "@id": "uncefact:fromDeliveryLifeSpanDurationUnitMeasure"
+        },
+        "fromEventPaymentTermsEventTimeReferenceCode": {
+            "@id": "uncefact:fromEventPaymentTermsEventTimeReferenceCode"
+        },
+        "fromOpeningLifeSpanDurationUnitMeasure": {
+            "@id": "uncefact:fromOpeningLifeSpanDurationUnitMeasure"
+        },
+        "fromProductionLifeSpanDurationUnitMeasure": {
+            "@id": "uncefact:fromProductionLifeSpanDurationUnitMeasure"
+        },
+        "fullyDeliveredIndicator": {
+            "@id": "uncefact:fullyDeliveredIndicator"
+        },
+        "functionDeliveryTermsFunctionCode": {
+            "@id": "uncefact:functionDeliveryTermsFunctionCode"
+        },
+        "functionDescription": {
+            "@id": "uncefact:functionDescription"
+        },
+        "functionTypeLocationFunctionCode": {
+            "@id": "uncefact:functionTypeLocationFunctionCode"
+        },
+        "gFMTransferRejectedQuantity": {
+            "@id": "uncefact:gFMTransferRejectedQuantity"
+        },
+        "gLNIdentificationId": {
+            "@id": "uncefact:gLNIdentificationId"
+        },
+        "genderCode": {
+            "@id": "uncefact:genderCode"
+        },
+        "geneticModificationExtentCode": {
+            "@id": "uncefact:geneticModificationExtentCode"
+        },
+        "geoCoordinateIdentificationGeographicalCoordinate": {
+            "@id": "uncefact:geoCoordinateIdentificationGeographicalCoordinate"
+        },
+        "geometryCollectionIndicator": {
+            "@id": "uncefact:geometryCollectionIndicator"
+        },
+        "germanBankleitzahlIdentificationId": {
+            "@id": "uncefact:germanBankleitzahlIdentificationId"
+        },
+        "givenName": {
+            "@id": "uncefact:givenName"
+        },
+        "globalExtensionIdentificationId": {
+            "@id": "uncefact:globalExtensionIdentificationId"
+        },
+        "globalIdentificationId": {
+            "@id": "uncefact:globalIdentificationId"
+        },
+        "globalSerialIdentificationId": {
+            "@id": "uncefact:globalSerialIdentificationId"
+        },
+        "goodsOwnershipChangeFormattedDateTime": {
+            "@id": "uncefact:goodsOwnershipChangeFormattedDateTime"
+        },
+        "goodsPhysicalStateDescription": {
+            "@id": "uncefact:goodsPhysicalStateDescription"
+        },
+        "goodsPhysicalStateDescriptionCode": {
+            "@id": "uncefact:goodsPhysicalStateDescriptionCode"
+        },
+        "goodsPhysicalStateType": {
+            "@id": "uncefact:goodsPhysicalStateType"
+        },
+        "goodsPhysicalStateTypeCode": {
+            "@id": "uncefact:goodsPhysicalStateTypeCode"
+        },
+        "goodsReceiptNoteDocument": {
+            "@id": "uncefact:goodsReceiptNoteDocument"
+        },
+        "goodsReleaseRestriction": {
+            "@id": "uncefact:goodsReleaseRestriction"
+        },
+        "goodsStatusCode": {
+            "@id": "uncefact:goodsStatusCode"
+        },
+        "grandTotalAmount": {
+            "@id": "uncefact:grandTotalAmount"
+        },
+        "grandTotalSpecifiedAdjustment": {
+            "@id": "uncefact:grandTotalSpecifiedAdjustment"
+        },
+        "grantedCertificate": {
+            "@id": "uncefact:grantedCertificate"
+        },
+        "grossLineTotalAmount": {
+            "@id": "uncefact:grossLineTotalAmount"
+        },
+        "grossPriceProductPrice": {
+            "@id": "uncefact:grossPriceProductPrice"
+        },
+        "grossVolumeMeasure": {
+            "@id": "uncefact:grossVolumeMeasure"
+        },
+        "grossVolumeVolumeUnitMeasure": {
+            "@id": "uncefact:grossVolumeVolumeUnitMeasure"
+        },
+        "grossWeightMeasure": {
+            "@id": "uncefact:grossWeightMeasure"
+        },
+        "grossWeightSpecifiedWeightUnitMeasure": {
+            "@id": "uncefact:grossWeightSpecifiedWeightUnitMeasure"
+        },
+        "grossWeightWeightUnitMeasure": {
+            "@id": "uncefact:grossWeightWeightUnitMeasure"
+        },
+        "groupIdentificationId": {
+            "@id": "uncefact:groupIdentificationId"
+        },
+        "groupedTransactionSpecifiedQuantity": {
+            "@id": "uncefact:groupedTransactionSpecifiedQuantity"
+        },
+        "groupedTransactionTotalAmount": {
+            "@id": "uncefact:groupedTransactionTotalAmount"
+        },
+        "groupingCentreParty": {
+            "@id": "uncefact:groupingCentreParty"
+        },
+        "guarantee": {
+            "@id": "uncefact:guarantee"
+        },
+        "guaranteeCode": {
+            "@id": "uncefact:guaranteeCode"
+        },
+        "guaranteeMethodPaymentGuaranteeMeansCode": {
+            "@id": "uncefact:guaranteeMethodPaymentGuaranteeMeansCode"
+        },
+        "guaranteedProductLifeSpanPeriod": {
+            "@id": "uncefact:guaranteedProductLifeSpanPeriod"
+        },
+        "guidelineSpecifiedParameter": {
+            "@id": "uncefact:guidelineSpecifiedParameter"
+        },
+        "handling": {
+            "@id": "uncefact:handling"
+        },
+        "handlingCode": {
+            "@id": "uncefact:handlingCode"
+        },
+        "handlingInstructions": {
+            "@id": "uncefact:handlingInstructions"
+        },
+        "haulageArrangementTransportEquipmentHaulageArrangementsCode": {
+            "@id": "uncefact:haulageArrangementTransportEquipmentHaulageArrangementsCode"
+        },
+        "haulageInstructions": {
+            "@id": "uncefact:haulageInstructions"
+        },
+        "hazardCategoryCode": {
+            "@id": "uncefact:hazardCategoryCode"
+        },
+        "hazardClassVersionId": {
+            "@id": "uncefact:hazardClassVersionId"
+        },
+        "hazardClassificationId": {
+            "@id": "uncefact:hazardClassificationId"
+        },
+        "hazardTypeCode": {
+            "@id": "uncefact:hazardTypeCode"
+        },
+        "heightMeasure": {
+            "@id": "uncefact:heightMeasure"
+        },
+        "helipadIndicator": {
+            "@id": "uncefact:helipadIndicator"
+        },
+        "hellenicBankIdentificationId": {
+            "@id": "uncefact:hellenicBankIdentificationId"
+        },
+        "hierarchicalLevelCode": {
+            "@id": "uncefact:hierarchicalLevelCode"
+        },
+        "highLimit": {
+            "@id": "uncefact:highLimit"
+        },
+        "hongKongBankIdentificationId": {
+            "@id": "uncefact:hongKongBankIdentificationId"
+        },
+        "humidityPercent": {
+            "@id": "uncefact:humidityPercent"
+        },
+        "iBANIdentificationId": {
+            "@id": "uncefact:iBANIdentificationId"
+        },
+        "iBEIIdentificationId": {
+            "@id": "uncefact:iBEIIdentificationId"
+        },
+        "iMDGSegregationGroupCode": {
+            "@id": "uncefact:iMDGSegregationGroupCode"
+        },
+        "iOSSIdentificationId": {
+            "@id": "uncefact:iOSSIdentificationId"
+        },
+        "iSPSRelatedDocument": {
+            "@id": "uncefact:iSPSRelatedDocument"
+        },
+        "iSPSSecurityLevelCode": {
+            "@id": "uncefact:iSPSSecurityLevelCode"
+        },
+        "iSSCDocument": {
+            "@id": "uncefact:iSSCDocument"
+        },
+        "iSSCIssuingAuthorityParty": {
+            "@id": "uncefact:iSSCIssuingAuthorityParty"
+        },
+        "identification": {
+            "@id": "uncefact:identification"
+        },
+        "identificationCode": {
+            "@id": "uncefact:identificationCode"
+        },
+        "identificationCountryId": {
+            "@id": "uncefact:identificationCountryId"
+        },
+        "identificationFreightChargeTypeId": {
+            "@id": "uncefact:identificationFreightChargeTypeId"
+        },
+        "identificationId": {
+            "@id": "uncefact:identificationId"
+        },
+        "identificationPaymentTermsId": {
+            "@id": "uncefact:identificationPaymentTermsId"
+        },
+        "identificationType": {
+            "@id": "uncefact:identificationType"
+        },
+        "identityCardIdentificationId": {
+            "@id": "uncefact:identityCardIdentificationId"
+        },
+        "imageBinaryObject": {
+            "@id": "uncefact:imageBinaryObject"
+        },
+        "immediatePayableTotalChargeAmount": {
+            "@id": "uncefact:immediatePayableTotalChargeAmount"
+        },
+        "immediatePreviousPriceListDocument": {
+            "@id": "uncefact:immediatePreviousPriceListDocument"
+        },
+        "impactCode": {
+            "@id": "uncefact:impactCode"
+        },
+        "importCountry": {
+            "@id": "uncefact:importCountry"
+        },
+        "importCustomsOfficeSpecifiedLocation": {
+            "@id": "uncefact:importCustomsOfficeSpecifiedLocation"
+        },
+        "importLicenceDocument": {
+            "@id": "uncefact:importLicenceDocument"
+        },
+        "importTypeCode": {
+            "@id": "uncefact:importTypeCode"
+        },
+        "importationCountry": {
+            "@id": "uncefact:importationCountry"
+        },
+        "importerParty": {
+            "@id": "uncefact:importerParty"
+        },
+        "inTransitIndicator": {
+            "@id": "uncefact:inTransitIndicator"
+        },
+        "includedAmount": {
+            "@id": "uncefact:includedAmount"
+        },
+        "includedBinaryObject": {
+            "@id": "uncefact:includedBinaryObject"
+        },
+        "includedCircle": {
+            "@id": "uncefact:includedCircle"
+        },
+        "includedClause": {
+            "@id": "uncefact:includedClause"
+        },
+        "includedConsignment": {
+            "@id": "uncefact:includedConsignment"
+        },
+        "includedConsignmentItem": {
+            "@id": "uncefact:includedConsignmentItem"
+        },
+        "includedCountry": {
+            "@id": "uncefact:includedCountry"
+        },
+        "includedGeographicalGrid": {
+            "@id": "uncefact:includedGeographicalGrid"
+        },
+        "includedGeographicalLine": {
+            "@id": "uncefact:includedGeographicalLine"
+        },
+        "includedGeographicalMultiCurve": {
+            "@id": "uncefact:includedGeographicalMultiCurve"
+        },
+        "includedGeographicalMultiPoint": {
+            "@id": "uncefact:includedGeographicalMultiPoint"
+        },
+        "includedGeographicalMultiSurface": {
+            "@id": "uncefact:includedGeographicalMultiSurface"
+        },
+        "includedGeographicalPoint": {
+            "@id": "uncefact:includedGeographicalPoint"
+        },
+        "includedGeographicalSurface": {
+            "@id": "uncefact:includedGeographicalSurface"
+        },
+        "includedMarketplace": {
+            "@id": "uncefact:includedMarketplace"
+        },
+        "includedMaterialComponent": {
+            "@id": "uncefact:includedMaterialComponent"
+        },
+        "includedNote": {
+            "@id": "uncefact:includedNote"
+        },
+        "includedPackaging": {
+            "@id": "uncefact:includedPackaging"
+        },
+        "includedPolygon": {
+            "@id": "uncefact:includedPolygon"
+        },
+        "includedProduct": {
+            "@id": "uncefact:includedProduct"
+        },
+        "includedProductContentUnitQuantity": {
+            "@id": "uncefact:includedProductContentUnitQuantity"
+        },
+        "includedProductGroup": {
+            "@id": "uncefact:includedProductGroup"
+        },
+        "includedProductTypeQuantity": {
+            "@id": "uncefact:includedProductTypeQuantity"
+        },
+        "includedSection": {
+            "@id": "uncefact:includedSection"
+        },
+        "includedSegment": {
+            "@id": "uncefact:includedSegment"
+        },
+        "includedTax": {
+            "@id": "uncefact:includedTax"
+        },
+        "includedTradeLineItem": {
+            "@id": "uncefact:includedTradeLineItem"
+        },
+        "includedWithinConsignmentItem": {
+            "@id": "uncefact:includedWithinConsignmentItem"
+        },
+        "includingTaxesLineTotalAmount": {
+            "@id": "uncefact:includingTaxesLineTotalAmount"
+        },
+        "inclusiveIndicator": {
+            "@id": "uncefact:inclusiveIndicator"
+        },
+        "incrementalProductOrderableQuantity": {
+            "@id": "uncefact:incrementalProductOrderableQuantity"
+        },
+        "index": {
+            "@id": "uncefact:index"
+        },
+        "indexValue": {
+            "@id": "uncefact:indexValue"
+        },
+        "indianFinancialSystemIdentificationId": {
+            "@id": "uncefact:indianFinancialSystemIdentificationId"
+        },
+        "individualPackageQuantity": {
+            "@id": "uncefact:individualPackageQuantity"
+        },
+        "individualProductInstance": {
+            "@id": "uncefact:individualProductInstance"
+        },
+        "industryAssignedIdentificationId": {
+            "@id": "uncefact:industryAssignedIdentificationId"
+        },
+        "information": {
+            "@id": "uncefact:information"
+        },
+        "informationAmount": {
+            "@id": "uncefact:informationAmount"
+        },
+        "informationInstructions": {
+            "@id": "uncefact:informationInstructions"
+        },
+        "informationNote": {
+            "@id": "uncefact:informationNote"
+        },
+        "informationUseRestrictionIndicator": {
+            "@id": "uncefact:informationUseRestrictionIndicator"
+        },
+        "innerPackContentUnitQuantity": {
+            "@id": "uncefact:innerPackContentUnitQuantity"
+        },
+        "innerPackQuantity": {
+            "@id": "uncefact:innerPackQuantity"
+        },
+        "inspectionEvent": {
+            "@id": "uncefact:inspectionEvent"
+        },
+        "inspectionParty": {
+            "@id": "uncefact:inspectionParty"
+        },
+        "inspectionReferenceDocument": {
+            "@id": "uncefact:inspectionReferenceDocument"
+        },
+        "instantMessagingCommunication": {
+            "@id": "uncefact:instantMessagingCommunication"
+        },
+        "instructionCode": {
+            "@id": "uncefact:instructionCode"
+        },
+        "instructionId": {
+            "@id": "uncefact:instructionId"
+        },
+        "instructionTypeCode": {
+            "@id": "uncefact:instructionTypeCode"
+        },
+        "insuranceApplicableCurrencyExchange": {
+            "@id": "uncefact:insuranceApplicableCurrencyExchange"
+        },
+        "insuranceChargeTotalAmount": {
+            "@id": "uncefact:insuranceChargeTotalAmount"
+        },
+        "insurancePremiumAmount": {
+            "@id": "uncefact:insurancePremiumAmount"
+        },
+        "insuranceValueAmount": {
+            "@id": "uncefact:insuranceValueAmount"
+        },
+        "intendedUse": {
+            "@id": "uncefact:intendedUse"
+        },
+        "interestRatePercent": {
+            "@id": "uncefact:interestRatePercent"
+        },
+        "interfaceEquipment": {
+            "@id": "uncefact:interfaceEquipment"
+        },
+        "interiorLinearRing": {
+            "@id": "uncefact:interiorLinearRing"
+        },
+        "intermediarySpecifiedFinancialInstitution": {
+            "@id": "uncefact:intermediarySpecifiedFinancialInstitution"
+        },
+        "intermediateConsigneeParty": {
+            "@id": "uncefact:intermediateConsigneeParty"
+        },
+        "internalAccess": {
+            "@id": "uncefact:internalAccess"
+        },
+        "inventoryManagerParty": {
+            "@id": "uncefact:inventoryManagerParty"
+        },
+        "invoiceAmount": {
+            "@id": "uncefact:invoiceAmount"
+        },
+        "invoiceApplicableCurrencyExchange": {
+            "@id": "uncefact:invoiceApplicableCurrencyExchange"
+        },
+        "invoiceAssociatedDocument": {
+            "@id": "uncefact:invoiceAssociatedDocument"
+        },
+        "invoiceCurrencyCurrencyCode": {
+            "@id": "uncefact:invoiceCurrencyCurrencyCode"
+        },
+        "invoiceDateTime": {
+            "@id": "uncefact:invoiceDateTime"
+        },
+        "invoiceDocument": {
+            "@id": "uncefact:invoiceDocument"
+        },
+        "invoiceIssuerReference": {
+            "@id": "uncefact:invoiceIssuerReference"
+        },
+        "invoiceReferenceDocument": {
+            "@id": "uncefact:invoiceReferenceDocument"
+        },
+        "invoiceeAssociatedParty": {
+            "@id": "uncefact:invoiceeAssociatedParty"
+        },
+        "invoiceeParty": {
+            "@id": "uncefact:invoiceeParty"
+        },
+        "invoicerParty": {
+            "@id": "uncefact:invoicerParty"
+        },
+        "irishNSCIdentificationId": {
+            "@id": "uncefact:irishNSCIdentificationId"
+        },
+        "issueDateTime": {
+            "@id": "uncefact:issueDateTime"
+        },
+        "issueFormattedDateTime": {
+            "@id": "uncefact:issueFormattedDateTime"
+        },
+        "issueLocation": {
+            "@id": "uncefact:issueLocation"
+        },
+        "issueReasonCode": {
+            "@id": "uncefact:issueReasonCode"
+        },
+        "issuerAssignedIdentificationId": {
+            "@id": "uncefact:issuerAssignedIdentificationId"
+        },
+        "issuerParty": {
+            "@id": "uncefact:issuerParty"
+        },
+        "issuingCompanyName": {
+            "@id": "uncefact:issuingCompanyName"
+        },
+        "issuingParty": {
+            "@id": "uncefact:issuingParty"
+        },
+        "issuingPartyId": {
+            "@id": "uncefact:issuingPartyId"
+        },
+        "italianDomesticIdentificationId": {
+            "@id": "uncefact:italianDomesticIdentificationId"
+        },
+        "itemBuyerParty": {
+            "@id": "uncefact:itemBuyerParty"
+        },
+        "itemIdentificationId": {
+            "@id": "uncefact:itemIdentificationId"
+        },
+        "itemQuantity": {
+            "@id": "uncefact:itemQuantity"
+        },
+        "itemSellerParty": {
+            "@id": "uncefact:itemSellerParty"
+        },
+        "itemWorkItem": {
+            "@id": "uncefact:itemWorkItem"
+        },
+        "itineraryRoute": {
+            "@id": "uncefact:itineraryRoute"
+        },
+        "itineraryStopEvent": {
+            "@id": "uncefact:itineraryStopEvent"
+        },
+        "japanFinancialInstitutionCommonIdentificationId": {
+            "@id": "uncefact:japanFinancialInstitutionCommonIdentificationId"
+        },
+        "jobTitle": {
+            "@id": "uncefact:jobTitle"
+        },
+        "jurisdiction": {
+            "@id": "uncefact:jurisdiction"
+        },
+        "jurisdictionEntryFormattedDateTime": {
+            "@id": "uncefact:jurisdictionEntryFormattedDateTime"
+        },
+        "kanbanIdentificationId": {
+            "@id": "uncefact:kanbanIdentificationId"
+        },
+        "landlineTelephoneCommunication": {
+            "@id": "uncefact:landlineTelephoneCommunication"
+        },
+        "languageCode": {
+            "@id": "uncefact:languageCode"
+        },
+        "languageId": {
+            "@id": "uncefact:languageId"
+        },
+        "languageLanguageCode": {
+            "@id": "uncefact:languageLanguageCode"
+        },
+        "languageLanguageId": {
+            "@id": "uncefact:languageLanguageId"
+        },
+        "lastRegisteredYearDateTime": {
+            "@id": "uncefact:lastRegisteredYearDateTime"
+        },
+        "lastRegisteredYearFormattedDateTime": {
+            "@id": "uncefact:lastRegisteredYearFormattedDateTime"
+        },
+        "latestDespatchedQuantity": {
+            "@id": "uncefact:latestDespatchedQuantity"
+        },
+        "latestOccurrenceDateTime": {
+            "@id": "uncefact:latestOccurrenceDateTime"
+        },
+        "latestReceivedGeographicalCoordinate": {
+            "@id": "uncefact:latestReceivedGeographicalCoordinate"
+        },
+        "latestReceivedSignalDateTime": {
+            "@id": "uncefact:latestReceivedSignalDateTime"
+        },
+        "latestRevisionDateTime": {
+            "@id": "uncefact:latestRevisionDateTime"
+        },
+        "latitudeDirectionIndicator": {
+            "@id": "uncefact:latitudeDirectionIndicator"
+        },
+        "latitudeMeasure": {
+            "@id": "uncefact:latitudeMeasure"
+        },
+        "laycanOccurrencePeriod": {
+            "@id": "uncefact:laycanOccurrencePeriod"
+        },
+        "layerTotalUnitQuantity": {
+            "@id": "uncefact:layerTotalUnitQuantity"
+        },
+        "layoutTypeCode": {
+            "@id": "uncefact:layoutTypeCode"
+        },
+        "legalClassificationCode": {
+            "@id": "uncefact:legalClassificationCode"
+        },
+        "legalRightsOwnerParty": {
+            "@id": "uncefact:legalRightsOwnerParty"
+        },
+        "legalStatusTransportEquipmentLegalStatusCode": {
+            "@id": "uncefact:legalStatusTransportEquipmentLegalStatusCode"
+        },
+        "lengthLinearUnitMeasure": {
+            "@id": "uncefact:lengthLinearUnitMeasure"
+        },
+        "lengthMeasure": {
+            "@id": "uncefact:lengthMeasure"
+        },
+        "letterOfCreditDocument": {
+            "@id": "uncefact:letterOfCreditDocument"
+        },
+        "levelCode": {
+            "@id": "uncefact:levelCode"
+        },
+        "levelPackagingLevelCode": {
+            "@id": "uncefact:levelPackagingLevelCode"
+        },
+        "licenceId": {
+            "@id": "uncefact:licenceId"
+        },
+        "liftingInstructionsRelatedDocument": {
+            "@id": "uncefact:liftingInstructionsRelatedDocument"
+        },
+        "limitedQuantityCode": {
+            "@id": "uncefact:limitedQuantityCode"
+        },
+        "lineCountNumeric": {
+            "@id": "uncefact:lineCountNumeric"
+        },
+        "lineFive": {
+            "@id": "uncefact:lineFive"
+        },
+        "lineFour": {
+            "@id": "uncefact:lineFour"
+        },
+        "lineId": {
+            "@id": "uncefact:lineId"
+        },
+        "lineItemQuantity": {
+            "@id": "uncefact:lineItemQuantity"
+        },
+        "lineOfCreditSpecifiedFinancialAccount": {
+            "@id": "uncefact:lineOfCreditSpecifiedFinancialAccount"
+        },
+        "lineOne": {
+            "@id": "uncefact:lineOne"
+        },
+        "lineStatusLineStatusCode": {
+            "@id": "uncefact:lineStatusLineStatusCode"
+        },
+        "lineStatusReason": {
+            "@id": "uncefact:lineStatusReason"
+        },
+        "lineStatusReasonCode": {
+            "@id": "uncefact:lineStatusReasonCode"
+        },
+        "lineThree": {
+            "@id": "uncefact:lineThree"
+        },
+        "lineTotalAmount": {
+            "@id": "uncefact:lineTotalAmount"
+        },
+        "lineTotalBasisAmount": {
+            "@id": "uncefact:lineTotalBasisAmount"
+        },
+        "lineTwo": {
+            "@id": "uncefact:lineTwo"
+        },
+        "linearDimension": {
+            "@id": "uncefact:linearDimension"
+        },
+        "loadedCargoMeasure": {
+            "@id": "uncefact:loadedCargoMeasure"
+        },
+        "loadedConsignmentItem": {
+            "@id": "uncefact:loadedConsignmentItem"
+        },
+        "loadedDangerousGoods": {
+            "@id": "uncefact:loadedDangerousGoods"
+        },
+        "loadedPackageQuantity": {
+            "@id": "uncefact:loadedPackageQuantity"
+        },
+        "loadingBaseportLocation": {
+            "@id": "uncefact:loadingBaseportLocation"
+        },
+        "loadingEvent": {
+            "@id": "uncefact:loadingEvent"
+        },
+        "loadingInformation": {
+            "@id": "uncefact:loadingInformation"
+        },
+        "loadingInspectionParty": {
+            "@id": "uncefact:loadingInspectionParty"
+        },
+        "loadingInspectionSpecifiedInstructions": {
+            "@id": "uncefact:loadingInspectionSpecifiedInstructions"
+        },
+        "loadingInstructions": {
+            "@id": "uncefact:loadingInstructions"
+        },
+        "loadingLengthLinearUnitMeasure": {
+            "@id": "uncefact:loadingLengthLinearUnitMeasure"
+        },
+        "loadingListQuantity": {
+            "@id": "uncefact:loadingListQuantity"
+        },
+        "loadingLocation": {
+            "@id": "uncefact:loadingLocation"
+        },
+        "loadingParty": {
+            "@id": "uncefact:loadingParty"
+        },
+        "loadingRemark": {
+            "@id": "uncefact:loadingRemark"
+        },
+        "loadingReportedEvent": {
+            "@id": "uncefact:loadingReportedEvent"
+        },
+        "loadingSequenceNumeric": {
+            "@id": "uncefact:loadingSequenceNumeric"
+        },
+        "localConsigneeAgentParty": {
+            "@id": "uncefact:localConsigneeAgentParty"
+        },
+        "localNumber": {
+            "@id": "uncefact:localNumber"
+        },
+        "locationAddress": {
+            "@id": "uncefact:locationAddress"
+        },
+        "locationCode": {
+            "@id": "uncefact:locationCode"
+        },
+        "locationProviderParty": {
+            "@id": "uncefact:locationProviderParty"
+        },
+        "lodgementLocation": {
+            "@id": "uncefact:lodgementLocation"
+        },
+        "logisticsServiceProviderParty": {
+            "@id": "uncefact:logisticsServiceProviderParty"
+        },
+        "logoAssociatedBinaryFile": {
+            "@id": "uncefact:logoAssociatedBinaryFile"
+        },
+        "longitudeDirectionIndicator": {
+            "@id": "uncefact:longitudeDirectionIndicator"
+        },
+        "longitudeMeasure": {
+            "@id": "uncefact:longitudeMeasure"
+        },
+        "lotIdentificationId": {
+            "@id": "uncefact:lotIdentificationId"
+        },
+        "lowDispersibleInformation": {
+            "@id": "uncefact:lowDispersibleInformation"
+        },
+        "lowLimit": {
+            "@id": "uncefact:lowLimit"
+        },
+        "lowerPartOrangeHazardPlacardId": {
+            "@id": "uncefact:lowerPartOrangeHazardPlacardId"
+        },
+        "mFAGId": {
+            "@id": "uncefact:mFAGId"
+        },
+        "mIMECode": {
+            "@id": "uncefact:mIMECode"
+        },
+        "mSDSReferenceDocument": {
+            "@id": "uncefact:mSDSReferenceDocument"
+        },
+        "mainCarriageTransportMovement": {
+            "@id": "uncefact:mainCarriageTransportMovement"
+        },
+        "manifestAssociatedDocument": {
+            "@id": "uncefact:manifestAssociatedDocument"
+        },
+        "manifestOnboardIndicator": {
+            "@id": "uncefact:manifestOnboardIndicator"
+        },
+        "manifestRelatedDocument": {
+            "@id": "uncefact:manifestRelatedDocument"
+        },
+        "manoeuvringSpeedMeasure": {
+            "@id": "uncefact:manoeuvringSpeedMeasure"
+        },
+        "manufactureCountry": {
+            "@id": "uncefact:manufactureCountry"
+        },
+        "manufacturerAssignedIdentificationId": {
+            "@id": "uncefact:manufacturerAssignedIdentificationId"
+        },
+        "manufacturerParty": {
+            "@id": "uncefact:manufacturerParty"
+        },
+        "manufacturingFormattedDateTime": {
+            "@id": "uncefact:manufacturingFormattedDateTime"
+        },
+        "manufacturingProcessDescription": {
+            "@id": "uncefact:manufacturingProcessDescription"
+        },
+        "mapBinaryObject": {
+            "@id": "uncefact:mapBinaryObject"
+        },
+        "marinePollutantIndicator": {
+            "@id": "uncefact:marinePollutantIndicator"
+        },
+        "markedSerialNumberIndicator": {
+            "@id": "uncefact:markedSerialNumberIndicator"
+        },
+        "marketDeliveryApplicableTemperature": {
+            "@id": "uncefact:marketDeliveryApplicableTemperature"
+        },
+        "marketId": {
+            "@id": "uncefact:marketId"
+        },
+        "marketingCampaignReferenceDocument": {
+            "@id": "uncefact:marketingCampaignReferenceDocument"
+        },
+        "marketingDescription": {
+            "@id": "uncefact:marketingDescription"
+        },
+        "marketingFeature": {
+            "@id": "uncefact:marketingFeature"
+        },
+        "marketingMeasure": {
+            "@id": "uncefact:marketingMeasure"
+        },
+        "marketingPhrase": {
+            "@id": "uncefact:marketingPhrase"
+        },
+        "marketplaceOrderDocument": {
+            "@id": "uncefact:marketplaceOrderDocument"
+        },
+        "marking": {
+            "@id": "uncefact:marking"
+        },
+        "markingInstructionMarkingInstructionCode": {
+            "@id": "uncefact:markingInstructionMarkingInstructionCode"
+        },
+        "masterResponsiblePerson": {
+            "@id": "uncefact:masterResponsiblePerson"
+        },
+        "matchingEvent": {
+            "@id": "uncefact:matchingEvent"
+        },
+        "materialId": {
+            "@id": "uncefact:materialId"
+        },
+        "maximumDedicatedStorageCapacityVolumeUnitMeasure": {
+            "@id": "uncefact:maximumDedicatedStorageCapacityVolumeUnitMeasure"
+        },
+        "maximumIdentificationId": {
+            "@id": "uncefact:maximumIdentificationId"
+        },
+        "maximumLinearDimension": {
+            "@id": "uncefact:maximumLinearDimension"
+        },
+        "maximumOrderQuantityOrderingPeriod": {
+            "@id": "uncefact:maximumOrderQuantityOrderingPeriod"
+        },
+        "maximumProductOrderableQuantity": {
+            "@id": "uncefact:maximumProductOrderableQuantity"
+        },
+        "maximumQuantity": {
+            "@id": "uncefact:maximumQuantity"
+        },
+        "maximumStackabilityApplicableQuantity": {
+            "@id": "uncefact:maximumStackabilityApplicableQuantity"
+        },
+        "maximumStackabilityQuantity": {
+            "@id": "uncefact:maximumStackabilityQuantity"
+        },
+        "maximumStackabilityWeightApplicableWeightUnitMeasure": {
+            "@id": "uncefact:maximumStackabilityWeightApplicableWeightUnitMeasure"
+        },
+        "maximumStackabilityWeightMeasure": {
+            "@id": "uncefact:maximumStackabilityWeightMeasure"
+        },
+        "maximumStockLevelMeasure": {
+            "@id": "uncefact:maximumStockLevelMeasure"
+        },
+        "maximumStockQuantity": {
+            "@id": "uncefact:maximumStockQuantity"
+        },
+        "maximumStorageHumidityApplicableMeasure": {
+            "@id": "uncefact:maximumStorageHumidityApplicableMeasure"
+        },
+        "maximumValueMeasure": {
+            "@id": "uncefact:maximumValueMeasure"
+        },
+        "maximumValueTemperatureUnitMeasure": {
+            "@id": "uncefact:maximumValueTemperatureUnitMeasure"
+        },
+        "maximumWidthLinearUnitMeasure": {
+            "@id": "uncefact:maximumWidthLinearUnitMeasure"
+        },
+        "measurementMethodCode": {
+            "@id": "uncefact:measurementMethodCode"
+        },
+        "measurementMethodIdentificationId": {
+            "@id": "uncefact:measurementMethodIdentificationId"
+        },
+        "memberGeographicalLine": {
+            "@id": "uncefact:memberGeographicalLine"
+        },
+        "memberGeographicalPoint": {
+            "@id": "uncefact:memberGeographicalPoint"
+        },
+        "messageStandardSpecifiedParameter": {
+            "@id": "uncefact:messageStandardSpecifiedParameter"
+        },
+        "method": {
+            "@id": "uncefact:method"
+        },
+        "methodCode": {
+            "@id": "uncefact:methodCode"
+        },
+        "methodName": {
+            "@id": "uncefact:methodName"
+        },
+        "microchipIndicator": {
+            "@id": "uncefact:microchipIndicator"
+        },
+        "middleName": {
+            "@id": "uncefact:middleName"
+        },
+        "minimumLinearDimension": {
+            "@id": "uncefact:minimumLinearDimension"
+        },
+        "minimumOrderQuantityOrderingPeriod": {
+            "@id": "uncefact:minimumOrderQuantityOrderingPeriod"
+        },
+        "minimumProductOrderableQuantity": {
+            "@id": "uncefact:minimumProductOrderableQuantity"
+        },
+        "minimumQuantity": {
+            "@id": "uncefact:minimumQuantity"
+        },
+        "minimumStockLevelMeasure": {
+            "@id": "uncefact:minimumStockLevelMeasure"
+        },
+        "minimumStockQuantity": {
+            "@id": "uncefact:minimumStockQuantity"
+        },
+        "minimumStorageHumidityApplicableMeasure": {
+            "@id": "uncefact:minimumStorageHumidityApplicableMeasure"
+        },
+        "minimumValueMeasure": {
+            "@id": "uncefact:minimumValueMeasure"
+        },
+        "minimumValueTemperatureUnitMeasure": {
+            "@id": "uncefact:minimumValueTemperatureUnitMeasure"
+        },
+        "minusToleranceQuantity": {
+            "@id": "uncefact:minusToleranceQuantity"
+        },
+        "mobileTelephoneCommunication": {
+            "@id": "uncefact:mobileTelephoneCommunication"
+        },
+        "mode": {
+            "@id": "uncefact:mode"
+        },
+        "modeTransportModeCode": {
+            "@id": "uncefact:modeTransportModeCode"
+        },
+        "modelIdentificationId": {
+            "@id": "uncefact:modelIdentificationId"
+        },
+        "modelName": {
+            "@id": "uncefact:modelName"
+        },
+        "modificationForecastedQuantity": {
+            "@id": "uncefact:modificationForecastedQuantity"
+        },
+        "molecularWeightMeasure": {
+            "@id": "uncefact:molecularWeightMeasure"
+        },
+        "multipleReferencesIndicator": {
+            "@id": "uncefact:multipleReferencesIndicator"
+        },
+        "nVOCCCarrierParty": {
+            "@id": "uncefact:nVOCCCarrierParty"
+        },
+        "name": {
+            "@id": "uncefact:name"
+        },
+        "nationalTypeExtensionCode": {
+            "@id": "uncefact:nationalTypeExtensionCode"
+        },
+        "nationalityCountry": {
+            "@id": "uncefact:nationalityCountry"
+        },
+        "natureIdentificationCargo": {
+            "@id": "uncefact:natureIdentificationCargo"
+        },
+        "netBudgetAmount": {
+            "@id": "uncefact:netBudgetAmount"
+        },
+        "netIncludingTaxesLineTotalAmount": {
+            "@id": "uncefact:netIncludingTaxesLineTotalAmount"
+        },
+        "netLineTotalAmount": {
+            "@id": "uncefact:netLineTotalAmount"
+        },
+        "netPriceIndicator": {
+            "@id": "uncefact:netPriceIndicator"
+        },
+        "netPriceProductPrice": {
+            "@id": "uncefact:netPriceProductPrice"
+        },
+        "netVolumeMeasure": {
+            "@id": "uncefact:netVolumeMeasure"
+        },
+        "netVolumeVolumeUnitMeasure": {
+            "@id": "uncefact:netVolumeVolumeUnitMeasure"
+        },
+        "netWeightMeasure": {
+            "@id": "uncefact:netWeightMeasure"
+        },
+        "netWeightWeightUnitMeasure": {
+            "@id": "uncefact:netWeightWeightUnitMeasure"
+        },
+        "newZealandNCCIdentificationId": {
+            "@id": "uncefact:newZealandNCCIdentificationId"
+        },
+        "nextDeliveryEvent": {
+            "@id": "uncefact:nextDeliveryEvent"
+        },
+        "nextInvoiceDateTime": {
+            "@id": "uncefact:nextInvoiceDateTime"
+        },
+        "nilCarriageValueIndicator": {
+            "@id": "uncefact:nilCarriageValueIndicator"
+        },
+        "nilCustomsValueIndicator": {
+            "@id": "uncefact:nilCustomsValueIndicator"
+        },
+        "nilInsuranceValueIndicator": {
+            "@id": "uncefact:nilInsuranceValueIndicator"
+        },
+        "nominalGrossVolumeMeasure": {
+            "@id": "uncefact:nominalGrossVolumeMeasure"
+        },
+        "nominalGrossVolumeVolumeUnitMeasure": {
+            "@id": "uncefact:nominalGrossVolumeVolumeUnitMeasure"
+        },
+        "nominalGrossWeightMeasure": {
+            "@id": "uncefact:nominalGrossWeightMeasure"
+        },
+        "nominalGrossWeightWeightUnitMeasure": {
+            "@id": "uncefact:nominalGrossWeightWeightUnitMeasure"
+        },
+        "nonTariffChargeAmount": {
+            "@id": "uncefact:nonTariffChargeAmount"
+        },
+        "notifiedParty": {
+            "@id": "uncefact:notifiedParty"
+        },
+        "obtainedFormattedDateTime": {
+            "@id": "uncefact:obtainedFormattedDateTime"
+        },
+        "occurrenceDateTime": {
+            "@id": "uncefact:occurrenceDateTime"
+        },
+        "occurrenceLocation": {
+            "@id": "uncefact:occurrenceLocation"
+        },
+        "occurrencePeriod": {
+            "@id": "uncefact:occurrencePeriod"
+        },
+        "offsetProcessingStatus": {
+            "@id": "uncefact:offsetProcessingStatus"
+        },
+        "offsetVectorNumeric": {
+            "@id": "uncefact:offsetVectorNumeric"
+        },
+        "onCarriageTransportMovement": {
+            "@id": "uncefact:onCarriageTransportMovement"
+        },
+        "onboardInventory": {
+            "@id": "uncefact:onboardInventory"
+        },
+        "onboardPerson": {
+            "@id": "uncefact:onboardPerson"
+        },
+        "onboardQuantity": {
+            "@id": "uncefact:onboardQuantity"
+        },
+        "openIndicator": {
+            "@id": "uncefact:openIndicator"
+        },
+        "operatingParty": {
+            "@id": "uncefact:operatingParty"
+        },
+        "operationCountry": {
+            "@id": "uncefact:operationCountry"
+        },
+        "operationalCategoryCargoOperationalCategoryCode": {
+            "@id": "uncefact:operationalCategoryCargoOperationalCategoryCode"
+        },
+        "operationalResponsibleParty": {
+            "@id": "uncefact:operationalResponsibleParty"
+        },
+        "operationalStatusCode": {
+            "@id": "uncefact:operationalStatusCode"
+        },
+        "operationalStatusTransportEquipmentOperationalStatusCode": {
+            "@id": "uncefact:operationalStatusTransportEquipmentOperationalStatusCode"
+        },
+        "operatorNationalityCountry": {
+            "@id": "uncefact:operatorNationalityCountry"
+        },
+        "operatorParty": {
+            "@id": "uncefact:operatorParty"
+        },
+        "orderApplicableCurrencyExchange": {
+            "@id": "uncefact:orderApplicableCurrencyExchange"
+        },
+        "orderCurrencyCurrencyCode": {
+            "@id": "uncefact:orderCurrencyCurrencyCode"
+        },
+        "orderPriceProductPrice": {
+            "@id": "uncefact:orderPriceProductPrice"
+        },
+        "orderProductUnitMeasureCode": {
+            "@id": "uncefact:orderProductUnitMeasureCode"
+        },
+        "orderQuantity": {
+            "@id": "uncefact:orderQuantity"
+        },
+        "orderResponseDocument": {
+            "@id": "uncefact:orderResponseDocument"
+        },
+        "orderSchedule": {
+            "@id": "uncefact:orderSchedule"
+        },
+        "orderUnitConversionFactorNumeric": {
+            "@id": "uncefact:orderUnitConversionFactorNumeric"
+        },
+        "orderingPeriod": {
+            "@id": "uncefact:orderingPeriod"
+        },
+        "originAssociatedDirectPositionList": {
+            "@id": "uncefact:originAssociatedDirectPositionList"
+        },
+        "originCountry": {
+            "@id": "uncefact:originCountry"
+        },
+        "originCriteria": {
+            "@id": "uncefact:originCriteria"
+        },
+        "originGeopoliticalRegion": {
+            "@id": "uncefact:originGeopoliticalRegion"
+        },
+        "originLocation": {
+            "@id": "uncefact:originLocation"
+        },
+        "originalIssuedQuantity": {
+            "@id": "uncefact:originalIssuedQuantity"
+        },
+        "originalOrderDocument": {
+            "@id": "uncefact:originalOrderDocument"
+        },
+        "originalRequiredQuantity": {
+            "@id": "uncefact:originalRequiredQuantity"
+        },
+        "otherChargeAmount": {
+            "@id": "uncefact:otherChargeAmount"
+        },
+        "overDeliveryAllowedIndicator": {
+            "@id": "uncefact:overDeliveryAllowedIndicator"
+        },
+        "overallLengthLinearUnitMeasure": {
+            "@id": "uncefact:overallLengthLinearUnitMeasure"
+        },
+        "overpackInformation": {
+            "@id": "uncefact:overpackInformation"
+        },
+        "ownedFinancialAccount": {
+            "@id": "uncefact:ownedFinancialAccount"
+        },
+        "ownerAgentParty": {
+            "@id": "uncefact:ownerAgentParty"
+        },
+        "ownerParty": {
+            "@id": "uncefact:ownerParty"
+        },
+        "packageQuantity": {
+            "@id": "uncefact:packageQuantity"
+        },
+        "packageType": {
+            "@id": "uncefact:packageType"
+        },
+        "packageTypePackageTypeCode": {
+            "@id": "uncefact:packageTypePackageTypeCode"
+        },
+        "packagingDangerLevelDangerousGoodsPackagingLevelCode": {
+            "@id": "uncefact:packagingDangerLevelDangerousGoodsPackagingLevelCode"
+        },
+        "packagingEvent": {
+            "@id": "uncefact:packagingEvent"
+        },
+        "packingInstructionTypeCode": {
+            "@id": "uncefact:packingInstructionTypeCode"
+        },
+        "packingListDocument": {
+            "@id": "uncefact:packingListDocument"
+        },
+        "pageId": {
+            "@id": "uncefact:pageId"
+        },
+        "paidAmount": {
+            "@id": "uncefact:paidAmount"
+        },
+        "pairedIndicator": {
+            "@id": "uncefact:pairedIndicator"
+        },
+        "parentIdentificationId": {
+            "@id": "uncefact:parentIdentificationId"
+        },
+        "parentLineId": {
+            "@id": "uncefact:parentLineId"
+        },
+        "partIdentificationId": {
+            "@id": "uncefact:partIdentificationId"
+        },
+        "partialDeliveryAllowedIndicator": {
+            "@id": "uncefact:partialDeliveryAllowedIndicator"
+        },
+        "partialPaymentAmount": {
+            "@id": "uncefact:partialPaymentAmount"
+        },
+        "partialPaymentPercent": {
+            "@id": "uncefact:partialPaymentPercent"
+        },
+        "partyRiskRelatedCode": {
+            "@id": "uncefact:partyRiskRelatedCode"
+        },
+        "passengerListRelatedDocument": {
+            "@id": "uncefact:passengerListRelatedDocument"
+        },
+        "passengerNationalityCountry": {
+            "@id": "uncefact:passengerNationalityCountry"
+        },
+        "passengerQuantity": {
+            "@id": "uncefact:passengerQuantity"
+        },
+        "passportIdentificationId": {
+            "@id": "uncefact:passportIdentificationId"
+        },
+        "patternCode": {
+            "@id": "uncefact:patternCode"
+        },
+        "payableSpecifiedAccountingAccount": {
+            "@id": "uncefact:payableSpecifiedAccountingAccount"
+        },
+        "payeeParty": {
+            "@id": "uncefact:payeeParty"
+        },
+        "payeePartyFinancialAccount": {
+            "@id": "uncefact:payeePartyFinancialAccount"
+        },
+        "payeeSpecifiedFinancialInstitution": {
+            "@id": "uncefact:payeeSpecifiedFinancialInstitution"
+        },
+        "payerParty": {
+            "@id": "uncefact:payerParty"
+        },
+        "payerPartyFinancialAccount": {
+            "@id": "uncefact:payerPartyFinancialAccount"
+        },
+        "payerReference": {
+            "@id": "uncefact:payerReference"
+        },
+        "payerSpecifiedFinancialInstitution": {
+            "@id": "uncefact:payerSpecifiedFinancialInstitution"
+        },
+        "payingPartyRoleChargePayingPartyRoleCode": {
+            "@id": "uncefact:payingPartyRoleChargePayingPartyRoleCode"
+        },
+        "paymentAmount": {
+            "@id": "uncefact:paymentAmount"
+        },
+        "paymentApplicableCurrencyExchange": {
+            "@id": "uncefact:paymentApplicableCurrencyExchange"
+        },
+        "paymentArrangementTransportServicePaymentArrangementCode": {
+            "@id": "uncefact:paymentArrangementTransportServicePaymentArrangementCode"
+        },
+        "paymentChannelPaymentMeansChannelCode": {
+            "@id": "uncefact:paymentChannelPaymentMeansChannelCode"
+        },
+        "paymentCurrencyCurrencyCode": {
+            "@id": "uncefact:paymentCurrencyCurrencyCode"
+        },
+        "paymentId": {
+            "@id": "uncefact:paymentId"
+        },
+        "paymentMeansIdentificationId": {
+            "@id": "uncefact:paymentMeansIdentificationId"
+        },
+        "paymentMethodCode": {
+            "@id": "uncefact:paymentMethodCode"
+        },
+        "paymentMethodPaymentMethodCode": {
+            "@id": "uncefact:paymentMethodPaymentMethodCode"
+        },
+        "paymentOfficeLocation": {
+            "@id": "uncefact:paymentOfficeLocation"
+        },
+        "paymentPlaceLocation": {
+            "@id": "uncefact:paymentPlaceLocation"
+        },
+        "paymentReference": {
+            "@id": "uncefact:paymentReference"
+        },
+        "paymentTotalAmount": {
+            "@id": "uncefact:paymentTotalAmount"
+        },
+        "perPackageUnitQuantity": {
+            "@id": "uncefact:perPackageUnitQuantity"
+        },
+        "performanceDateTime": {
+            "@id": "uncefact:performanceDateTime"
+        },
+        "personIdentificationId": {
+            "@id": "uncefact:personIdentificationId"
+        },
+        "personName": {
+            "@id": "uncefact:personName"
+        },
+        "physicalFormDescription": {
+            "@id": "uncefact:physicalFormDescription"
+        },
+        "physicalGeographicalCoordinate": {
+            "@id": "uncefact:physicalGeographicalCoordinate"
+        },
+        "physicalIndicator": {
+            "@id": "uncefact:physicalIndicator"
+        },
+        "physicalPackage": {
+            "@id": "uncefact:physicalPackage"
+        },
+        "physicalShippingMarks": {
+            "@id": "uncefact:physicalShippingMarks"
+        },
+        "pickUpEvent": {
+            "@id": "uncefact:pickUpEvent"
+        },
+        "pickUpOrderFulfilmentLeadTimeDurationUnitMeasure": {
+            "@id": "uncefact:pickUpOrderFulfilmentLeadTimeDurationUnitMeasure"
+        },
+        "pickUpParty": {
+            "@id": "uncefact:pickUpParty"
+        },
+        "pilotageExemptionId": {
+            "@id": "uncefact:pilotageExemptionId"
+        },
+        "placeApplicableLocation": {
+            "@id": "uncefact:placeApplicableLocation"
+        },
+        "plannedConsignment": {
+            "@id": "uncefact:plannedConsignment"
+        },
+        "plannedDeliveryEvent": {
+            "@id": "uncefact:plannedDeliveryEvent"
+        },
+        "plannedDespatchEvent": {
+            "@id": "uncefact:plannedDespatchEvent"
+        },
+        "plannedDischargedVolumeUnitMeasure": {
+            "@id": "uncefact:plannedDischargedVolumeUnitMeasure"
+        },
+        "plannedPickUpEvent": {
+            "@id": "uncefact:plannedPickUpEvent"
+        },
+        "plannedQuantity": {
+            "@id": "uncefact:plannedQuantity"
+        },
+        "plannedReleaseEvent": {
+            "@id": "uncefact:plannedReleaseEvent"
+        },
+        "plannedShipFromDeliveryEvent": {
+            "@id": "uncefact:plannedShipFromDeliveryEvent"
+        },
+        "plannedShipToDeliveryEvent": {
+            "@id": "uncefact:plannedShipToDeliveryEvent"
+        },
+        "plannedStockCalculationDateTime": {
+            "@id": "uncefact:plannedStockCalculationDateTime"
+        },
+        "plannedStockQuantity": {
+            "@id": "uncefact:plannedStockQuantity"
+        },
+        "plusToleranceQuantity": {
+            "@id": "uncefact:plusToleranceQuantity"
+        },
+        "polishNationalClearingIdentificationId": {
+            "@id": "uncefact:polishNationalClearingIdentificationId"
+        },
+        "pollingCapabilityIndicator": {
+            "@id": "uncefact:pollingCapabilityIndicator"
+        },
+        "pollingRateMeasure": {
+            "@id": "uncefact:pollingRateMeasure"
+        },
+        "pollutantIndicator": {
+            "@id": "uncefact:pollutantIndicator"
+        },
+        "pollutantLevelCode": {
+            "@id": "uncefact:pollutantLevelCode"
+        },
+        "pollutionMeasure": {
+            "@id": "uncefact:pollutionMeasure"
+        },
+        "portugueseNCCIdentificationId": {
+            "@id": "uncefact:portugueseNCCIdentificationId"
+        },
+        "positionCode": {
+            "@id": "uncefact:positionCode"
+        },
+        "positioningEvent": {
+            "@id": "uncefact:positioningEvent"
+        },
+        "postOfficeBox": {
+            "@id": "uncefact:postOfficeBox"
+        },
+        "postalAddress": {
+            "@id": "uncefact:postalAddress"
+        },
+        "postcodeCode": {
+            "@id": "uncefact:postcodeCode"
+        },
+        "powerActiveTransportMeans": {
+            "@id": "uncefact:powerActiveTransportMeans"
+        },
+        "powerInactiveTransportMeans": {
+            "@id": "uncefact:powerInactiveTransportMeans"
+        },
+        "powerSourceTypeCode": {
+            "@id": "uncefact:powerSourceTypeCode"
+        },
+        "powerSupplyConnectorQuantity": {
+            "@id": "uncefact:powerSupplyConnectorQuantity"
+        },
+        "powerSupplyType": {
+            "@id": "uncefact:powerSupplyType"
+        },
+        "powerSupplyTypeCode": {
+            "@id": "uncefact:powerSupplyTypeCode"
+        },
+        "preCarriageTransportMovement": {
+            "@id": "uncefact:preCarriageTransportMovement"
+        },
+        "prePackagedIndicator": {
+            "@id": "uncefact:prePackagedIndicator"
+        },
+        "precisionMeasurement": {
+            "@id": "uncefact:precisionMeasurement"
+        },
+        "prepaidIndicator": {
+            "@id": "uncefact:prepaidIndicator"
+        },
+        "presentationBinaryFile": {
+            "@id": "uncefact:presentationBinaryFile"
+        },
+        "previousAdministrativeDocument": {
+            "@id": "uncefact:previousAdministrativeDocument"
+        },
+        "previousAssociatedGeographicalFeature": {
+            "@id": "uncefact:previousAssociatedGeographicalFeature"
+        },
+        "previousDeliveryEvent": {
+            "@id": "uncefact:previousDeliveryEvent"
+        },
+        "previousDocument": {
+            "@id": "uncefact:previousDocument"
+        },
+        "previousOrderChangeDocument": {
+            "@id": "uncefact:previousOrderChangeDocument"
+        },
+        "previousOrderDocument": {
+            "@id": "uncefact:previousOrderDocument"
+        },
+        "previousOrderResponseDocument": {
+            "@id": "uncefact:previousOrderResponseDocument"
+        },
+        "previousProcedureTypeCode": {
+            "@id": "uncefact:previousProcedureTypeCode"
+        },
+        "previousRevisionIdentificationId": {
+            "@id": "uncefact:previousRevisionIdentificationId"
+        },
+        "previousStatusCode": {
+            "@id": "uncefact:previousStatusCode"
+        },
+        "priceApplicableCurrencyExchange": {
+            "@id": "uncefact:priceApplicableCurrencyExchange"
+        },
+        "priceCurrencyCode": {
+            "@id": "uncefact:priceCurrencyCode"
+        },
+        "priceCurrencyCurrencyCode": {
+            "@id": "uncefact:priceCurrencyCurrencyCode"
+        },
+        "priceListDocument": {
+            "@id": "uncefact:priceListDocument"
+        },
+        "priceListIdentificationId": {
+            "@id": "uncefact:priceListIdentificationId"
+        },
+        "priceListItemIdentificationId": {
+            "@id": "uncefact:priceListItemIdentificationId"
+        },
+        "pricingBaseApplicableLocation": {
+            "@id": "uncefact:pricingBaseApplicableLocation"
+        },
+        "primaryClassificationCode": {
+            "@id": "uncefact:primaryClassificationCode"
+        },
+        "primeContractSellerParty": {
+            "@id": "uncefact:primeContractSellerParty"
+        },
+        "principalAssociatedParty": {
+            "@id": "uncefact:principalAssociatedParty"
+        },
+        "priorityCode": {
+            "@id": "uncefact:priorityCode"
+        },
+        "priorityTransportServicePriorityCode": {
+            "@id": "uncefact:priorityTransportServicePriorityCode"
+        },
+        "proFormaInvoiceDocument": {
+            "@id": "uncefact:proFormaInvoiceDocument"
+        },
+        "procedure": {
+            "@id": "uncefact:procedure"
+        },
+        "procedureCode": {
+            "@id": "uncefact:procedureCode"
+        },
+        "processingTransactionDateTime": {
+            "@id": "uncefact:processingTransactionDateTime"
+        },
+        "procurementParty": {
+            "@id": "uncefact:procurementParty"
+        },
+        "productAvailabilityCode": {
+            "@id": "uncefact:productAvailabilityCode"
+        },
+        "productEndUserParty": {
+            "@id": "uncefact:productEndUserParty"
+        },
+        "productGroupId": {
+            "@id": "uncefact:productGroupId"
+        },
+        "productMadeToOrderIndicator": {
+            "@id": "uncefact:productMadeToOrderIndicator"
+        },
+        "productOrderableIndicator": {
+            "@id": "uncefact:productOrderableIndicator"
+        },
+        "productReorderableIndicator": {
+            "@id": "uncefact:productReorderableIndicator"
+        },
+        "productUnitQuantity": {
+            "@id": "uncefact:productUnitQuantity"
+        },
+        "productValueExcludingTobaccoTaxInformationAmount": {
+            "@id": "uncefact:productValueExcludingTobaccoTaxInformationAmount"
+        },
+        "productWeightLossInformationAmount": {
+            "@id": "uncefact:productWeightLossInformationAmount"
+        },
+        "productionDiscontinuedDateTime": {
+            "@id": "uncefact:productionDiscontinuedDateTime"
+        },
+        "productionEvent": {
+            "@id": "uncefact:productionEvent"
+        },
+        "programProject": {
+            "@id": "uncefact:programProject"
+        },
+        "projectedSupplyPlan": {
+            "@id": "uncefact:projectedSupplyPlan"
+        },
+        "promotionalDealDocument": {
+            "@id": "uncefact:promotionalDealDocument"
+        },
+        "promotionalVariantIdentificationId": {
+            "@id": "uncefact:promotionalVariantIdentificationId"
+        },
+        "properShippingName": {
+            "@id": "uncefact:properShippingName"
+        },
+        "proportionalConstituentPercent": {
+            "@id": "uncefact:proportionalConstituentPercent"
+        },
+        "proprietaryAccountName": {
+            "@id": "uncefact:proprietaryAccountName"
+        },
+        "proprietaryIdentificationId": {
+            "@id": "uncefact:proprietaryIdentificationId"
+        },
+        "proprietaryType": {
+            "@id": "uncefact:proprietaryType"
+        },
+        "providedService": {
+            "@id": "uncefact:providedService"
+        },
+        "providerParty": {
+            "@id": "uncefact:providerParty"
+        },
+        "publicationDateTime": {
+            "@id": "uncefact:publicationDateTime"
+        },
+        "purchaseConditionsDocument": {
+            "@id": "uncefact:purchaseConditionsDocument"
+        },
+        "purchaseSpecifiedAccountingAccount": {
+            "@id": "uncefact:purchaseSpecifiedAccountingAccount"
+        },
+        "purpose": {
+            "@id": "uncefact:purpose"
+        },
+        "purposeCode": {
+            "@id": "uncefact:purposeCode"
+        },
+        "purposeMessageFunctionCode": {
+            "@id": "uncefact:purposeMessageFunctionCode"
+        },
+        "qValueNumeric": {
+            "@id": "uncefact:qValueNumeric"
+        },
+        "qualityAssuranceIndicator": {
+            "@id": "uncefact:qualityAssuranceIndicator"
+        },
+        "quantificationTypeCode": {
+            "@id": "uncefact:quantificationTypeCode"
+        },
+        "quantityDiscrepancyNatureCode": {
+            "@id": "uncefact:quantityDiscrepancyNatureCode"
+        },
+        "quantityVariationReason": {
+            "@id": "uncefact:quantityVariationReason"
+        },
+        "quantityVariationReasonCode": {
+            "@id": "uncefact:quantityVariationReasonCode"
+        },
+        "quantityVariationTypeCode": {
+            "@id": "uncefact:quantityVariationTypeCode"
+        },
+        "quarantineInstructions": {
+            "@id": "uncefact:quarantineInstructions"
+        },
+        "queryIdentificationId": {
+            "@id": "uncefact:queryIdentificationId"
+        },
+        "quotaId": {
+            "@id": "uncefact:quotaId"
+        },
+        "quotationApplicableCurrencyExchange": {
+            "@id": "uncefact:quotationApplicableCurrencyExchange"
+        },
+        "quotationCurrencyCurrencyCode": {
+            "@id": "uncefact:quotationCurrencyCurrencyCode"
+        },
+        "quotationDocument": {
+            "@id": "uncefact:quotationDocument"
+        },
+        "quotationProposalDocument": {
+            "@id": "uncefact:quotationProposalDocument"
+        },
+        "quotationProposalResponseDocument": {
+            "@id": "uncefact:quotationProposalResponseDocument"
+        },
+        "quotationRequestDocument": {
+            "@id": "uncefact:quotationRequestDocument"
+        },
+        "quotationRequestResponseDocument": {
+            "@id": "uncefact:quotationRequestResponseDocument"
+        },
+        "quoteReferencedWorkflowObject": {
+            "@id": "uncefact:quoteReferencedWorkflowObject"
+        },
+        "rFIDLabel": {
+            "@id": "uncefact:rFIDLabel"
+        },
+        "radioactiveMaterial": {
+            "@id": "uncefact:radioactiveMaterial"
+        },
+        "radionuclideName": {
+            "@id": "uncefact:radionuclideName"
+        },
+        "radiusMeasure": {
+            "@id": "uncefact:radiusMeasure"
+        },
+        "rateApplicablePercent": {
+            "@id": "uncefact:rateApplicablePercent"
+        },
+        "rateCode": {
+            "@id": "uncefact:rateCode"
+        },
+        "reExportCountry": {
+            "@id": "uncefact:reExportCountry"
+        },
+        "readerBinaryFile": {
+            "@id": "uncefact:readerBinaryFile"
+        },
+        "reason": {
+            "@id": "uncefact:reason"
+        },
+        "reasonAdjustmentReasonCode": {
+            "@id": "uncefact:reasonAdjustmentReasonCode"
+        },
+        "reasonAllowanceChargeReasonCode": {
+            "@id": "uncefact:reasonAllowanceChargeReasonCode"
+        },
+        "reasonCode": {
+            "@id": "uncefact:reasonCode"
+        },
+        "reasonDescription": {
+            "@id": "uncefact:reasonDescription"
+        },
+        "reasonFinancingStatusReasonCode": {
+            "@id": "uncefact:reasonFinancingStatusReasonCode"
+        },
+        "reasonInformation": {
+            "@id": "uncefact:reasonInformation"
+        },
+        "reasonLogisticsStatusCode": {
+            "@id": "uncefact:reasonLogisticsStatusCode"
+        },
+        "reasonTypeCode": {
+            "@id": "uncefact:reasonTypeCode"
+        },
+        "receiptDateTime": {
+            "@id": "uncefact:receiptDateTime"
+        },
+        "receiptSchedule": {
+            "@id": "uncefact:receiptSchedule"
+        },
+        "receivableSpecifiedAccountingAccount": {
+            "@id": "uncefact:receivableSpecifiedAccountingAccount"
+        },
+        "receivedFormattedDateTime": {
+            "@id": "uncefact:receivedFormattedDateTime"
+        },
+        "receivedQuantity": {
+            "@id": "uncefact:receivedQuantity"
+        },
+        "receivingAdviceDocument": {
+            "@id": "uncefact:receivingAdviceDocument"
+        },
+        "receptionFacilityContact": {
+            "@id": "uncefact:receptionFacilityContact"
+        },
+        "recipientAssignedIdentificationId": {
+            "@id": "uncefact:recipientAssignedIdentificationId"
+        },
+        "recipientParty": {
+            "@id": "uncefact:recipientParty"
+        },
+        "recordedDate": {
+            "@id": "uncefact:recordedDate"
+        },
+        "recyclingDescriptionCode": {
+            "@id": "uncefact:recyclingDescriptionCode"
+        },
+        "recyclingProcedure": {
+            "@id": "uncefact:recyclingProcedure"
+        },
+        "recyclingTypeCode": {
+            "@id": "uncefact:recyclingTypeCode"
+        },
+        "reference": {
+            "@id": "uncefact:reference"
+        },
+        "referenceDateTime": {
+            "@id": "uncefact:referenceDateTime"
+        },
+        "referenceDocument": {
+            "@id": "uncefact:referenceDocument"
+        },
+        "referenceFileBinaryObject": {
+            "@id": "uncefact:referenceFileBinaryObject"
+        },
+        "referenceFormattedDateTime": {
+            "@id": "uncefact:referenceFormattedDateTime"
+        },
+        "referenceIdentificationId": {
+            "@id": "uncefact:referenceIdentificationId"
+        },
+        "referenceTypeReferenceCode": {
+            "@id": "uncefact:referenceTypeReferenceCode"
+        },
+        "referencedBinaryFile": {
+            "@id": "uncefact:referencedBinaryFile"
+        },
+        "referencedDocument": {
+            "@id": "uncefact:referencedDocument"
+        },
+        "referencedPackage": {
+            "@id": "uncefact:referencedPackage"
+        },
+        "referencedTradeTransaction": {
+            "@id": "uncefact:referencedTradeTransaction"
+        },
+        "refundAmount": {
+            "@id": "uncefact:refundAmount"
+        },
+        "regimeTypeCustomsDutyRegimeTypeCode": {
+            "@id": "uncefact:regimeTypeCustomsDutyRegimeTypeCode"
+        },
+        "registeredDeferredPaymentPayerId": {
+            "@id": "uncefact:registeredDeferredPaymentPayerId"
+        },
+        "registeredIdentificationId": {
+            "@id": "uncefact:registeredIdentificationId"
+        },
+        "registrationCountry": {
+            "@id": "uncefact:registrationCountry"
+        },
+        "registrationEvent": {
+            "@id": "uncefact:registrationEvent"
+        },
+        "registrationIdentificationId": {
+            "@id": "uncefact:registrationIdentificationId"
+        },
+        "regulationConformityId": {
+            "@id": "uncefact:regulationConformityId"
+        },
+        "regulationDangerousGoodsRegulationCode": {
+            "@id": "uncefact:regulationDangerousGoodsRegulationCode"
+        },
+        "regulationName": {
+            "@id": "uncefact:regulationName"
+        },
+        "regulatoryAuthorityName": {
+            "@id": "uncefact:regulatoryAuthorityName"
+        },
+        "rejectedQuantity": {
+            "@id": "uncefact:rejectedQuantity"
+        },
+        "rejectionResponseDateTime": {
+            "@id": "uncefact:rejectionResponseDateTime"
+        },
+        "relatedAllowanceCharge": {
+            "@id": "uncefact:relatedAllowanceCharge"
+        },
+        "relatedBinaryFile": {
+            "@id": "uncefact:relatedBinaryFile"
+        },
+        "relatedBooking": {
+            "@id": "uncefact:relatedBooking"
+        },
+        "relatedBookingType": {
+            "@id": "uncefact:relatedBookingType"
+        },
+        "relatedConsignment": {
+            "@id": "uncefact:relatedConsignment"
+        },
+        "relatedEvent": {
+            "@id": "uncefact:relatedEvent"
+        },
+        "relatedObservation": {
+            "@id": "uncefact:relatedObservation"
+        },
+        "relatedRoute": {
+            "@id": "uncefact:relatedRoute"
+        },
+        "relatedTradeTransaction": {
+            "@id": "uncefact:relatedTradeTransaction"
+        },
+        "relationshipTypeCode": {
+            "@id": "uncefact:relationshipTypeCode"
+        },
+        "relationshipTypeReferenceCode": {
+            "@id": "uncefact:relationshipTypeReferenceCode"
+        },
+        "releaseId": {
+            "@id": "uncefact:releaseId"
+        },
+        "releaseRestriction": {
+            "@id": "uncefact:releaseRestriction"
+        },
+        "relevantGeometryType": {
+            "@id": "uncefact:relevantGeometryType"
+        },
+        "relevantLocation": {
+            "@id": "uncefact:relevantLocation"
+        },
+        "relevantParty": {
+            "@id": "uncefact:relevantParty"
+        },
+        "remainingBatteryChargePercent": {
+            "@id": "uncefact:remainingBatteryChargePercent"
+        },
+        "remainingDeliveryEvent": {
+            "@id": "uncefact:remainingDeliveryEvent"
+        },
+        "remainingRequestedQuantity": {
+            "@id": "uncefact:remainingRequestedQuantity"
+        },
+        "remark": {
+            "@id": "uncefact:remark"
+        },
+        "remarkNote": {
+            "@id": "uncefact:remarkNote"
+        },
+        "remarks": {
+            "@id": "uncefact:remarks"
+        },
+        "remoteSensor": {
+            "@id": "uncefact:remoteSensor"
+        },
+        "reportReceiptDateTime": {
+            "@id": "uncefact:reportReceiptDateTime"
+        },
+        "reportSubmissionDateTime": {
+            "@id": "uncefact:reportSubmissionDateTime"
+        },
+        "reportableQuantity": {
+            "@id": "uncefact:reportableQuantity"
+        },
+        "reportedConditionTypeLogisticsStatusCode": {
+            "@id": "uncefact:reportedConditionTypeLogisticsStatusCode"
+        },
+        "reportedEvent": {
+            "@id": "uncefact:reportedEvent"
+        },
+        "reportedMaterial": {
+            "@id": "uncefact:reportedMaterial"
+        },
+        "reportedSecurityInformation": {
+            "@id": "uncefact:reportedSecurityInformation"
+        },
+        "reportedStatus": {
+            "@id": "uncefact:reportedStatus"
+        },
+        "reportingIOTDevice": {
+            "@id": "uncefact:reportingIOTDevice"
+        },
+        "reportingIOTDeviceEvent": {
+            "@id": "uncefact:reportingIOTDeviceEvent"
+        },
+        "reportingIOTDevicePairing": {
+            "@id": "uncefact:reportingIOTDevicePairing"
+        },
+        "reportingSensorPairing": {
+            "@id": "uncefact:reportingSensorPairing"
+        },
+        "representationTypeCode": {
+            "@id": "uncefact:representationTypeCode"
+        },
+        "requestOverrideCode": {
+            "@id": "uncefact:requestOverrideCode"
+        },
+        "requestedActionCode": {
+            "@id": "uncefact:requestedActionCode"
+        },
+        "requestedDeliveryEvent": {
+            "@id": "uncefact:requestedDeliveryEvent"
+        },
+        "requestedDespatchEvent": {
+            "@id": "uncefact:requestedDespatchEvent"
+        },
+        "requestedEffectiveDateTime": {
+            "@id": "uncefact:requestedEffectiveDateTime"
+        },
+        "requestedExecutionDateTime": {
+            "@id": "uncefact:requestedExecutionDateTime"
+        },
+        "requestedFinancingAmount": {
+            "@id": "uncefact:requestedFinancingAmount"
+        },
+        "requestedFinancingRatePercent": {
+            "@id": "uncefact:requestedFinancingRatePercent"
+        },
+        "requestedOccurrenceDateTime": {
+            "@id": "uncefact:requestedOccurrenceDateTime"
+        },
+        "requestedQuantity": {
+            "@id": "uncefact:requestedQuantity"
+        },
+        "requestedRange": {
+            "@id": "uncefact:requestedRange"
+        },
+        "requestedRelatedService": {
+            "@id": "uncefact:requestedRelatedService"
+        },
+        "requestedResponseTypeCode": {
+            "@id": "uncefact:requestedResponseTypeCode"
+        },
+        "requestedRoute": {
+            "@id": "uncefact:requestedRoute"
+        },
+        "requesterParty": {
+            "@id": "uncefact:requesterParty"
+        },
+        "requestingQuery": {
+            "@id": "uncefact:requestingQuery"
+        },
+        "requiredApplicableProduct": {
+            "@id": "uncefact:requiredApplicableProduct"
+        },
+        "requiredChemicalTreatment": {
+            "@id": "uncefact:requiredChemicalTreatment"
+        },
+        "requiredLaneLengthLinearUnitMeasure": {
+            "@id": "uncefact:requiredLaneLengthLinearUnitMeasure"
+        },
+        "requiredSeal": {
+            "@id": "uncefact:requiredSeal"
+        },
+        "requiredService": {
+            "@id": "uncefact:requiredService"
+        },
+        "requiredTestSpecificationReport": {
+            "@id": "uncefact:requiredTestSpecificationReport"
+        },
+        "requisitionDocument": {
+            "@id": "uncefact:requisitionDocument"
+        },
+        "requisitionerDocument": {
+            "@id": "uncefact:requisitionerDocument"
+        },
+        "requisitionerSpecifiedProduct": {
+            "@id": "uncefact:requisitionerSpecifiedProduct"
+        },
+        "resalePeriod": {
+            "@id": "uncefact:resalePeriod"
+        },
+        "resaleProductUnitMeasureCode": {
+            "@id": "uncefact:resaleProductUnitMeasureCode"
+        },
+        "residenceCountryCountryId": {
+            "@id": "uncefact:residenceCountryCountryId"
+        },
+        "respondingResponse": {
+            "@id": "uncefact:respondingResponse"
+        },
+        "responseDateTime": {
+            "@id": "uncefact:responseDateTime"
+        },
+        "responseReasonCode": {
+            "@id": "uncefact:responseReasonCode"
+        },
+        "responsibility": {
+            "@id": "uncefact:responsibility"
+        },
+        "responsibleAgency": {
+            "@id": "uncefact:responsibleAgency"
+        },
+        "responsibleAgencyActionGovernmentActionCode": {
+            "@id": "uncefact:responsibleAgencyActionGovernmentActionCode"
+        },
+        "responsibleAgencyInvolvementResponsibleGovernmentAgencyInvolvementCode": {
+            "@id": "uncefact:responsibleAgencyInvolvementResponsibleGovernmentAgencyInvolvementCode"
+        },
+        "responsibleAgencyResponsibleGovernmentAgencyCode": {
+            "@id": "uncefact:responsibleAgencyResponsibleGovernmentAgencyCode"
+        },
+        "responsibleParty": {
+            "@id": "uncefact:responsibleParty"
+        },
+        "result": {
+            "@id": "uncefact:result"
+        },
+        "resultAuthentication": {
+            "@id": "uncefact:resultAuthentication"
+        },
+        "resultNote": {
+            "@id": "uncefact:resultNote"
+        },
+        "retailValueExcludingTaxInformationAmount": {
+            "@id": "uncefact:retailValueExcludingTaxInformationAmount"
+        },
+        "retainedVolumeUnitMeasure": {
+            "@id": "uncefact:retainedVolumeUnitMeasure"
+        },
+        "returnableIndicator": {
+            "@id": "uncefact:returnableIndicator"
+        },
+        "returnedQuantity": {
+            "@id": "uncefact:returnedQuantity"
+        },
+        "reverseBilledQuantity": {
+            "@id": "uncefact:reverseBilledQuantity"
+        },
+        "revisionDateTime": {
+            "@id": "uncefact:revisionDateTime"
+        },
+        "revisionIdentificationId": {
+            "@id": "uncefact:revisionIdentificationId"
+        },
+        "riskFactorCode": {
+            "@id": "uncefact:riskFactorCode"
+        },
+        "role": {
+            "@id": "uncefact:role"
+        },
+        "roleCode": {
+            "@id": "uncefact:roleCode"
+        },
+        "rolePartyRoleCode": {
+            "@id": "uncefact:rolePartyRoleCode"
+        },
+        "roundingAmount": {
+            "@id": "uncefact:roundingAmount"
+        },
+        "royaltyLicenseFeeIndicator": {
+            "@id": "uncefact:royaltyLicenseFeeIndicator"
+        },
+        "russianCentralBankIdentificationId": {
+            "@id": "uncefact:russianCentralBankIdentificationId"
+        },
+        "sICIdentificationId": {
+            "@id": "uncefact:sICIdentificationId"
+        },
+        "sailingAdviceNotificationInformation": {
+            "@id": "uncefact:sailingAdviceNotificationInformation"
+        },
+        "sailingAdviceNotifiedParty": {
+            "@id": "uncefact:sailingAdviceNotifiedParty"
+        },
+        "salePriceConditionIndicator": {
+            "@id": "uncefact:salePriceConditionIndicator"
+        },
+        "saleRestriction": {
+            "@id": "uncefact:saleRestriction"
+        },
+        "saleRestrictionIndicator": {
+            "@id": "uncefact:saleRestrictionIndicator"
+        },
+        "salesAgentAssignedIdentificationId": {
+            "@id": "uncefact:salesAgentAssignedIdentificationId"
+        },
+        "salesAgentParty": {
+            "@id": "uncefact:salesAgentParty"
+        },
+        "salesConditionsDocument": {
+            "@id": "uncefact:salesConditionsDocument"
+        },
+        "salesMethodCode": {
+            "@id": "uncefact:salesMethodCode"
+        },
+        "salesReportDocument": {
+            "@id": "uncefact:salesReportDocument"
+        },
+        "salesSpecifiedAccountingAccount": {
+            "@id": "uncefact:salesSpecifiedAccountingAccount"
+        },
+        "scenarioSpecifiedParameter": {
+            "@id": "uncefact:scenarioSpecifiedParameter"
+        },
+        "scheduledArrivalRelatedDateTime": {
+            "@id": "uncefact:scheduledArrivalRelatedDateTime"
+        },
+        "scheduledArrivalRelatedFormattedDateTime": {
+            "@id": "uncefact:scheduledArrivalRelatedFormattedDateTime"
+        },
+        "scheduledDeliveryEvent": {
+            "@id": "uncefact:scheduledDeliveryEvent"
+        },
+        "scheduledDepartureRelatedDateTime": {
+            "@id": "uncefact:scheduledDepartureRelatedDateTime"
+        },
+        "scheduledDepartureRelatedFormattedDateTime": {
+            "@id": "uncefact:scheduledDepartureRelatedFormattedDateTime"
+        },
+        "scheduledIdentificationId": {
+            "@id": "uncefact:scheduledIdentificationId"
+        },
+        "scheduledOccurrenceDateTime": {
+            "@id": "uncefact:scheduledOccurrenceDateTime"
+        },
+        "scheduledOccurrencePeriod": {
+            "@id": "uncefact:scheduledOccurrencePeriod"
+        },
+        "scheduledPaymentDateTime": {
+            "@id": "uncefact:scheduledPaymentDateTime"
+        },
+        "scheduledPeriod": {
+            "@id": "uncefact:scheduledPeriod"
+        },
+        "scheduledReportedMeasurement": {
+            "@id": "uncefact:scheduledReportedMeasurement"
+        },
+        "scheduledRoute": {
+            "@id": "uncefact:scheduledRoute"
+        },
+        "scientificName": {
+            "@id": "uncefact:scientificName"
+        },
+        "sealQuantity": {
+            "@id": "uncefact:sealQuantity"
+        },
+        "sealedIndicator": {
+            "@id": "uncefact:sealedIndicator"
+        },
+        "sealingPartyRoleSealingPartyRoleCode": {
+            "@id": "uncefact:sealingPartyRoleSealingPartyRoleCode"
+        },
+        "seasonCode": {
+            "@id": "uncefact:seasonCode"
+        },
+        "seasonDescription": {
+            "@id": "uncefact:seasonDescription"
+        },
+        "secondSignatoryAuthentication": {
+            "@id": "uncefact:secondSignatoryAuthentication"
+        },
+        "secondTypeExtensionCode": {
+            "@id": "uncefact:secondTypeExtensionCode"
+        },
+        "sectionName": {
+            "@id": "uncefact:sectionName"
+        },
+        "securityInformationNote": {
+            "@id": "uncefact:securityInformationNote"
+        },
+        "securityLevelCode": {
+            "@id": "uncefact:securityLevelCode"
+        },
+        "selfAssessedBasisAmount": {
+            "@id": "uncefact:selfAssessedBasisAmount"
+        },
+        "selfAssessedBasisQuantity": {
+            "@id": "uncefact:selfAssessedBasisQuantity"
+        },
+        "selfAssessedCalculatedAmount": {
+            "@id": "uncefact:selfAssessedCalculatedAmount"
+        },
+        "sellByDateTime": {
+            "@id": "uncefact:sellByDateTime"
+        },
+        "sellerAssignedAccountantParty": {
+            "@id": "uncefact:sellerAssignedAccountantParty"
+        },
+        "sellerAssignedIdentificationId": {
+            "@id": "uncefact:sellerAssignedIdentificationId"
+        },
+        "sellerOrderDocument": {
+            "@id": "uncefact:sellerOrderDocument"
+        },
+        "sellerParty": {
+            "@id": "uncefact:sellerParty"
+        },
+        "sellerPayableTaxSpecifiedAccountingAccount": {
+            "@id": "uncefact:sellerPayableTaxSpecifiedAccountingAccount"
+        },
+        "sellerReference": {
+            "@id": "uncefact:sellerReference"
+        },
+        "sellerRefundableTaxSpecifiedAccountingAccount": {
+            "@id": "uncefact:sellerRefundableTaxSpecifiedAccountingAccount"
+        },
+        "sellerTaxRepresentativeParty": {
+            "@id": "uncefact:sellerTaxRepresentativeParty"
+        },
+        "senderAssignedIdentificationId": {
+            "@id": "uncefact:senderAssignedIdentificationId"
+        },
+        "senderParty": {
+            "@id": "uncefact:senderParty"
+        },
+        "senderRecipientSequenceIdentificationId": {
+            "@id": "uncefact:senderRecipientSequenceIdentificationId"
+        },
+        "sequenceId": {
+            "@id": "uncefact:sequenceId"
+        },
+        "sequenceNumeric": {
+            "@id": "uncefact:sequenceNumeric"
+        },
+        "serialIdentificationId": {
+            "@id": "uncefact:serialIdentificationId"
+        },
+        "seriesEndId": {
+            "@id": "uncefact:seriesEndId"
+        },
+        "seriesEndIdentificationId": {
+            "@id": "uncefact:seriesEndIdentificationId"
+        },
+        "seriesStartId": {
+            "@id": "uncefact:seriesStartId"
+        },
+        "seriesStartIdentificationId": {
+            "@id": "uncefact:seriesStartIdentificationId"
+        },
+        "service": {
+            "@id": "uncefact:service"
+        },
+        "serviceCategoryCode": {
+            "@id": "uncefact:serviceCategoryCode"
+        },
+        "serviceChargeApplicableCurrencyExchange": {
+            "@id": "uncefact:serviceChargeApplicableCurrencyExchange"
+        },
+        "serviceCode": {
+            "@id": "uncefact:serviceCode"
+        },
+        "serviceProviderParty": {
+            "@id": "uncefact:serviceProviderParty"
+        },
+        "serviceRequirementTransportServiceRequirementCode": {
+            "@id": "uncefact:serviceRequirementTransportServiceRequirementCode"
+        },
+        "serviceSupplyCountry": {
+            "@id": "uncefact:serviceSupplyCountry"
+        },
+        "servicingSpecifiedParty": {
+            "@id": "uncefact:servicingSpecifiedParty"
+        },
+        "setTriggerAccountingDocumentCode": {
+            "@id": "uncefact:setTriggerAccountingDocumentCode"
+        },
+        "settingTemperature": {
+            "@id": "uncefact:settingTemperature"
+        },
+        "settlementPeriodMeasure": {
+            "@id": "uncefact:settlementPeriodMeasure"
+        },
+        "shapeType": {
+            "@id": "uncefact:shapeType"
+        },
+        "shipFromParty": {
+            "@id": "uncefact:shipFromParty"
+        },
+        "shipStoresIndicator": {
+            "@id": "uncefact:shipStoresIndicator"
+        },
+        "shipToParty": {
+            "@id": "uncefact:shipToParty"
+        },
+        "shipToShipEvent": {
+            "@id": "uncefact:shipToShipEvent"
+        },
+        "shipmentIdentificationId": {
+            "@id": "uncefact:shipmentIdentificationId"
+        },
+        "shipmentScheduleDocument": {
+            "@id": "uncefact:shipmentScheduleDocument"
+        },
+        "shipperDeclarationInformation": {
+            "@id": "uncefact:shipperDeclarationInformation"
+        },
+        "shipperReferenceInformation": {
+            "@id": "uncefact:shipperReferenceInformation"
+        },
+        "shippingPeriod": {
+            "@id": "uncefact:shippingPeriod"
+        },
+        "signalSourceAvailableQuantity": {
+            "@id": "uncefact:signalSourceAvailableQuantity"
+        },
+        "signatory": {
+            "@id": "uncefact:signatory"
+        },
+        "signatoryAuthentication": {
+            "@id": "uncefact:signatoryAuthentication"
+        },
+        "signatoryImageBinaryObject": {
+            "@id": "uncefact:signatoryImageBinaryObject"
+        },
+        "sizeCode": {
+            "@id": "uncefact:sizeCode"
+        },
+        "sizeDescription": {
+            "@id": "uncefact:sizeDescription"
+        },
+        "sizeMeasure": {
+            "@id": "uncefact:sizeMeasure"
+        },
+        "socialSecurityIdentificationId": {
+            "@id": "uncefact:socialSecurityIdentificationId"
+        },
+        "sourceCurrencyCurrencyCode": {
+            "@id": "uncefact:sourceCurrencyCurrencyCode"
+        },
+        "sourceTypeCode": {
+            "@id": "uncefact:sourceTypeCode"
+        },
+        "sourceUnitBasisNumeric": {
+            "@id": "uncefact:sourceUnitBasisNumeric"
+        },
+        "southAfricanNCCIdentificationId": {
+            "@id": "uncefact:southAfricanNCCIdentificationId"
+        },
+        "spanishDomesticInterbankingIdentificationId": {
+            "@id": "uncefact:spanishDomesticInterbankingIdentificationId"
+        },
+        "specialDeviceType": {
+            "@id": "uncefact:specialDeviceType"
+        },
+        "specialFormInformation": {
+            "@id": "uncefact:specialFormInformation"
+        },
+        "specialInstructions": {
+            "@id": "uncefact:specialInstructions"
+        },
+        "specialProvisionId": {
+            "@id": "uncefact:specialProvisionId"
+        },
+        "specialSpecifiedInstructions": {
+            "@id": "uncefact:specialSpecifiedInstructions"
+        },
+        "specificAccreditation": {
+            "@id": "uncefact:specificAccreditation"
+        },
+        "specificCircumstanceCode": {
+            "@id": "uncefact:specificCircumstanceCode"
+        },
+        "specifiedAccountingAccount": {
+            "@id": "uncefact:specifiedAccountingAccount"
+        },
+        "specifiedAddress": {
+            "@id": "uncefact:specifiedAddress"
+        },
+        "specifiedAdjustment": {
+            "@id": "uncefact:specifiedAdjustment"
+        },
+        "specifiedAllowanceCharge": {
+            "@id": "uncefact:specifiedAllowanceCharge"
+        },
+        "specifiedCertificate": {
+            "@id": "uncefact:specifiedCertificate"
+        },
+        "specifiedCustomsProcedure": {
+            "@id": "uncefact:specifiedCustomsProcedure"
+        },
+        "specifiedDeliveryTerms": {
+            "@id": "uncefact:specifiedDeliveryTerms"
+        },
+        "specifiedDimension": {
+            "@id": "uncefact:specifiedDimension"
+        },
+        "specifiedDocument": {
+            "@id": "uncefact:specifiedDocument"
+        },
+        "specifiedEmission": {
+            "@id": "uncefact:specifiedEmission"
+        },
+        "specifiedEvent": {
+            "@id": "uncefact:specifiedEvent"
+        },
+        "specifiedFault": {
+            "@id": "uncefact:specifiedFault"
+        },
+        "specifiedFinancialAccount": {
+            "@id": "uncefact:specifiedFinancialAccount"
+        },
+        "specifiedFinancialCard": {
+            "@id": "uncefact:specifiedFinancialCard"
+        },
+        "specifiedGeographicalCoordinate": {
+            "@id": "uncefact:specifiedGeographicalCoordinate"
+        },
+        "specifiedIdentity": {
+            "@id": "uncefact:specifiedIdentity"
+        },
+        "specifiedInstalmentPlan": {
+            "@id": "uncefact:specifiedInstalmentPlan"
+        },
+        "specifiedInstructions": {
+            "@id": "uncefact:specifiedInstructions"
+        },
+        "specifiedLocation": {
+            "@id": "uncefact:specifiedLocation"
+        },
+        "specifiedMarking": {
+            "@id": "uncefact:specifiedMarking"
+        },
+        "specifiedMonetarySummation": {
+            "@id": "uncefact:specifiedMonetarySummation"
+        },
+        "specifiedNote": {
+            "@id": "uncefact:specifiedNote"
+        },
+        "specifiedOrganization": {
+            "@id": "uncefact:specifiedOrganization"
+        },
+        "specifiedPackage": {
+            "@id": "uncefact:specifiedPackage"
+        },
+        "specifiedParty": {
+            "@id": "uncefact:specifiedParty"
+        },
+        "specifiedPayment": {
+            "@id": "uncefact:specifiedPayment"
+        },
+        "specifiedPaymentMeans": {
+            "@id": "uncefact:specifiedPaymentMeans"
+        },
+        "specifiedPaymentTerms": {
+            "@id": "uncefact:specifiedPaymentTerms"
+        },
+        "specifiedPerson": {
+            "@id": "uncefact:specifiedPerson"
+        },
+        "specifiedProduct": {
+            "@id": "uncefact:specifiedProduct"
+        },
+        "specifiedProduction": {
+            "@id": "uncefact:specifiedProduction"
+        },
+        "specifiedProject": {
+            "@id": "uncefact:specifiedProject"
+        },
+        "specifiedRegistration": {
+            "@id": "uncefact:specifiedRegistration"
+        },
+        "specifiedRiskAnalysisResult": {
+            "@id": "uncefact:specifiedRiskAnalysisResult"
+        },
+        "specifiedRoute": {
+            "@id": "uncefact:specifiedRoute"
+        },
+        "specifiedSchedule": {
+            "@id": "uncefact:specifiedSchedule"
+        },
+        "specifiedServiceCharge": {
+            "@id": "uncefact:specifiedServiceCharge"
+        },
+        "specifiedStatus": {
+            "@id": "uncefact:specifiedStatus"
+        },
+        "specifiedTradeAgreement": {
+            "@id": "uncefact:specifiedTradeAgreement"
+        },
+        "specifiedTradeDelivery": {
+            "@id": "uncefact:specifiedTradeDelivery"
+        },
+        "specifiedTradeSettlement": {
+            "@id": "uncefact:specifiedTradeSettlement"
+        },
+        "specifiedTransactionId": {
+            "@id": "uncefact:specifiedTransactionId"
+        },
+        "specifiedTransportMeans": {
+            "@id": "uncefact:specifiedTransportMeans"
+        },
+        "specifiedTransportMovement": {
+            "@id": "uncefact:specifiedTransportMovement"
+        },
+        "specifiedVersion": {
+            "@id": "uncefact:specifiedVersion"
+        },
+        "stageTransportMovementStageCode": {
+            "@id": "uncefact:stageTransportMovementStageCode"
+        },
+        "standard": {
+            "@id": "uncefact:standard"
+        },
+        "standardName": {
+            "@id": "uncefact:standardName"
+        },
+        "startDateFlexibilityCode": {
+            "@id": "uncefact:startDateFlexibilityCode"
+        },
+        "startDateTime": {
+            "@id": "uncefact:startDateTime"
+        },
+        "startId": {
+            "@id": "uncefact:startId"
+        },
+        "statement": {
+            "@id": "uncefact:statement"
+        },
+        "statementCode": {
+            "@id": "uncefact:statementCode"
+        },
+        "statementNote": {
+            "@id": "uncefact:statementNote"
+        },
+        "statisticalClassificationCargoCommodityCategoryCode": {
+            "@id": "uncefact:statisticalClassificationCargoCommodityCategoryCode"
+        },
+        "statisticalValueSpecifiedAmount": {
+            "@id": "uncefact:statisticalValueSpecifiedAmount"
+        },
+        "statusCode": {
+            "@id": "uncefact:statusCode"
+        },
+        "statusDocumentStatusCode": {
+            "@id": "uncefact:statusDocumentStatusCode"
+        },
+        "statusStatusCode": {
+            "@id": "uncefact:statusStatusCode"
+        },
+        "stayId": {
+            "@id": "uncefact:stayId"
+        },
+        "stayPeriod": {
+            "@id": "uncefact:stayPeriod"
+        },
+        "staySpecifiedEvent": {
+            "@id": "uncefact:staySpecifiedEvent"
+        },
+        "stevedoreParty": {
+            "@id": "uncefact:stevedoreParty"
+        },
+        "stockQuantity": {
+            "@id": "uncefact:stockQuantity"
+        },
+        "storageApplicableTemperature": {
+            "@id": "uncefact:storageApplicableTemperature"
+        },
+        "storageEvent": {
+            "@id": "uncefact:storageEvent"
+        },
+        "storageInformationNote": {
+            "@id": "uncefact:storageInformationNote"
+        },
+        "stowagePositionId": {
+            "@id": "uncefact:stowagePositionId"
+        },
+        "streetName": {
+            "@id": "uncefact:streetName"
+        },
+        "subBrandName": {
+            "@id": "uncefact:subBrandName"
+        },
+        "subClassCode": {
+            "@id": "uncefact:subClassCode"
+        },
+        "subDivisionFinancialInstitution": {
+            "@id": "uncefact:subDivisionFinancialInstitution"
+        },
+        "subWorksTypeCode": {
+            "@id": "uncefact:subWorksTypeCode"
+        },
+        "subject": {
+            "@id": "uncefact:subject"
+        },
+        "subjectCode": {
+            "@id": "uncefact:subjectCode"
+        },
+        "submissionDateTime": {
+            "@id": "uncefact:submissionDateTime"
+        },
+        "submissionLocation": {
+            "@id": "uncefact:submissionLocation"
+        },
+        "subordinateCountrySubDivision": {
+            "@id": "uncefact:subordinateCountrySubDivision"
+        },
+        "subordinateIdentificationId": {
+            "@id": "uncefact:subordinateIdentificationId"
+        },
+        "subordinateLineId": {
+            "@id": "uncefact:subordinateLineId"
+        },
+        "subordinateLocation": {
+            "@id": "uncefact:subordinateLocation"
+        },
+        "subordinateWorkItem": {
+            "@id": "uncefact:subordinateWorkItem"
+        },
+        "subsetComplexDescription": {
+            "@id": "uncefact:subsetComplexDescription"
+        },
+        "subsetSpecifiedParameter": {
+            "@id": "uncefact:subsetSpecifiedParameter"
+        },
+        "substituteApplicableProduct": {
+            "@id": "uncefact:substituteApplicableProduct"
+        },
+        "substitutedProduct": {
+            "@id": "uncefact:substitutedProduct"
+        },
+        "subtotalCalculatedTax": {
+            "@id": "uncefact:subtotalCalculatedTax"
+        },
+        "summaryDescription": {
+            "@id": "uncefact:summaryDescription"
+        },
+        "superordinateCountrySubDivision": {
+            "@id": "uncefact:superordinateCountrySubDivision"
+        },
+        "supplementaryInformation": {
+            "@id": "uncefact:supplementaryInformation"
+        },
+        "suppliedFromCountry": {
+            "@id": "uncefact:suppliedFromCountry"
+        },
+        "supplierAssignedSerialIdentificationId": {
+            "@id": "uncefact:supplierAssignedSerialIdentificationId"
+        },
+        "supplierPartyRoleTransportEquipmentSupplierPartyRoleCode": {
+            "@id": "uncefact:supplierPartyRoleTransportEquipmentSupplierPartyRoleCode"
+        },
+        "supplyInstructionDocument": {
+            "@id": "uncefact:supplyInstructionDocument"
+        },
+        "supplySpecifiedSchedule": {
+            "@id": "uncefact:supplySpecifiedSchedule"
+        },
+        "supportCentreParty": {
+            "@id": "uncefact:supportCentreParty"
+        },
+        "swissBCIdentificationId": {
+            "@id": "uncefact:swissBCIdentificationId"
+        },
+        "synchronizationDateTime": {
+            "@id": "uncefact:synchronizationDateTime"
+        },
+        "synchronizationQuantity": {
+            "@id": "uncefact:synchronizationQuantity"
+        },
+        "synonymName": {
+            "@id": "uncefact:synonymName"
+        },
+        "systemId": {
+            "@id": "uncefact:systemId"
+        },
+        "systemName": {
+            "@id": "uncefact:systemName"
+        },
+        "tREMId": {
+            "@id": "uncefact:tREMId"
+        },
+        "tareWeightWeightUnitMeasure": {
+            "@id": "uncefact:tareWeightWeightUnitMeasure"
+        },
+        "targetCurrencyCurrencyCode": {
+            "@id": "uncefact:targetCurrencyCurrencyCode"
+        },
+        "targetEntityId": {
+            "@id": "uncefact:targetEntityId"
+        },
+        "targetMarketCountry": {
+            "@id": "uncefact:targetMarketCountry"
+        },
+        "targetUnitBaseNumeric": {
+            "@id": "uncefact:targetUnitBaseNumeric"
+        },
+        "tariffAmount": {
+            "@id": "uncefact:tariffAmount"
+        },
+        "tariffClassFreightChargeTariffClassCode": {
+            "@id": "uncefact:tariffClassFreightChargeTariffClassCode"
+        },
+        "tariffDeductionQuantity": {
+            "@id": "uncefact:tariffDeductionQuantity"
+        },
+        "tariffQuantity": {
+            "@id": "uncefact:tariffQuantity"
+        },
+        "taxApplicableCurrencyExchange": {
+            "@id": "uncefact:taxApplicableCurrencyExchange"
+        },
+        "taxBasisAllowanceRate": {
+            "@id": "uncefact:taxBasisAllowanceRate"
+        },
+        "taxBasisTotalAmount": {
+            "@id": "uncefact:taxBasisTotalAmount"
+        },
+        "taxCurrencyCurrencyCode": {
+            "@id": "uncefact:taxCurrencyCurrencyCode"
+        },
+        "taxExemptionAuthorityIdentificationId": {
+            "@id": "uncefact:taxExemptionAuthorityIdentificationId"
+        },
+        "taxPointDate": {
+            "@id": "uncefact:taxPointDate"
+        },
+        "taxTotalAmount": {
+            "@id": "uncefact:taxTotalAmount"
+        },
+        "technicalName": {
+            "@id": "uncefact:technicalName"
+        },
+        "telephoneCommunication": {
+            "@id": "uncefact:telephoneCommunication"
+        },
+        "telexCommunication": {
+            "@id": "uncefact:telexCommunication"
+        },
+        "terminalOperatorAssignedIdentificationId": {
+            "@id": "uncefact:terminalOperatorAssignedIdentificationId"
+        },
+        "terminalOperatorParty": {
+            "@id": "uncefact:terminalOperatorParty"
+        },
+        "termsAndConditionsDescription": {
+            "@id": "uncefact:termsAndConditionsDescription"
+        },
+        "termsAndConditionsDescriptionCode": {
+            "@id": "uncefact:termsAndConditionsDescriptionCode"
+        },
+        "testIndicator": {
+            "@id": "uncefact:testIndicator"
+        },
+        "testName": {
+            "@id": "uncefact:testName"
+        },
+        "theoreticalWeightWeightUnitMeasure": {
+            "@id": "uncefact:theoreticalWeightWeightUnitMeasure"
+        },
+        "thirdSignatoryAuthentication": {
+            "@id": "uncefact:thirdSignatoryAuthentication"
+        },
+        "timeOccurrenceTimeOnlyFormattedDateTime": {
+            "@id": "uncefact:timeOccurrenceTimeOnlyFormattedDateTime"
+        },
+        "timeZone": {
+            "@id": "uncefact:timeZone"
+        },
+        "timeZoneCode": {
+            "@id": "uncefact:timeZoneCode"
+        },
+        "timeZoneFormattedDateTime": {
+            "@id": "uncefact:timeZoneFormattedDateTime"
+        },
+        "title": {
+            "@id": "uncefact:title"
+        },
+        "titleTitleCode": {
+            "@id": "uncefact:titleTitleCode"
+        },
+        "toleranceMeasure": {
+            "@id": "uncefact:toleranceMeasure"
+        },
+        "tolerancePercent": {
+            "@id": "uncefact:tolerancePercent"
+        },
+        "toleranceQuantity": {
+            "@id": "uncefact:toleranceQuantity"
+        },
+        "totalAdjustmentAmount": {
+            "@id": "uncefact:totalAdjustmentAmount"
+        },
+        "totalAllowanceChargeAmount": {
+            "@id": "uncefact:totalAllowanceChargeAmount"
+        },
+        "totalBudgetAmount": {
+            "@id": "uncefact:totalBudgetAmount"
+        },
+        "totalChargeAmount": {
+            "@id": "uncefact:totalChargeAmount"
+        },
+        "totalCollectChargeAmount": {
+            "@id": "uncefact:totalCollectChargeAmount"
+        },
+        "totalConsignmentValueAmount": {
+            "@id": "uncefact:totalConsignmentValueAmount"
+        },
+        "totalDepositFeeInformationAmount": {
+            "@id": "uncefact:totalDepositFeeInformationAmount"
+        },
+        "totalDisbursementAmount": {
+            "@id": "uncefact:totalDisbursementAmount"
+        },
+        "totalDiscountAmount": {
+            "@id": "uncefact:totalDiscountAmount"
+        },
+        "totalDiscountBasisAmount": {
+            "@id": "uncefact:totalDiscountBasisAmount"
+        },
+        "totalExportExitToImportEntryChargeAmount": {
+            "@id": "uncefact:totalExportExitToImportEntryChargeAmount"
+        },
+        "totalInvoiceAmount": {
+            "@id": "uncefact:totalInvoiceAmount"
+        },
+        "totalInvoiceSpecifiedAmount": {
+            "@id": "uncefact:totalInvoiceSpecifiedAmount"
+        },
+        "totalItemQuantity": {
+            "@id": "uncefact:totalItemQuantity"
+        },
+        "totalPackageSpecifiedQuantity": {
+            "@id": "uncefact:totalPackageSpecifiedQuantity"
+        },
+        "totalPrepaidAmount": {
+            "@id": "uncefact:totalPrepaidAmount"
+        },
+        "totalPrepaidChargeAmount": {
+            "@id": "uncefact:totalPrepaidChargeAmount"
+        },
+        "totalPrice": {
+            "@id": "uncefact:totalPrice"
+        },
+        "totalQuantity": {
+            "@id": "uncefact:totalQuantity"
+        },
+        "totalQuantityClassificationCode": {
+            "@id": "uncefact:totalQuantityClassificationCode"
+        },
+        "totalQuantityQuantityAnalysis": {
+            "@id": "uncefact:totalQuantityQuantityAnalysis"
+        },
+        "totalRetailValueInformationAmount": {
+            "@id": "uncefact:totalRetailValueInformationAmount"
+        },
+        "totalUnitQuantity": {
+            "@id": "uncefact:totalUnitQuantity"
+        },
+        "trackingSystemId": {
+            "@id": "uncefact:trackingSystemId"
+        },
+        "tradeComparisonPrice": {
+            "@id": "uncefact:tradeComparisonPrice"
+        },
+        "tradeLineItemQuantity": {
+            "@id": "uncefact:tradeLineItemQuantity"
+        },
+        "tradeName": {
+            "@id": "uncefact:tradeName"
+        },
+        "tradedParcelId": {
+            "@id": "uncefact:tradedParcelId"
+        },
+        "tradedParcelQuantity": {
+            "@id": "uncefact:tradedParcelQuantity"
+        },
+        "traderAssignedIdentificationId": {
+            "@id": "uncefact:traderAssignedIdentificationId"
+        },
+        "tradingBusinessName": {
+            "@id": "uncefact:tradingBusinessName"
+        },
+        "tradingConsolidatorAssignedIdentificationId": {
+            "@id": "uncefact:tradingConsolidatorAssignedIdentificationId"
+        },
+        "transactionNatureCode": {
+            "@id": "uncefact:transactionNatureCode"
+        },
+        "transitCountry": {
+            "@id": "uncefact:transitCountry"
+        },
+        "transitCustomsOfficeSpecifiedLocation": {
+            "@id": "uncefact:transitCustomsOfficeSpecifiedLocation"
+        },
+        "transitDirectionTransportMeansDirectionCode": {
+            "@id": "uncefact:transitDirectionTransportMeansDirectionCode"
+        },
+        "transitLocation": {
+            "@id": "uncefact:transitLocation"
+        },
+        "transitReleaseCustomsOfficeSpecifiedLocation": {
+            "@id": "uncefact:transitReleaseCustomsOfficeSpecifiedLocation"
+        },
+        "transportContractDocument": {
+            "@id": "uncefact:transportContractDocument"
+        },
+        "transportContractRelatedDocument": {
+            "@id": "uncefact:transportContractRelatedDocument"
+        },
+        "transportEquipmentQuantity": {
+            "@id": "uncefact:transportEquipmentQuantity"
+        },
+        "transportEquipmentRiskRelatedCode": {
+            "@id": "uncefact:transportEquipmentRiskRelatedCode"
+        },
+        "transportEquipmentSplitGoodsIndicator": {
+            "@id": "uncefact:transportEquipmentSplitGoodsIndicator"
+        },
+        "transportEvent": {
+            "@id": "uncefact:transportEvent"
+        },
+        "transportExpertContact": {
+            "@id": "uncefact:transportExpertContact"
+        },
+        "transportIndexNumeric": {
+            "@id": "uncefact:transportIndexNumeric"
+        },
+        "transportInformationNote": {
+            "@id": "uncefact:transportInformationNote"
+        },
+        "transportMeans": {
+            "@id": "uncefact:transportMeans"
+        },
+        "transportMeansQuantity": {
+            "@id": "uncefact:transportMeansQuantity"
+        },
+        "transportMeansSecurityOfficerPerson": {
+            "@id": "uncefact:transportMeansSecurityOfficerPerson"
+        },
+        "transportMeansStayOccurrencePeriod": {
+            "@id": "uncefact:transportMeansStayOccurrencePeriod"
+        },
+        "transportMovementRiskRelatedCode": {
+            "@id": "uncefact:transportMovementRiskRelatedCode"
+        },
+        "transportMovementStatusTransportEquipmentMovementStatusCode": {
+            "@id": "uncefact:transportMovementStatusTransportEquipmentMovementStatusCode"
+        },
+        "transportMovementTypeTransportMovementTypeCode": {
+            "@id": "uncefact:transportMovementTypeTransportMovementTypeCode"
+        },
+        "transportPackage": {
+            "@id": "uncefact:transportPackage"
+        },
+        "transportPaymentMethodCode": {
+            "@id": "uncefact:transportPaymentMethodCode"
+        },
+        "transportService": {
+            "@id": "uncefact:transportService"
+        },
+        "transportServicesBuyerParty": {
+            "@id": "uncefact:transportServicesBuyerParty"
+        },
+        "transportSplitDescription": {
+            "@id": "uncefact:transportSplitDescription"
+        },
+        "transportTemperature": {
+            "@id": "uncefact:transportTemperature"
+        },
+        "transshipmentIntermediateEvent": {
+            "@id": "uncefact:transshipmentIntermediateEvent"
+        },
+        "transshipmentLocation": {
+            "@id": "uncefact:transshipmentLocation"
+        },
+        "transshipmentPermissionIndicator": {
+            "@id": "uncefact:transshipmentPermissionIndicator"
+        },
+        "travelIdentityDocument": {
+            "@id": "uncefact:travelIdentityDocument"
+        },
+        "travelVisaDocument": {
+            "@id": "uncefact:travelVisaDocument"
+        },
+        "treatmentEvent": {
+            "@id": "uncefact:treatmentEvent"
+        },
+        "tunnelRestrictionCode": {
+            "@id": "uncefact:tunnelRestrictionCode"
+        },
+        "turnInReceivedQuantity": {
+            "@id": "uncefact:turnInReceivedQuantity"
+        },
+        "typeAccountingAccountTypeCode": {
+            "@id": "uncefact:typeAccountingAccountTypeCode"
+        },
+        "typeAddressTypeCode": {
+            "@id": "uncefact:typeAddressTypeCode"
+        },
+        "typeAllowanceChargeIdentificationCode": {
+            "@id": "uncefact:typeAllowanceChargeIdentificationCode"
+        },
+        "typeCargoCategoryCode": {
+            "@id": "uncefact:typeCargoCategoryCode"
+        },
+        "typeCashAccountTypeCode": {
+            "@id": "uncefact:typeCashAccountTypeCode"
+        },
+        "typeCode": {
+            "@id": "uncefact:typeCode"
+        },
+        "typeContactTypeCode": {
+            "@id": "uncefact:typeContactTypeCode"
+        },
+        "typeDimensionTypeCode": {
+            "@id": "uncefact:typeDimensionTypeCode"
+        },
+        "typeDocumentCode": {
+            "@id": "uncefact:typeDocumentCode"
+        },
+        "typeExtensionCode": {
+            "@id": "uncefact:typeExtensionCode"
+        },
+        "typeExtensionGoodsTypeExtensionCode": {
+            "@id": "uncefact:typeExtensionGoodsTypeExtensionCode"
+        },
+        "typeGoodsTypeCode": {
+            "@id": "uncefact:typeGoodsTypeCode"
+        },
+        "typeGovernmentActionCode": {
+            "@id": "uncefact:typeGovernmentActionCode"
+        },
+        "typeLocationFunctionCode": {
+            "@id": "uncefact:typeLocationFunctionCode"
+        },
+        "typePackageTypeCode": {
+            "@id": "uncefact:typePackageTypeCode"
+        },
+        "typePackagingMarkingCode": {
+            "@id": "uncefact:typePackagingMarkingCode"
+        },
+        "typePaymentMeansCode": {
+            "@id": "uncefact:typePaymentMeansCode"
+        },
+        "typePaymentTermsTypeCode": {
+            "@id": "uncefact:typePaymentTermsTypeCode"
+        },
+        "typePriceTypeCode": {
+            "@id": "uncefact:typePriceTypeCode"
+        },
+        "typeProcessTypeCode": {
+            "@id": "uncefact:typeProcessTypeCode"
+        },
+        "typeSealTypeCode": {
+            "@id": "uncefact:typeSealTypeCode"
+        },
+        "typeTaxTypeCode": {
+            "@id": "uncefact:typeTaxTypeCode"
+        },
+        "typeTemperatureTypeCode": {
+            "@id": "uncefact:typeTemperatureTypeCode"
+        },
+        "typeTransportMeansTypeCode": {
+            "@id": "uncefact:typeTransportMeansTypeCode"
+        },
+        "uKSortCodeIdentificationId": {
+            "@id": "uncefact:uKSortCodeIdentificationId"
+        },
+        "uNDGIdentificationCode": {
+            "@id": "uncefact:uNDGIdentificationCode"
+        },
+        "uOMLabelList": {
+            "@id": "uncefact:uOMLabelList"
+        },
+        "uPICIdentificationId": {
+            "@id": "uncefact:uPICIdentificationId"
+        },
+        "uRICommunication": {
+            "@id": "uncefact:uRICommunication"
+        },
+        "uRIId": {
+            "@id": "uncefact:uRIId"
+        },
+        "uRIIdentificationId": {
+            "@id": "uncefact:uRIIdentificationId"
+        },
+        "uRLId": {
+            "@id": "uncefact:uRLId"
+        },
+        "uUIDLineId": {
+            "@id": "uncefact:uUIDLineId"
+        },
+        "ultimateCustomerAssignedExtensionIdentificationId": {
+            "@id": "uncefact:ultimateCustomerAssignedExtensionIdentificationId"
+        },
+        "ultimateCustomerOrderDocument": {
+            "@id": "uncefact:ultimateCustomerOrderDocument"
+        },
+        "ultimatePayeeParty": {
+            "@id": "uncefact:ultimatePayeeParty"
+        },
+        "ultimateShipToDeliveryEvent": {
+            "@id": "uncefact:ultimateShipToDeliveryEvent"
+        },
+        "ultimateShipToDeliveryFormattedDateTime": {
+            "@id": "uncefact:ultimateShipToDeliveryFormattedDateTime"
+        },
+        "ultimateShipToParty": {
+            "@id": "uncefact:ultimateShipToParty"
+        },
+        "unavailableQuantity": {
+            "@id": "uncefact:unavailableQuantity"
+        },
+        "unitAmount": {
+            "@id": "uncefact:unitAmount"
+        },
+        "unitBasisAmount": {
+            "@id": "uncefact:unitBasisAmount"
+        },
+        "unitPrice": {
+            "@id": "uncefact:unitPrice"
+        },
+        "unitQuantity": {
+            "@id": "uncefact:unitQuantity"
+        },
+        "unitTypeCode": {
+            "@id": "uncefact:unitTypeCode"
+        },
+        "unloadingBaseportLocation": {
+            "@id": "uncefact:unloadingBaseportLocation"
+        },
+        "unloadingEvent": {
+            "@id": "uncefact:unloadingEvent"
+        },
+        "unloadingInspectionParty": {
+            "@id": "uncefact:unloadingInspectionParty"
+        },
+        "unloadingInspectionSpecifiedInstructions": {
+            "@id": "uncefact:unloadingInspectionSpecifiedInstructions"
+        },
+        "unloadingInstructions": {
+            "@id": "uncefact:unloadingInstructions"
+        },
+        "unloadingLocation": {
+            "@id": "uncefact:unloadingLocation"
+        },
+        "unloadingReportedEvent": {
+            "@id": "uncefact:unloadingReportedEvent"
+        },
+        "unloadingSequenceNumeric": {
+            "@id": "uncefact:unloadingSequenceNumeric"
+        },
+        "upperPartOrangeHazardPlacardId": {
+            "@id": "uncefact:upperPartOrangeHazardPlacardId"
+        },
+        "urgency": {
+            "@id": "uncefact:urgency"
+        },
+        "urgencyCode": {
+            "@id": "uncefact:urgencyCode"
+        },
+        "usagePreference": {
+            "@id": "uncefact:usagePreference"
+        },
+        "useCode": {
+            "@id": "uncefact:useCode"
+        },
+        "useDescription": {
+            "@id": "uncefact:useDescription"
+        },
+        "usedCapacityTransportEquipmentFullnessCode": {
+            "@id": "uncefact:usedCapacityTransportEquipmentFullnessCode"
+        },
+        "usedChemical": {
+            "@id": "uncefact:usedChemical"
+        },
+        "usedCoordinateReferenceSystem": {
+            "@id": "uncefact:usedCoordinateReferenceSystem"
+        },
+        "usedCoordinateSourceSystem": {
+            "@id": "uncefact:usedCoordinateSourceSystem"
+        },
+        "usedLabel": {
+            "@id": "uncefact:usedLabel"
+        },
+        "usedPackaging": {
+            "@id": "uncefact:usedPackaging"
+        },
+        "usedSignalSourceQuantity": {
+            "@id": "uncefact:usedSignalSourceQuantity"
+        },
+        "usedToDateQuotaQuantity": {
+            "@id": "uncefact:usedToDateQuotaQuantity"
+        },
+        "usedTransportMeans": {
+            "@id": "uncefact:usedTransportMeans"
+        },
+        "userSpecifiedParameter": {
+            "@id": "uncefact:userSpecifiedParameter"
+        },
+        "utilizedTransportEquipment": {
+            "@id": "uncefact:utilizedTransportEquipment"
+        },
+        "vINLabel": {
+            "@id": "uncefact:vINLabel"
+        },
+        "vOIPCommunication": {
+            "@id": "uncefact:vOIPCommunication"
+        },
+        "validFromDateTime": {
+            "@id": "uncefact:validFromDateTime"
+        },
+        "validityPeriod": {
+            "@id": "uncefact:validityPeriod"
+        },
+        "valuationBasisAmount": {
+            "@id": "uncefact:valuationBasisAmount"
+        },
+        "value": {
+            "@id": "uncefact:value"
+        },
+        "valueAllowedIndicator": {
+            "@id": "uncefact:valueAllowedIndicator"
+        },
+        "valueBinaryFile": {
+            "@id": "uncefact:valueBinaryFile"
+        },
+        "valueCode": {
+            "@id": "uncefact:valueCode"
+        },
+        "valueDateTime": {
+            "@id": "uncefact:valueDateTime"
+        },
+        "valueIndicator": {
+            "@id": "uncefact:valueIndicator"
+        },
+        "valueMeasure": {
+            "@id": "uncefact:valueMeasure"
+        },
+        "valueTemperatureUnitMeasure": {
+            "@id": "uncefact:valueTemperatureUnitMeasure"
+        },
+        "valueUnitMeasure": {
+            "@id": "uncefact:valueUnitMeasure"
+        },
+        "vanningEvent": {
+            "@id": "uncefact:vanningEvent"
+        },
+        "variableMeasureIndicator": {
+            "@id": "uncefact:variableMeasureIndicator"
+        },
+        "variantDescription": {
+            "@id": "uncefact:variantDescription"
+        },
+        "verificationNumeric": {
+            "@id": "uncefact:verificationNumeric"
+        },
+        "versionId": {
+            "@id": "uncefact:versionId"
+        },
+        "versionIdentificationId": {
+            "@id": "uncefact:versionIdentificationId"
+        },
+        "virtualIndicator": {
+            "@id": "uncefact:virtualIndicator"
+        },
+        "wTOAdditionCode": {
+            "@id": "uncefact:wTOAdditionCode"
+        },
+        "warehouseArrivalDateTime": {
+            "@id": "uncefact:warehouseArrivalDateTime"
+        },
+        "warehouseStorageEvent": {
+            "@id": "uncefact:warehouseStorageEvent"
+        },
+        "wasteReportingExemptionIndicator": {
+            "@id": "uncefact:wasteReportingExemptionIndicator"
+        },
+        "websiteURIId": {
+            "@id": "uncefact:websiteURIId"
+        },
+        "weightMeasure": {
+            "@id": "uncefact:weightMeasure"
+        },
+        "weightWeightUnitMeasure": {
+            "@id": "uncefact:weightWeightUnitMeasure"
+        },
+        "widthMeasure": {
+            "@id": "uncefact:widthMeasure"
+        },
+        "worksTypeCode": {
+            "@id": "uncefact:worksTypeCode"
+        }
+    }
+}

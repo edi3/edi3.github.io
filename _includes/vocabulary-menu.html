@@ -1,6 +1,6 @@
 {% assign data_models = "" | split: ',' %}
 {% assign code_lists = "" | split: ',' %}
-{% assign locodes = "" | split: ',' %}
+{% assign unlocodes = "" | split: ',' %}
 {% assign uncls = "" | split: ',' %}
 
 {% for vocabulary_item in site.vocabulary%}
@@ -10,8 +10,8 @@
     {% if vocabulary_item.type == "code-list" %}
         {% assign code_lists = code_lists | push: vocabulary_item %}
     {% endif %}
-    {% if vocabulary_item.type == "locode" %}
-        {% assign locodes = locodes | push: vocabulary_item %}
+    {% if vocabulary_item.type == "unlocode" %}
+        {% assign unlocodes = unlocodes | push: vocabulary_item %}
     {% endif %}
     {% if vocabulary_item.type == "uncl" %}
         {% assign uncls = uncls | push: vocabulary_item %}
@@ -30,7 +30,7 @@
                 {% for graphItem in graphItems %}
                 {% if graphItem["@type"] == "rdfs:Class" %}
                 <li>
-                    <a title='{{ graphItem["@id"] | replace_first: "unece:", "" }}' href='{{site.baseurl}}{{ vocabulary_item.url }}#{{ graphItem["@id"] | replace_first: "unece:", "" }}'>{{ graphItem["@id"] | replace_first: "unece:", "" | truncate: 25, "..." }}</a>
+                    <a title='{{ graphItem["@id"] | replace_first: "uncefact:", "" }}' href='{{site.baseurl}}{{ vocabulary_item.url }}#{{ graphItem["@id"] | replace_first: "uncefact:", "" }}'>{{ graphItem["@id"] | replace_first: "uncefact:", "" | truncate: 25, "..." }}</a>
                 </li>
                 {% endif %}
                 {% endfor %}
@@ -38,9 +38,9 @@
             <div class="collapsible menu-subheader"><span class="menu-text">Properties</span></div>
             <ul class="collapsible-content sidebar-menu" style="display: none;">
                 {% for graphItem in graphItems %}
-                {% if graphItem["@type"] == "rdfs:Property" %}
+                {% if graphItem["@type"] == "rdf:Property" %}
                 <li>
-                    <a title='{{ graphItem["@id"] | replace_first: "unece:", "" }}' href='{{site.baseurl}}{{ vocabulary_item.url }}#{{ graphItem["@id"]  | replace_first: "unece:", "" }}'>{{ graphItem["@id"] | replace_first: "unece:", "" | truncate: 25, "..." }}</a>
+                    <a title='{{ graphItem["@id"] | replace_first: "uncefact:", "" }}' href='{{site.baseurl}}{{ vocabulary_item.url }}#{{ graphItem["@id"]  | replace_first: "uncefact:", "" }}'>{{ graphItem["@id"] | replace_first: "uncefact:", "" | truncate: 25, "..." }}</a>
                 </li>
                 {% endif %}
                 {% endfor %}
@@ -62,34 +62,20 @@
             {% endfor %}
         </ul>
     {% endfor %}
-</div>
-<div class="sidebar-menu-section">
-    <div class="sidebar-section-title">Locodes</div>
-    {% for vocabulary_item in locodes %}
-        <div class="collapsible menu-subheader"><span class="menu-text">{{ vocabulary_item.name }}</span></div>
-        <ul class="collapsible-content sidebar-menu" style="display: none;">
-            {% assign vocab = site.data[vocabulary_item.jsonid] %}
-            {% assign locodesItems = vocab["@graph"] %}
-            {% for locodeItem in locodesItems %}
-                <li>
-                    <a title='{{ locodeItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}' href='{{site.baseurl}}{{ vocabulary_item.url }}#{{ locodeItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}'>{{ locodeItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" | truncate: 25, "..." }}</a>
-                </li>
-            {% endfor %}
-        </ul>
+    <div class="collapsible menu-subheader"><span class="menu-text">UN/LOCODE</span></div>
+    <ul class="collapsible-content sidebar-menu" style="display: none;">
+    {% for vocabulary_item in unlocodes %}
+        <li>
+            <a title='{{ vocabulary_item.name }}' href='{{site.baseurl}}{{ vocabulary_item.url }}'>{{ vocabulary_item.name | truncate: 25, "..." }}</a>
+        </li>
     {% endfor %}
-</div>
-<div class="sidebar-menu-section">
-    <div class="sidebar-section-title">UNCL</div>
+    </ul>
+    <div class="collapsible menu-subheader"><span class="menu-text">UN/EDIFACT Consolidated Code List (UNCL)</span></div>
+    <ul class="collapsible-content sidebar-menu" style="display: none;">
     {% for vocabulary_item in uncls %}
-        <div class="collapsible menu-subheader"><span class="menu-text">{{ vocabulary_item.name }}</span></div>
-        <ul class="collapsible-content sidebar-menu" style="display: none;">
-            {% assign vocab = site.data[vocabulary_item.jsonid] %}
-            {% assign codeListItems = vocab["@graph"] %}
-            {% for codeListItem in codeListItems %}
-                <li>
-                    <a title='{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}' href='{{site.baseurl}}{{ vocabulary_item.url }}#{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" }}'>{{ codeListItem["@id"] | replace_first: vocabulary_item.jsonid, "" | replace_first: ":", "" | truncate: 25, "..." }}</a>
-                </li>
-            {% endfor %}
-        </ul>
+        <li>
+            <a title='{{ vocabulary_item.name }}' href='{{site.baseurl}}{{ vocabulary_item.url }}'>{{ vocabulary_item.name | truncate: 25, "..." }}</a>
+        </li>
     {% endfor %}
+    </ul>
 </div>

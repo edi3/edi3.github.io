@@ -1,11 +1,11 @@
 ---
-title: "Units Of Measurement JSON-LD Vocabulary"
-name: Units Of Measurement
+title: "UNECE Rec 20 - Codes for Units Of Measure Used in International Trade JSON-LD Vocabulary"
+name: UNECE Rec 20 - Codes for Units Of Measure Used in International Trade
 description: 
 jsonid: "rec20"
 layout: vocabulary
-header_name: Units Of Measurement JSON-LD Vocabulary
-header_description: Vocabulary Definition of Units Of Measurement (Recommendation N°. 20 - Revision 15 (Annexes II & Annexes III)) semantics in HTML format. JSON-LD format is available at [rec20.jsonld](https://edi3.org/vocabulary/rec20.jsonld)
+header_name: UNECE Rec 20 - Codes for Units Of Measure Used in International Trade JSON-LD Vocabulary
+header_description: Vocabulary Definition of UNECE Rec 20 - Codes for Units Of Measure Used in International Trade semantics in HTML format. JSON-LD format is available at [rec20.jsonld](/vocabulary/rec20.jsonld)
 type: code-list
 options:
   - edi3:levelCategory
